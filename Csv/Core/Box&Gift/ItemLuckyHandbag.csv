@@ -1,0 +1,7 @@
+item_save_type,id_item,many_generator,time_unlock,item_child_type,item_child_id,rate
+LuckyHandbag,18080,5,0,Diamonds,18010,15
+,,,,Diamonds,18011,10
+,,,,Energy,18006,35
+,,,,Energy,18007,25
+,,,,Energy,18008,15
+LuckyHandbag,18081,5,0,Diamonds,18010,1

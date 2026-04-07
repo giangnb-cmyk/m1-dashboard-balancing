@@ -1,0 +1,6 @@
+﻿item_save_type,id_item,many_generator,time_unlock,item_child_type,item_child_id,rate
+EquipmentBox,2002,3,20,Fruit,1010,75
+,,,,Nut,1022,25
+EquipmentBox,2003,3,10,Fruit,1010,50
+,,,,,1011,30
+,,,,Nut,1022,20

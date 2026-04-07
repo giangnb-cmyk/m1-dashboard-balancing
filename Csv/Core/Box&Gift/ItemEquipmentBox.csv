@@ -1,0 +1,10 @@
+item_save_type,id_item,many_generator,time_unlock,item_child_type,item_child_id,rate
+EquipmentBox,18073,3,300,Juicer,10030,1
+,,,,ChefCounter,10020,1
+,,,,Pan,10000,1
+,,,,Oven,10040,1
+,,,,Shaker,10050,1
+,,,,Gold,18000,1
+,,,,Gold,18001,1
+,,,,Diamonds,18010,1
+EquipmentBox,0,3,300,Juicer,10000,1

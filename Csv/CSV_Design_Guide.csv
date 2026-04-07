@@ -1,0 +1,83 @@
+Path folder: Core/Box&Gift,Schema các chest/box - cột rate là weight-based drop
+,,
+ItemAssistantsChest,Config item mà AssistantsChest có thể generate ra
+ItemBoxGenerator,Config item mà BoxGenerator có thể generate ra
+ItemChefsChest,Config item mà ChefsChest có thể generate ra
+ItemCoinBox,Config item mà CoinBox có thể generate ra
+ItemDailyGift,Config item mà DailyGift có thể generate ra
+ItemEquipmentBox,Config item mà EquipmentBox có thể generate ra
+ItemFlushGift,Config item mà FlushGift có thể generate ra
+ItemGift,Config item mà Gift có thể generate ra
+ItemLuckyBox,Config item mà LuckyBox có thể generate ra
+ItemLuckyHandbag,Config item mà LuckyHandbag có thể generate ra
+ItemTraineeBox,Config item mà TraineeBox có thể generate ra
+,,
+,,
+Path folder: Core/BuildUpGoal,Config step build up - reward và cost
+,,
+BuildUpGoalData,Bao gồm các config đặc biệt cho step theo scene và cost
+BuildUpGoalReward,Reward tổng của từng scene
+BuildUpGoalRewardBonus,Reward chia theo từng step
+,,
+,,
+Path folder: Core/ItemIdentify,Định nghĩa ID và chuỗi merge (merge chain) của toàn bộ item
+,,
+ItemBooster,Định nghĩa ID và merge chain của item booster
+ItemChest,Định nghĩa ID của các loại chest/box
+ItemCurrency,Định nghĩa ID và merge chain của currency (Gold/Energy/Diamond)
+ItemFood,Định nghĩa ID của item food/drink (output từ recipes)
+ItemGenerator,Định nghĩa ID và merge chain của các generator
+ItemMerge,Định nghĩa ID và merge chain của item raw (Fruit/Nut/Drink/...)
+ItemRaw,Định nghĩa ID và merge chain của item raw theo scene mới
+ItemTool,Định nghĩa ID và merge chain của tool (Pan/Grill/Juicer/...)
+,,
+,,
+Path folder: Core/Order,Hệ thống order theo batch - mỗi batch gồm nhiều order
+,,
+OrderDetail,Chi tiết từng order: item yêu cầu (tối đa 2 item) và reward
+OrderDetailReward,Reward khi hoàn thành toàn bộ order của một scene
+OrderGold,Reward khi hoàn thành đủ số batch nhất định
+OrderSystem,Cấu trúc batch: gom các order vào batch - có flag nhận reward
+OrderSystemReward,Reward khởi đầu được nhận khi vào scene mới
+RewardMinDistributeOrderDetail,Config phân phối reward tối thiểu cho order detail
+,,
+,,
+Path folder: Core/Recipes,Công thức nấu: bỏ item raw vào tool để ra food/drink
+,,
+FormulaRecipes,Map tool + nguyên liệu (tối đa 3) → result item và thời gian nấu
+,,
+,,
+Core/ItemExpand.csv,Khi item merge đến cấp nhất định - tap để tạo ra item phụ (cooldown + cost energy)
+,,
+,,
+Path folder: Extends/Booster,Config effect của từng booster item
+,,
+ItemDuplicateCamera,Config effect của item Duplicate Camera
+ItemPlus,Config effect của item Plus
+ItemSandglass,Config effect của item Sandglass
+ItemScissors,Config effect của item Scissors
+ItemSpeedBoost,Config time boost (ms) của từng cấp SpeedBoost
+ItemUnlimitedEnergy,Config effect của item Unlimited Energy
+ItemWildCard,Config effect của item WildCard
+,,
+,,
+Path folder: Extends/ConvertTime,Config tỷ lệ quy đổi currency sang thời gian skip
+,,
+ConvertTimeTool,Map loại currency (SkipTime/Diamonds) → số giây skip per đơn vị
+,,
+,,
+Path folder: Features/BuyCurrency,Config các gói mua currency bằng Ads hoặc Diamonds
+,,
+BuyCurrency,Danh sách gói mua: hình thức (Ads/Diamonds) - cost - amount nhận được
+,,
+,,
+Path folder: Features/ChefsBook,Config danh mục item thuộc từng Chef trong Chef Book
+,,
+ChefsBookData,Map chef type → danh sách item type hiển thị trong book
+ChefsBookRewardUnlockItem,Reward nhận được khi unlock item trong Chef Book
+,,
+,,
+Path folder: Features/IAP,Config các tính năng IAP và bonus
+,,
+HappinessExpress,Config tính năng Happiness Express (IAP event)
+VideoBonuses,Config phần thưởng từ xem video ads

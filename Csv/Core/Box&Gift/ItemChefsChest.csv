@@ -1,0 +1,9 @@
+item_save_type,id_item,many_generator,time_unlock,item_child_type,item_child_id,rate
+ChefsChest,18068,10,480,DrinkGenerator,2000,14
+,,,,FruitNutGenerator,1000,14
+,,,,ProteinGenerator,3000,14
+,,,,Vegetables,4000,14
+,,,,Ship,5000,14
+,,,,GrainGenerator,6000,14
+,,,,AlcoholGenerator,7000,14
+ChefsChest,0,10,480,as,2000,14

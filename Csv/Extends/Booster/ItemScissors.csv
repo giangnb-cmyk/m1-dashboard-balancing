@@ -1,0 +1,5 @@
+type,id,can_cut
+Scissors,18031,FALSE
+Scissors,18032,FALSE
+Scissors,18033,FALSE
+Scissors,18034,TRUE

@@ -1,0 +1,11 @@
+item_save_type,id_item,many_generator,time_unlock,item_child_type,item_child_id,rate
+TraineeBox,18074,3,300,DrinkGenerator,2000,1
+,,,,FruitNutGenerator,1000,1
+,,,,ProteinGenerator,3000,1
+,,,,VegetablesGenerator,4000,1
+,,,,Ship,5000,1
+,,,,GrainGenerator,6000,1
+,,,,AlcoholGenerator,7000,1
+,,,,Gold,18000,1
+,,,,Gold,18001,1
+TraineeBox,18075,3,300,DrinkGenerator,2000,1

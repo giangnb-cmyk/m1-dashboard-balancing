@@ -1,0 +1,24 @@
+public enum MoneyTypes
+{
+	None = 0,
+	Gold = 1,
+	Diamonds = 2,
+	Energy = 3,
+	InfinityEnergy = 4,
+	Exp = 5,
+	SkipTime = 6,
+	Star = 7,
+	Exchange = 8,
+	AddSlotInventory = 9,
+
+
+	Ads = 1000,
+	Cash = 1001,
+
+	TokenSpeedFeastRace = 2000,
+	TokenPizzaTowerRace = 2001,
+	HammerPetalPlateParty = 2002,
+	HatFortuneMeetsCookie = 2003,
+	TextFortuneMeetsCookie = 2004,
+	ChopsTicksFortuneMeetsCookie = 2005,
+}

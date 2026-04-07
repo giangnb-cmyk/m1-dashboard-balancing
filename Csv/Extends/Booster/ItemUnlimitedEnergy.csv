@@ -1,0 +1,3 @@
+type,id,res_type,res_id,res_number
+StandardUnlimitedEnergy,18035,Money,11,5
+UpgradedUnlimitedEnergy,18036,Money,11,10

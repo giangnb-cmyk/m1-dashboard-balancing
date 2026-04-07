@@ -1,0 +1,8 @@
+item_save_type,id_item,res_type,res_id,res_number,custom_value,many_choices
+FlushGift,18072,Item,1,1,1015,4
+,,Item,8,1,2025,
+,,Item,16,1,3025,
+,,Item,18,1,4015,
+,,Item,21,1,5015,
+,,Item,26,1,6015,
+FlushGift,0,Item,1,1,1015,4

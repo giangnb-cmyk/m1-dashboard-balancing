@@ -1,0 +1,17 @@
+theme_type,res_type,res_id,res_number,custom_value
+Scene_02,Money,5,696,
+,Money,7,30,
+,Money,3,480,
+,Item,134,20,18054
+Scene_03,Money,5,4220,
+,Money,7,44,
+,Money,3,800,
+,Item,134,40,18054
+Scene_04,Money,5,6441,
+,Money,7,49,
+,Money,3,1225,
+,Item,134,49,18054
+Scene_05,Money,5,7661,
+,Money,7,52,
+,Money,3,1350,
+,Item,134,52,18054

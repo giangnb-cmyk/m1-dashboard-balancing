@@ -1,0 +1,17 @@
+item_save_type,id_item,many_generator,time_unlock,item_child_type,item_child_id,rate
+AssistantsChest,18067,8,300,DrinkGenerator,2000,4
+,,,,FruitNutGenerator,1000,4
+,,,,ProteinGenerator,3000,4
+,,,,VegetablesGenerator,4000,4
+,,,,Ship,5000,4
+,,,,GrainGenerator,6000,4
+,,,,AlcoholGenerator,7000,4
+,,,,Juicer,10030,5
+,,,,ChefCounter,10020,4
+,,,,Pan,10000,4
+,,,,Oven,10040,4
+,,,,Shaker,10050,4
+,,,,Gold,18000,13
+,,,,Gold,18001,13
+,,,,Diamonds,18010,25
+AssistantsChest,0,8,300,as,2000,4

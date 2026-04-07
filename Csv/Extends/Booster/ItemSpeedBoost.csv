@@ -1,0 +1,9 @@
+type,id,time_boost
+SpeedBoost,18015,5000
+SpeedBoost,18016,10000
+SpeedBoost,18017,15000
+SpeedBoost,18018,20000
+SpeedBoost,18019,25000
+SpeedBoost,18020,30000
+SpeedBoost,18021,35000
+SpeedBoost,18022,40000
