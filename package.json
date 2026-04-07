@@ -1,0 +1,11 @@
+{
+  "name": "m1-dashboard-v2",
+  "version": "1.0.0",
+  "description": "Merge Cooking Game Balance Dashboard",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

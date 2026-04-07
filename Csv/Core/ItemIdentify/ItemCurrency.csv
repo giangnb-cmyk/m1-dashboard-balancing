@@ -1,16 +1,16 @@
-type,id,name_item,merge_to,init_time,can_sell,sell_price,sum_merge
-Gold ,18000,Gold ,18001,,TRUE,,
-,18001,Gold ,18002,,TRUE,,
-,18002,Gold ,18003,,TRUE,,
-,18003,Gold ,18004,,TRUE,,
-,18004,Gold ,,,TRUE,,
-Energy,18005,Energy,18006,,TRUE,,
-,18006,Energy,18007,,TRUE,,
-,18007,Energy,18008,,TRUE,,
-,18008,Energy,18009,,TRUE,,
-,18009,Energy,,,TRUE,,
-Diamonds,18010,Diamonds,18011,,TRUE,,
-,18011,Diamonds,18012,,TRUE,,
-,18012,Diamonds,18013,,TRUE,,
-,18013,Diamonds,18014,,TRUE,,
-,18014,Diamonds,,,TRUE,,
+﻿type,id,name_item,merge_to,sell_price,sum_merge
+Gold,18000,Gold ,18001,0,0
+Gold,18001,Gold ,18002,0,0
+Gold,18002,Gold ,18003,0,0
+Gold,18003,Gold ,18004,0,0
+Gold,18004,Gold ,,0,0
+Energy,18005,Energy,18006,0,0
+Energy,18006,Energy,18007,0,0
+Energy,18007,Energy,18008,0,0
+Energy,18008,Energy,18009,0,0
+Energy,18009,Energy,,0,0
+Diamonds,18010,Diamonds,18011,0,0
+Diamonds,18011,Diamonds,18012,0,0
+Diamonds,18012,Diamonds,18013,0,0
+Diamonds,18013,Diamonds,18014,0,0
+Diamonds,18014,Diamonds,,0,0

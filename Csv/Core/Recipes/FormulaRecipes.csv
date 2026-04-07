@@ -1,234 +1,234 @@
-﻿TypeTool,ResultType,ResultId,ResultName,TimeToCook(sec),Ingredient1Type,Ingredient1Id,Ingredient2Type,Ingredient2Id,Ingredient3Type,Ingredient3Id
-Juicer,FruitJuice,1002,Strawberry Juice,20,Fruit,1011,,,,
-Juicer,FruitJuice,1003,Apple Juice,40,Fruit,1012,,,,
-Juicer,FruitJuice,1004,Banana Juice,80,Fruit,1013,,,,
-Juicer,FruitJuice,1005,Lemon Juice,160,Fruit,1014,,,,
-Juicer,FruitJuice,1006,Orange Juice,640,Fruit,1016,,,,
-Juicer,FruitJuice,1007,Pomegranate Juice,1280,Fruit,1017,,,,
-Juicer,FruitJuice,1008,Pear Juice,2560,Fruit,1018,,,,
-Juicer,FruitJuice,1009,Mango Juice,5120,Fruit,1019,,,,
-Juicer,FruitJuice,1010,Pineapple Juice,10280,Fruit,1020,,,,
-Juicer,FruitJuice,1011,Watermelon Juice,20480,Fruit,1021,,,,
-Juicer,FruitJuice,1001,Cherry Juice,10,Fruit,1010,,,,
-Juicer,FruitJuice,1012,Spinach Smoothie,860,LeafVegetables,4028,Fruit,1012,Vegetables,4011
-Juicer,FruitJuice,1013,Strawberry Apple Juice,60,Fruit,1011,Fruit,1012,,
-Juicer,FruitJuice,1014,Strawberry Lemon Juice,180,Fruit,1011,Fruit,1014,,
-Juicer,FruitJuice,1015,	Beet Smoothie,1560,LeafVegetables,4029,Fruit,1012,Vegetables,4013
-Juicer,FruitJuice,1016,Banana Orange Juice,720,Fruit,1013,Fruit,1016,,
-Juicer,FruitJuice,1018,Apple Lemon Juice,200,Fruit,1012,Fruit,1014,,
-Juicer,FruitJuice,1019,Pear Apple Banana Juice,2680,Fruit,1012,Fruit,1013,Fruit,1018
-ChefCounter,CoffeeDrinks,1020,	Caramel Macchiato,120,Coffee,2034,AdditivesAndGarnishes,2013,,
-ChefCounter,CoffeeDrinks,1021,Latte,60,Coffee,2034,AdditivesAndGarnishes,2011,,
-ChefCounter,CoffeeDrinks,1022,	Cappuccino,70,Coffee,2034,DairyProducts,2042,,
-ChefCounter,CoffeeDrinks,1023,Mocha,240,Coffee,2034,CocoaBeanDerivatives,1033,AdditivesAndGarnishes,2011
-ChefCounter,CoffeeDrinks,1024,Frappe,70,Coffee,2034,AdditivesAndGarnishes,2010,AdditivesAndGarnishes,2011
-ChefCounter,CoffeeDrinks,1025,Mocha Frappe,230,Coffee,2034,AdditivesAndGarnishes,2010,CocoaBeanDerivatives,1033
-ChefCounter,CoffeeDrinks,1026,Caramel Frappe,190,Coffee,2034,AdditivesAndGarnishes,2013,DairyProducts,2043
-ChefCounter,Salads,17066,Tomato Slice,10,Vegetables,4010,,,,
-ChefCounter,Salads,17067,Cucumber Slice,20,Vegetables,4011,,,,
-ChefCounter,Salads,17071,	Shrimp Cocktail,400,Shellfish,5025,BBQRecipe,9011,,
-ChefCounter,Salads,17072,Potato Strips,1280,Vegetables,4017,,,,
-ChefCounter,Salads,17073,	Beet Salad,3850,LeafVegetables,4029,LeafVegetables,4022,DairyProducts,2048
-ChefCounter,Salads,17074,Salade Landaise,660,Nut,1028,PanfriedFoods,17059,PorkLamb,3020
-ChefCounter,Salads,17075,Arugula Tomato Salad,370,LeafVegetables,4027,Vegetables,4010,BBQRecipe,9008
-ChefCounter,Salads,17076,Potato Salad,1770,Vegetables,4017,Vegetables,4010,Vegetables,4014
-ChefCounter,Salads,17077,	Hawaiian Poke Bowl,1600,Fish,5017,BBQRecipe,9011,,
-ChefCounter,Salads,17078,Crab Louie Salad,270,Shellfish,5026,PoultryEgg,3010,LeafVegetables,4022
-ChefCounter,Desserts,17080,Shave Ice,190,AdditivesAndGarnishes,2010,DairyProducts,2043,AdditivesAndGarnishes,2012
-ChefCounter,Desserts,17081,Banana Split,310,Fruit,1013,DairyProducts,2043,Fruit,1010
-ChefCounter,Desserts,17092,Cheese Stuffed Dates,3080,Nut,1030,DairyProducts,2046,Nut,1024
-ChefCounter,FastFood,17097,Pork Burger,10,FastFood,17095,GrilledMeat,17018,LeafVegetables,4022
-ChefCounter,FastFood,17098,Chicken Burger,10,FastFood,17095,GrilledMeat,17016,LeafVegetables,4022
-ChefCounter,FastFood,17099,Cheese Burger,130,FastFood,17095,DairyProducts,2044,LeafVegetables,4022
-ChefCounter,FastFood,17100,Beef Burger,10,FastFood,17095,GrilledMeat,17027,LeafVegetables,4022
-ChefCounter,FastFood,17101,Tuna Burger,10,FastFood,17095,GrilledSeafood,17038,LeafVegetables,4022
-ChefCounter,FastFood,17102,Hot Dog,10,FastFood,17096,PanfriedFoods,17048,LeafVegetables,4022
-ChefCounter,FastFood,17103,Cheese Dog,130,FastFood,17096,PanfriedFoods,17048,DairyProducts,2044
-ChefCounter,FastFood,17104,Lobster Roll,300,Grain,6014,DairyProducts,2044,BBQRecipe,9007
-Grill,GrilledVegetables,17000,Grilled Carrot,80,Vegetables,4013,,,,
-Grill,GrilledVegetables,17001,Grilled Onion,160,Vegetables,4014,,,,
-Grill,GrilledVegetables,17002,Grilled Bell Pepper,320,Vegetables,4015,,,,
-Grill,GrilledVegetables,17003,Grilled Eggplant,640,Vegetables,4016,,,,
-Grill,GrilledVegetables,17004,Grilled Potato,1280,Vegetables,4017,,,,
-Grill,GrilledVegetables,17005,Grilled Okra,2560,Vegetables,4018,,,,
-Grill,GrilledVegetables,17006,Grilled Corn,5120,Vegetables,4019,,,,
-Grill,GrilledVegetables,17007,Grilled Peas,10240,Vegetables,4020,,,,
-Grill,GrilledVegetables,17008,Grillded CherryTomato,20480,Vegetables,4021,,,,
-Grill,GrilledVegetables,17009,Grilled Cauliflower,160,LeafVegetables,4026,,,,
-Grill,GrilledMeat,17014,Grilled Chicken Wing,20,PoultryEgg,3011,,,,
-Grill,GrilledMeat,17015,Grilled Chicken Drumstick,40,PoultryEgg,3012,,,,
-Grill,GrilledMeat,17016,Grilled Chicken Breast,80,PoultryEgg,3013,,,,
-Grill,GrilledMeat,17017,Grilled Chicken,160,PoultryEgg,3014,,,,
-Grill,GrilledMeat,17018,Grilled Patty,80,PorkLamb,3023,,,,
-Grill,GrilledMeat,17019,Baby Back Ribs,160,PorkLamb,3024,,,,
-Grill,GrilledMeat,17020,Grilled Pork Knuckle,320,PorkLamb,3025,,,,
-Grill,GrilledMeat,17021,Lamb Kebab,640,PorkLamb,3026,,,,
-Grill,GrilledMeat,17022,Grilled Lamb Chop,1280,PorkLamb,3027,,,,
-Grill,GrilledMeat,17023,	Grilled Leg of Lamb,2560,PorkLamb,3028,,,,
-Grill,GrilledMeat,17024,Burnt Ends,5120,PorkLamb,3029,,,,
-Grill,GrilledMeat,17025,Grilled Suckling Pig,10240,PorkLamb,3030,,,,
-Grill,GrilledMeat,17026,Grilled Lamb Chop,20480,PorkLamb,3031,,,,
-Grill,GrilledMeat,17027,Delmonico Steak,5130,BeefDerivatives,3032,,,,
-Grill,GrilledMeat,17028,Grilled Beef Ribs,10260,BeefDerivatives,3033,,,,
-Grill,GrilledMeat,17029,Pork Baked Potato,2000,Vegetables,4017,PorkLamb,3023,BBQRecipe,9012
-Grill,GrilledMeat,17032,Huli-huli Chicken,10480,PoultryEgg,3014,Fruit,1020,BBQRecipe,9008
-Grill,GrilledMeat,17033,	Roast Duck,640,PoultryEgg,3016,,,,
-Grill,GrilledSeafood,17035,Grilled Squid,20,Fish,5011,,,,
-Grill,GrilledSeafood,17036,Grilled Tilapia,40,Fish,5012,,,,
-Grill,GrilledSeafood,17037,Grilled Flounder,640,Fish,5016,,,,
-Grill,GrilledSeafood,17038,Grilled Tuna,1280,Fish,5017,,,,
-Grill,GrilledSeafood,17039,Grilled Bass,5120,Fish,5019,,,,
-Grill,GrilledSeafood,17040,Grilled Mussel,20,Shellfish,5023,,,,
-Grill,GrilledSeafood,17041,Grilled Shrimp,80,Shellfish,5025,,,,
-Grill,GrilledSeafood,17042,Grilled Crab,160,Shellfish,5026,,,,
-Grill,GrilledSeafood,17043,Grilled Scallop,320,Shellfish,5027,,,,
-Grill,GrilledSeafood,17044,Grilled Lobster,1280,Shellfish,5029,,,,
-Grill,GrilledSeafood,17045,Grilled King Crab,2560,Shellfish,5030,,,,
-Oven,GrilledVegetables,17010,Spinach Gratin,1850,LeafVegetables,4028,DairyProducts,2047,DairyProducts,2045
-Oven,GrilledVegetables,17011,Buffalo Cauliflower,560,Grain,6013,LeafVegetables,4026,BBQRecipe,9011
-Oven,GrilledVegetables,17012,Roasted Beetroot,1280,LeafVegetables,4029,,,,
-Oven,GrilledMeat,17031,Quail with Rasins,3850,PoultryEgg,3018,PorkLamb,3020,BBQRecipe,9013
-Oven,GrilledMeat,17034,	Roast Goose with Apples,1320,PoultryEgg,3017,Fruit,1012,,
-Oven,Desserts,17082,Apple Pie,760,Dough,6027,Fruit,1012,,
-Oven,Desserts,17083,Banana Pie,800,Dough,6027,Fruit,1013,,
-Oven,Desserts,17084,	Mango Pie,5840,Dough,6027,Fruit,1019,,
-Oven,Desserts,17085,Pecan Pie,1040,Dough,6027,Nut,1027,,
-Oven,Desserts,17086,	Pineapple Pie,11000,Dough,6027,Fruit,1020,,
-Oven,Desserts,17087,Fortune Cookies,570,Dough,6024,Nut,1026,DairyProducts,2045
-Oven,Desserts,17089,	Brownie,1010,CocoaBeanDerivatives,1034,DairyProducts,2045,Dough,6024
-Oven,Desserts,17090,Toast,60,Dough,6029,,,,
-Oven,Desserts,17091,	Honey Roasted Cashews,1440,Nut,1029,AdditivesAndGarnishes,2014,,
-Oven,Desserts,17093,Corn Bread,190,Grain,6014,AdditivesAndGarnishes,2011,PoultryEgg,3010
-Oven,FastFood,17095,	Baked Burger Bun,180,Dough,6025,,,,
-Oven,FastFood,17096,Baked Hot Dog Bun,360,Dough,6026,,,,
-Oven,FastFood,17105,	Nachos,300,Grain,6014,DairyProducts,2044,BBQRecipe,9007
-Oven,DeepfriedFoods,17118,	Baked Spinach Chips,720,LeafVegetables,4028,Grain,6013,,
-Oven,FrenchDelicacies,2000,	Escargot,240,FrenchDelicacies,2000,DairyProducts,2045,FrenchRecipe,9032
-Oven,FrenchDelicacies,2001,	Quiche Lorraine,860,Dough,6027,PorkLamb,3020,DairyProducts,2044
-Oven,FrenchDelicacies,2002,Garlic Bread,260,Desserts,17090,DairyProducts,2045,FrenchRecipe,9027
-Oven,FrenchDelicacies,2003,	Broccoli Gratin,4180,LeafVegetables,4024,DairyProducts,2045,AdditivesAndGarnishes,2011
-Oven,FrenchDelicacies,2004,Baked Bass with Lemon,5680,Fish,5019,Fruit,1014,Vegetables,4015
-Oven,FrenchDelicacies,2005,	Savory Crepe,2750,Grain,6018,AdditivesAndGarnishes,2011,PoultryEgg,3010
-Oven,FrenchDelicacies,2006,Entrec�te,5490,BeefDerivatives,3032,ClassicAlcohol,7012,DairyProducts,2045
-Oven,FrenchDelicacies,2007,Foie gras,1690,GooseDerivatives,3034,ClassicAlcohol,7012,DairyProducts,2045
-Oven,FrenchDelicacies,2008,Magret de canard,1120,PoultryEgg,3015,Fruit,1016,AdditivesAndGarnishes,2014
-Oven,FrenchDelicacies,2009,Coquilles St. Jaques,560,Shellfish,5027,DairyProducts,2045,FrenchRecipe,9031
-Oven,FrenchDelicacies,2010,Bacon Wrapped Asparagus,50,Vegetables,4012,PorkLamb,3020,FrenchRecipe,9031
-Oven,FrenchDelicacies,2017,Tarte flamb�e,650,FastFood,17094,PorkLamb,3020,DairyProducts,2046
-Oven,FrenchDelicacies,2020,Cheese Pie,1540,Dough,6027,DairyProducts,2044,DairyProducts,2043
-Oven,FrenchDelicacies,2023,Norman Tart,870,Dough,6027,Fruit,1012,PoultryEgg,3010
-Oven,FrenchDelicacies,2025,Spinach Quiche,1640,Dough,6027,LeafVegetables,4028,DairyProducts,2044
-Oven,FrenchDelicacies,2028,Provencal Stuffed Eggplants,1000,Vegetables,4016,Vegetables,4014,PorkLamb,3022
-Oven,FrenchDelicacies,2029,	Smoked Salmon Rolls,1400,Fish,5015,LeafVegetables,4028,DairyProducts,2044
-Oven,FrenchDelicacies,2030,	Cauliflower Gratin,700,LeafVegetables,4026,DairyProducts,2044,AdditivesAndGarnishes,2011
-Oven,FrenchDelicacies,2036,Anna Potatoes,1680,Vegetables,4017,DairyProducts,2045,FrenchRecipe,9030
-Oven,FrenchDelicacies,2037,	French Duck with Orange Sauce,1760,PoultryEgg,3016,Fruit,1016,ClassicAlcohol,7014
-Oven,FrenchDelicacies,2038,Corn Souffl�,5420,Vegetables,4019,Grain,6014,DairyProducts,2044
-Oven,FrenchDelicacies,2039,Provencal Vegetable Bake,890,Vegetables,4016,Vegetables,4010,Vegetables,4014
-Oven,FrenchDelicacies,2040,Provencal Roast Leg of Lamb,1610,PorkLamb,3027,Fruit,1014,Vegetables,4010
-Oven,FrenchDelicacies,2041,Foie Gras Terrine,1450,GooseDerivatives,3034,ClassicAlcohol,7014,FrenchRecipe,9031
-Oven,FrenchDesserts,2054,Pink Macaron,500,FrenchDesserts,2047,Fruit,1011,AdditivesAndGarnishes,2015
-Oven,FrenchDesserts,2055,White Macaron,800,FrenchDesserts,2047,Fruit,1015,AdditivesAndGarnishes,2015
-Oven,FrenchDesserts,2056,Purple Macaraon,10720,FrenchDesserts,2047,Grain,6020,AdditivesAndGarnishes,2015
-Oven,FrenchDesserts,2057,Yellow Macaron,640,FrenchDesserts,2047,Fruit,1014,AdditivesAndGarnishes,2015
-Oven,FrenchDesserts,2058,Blue Macaron,1500,FrenchDesserts,2047,AdditivesAndGarnishes,2017,DairyProducts,2043
-Oven,FrenchDesserts,2059,Green Macaron,520,FrenchDesserts,2047,Nut,1024,AdditivesAndGarnishes,2015
-Oven,FrenchDesserts,2060,Brown Macaron,420,FrenchDesserts,2047,AdditivesAndGarnishes,2013,CocoaBeanDerivatives,1033
-Oven,FrenchDesserts,2061,Galaxy Macaron,3080,FrenchDesserts,2047,AdditivesAndGarnishes,2018,CocoaBeanDerivatives,1034
-Oven,FrenchDesserts,2062,Mini Nut Tart,450,Dough,6024,Nut,1026,Nut,1024
-Oven,FrenchDesserts,2063,Mini Fruit Tart,5290,Dough,6024,DairyProducts,2043,Fruit,1011
-Oven,FrenchDesserts,2064,Tarte Tatin,1080,Dough,6027,AdditivesAndGarnishes,2013,DairyProducts,2045
-Oven,FrenchDesserts,2065,Tarte Tropézienne,430,Dough,6024,DairyProducts,2043,DairyProducts,2045
-Oven,FrenchDesserts,2066,Chocolate Nun,370,Dough,6024,DairyProducts,2043,CocoaBeanDerivatives,1033
-Oven,FrenchDesserts,2067,Paris-Brest,300,FastFood,17094,DairyProducts,2043,AdditivesAndGarnishes,2012
-Oven,FrenchDesserts,2068,Éclair,570,Dough,6024,DairyProducts,2045,AdditivesAndGarnishes,2011
-Oven,FrenchDesserts,2069,French Cream Puff,230,Dough,6024,DairyProducts,2043,AdditivesAndGarnishes,2012
-Oven,FrenchDesserts,2070,Strawberry Napoleon,410,Dough,6024,DairyProducts,2043,DairyProducts,2045
-Oven,FrenchDesserts,2071,Napoleon,550,Dough,6024,DairyProducts,2043,DairyProducts,2045
-Oven,FrenchDesserts,2072,Burnt Cream,190,AdditivesAndGarnishes,2011,PoultryEgg,3010,AdditivesAndGarnishes,2013
-Oven,FrenchDesserts,2073,Soufflé,170,AdditivesAndGarnishes,2011,PoultryEgg,3010,AdditivesAndGarnishes,2012
-Oven,FrenchDesserts,2074,Opera Cake,370,Grain,6013,DairyProducts,2045,PoultryEgg,3010
-Oven,FrenchDesserts,2075,Madeleine,2850,Grain,6018,DairyProducts,2045,PoultryEgg,3010
-Oven,FrenchDesserts,2076,Canelé,490,Dough,6024,IconicAlcohol,7027,AdditivesAndGarnishes,2013
-Oven,FrenchDesserts,2077,Financier,310,Dough,6024,Nut,1026,DairyProducts,2043
-Oven,FrenchDesserts,2078,Palm Heart,370,Dough,6024,DairyProducts,2045,AdditivesAndGarnishes,2012
-Oven,FrenchSeafood,2084,Baguette,20,FastFood,17094,FrenchRecipe,9027,,
-Oven,FrenchSeafood,2085,Lobster Thermidor,1810,Shellfish,5029,DairyProducts,2045,IconicAlcohol,7022
-Oven,FrenchSeafood,2086,Stuffed Mussels,780,Shellfish,5023,DairyProducts,2045,DairyProducts,2044
-Oven,FrenchSeafood,2087,Brandade,1460,Fish,5014,Vegetables,4017,AdditivesAndGarnishes,2011
-Oven,FrenchSeafood,2088,French Potato and Beef Casserole,6920,PorkLamb,3029,Vegetables,4017,DairyProducts,2044
-Oven,FrenchSeafood,2089,French Potato and Cheese Gratin,2450,Vegetables,4017,DairyProducts,2047,PorkLamb,3020
-Oven,FrenchSeafood,2090,French Vegetable Stew,1290,Vegetables,4010,Vegetables,4014,Vegetables,4016
-Oven,FrenchSeafood,2091,Easter Pate with Eggs,5330,FastFood,17094,PorkLamb,3029,PoultryEgg,3010
-Oven,FrenchSeafood,2109,Crab Soufflé,490,Shellfish,5026,Grain,6013,PoultryEgg,3010
-Oven,FrenchSeafood,2110,Fish Baked in Parchment Packet,720,Fish,5014,Fruit,1014,ClassicAlcohol,7014
-Oven,FrenchSeafood,2111,Bass Baked in a Crust,5380,Fish,5019,FastFood,17094,AdditivesAndGarnishes,2011
-Pan,GrilledMeat,17030,Surf and Turf,7690,Shellfish,5029,BeefDerivatives,3032,BBQRecipe,9013
-Pan,PanfriedFoods,17046,Fried Egg,10,PoultryEgg,3010,,,,
-Pan,PanfriedFoods,17047,Fried Bacon,10,PorkLamb,3020,,,,
-Pan,PanfriedFoods,17048,Fried Sausage,20,PorkLamb,3021,,,,
-Pan,PanfriedFoods,17049,Fried Ham,40,PorkLamb,3022,,,,
-Pan,PanfriedFoods,17050,Fried Asparagus,40,Vegetables,4012,,,,
-Pan,PanfriedFoods,17051,Fried Broccoli,40,LeafVegetables,4024,,,,
-Pan,PanfriedFoods,17052,Fried Red Cabbage,80,LeafVegetables,4025,,,,
-Pan,PanfriedFoods,17053,Fried Salmon,320,Fish,5015,,,,
-Pan,PanfriedFoods,17054,Pan-fried Cod,480,Fish,5014,BBQRecipe,9011,,
-Pan,PanfriedFoods,17055,Peas with Pine Nut,15360,Nut,1031,Vegetables,4020,,
-Pan,PanfriedFoods,17056,Chocolate Donut,1780,Dough,6028,CocoaBeanDerivatives,1033,BBQRecipe,9010
-Pan,PanfriedFoods,17057,	Duck with Cherries,650,PoultryEgg,3016,Fruit,1010,,
-Pan,PanfriedFoods,17058,Stuffed Mushroom,3680,LeafVegetables,4030,Vegetables,4014,DairyProducts,2047
-Pan,PanfriedFoods,17059,	Smoked Duck Breast,480,PoultryEgg,3015,BBQRecipe,9010,,
-Pan,PanfriedFoods,17060,	Creamed Spinach,1140,LeafVegetables,4028,DairyProducts,2046,AdditivesAndGarnishes,2011
-Pan,PanfriedFoods,17061,	Creamy Lamb Chops,1360,PorkLamb,3027,DairyProducts,2043,BBQRecipe,9007
-Pan,PanfriedFoods,17062,Baked Beans,200,Grain,6011,AdditivesAndGarnishes,2014,BBQRecipe,9007
-Pan,PanfriedFoods,17063,Texas Seasoned Rice,1520,Grain,6016,DairyProducts,2045,BBQRecipe,9012
-Pan,PanfriedFoods,17064,	Stir-fried Arugula,340,LeafVegetables,4027,Nut,1023,,
-Pan,PanfriedFoods,17065,	Red Bean Rice,670,Grain,6010,Grain,6016,PorkLamb,3021
-Pan,Salads,17070,Fried Cabbage,30,LeafVegetables,4023,PorkLamb,3020,,
-Pan,Desserts,17088,Donut,1480,Dough,6028,BBQRecipe,9008,,
-Pan,DeepfriedFoods,17106,Fries,448,Salads,17072,,,,
-Pan,DeepfriedFoods,17107,Fried Chicken Wing,340,Grain,6015,PoultryEgg,3011,,
-Pan,DeepfriedFoods,17108,Fried Chicken Drumstick,360,Grain,6015,PoultryEgg,3012,,
-Pan,DeepfriedFoods,17109,Fried Chicken Breast,400,Grain,6015,PoultryEgg,3013,,
-Pan,DeepfriedFoods,17110,	Fried Chicken,480,Grain,6015,PoultryEgg,3014,,
-Pan,DeepfriedFoods,17111,	Fried Pork Chop,480,Grain,6015,PorkLamb,3024,,
-Pan,DeepfriedFoods,17112,Fish Fry,560,Grain,6015,Fish,5014,BBQRecipe,9009
-Pan,DeepfriedFoods,17113,Fried Burrito,1640,PoultryEgg,3013,Grain,6014,DairyProducts,2044
-Pan,DeepfriedFoods,17114,Fried Mullet,2920,Fish,5018,Grain,6015,BBQRecipe,9008
-Pan,DeepfriedFoods,17115,Fried Mushrooms,2960,LeafVegetables,4030,Grain,6015,BBQRecipe,9009
-Pan,DeepfriedFoods,17116,Herb Crusted Leg of Lamb,3520,PorkLamb,3028,Grain,6015,BBQRecipe,9012
-Pan,DeepfriedFoods,17117,Hush Puppy,340,Grain,6014,AdditivesAndGarnishes,2011,BBQRecipe,9010
-Shaker,MixedDrinks,1027,Mimosa,80,ClassicAlcohol,7013,FruitJuice,1006,,
-Shaker,MixedDrinks,1028,	Kalimotxo,240,ClassicAlcohol,7012,SoftDrinks,2022,Fruit,1014
-Shaker,MixedDrinks,1029,Gin Fizz,260,IconicAlcohol,7023,SoftDrinks,2023,FruitJuice,1005
-Shaker,MixedDrinks,1030,Dry Martini,100,IconicAlcohol,7023,IconicAlcohol,7025,,
-Shaker,MixedDrinks,1031,Whisky Sour,330,IconicAlcohol,7026,FruitJuice,1005,AdditivesAndGarnishes,2014
-Shaker,MixedDrinks,1032,Pina Colada,2960,IconicAlcohol,7027,CoconutWaterProducts,1038,FruitJuice,1010
-Shaker,MixedDrinks,1033,Mojito,380,IconicAlcohol,7027,FruitJuice,1005,SoftDrinks,2021
-Shaker,MixedDrinks,1034,	Clover Club,30,IconicAlcohol,7023,PoultryEgg,3010,FruitJuice,1007
-Shaker,MixedDrinks,1035,Tequila Sunrise,1280,IconicAlcohol,7029,FruitJuice,1005,FruitJuice,1006
-Shaker,MixedDrinks,1036,Sidecar,2570,IconicAlcohol,7022,ClassicAlcohol,7018,FruitJuice,1005
-Shaker,MixedDrinks,1037,Margarita,3840,IconicAlcohol,7029,ClassicAlcohol,7018,FruitJuice,1005
-Shaker,MixedDrinks,1038,Silent Third,2720,IconicAlcohol,7026,ClassicAlcohol,7018,FruitJuice,1005
-Shaker,MixedDrinks,1039,Daiquiri,480,IconicAlcohol,7027,FruitJuice,1005,AdditivesAndGarnishes,2014
-Shaker,MixedDrinks,1040,Rum and Coke,520,IconicAlcohol,7027,SoftDrinks,2022,Fruit,1014
-Shaker,MixedDrinks,1041,Cosmopolitan,3200,IconicAlcohol,7028,ClassicAlcohol,7018,FruitJuice,1002
-Shaker,MixedDrinks,1042,	Manhattan,280,IconicAlcohol,7026,IconicAlcohol,7024,IconicAlcohol,7025
-Shaker,MixedDrinks,1043,Lava Flow,10950,IconicAlcohol,7027,CoconutWaterProducts,1035,Fruit,1011
-Shaker,MixedDrinks,1044,Aviation,410,IconicAlcohol,7023,Fruit,1010,DairyProducts,2043
-Shaker,MixedDrinks,1045,Bloody Mary,730,IconicAlcohol,7028,Vegetables,4010,BBQRecipe,9009
-Shaker,MixedDrinks,1046,Fish House Punch,490,IconicAlcohol,7027,IconicAlcohol,7022,FruitJuice,1005
-Shaker,MixedDrinks,1047,Gin Rickey,40,IconicAlcohol,7023,SoftDrinks,2021,FruitJuice,1005
-Shaker,MixedDrinks,1048,Tom & Jerry,360,IconicAlcohol,7022,IconicAlcohol,7027,AdditivesAndGarnishes,2011
-Shaker,MixedDrinks,1049,Somaek,660,ClassicAlcohol,7016,ClassicAlcohol,7011,,
-Shaker,MixedDrinks,1050,French 75,140,IconicAlcohol,7023,ClassicAlcohol,7013,FruitJuice,1005
-Shaker,MixedDrinks,1051,Hemingway Champagne,180,IconicAlcohol,7025,ClassicAlcohol,7013,FrenchRecipe,9027
-Shaker,MixedDrinks,1052,Earthquake Cocktail,320,IconicAlcohol,7026,IconicAlcohol,7025,FruitJuice,1005
-Shaker,MixedDrinks,1053,	French Rose,270,IconicAlcohol,7025,IconicAlcohol,7023,IconicAlcohol,7022
-Shaker,MixedDrinks,1054,	French Gimlet,100,IconicAlcohol,7023,FruitJuice,1005,FrenchRecipe,9029
-Shaker,MixedDrinks,1055,Boulevardier,240,IconicAlcohol,7026,IconicAlcohol,7025,FrenchRecipe,9032
-Shaker,MixedDrinks,1056,Marie Antoinette,720,ClassicAlcohol,7013,IconicAlcohol,7028,FruitJuice,1007
-Shaker,MixedDrinks,1057,Tokyo Mule,1300,ClassicAlcohol,7015,IconicAlcohol,7028,SoftDrinks,2021
-GlassProduct,Salads,17068,Coleslaw,420,LeafVegetables,4023,Vegetables,4013,BBQRecipe,9011
-GlassProduct,Salads,17069,Waldorf Salad,1010,LeafVegetables,4022,Fruit,1012,Nut,1028
-GlassProduct,FastFood,17094,Big Dough,90,Grain,6013,SoftDrinks,2020,,
+﻿TypeTool,ResultType,ResultId,ResultName,TimeToCook_sec,Ing1_Type,Ing1_Id,Ing1_Name,Ing2_Type,Ing2_Id,Ing2_Name,Ing3_Type,Ing3_Id,Ing3_Name
+Juicer,FruitJuice,1002,Strawberry Juice,20,Fruit,1011,Strawberry,,,,,,
+Juicer,FruitJuice,1003,Apple Juice,40,Fruit,1012,Apple,,,,,,
+Juicer,FruitJuice,1004,Banana Juice,80,Fruit,1013,Banana,,,,,,
+Juicer,FruitJuice,1005,Lemon Juice,160,Fruit,1014,Lemon,,,,,,
+Juicer,FruitJuice,1006,Orange Juice,640,Fruit,1016,Orange,,,,,,
+Juicer,FruitJuice,1007,Pomegranate Juice,1280,Fruit,1017,Pomegranate,,,,,,
+Juicer,FruitJuice,1008,Pear Juice,2560,Fruit,1018,Pear,,,,,,
+Juicer,FruitJuice,1009,Mango Juice,5120,Fruit,1019,Mango,,,,,,
+Juicer,FruitJuice,1010,Pineapple Juice,10280,Fruit,1020,Pineapple,,,,,,
+Juicer,FruitJuice,1011,Watermelon Juice,20480,Fruit,1021,Watermelon,,,,,,
+Juicer,FruitJuice,1001,Cherry Juice,10,Fruit,1010,Cherry,,,,,,
+Juicer,FruitJuice,1012,Spinach Smoothie,860,LeafVegetables,4028,Spinach,Fruit,1012,Apple,Vegetables,4011,Cucumber
+Juicer,FruitJuice,1013,Strawberry Apple Juice,60,Fruit,1011,Strawberry,Fruit,1012,Apple,,,
+Juicer,FruitJuice,1014,Strawberry Lemon Juice,180,Fruit,1011,Strawberry,Fruit,1014,Lemon,,,
+Juicer,FruitJuice,1015,	Beet Smoothie,1560,LeafVegetables,4029,Beet,Fruit,1012,Apple,Vegetables,4013,Carrot
+Juicer,FruitJuice,1016,Banana Orange Juice,720,Fruit,1013,Banana,Fruit,1016,Orange,,,
+Juicer,FruitJuice,1018,Apple Lemon Juice,200,Fruit,1012,Apple,Fruit,1014,Lemon,,,
+Juicer,FruitJuice,1019,Pear Apple Banana Juice,2680,Fruit,1012,Apple,Fruit,1013,Banana,Fruit,1018,Pear
+ChefCounter,CoffeeDrinks,1020,	Caramel Macchiato,120,Coffee,2034,Cup of Coffee,AdditivesAndGarnishes,2013,Caramel,,,
+ChefCounter,CoffeeDrinks,1021,Latte,60,Coffee,2034,Cup of Coffee,AdditivesAndGarnishes,2011,Milk,,,
+ChefCounter,CoffeeDrinks,1022,	Cappuccino,70,Coffee,2034,Cup of Coffee,DairyProducts,2042,Frothed Milk,,,
+ChefCounter,CoffeeDrinks,1023,Mocha,240,Coffee,2034,Cup of Coffee,CocoaBeanDerivatives,1033,Chocolate Syrup,AdditivesAndGarnishes,2011,Milk
+ChefCounter,CoffeeDrinks,1024,Frappe,70,Coffee,2034,Cup of Coffee,AdditivesAndGarnishes,2010,Ice Cube,AdditivesAndGarnishes,2011,Milk
+ChefCounter,CoffeeDrinks,1025,Mocha Frappe,230,Coffee,2034,Cup of Coffee,AdditivesAndGarnishes,2010,Ice Cube,CocoaBeanDerivatives,1033,Chocolate Syrup
+ChefCounter,CoffeeDrinks,1026,Caramel Frappe,190,Coffee,2034,Cup of Coffee,AdditivesAndGarnishes,2013,Caramel,DairyProducts,2043,Whipped Cream
+ChefCounter,Salads,17066,Tomato Slice,10,Vegetables,4010,Tomato,,,,,,
+ChefCounter,Salads,17067,Cucumber Slice,20,Vegetables,4011,Cucumber,,,,,,
+ChefCounter,Salads,17071,	Shrimp Cocktail,400,Shellfish,5025,Shrimp,BBQRecipe,9011,BBQ Recipe,,,
+ChefCounter,Salads,17072,Potato Strips,1280,Vegetables,4017,Potato,,,,,,
+ChefCounter,Salads,17073,	Beet Salad,3850,LeafVegetables,4029,Beet,LeafVegetables,4022,Lettuce,DairyProducts,2048,Feta
+ChefCounter,Salads,17074,Salade Landaise,660,Nut,1028,Walnut,PanfriedFoods,17059,	Smoked Duck Breast,PorkLamb,3020,Bacon
+ChefCounter,Salads,17075,Arugula Tomato Salad,370,LeafVegetables,4027,Arugula,Vegetables,4010,Tomato,BBQRecipe,9008,BBQ Recipe
+ChefCounter,Salads,17076,Potato Salad,1770,Vegetables,4017,Potato,Vegetables,4010,Tomato,Vegetables,4014,Onion
+ChefCounter,Salads,17077,	Hawaiian Poke Bowl,1600,Fish,5017,Tuna,BBQRecipe,9011,BBQ Recipe,,,
+ChefCounter,Salads,17078,Crab Louie Salad,270,Shellfish,5026,Crab,PoultryEgg,3010,Egg,LeafVegetables,4022,Lettuce
+ChefCounter,Desserts,17080,Shave Ice,190,AdditivesAndGarnishes,2010,Ice Cube,DairyProducts,2043,Whipped Cream,AdditivesAndGarnishes,2012,Sugar
+ChefCounter,Desserts,17081,Banana Split,310,Fruit,1013,Banana,DairyProducts,2043,Whipped Cream,Fruit,1010,Cherry
+ChefCounter,Desserts,17092,Cheese Stuffed Dates,3080,Nut,1030,Date,DairyProducts,2046,Cream Cheese,Nut,1024,Pistachio
+ChefCounter,FastFood,17097,Pork Burger,10,FastFood,17095,	Baked Burger Bun,GrilledMeat,17018,Grilled Patty,LeafVegetables,4022,Lettuce
+ChefCounter,FastFood,17098,Chicken Burger,10,FastFood,17095,	Baked Burger Bun,GrilledMeat,17016,Grilled Chicken Breast,LeafVegetables,4022,Lettuce
+ChefCounter,FastFood,17099,Cheese Burger,130,FastFood,17095,	Baked Burger Bun,DairyProducts,2044,Cheese,LeafVegetables,4022,Lettuce
+ChefCounter,FastFood,17100,Beef Burger,10,FastFood,17095,	Baked Burger Bun,GrilledMeat,17027,Delmonico Steak,LeafVegetables,4022,Lettuce
+ChefCounter,FastFood,17101,Tuna Burger,10,FastFood,17095,	Baked Burger Bun,GrilledSeafood,17038,Grilled Tuna,LeafVegetables,4022,Lettuce
+ChefCounter,FastFood,17102,Hot Dog,10,FastFood,17096,Baked Hot Dog Bun,PanfriedFoods,17048,Fried Sausage,LeafVegetables,4022,Lettuce
+ChefCounter,FastFood,17103,Cheese Dog,130,FastFood,17096,Baked Hot Dog Bun,PanfriedFoods,17048,Fried Sausage,DairyProducts,2044,Cheese
+ChefCounter,FastFood,17104,Lobster Roll,300,Grain,6014,Corn Flour,DairyProducts,2044,Cheese,BBQRecipe,9007,BBQ Recipe
+Grill,GrilledVegetables,17000,Grilled Carrot,80,Vegetables,4013,Carrot,,,,,,
+Grill,GrilledVegetables,17001,Grilled Onion,160,Vegetables,4014,Onion,,,,,,
+Grill,GrilledVegetables,17002,Grilled Bell Pepper,320,Vegetables,4015,Bell Pepper,,,,,,
+Grill,GrilledVegetables,17003,Grilled Eggplant,640,Vegetables,4016,Eggplant,,,,,,
+Grill,GrilledVegetables,17004,Grilled Potato,1280,Vegetables,4017,Potato,,,,,,
+Grill,GrilledVegetables,17005,Grilled Okra,2560,Vegetables,4018,Okra,,,,,,
+Grill,GrilledVegetables,17006,Grilled Corn,5120,Vegetables,4019,Corn,,,,,,
+Grill,GrilledVegetables,17007,Grilled Peas,10240,Vegetables,4020,Pea,,,,,,
+Grill,GrilledVegetables,17008,Grillded CherryTomato,20480,Vegetables,4021,Cherry Tomato,,,,,,
+Grill,GrilledVegetables,17009,Grilled Cauliflower,160,LeafVegetables,4026,Cauliflower,,,,,,
+Grill,GrilledMeat,17014,Grilled Chicken Wing,20,PoultryEgg,3011,Chicken Wing,,,,,,
+Grill,GrilledMeat,17015,Grilled Chicken Drumstick,40,PoultryEgg,3012,Chicken Drumstick,,,,,,
+Grill,GrilledMeat,17016,Grilled Chicken Breast,80,PoultryEgg,3013,Chicken Breast,,,,,,
+Grill,GrilledMeat,17017,Grilled Chicken,160,PoultryEgg,3014,Chicken,,,,,,
+Grill,GrilledMeat,17018,Grilled Patty,80,PorkLamb,3023,Patty,,,,,,
+Grill,GrilledMeat,17019,Baby Back Ribs,160,PorkLamb,3024,Pork Chop,,,,,,
+Grill,GrilledMeat,17020,Grilled Pork Knuckle,320,PorkLamb,3025,Pock Knuckle,,,,,,
+Grill,GrilledMeat,17021,Lamb Kebab,640,PorkLamb,3026,Lamb Cube,,,,,,
+Grill,GrilledMeat,17022,Grilled Lamb Chop,1280,PorkLamb,3027,Lamb Chop,,,,,,
+Grill,GrilledMeat,17023,	Grilled Leg of Lamb,2560,PorkLamb,3028,Leg of Lamb,,,,,,
+Grill,GrilledMeat,17024,Burnt Ends,5120,PorkLamb,3029,Beef Cube,,,,,,
+Grill,GrilledMeat,17025,Grilled Suckling Pig,10240,PorkLamb,3030,Suckling Pig,,,,,,
+Grill,GrilledMeat,17026,Grilled Lamb Chop,20480,PorkLamb,3031,Lamb,,,,,,
+Grill,GrilledMeat,17027,Delmonico Steak,5130,BeefDerivatives,3032,Beef Steak,,,,,,
+Grill,GrilledMeat,17028,Grilled Beef Ribs,10260,BeefDerivatives,3033,Beef Rib,,,,,,
+Grill,GrilledMeat,17029,Pork Baked Potato,2000,Vegetables,4017,Potato,PorkLamb,3023,Patty,BBQRecipe,9012,BBQ Recipe
+Grill,GrilledMeat,17032,Huli-huli Chicken,10480,PoultryEgg,3014,Chicken,Fruit,1020,Pineapple,BBQRecipe,9008,BBQ Recipe
+Grill,GrilledMeat,17033,	Roast Duck,640,PoultryEgg,3016,Duck,,,,,,
+Grill,GrilledSeafood,17035,Grilled Squid,20,Fish,5011,Squid,,,,,,
+Grill,GrilledSeafood,17036,Grilled Tilapia,40,Fish,5012,Tilapia,,,,,,
+Grill,GrilledSeafood,17037,Grilled Flounder,640,Fish,5016,Flounder,,,,,,
+Grill,GrilledSeafood,17038,Grilled Tuna,1280,Fish,5017,Tuna,,,,,,
+Grill,GrilledSeafood,17039,Grilled Bass,5120,Fish,5019,Bass,,,,,,
+Grill,GrilledSeafood,17040,Grilled Mussel,20,Shellfish,5023,Mussel,,,,,,
+Grill,GrilledSeafood,17041,Grilled Shrimp,80,Shellfish,5025,Shrimp,,,,,,
+Grill,GrilledSeafood,17042,Grilled Crab,160,Shellfish,5026,Crab,,,,,,
+Grill,GrilledSeafood,17043,Grilled Scallop,320,Shellfish,5027,Scallop,,,,,,
+Grill,GrilledSeafood,17044,Grilled Lobster,1280,Shellfish,5029,Lobster,,,,,,
+Grill,GrilledSeafood,17045,Grilled King Crab,2560,Shellfish,5030,King Crab,,,,,,
+Oven,GrilledVegetables,17010,Spinach Gratin,1850,LeafVegetables,4028,Spinach,DairyProducts,2047,Mozzarella Cheese,DairyProducts,2045,Butter
+Oven,GrilledVegetables,17011,Buffalo Cauliflower,560,Grain,6013,Wheat Flour,LeafVegetables,4026,Cauliflower,BBQRecipe,9011,BBQ Recipe
+Oven,GrilledVegetables,17012,Roasted Beetroot,1280,LeafVegetables,4029,Beet,,,,,,
+Oven,GrilledMeat,17031,Quail with Rasins,3850,PoultryEgg,3018,Quail,PorkLamb,3020,Bacon,BBQRecipe,9013,BBQ Recipe
+Oven,GrilledMeat,17034,	Roast Goose with Apples,1320,PoultryEgg,3017,Goose,Fruit,1012,Apple,,,
+Oven,Desserts,17082,Apple Pie,760,Dough,6027,Pie Crust,Fruit,1012,Apple,,,
+Oven,Desserts,17083,Banana Pie,800,Dough,6027,Pie Crust,Fruit,1013,Banana,,,
+Oven,Desserts,17084,	Mango Pie,5840,Dough,6027,Pie Crust,Fruit,1019,Mango,,,
+Oven,Desserts,17085,Pecan Pie,1040,Dough,6027,Pie Crust,Nut,1027,Pecan,,,
+Oven,Desserts,17086,	Pineapple Pie,11000,Dough,6027,Pie Crust,Fruit,1020,Pineapple,,,
+Oven,Desserts,17087,Fortune Cookies,570,Dough,6024,Small Dough,Nut,1026,Almond,DairyProducts,2045,Butter
+Oven,Desserts,17089,	Brownie,1010,CocoaBeanDerivatives,1034,Chocolate,DairyProducts,2045,Butter,Dough,6024,Small Dough
+Oven,Desserts,17090,Toast,2880,Dough,6029,Toast Dough,,,,,,
+Oven,Desserts,17091,	Honey Roasted Cashews,1440,Nut,1029,Cashew,AdditivesAndGarnishes,2014,Honey,,,
+Oven,Desserts,17093,Corn Bread,190,Grain,6014,Corn Flour,AdditivesAndGarnishes,2011,Milk,PoultryEgg,3010,Egg
+Oven,FastFood,17095,	Baked Burger Bun,180,Dough,6025,Burger Bun,,,,,,
+Oven,FastFood,17096,Baked Hot Dog Bun,360,Dough,6026,Hot Dog Bun,,,,,,
+Oven,FastFood,17105,	Nachos,300,Grain,6014,Corn Flour,DairyProducts,2044,Cheese,BBQRecipe,9007,BBQ Recipe
+Oven,DeepfriedFoods,17118,	Baked Spinach Chips,720,LeafVegetables,4028,Spinach,Grain,6013,Wheat Flour,,,
+Oven,FrenchDelicacies,2000,	Escargot,880,FrenchDelicacies,2000,	Escargot,DairyProducts,2045,Butter,FrenchRecipe,9032,French Recipe
+Oven,FrenchDelicacies,2001,	Quiche Lorraine,2140,Dough,6027,Pie Crust,PorkLamb,3020,Bacon,DairyProducts,2044,Cheese
+Oven,FrenchDelicacies,2002,Garlic Bread,260,Desserts,17090,Toast,DairyProducts,2045,Butter,FrenchRecipe,9027,French Recipe
+Oven,FrenchDelicacies,2003,	Broccoli Gratin,4180,LeafVegetables,4024,Broccoli,DairyProducts,2045,Butter,AdditivesAndGarnishes,2011,Milk
+Oven,FrenchDelicacies,2004,Baked Bass with Lemon,5680,Fish,5019,Bass,Fruit,1014,Lemon,Vegetables,4015,Bell Pepper
+Oven,FrenchDelicacies,2005,	Savory Crepe,2750,Grain,6018,Buckwheat Flour,AdditivesAndGarnishes,2011,Milk,PoultryEgg,3010,Egg
+Oven,FrenchDelicacies,2006,Entrec�te,5490,BeefDerivatives,3032,Beef Steak,ClassicAlcohol,7012,Red Wine,DairyProducts,2045,Butter
+Oven,FrenchDelicacies,2007,Foie gras,1690,GooseDerivatives,3034,Raw Goose Liver,ClassicAlcohol,7012,Red Wine,DairyProducts,2045,Butter
+Oven,FrenchDelicacies,2008,Magret de canard,1440,PoultryEgg,3015,Duck Breast,Fruit,1016,Orange,AdditivesAndGarnishes,2014,Honey
+Oven,FrenchDelicacies,2009,Coquilles St. Jaques,880,Shellfish,5027,Scallop,DairyProducts,2045,Butter,FrenchRecipe,9031,French Recipe
+Oven,FrenchDelicacies,2010,Bacon Wrapped Asparagus,370,Vegetables,4012,Asparagus,PorkLamb,3020,Bacon,FrenchRecipe,9031,French Recipe
+Oven,FrenchDelicacies,2017,Tarte flamb�e,1930,FastFood,17094,Big Dough,PorkLamb,3020,Bacon,DairyProducts,2046,Cream Cheese
+Oven,FrenchDelicacies,2020,Cheese Pie,1540,Dough,6027,Pie Crust,DairyProducts,2044,Cheese,DairyProducts,2043,Whipped Cream
+Oven,FrenchDelicacies,2023,Norman Tart,870,Dough,6027,Pie Crust,Fruit,1012,Apple,PoultryEgg,3010,Egg
+Oven,FrenchDelicacies,2025,Spinach Quiche,1640,Dough,6027,Pie Crust,LeafVegetables,4028,Spinach,DairyProducts,2044,Cheese
+Oven,FrenchDelicacies,2028,Provencal Stuffed Eggplants,1000,Vegetables,4016,Eggplant,Vegetables,4014,Onion,PorkLamb,3022,Ham
+Oven,FrenchDelicacies,2029,	Smoked Salmon Rolls,1720,Fish,5015,Salmon,LeafVegetables,4028,Spinach,DairyProducts,2044,Cheese
+Oven,FrenchDelicacies,2030,	Cauliflower Gratin,700,LeafVegetables,4026,Cauliflower,DairyProducts,2044,Cheese,AdditivesAndGarnishes,2011,Milk
+Oven,FrenchDelicacies,2036,Anna Potatoes,1680,Vegetables,4017,Potato,DairyProducts,2045,Butter,FrenchRecipe,9030,French Recipe
+Oven,FrenchDelicacies,2037,	French Duck with Orange Sauce,1760,PoultryEgg,3016,Duck,Fruit,1016,Orange,ClassicAlcohol,7014,White Wine
+Oven,FrenchDelicacies,2038,Corn Souffl�,6060,Vegetables,4019,Corn,Grain,6014,Corn Flour,DairyProducts,2044,Cheese
+Oven,FrenchDelicacies,2039,Provencal Vegetable Bake,890,Vegetables,4016,Eggplant,Vegetables,4010,Tomato,Vegetables,4014,Onion
+Oven,FrenchDelicacies,2040,Provencal Roast Leg of Lamb,1610,PorkLamb,3027,Lamb Chop,Fruit,1014,Lemon,Vegetables,4010,Tomato
+Oven,FrenchDelicacies,2041,Foie Gras Terrine,1770,GooseDerivatives,3034,Raw Goose Liver,ClassicAlcohol,7014,White Wine,FrenchRecipe,9031,French Recipe
+Oven,FrenchDesserts,2054,Pink Macaron,500,FrenchDesserts,2047,Macaron Batter,Fruit,1011,Strawberry,AdditivesAndGarnishes,2015,Marshmallow
+Oven,FrenchDesserts,2055,White Macaron,800,FrenchDesserts,2047,Macaron Batter,Fruit,1015,Coconut,AdditivesAndGarnishes,2015,Marshmallow
+Oven,FrenchDesserts,2056,Purple Macaraon,10720,FrenchDesserts,2047,Macaron Batter,Grain,6020,Ube,AdditivesAndGarnishes,2015,Marshmallow
+Oven,FrenchDesserts,2057,Yellow Macaron,640,FrenchDesserts,2047,Macaron Batter,Fruit,1014,Lemon,AdditivesAndGarnishes,2015,Marshmallow
+Oven,FrenchDesserts,2058,Blue Macaron,1500,FrenchDesserts,2047,Macaron Batter,AdditivesAndGarnishes,2017,Sea Salt,DairyProducts,2043,Whipped Cream
+Oven,FrenchDesserts,2059,Green Macaron,520,FrenchDesserts,2047,Macaron Batter,Nut,1024,Pistachio,AdditivesAndGarnishes,2015,Marshmallow
+Oven,FrenchDesserts,2060,Brown Macaron,420,FrenchDesserts,2047,Macaron Batter,AdditivesAndGarnishes,2013,Caramel,CocoaBeanDerivatives,1033,Chocolate Syrup
+Oven,FrenchDesserts,2061,Galaxy Macaron,3080,FrenchDesserts,2047,Macaron Batter,AdditivesAndGarnishes,2018,Mint Leaf,CocoaBeanDerivatives,1034,Chocolate
+Oven,FrenchDesserts,2062,Mini Nut Tart,770,Dough,6024,Small Dough,Nut,1026,Almond,Nut,1024,Pistachio
+Oven,FrenchDesserts,2063,Mini Fruit Tart,5610,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,Fruit,1011,Strawberry
+Oven,FrenchDesserts,2064,Tarte Tatin,1400,Dough,6027,Pie Crust,AdditivesAndGarnishes,2013,Caramel,DairyProducts,2045,Butter
+Oven,FrenchDesserts,2065,Tarte Tropézienne,750,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,DairyProducts,2045,Butter
+Oven,FrenchDesserts,2066,Chocolate Nun,370,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,CocoaBeanDerivatives,1033,Chocolate Syrup
+Oven,FrenchDesserts,2067,Paris-Brest,300,FastFood,17094,Big Dough,DairyProducts,2043,Whipped Cream,AdditivesAndGarnishes,2012,Sugar
+Oven,FrenchDesserts,2068,Éclair,570,Dough,6024,Small Dough,DairyProducts,2045,Butter,AdditivesAndGarnishes,2011,Milk
+Oven,FrenchDesserts,2069,French Cream Puff,230,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,AdditivesAndGarnishes,2012,Sugar
+Oven,FrenchDesserts,2070,Strawberry Napoleon,1690,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,DairyProducts,2045,Butter
+Oven,FrenchDesserts,2071,Napoleon,1830,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,DairyProducts,2045,Butter
+Oven,FrenchDesserts,2072,Burnt Cream,190,AdditivesAndGarnishes,2011,Milk,PoultryEgg,3010,Egg,AdditivesAndGarnishes,2013,Caramel
+Oven,FrenchDesserts,2073,Soufflé,170,AdditivesAndGarnishes,2011,Milk,PoultryEgg,3010,Egg,AdditivesAndGarnishes,2012,Sugar
+Oven,FrenchDesserts,2074,Opera Cake,690,Grain,6013,Wheat Flour,DairyProducts,2045,Butter,PoultryEgg,3010,Egg
+Oven,FrenchDesserts,2075,Madeleine,3170,Grain,6018,Buckwheat Flour,DairyProducts,2045,Butter,PoultryEgg,3010,Egg
+Oven,FrenchDesserts,2076,Canelé,810,Dough,6024,Small Dough,IconicAlcohol,7027,Rum,AdditivesAndGarnishes,2013,Caramel
+Oven,FrenchDesserts,2077,Financier,950,Dough,6024,Small Dough,Nut,1026,Almond,DairyProducts,2043,Whipped Cream
+Oven,FrenchDesserts,2078,Palm Heart,1010,Dough,6024,Small Dough,DairyProducts,2045,Butter,AdditivesAndGarnishes,2012,Sugar
+Oven,FrenchSeafood,2084,Baguette,20,FastFood,17094,Big Dough,FrenchRecipe,9027,French Recipe,,,
+Oven,FrenchSeafood,2085,Lobster Thermidor,1810,Shellfish,5029,Lobster,DairyProducts,2045,Butter,IconicAlcohol,7022,Brandy
+Oven,FrenchSeafood,2086,Stuffed Mussels,780,Shellfish,5023,Mussel,DairyProducts,2045,Butter,DairyProducts,2044,Cheese
+Oven,FrenchSeafood,2087,Brandade,2100,Fish,5014,Cod,Vegetables,4017,Potato,AdditivesAndGarnishes,2011,Milk
+Oven,FrenchSeafood,2088,French Potato and Beef Casserole,6920,PorkLamb,3029,Beef Cube,Vegetables,4017,Potato,DairyProducts,2044,Cheese
+Oven,FrenchSeafood,2089,French Potato and Cheese Gratin,2450,Vegetables,4017,Potato,DairyProducts,2047,Mozzarella Cheese,PorkLamb,3020,Bacon
+Oven,FrenchSeafood,2090,French Vegetable Stew,1290,Vegetables,4010,Tomato,Vegetables,4014,Onion,Vegetables,4016,Eggplant
+Oven,FrenchSeafood,2091,Easter Pate with Eggs,5330,FastFood,17094,Big Dough,PorkLamb,3029,Beef Cube,PoultryEgg,3010,Egg
+Oven,FrenchSeafood,2109,Crab Soufflé,1130,Shellfish,5026,Crab,Grain,6013,Wheat Flour,PoultryEgg,3010,Egg
+Oven,FrenchSeafood,2110,Fish Baked in Parchment Packet,1040,Fish,5014,Cod,Fruit,1014,Lemon,ClassicAlcohol,7014,White Wine
+Oven,FrenchSeafood,2111,Bass Baked in a Crust,5700,Fish,5019,Bass,FastFood,17094,Big Dough,AdditivesAndGarnishes,2011,Milk
+Pan,GrilledMeat,17030,Surf and Turf,7690,Shellfish,5029,Lobster,BeefDerivatives,3032,Beef Steak,BBQRecipe,9013,BBQ Recipe
+Pan,PanfriedFoods,17046,Fried Egg,10,PoultryEgg,3010,Egg,,,,,,
+Pan,PanfriedFoods,17047,Fried Bacon,10,PorkLamb,3020,Bacon,,,,,,
+Pan,PanfriedFoods,17048,Fried Sausage,20,PorkLamb,3021,Sausage,,,,,,
+Pan,PanfriedFoods,17049,Fried Ham,40,PorkLamb,3022,Ham,,,,,,
+Pan,PanfriedFoods,17050,Fried Asparagus,40,Vegetables,4012,Asparagus,,,,,,
+Pan,PanfriedFoods,17051,Fried Broccoli,40,LeafVegetables,4024,Broccoli,,,,,,
+Pan,PanfriedFoods,17052,Fried Red Cabbage,80,LeafVegetables,4025,Red Cabbage,,,,,,
+Pan,PanfriedFoods,17053,Fried Salmon,320,Fish,5015,Salmon,,,,,,
+Pan,PanfriedFoods,17054,Pan-fried Cod,480,Fish,5014,Cod,BBQRecipe,9011,BBQ Recipe,,,
+Pan,PanfriedFoods,17055,Peas with Pine Nut,15360,Nut,1031,Pine Nut,Vegetables,4020,Pea,,,
+Pan,PanfriedFoods,17056,Chocolate Donut,1780,Dough,6028,Donut Dough,CocoaBeanDerivatives,1033,Chocolate Syrup,BBQRecipe,9010,BBQ Recipe
+Pan,PanfriedFoods,17057,	Duck with Cherries,650,PoultryEgg,3016,Duck,Fruit,1010,Cherry,,,
+Pan,PanfriedFoods,17058,Stuffed Mushroom,3680,LeafVegetables,4030,Button Mushroom,Vegetables,4014,Onion,DairyProducts,2047,Mozzarella Cheese
+Pan,PanfriedFoods,17059,	Smoked Duck Breast,480,PoultryEgg,3015,Duck Breast,BBQRecipe,9010,BBQ Recipe,,,
+Pan,PanfriedFoods,17060,	Creamed Spinach,1140,LeafVegetables,4028,Spinach,DairyProducts,2046,Cream Cheese,AdditivesAndGarnishes,2011,Milk
+Pan,PanfriedFoods,17061,	Creamy Lamb Chops,1360,PorkLamb,3027,Lamb Chop,DairyProducts,2043,Whipped Cream,BBQRecipe,9007,BBQ Recipe
+Pan,PanfriedFoods,17062,Baked Beans,200,Grain,6011,Soy Bean,AdditivesAndGarnishes,2014,Honey,BBQRecipe,9007,BBQ Recipe
+Pan,PanfriedFoods,17063,Texas Seasoned Rice,1520,Grain,6016,Rice,DairyProducts,2045,Butter,BBQRecipe,9012,BBQ Recipe
+Pan,PanfriedFoods,17064,	Stir-fried Arugula,340,LeafVegetables,4027,Arugula,Nut,1023,Peanut,,,
+Pan,PanfriedFoods,17065,	Red Bean Rice,670,Grain,6010,Red Bean,Grain,6016,Rice,PorkLamb,3021,Sausage
+Pan,Salads,17070,Fried Cabbage,30,LeafVegetables,4023,Cabbage,PorkLamb,3020,Bacon,,,
+Pan,Desserts,17088,Donut,1480,Dough,6028,Donut Dough,BBQRecipe,9008,BBQ Recipe,,,
+Pan,DeepfriedFoods,17106,Fries,0,Salads,17072,Potato Strips,,,,,,
+Pan,DeepfriedFoods,17107,Fried Chicken Wing,340,Grain,6015,Breadcrumb,PoultryEgg,3011,Chicken Wing,,,
+Pan,DeepfriedFoods,17108,Fried Chicken Drumstick,360,Grain,6015,Breadcrumb,PoultryEgg,3012,Chicken Drumstick,,,
+Pan,DeepfriedFoods,17109,Fried Chicken Breast,400,Grain,6015,Breadcrumb,PoultryEgg,3013,Chicken Breast,,,
+Pan,DeepfriedFoods,17110,	Fried Chicken,480,Grain,6015,Breadcrumb,PoultryEgg,3014,Chicken,,,
+Pan,DeepfriedFoods,17111,	Fried Pork Chop,480,Grain,6015,Breadcrumb,PorkLamb,3024,Pork Chop,,,
+Pan,DeepfriedFoods,17112,Fish Fry,560,Grain,6015,Breadcrumb,Fish,5014,Cod,BBQRecipe,9009,BBQ Recipe
+Pan,DeepfriedFoods,17113,Fried Burrito,1640,PoultryEgg,3013,Chicken Breast,Grain,6014,Corn Flour,DairyProducts,2044,Cheese
+Pan,DeepfriedFoods,17114,Fried Mullet,2920,Fish,5018,Mullet,Grain,6015,Breadcrumb,BBQRecipe,9008,BBQ Recipe
+Pan,DeepfriedFoods,17115,Fried Mushrooms,2960,LeafVegetables,4030,Button Mushroom,Grain,6015,Breadcrumb,BBQRecipe,9009,BBQ Recipe
+Pan,DeepfriedFoods,17116,Herb Crusted Leg of Lamb,3520,PorkLamb,3028,Leg of Lamb,Grain,6015,Breadcrumb,BBQRecipe,9012,BBQ Recipe
+Pan,DeepfriedFoods,17117,Hush Puppy,340,Grain,6014,Corn Flour,AdditivesAndGarnishes,2011,Milk,BBQRecipe,9010,BBQ Recipe
+Shaker,MixedDrinks,1027,Mimosa,80,ClassicAlcohol,7013,Champagne,FruitJuice,1006,Orange Juice,,,
+Shaker,MixedDrinks,1028,	Kalimotxo,240,ClassicAlcohol,7012,Red Wine,SoftDrinks,2022,Cola,Fruit,1014,Lemon
+Shaker,MixedDrinks,1029,Gin Fizz,260,IconicAlcohol,7023,Gin,SoftDrinks,2023,Soda,FruitJuice,1005,Lemon Juice
+Shaker,MixedDrinks,1030,Dry Martini,100,IconicAlcohol,7023,Gin,IconicAlcohol,7025,Absinthe,,,
+Shaker,MixedDrinks,1031,Whisky Sour,330,IconicAlcohol,7026,Whisky,FruitJuice,1005,Lemon Juice,AdditivesAndGarnishes,2014,Honey
+Shaker,MixedDrinks,1032,Pina Colada,2960,IconicAlcohol,7027,Rum,CoconutWaterProducts,1038,Coconut Yogurt,FruitJuice,1010,Pineapple Juice
+Shaker,MixedDrinks,1033,Mojito,380,IconicAlcohol,7027,Rum,FruitJuice,1005,Lemon Juice,SoftDrinks,2021,Sparkling Water
+Shaker,MixedDrinks,1034,	Clover Club,30,IconicAlcohol,7023,Gin,PoultryEgg,3010,Egg,FruitJuice,1007,Pomegranate Juice
+Shaker,MixedDrinks,1035,Tequila Sunrise,1280,IconicAlcohol,7029,Tequila,FruitJuice,1005,Lemon Juice,FruitJuice,1006,Orange Juice
+Shaker,MixedDrinks,1036,Sidecar,2570,IconicAlcohol,7022,Brandy,ClassicAlcohol,7018,Tangerine Wine,FruitJuice,1005,Lemon Juice
+Shaker,MixedDrinks,1037,Margarita,3840,IconicAlcohol,7029,Tequila,ClassicAlcohol,7018,Tangerine Wine,FruitJuice,1005,Lemon Juice
+Shaker,MixedDrinks,1038,Silent Third,2720,IconicAlcohol,7026,Whisky,ClassicAlcohol,7018,Tangerine Wine,FruitJuice,1005,Lemon Juice
+Shaker,MixedDrinks,1039,Daiquiri,480,IconicAlcohol,7027,Rum,FruitJuice,1005,Lemon Juice,AdditivesAndGarnishes,2014,Honey
+Shaker,MixedDrinks,1040,Rum and Coke,520,IconicAlcohol,7027,Rum,SoftDrinks,2022,Cola,Fruit,1014,Lemon
+Shaker,MixedDrinks,1041,Cosmopolitan,3200,IconicAlcohol,7028,Vodka,ClassicAlcohol,7018,Tangerine Wine,FruitJuice,1002,Strawberry Juice
+Shaker,MixedDrinks,1042,	Manhattan,280,IconicAlcohol,7026,Whisky,IconicAlcohol,7024,Vermouth,IconicAlcohol,7025,Absinthe
+Shaker,MixedDrinks,1043,Lava Flow,10950,IconicAlcohol,7027,Rum,CoconutWaterProducts,1035,Glass of Coconut Water,Fruit,1011,Strawberry
+Shaker,MixedDrinks,1044,Aviation,410,IconicAlcohol,7023,Gin,Fruit,1010,Cherry,DairyProducts,2043,Whipped Cream
+Shaker,MixedDrinks,1045,Bloody Mary,730,IconicAlcohol,7028,Vodka,Vegetables,4010,Tomato,BBQRecipe,9009,BBQ Recipe
+Shaker,MixedDrinks,1046,Fish House Punch,490,IconicAlcohol,7027,Rum,IconicAlcohol,7022,Brandy,FruitJuice,1005,Lemon Juice
+Shaker,MixedDrinks,1047,Gin Rickey,40,IconicAlcohol,7023,Gin,SoftDrinks,2021,Sparkling Water,FruitJuice,1005,Lemon Juice
+Shaker,MixedDrinks,1048,Tom & Jerry,360,IconicAlcohol,7022,Brandy,IconicAlcohol,7027,Rum,AdditivesAndGarnishes,2011,Milk
+Shaker,MixedDrinks,1049,Somaek,660,ClassicAlcohol,7016,Soju,ClassicAlcohol,7011,Beer,,,
+Shaker,MixedDrinks,1050,French 75,780,IconicAlcohol,7023,Gin,ClassicAlcohol,7013,Champagne,FruitJuice,1005,Lemon Juice
+Shaker,MixedDrinks,1051,Hemingway Champagne,180,IconicAlcohol,7025,Absinthe,ClassicAlcohol,7013,Champagne,FrenchRecipe,9027,French Recipe
+Shaker,MixedDrinks,1052,Earthquake Cocktail,320,IconicAlcohol,7026,Whisky,IconicAlcohol,7025,Absinthe,FruitJuice,1005,Lemon Juice
+Shaker,MixedDrinks,1053,	French Rose,270,IconicAlcohol,7025,Absinthe,IconicAlcohol,7023,Gin,IconicAlcohol,7022,Brandy
+Shaker,MixedDrinks,1054,	French Gimlet,100,IconicAlcohol,7023,Gin,FruitJuice,1005,Lemon Juice,FrenchRecipe,9029,French Recipe
+Shaker,MixedDrinks,1055,Boulevardier,880,IconicAlcohol,7026,Whisky,IconicAlcohol,7025,Absinthe,FrenchRecipe,9032,French Recipe
+Shaker,MixedDrinks,1056,Marie Antoinette,1040,ClassicAlcohol,7013,Champagne,IconicAlcohol,7028,Vodka,FruitJuice,1007,Pomegranate Juice
+Shaker,MixedDrinks,1057,Tokyo Mule,1300,ClassicAlcohol,7015,Sake,IconicAlcohol,7028,Vodka,SoftDrinks,2021,Sparkling Water
+GlassProduct,Salads,17068,Coleslaw,420,LeafVegetables,4023,Cabbage,Vegetables,4013,Carrot,BBQRecipe,9011,BBQ Recipe
+GlassProduct,Salads,17069,Waldorf Salad,1010,LeafVegetables,4022,Lettuce,Fruit,1012,Apple,Nut,1028,Walnut
+GlassProduct,FastFood,17094,Big Dough,90,Grain,6013,Wheat Flour,SoftDrinks,2020,Water,,,

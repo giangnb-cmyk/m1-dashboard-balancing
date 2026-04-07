@@ -1,71 +1,111 @@
-type,id,name_item,merge_to,init_time,can_sell,sell_price,sum_merge
-FruitNutGenerator,1000,Fruit NutGenerator,1001,,TRUE,1,1
-,1001,Fruit NutGenerator,1002,,TRUE,2,2
-,1002,Fruit NutGenerator,1003,,TRUE,3,4
-,1003,Fruit NutGenerator,1004,,TRUE,4,8
-,1004,Fruit NutGenerator,1005,,TRUE,5,16
-,1005,Fruit NutGenerator,1006,,TRUE,6,32
-,1006,Fruit NutGenerator,1007,,TRUE,7,64
-,1007,Fruit NutGenerator,1008,,TRUE,8,128
-,1008,Fruit NutGenerator,1009,,TRUE,9,256
-,1009,Fruit NutGenerator,,,TRUE,10,512
-DrinkGenerator,2000,Drink Generator,2001,,TRUE,1,1
-,2001,Drink Generator,2002,,TRUE,2,2
-,2002,Drink Generator,2003,,TRUE,3,4
-,2003,Drink Generator,2004,,TRUE,4,8
-,2004,Drink Generator,2005,,TRUE,5,16
-,2005,Drink Generator,2006,,TRUE,6,32
-,2006,Drink Generator,2007,,TRUE,7,64
-,2007,Drink Generator,2008,,TRUE,8,128
-,2008,Drink Generator,2009,,TRUE,9,256
-,2009,Drink Generator,,,TRUE,10,512
-ProteinGenerator,3000,Protein Generator,3001,,TRUE,1,1
-,3001,Protein Generator,3002,,TRUE,2,2
-,3002,Protein Generator,3003,,TRUE,3,4
-,3003,Protein Generator,3004,,TRUE,4,8
-,3004,Protein Generator,3005,,TRUE,5,16
-,3005,Protein Generator,3006,,TRUE,6,32
-,3006,Protein Generator,3007,,TRUE,7,64
-,3007,Protein Generator,3008,,TRUE,8,128
-,3008,Protein Generator,3009,,TRUE,9,256
-,3009,Protein Generator,,,TRUE,10,512
-VegetablesGenerator,4000,Vegetables Generator,4001,,TRUE,1,1
-,4001,Vegetables Generator,4002,,TRUE,2,2
-,4002,Vegetables Generator,4003,,TRUE,3,4
-,4003,Vegetables Generator,4004,,TRUE,4,8
-,4004,Vegetables Generator,4005,,TRUE,5,16
-,4005,Vegetables Generator,4006,,TRUE,6,32
-,4006,Vegetables Generator,4007,,TRUE,7,64
-,4007,Vegetables Generator,4008,,TRUE,8,128
-,4008,Vegetables Generator,4009,,TRUE,9,256
-,4009,Vegetables Generator,,,TRUE,10,512
-Ship,5000,Ship,5001,,TRUE,1,1
-,5001,Ship,5002,,TRUE,2,2
-,5002,Ship,5003,,TRUE,3,4
-,5003,Ship,5004,,TRUE,4,8
-,5004,Ship,5005,,TRUE,5,16
-,5005,Ship,5006,,TRUE,6,32
-,5006,Ship,5007,,TRUE,7,64
-,5007,Ship,5008,,TRUE,8,128
-,5008,Ship,5009,,TRUE,9,256
-,5009,Ship,,,TRUE,10,512
-GrainGenerator,6000,Grain Generator,6001,,TRUE,1,1
-,6001,Grain Generator,6002,,TRUE,2,2
-,6002,Grain Generator,6003,,TRUE,3,4
-,6003,Grain Generator,6004,,TRUE,4,8
-,6004,Grain Generator,6005,,TRUE,5,16
-,6005,Grain Generator,6006,,TRUE,6,32
-,6006,Grain Generator,6007,,TRUE,7,64
-,6007,Grain Generator,6008,,TRUE,8,128
-,6008,Grain Generator,6009,,TRUE,9,256
-,6009,Grain Generator,,,TRUE,10,512
-AlcoholGenerator,7000,Alcohol Generator,7001,,TRUE,1,1
-,7001,Alcohol Generator,7002,,TRUE,2,2
-,7002,Alcohol Generator,7003,,TRUE,3,4
-,7003,Alcohol Generator,7004,,TRUE,4,8
-,7004,Alcohol Generator,7005,,TRUE,5,16
-,7005,Alcohol Generator,7006,,TRUE,6,32
-,7006,Alcohol Generator,7007,,TRUE,7,64
-,7007,Alcohol Generator,7008,,TRUE,8,128
-,7008,Alcohol Generator,7009,,TRUE,9,256
-,7009,Alcohol Generator,,,TRUE,10,512
+﻿type,id,name_item,merge_to,sell_price,sum_merge
+FruitNutGenerator,1000,Fruit NutGenerator,1001,1,1
+FruitNutGenerator,1001,Fruit NutGenerator,1002,2,2
+FruitNutGenerator,1002,Fruit NutGenerator,1003,3,4
+FruitNutGenerator,1003,Fruit NutGenerator,1004,4,8
+FruitNutGenerator,1004,Fruit NutGenerator,1005,5,16
+FruitNutGenerator,1005,Fruit NutGenerator,1006,6,32
+FruitNutGenerator,1006,Fruit NutGenerator,1007,7,64
+FruitNutGenerator,1007,Fruit NutGenerator,1008,8,128
+FruitNutGenerator,1008,Fruit NutGenerator,1009,9,256
+FruitNutGenerator,1009,Fruit NutGenerator,,10,512
+DrinkGenerator,2000,Drink Generator,2001,1,1
+DrinkGenerator,2001,Drink Generator,2002,2,2
+DrinkGenerator,2002,Drink Generator,2003,3,4
+DrinkGenerator,2003,Drink Generator,2004,4,8
+DrinkGenerator,2004,Drink Generator,2005,5,16
+DrinkGenerator,2005,Drink Generator,2006,6,32
+DrinkGenerator,2006,Drink Generator,2007,7,64
+DrinkGenerator,2007,Drink Generator,2008,8,128
+DrinkGenerator,2008,Drink Generator,2009,9,256
+DrinkGenerator,2009,Drink Generator,,10,512
+ProteinGenerator,3000,Protein Generator,3001,1,1
+ProteinGenerator,3001,Protein Generator,3002,2,2
+ProteinGenerator,3002,Protein Generator,3003,3,4
+ProteinGenerator,3003,Protein Generator,3004,4,8
+ProteinGenerator,3004,Protein Generator,3005,5,16
+ProteinGenerator,3005,Protein Generator,3006,6,32
+ProteinGenerator,3006,Protein Generator,3007,7,64
+ProteinGenerator,3007,Protein Generator,3008,8,128
+ProteinGenerator,3008,Protein Generator,3009,9,256
+ProteinGenerator,3009,Protein Generator,,10,512
+VegetablesGenerator,4000,Vegetables Generator,4001,1,1
+VegetablesGenerator,4001,Vegetables Generator,4002,2,2
+VegetablesGenerator,4002,Vegetables Generator,4003,3,4
+VegetablesGenerator,4003,Vegetables Generator,4004,4,8
+VegetablesGenerator,4004,Vegetables Generator,4005,5,16
+VegetablesGenerator,4005,Vegetables Generator,4006,6,32
+VegetablesGenerator,4006,Vegetables Generator,4007,7,64
+VegetablesGenerator,4007,Vegetables Generator,4008,8,128
+VegetablesGenerator,4008,Vegetables Generator,4009,9,256
+VegetablesGenerator,4009,Vegetables Generator,,10,512
+Ship,5000,Ship,5001,1,1
+Ship,5001,Ship,5002,2,2
+Ship,5002,Ship,5003,3,4
+Ship,5003,Ship,5004,4,8
+Ship,5004,Ship,5005,5,16
+Ship,5005,Ship,5006,6,32
+Ship,5006,Ship,5007,7,64
+Ship,5007,Ship,5008,8,128
+Ship,5008,Ship,5009,9,256
+Ship,5009,Ship,,10,512
+BBQRecipeBook,9000,BBQ Recipe Book,9001,1,1
+BBQRecipeBook,9001,BBQ Recipe Book,9002,2,2
+BBQRecipeBook,9002,BBQ Recipe Book,9003,3,4
+BBQRecipeBook,9003,BBQ Recipe Book,9004,4,8
+BBQRecipeBook,9004,BBQ Recipe Book,9005,5,16
+BBQRecipeBook,9005,BBQ Recipe Book,,6,32
+GrainGenerator,6000,Grain Generator,6001,1,1
+GrainGenerator,6001,Grain Generator,6002,2,2
+GrainGenerator,6002,Grain Generator,6003,3,4
+GrainGenerator,6003,Grain Generator,6004,4,8
+GrainGenerator,6004,Grain Generator,6005,5,16
+GrainGenerator,6005,Grain Generator,6006,6,32
+GrainGenerator,6006,Grain Generator,6007,7,64
+GrainGenerator,6007,Grain Generator,6008,8,128
+GrainGenerator,6008,Grain Generator,6009,9,256
+GrainGenerator,6009,Grain Generator,,10,512
+AlcoholGenerator,7000,Alcohol Generator,7001,1,1
+AlcoholGenerator,7001,Alcohol Generator,7002,2,2
+AlcoholGenerator,7002,Alcohol Generator,7003,3,4
+AlcoholGenerator,7003,Alcohol Generator,7004,4,8
+AlcoholGenerator,7004,Alcohol Generator,7005,5,16
+AlcoholGenerator,7005,Alcohol Generator,7006,6,32
+AlcoholGenerator,7006,Alcohol Generator,7007,7,64
+AlcoholGenerator,7007,Alcohol Generator,7008,8,128
+AlcoholGenerator,7008,Alcohol Generator,7009,9,256
+AlcoholGenerator,7009,Alcohol Generator,,10,512
+FrenchRecipeBook,9020,French Recipe Book,9021,1,1
+FrenchRecipeBook,9021,French Recipe Book,9022,2,2
+FrenchRecipeBook,9022,French Recipe Book,9023,3,4
+FrenchRecipeBook,9023,French Recipe Book,9024,4,8
+FrenchRecipeBook,9024,French Recipe Book,9025,5,16
+FrenchRecipeBook,9025,French Recipe Book,,6,32
+JapaneseAttraction,300,Japanese Attraction,301,0,1
+JapaneseAttraction,301,Japanese Attraction,302,0,2
+JapaneseAttraction,302,Japanese Attraction,303,0,4
+JapaneseAttraction,303,Japanese Attraction,304,1,8
+JapaneseAttraction,304,Japanese Attraction,305,3,16
+JapaneseAttraction,305,Japanese Attraction,306,5,32
+JapaneseAttraction,306,Japanese Attraction,307,7,64
+JapaneseAttraction,307,Japanese Attraction,,9,128
+ChineseRecipeBook,9060,Chinese Recipe Book,9061,0,1
+ChineseRecipeBook,9061,Chinese Recipe Book,9062,0,2
+ChineseRecipeBook,9062,Chinese Recipe Book,9063,0,4
+ChineseRecipeBook,9063,Chinese Recipe Book,9064,0,8
+ChineseRecipeBook,9064,Chinese Recipe Book,9065,0,16
+ChineseRecipeBook,9065,Chinese Recipe Book,,0,32
+SpanishRecipeBook,9080,Spanish Recipe Book,9081,0,1
+SpanishRecipeBook,9081,Spanish Recipe Book,9082,0,2
+SpanishRecipeBook,9082,Spanish Recipe Book,9083,0,4
+SpanishRecipeBook,9083,Spanish Recipe Book,9084,0,8
+SpanishRecipeBook,9084,Spanish Recipe Book,9085,0,16
+SpanishRecipeBook,9085,Spanish Recipe Book,,0,32
+CraftToolStorage,500,Color Fan Deck,501,0,1
+CraftToolStorage,501,Wooden Slide Box,502,0,2
+CraftToolStorage,502,Toolbox,503,0,4
+CraftToolStorage,503,Toolbox,504,0,8
+CraftToolStorage,504,Toolbox,505,0,16
+CraftToolStorage,505,Drawer Toolbox,506,0,32
+CraftToolStorage,506,Drawer Toolbox,507,0,64
+CraftToolStorage,507,Drawer Toolbox,,0,128

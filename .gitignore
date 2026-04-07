@@ -19,3 +19,6 @@ desktop.ini
 # Env
 .env
 .env.local
+
+# Generated data (run: python generate_data.py)
+js/data.js

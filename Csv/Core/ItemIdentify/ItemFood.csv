@@ -1,754 +1,754 @@
-type,id,name_item,merge_to,init_time,can_sell,sell_price,sum_merge
-FruitJuice,1000,Soy Milk,,,TRUE,2,
-,1001,Cherry Juice,,,TRUE,2,
-,1002,Strawberry Juice,,,TRUE,2,
-,1003,Apple Juice,,,TRUE,2,
-,1004,Banana Juice,,,TRUE,3,
-,1005,Lemon Juice,,,TRUE,4,
-,1006,Orange Juice,,,TRUE,8,
-,1007,Pomegranate Juice,,,TRUE,10,
-,1008,Pear Juice,,,TRUE,11,
-,1009,Mango Juice,,,TRUE,12,
-,1010,Pineapple Juice,,,TRUE,44,
-,1011,Watermelon Juice,,,TRUE,70,
-,1012,Spinach Smoothie,,,TRUE,16,
-,1013,Strawberry Apple Juice,,,TRUE,3,
-,1014,Strawberry Lemon Juice,,,TRUE,4,
-,1015,"	Beet Smoothie",,,TRUE,30,
-,1016,Banana Orange Juice,,,TRUE,5,
-,1017,Cucumber Lemonade,,,TRUE,3,
-,1018,Apple Lemon Juice,,,TRUE,3,
-,1019,Pear Apple Banana Juice,,,TRUE,15,
-CoffeeDrinks,1020,"	Caramel Macchiato",,,TRUE,4,
-,1021,Latte,,,TRUE,3,
-,1022,"	Cappuccino",,,TRUE,3,
-,1023,Mocha,,,TRUE,7,
-,1024,Frappe,,,TRUE,4,
-,1025,Mocha Frappe,,,TRUE,6,
-,1026,Caramel Frappe,,,TRUE,5,
-GrilledVegetables,17000,Grilled Carrot,,,TRUE,2,
-,17001,Grilled Onion,,,TRUE,2,
-,17002,Grilled Bell Pepper,,,TRUE,3,
-,17003,Grilled Eggplant,,,TRUE,5,
-,17004,Grilled Potato,,,TRUE,7,
-,17005,Grilled Okra,,,TRUE,14,
-,17006,Grilled Corn,,,TRUE,26,
-,17007,Grilled Peas,,,TRUE,28,
-,17008,Grillded CherryTomato,,,TRUE,29,
-,17009,Grilled Cauliflower,,,TRUE,5,
-,17010,Spinach Gratin,,,TRUE,28,
-,17011,Buffalo Cauliflower,,,TRUE,10,
-,17012,Roasted Beetroot,,,TRUE,31,
-,17013,Grilled Button Mushrooms,,,TRUE,59,
-GrilledMeat,17014,Grilled Chicken Wing,,,TRUE,3,
-,17015,Grilled Chicken Drumstick,,,TRUE,4,
-,17016,Grilled Chicken Breast,,,TRUE,5,
-,17017,Grilled Chicken,,,TRUE,8,
-,17018,Grilled Patty,,,TRUE,3,
-,17019,Baby Back Ribs,,,TRUE,4,
-,17020,Grilled Pork Knuckle,,,TRUE,5,
-,17021,Lamb Kebab,,,TRUE,7,
-,17022,Grilled Lamb Chop,,,TRUE,12,
-,17023,"	Grilled Leg of Lamb",,,TRUE,22,
-,17024,Burnt Ends,,,TRUE,39,
-,17025,Grilled Suckling Pig,,,TRUE,72,
-,17026,Grilled Lamb Chop,,,TRUE,133,
-,17027,Delmonico Steak,,,TRUE,40,
-,17028,Grilled Beef Ribs,,,TRUE,73,
-,17029,Pork Baked Potato,,,TRUE,14,
-,17030,Surf and Turf,,,TRUE,50,
-,17031,Quail with Rasins,,,TRUE,61,
-,17032,Huli-huli Chicken,,,TRUE,49,
-,17033,"	Roast Duck",,,TRUE,25,
-,17034,"	Roast Goose with Apples",,,TRUE,31,
-GrilledSeafood,17035,Grilled Squid,,,TRUE,2,
-,17036,Grilled Tilapia,,,TRUE,2,
-,17037,Grilled Flounder,,,TRUE,12,
-,17038,Grilled Tuna,,,TRUE,22,
-,17039,Grilled Bass,,,TRUE,42,
-,17040,Grilled Mussel,,,TRUE,2,
-,17041,Grilled Shrimp,,,TRUE,4,
-,17042,Grilled Crab,,,TRUE,5,
-,17043,Grilled Scallop,,,TRUE,9,
-,17044,Grilled Lobster,,,TRUE,26,
-,17045,Grilled King Crab,,,TRUE,28,
-PanfriedFoods,17046,Fried Egg,,,TRUE,2,
-,17047,Fried Bacon,,,TRUE,2,
-,17048,Fried Sausage,,,TRUE,2,
-,17049,Fried Ham,,,TRUE,2,
-,17050,Fried Asparagus,,,TRUE,2,
-,17051,Fried Broccoli,,,TRUE,4,
-,17052,Fried Red Cabbage,,,TRUE,5,
-,17053,Fried Salmon,,,TRUE,7,
-,17054,Pan-fried Cod,,,TRUE,6,
-,17055,Peas with Pine Nut,,,TRUE,98,
-,17056,Chocolate Donut,,,TRUE,14,
-,17057,"	Duck with Cherries",,,TRUE,17,
-,17058,Stuffed Mushroom,,,TRUE,70,
-,17059,"	Smoked Duck Breast",,,TRUE,11,
-,17060,"	Creamed Spinach",,,TRUE,34,
-,17061,"	Creamy Lamb Chops",,,TRUE,22,
-,17062,Baked Beans,,,TRUE,5,
-,17063,Texas Seasoned Rice,,,TRUE,12,
-,17064,"	Stir-fried Arugula",,,TRUE,10,
-,17065,"	Red Bean Rice",,,TRUE,5,
-,17119,Pan-fried Mullet,,,TRUE,31,
-Salads,17066,Tomato Slice,,,TRUE,2,
-,17067,Cucumber Slice,,,TRUE,2,
-,17068,Coleslaw,,,TRUE,5,
-,17069,Waldorf Salad,,,TRUE,20,
-,17070,Fried Cabbage,,,TRUE,2,
-,17071,"	Shrimp Cocktail",,,TRUE,5,
-,17072,Potato Strips,,,TRUE,12,
-,17073,"	Beet Salad",,,TRUE,53,
-,17074,Salade Landaise,,,TRUE,25,
-,17075,Arugula Tomato Salad,,,TRUE,9,
-,17076,Potato Salad,,,TRUE,12,
-,17077,"	Hawaiian Poke Bowl",,,TRUE,18,
-,17078,Crab Louie Salad,,,TRUE,5,
-,17079,Boiled Yam,,,TRUE,21,
-Desserts,17080,Shave Ice,,,TRUE,5,
-,17081,Banana Split,,,TRUE,6,
-,17082,Apple Pie,,,TRUE,7,
-,17083,Banana Pie,,,TRUE,7,
-,17084,"	Mango Pie",,,TRUE,33,
-,17085,Pecan Pie,,,TRUE,15,
-,17086,"	Pineapple Pie",,,TRUE,51,
-,17087,Fortune Cookies,,,TRUE,10,
-,17088,Donut,,,TRUE,8,
-,17089,"	Brownie",,,TRUE,17,
-,17090,Toast,,,TRUE,40,
-,17091,"	Honey Roasted Cashews",,,TRUE,36,
-,17092,Cheese Stuffed Dates,,,TRUE,51,
-,17093,Corn Bread,,,TRUE,5,
-FastFood,17094,Big Dough,,,TRUE,2,
-,17095,"	Baked Burger Bun",,,TRUE,2,
-,17096,Baked Hot Dog Bun,,,TRUE,9,
-,17097,Pork Burger,,,TRUE,5,
-,17098,Chicken Burger,,,TRUE,7,
-,17099,Cheese Burger,,,TRUE,7,
-,17100,Beef Burger,,,TRUE,40,
-,17101,Tuna Burger,,,TRUE,24,
-,17102,Hot Dog,,,TRUE,11,
-,17103,Cheese Dog,,,TRUE,11,
-,17104,Lobster Roll,,,TRUE,30,
-,17105,"	Nachos",,,TRUE,9,
-DeepfriedFoods,17106,Fries,,,TRUE,15,
-,17107,Fried Chicken Wing,,,TRUE,5,
-,17108,Fried Chicken Drumstick,,,TRUE,5,
-,17109,Fried Chicken Breast,,,TRUE,6,
-,17110,"	Fried Chicken",,,TRUE,8,
-,17111,"	Fried Pork Chop",,,TRUE,5,
-,17112,Fish Fry,,,TRUE,6,
-,17113,Fried Burrito,,,TRUE,12,
-,17114,Fried Mullet,,,TRUE,31,
-,17115,Fried Mushrooms,,,TRUE,63,
-,17116,Herb Crusted Leg of Lamb,,,TRUE,23,
-,17117,Hush Puppy,,,TRUE,5,
-,17118,"	Baked Spinach Chips",,,TRUE,17,
-MixedDrinks,1027,Mimosa,,,TRUE,7,
-,1028,"	Kalimotxo",,,TRUE,2,
-,1029,Gin Fizz,,,TRUE,9,
-,1030,Dry Martini,,,TRUE,4,
-,1031,Whisky Sour,,,TRUE,12,
-,1032,Pina Colada,,,TRUE,43,
-,1033,Mojito,,,TRUE,10,
-,1034,"	Clover Club",,,TRUE,34,
-,1035,Tequila Sunrise,,,TRUE,49,
-,1036,Sidecar,,,TRUE,12,
-,1037,Margarita,,,TRUE,21,
-,1038,Silent Third,,,TRUE,16,
-,1039,Daiquiri,,,TRUE,13,
-,1040,Rum and Coke,,,TRUE,7,
-,1041,Cosmopolitan,,,TRUE,20,
-,1042,"	Manhattan",,,TRUE,9,
-,1043,Lava Flow,,,TRUE,50,
-,1044,Aviation,,,TRUE,8,
-,1045,Bloody Mary,,,TRUE,7,
-,1046,Fish House Punch,,,TRUE,13,
-,1047,Gin Rickey,,,TRUE,4,
-,1048,Tom & Jerry,,,TRUE,6,
-,1049,Somaek,,,TRUE,5,
-,1050,French 75,,,TRUE,7,
-,1051,Hemingway Champagne,,,TRUE,4,
-,1052,Earthquake Cocktail,,,TRUE,11,
-,1053,"	French Rose",,,TRUE,8,
-,1054,"	French Gimlet",,,TRUE,5,
-,1055,Boulevardier,,,TRUE,11,
-,1056,Marie Antoinette,,,TRUE,21,
-,1057,Tokyo Mule,,,TRUE,,
-,1058,Matcha Mint Julep,,,TRUE,,
-,1059,Bamboo Cocktail,,,TRUE,,
-,1060,Egg Sake,,,TRUE,,
-,1061,"	Champagne Sangria",,,TRUE,,
-,1062,Spanish Alcoholic Coffee,,,TRUE,,
-,1063,Galicia Fire Drink,,,TRUE,,
-,1064,"	Iconic Cocktail of Valencia",,,TRUE,,
-,1065,"	Iconic Cocktail of Seville",,,TRUE,,
-,1066,Spanish Summer Wine,,,TRUE,,
-,1067,Port of Spain,,,TRUE,,
-,1068,Mexican Green Juice,,,TRUE,,
-,1069,"	Strawberry Agua Fresca",,,TRUE,,
-,1070,Mango Chamoyada,,,TRUE,,
-,1071,Watermelon Agua Fresca,,,TRUE,,
-,1072,Cucumber Agua Fresca,,,TRUE,,
-,1073,Mexican Rice Drink,,,TRUE,,
-,1074,Mexican Clay Pot Coffee,,,TRUE,,
-,1075,Hibiscus Tea,,,TRUE,,
-,1076,"	Grapefruit Paloma",,,TRUE,,
-,1077,Mexican Beer,,,TRUE,,
-,1078,Mexican Bloody Mary (MIchaelada),,,TRUE,,
-,1079,Clay Jug Tequila (Cantarito),,,TRUE,,
-,1080,Mezcal Margarita (Mezcalita),,,TRUE,,
-,1081,Fruit Spritzer (Cleriocot),,,TRUE,,
-,1082,Guava Agua Fresca,,,TRUE,,
-,1083,Belini Cocktail,,,TRUE,,
-,1084,Limoncello Sour Cocktail,,,TRUE,,
-,1085,Ti' Punch,,,TRUE,,
-,1086,Apple & Tonic,,,TRUE,,
-,1087,Sake Sunrise,,,TRUE,,
-,1088,Saketini,,,TRUE,,
-,1089,Thai Iced Tea,,,TRUE,,
-,1090,Mai Tai Cocktail,,,TRUE,,
-,1091,"	Long Island Iced Tea",,,TRUE,,
-,1092,Thai Coco Cocktail,,,TRUE,,
-,1093,"	Tom Yum Martini",,,TRUE,,
-,1094,Pandan Iced Tea,,,TRUE,,
-,1095,Acai Mocktail,,,TRUE,,
-,1096,Caipirinha,,,TRUE,,
-,1097,Batida,,,TRUE,,
-,1098,Brazilian Lime Juice,,,TRUE,,
-,1099,"	Passion Fruit Juice",,,TRUE,,
-,1100,Fizzy Passion Fruit Cocktail,,,TRUE,,
-,1101,"	Mango Milkshake with Ice Cream",,,TRUE,,
-,1102,Vietnamese Coffee,,,TRUE,,
-,1103,Yogurt Soju Cocktail,,,TRUE,,
-,1104,Korean Iced Green Tea,,,TRUE,,
-,1105,Kimchi Soju Cocktail,,,TRUE,,
-,1106,Soju with Mango Ice Pop,,,TRUE,,
-,1107,Cucumber Soju Cocktail,,,TRUE,,
-,1108,Soju Bomb,,,TRUE,,
-,1109,"	Soju Watermelon Cocktail",,,TRUE,,
-,1110,"	Old Fashioned",,,TRUE,,
-,1111,Sex on the Beach,,,TRUE,,
-,1112,Gin Fizz,,,TRUE,,
-,1113,Apple Vodka Mojito,,,TRUE,,
-,1114,Sour Cherry Liquor,,,TRUE,,
-FrenchDelicacies,2000,"	Escargot",,,TRUE,,
-,2001,"	Quiche Lorraine",,,TRUE,,
-,2002,Garlic Bread,,,TRUE,,
-,2003,"	Broccoli Gratin",,,TRUE,,
-,2004,Baked Bass with Lemon,,,TRUE,,
-,2005,"	Savory Crepe",,,TRUE,,
-,2006,Entrec�te,,,TRUE,,
-,2007,Foie gras,,,TRUE,,
-,2008,Magret de canard,,,TRUE,37,
-,2009,Coquilles St. Jaques,,,TRUE,,
-,2010,Bacon Wrapped Asparagus,,,TRUE,,
-,2011,Cream of Mushroom Soup,,,TRUE,,
-,2012,Choucroute garnie,,,TRUE,,
-,2013,Pot au feu,,,TRUE,,
-,2014,Smoked Salmon,,,TRUE,,
-,2015,Pan bagnat,,,TRUE,,
-,2016,"	Steak au poivre",,,TRUE,,
-,2017,Tarte flamb�e,,,TRUE,,
-,2018,Croutons,,,TRUE,,
-,2019,Lyonnaise Salad,,,TRUE,,
-,2020,Cheese Pie,,,TRUE,,
-,2021,Floating Island,,,TRUE,,
-,2022,Croque monsieur,,,TRUE,,
-,2023,Norman Tart,,,TRUE,,
-,2024,"Blanquette de veau	
-",,,TRUE,,
-,2025,Spinach Quiche,,,TRUE,,
-,2026,"	Cured Duck",,,TRUE,27,
-,2027,Duck Confit,,,TRUE,,
-,2028,Provencal Stuffed Eggplants,,,TRUE,,
-,2029,"	Smoked Salmon Rolls",,,TRUE,,
-,2030,"	Cauliflower Gratin",,,TRUE,,
-,2031,French Lamb Stew,,,TRUE,,
-,2032,"	Braised Chicken in Red Wine",,,TRUE,,
-,2033,French Buckwheat Galette,,,TRUE,,
-,2034,Chickpea Pancakes,,,TRUE,,
-,2035,"	Chicken Piccata",,,TRUE,,
-,2036,Anna Potatoes,,,TRUE,20,
-,2037,"	French Duck with Orange Sauce",,,TRUE,,
-,2038,Corn Souffl�,,,TRUE,,
-,2039,Provencal Vegetable Bake,,,TRUE,,
-,2040,Provencal Roast Leg of Lamb,,,TRUE,,
-,2041,Foie Gras Terrine,,,TRUE,,
-,2042,French Potato Leek Soup,,,TRUE,,
-,2043,French Beetroot Soup,,,TRUE,,
-,2044,Creamy Cauliflower Soup,,,TRUE,,
-,2045,Lamb Navarin,,,TRUE,,
-,2046,Basque Style Chicken,,,TRUE,,
-FrenchDesserts,2047,Macaron Batter,,,TRUE,12,
-,2048,Chocolate Mousse,,,TRUE,,
-,2049,Chocolate Truffles,,,TRUE,,
-,2050,Strawberry Creme Crepe,,,TRUE,,
-,2051,Banana Chocolate Crepe,,,TRUE,,
-,2052,Caramel Ice Cream Crepe,,,TRUE,,
-,2053,Milk Crepe Cake,,,TRUE,,
-,2054,Pink Macaron,,,TRUE,,
-,2055,White Macaron,,,TRUE,,
-,2056,Purple Macaraon,,,TRUE,,
-,2057,Yellow Macaron,,,TRUE,,
-,2058,Blue Macaron,,,TRUE,,
-,2059,Green Macaron,,,TRUE,,
-,2060,Brown Macaron,,,TRUE,,
-,2061,Galaxy Macaron,,,TRUE,,
-,2062,Mini Nut Tart,,,TRUE,,
-,2063,Mini Fruit Tart,,,TRUE,,
-,2064,Tarte Tatin,,,TRUE,,
-,2065,Tarte Tropézienne,,,TRUE,,
-,2066,Chocolate Nun,,,TRUE,,
-,2067,Paris-Brest,,,TRUE,,
-,2068,Éclair,,,TRUE,,
-,2069,French Cream Puff,,,TRUE,,
-,2070,Strawberry Napoleon,,,TRUE,,
-,2071,Napoleon,,,TRUE,,
-,2072,Burnt Cream,,,TRUE,,
-,2073,Soufflé,,,TRUE,,
-,2074,Opera Cake,,,TRUE,,
-,2075,Madeleine,,,TRUE,,
-,2076,Canelé,,,TRUE,,
-,2077,Financier,,,TRUE,,
-,2078,Palm Heart,,,TRUE,,
-FrenchSeafood,2079,Bacon Crepe,,,TRUE,,
-,2080,Salmon Crepe,,,TRUE,,
-,2081,Salmon Rillettes,,,TRUE,,
-,2082,Pan-fried Flounder,,,TRUE,,
-,2083,Crab Beignets,,,TRUE,,
-,2084,Baguette,,,TRUE,,
-,2085,Lobster Thermidor,,,TRUE,,
-,2086,Stuffed Mussels,,,TRUE,,
-,2087,Brandade,,,TRUE,,
-,2088,French Potato and Beef Casserole,,,TRUE,,
-,2089,French Potato and Cheese Gratin,,,TRUE,,
-,2090,French Vegetable Stew,,,TRUE,,
-,2091,Easter Pate with Eggs,,,TRUE,,
-,2092,Provencal Fish Stew,,,TRUE,,
-,2093,Lobster Bisque,,,TRUE,37,
-,2094,Sailor-style Mussels,,,TRUE,,
-,2095,Fish Stew with Aioli,,,TRUE,,
-,2096,French Fish Stew,,,TRUE,,
-,2097,Basque-style Squid,,,TRUE,,
-,2098,Basque-style Tuna,,,TRUE,,
-,2099,Basque Tuna Stew,,,TRUE,,
-,2100,Merlu Soup,,,TRUE,,
-,2101,French Fish Soup,,,TRUE,,
-,2102,French Onion Soup,,,TRUE,,
-,2103,Shellfish Platter,,,TRUE,,
-,2104,Nicoise Salad,,,TRUE,,
-,2105,Steak Tartare,,,TRUE,,
-,2106,Crudit�s,,,TRUE,,
-,2107,Crab Salad Lettuce Cups,,,TRUE,,
-,2108,Lobster with Wine and Tomato,,,TRUE,,
-,2109,Crab Soufflé,,,TRUE,,
-,2110,Fish Baked in Parchment Packet,,,TRUE,,
-,2111,Bass Baked in a Crust,,,TRUE,,
-SideDishes,3000,Tempura Batter,,,TRUE,,
-,3001,Pickled Dish,,,TRUE,,
-,3002,Natto,,,TRUE,,
-,3003,Marinated Sea Grapes,,,TRUE,13,
-,3004,Shrimp Tempura,,,TRUE,,
-,3005,Eel Tempura,,,TRUE,,
-,3006,Egg Tempura,,,TRUE,,
-,3007,Okra Tempura,,,TRUE,,
-,3008,Eggplant Tempura,,,TRUE,,
-,3009,Broccoli Tempura,,,TRUE,,
-,3010,Pepper Ring Tempura,,,TRUE,,
-,3011,Savoury Cabbage Pancake,,,TRUE,,
-,3012,Japanese Fried Bean Curd,,,TRUE,,
-,3013,Japanese Croquette,,,TRUE,,
-,3014,Japanese Rolled Omelette,,,TRUE,,
-,3015,Chicken Breast Yakitori,,,TRUE,,
-,3016,Chicken Wing Yakitori,,,TRUE,,
-,3017,Chicken and Cheese Yakitori,,,TRUE,,
-,3018,Miso Soup,,,TRUE,,
-,3019,Pork and Vegetable Miso Soup,,,TRUE,,
-,3020,Japanese Clear Clam Soup,,,TRUE,,
-,3021,Seaweed Egg Drop Soup,,,TRUE,,
-,3022,Japanese Fried Chicken,,,TRUE,,
-,3023,Spinach Side Dish,,,TRUE,,
-,3024,Meat and Potato Stew,,,TRUE,,
-,3025,Japanese Grilled Mutton,,,TRUE,13,
-,3026,Grilled Eggplants with Miso,,,TRUE,,
-,3027,Omusoba,,,TRUE,,
-,3028,Japanese Spinach Salad,,,TRUE,27,
-,3029,Salmon Simmered in Soy Sauce,,,TRUE,,
-,3030,Simmered Kelp,,,TRUE,,
-,3031,Japanese Chicken Meatball Skewers,,,TRUE,,
-,3032,Lobster Miso Soup,,,TRUE,,
-,3033,Japanese Lamb Stew,,,TRUE,,
-,3034,Japanese Braised Pork Belly,,,TRUE,,
-RiceTrianglesandSushi,3035,Rice Triangle,,,TRUE,,
-,3036,Creamy Tuna Rice Triangle,,,TRUE,,
-,3037,Grilled Rice Triangle,,,TRUE,,
-,3038,Cucumber Sushi Roll,,,TRUE,,
-,3039,Tuna Sushi Roll,,,TRUE,,
-,3040,California Sushi Roll,,,TRUE,,
-,3041,Wakame Sushi Roll,,,TRUE,,
-,3042,Bottarga Sushi,,,TRUE,,
-,3043,Roe Sushi,,,TRUE,,
-,3044,Shrimp and Cheese Sushi,,,TRUE,,
-,3045,Inari Sushi,,,TRUE,,
-,3046,Lucky Direction Sushi Rolls,,,TRUE,,
-,3047,Duck Breast Sushi,,,TRUE,,
-GrainProducts,6022,Bucket of Rice,,,TRUE,11,65
-,6023,Bowl of Rice,,,TRUE,,130
-Wagashi,3054,Nerikiri Rice Dough,,,TRUE,,
-,3055,Peach Wagashi,,,TRUE,,
-,3056,Mt. Fuji Wagashi,,,TRUE,,
-,3057,Flower Wagashi,,,TRUE,,
-,3058,"	Snow Rabbit Wagashi",,,TRUE,,
-,3059,Daffodil Wagashi,,,TRUE,,
-,3060,"	Crane and Tortoise Wagashi",,,TRUE,,
-,3061,"	Warabi Plant Wagashi",,,TRUE,,
-,3062,"	Iris Wagashi",,,TRUE,,
-,3063,Seiobo Wagashi,,,TRUE,,
-,3064,Maple Leaf Wagashi,,,TRUE,,
-,3065,"	Loquat Wagashi",,,TRUE,,
-,3066,Gingko Wagashi,,,TRUE,,
-,3067,Petals Wagashi,,,TRUE,,
-,3068,Botamochi,,,TRUE,,
-,3069,"	Batter",,,TRUE,,
-,3070,Sweetfish Shaped Pancake,,,TRUE,,
-,3071,Japanese Red Bean Pancake,,,TRUE,,
-,3072,"	Japanese Rice Crackers",,,TRUE,,
-,3073,"	Japanese Cheesecake",,,TRUE,,
-,3074,Castella Cake,,,TRUE,,
-,3075,Grilled Rice Skewers,,,TRUE,,
-,3076,"	Rice Ball Skewers",,,TRUE,,
-,3077,Red Bean Soup,,,TRUE,,
-,3078,Japanese Rice Cakes,,,TRUE,,
-SakuraDerivatives,3079,Sakura Wagashi,,,TRUE,,
-,3080,Sakura Rice Ball,,,TRUE,,
-,3081,Sakura Frappe,,,TRUE,,
-,3082,Sakura Sparkling Water,,,TRUE,,
-,3083,Sakura Latte,,,TRUE,,
-,3084,Sakura Cocktail,,,TRUE,,
-,3085,Sakura Cake Roll,,,TRUE,,
-"Noodles
-",3086,Bundle of Ramen Noodles,,,TRUE,,
-,3087,Bundle of Soba Noodles,,,TRUE,,
-,3088,Bundle of Udon Noodles,,,TRUE,,
-,3089,Flowing Bamboo Noodles,,,TRUE,,
-,3090,Kitakata Ramen,,,TRUE,,
-,3091,Tonkotsu Ramen,,,TRUE,,
-,3092,Miso Ramen,,,TRUE,,
-,3093,Jiro-Style Ramen,,,TRUE,,
-,3094,Iroha Ramen,,,TRUE,,
-,3095,Ham Ramen,,,TRUE,,
-,3096,Japanese Clam Ramen,,,TRUE,,
-,3097,Dipping Ramen,,,TRUE,,
-,3098,Nabeyaki Ramen,,,TRUE,,
-,3099,Miso Curry Milk Ramen,,,TRUE,,
-,3100,Yokohama-Styled Ramen,,,TRUE,,
-,3101,Udon Noodle Soup,,,TRUE,,
-,3102,Udon with Bean Curd Triangles,,,TRUE,,
-,3103,Nabeyaki Udon,,,TRUE,,
-,3104,Stir-Fried Udon Noodles,,,TRUE,,
-,3105,Cold Soba,,,TRUE,,
-,3106,Tempura Soba,,,TRUE,,
-,3107,Oyster Soba,,,TRUE,,
-,3108,Vegan Soba,,,TRUE,,
-,3109,Kawara Soba,,,TRUE,,
-,3110,Seasoned Bamboo Shoots,,,TRUE,2,
-ServeOverRice,3111,Grilled Eel Rice Bowl,,,TRUE,,
-,3112,Chicken and Egg Rice Bowl,,,TRUE,,
-,3113,Japanese Omelette Rice,,,TRUE,,
-,3114,Clam Miso Soup over Rice,,,TRUE,,
-Sashimi,3115,Mackerel Sashimi,,,TRUE,,
-,3116,Squid Sashimi,,,TRUE,,
-,3117,Shrimp Sashimi,,,TRUE,,
-,3118,Crab Sashimi,,,TRUE,,
-,3119,Scallop Sashimi,,,TRUE,,
-,3120,Salmon Sashimi,,,TRUE,,
-,3121,Tuna Sashimi,,,TRUE,,
-,3122,Abalone Sashimi,,,TRUE,,
-,3123,Snapper Sashimi,,,TRUE,,
-,3124,Bass Sashimi,,,TRUE,84,
-MatchaFlavouredSnack,3125,Matcha Latte,,,TRUE,,
-,3126,Matcha Ice Cream,,,TRUE,,
-,3127,Matcha Daifuku,,,TRUE,,
-,3128,Matcha Chocolate,,,TRUE,,
-,3129,Matcha Cheesecake,,,TRUE,,
-,3130,Matcha Cookie,,,TRUE,,
-,3131,Matcha Cake Roll,,,TRUE,,
-,3132,Almond Milk Matcha Latte,,,TRUE,,
-FancyJapaneseDishes,3133,Squid and Cucumber Salad,,,TRUE,,
-,3134,Grilled Fish Combo Plate,,,TRUE,,
-,3135,Eel and Eggplant Soup,,,TRUE,,
-,3136,Seafood Broth in Teapot,,,TRUE,,
-,3137,Steamed Egg Custard,,,TRUE,,
-,3138,Simmered Koya Bean Curd,,,TRUE,,
-,3139,Simmered Vegetable Combo,,,TRUE,,
-,3140,Rice with Bamboo Shoots,,,TRUE,,
-,3141,Almond Tofu,,,TRUE,,
-,3142,Coffee Jelly,,,TRUE,,
-JingCuisine,4000,Sliced Peking Duck,,,TRUE,,
-,4001,Shredded Pork,,,TRUE,,
-,4002,Raw Panlong Dish,,,TRUE,,
-,4003,Pancake Wraps,,,TRUE,,
-,4004,Raw Buns,,,TRUE,,
-,4005,Raw Brown Sugar Buns,,,TRUE,,
-,4006,Raw Twisted Buns with Ham,,,TRUE,,
-,4007,Raw Sesame Sauce Twisted Buns,,,TRUE,,
-,4008,Raw Cornbread,,,TRUE,,
-,4009,Raw Pork Dumplings,,,TRUE,,
-,4010,Raw Lazy Dragon Rolls,,,TRUE,,
-,4011,Strawberry and Banana Tanghulu,,,TRUE,,
-,4012,Hawthorn Tanghulu,,,TRUE,,
-,4013,Orange Tanghulu,,,TRUE,,
-,4014,Sauteed Shredded Pork,,,TRUE,,
-,4015,Braised Chicken Slices,,,TRUE,,
-,4016,Braised Prawns,,,TRUE,,
-,4017,Steamed Bean Curd,,,TRUE,,
-,4018,Stir-fried Pork and Spinach,,,TRUE,,
-,4019,Honey Roasted Pears,,,TRUE,,
-,4020,Fried Pork in Scoop,,,TRUE,,
-,4021,Non-stick Egg Pudding,,,TRUE,,
-,4022,Fried Dumplings,,,TRUE,,
-,4023,Tanghulu Syrup,,,TRUE,,
-,4024,Sesame Flatbread,,,TRUE,,
-,4025,Peking Duck,,,TRUE,,
-,4026,Royal Style Barbecue,,,TRUE,,
-,4027,Peking Duck Pancakes,,,TRUE,,
-,4028,Steamed Pork with Rice Powder,,,TRUE,,
-,4029,Panlong Dish,,,TRUE,,
-,4030,Steamed Buns,,,TRUE,,
-,4031,Brown Sugar Steamed Buns,,,TRUE,,
-,4032,Twisted Buns with Ham,,,TRUE,,
-,4033,Sesame Sauce Twisted Buns,,,TRUE,,
-,4034,Steamed Cornbread,,,TRUE,,
-,4035,Steamed Dumplings,,,TRUE,,
-,4036,Steamed Lazy Dragon Rolls,,,TRUE,,
-,4037,Peking Style Barbecue Lamb,,,TRUE,,
-,4038,Braised Pork Belly Slices,,,TRUE,,
-,4039,Braised Pork Knuckle,,,TRUE,,
-,4040,Boiled Dumplings,,,TRUE,,
-HuaiyangCuisine,4041,Raw Crab and Pork Meatball,,,TRUE,,
-,4042,Raw Wontons,,,TRUE,,
-,4043,Raw Crab and Pork Soup Dumplings,,,TRUE,,
-,4044,Raw Squirrel Fish,,,TRUE,,
-,4045,Salted Pork in Jelly,,,TRUE,,
-,4046,Raw Chicken in Lotus Leaf,,,TRUE,,
-,4047,Squirrel Fish,,,TRUE,,
-,4048,Longjing Prawns,,,TRUE,4,
-,4049,Yangzhou Fried Rice,,,TRUE,,
-,4050,"Shrimp, Chicken & Fish",,,TRUE,,
-,4051,Wuxi Fried Spare Rib,,,TRUE,,
-,4052,Steak Wrapped in Lotus Leaf,,,TRUE,,
-,4053,Bean Curd with Crab Meat,,,TRUE,,
-,4054,Chicken in Lotus Leaf,,,TRUE,,
-,4055,Chicken Shaped Pastry,,,TRUE,,
-,4056,Crab Steamed in Orange Pulp,,,TRUE,,
-,4057,Crab & Pork Soup Dumpling,,,TRUE,,
-,4058,Braised Ham in Honey Sauce,,,TRUE,,
-,4059,Steamed Pork in Lotus Leaf,,,TRUE,,
-,4060,Gourd Shaped Duck,,,TRUE,,
-,4061,Suzhou Diamond Cakes,,,TRUE,,
-,4062,"Chinese ""Victory"" Cakes",,,TRUE,,
-,4063,Crab and Pork Meatball,,,TRUE,,
-,4064,Wensi Bean Curd Soup,,,TRUE,,
-,4065,Chrysanthemum Bean Curd Soup,,,TRUE,,
-,4066,Dongpo Pork,,,TRUE,,
-,4067,Boiled Shredded Dry Bean Curd,,,TRUE,,
-,4068,Chinese Minced Fish Soup,,,TRUE,,
-,4069,Fish Wrapped in Mutton,,,TRUE,,
-,4070,Boiled Wontons,,,TRUE,,
-,4071,Cat Ear Noodles,,,TRUE,,
-SichuanCuisine,4072,Chili Bean Sauce,,,TRUE,,
-,4073,Chili Oil,,,TRUE,2,
-,4074,Pickled Peppers,,,TRUE,,
-,4075,Preserved Eggs,,,TRUE,,
-,4076,Preserved Eggs & Chili Peppers,,,TRUE,,
-,4077,Sichuan Spicy Sausages,,,TRUE,,
-,4078,Mapo Tofu,,,TRUE,,
-,4079,Hot and Spicy Diced Chicken,,,TRUE,,
-,4080,Spicy Braised Eggplant,,,TRUE,,
-,4081,Tofu Pudding & Steak Stripes,,,TRUE,,
-,4082,Kung Pao Chicken,,,TRUE,,
-,4083,Double Cooked Pork,,,TRUE,,
-,4084,Pickled Pepper & Squid,,,TRUE,,
-,4085,Pork and Pickled Peppers,,,TRUE,,
-,4086,Green pepper and Sliced Pork,,,TRUE,,
-,4087,Egg Pancake,,,TRUE,,
-,4088,Rice Crust,,,TRUE,,
-,4089,Pork with Rice Crust,,,TRUE,,
-,4090,Spicy Rooster Pot,,,TRUE,,
-,4091,Tenderized & Shredded Chicken,,,TRUE,,
-,4092,Cold Pot Skewers,,,TRUE,,
-,4093,Sliced Pork with Garlic Sauce,,,TRUE,,
-,4094,Leshan Beef Soup,,,TRUE,52,
-,4095,Spicy Poached Chicken,,,TRUE,,
-,4096,Sichuan Pork in Spicy Broth,,,TRUE,,
-,4097,Sour Plum Juice,,,TRUE,,
-,4098,Trotter Soup,,,TRUE,,
-,4099,Spicy Wontons in Chili Oil,,,TRUE,,
-,4100,Spicy Beef Hot Pot,,,TRUE,,
-,4101,Steamed Pork Belly with Sugar,,,TRUE,,
-CantoneseCuisine,4102,Steamed Custard Buns,,,TRUE,,
-,4103,Shrimp Dumplings,,,TRUE,,
-,4104,Bean Curd Skin Rolls,,,TRUE,,
-,4105,Red Rice Rolls with Shrimp,,,TRUE,,
-,4106,Chinese Pork Buns,,,TRUE,,
-,4107,Spare Ribs & Black Bean Sauce,,,TRUE,,
-,4108,Sticky Rice with Chicken,,,TRUE,,
-,4109,White Sugar Sponge Cake,,,TRUE,,
-,4110,Red Bean Milk Pudding,,,TRUE,,
-,4111,Cantonese Shumai,,,TRUE,,
-,4112,Cantonese Sponge Cake,,,TRUE,,
-,4113,Wenchang Chicken,,,TRUE,,
-,4114,Egg Tart,,,TRUE,,
-,4115,Chinese BBQ Pork ,,,TRUE,,
-,4116,Cantonese Roast Goose,,,TRUE,,
-,4117,Pineapple Bun,,,TRUE,,
-,4118,Abalone and Broccolis,,,TRUE,,
-,4119,Walnut Paste,,,TRUE,,
-,4120,White Boiled Shrimp,,,TRUE,,
-,4121,Sweet Egg Soup,,,TRUE,,
-,4122,Preserved Egg and Pork Congee,,,TRUE,,
-,4123,Cantonese Lobster Platter,,,TRUE,,
-,4124,Oyster Omelet,,,TRUE,,
-,4125,Char Siu Fried Rice,,,TRUE,,
-,4126,Sweet and Sour Lychee Pork,,,TRUE,,
-SpanishCuisine,5000,Chorizo,,,TRUE,,
-,5001,Raw Spanish Baguettes,,,TRUE,,
-,5002,Raw Churros,,,TRUE,,
-,5003,Spanish Roast Suckling Pig,,,TRUE,,
-,5004,Spanish Chicken and Rice,,,TRUE,,
-,5005,Spanish Stuffed Eggplants,,,TRUE,,
-,5006,Spanish Baguette,,,TRUE,16,
-,5007,Catalan Biscuits ,,,TRUE,,
-,5008,Pinchitos,,,TRUE,,
-,5009,Spanish Garlic Chicken,,,TRUE,,
-,5010,Migas,,,TRUE,,
-,5011,Spanish Meatballs,,,TRUE,,
-,5012,Cachopo,,,TRUE,,
-,5013,Braised Pork Cheeks,,,TRUE,,
-,5014,Spanish Omelet,,,TRUE,,
-,5015,Spanish Vegetable Stew,,,TRUE,,
-,5016,Rice with Fried Egg,,,TRUE,,
-,5017,Gachas,,,TRUE,,
-,5018,Churros,,,TRUE,,
-,5019,Valencian Paella,,,TRUE,,
-,5020,Spanish Vegan Paella,,,TRUE,,
-,5021,Asturian Pork and Beans,,,TRUE,,
-,5022,Madrilenian Stew,,,TRUE,,
-,5023,Spanish Bull Tail Stew,,,TRUE,,
-SpanishSeafood,5024,Spanish Garlic Shrimps,,,TRUE,,
-,5025,Spanish Marinated Tuna,,,TRUE,,
-,5026,Salmon Bocadillo Sandwich,,,TRUE,,
-,5027,Raw Tilapia Empanadas,,,TRUE,,
-,5028,Seafood Paella,,,TRUE,,
-,5029,Squid Ink Paella,,,TRUE,,
-,5030,Catalan-style Paella,,,TRUE,,
-,5031,Lobster Paella,,,TRUE,,
-,5032,Spicy Roasted Cauliflower,,,TRUE,,
-,5033,Fried Squid Rings ,,,TRUE,,
-,5034,Spinach and Chickpeas,,,TRUE,,
-,5035,Cod with Pil Pil Sauce,,,TRUE,,
-,5036,Catalan Roasted Vegetables,,,TRUE,,
-,5037,Flatbread & Grilled Vegetables,,,TRUE,,
-,5038,Catalan Bread with Tomato,,,TRUE,,
-,5039,Egg and Syrup Flan,,,TRUE,,
-,5040,Tilapia Empanadas,,,TRUE,,
-,5041,Spanish Grilled Shrimp Tapas,,,TRUE,,
-,5042,Fish Skewers ,,,TRUE,,
-,5043,Spanish Cold Soup ,,,TRUE,,
-,5044,Chilled Almond Soup,,,TRUE,,
-,5045,Galician Squid,,,TRUE,,
-,5046,Seafood Rice,,,TRUE,,
-,5047,Grilled Rice with Lobster,,,TRUE,,
-,5048,Wrinkled Potatoes,,,TRUE,,
-,5049,Spanish Almond Soup,,,TRUE,,
-,5050,Spanish Baguette Slice,,,TRUE,,
-SpanishSnacks,5051,Spanish Dry-cured Ham,,,TRUE,,
-,5052,Spanish Cheese Board,,,TRUE,,
-,5053,Ham Montadito,,,TRUE,,
-,5054,Tomato and Cheese Montadito,,,TRUE,,
-,5055,Spanish Ham Croquettes,,,TRUE,,
-,5056,Spanish Donuts,,,TRUE,,
-,5057,Spanish Style French Toast,,,TRUE,,
-,5058,Spanish Fried Milk,,,TRUE,,
-,5059,Shrimp Montadito,,,TRUE,,
-,5060,Sponge Cake Roll ,,,TRUE,,
-,5061,Spanish Spicy Potatoes,,,TRUE,,
-,5062,Spanish Muffin,,,TRUE,,
-,5063,Mallorcan Spiral Pastry,,,TRUE,,
-,5064,Baked Apple Rose,,,TRUE,,
-,5065,Tuna Montadito,,,TRUE,,
-,5066,Sausage Montadito,,,TRUE,,
-,5067,Steak Montadito,,,TRUE,,
-,5068,Chicken Montadito,,,TRUE,,
-,5069,Cheese Montadito,,,TRUE,,
-,5070,Spanish Cold Soup ,,,TRUE,,
-,5071,Catalan Cream,,,TRUE,,
-MexicanCuisine,6000,Masas,,,TRUE,,
-,6001,Spinach Salad,,,TRUE,,
-,6002,Stack of Tortillas,,,TRUE,,
-,6003,Cheese Nachos,,,TRUE,,
-,6004,Mexican Red Rice,,,TRUE,,
-,6005,Tostada,,,TRUE,,
-,6006,Rancher's Eggs,,,TRUE,,
-,6007,Chicken Quesedilla,,,TRUE,,
-,6008,Caviar Tostadas,,,TRUE,,
-,6009,Tortilla,,,TRUE,,
-,6010,Mexican Style Shrimp Ceviche,,,TRUE,,
-,6011,Crab Ceviche,,,TRUE,,
-,6012,Mexican Wraps ,,,TRUE,,
-,6013,Chicken Burritos,,,TRUE,,
-,6014,Beef Alambre,,,TRUE,,
-,6015,Chilies in Walnut Sauce,,,TRUE,,
-,6016,Spicy Chorizo with Cheese,,,TRUE,,
-,6017,Coconut Macarons ,,,TRUE,,
-,6018,Mexican Corn Salad ,,,TRUE,,
-,6019,Talla Style Grilled Fish,,,TRUE,,
-,6020,Tortilla Soup,,,TRUE,,
-NopalesCuisine,6021,Cheese Stuffed Nopales,,,TRUE,,
-,6022,Cactus Salad,,,TRUE,,
-,6023,Nopales Tacos,,,TRUE,,
-,6024,Nopales and Eggs,,,TRUE,,
-,6025,Nopales and Carrots,,,TRUE,,
-,6026,Cactus Fries,,,TRUE,,
-,6027,Cactus Cookie Cake,,,TRUE,,
-,6028,Grilled Nopales,,,TRUE,,
-,6029,Grilled Nopales Huarache,,,TRUE,,
-,6030,No-Bun Cactus Burger,,,TRUE,,
-,6031,Chicken Soup with Nopales,,,TRUE,,
-MexicanTacos,6032,Governor's Tacos,,,TRUE,,
-,6033,Grilled Steak Tacos,,,TRUE,,
-,6034,Shepherd Style Tacos,,,TRUE,,
-,6035,Basket Tacos,,,TRUE,,
-,6036,Potosina Stuffed Tortillas,,,TRUE,,
-,6037,Mexican Fish Tacos,,,TRUE,,
-,6038,Tacos with Mango Salsa,,,TRUE,,
-MayanCuisine,6039,Meat Stuffed Green Peppers,,,TRUE,,
-,6040,Chicken with Peanut Butter,,,TRUE,,
-,6041,Tamales,,,TRUE,,
-,6042,Rolled Tacos ,,,TRUE,,
-,6043,Fried Dough ,,,TRUE,,
-,6044,Pork in Black Mole Sauce,,,TRUE,,
-,6045,Roast Duck in Mole Sauce,,,TRUE,,
-,6046,Lobster in Tomato Sauce,,,TRUE,,
-,6047,Tortillas in Black Bean Sauce,,,TRUE,,
-,6048,Creamy Chicken Enchiladas,,,TRUE,,
-,6049,Chicken Mole,,,TRUE,,
-,6050,Mexican Pastries ,,,TRUE,,
-,6051,Mexican Gingerbread Pigs,,,TRUE,,
-,6052,Chicken in Green Salsa,,,TRUE,,
-,6053,Mexican Lasagna,,,TRUE,,
-,6054,Mexican Bread ,,,TRUE,,
-,6055,Mayan Grilled Pork,,,TRUE,,
-,6056,Grilled Corn on the Cob,,,TRUE,,
-,6057,Mexican Cornmeal Drink,,,TRUE,,
-,6058,Chocolate Atole ,,,TRUE,,
-,6059,Pork and Hominy Stew ,,,TRUE,,
-,6060,Chicken Pozole Soup,,,TRUE,,
-,6061,Vegetable Beef Soup,,,TRUE,,
-,6062,Mexican Bean Stew,,,TRUE,,
-,6063,Mexican Goat Stew,,,TRUE,,
-,6064,Pinto Bean Soup,,,TRUE,,
-,6065,Mexican Lime Soup,,,TRUE,,
+﻿type,id,name_item,merge_to,sell_price,sum_merge
+FruitJuice,1000,Soy Milk,,2,0
+FruitJuice,1001,Cherry Juice,,2,0
+FruitJuice,1002,Strawberry Juice,,2,0
+FruitJuice,1003,Apple Juice,,2,0
+FruitJuice,1004,Banana Juice,,3,0
+FruitJuice,1005,Lemon Juice,,4,0
+FruitJuice,1006,Orange Juice,,8,0
+FruitJuice,1007,Pomegranate Juice,,10,0
+FruitJuice,1008,Pear Juice,,11,0
+FruitJuice,1009,Mango Juice,,12,0
+FruitJuice,1010,Pineapple Juice,,44,0
+FruitJuice,1011,Watermelon Juice,,70,0
+FruitJuice,1012,Spinach Smoothie,,16,0
+FruitJuice,1013,Strawberry Apple Juice,,3,0
+FruitJuice,1014,Strawberry Lemon Juice,,4,0
+FruitJuice,1015,	Beet Smoothie,,30,0
+FruitJuice,1016,Banana Orange Juice,,5,0
+FruitJuice,1017,Cucumber Lemonade,,3,0
+FruitJuice,1018,Apple Lemon Juice,,3,0
+FruitJuice,1019,Pear Apple Banana Juice,,15,0
+CoffeeDrinks,1020,	Caramel Macchiato,,4,0
+CoffeeDrinks,1021,Latte,,3,0
+CoffeeDrinks,1022,	Cappuccino,,3,0
+CoffeeDrinks,1023,Mocha,,7,0
+CoffeeDrinks,1024,Frappe,,4,0
+CoffeeDrinks,1025,Mocha Frappe,,6,0
+CoffeeDrinks,1026,Caramel Frappe,,5,0
+GrilledVegetables,17000,Grilled Carrot,,2,0
+GrilledVegetables,17001,Grilled Onion,,2,0
+GrilledVegetables,17002,Grilled Bell Pepper,,3,0
+GrilledVegetables,17003,Grilled Eggplant,,5,0
+GrilledVegetables,17004,Grilled Potato,,7,0
+GrilledVegetables,17005,Grilled Okra,,14,0
+GrilledVegetables,17006,Grilled Corn,,26,0
+GrilledVegetables,17007,Grilled Peas,,28,0
+GrilledVegetables,17008,Grillded CherryTomato,,29,0
+GrilledVegetables,17009,Grilled Cauliflower,,5,0
+GrilledVegetables,17010,Spinach Gratin,,28,0
+GrilledVegetables,17011,Buffalo Cauliflower,,10,0
+GrilledVegetables,17012,Roasted Beetroot,,31,0
+GrilledVegetables,17013,Grilled Button Mushrooms,,59,0
+GrilledMeat,17014,Grilled Chicken Wing,,3,0
+GrilledMeat,17015,Grilled Chicken Drumstick,,4,0
+GrilledMeat,17016,Grilled Chicken Breast,,5,0
+GrilledMeat,17017,Grilled Chicken,,8,0
+GrilledMeat,17018,Grilled Patty,,3,0
+GrilledMeat,17019,Baby Back Ribs,,4,0
+GrilledMeat,17020,Grilled Pork Knuckle,,5,0
+GrilledMeat,17021,Lamb Kebab,,7,0
+GrilledMeat,17022,Grilled Lamb Chop,,12,0
+GrilledMeat,17023,	Grilled Leg of Lamb,,22,0
+GrilledMeat,17024,Burnt Ends,,39,0
+GrilledMeat,17025,Grilled Suckling Pig,,72,0
+GrilledMeat,17026,Grilled Lamb Chop,,133,0
+GrilledMeat,17027,Delmonico Steak,,40,0
+GrilledMeat,17028,Grilled Beef Ribs,,73,0
+GrilledMeat,17029,Pork Baked Potato,,14,0
+GrilledMeat,17030,Surf and Turf,,50,0
+GrilledMeat,17031,Quail with Rasins,,61,0
+GrilledMeat,17032,Huli-huli Chicken,,49,0
+GrilledMeat,17033,	Roast Duck,,25,0
+GrilledMeat,17034,	Roast Goose with Apples,,31,0
+GrilledSeafood,17035,Grilled Squid,,2,0
+GrilledSeafood,17036,Grilled Tilapia,,2,0
+GrilledSeafood,17037,Grilled Flounder,,12,0
+GrilledSeafood,17038,Grilled Tuna,,22,0
+GrilledSeafood,17039,Grilled Bass,,42,0
+GrilledSeafood,17040,Grilled Mussel,,2,0
+GrilledSeafood,17041,Grilled Shrimp,,4,0
+GrilledSeafood,17042,Grilled Crab,,5,0
+GrilledSeafood,17043,Grilled Scallop,,9,0
+GrilledSeafood,17044,Grilled Lobster,,26,0
+GrilledSeafood,17045,Grilled King Crab,,28,0
+PanfriedFoods,17046,Fried Egg,,2,0
+PanfriedFoods,17047,Fried Bacon,,2,0
+PanfriedFoods,17048,Fried Sausage,,2,0
+PanfriedFoods,17049,Fried Ham,,2,0
+PanfriedFoods,17050,Fried Asparagus,,2,0
+PanfriedFoods,17051,Fried Broccoli,,4,0
+PanfriedFoods,17052,Fried Red Cabbage,,5,0
+PanfriedFoods,17053,Fried Salmon,,7,0
+PanfriedFoods,17054,Pan-fried Cod,,6,0
+PanfriedFoods,17055,Peas with Pine Nut,,98,0
+PanfriedFoods,17056,Chocolate Donut,,14,0
+PanfriedFoods,17057,	Duck with Cherries,,17,0
+PanfriedFoods,17058,Stuffed Mushroom,,70,0
+PanfriedFoods,17059,	Smoked Duck Breast,,11,0
+PanfriedFoods,17060,	Creamed Spinach,,34,0
+PanfriedFoods,17061,	Creamy Lamb Chops,,22,0
+PanfriedFoods,17062,Baked Beans,,5,0
+PanfriedFoods,17063,Texas Seasoned Rice,,12,0
+PanfriedFoods,17064,	Stir-fried Arugula,,10,0
+PanfriedFoods,17065,	Red Bean Rice,,5,0
+PanfriedFoods,17119,Pan-fried Mullet,,31,0
+Salads,17066,Tomato Slice,,2,0
+Salads,17067,Cucumber Slice,,2,0
+Salads,17068,Coleslaw,,5,0
+Salads,17069,Waldorf Salad,,20,0
+Salads,17070,Fried Cabbage,,2,0
+Salads,17071,	Shrimp Cocktail,,5,0
+Salads,17072,Potato Strips,,12,0
+Salads,17073,	Beet Salad,,53,0
+Salads,17074,Salade Landaise,,25,0
+Salads,17075,Arugula Tomato Salad,,9,0
+Salads,17076,Potato Salad,,12,0
+Salads,17077,	Hawaiian Poke Bowl,,18,0
+Salads,17078,Crab Louie Salad,,5,0
+Salads,17079,Boiled Yam,,21,0
+Desserts,17080,Shave Ice,,5,0
+Desserts,17081,Banana Split,,6,0
+Desserts,17082,Apple Pie,,7,0
+Desserts,17083,Banana Pie,,7,0
+Desserts,17084,	Mango Pie,,33,0
+Desserts,17085,Pecan Pie,,15,0
+Desserts,17086,	Pineapple Pie,,51,0
+Desserts,17087,Fortune Cookies,,10,0
+Desserts,17088,Donut,,8,0
+Desserts,17089,	Brownie,,17,0
+Desserts,17090,Toast,,40,0
+Desserts,17091,	Honey Roasted Cashews,,36,0
+Desserts,17092,Cheese Stuffed Dates,,51,0
+Desserts,17093,Corn Bread,,5,0
+FastFood,17094,Big Dough,,2,0
+FastFood,17095,	Baked Burger Bun,,2,0
+FastFood,17096,Baked Hot Dog Bun,,9,0
+FastFood,17097,Pork Burger,,5,0
+FastFood,17098,Chicken Burger,,7,0
+FastFood,17099,Cheese Burger,,7,0
+FastFood,17100,Beef Burger,,40,0
+FastFood,17101,Tuna Burger,,24,0
+FastFood,17102,Hot Dog,,11,0
+FastFood,17103,Cheese Dog,,11,0
+FastFood,17104,Lobster Roll,,30,0
+FastFood,17105,	Nachos,,9,0
+DeepfriedFoods,17106,Fries,,15,0
+DeepfriedFoods,17107,Fried Chicken Wing,,5,0
+DeepfriedFoods,17108,Fried Chicken Drumstick,,5,0
+DeepfriedFoods,17109,Fried Chicken Breast,,6,0
+DeepfriedFoods,17110,	Fried Chicken,,8,0
+DeepfriedFoods,17111,	Fried Pork Chop,,5,0
+DeepfriedFoods,17112,Fish Fry,,6,0
+DeepfriedFoods,17113,Fried Burrito,,12,0
+DeepfriedFoods,17114,Fried Mullet,,31,0
+DeepfriedFoods,17115,Fried Mushrooms,,63,0
+DeepfriedFoods,17116,Herb Crusted Leg of Lamb,,23,0
+DeepfriedFoods,17117,Hush Puppy,,5,0
+DeepfriedFoods,17118,	Baked Spinach Chips,,17,0
+MixedDrinks,1027,Mimosa,,7,0
+MixedDrinks,1028,	Kalimotxo,,2,0
+MixedDrinks,1029,Gin Fizz,,9,0
+MixedDrinks,1030,Dry Martini,,4,0
+MixedDrinks,1031,Whisky Sour,,12,0
+MixedDrinks,1032,Pina Colada,,43,0
+MixedDrinks,1033,Mojito,,10,0
+MixedDrinks,1034,	Clover Club,,34,0
+MixedDrinks,1035,Tequila Sunrise,,49,0
+MixedDrinks,1036,Sidecar,,12,0
+MixedDrinks,1037,Margarita,,21,0
+MixedDrinks,1038,Silent Third,,16,0
+MixedDrinks,1039,Daiquiri,,13,0
+MixedDrinks,1040,Rum and Coke,,7,0
+MixedDrinks,1041,Cosmopolitan,,20,0
+MixedDrinks,1042,	Manhattan,,9,0
+MixedDrinks,1043,Lava Flow,,50,0
+MixedDrinks,1044,Aviation,,8,0
+MixedDrinks,1045,Bloody Mary,,7,0
+MixedDrinks,1046,Fish House Punch,,13,0
+MixedDrinks,1047,Gin Rickey,,4,0
+MixedDrinks,1048,Tom & Jerry,,6,0
+MixedDrinks,1049,Somaek,,5,0
+MixedDrinks,1050,French 75,,7,0
+MixedDrinks,1051,Hemingway Champagne,,4,0
+MixedDrinks,1052,Earthquake Cocktail,,11,0
+MixedDrinks,1053,	French Rose,,8,0
+MixedDrinks,1054,	French Gimlet,,5,0
+MixedDrinks,1055,Boulevardier,,11,0
+MixedDrinks,1056,Marie Antoinette,,21,0
+MixedDrinks,1057,Tokyo Mule,,0,0
+MixedDrinks,1058,Matcha Mint Julep,,0,0
+MixedDrinks,1059,Bamboo Cocktail,,0,0
+MixedDrinks,1060,Egg Sake,,0,0
+MixedDrinks,1061,	Champagne Sangria,,0,0
+MixedDrinks,1062,Spanish Alcoholic Coffee,,0,0
+MixedDrinks,1063,Galicia Fire Drink,,0,0
+MixedDrinks,1064,	Iconic Cocktail of Valencia,,0,0
+MixedDrinks,1065,	Iconic Cocktail of Seville,,0,0
+MixedDrinks,1066,Spanish Summer Wine,,0,0
+MixedDrinks,1067,Port of Spain,,0,0
+MixedDrinks,1068,Mexican Green Juice,,0,0
+MixedDrinks,1069,	Strawberry Agua Fresca,,0,0
+MixedDrinks,1070,Mango Chamoyada,,0,0
+MixedDrinks,1071,Watermelon Agua Fresca,,0,0
+MixedDrinks,1072,Cucumber Agua Fresca,,0,0
+MixedDrinks,1073,Mexican Rice Drink,,0,0
+MixedDrinks,1074,Mexican Clay Pot Coffee,,0,0
+MixedDrinks,1075,Hibiscus Tea,,0,0
+MixedDrinks,1076,	Grapefruit Paloma,,0,0
+MixedDrinks,1077,Mexican Beer,,0,0
+MixedDrinks,1078,Mexican Bloody Mary (MIchaelada),,0,0
+MixedDrinks,1079,Clay Jug Tequila (Cantarito),,0,0
+MixedDrinks,1080,Mezcal Margarita (Mezcalita),,0,0
+MixedDrinks,1081,Fruit Spritzer (Cleriocot),,0,0
+MixedDrinks,1082,Guava Agua Fresca,,0,0
+MixedDrinks,1083,Belini Cocktail,,0,0
+MixedDrinks,1084,Limoncello Sour Cocktail,,0,0
+MixedDrinks,1085,Ti' Punch,,0,0
+MixedDrinks,1086,Apple & Tonic,,0,0
+MixedDrinks,1087,Sake Sunrise,,0,0
+MixedDrinks,1088,Saketini,,0,0
+MixedDrinks,1089,Thai Iced Tea,,0,0
+MixedDrinks,1090,Mai Tai Cocktail,,0,0
+MixedDrinks,1091,	Long Island Iced Tea,,0,0
+MixedDrinks,1092,Thai Coco Cocktail,,0,0
+MixedDrinks,1093,	Tom Yum Martini,,0,0
+MixedDrinks,1094,Pandan Iced Tea,,0,0
+MixedDrinks,1095,Acai Mocktail,,0,0
+MixedDrinks,1096,Caipirinha,,0,0
+MixedDrinks,1097,Batida,,0,0
+MixedDrinks,1098,Brazilian Lime Juice,,0,0
+MixedDrinks,1099,	Passion Fruit Juice,,0,0
+MixedDrinks,1100,Fizzy Passion Fruit Cocktail,,0,0
+MixedDrinks,1101,	Mango Milkshake with Ice Cream,,0,0
+MixedDrinks,1102,Vietnamese Coffee,,0,0
+MixedDrinks,1103,Yogurt Soju Cocktail,,0,0
+MixedDrinks,1104,Korean Iced Green Tea,,0,0
+MixedDrinks,1105,Kimchi Soju Cocktail,,0,0
+MixedDrinks,1106,Soju with Mango Ice Pop,,0,0
+MixedDrinks,1107,Cucumber Soju Cocktail,,0,0
+MixedDrinks,1108,Soju Bomb,,0,0
+MixedDrinks,1109,	Soju Watermelon Cocktail,,0,0
+MixedDrinks,1110,	Old Fashioned,,0,0
+MixedDrinks,1111,Sex on the Beach,,0,0
+MixedDrinks,1112,Gin Fizz,,0,0
+MixedDrinks,1113,Apple Vodka Mojito,,0,0
+MixedDrinks,1114,Sour Cherry Liquor,,0,0
+FrenchDelicacies,2000,	Escargot,,0,0
+FrenchDelicacies,2001,	Quiche Lorraine,,0,0
+FrenchDelicacies,2002,Garlic Bread,,0,0
+FrenchDelicacies,2003,	Broccoli Gratin,,0,0
+FrenchDelicacies,2004,Baked Bass with Lemon,,0,0
+FrenchDelicacies,2005,	Savory Crepe,,0,0
+FrenchDelicacies,2006,Entrec�te,,0,0
+FrenchDelicacies,2007,Foie gras,,0,0
+FrenchDelicacies,2008,Magret de canard,,37,0
+FrenchDelicacies,2009,Coquilles St. Jaques,,0,0
+FrenchDelicacies,2010,Bacon Wrapped Asparagus,,0,0
+FrenchDelicacies,2011,Cream of Mushroom Soup,,0,0
+FrenchDelicacies,2012,Choucroute garnie,,0,0
+FrenchDelicacies,2013,Pot au feu,,0,0
+FrenchDelicacies,2014,Smoked Salmon,,0,0
+FrenchDelicacies,2015,Pan bagnat,,0,0
+FrenchDelicacies,2016,	Steak au poivre,,0,0
+FrenchDelicacies,2017,Tarte flamb�e,,0,0
+FrenchDelicacies,2018,Croutons,,0,0
+FrenchDelicacies,2019,Lyonnaise Salad,,0,0
+FrenchDelicacies,2020,Cheese Pie,,0,0
+FrenchDelicacies,2021,Floating Island,,0,0
+FrenchDelicacies,2022,Croque monsieur,,0,0
+FrenchDelicacies,2023,Norman Tart,,0,0
+FrenchDelicacies,2024,"Blanquette de veau	
+
+",,0,0
+FrenchDelicacies,2025,Spinach Quiche,,0,0
+FrenchDelicacies,2026,	Cured Duck,,27,0
+FrenchDelicacies,2027,Duck Confit,,0,0
+FrenchDelicacies,2028,Provencal Stuffed Eggplants,,0,0
+FrenchDelicacies,2029,	Smoked Salmon Rolls,,0,0
+FrenchDelicacies,2030,	Cauliflower Gratin,,0,0
+FrenchDelicacies,2031,French Lamb Stew,,0,0
+FrenchDelicacies,2032,	Braised Chicken in Red Wine,,0,0
+FrenchDelicacies,2033,French Buckwheat Galette,,0,0
+FrenchDelicacies,2034,Chickpea Pancakes,,0,0
+FrenchDelicacies,2035,	Chicken Piccata,,0,0
+FrenchDelicacies,2036,Anna Potatoes,,20,0
+FrenchDelicacies,2037,	French Duck with Orange Sauce,,0,0
+FrenchDelicacies,2038,Corn Souffl�,,0,0
+FrenchDelicacies,2039,Provencal Vegetable Bake,,0,0
+FrenchDelicacies,2040,Provencal Roast Leg of Lamb,,0,0
+FrenchDelicacies,2041,Foie Gras Terrine,,0,0
+FrenchDelicacies,2042,French Potato Leek Soup,,0,0
+FrenchDelicacies,2043,French Beetroot Soup,,0,0
+FrenchDelicacies,2044,Creamy Cauliflower Soup,,0,0
+FrenchDelicacies,2045,Lamb Navarin,,0,0
+FrenchDelicacies,2046,Basque Style Chicken,,0,0
+FrenchDesserts,2047,Macaron Batter,,12,0
+FrenchDesserts,2048,Chocolate Mousse,,0,0
+FrenchDesserts,2049,Chocolate Truffles,,0,0
+FrenchDesserts,2050,Strawberry Creme Crepe,,0,0
+FrenchDesserts,2051,Banana Chocolate Crepe,,0,0
+FrenchDesserts,2052,Caramel Ice Cream Crepe,,0,0
+FrenchDesserts,2053,Milk Crepe Cake,,0,0
+FrenchDesserts,2054,Pink Macaron,,0,0
+FrenchDesserts,2055,White Macaron,,0,0
+FrenchDesserts,2056,Purple Macaraon,,0,0
+FrenchDesserts,2057,Yellow Macaron,,0,0
+FrenchDesserts,2058,Blue Macaron,,0,0
+FrenchDesserts,2059,Green Macaron,,0,0
+FrenchDesserts,2060,Brown Macaron,,0,0
+FrenchDesserts,2061,Galaxy Macaron,,0,0
+FrenchDesserts,2062,Mini Nut Tart,,0,0
+FrenchDesserts,2063,Mini Fruit Tart,,0,0
+FrenchDesserts,2064,Tarte Tatin,,0,0
+FrenchDesserts,2065,Tarte Tropézienne,,0,0
+FrenchDesserts,2066,Chocolate Nun,,0,0
+FrenchDesserts,2067,Paris-Brest,,0,0
+FrenchDesserts,2068,Éclair,,0,0
+FrenchDesserts,2069,French Cream Puff,,0,0
+FrenchDesserts,2070,Strawberry Napoleon,,0,0
+FrenchDesserts,2071,Napoleon,,0,0
+FrenchDesserts,2072,Burnt Cream,,0,0
+FrenchDesserts,2073,Soufflé,,0,0
+FrenchDesserts,2074,Opera Cake,,0,0
+FrenchDesserts,2075,Madeleine,,0,0
+FrenchDesserts,2076,Canelé,,0,0
+FrenchDesserts,2077,Financier,,0,0
+FrenchDesserts,2078,Palm Heart,,0,0
+FrenchSeafood,2079,Bacon Crepe,,0,0
+FrenchSeafood,2080,Salmon Crepe,,0,0
+FrenchSeafood,2081,Salmon Rillettes,,0,0
+FrenchSeafood,2082,Pan-fried Flounder,,0,0
+FrenchSeafood,2083,Crab Beignets,,0,0
+FrenchSeafood,2084,Baguette,,0,0
+FrenchSeafood,2085,Lobster Thermidor,,0,0
+FrenchSeafood,2086,Stuffed Mussels,,0,0
+FrenchSeafood,2087,Brandade,,0,0
+FrenchSeafood,2088,French Potato and Beef Casserole,,0,0
+FrenchSeafood,2089,French Potato and Cheese Gratin,,0,0
+FrenchSeafood,2090,French Vegetable Stew,,0,0
+FrenchSeafood,2091,Easter Pate with Eggs,,0,0
+FrenchSeafood,2092,Provencal Fish Stew,,0,0
+FrenchSeafood,2093,Lobster Bisque,,37,0
+FrenchSeafood,2094,Sailor-style Mussels,,0,0
+FrenchSeafood,2095,Fish Stew with Aioli,,0,0
+FrenchSeafood,2096,French Fish Stew,,0,0
+FrenchSeafood,2097,Basque-style Squid,,0,0
+FrenchSeafood,2098,Basque-style Tuna,,0,0
+FrenchSeafood,2099,Basque Tuna Stew,,0,0
+FrenchSeafood,2100,Merlu Soup,,0,0
+FrenchSeafood,2101,French Fish Soup,,0,0
+FrenchSeafood,2102,French Onion Soup,,0,0
+FrenchSeafood,2103,Shellfish Platter,,0,0
+FrenchSeafood,2104,Nicoise Salad,,0,0
+FrenchSeafood,2105,Steak Tartare,,0,0
+FrenchSeafood,2106,Crudit�s,,0,0
+FrenchSeafood,2107,Crab Salad Lettuce Cups,,0,0
+FrenchSeafood,2108,Lobster with Wine and Tomato,,0,0
+FrenchSeafood,2109,Crab Soufflé,,0,0
+FrenchSeafood,2110,Fish Baked in Parchment Packet,,0,0
+FrenchSeafood,2111,Bass Baked in a Crust,,0,0
+SideDishes,3000,Tempura Batter,,0,0
+SideDishes,3001,Pickled Dish,,0,0
+SideDishes,3002,Natto,,0,0
+SideDishes,3003,Marinated Sea Grapes,,13,0
+SideDishes,3004,Shrimp Tempura,,0,0
+SideDishes,3005,Eel Tempura,,0,0
+SideDishes,3006,Egg Tempura,,0,0
+SideDishes,3007,Okra Tempura,,0,0
+SideDishes,3008,Eggplant Tempura,,0,0
+SideDishes,3009,Broccoli Tempura,,0,0
+SideDishes,3010,Pepper Ring Tempura,,0,0
+SideDishes,3011,Savoury Cabbage Pancake,,0,0
+SideDishes,3012,Japanese Fried Bean Curd,,0,0
+SideDishes,3013,Japanese Croquette,,0,0
+SideDishes,3014,Japanese Rolled Omelette,,0,0
+SideDishes,3015,Chicken Breast Yakitori,,0,0
+SideDishes,3016,Chicken Wing Yakitori,,0,0
+SideDishes,3017,Chicken and Cheese Yakitori,,0,0
+SideDishes,3018,Miso Soup,,0,0
+SideDishes,3019,Pork and Vegetable Miso Soup,,0,0
+SideDishes,3020,Japanese Clear Clam Soup,,0,0
+SideDishes,3021,Seaweed Egg Drop Soup,,0,0
+SideDishes,3022,Japanese Fried Chicken,,0,0
+SideDishes,3023,Spinach Side Dish,,0,0
+SideDishes,3024,Meat and Potato Stew,,0,0
+SideDishes,3025,Japanese Grilled Mutton,,13,0
+SideDishes,3026,Grilled Eggplants with Miso,,0,0
+SideDishes,3027,Omusoba,,0,0
+SideDishes,3028,Japanese Spinach Salad,,27,0
+SideDishes,3029,Salmon Simmered in Soy Sauce,,0,0
+SideDishes,3030,Simmered Kelp,,0,0
+SideDishes,3031,Japanese Chicken Meatball Skewers,,0,0
+SideDishes,3032,Lobster Miso Soup,,0,0
+SideDishes,3033,Japanese Lamb Stew,,0,0
+SideDishes,3034,Japanese Braised Pork Belly,,0,0
+RiceTrianglesandSushi,3035,Rice Triangle,,0,0
+RiceTrianglesandSushi,3036,Creamy Tuna Rice Triangle,,0,0
+RiceTrianglesandSushi,3037,Grilled Rice Triangle,,0,0
+RiceTrianglesandSushi,3038,Cucumber Sushi Roll,,0,0
+RiceTrianglesandSushi,3039,Tuna Sushi Roll,,0,0
+RiceTrianglesandSushi,3040,California Sushi Roll,,0,0
+RiceTrianglesandSushi,3041,Wakame Sushi Roll,,0,0
+RiceTrianglesandSushi,3042,Bottarga Sushi,,0,0
+RiceTrianglesandSushi,3043,Roe Sushi,,0,0
+RiceTrianglesandSushi,3044,Shrimp and Cheese Sushi,,0,0
+RiceTrianglesandSushi,3045,Inari Sushi,,0,0
+RiceTrianglesandSushi,3046,Lucky Direction Sushi Rolls,,0,0
+RiceTrianglesandSushi,3047,Duck Breast Sushi,,0,0
+GrainProducts,6022,Bucket of Rice,,11,65
+GrainProducts,6023,Bowl of Rice,,0,130
+Wagashi,3054,Nerikiri Rice Dough,,0,0
+Wagashi,3055,Peach Wagashi,,0,0
+Wagashi,3056,Mt. Fuji Wagashi,,0,0
+Wagashi,3057,Flower Wagashi,,0,0
+Wagashi,3058,	Snow Rabbit Wagashi,,0,0
+Wagashi,3059,Daffodil Wagashi,,0,0
+Wagashi,3060,	Crane and Tortoise Wagashi,,0,0
+Wagashi,3061,	Warabi Plant Wagashi,,0,0
+Wagashi,3062,	Iris Wagashi,,0,0
+Wagashi,3063,Seiobo Wagashi,,0,0
+Wagashi,3064,Maple Leaf Wagashi,,0,0
+Wagashi,3065,	Loquat Wagashi,,0,0
+Wagashi,3066,Gingko Wagashi,,0,0
+Wagashi,3067,Petals Wagashi,,0,0
+Wagashi,3068,Botamochi,,0,0
+Wagashi,3069,	Batter,,0,0
+Wagashi,3070,Sweetfish Shaped Pancake,,0,0
+Wagashi,3071,Japanese Red Bean Pancake,,0,0
+Wagashi,3072,	Japanese Rice Crackers,,0,0
+Wagashi,3073,	Japanese Cheesecake,,0,0
+Wagashi,3074,Castella Cake,,0,0
+Wagashi,3075,Grilled Rice Skewers,,0,0
+Wagashi,3076,	Rice Ball Skewers,,0,0
+Wagashi,3077,Red Bean Soup,,0,0
+Wagashi,3078,Japanese Rice Cakes,,0,0
+SakuraDerivatives,3079,Sakura Wagashi,,0,0
+SakuraDerivatives,3080,Sakura Rice Ball,,0,0
+SakuraDerivatives,3081,Sakura Frappe,,0,0
+SakuraDerivatives,3082,Sakura Sparkling Water,,0,0
+SakuraDerivatives,3083,Sakura Latte,,0,0
+SakuraDerivatives,3084,Sakura Cocktail,,0,0
+SakuraDerivatives,3085,Sakura Cake Roll,,0,0
+Noodles,3086,Bundle of Ramen Noodles,,0,0
+Noodles,3087,Bundle of Soba Noodles,,0,0
+Noodles,3088,Bundle of Udon Noodles,,0,0
+Noodles,3089,Flowing Bamboo Noodles,,0,0
+Noodles,3090,Kitakata Ramen,,0,0
+Noodles,3091,Tonkotsu Ramen,,0,0
+Noodles,3092,Miso Ramen,,0,0
+Noodles,3093,Jiro-Style Ramen,,0,0
+Noodles,3094,Iroha Ramen,,0,0
+Noodles,3095,Ham Ramen,,0,0
+Noodles,3096,Japanese Clam Ramen,,0,0
+Noodles,3097,Dipping Ramen,,0,0
+Noodles,3098,Nabeyaki Ramen,,0,0
+Noodles,3099,Miso Curry Milk Ramen,,0,0
+Noodles,3100,Yokohama-Styled Ramen,,0,0
+Noodles,3101,Udon Noodle Soup,,0,0
+Noodles,3102,Udon with Bean Curd Triangles,,0,0
+Noodles,3103,Nabeyaki Udon,,0,0
+Noodles,3104,Stir-Fried Udon Noodles,,0,0
+Noodles,3105,Cold Soba,,0,0
+Noodles,3106,Tempura Soba,,0,0
+Noodles,3107,Oyster Soba,,0,0
+Noodles,3108,Vegan Soba,,0,0
+Noodles,3109,Kawara Soba,,0,0
+Noodles,3110,Seasoned Bamboo Shoots,,2,0
+ServeOverRice,3111,Grilled Eel Rice Bowl,,0,0
+ServeOverRice,3112,Chicken and Egg Rice Bowl,,0,0
+ServeOverRice,3113,Japanese Omelette Rice,,0,0
+ServeOverRice,3114,Clam Miso Soup over Rice,,0,0
+Sashimi,3115,Mackerel Sashimi,,0,0
+Sashimi,3116,Squid Sashimi,,0,0
+Sashimi,3117,Shrimp Sashimi,,0,0
+Sashimi,3118,Crab Sashimi,,0,0
+Sashimi,3119,Scallop Sashimi,,0,0
+Sashimi,3120,Salmon Sashimi,,0,0
+Sashimi,3121,Tuna Sashimi,,0,0
+Sashimi,3122,Abalone Sashimi,,0,0
+Sashimi,3123,Snapper Sashimi,,0,0
+Sashimi,3124,Bass Sashimi,,84,0
+MatchaFlavouredSnack,3125,Matcha Latte,,0,0
+MatchaFlavouredSnack,3126,Matcha Ice Cream,,0,0
+MatchaFlavouredSnack,3127,Matcha Daifuku,,0,0
+MatchaFlavouredSnack,3128,Matcha Chocolate,,0,0
+MatchaFlavouredSnack,3129,Matcha Cheesecake,,0,0
+MatchaFlavouredSnack,3130,Matcha Cookie,,0,0
+MatchaFlavouredSnack,3131,Matcha Cake Roll,,0,0
+MatchaFlavouredSnack,3132,Almond Milk Matcha Latte,,0,0
+FancyJapaneseDishes,3133,Squid and Cucumber Salad,,0,0
+FancyJapaneseDishes,3134,Grilled Fish Combo Plate,,0,0
+FancyJapaneseDishes,3135,Eel and Eggplant Soup,,0,0
+FancyJapaneseDishes,3136,Seafood Broth in Teapot,,0,0
+FancyJapaneseDishes,3137,Steamed Egg Custard,,0,0
+FancyJapaneseDishes,3138,Simmered Koya Bean Curd,,0,0
+FancyJapaneseDishes,3139,Simmered Vegetable Combo,,0,0
+FancyJapaneseDishes,3140,Rice with Bamboo Shoots,,0,0
+FancyJapaneseDishes,3141,Almond Tofu,,0,0
+FancyJapaneseDishes,3142,Coffee Jelly,,0,0
+JingCuisine,4000,Sliced Peking Duck,,0,0
+JingCuisine,4001,Shredded Pork,,0,0
+JingCuisine,4002,Raw Panlong Dish,,0,0
+JingCuisine,4003,Pancake Wraps,,0,0
+JingCuisine,4004,Raw Buns,,0,0
+JingCuisine,4005,Raw Brown Sugar Buns,,0,0
+JingCuisine,4006,Raw Twisted Buns with Ham,,0,0
+JingCuisine,4007,Raw Sesame Sauce Twisted Buns,,0,0
+JingCuisine,4008,Raw Cornbread,,0,0
+JingCuisine,4009,Raw Pork Dumplings,,0,0
+JingCuisine,4010,Raw Lazy Dragon Rolls,,0,0
+JingCuisine,4011,Strawberry and Banana Tanghulu,,0,0
+JingCuisine,4012,Hawthorn Tanghulu,,0,0
+JingCuisine,4013,Orange Tanghulu,,0,0
+JingCuisine,4014,Sauteed Shredded Pork,,0,0
+JingCuisine,4015,Braised Chicken Slices,,0,0
+JingCuisine,4016,Braised Prawns,,0,0
+JingCuisine,4017,Steamed Bean Curd,,0,0
+JingCuisine,4018,Stir-fried Pork and Spinach,,0,0
+JingCuisine,4019,Honey Roasted Pears,,0,0
+JingCuisine,4020,Fried Pork in Scoop,,0,0
+JingCuisine,4021,Non-stick Egg Pudding,,0,0
+JingCuisine,4022,Fried Dumplings,,0,0
+JingCuisine,4023,Tanghulu Syrup,,0,0
+JingCuisine,4024,Sesame Flatbread,,0,0
+JingCuisine,4025,Peking Duck,,0,0
+JingCuisine,4026,Royal Style Barbecue,,0,0
+JingCuisine,4027,Peking Duck Pancakes,,0,0
+JingCuisine,4028,Steamed Pork with Rice Powder,,0,0
+JingCuisine,4029,Panlong Dish,,0,0
+JingCuisine,4030,Steamed Buns,,0,0
+JingCuisine,4031,Brown Sugar Steamed Buns,,0,0
+JingCuisine,4032,Twisted Buns with Ham,,0,0
+JingCuisine,4033,Sesame Sauce Twisted Buns,,0,0
+JingCuisine,4034,Steamed Cornbread,,0,0
+JingCuisine,4035,Steamed Dumplings,,0,0
+JingCuisine,4036,Steamed Lazy Dragon Rolls,,0,0
+JingCuisine,4037,Peking Style Barbecue Lamb,,0,0
+JingCuisine,4038,Braised Pork Belly Slices,,0,0
+JingCuisine,4039,Braised Pork Knuckle,,0,0
+JingCuisine,4040,Boiled Dumplings,,0,0
+HuaiyangCuisine,4041,Raw Crab and Pork Meatball,,0,0
+HuaiyangCuisine,4042,Raw Wontons,,0,0
+HuaiyangCuisine,4043,Raw Crab and Pork Soup Dumplings,,0,0
+HuaiyangCuisine,4044,Raw Squirrel Fish,,0,0
+HuaiyangCuisine,4045,Salted Pork in Jelly,,0,0
+HuaiyangCuisine,4046,Raw Chicken in Lotus Leaf,,0,0
+HuaiyangCuisine,4047,Squirrel Fish,,0,0
+HuaiyangCuisine,4048,Longjing Prawns,,4,0
+HuaiyangCuisine,4049,Yangzhou Fried Rice,,0,0
+HuaiyangCuisine,4050,"Shrimp, Chicken & Fish",,0,0
+HuaiyangCuisine,4051,Wuxi Fried Spare Rib,,0,0
+HuaiyangCuisine,4052,Steak Wrapped in Lotus Leaf,,0,0
+HuaiyangCuisine,4053,Bean Curd with Crab Meat,,0,0
+HuaiyangCuisine,4054,Chicken in Lotus Leaf,,0,0
+HuaiyangCuisine,4055,Chicken Shaped Pastry,,0,0
+HuaiyangCuisine,4056,Crab Steamed in Orange Pulp,,0,0
+HuaiyangCuisine,4057,Crab & Pork Soup Dumpling,,0,0
+HuaiyangCuisine,4058,Braised Ham in Honey Sauce,,0,0
+HuaiyangCuisine,4059,Steamed Pork in Lotus Leaf,,0,0
+HuaiyangCuisine,4060,Gourd Shaped Duck,,0,0
+HuaiyangCuisine,4061,Suzhou Diamond Cakes,,0,0
+HuaiyangCuisine,4062,"Chinese ""Victory"" Cakes",,0,0
+HuaiyangCuisine,4063,Crab and Pork Meatball,,0,0
+HuaiyangCuisine,4064,Wensi Bean Curd Soup,,0,0
+HuaiyangCuisine,4065,Chrysanthemum Bean Curd Soup,,0,0
+HuaiyangCuisine,4066,Dongpo Pork,,0,0
+HuaiyangCuisine,4067,Boiled Shredded Dry Bean Curd,,0,0
+HuaiyangCuisine,4068,Chinese Minced Fish Soup,,0,0
+HuaiyangCuisine,4069,Fish Wrapped in Mutton,,0,0
+HuaiyangCuisine,4070,Boiled Wontons,,0,0
+HuaiyangCuisine,4071,Cat Ear Noodles,,0,0
+SichuanCuisine,4072,Chili Bean Sauce,,0,0
+SichuanCuisine,4073,Chili Oil,,2,0
+SichuanCuisine,4074,Pickled Peppers,,0,0
+SichuanCuisine,4075,Preserved Eggs,,0,0
+SichuanCuisine,4076,Preserved Eggs & Chili Peppers,,0,0
+SichuanCuisine,4077,Sichuan Spicy Sausages,,0,0
+SichuanCuisine,4078,Mapo Tofu,,0,0
+SichuanCuisine,4079,Hot and Spicy Diced Chicken,,0,0
+SichuanCuisine,4080,Spicy Braised Eggplant,,0,0
+SichuanCuisine,4081,Tofu Pudding & Steak Stripes,,0,0
+SichuanCuisine,4082,Kung Pao Chicken,,0,0
+SichuanCuisine,4083,Double Cooked Pork,,0,0
+SichuanCuisine,4084,Pickled Pepper & Squid,,0,0
+SichuanCuisine,4085,Pork and Pickled Peppers,,0,0
+SichuanCuisine,4086,Green pepper and Sliced Pork,,0,0
+SichuanCuisine,4087,Egg Pancake,,0,0
+SichuanCuisine,4088,Rice Crust,,0,0
+SichuanCuisine,4089,Pork with Rice Crust,,0,0
+SichuanCuisine,4090,Spicy Rooster Pot,,0,0
+SichuanCuisine,4091,Tenderized & Shredded Chicken,,0,0
+SichuanCuisine,4092,Cold Pot Skewers,,0,0
+SichuanCuisine,4093,Sliced Pork with Garlic Sauce,,0,0
+SichuanCuisine,4094,Leshan Beef Soup,,52,0
+SichuanCuisine,4095,Spicy Poached Chicken,,0,0
+SichuanCuisine,4096,Sichuan Pork in Spicy Broth,,0,0
+SichuanCuisine,4097,Sour Plum Juice,,0,0
+SichuanCuisine,4098,Trotter Soup,,0,0
+SichuanCuisine,4099,Spicy Wontons in Chili Oil,,0,0
+SichuanCuisine,4100,Spicy Beef Hot Pot,,0,0
+SichuanCuisine,4101,Steamed Pork Belly with Sugar,,0,0
+CantoneseCuisine,4102,Steamed Custard Buns,,0,0
+CantoneseCuisine,4103,Shrimp Dumplings,,0,0
+CantoneseCuisine,4104,Bean Curd Skin Rolls,,0,0
+CantoneseCuisine,4105,Red Rice Rolls with Shrimp,,0,0
+CantoneseCuisine,4106,Chinese Pork Buns,,0,0
+CantoneseCuisine,4107,Spare Ribs & Black Bean Sauce,,0,0
+CantoneseCuisine,4108,Sticky Rice with Chicken,,0,0
+CantoneseCuisine,4109,White Sugar Sponge Cake,,0,0
+CantoneseCuisine,4110,Red Bean Milk Pudding,,0,0
+CantoneseCuisine,4111,Cantonese Shumai,,0,0
+CantoneseCuisine,4112,Cantonese Sponge Cake,,0,0
+CantoneseCuisine,4113,Wenchang Chicken,,0,0
+CantoneseCuisine,4114,Egg Tart,,0,0
+CantoneseCuisine,4115,Chinese BBQ Pork ,,0,0
+CantoneseCuisine,4116,Cantonese Roast Goose,,0,0
+CantoneseCuisine,4117,Pineapple Bun,,0,0
+CantoneseCuisine,4118,Abalone and Broccolis,,0,0
+CantoneseCuisine,4119,Walnut Paste,,0,0
+CantoneseCuisine,4120,White Boiled Shrimp,,0,0
+CantoneseCuisine,4121,Sweet Egg Soup,,0,0
+CantoneseCuisine,4122,Preserved Egg and Pork Congee,,0,0
+CantoneseCuisine,4123,Cantonese Lobster Platter,,0,0
+CantoneseCuisine,4124,Oyster Omelet,,0,0
+CantoneseCuisine,4125,Char Siu Fried Rice,,0,0
+CantoneseCuisine,4126,Sweet and Sour Lychee Pork,,0,0
+SpanishCuisine,5000,Chorizo,,0,0
+SpanishCuisine,5001,Raw Spanish Baguettes,,0,0
+SpanishCuisine,5002,Raw Churros,,0,0
+SpanishCuisine,5003,Spanish Roast Suckling Pig,,0,0
+SpanishCuisine,5004,Spanish Chicken and Rice,,0,0
+SpanishCuisine,5005,Spanish Stuffed Eggplants,,0,0
+SpanishCuisine,5006,Spanish Baguette,,16,0
+SpanishCuisine,5007,Catalan Biscuits ,,0,0
+SpanishCuisine,5008,Pinchitos,,0,0
+SpanishCuisine,5009,Spanish Garlic Chicken,,0,0
+SpanishCuisine,5010,Migas,,0,0
+SpanishCuisine,5011,Spanish Meatballs,,0,0
+SpanishCuisine,5012,Cachopo,,0,0
+SpanishCuisine,5013,Braised Pork Cheeks,,0,0
+SpanishCuisine,5014,Spanish Omelet,,0,0
+SpanishCuisine,5015,Spanish Vegetable Stew,,0,0
+SpanishCuisine,5016,Rice with Fried Egg,,0,0
+SpanishCuisine,5017,Gachas,,0,0
+SpanishCuisine,5018,Churros,,0,0
+SpanishCuisine,5019,Valencian Paella,,0,0
+SpanishCuisine,5020,Spanish Vegan Paella,,0,0
+SpanishCuisine,5021,Asturian Pork and Beans,,0,0
+SpanishCuisine,5022,Madrilenian Stew,,0,0
+SpanishCuisine,5023,Spanish Bull Tail Stew,,0,0
+SpanishSeafood,5024,Spanish Garlic Shrimps,,0,0
+SpanishSeafood,5025,Spanish Marinated Tuna,,0,0
+SpanishSeafood,5026,Salmon Bocadillo Sandwich,,0,0
+SpanishSeafood,5027,Raw Tilapia Empanadas,,0,0
+SpanishSeafood,5028,Seafood Paella,,0,0
+SpanishSeafood,5029,Squid Ink Paella,,0,0
+SpanishSeafood,5030,Catalan-style Paella,,0,0
+SpanishSeafood,5031,Lobster Paella,,0,0
+SpanishSeafood,5032,Spicy Roasted Cauliflower,,0,0
+SpanishSeafood,5033,Fried Squid Rings ,,0,0
+SpanishSeafood,5034,Spinach and Chickpeas,,0,0
+SpanishSeafood,5035,Cod with Pil Pil Sauce,,0,0
+SpanishSeafood,5036,Catalan Roasted Vegetables,,0,0
+SpanishSeafood,5037,Flatbread & Grilled Vegetables,,0,0
+SpanishSeafood,5038,Catalan Bread with Tomato,,0,0
+SpanishSeafood,5039,Egg and Syrup Flan,,0,0
+SpanishSeafood,5040,Tilapia Empanadas,,0,0
+SpanishSeafood,5041,Spanish Grilled Shrimp Tapas,,0,0
+SpanishSeafood,5042,Fish Skewers ,,0,0
+SpanishSeafood,5043,Spanish Cold Soup ,,0,0
+SpanishSeafood,5044,Chilled Almond Soup,,0,0
+SpanishSeafood,5045,Galician Squid,,0,0
+SpanishSeafood,5046,Seafood Rice,,0,0
+SpanishSeafood,5047,Grilled Rice with Lobster,,0,0
+SpanishSeafood,5048,Wrinkled Potatoes,,0,0
+SpanishSeafood,5049,Spanish Almond Soup,,0,0
+SpanishSeafood,5050,Spanish Baguette Slice,,0,0
+SpanishSnacks,5051,Spanish Dry-cured Ham,,0,0
+SpanishSnacks,5052,Spanish Cheese Board,,0,0
+SpanishSnacks,5053,Ham Montadito,,0,0
+SpanishSnacks,5054,Tomato and Cheese Montadito,,0,0
+SpanishSnacks,5055,Spanish Ham Croquettes,,0,0
+SpanishSnacks,5056,Spanish Donuts,,0,0
+SpanishSnacks,5057,Spanish Style French Toast,,0,0
+SpanishSnacks,5058,Spanish Fried Milk,,0,0
+SpanishSnacks,5059,Shrimp Montadito,,0,0
+SpanishSnacks,5060,Sponge Cake Roll ,,0,0
+SpanishSnacks,5061,Spanish Spicy Potatoes,,0,0
+SpanishSnacks,5062,Spanish Muffin,,0,0
+SpanishSnacks,5063,Mallorcan Spiral Pastry,,0,0
+SpanishSnacks,5064,Baked Apple Rose,,0,0
+SpanishSnacks,5065,Tuna Montadito,,0,0
+SpanishSnacks,5066,Sausage Montadito,,0,0
+SpanishSnacks,5067,Steak Montadito,,0,0
+SpanishSnacks,5068,Chicken Montadito,,0,0
+SpanishSnacks,5069,Cheese Montadito,,0,0
+SpanishSnacks,5070,Spanish Cold Soup ,,0,0
+SpanishSnacks,5071,Catalan Cream,,0,0
+MexicanCuisine,6000,Masas,,0,0
+MexicanCuisine,6001,Spinach Salad,,0,0
+MexicanCuisine,6002,Stack of Tortillas,,0,0
+MexicanCuisine,6003,Cheese Nachos,,0,0
+MexicanCuisine,6004,Mexican Red Rice,,0,0
+MexicanCuisine,6005,Tostada,,0,0
+MexicanCuisine,6006,Rancher's Eggs,,0,0
+MexicanCuisine,6007,Chicken Quesedilla,,0,0
+MexicanCuisine,6008,Caviar Tostadas,,0,0
+MexicanCuisine,6009,Tortilla,,0,0
+MexicanCuisine,6010,Mexican Style Shrimp Ceviche,,0,0
+MexicanCuisine,6011,Crab Ceviche,,0,0
+MexicanCuisine,6012,Mexican Wraps ,,0,0
+MexicanCuisine,6013,Chicken Burritos,,0,0
+MexicanCuisine,6014,Beef Alambre,,0,0
+MexicanCuisine,6015,Chilies in Walnut Sauce,,0,0
+MexicanCuisine,6016,Spicy Chorizo with Cheese,,0,0
+MexicanCuisine,6017,Coconut Macarons ,,0,0
+MexicanCuisine,6018,Mexican Corn Salad ,,0,0
+MexicanCuisine,6019,Talla Style Grilled Fish,,0,0
+MexicanCuisine,6020,Tortilla Soup,,0,0
+NopalesCuisine,6021,Cheese Stuffed Nopales,,0,0
+NopalesCuisine,6022,Cactus Salad,,0,0
+NopalesCuisine,6023,Nopales Tacos,,0,0
+NopalesCuisine,6024,Nopales and Eggs,,0,0
+NopalesCuisine,6025,Nopales and Carrots,,0,0
+NopalesCuisine,6026,Cactus Fries,,0,0
+NopalesCuisine,6027,Cactus Cookie Cake,,0,0
+NopalesCuisine,6028,Grilled Nopales,,0,0
+NopalesCuisine,6029,Grilled Nopales Huarache,,0,0
+NopalesCuisine,6030,No-Bun Cactus Burger,,0,0
+NopalesCuisine,6031,Chicken Soup with Nopales,,0,0
+MexicanTacos,6032,Governor's Tacos,,0,0
+MexicanTacos,6033,Grilled Steak Tacos,,0,0
+MexicanTacos,6034,Shepherd Style Tacos,,0,0
+MexicanTacos,6035,Basket Tacos,,0,0
+MexicanTacos,6036,Potosina Stuffed Tortillas,,0,0
+MexicanTacos,6037,Mexican Fish Tacos,,0,0
+MexicanTacos,6038,Tacos with Mango Salsa,,0,0
+MayanCuisine,6039,Meat Stuffed Green Peppers,,0,0
+MayanCuisine,6040,Chicken with Peanut Butter,,0,0
+MayanCuisine,6041,Tamales,,0,0
+MayanCuisine,6042,Rolled Tacos ,,0,0
+MayanCuisine,6043,Fried Dough ,,0,0
+MayanCuisine,6044,Pork in Black Mole Sauce,,0,0
+MayanCuisine,6045,Roast Duck in Mole Sauce,,0,0
+MayanCuisine,6046,Lobster in Tomato Sauce,,0,0
+MayanCuisine,6047,Tortillas in Black Bean Sauce,,0,0
+MayanCuisine,6048,Creamy Chicken Enchiladas,,0,0
+MayanCuisine,6049,Chicken Mole,,0,0
+MayanCuisine,6050,Mexican Pastries ,,0,0
+MayanCuisine,6051,Mexican Gingerbread Pigs,,0,0
+MayanCuisine,6052,Chicken in Green Salsa,,0,0
+MayanCuisine,6053,Mexican Lasagna,,0,0
+MayanCuisine,6054,Mexican Bread ,,0,0
+MayanCuisine,6055,Mayan Grilled Pork,,0,0
+MayanCuisine,6056,Grilled Corn on the Cob,,0,0
+MayanCuisine,6057,Mexican Cornmeal Drink,,0,0
+MayanCuisine,6058,Chocolate Atole ,,0,0
+MayanCuisine,6059,Pork and Hominy Stew ,,0,0
+MayanCuisine,6060,Chicken Pozole Soup,,0,0
+MayanCuisine,6061,Vegetable Beef Soup,,0,0
+MayanCuisine,6062,Mexican Bean Stew,,0,0
+MayanCuisine,6063,Mexican Goat Stew,,0,0
+MayanCuisine,6064,Pinto Bean Soup,,0,0
+MayanCuisine,6065,Mexican Lime Soup,,0,0

@@ -1,14 +1,14 @@
-type,id,name_item,merge_to,init_time,can_sell,sell_price,sum_merge
-DailyGift,18065,DailyGift,,,TRUE,,
-EnergyChest,18066,EnergyChest,,,TRUE,,
-AssistantsChest,18067,AssistantsChest,,,TRUE,,
-ChefsChest,18068,ChefsChest,,,TRUE,,
-EquipmentChest,18069,EquipmentChest,,,TRUE,,
-Gift,18070,Gift,,,TRUE,,
-ChoiceChest,18071,Choicechest,,,TRUE,,
-FlushGift,18072,FlushGift,,,TRUE,,
- EquipmentBox,18073,EquipmentBox,,,,,
-TraineeBox ,18074,TraineeBox,,,,,
-CoinBox,18075,,,,,,
-LuckyBox,18076,Lucky Box,,,,,
-LuckyHandbag,18080,LuckyHandbag,,,,,
+﻿type,id,name_item,merge_to,sell_price,sum_merge
+DailyGift,18065,DailyGift,,0,0
+EnergyChest,18066,EnergyChest,,0,0
+AssistantsChest,18067,AssistantsChest,,0,0
+ChefsChest,18068,ChefsChest,,0,0
+EquipmentChest,18069,EquipmentChest,,0,0
+Gift,18070,Gift,,0,0
+ChoiceChest,18071,Choicechest,,0,0
+FlushGift,18072,FlushGift,,0,0
+EquipmentBox,18073,EquipmentBox,,0,0
+TraineeBox,18074,TraineeBox,,0,0
+CoinBox,18075,,,0,0
+LuckyBox,18076,Lucky Box,,0,0
+LuckyHandbag,18080,LuckyHandbag,,0,0

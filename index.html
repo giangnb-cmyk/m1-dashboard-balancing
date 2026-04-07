@@ -1,457 +1,477 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" translate="no">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Merge Cooking — Game Balance Dashboard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Cooking — Balance Dashboard</title>
+    <meta name="google" content="notranslate">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <div class="bg-premium"><div class="mesh-gradient"></div></div>
 
-<!-- Loading Overlay -->
-<div id="loading-overlay" class="loading-overlay">
-  <div class="loader-ring"></div>
-  <div id="loading-text" class="loading-text">Initializing…</div>
-</div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <span class="logo-emoji">🍳</span>
+            <div>
+                <h2>Merge Cooking</h2>
+                <span class="version-tag">Balance Dashboard</span>
+            </div>
+        </div>
+        <nav class="side-nav">
+            <button class="nav-item active" data-tab="item-encyclopedia">
+                <span class="nav-icon">📚</span>
+                <span class="nav-text">Item Encyclopedia</span>
+            </button>
+            <button class="nav-item" data-tab="energy-calculator">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-text">Energy Calculator</span>
+            </button>
+        </nav>
+    </aside>
 
-<!-- App Shell -->
-<div class="app-layout">
-
-  <!-- ===================== SIDEBAR ===================== -->
-  <aside class="sidebar">
-    <div class="sidebar-logo">
-      <div class="logo-title">Merge Cooking</div>
-      <div class="logo-sub">Game Balance Dashboard</div>
-      <div class="logo-badge">m1-dashboard-v2</div>
-    </div>
-
-    <nav class="sidebar-nav">
-      <div class="nav-section-label">Analytics</div>
-
-      <button class="nav-item" data-tab="overview">
-        <span class="nav-icon">🗺️</span>
-        <span class="nav-label">Overview</span>
-      </button>
-
-      <button class="nav-item" data-tab="pacing">
-        <span class="nav-icon">📈</span>
-        <span class="nav-label">Progression Pacing</span>
-      </button>
-
-      <button class="nav-item" data-tab="orders">
-        <span class="nav-icon">📋</span>
-        <span class="nav-label">Orders & Demand</span>
-      </button>
-
-      <button class="nav-item" data-tab="economy">
-        <span class="nav-icon">💰</span>
-        <span class="nav-label">Economy Flow</span>
-      </button>
-
-      <div class="nav-section-label" style="margin-top:8px">Data</div>
-
-      <button class="nav-item" data-tab="encyclopedia">
-        <span class="nav-icon">📚</span>
-        <span class="nav-label">Encyclopedia</span>
-      </button>
-
-    </nav>
-  </aside>
-
-  <!-- ===================== MAIN ===================== -->
-  <div class="main-area">
-
-    <!-- Topbar -->
-    <header class="topbar">
-      <div class="status-dot"></div>
-      <div id="topbar-title" class="topbar-title">Overview</div>
-      <div class="topbar-meta" id="topbar-meta">CSV loaded from Csv/</div>
-    </header>
-
-    <!-- Content -->
+    <!-- Main Content -->
     <main class="content-area">
-
-      <!-- ============================================
-           VIEW 1: OVERVIEW / GAME TIMELINE
-           ============================================ -->
-      <section id="view-overview" class="view">
-        <div class="view-header">
-          <h1>🗺️ Game Timeline & Overview</h1>
-          <p>Tổng quan progression và timeline real-time theo scene — tham chiếu Mid-core (4 sessions/day)</p>
+        <div class="top-bar">
+            <div class="scene-selector">
+                <label>Merge Cooking — Balance Dashboard</label>
+            </div>
+            <div class="balance-indicator">
+                <span id="data-status" style="font-size:0.8rem;color:var(--text-muted);">Đang tải...</span>
+            </div>
         </div>
 
-        <!-- Stats Row -->
-        <div class="stats-row mb-24">
-          <div class="stat-card glass highlight-blue">
-            <div class="stat-icon">🎬</div>
-            <div class="stat-info">
-              <span id="ov-scenes" class="stat-value">—</span>
-              <span class="stat-label">Scenes</span>
+        <div class="tab-scroller">
+
+        <!-- ===================== TAB: ITEM ENCYCLOPEDIA ===================== -->
+        <section id="item-encyclopedia" class="tab-view active">
+            <div class="view-header">
+                <h1>📚 Item Encyclopedia</h1>
+                <p>Toàn bộ items trong game, phân loại thành 4 nhóm chính.</p>
             </div>
-          </div>
-          <div class="stat-card glass highlight-gold">
-            <div class="stat-icon">🏗️</div>
-            <div class="stat-info">
-              <span id="ov-steps" class="stat-value">—</span>
-              <span class="stat-label">Total Steps</span>
+
+            <!-- Global Stats -->
+            <div class="stats-row" style="grid-template-columns:repeat(5,1fr)">
+                <div class="stat-card glass">
+                    <span class="stat-icon">🔗</span>
+                    <div class="stat-info">
+                        <span class="stat-value mono" id="stat-merge">0</span>
+                        <span class="stat-label">Merge Items</span>
+                    </div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">⚙️</span>
+                    <div class="stat-info">
+                        <span class="stat-value mono" id="stat-generator">0</span>
+                        <span class="stat-label">Generators</span>
+                    </div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">📖</span>
+                    <div class="stat-info">
+                        <span class="stat-value mono" id="stat-recipe">0</span>
+                        <span class="stat-label">Food Items</span>
+                    </div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">🍳</span>
+                    <div class="stat-info">
+                        <span class="stat-value mono" id="stat-tool">0</span>
+                        <span class="stat-label">Tools</span>
+                    </div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">🎁</span>
+                    <div class="stat-info">
+                        <span class="stat-value mono" id="stat-other">0</span>
+                        <span class="stat-label">Other Items</span>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="stat-card glass highlight-gold">
-            <div class="stat-icon">⭐</div>
-            <div class="stat-info">
-              <span id="ov-cost" class="stat-value">—</span>
-              <span class="stat-label">Total Build Cost</span>
+
+            <!-- Sub-tab buttons -->
+            <div class="encyc-sub-tabs">
+                <button class="encyc-sub-tab active" data-subtab="subtab-merge">🔗 Merge Items</button>
+                <button class="encyc-sub-tab" data-subtab="subtab-generator">⚙️ Generators</button>
+                <button class="encyc-sub-tab" data-subtab="subtab-recipe">📖 Recipes</button>
+                <button class="encyc-sub-tab" data-subtab="subtab-tool">🍳 Tool</button>
+                <button class="encyc-sub-tab" data-subtab="subtab-other">🎁 Other Items</button>
             </div>
-          </div>
-          <div class="stat-card glass highlight-green">
-            <div class="stat-icon">📦</div>
-            <div class="stat-info">
-              <span id="ov-batches" class="stat-value">—</span>
-              <span class="stat-label">Batches</span>
+
+            <!-- ── SUB-TAB 1: MERGE ITEMS ─────────────────────────────────── -->
+            <div id="subtab-merge" class="encyc-subtab-content active">
+                <div class="glass filter-bar">
+                    <div class="filter-group">
+                        <input type="text" id="merge-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                    </div>
+                    <div class="filter-group">
+                        <label>Type:</label>
+                        <select id="merge-filter-type" class="filter-select">
+                            <option value="">Tất cả</option>
+                        </select>
+                    </div>
+                    <span class="result-count" id="merge-result-count"></span>
+                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="merge-total-count">0</strong></span>
+                </div>
+                <div class="data-table-card glass">
+                    <div class="table-container" style="max-height:600px;">
+                        <table class="data-table" id="merge-table">
+                            <thead><tr>
+                                <th data-sort="chain">CHUỖI</th>
+                                <th data-sort="type">TYPE</th>
+                                <th data-sort="id">ID</th>
+                                <th data-sort="name">TÊN ITEM</th>
+                                <th data-sort="merge_to">MERGE TO</th>
+                                <th data-sort="sell_price">GIÁ BÁN</th>
+                                <th data-sort="sum_merge">SUM MERGE</th>
+                                <th data-sort="energy">ENERGY COST ⚡</th>
+                                <th>BÁN ĐƯỢC</th>
+                            </tr></thead>
+                            <tbody id="merge-body"></tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="stat-card glass highlight-energy">
-            <div class="stat-icon">📋</div>
-            <div class="stat-info">
-              <span id="ov-orders" class="stat-value">—</span>
-              <span class="stat-label">Total Orders</span>
+
+            <!-- ── SUB-TAB 2: GENERATORS ──────────────────────────────────── -->
+            <div id="subtab-generator" class="encyc-subtab-content">
+                <div class="glass filter-bar">
+                    <div class="filter-group">
+                        <input type="text" id="gen-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                    </div>
+                    <div class="filter-group">
+                        <label>Type:</label>
+                        <select id="gen-filter-type" class="filter-select">
+                            <option value="">Tất cả</option>
+                        </select>
+                    </div>
+                    <span class="result-count" id="gen-result-count"></span>
+                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="gen-total-count">0</strong></span>
+                </div>
+                <div class="data-table-card glass">
+                    <div class="table-container" style="max-height:600px;">
+                        <table class="data-table" id="gen-table">
+                            <thead><tr>
+                                <th data-sort="type">TYPE</th>
+                                <th data-sort="id">ID</th>
+                                <th data-sort="name">TÊN GENERATOR</th>
+                                <th data-sort="cost_energy">ENERGY ⚡</th>
+                                <th data-sort="time_cooldown">COOLDOWN</th>
+                                <th>COUNT (MIN–MAX)</th>
+                                <th>SPAWN ITEMS (ID · RATE%)</th>
+                            </tr></thead>
+                            <tbody id="gen-body"></tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="stat-card glass highlight-gem">
-            <div class="stat-icon">🃏</div>
-            <div class="stat-info">
-              <span id="ov-items" class="stat-value">—</span>
-              <span class="stat-label">Unique Items</span>
+
+            <!-- ── SUB-TAB 3: RECIPES ─────────────────────────────────────── -->
+            <div id="subtab-recipe" class="encyc-subtab-content">
+
+                <!-- Recipe stats mini-row -->
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.25rem;">
+                    <div class="stat-card glass" id="recipe-stat-active-card" style="cursor:pointer;border-color:rgba(34,197,94,0.3)" title="Click để lọc Active">
+                        <span class="stat-icon">✅</span>
+                        <div class="stat-info">
+                            <span class="stat-value mono" id="recipe-stat-active" style="color:var(--success)">0</span>
+                            <span class="stat-label">Đã có Recipe</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass" id="recipe-stat-missing-card" style="cursor:pointer;border-color:rgba(239,68,68,0.3)" title="Click để lọc Missing">
+                        <span class="stat-icon">⚠️</span>
+                        <div class="stat-info">
+                            <span class="stat-value mono" id="recipe-stat-missing" style="color:var(--danger)">0</span>
+                            <span class="stat-label">Chưa có Recipe</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-icon">🍳</span>
+                        <div class="stat-info">
+                            <span class="stat-value mono" id="recipe-stat-total">0</span>
+                            <span class="stat-label">Tổng Food Items</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass filter-bar">
+                    <div class="filter-group">
+                        <input type="text" id="recipe-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                    </div>
+                    <div class="filter-group">
+                        <label>Trạng thái:</label>
+                        <select id="recipe-filter-status" class="filter-select">
+                            <option value="">Tất cả</option>
+                            <option value="active">✓ Đã có recipe</option>
+                            <option value="missing">✗ Chưa có recipe</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Tool:</label>
+                        <select id="recipe-filter-tool" class="filter-select">
+                            <option value="">Tất cả</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Type:</label>
+                        <select id="recipe-filter-type" class="filter-select">
+                            <option value="">Tất cả</option>
+                        </select>
+                    </div>
+                    <span class="result-count" id="recipe-result-count"></span>
+                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="recipe-total-count">0</strong></span>
+                </div>
+
+                <div class="data-table-card glass">
+                    <div class="table-container" style="max-height:600px;">
+                        <table class="data-table" id="recipe-table">
+                            <thead><tr>
+                                <th data-sort="hasRecipe">TRẠNG THÁI</th>
+                                <th data-sort="chain">CHUỖI</th>
+                                <th data-sort="type">TYPE</th>
+                                <th data-sort="id">ID</th>
+                                <th data-sort="name">TÊN MÓN</th>
+                                <th data-sort="sell_price">GIÁ BÁN</th>
+                                <th data-sort="tool">TOOL</th>
+                                <th data-sort="time">THỜI GIAN</th>
+                                <th>NGUYÊN LIỆU</th>
+                            </tr></thead>
+                            <tbody id="recipe-body"></tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- ── SUB-TAB 4: TOOL ───────────────────────────────────────── -->
+            <div id="subtab-tool" class="encyc-subtab-content">
+                <div class="glass filter-bar">
+                    <div class="filter-group">
+                        <input type="text" id="tool-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                    </div>
+                    <div class="filter-group">
+                        <label>Type:</label>
+                        <select id="tool-filter-type" class="filter-select">
+                            <option value="">Tất cả</option>
+                        </select>
+                    </div>
+                    <span class="result-count" id="tool-result-count"></span>
+                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="tool-total-count">0</strong></span>
+                </div>
+                <div class="data-table-card glass">
+                    <div class="table-container" style="max-height:600px;">
+                        <table class="data-table" id="tool-table">
+                            <thead><tr>
+                                <th data-sort="chain">CHUỖI</th>
+                                <th data-sort="type">TYPE</th>
+                                <th data-sort="id">ID</th>
+                                <th data-sort="name">TÊN TOOL</th>
+                                <th data-sort="merge_to">MERGE TO</th>
+                                <th data-sort="sell_price">GIÁ BÁN</th>
+                                <th data-sort="sum_merge">SUM MERGE</th>
+                                <th>BÁN ĐƯỢC</th>
+                            </tr></thead>
+                            <tbody id="tool-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── SUB-TAB 5: OTHER ITEMS (Food/Booster/Chest/Currency) ────── -->
+            <div id="subtab-other" class="encyc-subtab-content">
+                <div class="glass filter-bar">
+                    <div class="filter-group">
+                        <input type="text" id="other-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                    </div>
+                    <div class="filter-group">
+                        <label>Nhóm:</label>
+                        <select id="other-filter-src" class="filter-select">
+                            <option value="">Tất cả</option>
+                            <option value="Food">Food</option>
+                            <option value="Booster">Booster</option>
+                            <option value="Chest">Chest</option>
+                            <option value="Currency">Currency</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Type:</label>
+                        <select id="other-filter-type" class="filter-select">
+                            <option value="">Tất cả</option>
+                        </select>
+                    </div>
+                    <span class="result-count" id="other-result-count"></span>
+                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="other-total-count">0</strong></span>
+                </div>
+                <div class="data-table-card glass">
+                    <div class="table-container" style="max-height:600px;">
+                        <table class="data-table" id="other-table">
+                            <thead><tr>
+                                <th data-sort="sourceLabel">NHÓM</th>
+                                <th data-sort="chain">CHUỖI</th>
+                                <th data-sort="type">TYPE</th>
+                                <th data-sort="id">ID</th>
+                                <th data-sort="name">TÊN ITEM</th>
+                                <th data-sort="merge_to">MERGE TO</th>
+                                <th data-sort="sell_price">GIÁ BÁN</th>
+                                <th data-sort="sum_merge">SUM MERGE</th>
+                                <th>BÁN ĐƯỢC</th>
+                            </tr></thead>
+                            <tbody id="other-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===================== TAB: ENERGY CALCULATOR ===================== -->
+        <section id="energy-calculator" class="tab-view">
+            <div class="view-header">
+                <h1>⚡ Energy Calculator</h1>
+                <p>Tính lượng energy tiêu hao để tạo ra items và recipes.</p>
+            </div>
+
+            <!-- Generator Level Selector -->
+            <div class="glass gen-level-panel" id="gen-level-panel">
+                <div class="gen-level-header">
+                    <span style="font-weight:600;color:var(--text-main)">⚙️ Cấp độ Generator</span>
+                    <div class="gen-level-controls">
+                        <label style="font-size:0.82rem;color:var(--text-muted)">Chọn cấp:</label>
+                        <select id="gen-global-level" class="filter-select" style="min-width:90px;"></select>
+                        <span id="gen-level-desc" style="font-size:0.78rem;color:var(--text-muted)"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-tab buttons -->
+            <div class="encyc-sub-tabs">
+                <button class="encyc-sub-tab active" data-subtab="energy-subtab-raw">🔗 Item Raw</button>
+                <button class="encyc-sub-tab" data-subtab="energy-subtab-recipe">📖 Recipes</button>
+            </div>
+
+            <!-- ── SUB-TAB 1: ITEM RAW ENERGY ─────────────────────────────── -->
+            <div id="energy-subtab-raw" class="encyc-subtab-content active">
+
+                <!-- Info card giải thích công thức -->
+                <div class="glass" style="padding:0.9rem 1.25rem;margin-bottom:1.25rem;font-size:0.83rem;color:var(--text-muted);border-radius:12px;line-height:1.8;">
+                    <strong style="color:var(--text-main)">Công thức:</strong>
+                    Energy/item = <span style="color:var(--energy)">cost_energy</span>
+                    ÷ (<span style="color:var(--accent)">rate%</span> / 100) — tính từ level generator đã chọn.
+                    Chain expand: energy(lv1) = energy(parent) + 1 ⚡, sau đó nhân theo sum_merge tương đối.
+                </div>
+
+                <div class="glass filter-bar">
+                    <div class="filter-group">
+                        <input type="text" id="eraw-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                    </div>
+                    <div class="filter-group">
+                        <label>Type:</label>
+                        <select id="eraw-filter-type" class="filter-select">
+                            <option value="">Tất cả</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Nguồn:</label>
+                        <select id="eraw-filter-source" class="filter-select">
+                            <option value="">Tất cả</option>
+                        </select>
+                    </div>
+                    <span class="result-count" id="eraw-result-count"></span>
+                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="eraw-total-count">0</strong></span>
+                </div>
+
+                <div class="data-table-card glass">
+                    <div class="table-container" style="max-height:600px;">
+                        <table class="data-table" id="eraw-table">
+                            <thead><tr>
+                                <th data-sort="type">TYPE</th>
+                                <th data-sort="itemId">ID</th>
+                                <th data-sort="itemName">TÊN ITEM</th>
+                                <th data-sort="sumMerge">SUM MERGE</th>
+                                <th data-sort="source">NGUỒN</th>
+                                <th data-sort="energy">⚡ ENERGY</th>
+                            </tr></thead>
+                            <tbody id="eraw-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── SUB-TAB 2: RECIPE ENERGY ───────────────────────────────── -->
+            <div id="energy-subtab-recipe" class="encyc-subtab-content">
+
+                <div class="glass" style="padding:0.9rem 1.25rem;margin-bottom:1.25rem;font-size:0.83rem;color:var(--text-muted);border-radius:12px;line-height:1.8;">
+                    <strong style="color:var(--text-main)">Công thức:</strong>
+                    Energy recipe = tổng <span style="color:var(--energy)">energy/item</span> của tất cả nguyên liệu
+                    (dùng nguồn rẻ nhất của mỗi ingredient).
+                    Items không có generator sẽ ghi <span style="color:var(--warning)">N/A</span>.
+                </div>
+
+                <div class="glass filter-bar">
+                    <div class="filter-group">
+                        <input type="text" id="erecipe-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                    </div>
+                    <div class="filter-group">
+                        <label>Tool:</label>
+                        <select id="erecipe-filter-tool" class="filter-select">
+                            <option value="">Tất cả</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Type:</label>
+                        <select id="erecipe-filter-type" class="filter-select">
+                            <option value="">Tất cả</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Tính được:</label>
+                        <select id="erecipe-filter-computable" class="filter-select">
+                            <option value="">Tất cả</option>
+                            <option value="yes">Tính được đầy đủ</option>
+                            <option value="partial">Thiếu 1 phần</option>
+                            <option value="no">Không tính được</option>
+                        </select>
+                    </div>
+                    <span class="result-count" id="erecipe-result-count"></span>
+                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="erecipe-total-count">0</strong></span>
+                </div>
+
+                <div class="data-table-card glass">
+                    <div class="table-container" style="max-height:600px;">
+                        <table class="data-table" id="erecipe-table">
+                            <thead><tr>
+                                <th data-sort="tool">TOOL</th>
+                                <th data-sort="resultType">TYPE</th>
+                                <th data-sort="resultId">ID</th>
+                                <th data-sort="resultName">TÊN MÓN</th>
+                                <th data-sort="ing1">NGUYÊN LIỆU 1</th>
+                                <th data-sort="ing2">NGUYÊN LIỆU 2</th>
+                                <th data-sort="ing3">NGUYÊN LIỆU 3</th>
+                                <th data-sort="totalEnergy">⚡ TỔNG ENERGY</th>
+                            </tr></thead>
+                            <tbody id="erecipe-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
         </div>
-
-        <!-- Timeline Chart -->
-        <div class="panel glass mb-20">
-          <div class="panel-header">
-            <span class="panel-title">Cumulative Days by Player Profile</span>
-            <span class="panel-badge">3 profiles</span>
-          </div>
-          <div class="chart-wrap">
-            <canvas id="timeline-chart"></canvas>
-          </div>
-        </div>
-
-        <!-- Scene Table -->
-        <div class="panel glass">
-          <div class="panel-header">
-            <span class="panel-title">Scene Breakdown</span>
-          </div>
-          <div id="timeline-table-wrap"></div>
-        </div>
-      </section>
-
-
-      <!-- ============================================
-           VIEW 2: PROGRESSION PACING
-           ============================================ -->
-      <section id="view-pacing" class="view">
-        <div class="view-header">
-          <h1>📈 Progression Pacing</h1>
-          <p>Đo lường tốc độ progression theo player profile: Hardcore · Mid-core · Casual</p>
-        </div>
-
-        <!-- Summary Stats -->
-        <div class="stats-row mb-24">
-          <div class="stat-card glass highlight-blue">
-            <div class="stat-icon">🎬</div>
-            <div class="stat-info">
-              <span id="stat-total-scenes" class="stat-value">—</span>
-              <span class="stat-label">Scenes</span>
-            </div>
-          </div>
-          <div class="stat-card glass highlight-gold">
-            <div class="stat-icon">🏗️</div>
-            <div class="stat-info">
-              <span id="stat-total-steps" class="stat-value">—</span>
-              <span class="stat-label">Total Steps</span>
-            </div>
-          </div>
-          <div class="stat-card glass highlight-gold">
-            <div class="stat-icon">⭐</div>
-            <div class="stat-info">
-              <span id="stat-total-cost" class="stat-value">—</span>
-              <span class="stat-label">Total Build Cost</span>
-            </div>
-          </div>
-          <div class="stat-card glass highlight-green">
-            <div class="stat-icon">📦</div>
-            <div class="stat-info">
-              <span id="stat-total-batches" class="stat-value">—</span>
-              <span class="stat-label">Batches</span>
-            </div>
-          </div>
-          <div class="stat-card glass highlight-energy">
-            <div class="stat-icon">📋</div>
-            <div class="stat-info">
-              <span id="stat-total-orders" class="stat-value">—</span>
-              <span class="stat-label">Orders</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Total days per profile -->
-        <div class="stats-row mb-24">
-          <div class="stat-card glass" style="border-color:rgba(248,113,113,0.2)">
-            <div class="stat-icon">🔴</div>
-            <div class="stat-info">
-              <span id="stat-days-hc" class="stat-value" style="color:#f87171">—</span>
-              <span class="stat-label">Hardcore total (8 ses/d)</span>
-            </div>
-          </div>
-          <div class="stat-card glass" style="border-color:rgba(56,189,248,0.2)">
-            <div class="stat-icon">🔵</div>
-            <div class="stat-info">
-              <span id="stat-days-mc" class="stat-value" style="color:#38bdf8">—</span>
-              <span class="stat-label">Mid-core total (4 ses/d)</span>
-            </div>
-          </div>
-          <div class="stat-card glass" style="border-color:rgba(167,139,250,0.2)">
-            <div class="stat-icon">🟣</div>
-            <div class="stat-info">
-              <span id="stat-days-ca" class="stat-value" style="color:#a78bfa">—</span>
-              <span class="stat-label">Casual total (1.5 ses/d)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Charts row -->
-        <div class="grid-2 mb-20">
-          <div class="panel glass">
-            <div class="panel-header">
-              <span class="panel-title">Days per Scene by Profile</span>
-            </div>
-            <div class="chart-wrap">
-              <canvas id="pacing-chart"></canvas>
-            </div>
-          </div>
-          <div class="panel glass">
-            <div class="panel-header">
-              <span class="panel-title">Build Cost per Scene</span>
-            </div>
-            <div class="chart-wrap">
-              <canvas id="cost-chart"></canvas>
-            </div>
-          </div>
-        </div>
-
-        <!-- Scene cards + Step detail -->
-        <div class="panel glass mb-20">
-          <div class="panel-header">
-            <span class="panel-title">Scene Cards</span>
-            <span class="panel-badge">Click để xem step detail</span>
-          </div>
-          <div id="scene-cards" class="scene-cards"></div>
-        </div>
-
-        <div id="step-table-wrap"></div>
-      </section>
-
-
-      <!-- ============================================
-           VIEW 3: ORDERS & DEMAND
-           ============================================ -->
-      <section id="view-orders" class="view">
-        <div class="view-header">
-          <h1>📋 Orders & Demand Analysis</h1>
-          <p>Item nào được yêu cầu nhiều nhất · Difficulty curve · Batch reward distribution</p>
-        </div>
-
-        <div class="stats-row mb-24">
-          <div class="stat-card glass highlight-blue">
-            <div class="stat-icon">📋</div>
-            <div class="stat-info">
-              <span id="stat-orders-total" class="stat-value">—</span>
-              <span class="stat-label">Total Orders</span>
-            </div>
-          </div>
-          <div class="stat-card glass highlight-gem">
-            <div class="stat-icon">🎯</div>
-            <div class="stat-info">
-              <span id="stat-orders-2item" class="stat-value">—</span>
-              <span class="stat-label">2-Item Orders</span>
-            </div>
-          </div>
-          <div class="stat-card glass highlight-green">
-            <div class="stat-icon">📦</div>
-            <div class="stat-info">
-              <span id="stat-batches-total" class="stat-value">—</span>
-              <span class="stat-label">Total Batches</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-2 mb-20">
-          <!-- Top Demand Chart -->
-          <div class="panel glass">
-            <div class="panel-header">
-              <span class="panel-title">Top 15 Most Demanded Items</span>
-            </div>
-            <div class="chart-wrap" style="height:340px">
-              <canvas id="demand-chart"></canvas>
-            </div>
-          </div>
-
-          <!-- Demand Table -->
-          <div class="panel glass">
-            <div class="panel-header">
-              <span class="panel-title">Top 30 Item Demand</span>
-            </div>
-            <div class="table-container" style="max-height:340px;overflow-y:auto">
-              <table class="data-table">
-                <thead><tr>
-                  <th>#</th><th>Item</th><th>Type</th>
-                  <th>Order Count</th><th>Total Qty</th>
-                </tr></thead>
-                <tbody id="demand-tbody"></tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Batch Rewards -->
-        <div class="panel glass">
-          <div class="panel-header">
-            <span class="panel-title">Batch Reward Summary</span>
-            <span class="panel-badge">first 20 batches</span>
-          </div>
-          <div class="table-container">
-            <table class="data-table">
-              <thead><tr>
-                <th>Batch #</th><th>Scene</th><th>Reward</th><th>Rewards</th>
-              </tr></thead>
-              <tbody id="batch-reward-tbody"></tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- ============================================
-           VIEW 4: ECONOMY FLOW
-           ============================================ -->
-      <section id="view-economy" class="view">
-        <div class="view-header">
-          <h1>💰 Economy Flow</h1>
-          <p>Source → Pool → Sink · Pinch points · Currency distribution</p>
-        </div>
-
-        <!-- Flow Diagram -->
-        <div class="panel glass mb-20">
-          <div class="panel-header">
-            <span class="panel-title">Source / Sink Diagram</span>
-          </div>
-          <div id="economy-flow"></div>
-        </div>
-
-        <div class="grid-2 mb-20">
-          <!-- Donut Chart -->
-          <div class="panel glass">
-            <div class="panel-header">
-              <span class="panel-title">Batch Reward Distribution</span>
-            </div>
-            <div class="chart-wrap" style="max-height:280px">
-              <canvas id="economy-chart"></canvas>
-            </div>
-          </div>
-
-          <!-- Currency Table -->
-          <div class="panel glass">
-            <div class="panel-header">
-              <span class="panel-title">Currency Overview</span>
-            </div>
-            <div id="currency-table-wrap"></div>
-          </div>
-        </div>
-
-        <!-- Pinch Points -->
-        <div class="panel glass">
-          <div class="panel-header">
-            <span class="panel-title">Merge Bottlenecks</span>
-            <span class="panel-badge">sum_merge &gt; 100</span>
-          </div>
-          <div id="pinch-points"></div>
-        </div>
-      </section>
-
-
-      <!-- ============================================
-           VIEW 5: ENCYCLOPEDIA
-           ============================================ -->
-      <section id="view-encyclopedia" class="view">
-        <div class="view-header">
-          <h1>📚 Item Encyclopedia</h1>
-          <p>Toàn bộ items — searchable, filterable theo type và category</p>
-        </div>
-
-        <!-- Stats + Controls -->
-        <div class="flex items-center gap-16 mb-20" style="flex-wrap:wrap">
-          <div class="stat-card glass highlight-blue" style="padding:12px 16px">
-            <div class="stat-icon" style="width:36px;height:36px;font-size:18px">🃏</div>
-            <div class="stat-info">
-              <span id="stat-total-items" class="stat-value" style="font-size:18px">—</span>
-              <span class="stat-label">Total Items</span>
-            </div>
-          </div>
-
-          <div class="search-wrap" style="flex:1;min-width:220px">
-            <span class="search-icon">🔍</span>
-            <input id="encyclopedia-search" class="search-input" type="text" placeholder="Search by name, ID, or type…" />
-          </div>
-
-          <select id="filter-type" class="filter-select">
-            <option value="">All Types</option>
-          </select>
-
-          <select id="filter-source" class="filter-select">
-            <option value="">All Categories</option>
-          </select>
-
-          <span id="encyclopedia-count" style="font-family:var(--font-mono);font-size:11px;color:#475569"></span>
-        </div>
-
-        <!-- Table -->
-        <div class="panel glass">
-          <div class="table-container" style="max-height:520px;overflow-y:auto">
-            <table class="data-table">
-              <thead><tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Category</th>
-                <th>Merge To</th>
-                <th>Sum Merge</th>
-                <th>Init Time</th>
-                <th>Sell Price</th>
-              </tr></thead>
-              <tbody id="encyclopedia-tbody"></tbody>
-            </table>
-          </div>
-          <!-- Pagination -->
-          <div id="encyclopedia-pagination" class="flex items-center gap-8" style="padding:12px 16px;border-top:1px solid rgba(255,255,255,0.05)"></div>
-        </div>
-      </section>
-
     </main>
-  </div><!-- /main-area -->
-</div><!-- /app-layout -->
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="js/csv-loader.js"></script>
-<script src="js/overview.js"></script>
-<script src="js/pacing.js"></script>
-<script src="js/orders.js"></script>
-<script src="js/economy.js"></script>
-<script src="js/encyclopedia.js"></script>
-<script src="js/app.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/tableUtils.js"></script>
+    <script src="js/itemEncyclopedia.js"></script>
+    <script src="js/energyCalc.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
