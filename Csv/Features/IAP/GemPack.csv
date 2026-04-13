@@ -1,0 +1,12 @@
+id,pack_name,res_type,res_id,res_number,bonus,stage_bonus,first_time_purchase_bonus,purchase_type,purchase_count,iap_cost,cost_type,cost_id,cost_number,sale,google_product_id,google_product_id_premium,apple_product_id
+1,gem_pack_1,Money,2,100,0,0,0,IAP,1,3.99,,,,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_1,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_1
+2,gem_pack_2,Money,2,260,0,0,0,IAP,1,9.99,,,,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_2,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_2
+3,gem_pack_3,Money,2,570,0,0,0,IAP,1,19.99,,,,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_3,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_3
+4,gem_pack_4,Money,2,1250,0,0,0,IAP,1,44.99,,,,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_4,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_4
+5,gem_pack_5,Money,2,3400,0,0,0,IAP,1,89.99,,,,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_5,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_5
+6,gem_pack_6,Money,2,5500,0,0,0,IAP,1,149.99,,,,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_6,,com.deviloper.m1.food.merge.cooking.puzzle.gem_pack_6
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,s,,,,,,,

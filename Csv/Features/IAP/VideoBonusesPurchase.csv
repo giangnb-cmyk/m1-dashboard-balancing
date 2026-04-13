@@ -1,0 +1,2 @@
+id,pack_name,res_type,res_id,res_number,custom_value,bonus,stage_bonus,first_time_purchase_bonus,purchase_type,purchase_count,iap_cost,cost_type,cost_id,cost_number,sale,google_product_id,google_product_id_premium,apple_product_id
+1,video_bonus,,,,,0,0,0,IAP,,0.99,Item,2,10,,com.deviloper.m1.food.merge.cooking.puzzle.video_bonuses,com.deviloper.m1.food.merge.cooking.puzzle.video_bonuses,com.deviloper.m1.food.merge.cooking.puzzle.video_bonuses

@@ -461,7 +461,8 @@ const ItemEncyclopedia = (() => {
             if (el) { el.textContent = '⚠ Không có data — chạy generate_data.py'; el.style.color = 'var(--warning)'; }
             return;
         }
-        initSubTabs();
+        // Scope sub-tabs to items panel only (avoids conflict with energy panel)
+        initSubTabs(document.getElementById('panel-items'));
         updateGlobalStats();
         initMergeItems();
         initGenerators();

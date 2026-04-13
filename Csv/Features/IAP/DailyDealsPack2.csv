@@ -1,0 +1,7 @@
+id,pack_name,res_type,res_id,res_number,bonus,stage_bonus,first_time_purchase_bonus,purchase_type,purchase_count,iap_cost,cost_type,cost_id,cost_number,sale,google_product_id,google_product_id_premium,apple_product_id
+1,hot_deals_1,,,,0,0,0,Currency,1,2.99,Money,2,1,,hot_deals_1,,hot_deals_1
+2,hot_deals_2,,,,0,0,0,Currency,1,9.99,Money,2,1,,hot_deals_2,,hot_deals_2
+3,hot_deals_3,,,,0,0,0,Currency,1,19.99,Money,2,1,,hot_deals_3,,hot_deals_3
+4,hot_deals_4,,,,0,0,0,Currency,1,19.99,Money,2,1,,hot_deals_4,,hot_deals_4
+5,hot_deals_5,,,,0,0,0,Currency,1,19.99,Money,2,1,,hot_deals_5,,hot_deals_5
+6,hot_deals_6,,,,0,0,0,Currency,1,19.99,Money,2,1,,hot_deals_6,,hot_deals_6

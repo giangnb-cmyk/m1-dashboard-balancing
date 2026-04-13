@@ -1,0 +1,9 @@
+order,res_type,res_id,res_number,custom_value
+1,Money,2,5,
+2,Money,3,20,
+3,Money,6,50,
+4,Money,1,15,
+5,Money,6,50,
+6,Money,3,50,
+7,Item,136,1,18065
+,Item,134,1,18054

@@ -1,0 +1,3 @@
+id,pack_name,res_type,res_id,res_number,bonus,stage_bonus,first_time_purchase_bonus,purchase_type,purchase_count,iap_cost,cost_type,cost_id,cost_number,sale,is_best_seller,google_product_id,google_product_id_premium,apple_product_id
+1,first_purchase,Money,2,77,0,0,0,IAP,1,1.99,,,,,,com.deviloper.m1.food.merge.cooking.puzzle.first_purchase,,com.deviloper.m1.food.merge.cooking.puzzle.first_purchase
+,,Money,3,77,,,,,,,,,,,,,,

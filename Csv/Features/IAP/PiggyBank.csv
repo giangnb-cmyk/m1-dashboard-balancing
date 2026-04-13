@@ -1,0 +1,3 @@
+id,min_points_to_purchase,points_per_stage,max_points,money_type,pack_name,res_type,res_id,res_number,bonus,stage_bonus,first_time_purchase_bonus,purchase_type,purchase_count,iap_cost,cost_type,cost_id,cost_number,sale,google_product_id,google_product_id_premium,apple_product_id
+0,45,10,100,Diamonds,piggy_bank_package_1,Money,2,240,,,0,IAP,0,3.99,,,,100,com.deviloper.m1.food.merge.cooking.puzzle.piggy_bank_1,,com.deviloper.m1.food.merge.cooking.puzzle.piggy_bank_1
+1,55,10,200,Diamonds,piggy_bank_package_2,Money,2,240,,,0,IAP,0,3.99,,,,100,com.deviloper.m1.food.merge.cooking.puzzle.piggy_bank_2,,com.deviloper.m1.food.merge.cooking.puzzle.piggy_bank_2

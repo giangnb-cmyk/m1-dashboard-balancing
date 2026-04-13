@@ -1,0 +1,12 @@
+id,pack_name,res_type,res_id,res_number,bonus,stage_bonus,first_time_purchase_bonus,purchase_type,purchase_count,iap_cost,cost_type,cost_id,cost_number,sale,google_product_id,google_product_id_premium,apple_product_id
+1,energy_pack,Money,2,100,0,0,0,IAP,1,1.99,,,,,com.deviloper.m1.food.merge.cooking.puzzle.energy_pack,com.deviloper.m1.food.merge.cooking.puzzle.energy_pack,com.deviloper.m1.food.merge.cooking.puzzle.energy_pack
+,,Money,3,100,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,s,,,,,,,

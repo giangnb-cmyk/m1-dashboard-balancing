@@ -28,13 +28,9 @@
             </div>
         </div>
         <nav class="side-nav">
-            <button class="nav-item active" data-tab="item-encyclopedia">
-                <span class="nav-icon">📚</span>
-                <span class="nav-text">Item Encyclopedia</span>
-            </button>
-            <button class="nav-item" data-tab="energy-calculator">
-                <span class="nav-icon">⚡</span>
-                <span class="nav-text">Energy Calculator</span>
+            <button class="nav-item active" data-tab="game-data">
+                <span class="nav-icon">🗃️</span>
+                <span class="nav-text">Game Data</span>
             </button>
         </nav>
     </aside>
@@ -52,426 +48,681 @@
 
         <div class="tab-scroller">
 
-        <!-- ===================== TAB: ITEM ENCYCLOPEDIA ===================== -->
-        <section id="item-encyclopedia" class="tab-view active">
+        <!-- ===================== TAB: GAME DATA HUB ===================== -->
+        <section id="game-data" class="tab-view active">
             <div class="view-header">
-                <h1>📚 Item Encyclopedia</h1>
-                <p>Toàn bộ items trong game, phân loại thành 4 nhóm chính.</p>
+                <h1>🗃️ Game Data Hub</h1>
+                <p>Toàn bộ data game: Items, Energy, Orders và IAP Packages — dùng làm nguồn cho các tính năng phân tích.</p>
             </div>
 
-            <!-- Global Stats -->
-            <div class="stats-row" style="grid-template-columns:repeat(5,1fr)">
-                <div class="stat-card glass">
-                    <span class="stat-icon">🔗</span>
-                    <div class="stat-info">
-                        <span class="stat-value mono" id="stat-merge">0</span>
-                        <span class="stat-label">Merge Items</span>
-                    </div>
-                </div>
-                <div class="stat-card glass">
-                    <span class="stat-icon">⚙️</span>
-                    <div class="stat-info">
-                        <span class="stat-value mono" id="stat-generator">0</span>
-                        <span class="stat-label">Generators</span>
-                    </div>
-                </div>
-                <div class="stat-card glass">
-                    <span class="stat-icon">📖</span>
-                    <div class="stat-info">
-                        <span class="stat-value mono" id="stat-recipe">0</span>
-                        <span class="stat-label">Food Items</span>
-                    </div>
-                </div>
-                <div class="stat-card glass">
-                    <span class="stat-icon">🍳</span>
-                    <div class="stat-info">
-                        <span class="stat-value mono" id="stat-tool">0</span>
-                        <span class="stat-label">Tools</span>
-                    </div>
-                </div>
-                <div class="stat-card glass">
-                    <span class="stat-icon">🎁</span>
-                    <div class="stat-info">
-                        <span class="stat-value mono" id="stat-other">0</span>
-                        <span class="stat-label">Other Items</span>
-                    </div>
-                </div>
+            <!-- 4 Main sub-tabs -->
+            <div class="main-sub-tabs">
+                <button class="main-sub-tab active" data-panel="panel-items">📚 Item Encyclopedia</button>
+                <button class="main-sub-tab" data-panel="panel-energy">⚡ Energy Calculator</button>
+                <button class="main-sub-tab" data-panel="panel-orders">📋 Orders</button>
+                <button class="main-sub-tab" data-panel="panel-iap">💎 IAP Packages</button>
             </div>
 
-            <!-- Sub-tab buttons -->
-            <div class="encyc-sub-tabs">
-                <button class="encyc-sub-tab active" data-subtab="subtab-merge">🔗 Merge Items</button>
-                <button class="encyc-sub-tab" data-subtab="subtab-generator">⚙️ Generators</button>
-                <button class="encyc-sub-tab" data-subtab="subtab-recipe">📖 Recipes</button>
-                <button class="encyc-sub-tab" data-subtab="subtab-tool">🍳 Tool</button>
-                <button class="encyc-sub-tab" data-subtab="subtab-other">🎁 Other Items</button>
-            </div>
+            <!-- ══════════════════════════════════════════════════════════
+                 PANEL 1: ITEM ENCYCLOPEDIA
+            ══════════════════════════════════════════════════════════ -->
+            <div id="panel-items" class="main-subtab-content active">
 
-            <!-- ── SUB-TAB 1: MERGE ITEMS ─────────────────────────────────── -->
-            <div id="subtab-merge" class="encyc-subtab-content active">
-                <div class="glass filter-bar">
-                    <div class="filter-group">
-                        <input type="text" id="merge-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
-                    </div>
-                    <div class="filter-group">
-                        <label>Type:</label>
-                        <select id="merge-filter-type" class="filter-select">
-                            <option value="">Tất cả</option>
-                        </select>
-                    </div>
-                    <span class="result-count" id="merge-result-count"></span>
-                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="merge-total-count">0</strong></span>
-                </div>
-                <div class="data-table-card glass">
-                    <div class="table-container" style="max-height:600px;">
-                        <table class="data-table" id="merge-table">
-                            <thead><tr>
-                                <th data-sort="chain">CHUỖI</th>
-                                <th data-sort="type">TYPE</th>
-                                <th data-sort="id">ID</th>
-                                <th data-sort="name">TÊN ITEM</th>
-                                <th data-sort="merge_to">MERGE TO</th>
-                                <th data-sort="sell_price">GIÁ BÁN</th>
-                                <th data-sort="sum_merge">SUM MERGE</th>
-                                <th data-sort="energy">ENERGY COST ⚡</th>
-                                <th>BÁN ĐƯỢC</th>
-                            </tr></thead>
-                            <tbody id="merge-body"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ── SUB-TAB 2: GENERATORS ──────────────────────────────────── -->
-            <div id="subtab-generator" class="encyc-subtab-content">
-                <div class="glass filter-bar">
-                    <div class="filter-group">
-                        <input type="text" id="gen-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
-                    </div>
-                    <div class="filter-group">
-                        <label>Type:</label>
-                        <select id="gen-filter-type" class="filter-select">
-                            <option value="">Tất cả</option>
-                        </select>
-                    </div>
-                    <span class="result-count" id="gen-result-count"></span>
-                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="gen-total-count">0</strong></span>
-                </div>
-                <div class="data-table-card glass">
-                    <div class="table-container" style="max-height:600px;">
-                        <table class="data-table" id="gen-table">
-                            <thead><tr>
-                                <th data-sort="type">TYPE</th>
-                                <th data-sort="id">ID</th>
-                                <th data-sort="name">TÊN GENERATOR</th>
-                                <th data-sort="cost_energy">ENERGY ⚡</th>
-                                <th data-sort="time_cooldown">COOLDOWN</th>
-                                <th>COUNT (MIN–MAX)</th>
-                                <th>SPAWN ITEMS (ID · RATE%)</th>
-                            </tr></thead>
-                            <tbody id="gen-body"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ── SUB-TAB 3: RECIPES ─────────────────────────────────────── -->
-            <div id="subtab-recipe" class="encyc-subtab-content">
-
-                <!-- Recipe stats mini-row -->
-                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.25rem;">
-                    <div class="stat-card glass" id="recipe-stat-active-card" style="cursor:pointer;border-color:rgba(34,197,94,0.3)" title="Click để lọc Active">
-                        <span class="stat-icon">✅</span>
+                <!-- Global Stats -->
+                <div class="stats-row" style="grid-template-columns:repeat(5,1fr)">
+                    <div class="stat-card glass">
+                        <span class="stat-icon">🔗</span>
                         <div class="stat-info">
-                            <span class="stat-value mono" id="recipe-stat-active" style="color:var(--success)">0</span>
-                            <span class="stat-label">Đã có Recipe</span>
+                            <span class="stat-value mono" id="stat-merge">0</span>
+                            <span class="stat-label">Merge Items</span>
                         </div>
                     </div>
-                    <div class="stat-card glass" id="recipe-stat-missing-card" style="cursor:pointer;border-color:rgba(239,68,68,0.3)" title="Click để lọc Missing">
-                        <span class="stat-icon">⚠️</span>
+                    <div class="stat-card glass">
+                        <span class="stat-icon">⚙️</span>
                         <div class="stat-info">
-                            <span class="stat-value mono" id="recipe-stat-missing" style="color:var(--danger)">0</span>
-                            <span class="stat-label">Chưa có Recipe</span>
+                            <span class="stat-value mono" id="stat-generator">0</span>
+                            <span class="stat-label">Generators</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-icon">📖</span>
+                        <div class="stat-info">
+                            <span class="stat-value mono" id="stat-recipe">0</span>
+                            <span class="stat-label">Food Items</span>
                         </div>
                     </div>
                     <div class="stat-card glass">
                         <span class="stat-icon">🍳</span>
                         <div class="stat-info">
-                            <span class="stat-value mono" id="recipe-stat-total">0</span>
-                            <span class="stat-label">Tổng Food Items</span>
+                            <span class="stat-value mono" id="stat-tool">0</span>
+                            <span class="stat-label">Tools</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-icon">🎁</span>
+                        <div class="stat-info">
+                            <span class="stat-value mono" id="stat-other">0</span>
+                            <span class="stat-label">Other Items</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="glass filter-bar">
-                    <div class="filter-group">
-                        <input type="text" id="recipe-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
-                    </div>
-                    <div class="filter-group">
-                        <label>Trạng thái:</label>
-                        <select id="recipe-filter-status" class="filter-select">
-                            <option value="">Tất cả</option>
-                            <option value="active">✓ Đã có recipe</option>
-                            <option value="missing">✗ Chưa có recipe</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Tool:</label>
-                        <select id="recipe-filter-tool" class="filter-select">
-                            <option value="">Tất cả</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Type:</label>
-                        <select id="recipe-filter-type" class="filter-select">
-                            <option value="">Tất cả</option>
-                        </select>
-                    </div>
-                    <span class="result-count" id="recipe-result-count"></span>
-                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="recipe-total-count">0</strong></span>
+                <!-- Inner sub-tab buttons -->
+                <div class="encyc-sub-tabs">
+                    <button class="encyc-sub-tab active" data-subtab="subtab-merge">🔗 Merge Items</button>
+                    <button class="encyc-sub-tab" data-subtab="subtab-generator">⚙️ Generators</button>
+                    <button class="encyc-sub-tab" data-subtab="subtab-recipe">📖 Recipes</button>
+                    <button class="encyc-sub-tab" data-subtab="subtab-tool">🍳 Tool</button>
+                    <button class="encyc-sub-tab" data-subtab="subtab-other">🎁 Other Items</button>
                 </div>
 
-                <div class="data-table-card glass">
-                    <div class="table-container" style="max-height:600px;">
-                        <table class="data-table" id="recipe-table">
-                            <thead><tr>
-                                <th data-sort="hasRecipe">TRẠNG THÁI</th>
-                                <th data-sort="chain">CHUỖI</th>
-                                <th data-sort="type">TYPE</th>
-                                <th data-sort="id">ID</th>
-                                <th data-sort="name">TÊN MÓN</th>
-                                <th data-sort="sell_price">GIÁ BÁN</th>
-                                <th data-sort="tool">TOOL</th>
-                                <th data-sort="time">THỜI GIAN</th>
-                                <th>NGUYÊN LIỆU</th>
-                            </tr></thead>
-                            <tbody id="recipe-body"></tbody>
-                        </table>
+                <!-- ── SUB-TAB 1: MERGE ITEMS ──────────────────────────────────── -->
+                <div id="subtab-merge" class="encyc-subtab-content active">
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <input type="text" id="merge-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                        </div>
+                        <div class="filter-group">
+                            <label>Type:</label>
+                            <select id="merge-filter-type" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <span class="result-count" id="merge-result-count"></span>
+                        <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="merge-total-count">0</strong></span>
+                    </div>
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:600px;">
+                            <table class="data-table" id="merge-table">
+                                <thead><tr>
+                                    <th data-sort="chain">CHUỖI</th>
+                                    <th data-sort="type">TYPE</th>
+                                    <th data-sort="id">ID</th>
+                                    <th data-sort="name">TÊN ITEM</th>
+                                    <th data-sort="merge_to">MERGE TO</th>
+                                    <th data-sort="sell_price">GIÁ BÁN</th>
+                                    <th data-sort="sum_merge">SUM MERGE</th>
+                                    <th data-sort="energy">ENERGY COST ⚡</th>
+                                    <th>BÁN ĐƯỢC</th>
+                                </tr></thead>
+                                <tbody id="merge-body"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- ── SUB-TAB 4: TOOL ───────────────────────────────────────── -->
-            <div id="subtab-tool" class="encyc-subtab-content">
-                <div class="glass filter-bar">
-                    <div class="filter-group">
-                        <input type="text" id="tool-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                <!-- ── SUB-TAB 2: GENERATORS ──────────────────────────────────── -->
+                <div id="subtab-generator" class="encyc-subtab-content">
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <input type="text" id="gen-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                        </div>
+                        <div class="filter-group">
+                            <label>Type:</label>
+                            <select id="gen-filter-type" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <span class="result-count" id="gen-result-count"></span>
+                        <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="gen-total-count">0</strong></span>
                     </div>
-                    <div class="filter-group">
-                        <label>Type:</label>
-                        <select id="tool-filter-type" class="filter-select">
-                            <option value="">Tất cả</option>
-                        </select>
-                    </div>
-                    <span class="result-count" id="tool-result-count"></span>
-                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="tool-total-count">0</strong></span>
-                </div>
-                <div class="data-table-card glass">
-                    <div class="table-container" style="max-height:600px;">
-                        <table class="data-table" id="tool-table">
-                            <thead><tr>
-                                <th data-sort="chain">CHUỖI</th>
-                                <th data-sort="type">TYPE</th>
-                                <th data-sort="id">ID</th>
-                                <th data-sort="name">TÊN TOOL</th>
-                                <th data-sort="merge_to">MERGE TO</th>
-                                <th data-sort="sell_price">GIÁ BÁN</th>
-                                <th data-sort="sum_merge">SUM MERGE</th>
-                                <th>BÁN ĐƯỢC</th>
-                            </tr></thead>
-                            <tbody id="tool-body"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ── SUB-TAB 5: OTHER ITEMS (Food/Booster/Chest/Currency) ────── -->
-            <div id="subtab-other" class="encyc-subtab-content">
-                <div class="glass filter-bar">
-                    <div class="filter-group">
-                        <input type="text" id="other-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
-                    </div>
-                    <div class="filter-group">
-                        <label>Nhóm:</label>
-                        <select id="other-filter-src" class="filter-select">
-                            <option value="">Tất cả</option>
-                            <option value="Food">Food</option>
-                            <option value="Booster">Booster</option>
-                            <option value="Chest">Chest</option>
-                            <option value="Currency">Currency</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Type:</label>
-                        <select id="other-filter-type" class="filter-select">
-                            <option value="">Tất cả</option>
-                        </select>
-                    </div>
-                    <span class="result-count" id="other-result-count"></span>
-                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="other-total-count">0</strong></span>
-                </div>
-                <div class="data-table-card glass">
-                    <div class="table-container" style="max-height:600px;">
-                        <table class="data-table" id="other-table">
-                            <thead><tr>
-                                <th data-sort="sourceLabel">NHÓM</th>
-                                <th data-sort="chain">CHUỖI</th>
-                                <th data-sort="type">TYPE</th>
-                                <th data-sort="id">ID</th>
-                                <th data-sort="name">TÊN ITEM</th>
-                                <th data-sort="merge_to">MERGE TO</th>
-                                <th data-sort="sell_price">GIÁ BÁN</th>
-                                <th data-sort="sum_merge">SUM MERGE</th>
-                                <th>BÁN ĐƯỢC</th>
-                            </tr></thead>
-                            <tbody id="other-body"></tbody>
-                        </table>
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:600px;">
+                            <table class="data-table" id="gen-table">
+                                <thead><tr>
+                                    <th data-sort="type">TYPE</th>
+                                    <th data-sort="id">ID</th>
+                                    <th data-sort="name">TÊN GENERATOR</th>
+                                    <th data-sort="cost_energy">ENERGY ⚡</th>
+                                    <th data-sort="time_cooldown">COOLDOWN</th>
+                                    <th>COUNT (MIN–MAX)</th>
+                                    <th>SPAWN ITEMS (ID · RATE%)</th>
+                                </tr></thead>
+                                <tbody id="gen-body"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </section>
+                <!-- ── SUB-TAB 3: RECIPES ─────────────────────────────────────── -->
+                <div id="subtab-recipe" class="encyc-subtab-content">
+                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.25rem;">
+                        <div class="stat-card glass" id="recipe-stat-active-card" style="cursor:pointer;border-color:rgba(34,197,94,0.3)" title="Click để lọc Active">
+                            <span class="stat-icon">✅</span>
+                            <div class="stat-info">
+                                <span class="stat-value mono" id="recipe-stat-active" style="color:var(--success)">0</span>
+                                <span class="stat-label">Đã có Recipe</span>
+                            </div>
+                        </div>
+                        <div class="stat-card glass" id="recipe-stat-missing-card" style="cursor:pointer;border-color:rgba(239,68,68,0.3)" title="Click để lọc Missing">
+                            <span class="stat-icon">⚠️</span>
+                            <div class="stat-info">
+                                <span class="stat-value mono" id="recipe-stat-missing" style="color:var(--danger)">0</span>
+                                <span class="stat-label">Chưa có Recipe</span>
+                            </div>
+                        </div>
+                        <div class="stat-card glass">
+                            <span class="stat-icon">🍳</span>
+                            <div class="stat-info">
+                                <span class="stat-value mono" id="recipe-stat-total">0</span>
+                                <span class="stat-label">Tổng Food Items</span>
+                            </div>
+                        </div>
+                    </div>
 
-        <!-- ===================== TAB: ENERGY CALCULATOR ===================== -->
-        <section id="energy-calculator" class="tab-view">
-            <div class="view-header">
-                <h1>⚡ Energy Calculator</h1>
-                <p>Tính lượng energy tiêu hao để tạo ra items và recipes.</p>
-            </div>
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <input type="text" id="recipe-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                        </div>
+                        <div class="filter-group">
+                            <label>Trạng thái:</label>
+                            <select id="recipe-filter-status" class="filter-select">
+                                <option value="">Tất cả</option>
+                                <option value="active">✓ Đã có recipe</option>
+                                <option value="missing">✗ Chưa có recipe</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Tool:</label>
+                            <select id="recipe-filter-tool" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Type:</label>
+                            <select id="recipe-filter-type" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <span class="result-count" id="recipe-result-count"></span>
+                        <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="recipe-total-count">0</strong></span>
+                    </div>
 
-            <!-- Generator Level Selector -->
-            <div class="glass gen-level-panel" id="gen-level-panel">
-                <div class="gen-level-header">
-                    <span style="font-weight:600;color:var(--text-main)">⚙️ Cấp độ Generator</span>
-                    <div class="gen-level-controls">
-                        <label style="font-size:0.82rem;color:var(--text-muted)">Chọn cấp:</label>
-                        <select id="gen-global-level" class="filter-select" style="min-width:90px;"></select>
-                        <span id="gen-level-desc" style="font-size:0.78rem;color:var(--text-muted)"></span>
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:600px;">
+                            <table class="data-table" id="recipe-table">
+                                <thead><tr>
+                                    <th data-sort="hasRecipe">TRẠNG THÁI</th>
+                                    <th data-sort="chain">CHUỖI</th>
+                                    <th data-sort="type">TYPE</th>
+                                    <th data-sort="id">ID</th>
+                                    <th data-sort="name">TÊN MÓN</th>
+                                    <th data-sort="sell_price">GIÁ BÁN</th>
+                                    <th data-sort="tool">TOOL</th>
+                                    <th data-sort="time">THỜI GIAN</th>
+                                    <th>NGUYÊN LIỆU</th>
+                                </tr></thead>
+                                <tbody id="recipe-body"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Sub-tab buttons -->
-            <div class="encyc-sub-tabs">
-                <button class="encyc-sub-tab active" data-subtab="energy-subtab-raw">🔗 Item Raw</button>
-                <button class="encyc-sub-tab" data-subtab="energy-subtab-recipe">📖 Recipes</button>
-            </div>
-
-            <!-- ── SUB-TAB 1: ITEM RAW ENERGY ─────────────────────────────── -->
-            <div id="energy-subtab-raw" class="encyc-subtab-content active">
-
-                <!-- Info card giải thích công thức -->
-                <div class="glass" style="padding:0.9rem 1.25rem;margin-bottom:1.25rem;font-size:0.83rem;color:var(--text-muted);border-radius:12px;line-height:1.8;">
-                    <strong style="color:var(--text-main)">Công thức:</strong>
-                    Energy/item = <span style="color:var(--energy)">cost_energy</span>
-                    ÷ (<span style="color:var(--accent)">rate%</span> / 100) — tính từ level generator đã chọn.
-                    Chain expand: energy(lv1) = energy(parent) + 1 ⚡, sau đó nhân theo sum_merge tương đối.
-                </div>
-
-                <div class="glass filter-bar">
-                    <div class="filter-group">
-                        <input type="text" id="eraw-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                <!-- ── SUB-TAB 4: TOOL ───────────────────────────────────────── -->
+                <div id="subtab-tool" class="encyc-subtab-content">
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <input type="text" id="tool-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                        </div>
+                        <div class="filter-group">
+                            <label>Type:</label>
+                            <select id="tool-filter-type" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <span class="result-count" id="tool-result-count"></span>
+                        <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="tool-total-count">0</strong></span>
                     </div>
-                    <div class="filter-group">
-                        <label>Type:</label>
-                        <select id="eraw-filter-type" class="filter-select">
-                            <option value="">Tất cả</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Nguồn:</label>
-                        <select id="eraw-filter-source" class="filter-select">
-                            <option value="">Tất cả</option>
-                        </select>
-                    </div>
-                    <span class="result-count" id="eraw-result-count"></span>
-                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="eraw-total-count">0</strong></span>
-                </div>
-
-                <div class="data-table-card glass">
-                    <div class="table-container" style="max-height:600px;">
-                        <table class="data-table" id="eraw-table">
-                            <thead><tr>
-                                <th data-sort="type">TYPE</th>
-                                <th data-sort="itemId">ID</th>
-                                <th data-sort="itemName">TÊN ITEM</th>
-                                <th data-sort="sumMerge">SUM MERGE</th>
-                                <th data-sort="source">NGUỒN</th>
-                                <th data-sort="energy">⚡ ENERGY</th>
-                            </tr></thead>
-                            <tbody id="eraw-body"></tbody>
-                        </table>
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:600px;">
+                            <table class="data-table" id="tool-table">
+                                <thead><tr>
+                                    <th data-sort="chain">CHUỖI</th>
+                                    <th data-sort="type">TYPE</th>
+                                    <th data-sort="id">ID</th>
+                                    <th data-sort="name">TÊN TOOL</th>
+                                    <th data-sort="merge_to">MERGE TO</th>
+                                    <th data-sort="sell_price">GIÁ BÁN</th>
+                                    <th data-sort="sum_merge">SUM MERGE</th>
+                                    <th>BÁN ĐƯỢC</th>
+                                </tr></thead>
+                                <tbody id="tool-body"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- ── SUB-TAB 2: RECIPE ENERGY ───────────────────────────────── -->
-            <div id="energy-subtab-recipe" class="encyc-subtab-content">
-
-                <div class="glass" style="padding:0.9rem 1.25rem;margin-bottom:1.25rem;font-size:0.83rem;color:var(--text-muted);border-radius:12px;line-height:1.8;">
-                    <strong style="color:var(--text-main)">Công thức:</strong>
-                    Energy recipe = tổng <span style="color:var(--energy)">energy/item</span> của tất cả nguyên liệu
-                    (dùng nguồn rẻ nhất của mỗi ingredient).
-                    Items không có generator sẽ ghi <span style="color:var(--warning)">N/A</span>.
-                </div>
-
-                <div class="glass filter-bar">
-                    <div class="filter-group">
-                        <input type="text" id="erecipe-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                <!-- ── SUB-TAB 5: OTHER ITEMS ────────────────────────────────── -->
+                <div id="subtab-other" class="encyc-subtab-content">
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <input type="text" id="other-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                        </div>
+                        <div class="filter-group">
+                            <label>Nhóm:</label>
+                            <select id="other-filter-src" class="filter-select">
+                                <option value="">Tất cả</option>
+                                <option value="Food">Food</option>
+                                <option value="Booster">Booster</option>
+                                <option value="Chest">Chest</option>
+                                <option value="Currency">Currency</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Type:</label>
+                            <select id="other-filter-type" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <span class="result-count" id="other-result-count"></span>
+                        <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="other-total-count">0</strong></span>
                     </div>
-                    <div class="filter-group">
-                        <label>Tool:</label>
-                        <select id="erecipe-filter-tool" class="filter-select">
-                            <option value="">Tất cả</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Type:</label>
-                        <select id="erecipe-filter-type" class="filter-select">
-                            <option value="">Tất cả</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Tính được:</label>
-                        <select id="erecipe-filter-computable" class="filter-select">
-                            <option value="">Tất cả</option>
-                            <option value="yes">Tính được đầy đủ</option>
-                            <option value="partial">Thiếu 1 phần</option>
-                            <option value="no">Không tính được</option>
-                        </select>
-                    </div>
-                    <span class="result-count" id="erecipe-result-count"></span>
-                    <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="erecipe-total-count">0</strong></span>
-                </div>
-
-                <div class="data-table-card glass">
-                    <div class="table-container" style="max-height:600px;">
-                        <table class="data-table" id="erecipe-table">
-                            <thead><tr>
-                                <th data-sort="tool">TOOL</th>
-                                <th data-sort="resultType">TYPE</th>
-                                <th data-sort="resultId">ID</th>
-                                <th data-sort="resultName">TÊN MÓN</th>
-                                <th data-sort="ing1">NGUYÊN LIỆU 1</th>
-                                <th data-sort="ing2">NGUYÊN LIỆU 2</th>
-                                <th data-sort="ing3">NGUYÊN LIỆU 3</th>
-                                <th data-sort="totalEnergy">⚡ TỔNG ENERGY</th>
-                            </tr></thead>
-                            <tbody id="erecipe-body"></tbody>
-                        </table>
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:600px;">
+                            <table class="data-table" id="other-table">
+                                <thead><tr>
+                                    <th data-sort="sourceLabel">NHÓM</th>
+                                    <th data-sort="chain">CHUỖI</th>
+                                    <th data-sort="type">TYPE</th>
+                                    <th data-sort="id">ID</th>
+                                    <th data-sort="name">TÊN ITEM</th>
+                                    <th data-sort="merge_to">MERGE TO</th>
+                                    <th data-sort="sell_price">GIÁ BÁN</th>
+                                    <th data-sort="sum_merge">SUM MERGE</th>
+                                    <th>BÁN ĐƯỢC</th>
+                                </tr></thead>
+                                <tbody id="other-body"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </section>
+            </div><!-- /panel-items -->
+
+            <!-- ══════════════════════════════════════════════════════════
+                 PANEL 2: ENERGY CALCULATOR
+            ══════════════════════════════════════════════════════════ -->
+            <div id="panel-energy" class="main-subtab-content">
+
+                <!-- Generator Level Selector -->
+                <div class="glass gen-level-panel" id="gen-level-panel">
+                    <div class="gen-level-header">
+                        <span style="font-weight:600;color:var(--text-main)">⚙️ Cấp độ Generator</span>
+                        <div class="gen-level-controls">
+                            <label style="font-size:0.82rem;color:var(--text-muted)">Chọn cấp:</label>
+                            <select id="gen-global-level" class="filter-select" style="min-width:90px;"></select>
+                            <span id="gen-level-desc" style="font-size:0.78rem;color:var(--text-muted)"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inner sub-tab buttons -->
+                <div class="encyc-sub-tabs">
+                    <button class="encyc-sub-tab active" data-subtab="energy-subtab-raw">🔗 Item Raw</button>
+                    <button class="encyc-sub-tab" data-subtab="energy-subtab-recipe">📖 Recipes</button>
+                </div>
+
+                <!-- ── SUB-TAB 1: ITEM RAW ENERGY ──────────────────────────── -->
+                <div id="energy-subtab-raw" class="encyc-subtab-content active">
+                    <div class="glass" style="padding:0.9rem 1.25rem;margin-bottom:1.25rem;font-size:0.83rem;color:var(--text-muted);border-radius:12px;line-height:1.8;">
+                        <strong style="color:var(--text-main)">Công thức:</strong>
+                        Energy/item = <span style="color:var(--energy)">cost_energy</span>
+                        ÷ (<span style="color:var(--accent)">rate%</span> / 100) — tính từ level generator đã chọn.
+                        Chain expand: energy(lv1) = energy(parent) + 1 ⚡, sau đó nhân theo sum_merge tương đối.
+                    </div>
+
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <input type="text" id="eraw-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                        </div>
+                        <div class="filter-group">
+                            <label>Type:</label>
+                            <select id="eraw-filter-type" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Nguồn:</label>
+                            <select id="eraw-filter-source" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <span class="result-count" id="eraw-result-count"></span>
+                        <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="eraw-total-count">0</strong></span>
+                    </div>
+
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:600px;">
+                            <table class="data-table" id="eraw-table">
+                                <thead><tr>
+                                    <th data-sort="type">TYPE</th>
+                                    <th data-sort="itemId">ID</th>
+                                    <th data-sort="itemName">TÊN ITEM</th>
+                                    <th data-sort="sumMerge">SUM MERGE</th>
+                                    <th data-sort="source">NGUỒN</th>
+                                    <th data-sort="energy">⚡ ENERGY</th>
+                                </tr></thead>
+                                <tbody id="eraw-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── SUB-TAB 2: RECIPE ENERGY ───────────────────────────── -->
+                <div id="energy-subtab-recipe" class="encyc-subtab-content">
+                    <div class="glass" style="padding:0.9rem 1.25rem;margin-bottom:1.25rem;font-size:0.83rem;color:var(--text-muted);border-radius:12px;line-height:1.8;">
+                        <strong style="color:var(--text-main)">Công thức:</strong>
+                        Energy recipe = tổng <span style="color:var(--energy)">energy/item</span> của tất cả nguyên liệu
+                        (dùng nguồn rẻ nhất của mỗi ingredient).
+                        Items không có generator sẽ ghi <span style="color:var(--warning)">N/A</span>.
+                    </div>
+
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <input type="text" id="erecipe-search" placeholder="🔍 Tên hoặc ID..." class="search-input" style="min-width:200px;">
+                        </div>
+                        <div class="filter-group">
+                            <label>Tool:</label>
+                            <select id="erecipe-filter-tool" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Type:</label>
+                            <select id="erecipe-filter-type" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Tính được:</label>
+                            <select id="erecipe-filter-computable" class="filter-select">
+                                <option value="">Tất cả</option>
+                                <option value="yes">Tính được đầy đủ</option>
+                                <option value="partial">Thiếu 1 phần</option>
+                                <option value="no">Không tính được</option>
+                            </select>
+                        </div>
+                        <span class="result-count" id="erecipe-result-count"></span>
+                        <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="erecipe-total-count">0</strong></span>
+                    </div>
+
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:600px;">
+                            <table class="data-table" id="erecipe-table">
+                                <thead><tr>
+                                    <th data-sort="tool">TOOL</th>
+                                    <th data-sort="resultType">TYPE</th>
+                                    <th data-sort="resultId">ID</th>
+                                    <th data-sort="resultName">TÊN MÓN</th>
+                                    <th data-sort="ing1">NGUYÊN LIỆU 1</th>
+                                    <th data-sort="ing2">NGUYÊN LIỆU 2</th>
+                                    <th data-sort="ing3">NGUYÊN LIỆU 3</th>
+                                    <th data-sort="totalEnergy">⚡ TỔNG ENERGY</th>
+                                </tr></thead>
+                                <tbody id="erecipe-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /panel-energy -->
+
+            <!-- ══════════════════════════════════════════════════════════
+                 PANEL 3: ORDERS
+            ══════════════════════════════════════════════════════════ -->
+            <div id="panel-orders" class="main-subtab-content">
+
+                <!-- Stats -->
+                <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:1.5rem;">
+                    <div class="stat-card glass">
+                        <span class="stat-icon">📋</span>
+                        <div class="stat-info">
+                            <span class="stat-value mono" id="stat-order-total">0</span>
+                            <span class="stat-label">Tổng Orders</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-icon">🔀</span>
+                        <div class="stat-info">
+                            <span class="stat-value mono" id="stat-order-2item">0</span>
+                            <span class="stat-label">Orders 2 Items</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-icon">📦</span>
+                        <div class="stat-info">
+                            <span class="stat-value mono" id="stat-order-batches">0</span>
+                            <span class="stat-label">Batches (System)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inner sub-tab buttons -->
+                <div class="encyc-sub-tabs">
+                    <button class="encyc-sub-tab active" data-subtab="order-subtab-detail">📋 Order Details</button>
+                    <button class="encyc-sub-tab" data-subtab="order-subtab-batch">📦 Batches</button>
+                    <button class="encyc-sub-tab" data-subtab="order-subtab-demand">📊 Top Demand</button>
+                </div>
+
+                <!-- ── SUB-TAB 1: ORDER DETAILS ────────────────────────────── -->
+                <div id="order-subtab-detail" class="encyc-subtab-content active">
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <input type="text" id="order-search" placeholder="🔍 Tên item hoặc Order ID..." class="search-input" style="min-width:220px;">
+                        </div>
+                        <div class="filter-group">
+                            <label>NPC:</label>
+                            <select id="order-filter-npc" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Item Type:</label>
+                            <select id="order-filter-type" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Items:</label>
+                            <select id="order-filter-2item" class="filter-select">
+                                <option value="">Tất cả</option>
+                                <option value="yes">2 Items</option>
+                                <option value="no">1 Item</option>
+                            </select>
+                        </div>
+                        <span class="result-count" id="order-result-count"></span>
+                        <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="order-total-count">0</strong></span>
+                    </div>
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:600px;">
+                            <table class="data-table" id="order-detail-table">
+                                <thead><tr>
+                                    <th data-sort="orderId">ORDER ID</th>
+                                    <th data-sort="npc">NPC</th>
+                                    <th data-sort="item1Name">ITEM 1</th>
+                                    <th>ITEM 2</th>
+                                    <th>REWARDS</th>
+                                </tr></thead>
+                                <tbody id="order-detail-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── SUB-TAB 2: BATCHES ─────────────────────────────────── -->
+                <div id="order-subtab-batch" class="encyc-subtab-content">
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <label>Theme:</label>
+                            <select id="batch-filter-theme" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <span class="result-count" id="batch-result-count"></span>
+                        <span style="margin-left:0.5rem;font-size:0.78rem;color:var(--text-muted);">Tổng: <strong id="batch-total-count">0</strong></span>
+                    </div>
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:600px;">
+                            <table class="data-table" id="batch-table">
+                                <thead><tr>
+                                    <th data-sort="batchId">BATCH ID</th>
+                                    <th data-sort="theme">THEME</th>
+                                    <th>CAN REWARD</th>
+                                    <th>ORDERS</th>
+                                    <th>COMPLETION REWARDS</th>
+                                </tr></thead>
+                                <tbody id="batch-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── SUB-TAB 3: TOP DEMAND ──────────────────────────────── -->
+                <div id="order-subtab-demand" class="encyc-subtab-content">
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <input type="text" id="demand-search" placeholder="🔍 Tên hoặc Type..." class="search-input" style="min-width:200px;">
+                        </div>
+                        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">Unique items demanded: <strong id="demand-total-items">0</strong></span>
+                    </div>
+
+                    <!-- Chart -->
+                    <div class="data-table-card glass" style="margin-bottom:1.25rem;padding:1.25rem;">
+                        <canvas id="demand-chart" style="max-height:280px;"></canvas>
+                    </div>
+
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:500px;">
+                            <table class="data-table" id="demand-table">
+                                <thead><tr>
+                                    <th data-sort="rank">#</th>
+                                    <th data-sort="type">TYPE</th>
+                                    <th data-sort="name">TÊN ITEM</th>
+                                    <th data-sort="count">ORDER COUNT</th>
+                                    <th data-sort="totalAmt">TOTAL QTY</th>
+                                </tr></thead>
+                                <tbody id="demand-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /panel-orders -->
+
+            <!-- ══════════════════════════════════════════════════════════
+                 PANEL 4: IAP PACKAGES
+            ══════════════════════════════════════════════════════════ -->
+            <div id="panel-iap" class="main-subtab-content">
+
+                <!-- Stats -->
+                <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:1.5rem;">
+                    <div class="stat-card glass">
+                        <span class="stat-icon">💎</span>
+                        <div class="stat-info">
+                            <span class="stat-value mono" id="iap-total-packs">0</span>
+                            <span class="stat-label">Tổng Packs</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-icon">💲</span>
+                        <div class="stat-info">
+                            <span class="stat-value mono" id="iap-total-priced">0</span>
+                            <span class="stat-label">Có giá IAP</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-icon">📊</span>
+                        <div class="stat-info">
+                            <span class="stat-value mono" id="iap-price-range">—</span>
+                            <span class="stat-label">Price Range</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inner sub-tab buttons -->
+                <div class="encyc-sub-tabs">
+                    <button class="encyc-sub-tab active" data-subtab="iap-subtab-overview">📋 Pack Overview</button>
+                    <button class="encyc-sub-tab" data-subtab="iap-subtab-contents">🎁 Pack Contents</button>
+                </div>
+
+                <!-- ── SUB-TAB 1: PACK OVERVIEW ────────────────────────────── -->
+                <div id="iap-subtab-overview" class="encyc-subtab-content active">
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <input type="text" id="iap-search" placeholder="🔍 Pack name..." class="search-input" style="min-width:200px;">
+                        </div>
+                        <div class="filter-group">
+                            <label>Category:</label>
+                            <select id="iap-filter-category" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <span class="result-count" id="iap-result-count"></span>
+                    </div>
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:600px;">
+                            <table class="data-table" id="iap-overview-table">
+                                <thead><tr>
+                                    <th data-sort="id">ID</th>
+                                    <th data-sort="category">CATEGORY</th>
+                                    <th data-sort="packName">PACK NAME</th>
+                                    <th data-sort="iap_cost">GIÁ</th>
+                                    <th>LIMIT</th>
+                                    <th>NỘI DUNG (preview)</th>
+                                </tr></thead>
+                                <tbody id="iap-overview-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── SUB-TAB 2: PACK CONTENTS ────────────────────────────── -->
+                <div id="iap-subtab-contents" class="encyc-subtab-content">
+                    <div class="glass filter-bar">
+                        <div class="filter-group">
+                            <input type="text" id="iap-content-search" placeholder="🔍 Pack name..." class="search-input" style="min-width:200px;">
+                        </div>
+                        <div class="filter-group">
+                            <label>Category:</label>
+                            <select id="iap-content-filter-cat" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <span class="result-count" id="iap-content-result-count"></span>
+                    </div>
+                    <div class="data-table-card glass">
+                        <div class="table-container" style="max-height:600px;">
+                            <table class="data-table" id="iap-content-table">
+                                <thead><tr>
+                                    <th data-sort="id">ID</th>
+                                    <th data-sort="category">CATEGORY</th>
+                                    <th data-sort="packName">PACK NAME</th>
+                                    <th data-sort="iap_cost">GIÁ</th>
+                                    <th data-sort="itemCount">SỐ ITEMS</th>
+                                    <th>NỘI DUNG CHI TIẾT</th>
+                                </tr></thead>
+                                <tbody id="iap-content-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /panel-iap -->
+
+        </section><!-- /game-data -->
 
         </div>
     </main>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="js/data.js"></script>
     <script src="js/tableUtils.js"></script>
     <script src="js/itemEncyclopedia.js"></script>
     <script src="js/energyCalc.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/iapPackages.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -156,14 +156,31 @@ const TableUtils = (() => {
 
     /**
      * Khởi tạo sub-tab navigation cho .encyc-sub-tab / .encyc-subtab-content.
+     * @param {Element|null} container — scope root; null = document (legacy)
      */
-    function initSubTabs() {
-        document.querySelectorAll('.encyc-sub-tab').forEach(btn => {
+    function initSubTabs(container) {
+        const scope = container || document;
+        scope.querySelectorAll('.encyc-sub-tab').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.encyc-sub-tab').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.encyc-subtab-content').forEach(p => p.classList.remove('active'));
+                scope.querySelectorAll('.encyc-sub-tab').forEach(b => b.classList.remove('active'));
+                scope.querySelectorAll('.encyc-subtab-content').forEach(p => p.classList.remove('active'));
                 btn.classList.add('active');
                 const panel = document.getElementById(btn.getAttribute('data-subtab'));
+                if (panel) panel.classList.add('active');
+            });
+        });
+    }
+
+    /**
+     * Khởi tạo top-level tab navigation cho .main-sub-tab / .main-subtab-content.
+     */
+    function initMainSubTabs() {
+        document.querySelectorAll('.main-sub-tab').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.main-sub-tab').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.main-subtab-content').forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                const panel = document.getElementById(btn.getAttribute('data-panel'));
                 if (panel) panel.classList.add('active');
             });
         });
@@ -209,6 +226,7 @@ const TableUtils = (() => {
         sortByKey, bindSort,
         renderRows,
         initSubTabs,
+        initMainSubTabs,
         createChainCounter,
         sellBadge,
     };

@@ -447,18 +447,9 @@ const EnergyCalc = (() => {
 
         const data = window.GameData;
 
-        // Sub-tab nav scoped in #energy-calculator
-        document.querySelectorAll('#energy-calculator .encyc-sub-tab').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('#energy-calculator .encyc-sub-tab')
-                    .forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('#energy-calculator .encyc-subtab-content')
-                    .forEach(p => p.classList.remove('active'));
-                btn.classList.add('active');
-                const panel = document.getElementById(btn.getAttribute('data-subtab'));
-                if (panel) panel.classList.add('active');
-            });
-        });
+        // Sub-tab nav scoped to energy panel
+        const energyPanel = document.getElementById('panel-energy');
+        if (energyPanel) TableUtils.initSubTabs(energyPanel);
 
         // Build generator level panel
         _genLevelMap         = buildGenLevelMap(data.rateGenerator || []);

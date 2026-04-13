@@ -1,0 +1,9 @@
+item_save_type,id_item,many_generator,time_unlock,item_child_type,item_child_id,rate
+EquipmentChest,18069,10,480,Juicer,10030,20
+,,,,ChefCounter,10020,20
+,,,,Pan,10000,20
+,,,,Oven,10040,20
+,,,,Shaker,10050,20
+,,,,GrainGenerator,6000,14
+,,,,AlcoholGenerator,7000,14
+EquipmentChest,1807,10,480,0,0,20

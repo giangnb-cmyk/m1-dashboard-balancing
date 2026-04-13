@@ -96,37 +96,37 @@ Oven,Desserts,17085,Pecan Pie,1040,Dough,6027,Pie Crust,Nut,1027,Pecan,,,
 Oven,Desserts,17086,	Pineapple Pie,11000,Dough,6027,Pie Crust,Fruit,1020,Pineapple,,,
 Oven,Desserts,17087,Fortune Cookies,570,Dough,6024,Small Dough,Nut,1026,Almond,DairyProducts,2045,Butter
 Oven,Desserts,17089,	Brownie,1010,CocoaBeanDerivatives,1034,Chocolate,DairyProducts,2045,Butter,Dough,6024,Small Dough
-Oven,Desserts,17090,Toast,2880,Dough,6029,Toast Dough,,,,,,
+Oven,Desserts,17090,Toast,60,Dough,6029,Toast Dough,,,,,,
 Oven,Desserts,17091,	Honey Roasted Cashews,1440,Nut,1029,Cashew,AdditivesAndGarnishes,2014,Honey,,,
 Oven,Desserts,17093,Corn Bread,190,Grain,6014,Corn Flour,AdditivesAndGarnishes,2011,Milk,PoultryEgg,3010,Egg
 Oven,FastFood,17095,	Baked Burger Bun,180,Dough,6025,Burger Bun,,,,,,
 Oven,FastFood,17096,Baked Hot Dog Bun,360,Dough,6026,Hot Dog Bun,,,,,,
 Oven,FastFood,17105,	Nachos,300,Grain,6014,Corn Flour,DairyProducts,2044,Cheese,BBQRecipe,9007,BBQ Recipe
 Oven,DeepfriedFoods,17118,	Baked Spinach Chips,720,LeafVegetables,4028,Spinach,Grain,6013,Wheat Flour,,,
-Oven,FrenchDelicacies,2000,	Escargot,880,FrenchDelicacies,2000,	Escargot,DairyProducts,2045,Butter,FrenchRecipe,9032,French Recipe
-Oven,FrenchDelicacies,2001,	Quiche Lorraine,2140,Dough,6027,Pie Crust,PorkLamb,3020,Bacon,DairyProducts,2044,Cheese
+Oven,FrenchDelicacies,2000,	Escargot,240,FrenchDelicacies,2000,	Escargot,DairyProducts,2045,Butter,FrenchRecipe,9032,French Recipe
+Oven,FrenchDelicacies,2001,	Quiche Lorraine,860,Dough,6027,Pie Crust,PorkLamb,3020,Bacon,DairyProducts,2044,Cheese
 Oven,FrenchDelicacies,2002,Garlic Bread,260,Desserts,17090,Toast,DairyProducts,2045,Butter,FrenchRecipe,9027,French Recipe
 Oven,FrenchDelicacies,2003,	Broccoli Gratin,4180,LeafVegetables,4024,Broccoli,DairyProducts,2045,Butter,AdditivesAndGarnishes,2011,Milk
 Oven,FrenchDelicacies,2004,Baked Bass with Lemon,5680,Fish,5019,Bass,Fruit,1014,Lemon,Vegetables,4015,Bell Pepper
 Oven,FrenchDelicacies,2005,	Savory Crepe,2750,Grain,6018,Buckwheat Flour,AdditivesAndGarnishes,2011,Milk,PoultryEgg,3010,Egg
 Oven,FrenchDelicacies,2006,Entrec�te,5490,BeefDerivatives,3032,Beef Steak,ClassicAlcohol,7012,Red Wine,DairyProducts,2045,Butter
 Oven,FrenchDelicacies,2007,Foie gras,1690,GooseDerivatives,3034,Raw Goose Liver,ClassicAlcohol,7012,Red Wine,DairyProducts,2045,Butter
-Oven,FrenchDelicacies,2008,Magret de canard,1440,PoultryEgg,3015,Duck Breast,Fruit,1016,Orange,AdditivesAndGarnishes,2014,Honey
-Oven,FrenchDelicacies,2009,Coquilles St. Jaques,880,Shellfish,5027,Scallop,DairyProducts,2045,Butter,FrenchRecipe,9031,French Recipe
-Oven,FrenchDelicacies,2010,Bacon Wrapped Asparagus,370,Vegetables,4012,Asparagus,PorkLamb,3020,Bacon,FrenchRecipe,9031,French Recipe
-Oven,FrenchDelicacies,2017,Tarte flamb�e,1930,FastFood,17094,Big Dough,PorkLamb,3020,Bacon,DairyProducts,2046,Cream Cheese
+Oven,FrenchDelicacies,2008,Magret de canard,1120,PoultryEgg,3015,Duck Breast,Fruit,1016,Orange,AdditivesAndGarnishes,2014,Honey
+Oven,FrenchDelicacies,2009,Coquilles St. Jaques,560,Shellfish,5027,Scallop,DairyProducts,2045,Butter,FrenchRecipe,9031,French Recipe
+Oven,FrenchDelicacies,2010,Bacon Wrapped Asparagus,50,Vegetables,4012,Asparagus,PorkLamb,3020,Bacon,FrenchRecipe,9031,French Recipe
+Oven,FrenchDelicacies,2017,Tarte flamb�e,650,FastFood,17094,Big Dough,PorkLamb,3020,Bacon,DairyProducts,2046,Cream Cheese
 Oven,FrenchDelicacies,2020,Cheese Pie,1540,Dough,6027,Pie Crust,DairyProducts,2044,Cheese,DairyProducts,2043,Whipped Cream
 Oven,FrenchDelicacies,2023,Norman Tart,870,Dough,6027,Pie Crust,Fruit,1012,Apple,PoultryEgg,3010,Egg
 Oven,FrenchDelicacies,2025,Spinach Quiche,1640,Dough,6027,Pie Crust,LeafVegetables,4028,Spinach,DairyProducts,2044,Cheese
 Oven,FrenchDelicacies,2028,Provencal Stuffed Eggplants,1000,Vegetables,4016,Eggplant,Vegetables,4014,Onion,PorkLamb,3022,Ham
-Oven,FrenchDelicacies,2029,	Smoked Salmon Rolls,1720,Fish,5015,Salmon,LeafVegetables,4028,Spinach,DairyProducts,2044,Cheese
+Oven,FrenchDelicacies,2029,	Smoked Salmon Rolls,1400,Fish,5015,Salmon,LeafVegetables,4028,Spinach,DairyProducts,2044,Cheese
 Oven,FrenchDelicacies,2030,	Cauliflower Gratin,700,LeafVegetables,4026,Cauliflower,DairyProducts,2044,Cheese,AdditivesAndGarnishes,2011,Milk
 Oven,FrenchDelicacies,2036,Anna Potatoes,1680,Vegetables,4017,Potato,DairyProducts,2045,Butter,FrenchRecipe,9030,French Recipe
 Oven,FrenchDelicacies,2037,	French Duck with Orange Sauce,1760,PoultryEgg,3016,Duck,Fruit,1016,Orange,ClassicAlcohol,7014,White Wine
-Oven,FrenchDelicacies,2038,Corn Souffl�,6060,Vegetables,4019,Corn,Grain,6014,Corn Flour,DairyProducts,2044,Cheese
+Oven,FrenchDelicacies,2038,Corn Souffl�,5420,Vegetables,4019,Corn,Grain,6014,Corn Flour,DairyProducts,2044,Cheese
 Oven,FrenchDelicacies,2039,Provencal Vegetable Bake,890,Vegetables,4016,Eggplant,Vegetables,4010,Tomato,Vegetables,4014,Onion
 Oven,FrenchDelicacies,2040,Provencal Roast Leg of Lamb,1610,PorkLamb,3027,Lamb Chop,Fruit,1014,Lemon,Vegetables,4010,Tomato
-Oven,FrenchDelicacies,2041,Foie Gras Terrine,1770,GooseDerivatives,3034,Raw Goose Liver,ClassicAlcohol,7014,White Wine,FrenchRecipe,9031,French Recipe
+Oven,FrenchDelicacies,2041,Foie Gras Terrine,1450,GooseDerivatives,3034,Raw Goose Liver,ClassicAlcohol,7014,White Wine,FrenchRecipe,9031,French Recipe
 Oven,FrenchDesserts,2054,Pink Macaron,500,FrenchDesserts,2047,Macaron Batter,Fruit,1011,Strawberry,AdditivesAndGarnishes,2015,Marshmallow
 Oven,FrenchDesserts,2055,White Macaron,800,FrenchDesserts,2047,Macaron Batter,Fruit,1015,Coconut,AdditivesAndGarnishes,2015,Marshmallow
 Oven,FrenchDesserts,2056,Purple Macaraon,10720,FrenchDesserts,2047,Macaron Batter,Grain,6020,Ube,AdditivesAndGarnishes,2015,Marshmallow
@@ -135,34 +135,34 @@ Oven,FrenchDesserts,2058,Blue Macaron,1500,FrenchDesserts,2047,Macaron Batter,Ad
 Oven,FrenchDesserts,2059,Green Macaron,520,FrenchDesserts,2047,Macaron Batter,Nut,1024,Pistachio,AdditivesAndGarnishes,2015,Marshmallow
 Oven,FrenchDesserts,2060,Brown Macaron,420,FrenchDesserts,2047,Macaron Batter,AdditivesAndGarnishes,2013,Caramel,CocoaBeanDerivatives,1033,Chocolate Syrup
 Oven,FrenchDesserts,2061,Galaxy Macaron,3080,FrenchDesserts,2047,Macaron Batter,AdditivesAndGarnishes,2018,Mint Leaf,CocoaBeanDerivatives,1034,Chocolate
-Oven,FrenchDesserts,2062,Mini Nut Tart,770,Dough,6024,Small Dough,Nut,1026,Almond,Nut,1024,Pistachio
-Oven,FrenchDesserts,2063,Mini Fruit Tart,5610,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,Fruit,1011,Strawberry
-Oven,FrenchDesserts,2064,Tarte Tatin,1400,Dough,6027,Pie Crust,AdditivesAndGarnishes,2013,Caramel,DairyProducts,2045,Butter
-Oven,FrenchDesserts,2065,Tarte Tropézienne,750,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,DairyProducts,2045,Butter
+Oven,FrenchDesserts,2062,Mini Nut Tart,450,Dough,6024,Small Dough,Nut,1026,Almond,Nut,1024,Pistachio
+Oven,FrenchDesserts,2063,Mini Fruit Tart,5290,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,Fruit,1011,Strawberry
+Oven,FrenchDesserts,2064,Tarte Tatin,1080,Dough,6027,Pie Crust,AdditivesAndGarnishes,2013,Caramel,DairyProducts,2045,Butter
+Oven,FrenchDesserts,2065,Tarte Tropézienne,430,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,DairyProducts,2045,Butter
 Oven,FrenchDesserts,2066,Chocolate Nun,370,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,CocoaBeanDerivatives,1033,Chocolate Syrup
 Oven,FrenchDesserts,2067,Paris-Brest,300,FastFood,17094,Big Dough,DairyProducts,2043,Whipped Cream,AdditivesAndGarnishes,2012,Sugar
 Oven,FrenchDesserts,2068,Éclair,570,Dough,6024,Small Dough,DairyProducts,2045,Butter,AdditivesAndGarnishes,2011,Milk
 Oven,FrenchDesserts,2069,French Cream Puff,230,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,AdditivesAndGarnishes,2012,Sugar
-Oven,FrenchDesserts,2070,Strawberry Napoleon,1690,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,DairyProducts,2045,Butter
-Oven,FrenchDesserts,2071,Napoleon,1830,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,DairyProducts,2045,Butter
+Oven,FrenchDesserts,2070,Strawberry Napoleon,410,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,DairyProducts,2045,Butter
+Oven,FrenchDesserts,2071,Napoleon,550,Dough,6024,Small Dough,DairyProducts,2043,Whipped Cream,DairyProducts,2045,Butter
 Oven,FrenchDesserts,2072,Burnt Cream,190,AdditivesAndGarnishes,2011,Milk,PoultryEgg,3010,Egg,AdditivesAndGarnishes,2013,Caramel
 Oven,FrenchDesserts,2073,Soufflé,170,AdditivesAndGarnishes,2011,Milk,PoultryEgg,3010,Egg,AdditivesAndGarnishes,2012,Sugar
-Oven,FrenchDesserts,2074,Opera Cake,690,Grain,6013,Wheat Flour,DairyProducts,2045,Butter,PoultryEgg,3010,Egg
-Oven,FrenchDesserts,2075,Madeleine,3170,Grain,6018,Buckwheat Flour,DairyProducts,2045,Butter,PoultryEgg,3010,Egg
-Oven,FrenchDesserts,2076,Canelé,810,Dough,6024,Small Dough,IconicAlcohol,7027,Rum,AdditivesAndGarnishes,2013,Caramel
-Oven,FrenchDesserts,2077,Financier,950,Dough,6024,Small Dough,Nut,1026,Almond,DairyProducts,2043,Whipped Cream
-Oven,FrenchDesserts,2078,Palm Heart,1010,Dough,6024,Small Dough,DairyProducts,2045,Butter,AdditivesAndGarnishes,2012,Sugar
+Oven,FrenchDesserts,2074,Opera Cake,370,Grain,6013,Wheat Flour,DairyProducts,2045,Butter,PoultryEgg,3010,Egg
+Oven,FrenchDesserts,2075,Madeleine,2850,Grain,6018,Buckwheat Flour,DairyProducts,2045,Butter,PoultryEgg,3010,Egg
+Oven,FrenchDesserts,2076,Canelé,490,Dough,6024,Small Dough,IconicAlcohol,7027,Rum,AdditivesAndGarnishes,2013,Caramel
+Oven,FrenchDesserts,2077,Financier,310,Dough,6024,Small Dough,Nut,1026,Almond,DairyProducts,2043,Whipped Cream
+Oven,FrenchDesserts,2078,Palm Heart,370,Dough,6024,Small Dough,DairyProducts,2045,Butter,AdditivesAndGarnishes,2012,Sugar
 Oven,FrenchSeafood,2084,Baguette,20,FastFood,17094,Big Dough,FrenchRecipe,9027,French Recipe,,,
 Oven,FrenchSeafood,2085,Lobster Thermidor,1810,Shellfish,5029,Lobster,DairyProducts,2045,Butter,IconicAlcohol,7022,Brandy
 Oven,FrenchSeafood,2086,Stuffed Mussels,780,Shellfish,5023,Mussel,DairyProducts,2045,Butter,DairyProducts,2044,Cheese
-Oven,FrenchSeafood,2087,Brandade,2100,Fish,5014,Cod,Vegetables,4017,Potato,AdditivesAndGarnishes,2011,Milk
+Oven,FrenchSeafood,2087,Brandade,1460,Fish,5014,Cod,Vegetables,4017,Potato,AdditivesAndGarnishes,2011,Milk
 Oven,FrenchSeafood,2088,French Potato and Beef Casserole,6920,PorkLamb,3029,Beef Cube,Vegetables,4017,Potato,DairyProducts,2044,Cheese
 Oven,FrenchSeafood,2089,French Potato and Cheese Gratin,2450,Vegetables,4017,Potato,DairyProducts,2047,Mozzarella Cheese,PorkLamb,3020,Bacon
 Oven,FrenchSeafood,2090,French Vegetable Stew,1290,Vegetables,4010,Tomato,Vegetables,4014,Onion,Vegetables,4016,Eggplant
 Oven,FrenchSeafood,2091,Easter Pate with Eggs,5330,FastFood,17094,Big Dough,PorkLamb,3029,Beef Cube,PoultryEgg,3010,Egg
-Oven,FrenchSeafood,2109,Crab Soufflé,1130,Shellfish,5026,Crab,Grain,6013,Wheat Flour,PoultryEgg,3010,Egg
-Oven,FrenchSeafood,2110,Fish Baked in Parchment Packet,1040,Fish,5014,Cod,Fruit,1014,Lemon,ClassicAlcohol,7014,White Wine
-Oven,FrenchSeafood,2111,Bass Baked in a Crust,5700,Fish,5019,Bass,FastFood,17094,Big Dough,AdditivesAndGarnishes,2011,Milk
+Oven,FrenchSeafood,2109,Crab Soufflé,490,Shellfish,5026,Crab,Grain,6013,Wheat Flour,PoultryEgg,3010,Egg
+Oven,FrenchSeafood,2110,Fish Baked in Parchment Packet,720,Fish,5014,Cod,Fruit,1014,Lemon,ClassicAlcohol,7014,White Wine
+Oven,FrenchSeafood,2111,Bass Baked in a Crust,5380,Fish,5019,Bass,FastFood,17094,Big Dough,AdditivesAndGarnishes,2011,Milk
 Pan,GrilledMeat,17030,Surf and Turf,7690,Shellfish,5029,Lobster,BeefDerivatives,3032,Beef Steak,BBQRecipe,9013,BBQ Recipe
 Pan,PanfriedFoods,17046,Fried Egg,10,PoultryEgg,3010,Egg,,,,,,
 Pan,PanfriedFoods,17047,Fried Bacon,10,PorkLamb,3020,Bacon,,,,,,
@@ -186,7 +186,7 @@ Pan,PanfriedFoods,17064,	Stir-fried Arugula,340,LeafVegetables,4027,Arugula,Nut,
 Pan,PanfriedFoods,17065,	Red Bean Rice,670,Grain,6010,Red Bean,Grain,6016,Rice,PorkLamb,3021,Sausage
 Pan,Salads,17070,Fried Cabbage,30,LeafVegetables,4023,Cabbage,PorkLamb,3020,Bacon,,,
 Pan,Desserts,17088,Donut,1480,Dough,6028,Donut Dough,BBQRecipe,9008,BBQ Recipe,,,
-Pan,DeepfriedFoods,17106,Fries,0,Salads,17072,Potato Strips,,,,,,
+Pan,DeepfriedFoods,17106,Fries,448,Salads,17072,Potato Strips,,,,,,
 Pan,DeepfriedFoods,17107,Fried Chicken Wing,340,Grain,6015,Breadcrumb,PoultryEgg,3011,Chicken Wing,,,
 Pan,DeepfriedFoods,17108,Fried Chicken Drumstick,360,Grain,6015,Breadcrumb,PoultryEgg,3012,Chicken Drumstick,,,
 Pan,DeepfriedFoods,17109,Fried Chicken Breast,400,Grain,6015,Breadcrumb,PoultryEgg,3013,Chicken Breast,,,
@@ -221,13 +221,13 @@ Shaker,MixedDrinks,1046,Fish House Punch,490,IconicAlcohol,7027,Rum,IconicAlcoho
 Shaker,MixedDrinks,1047,Gin Rickey,40,IconicAlcohol,7023,Gin,SoftDrinks,2021,Sparkling Water,FruitJuice,1005,Lemon Juice
 Shaker,MixedDrinks,1048,Tom & Jerry,360,IconicAlcohol,7022,Brandy,IconicAlcohol,7027,Rum,AdditivesAndGarnishes,2011,Milk
 Shaker,MixedDrinks,1049,Somaek,660,ClassicAlcohol,7016,Soju,ClassicAlcohol,7011,Beer,,,
-Shaker,MixedDrinks,1050,French 75,780,IconicAlcohol,7023,Gin,ClassicAlcohol,7013,Champagne,FruitJuice,1005,Lemon Juice
+Shaker,MixedDrinks,1050,French 75,140,IconicAlcohol,7023,Gin,ClassicAlcohol,7013,Champagne,FruitJuice,1005,Lemon Juice
 Shaker,MixedDrinks,1051,Hemingway Champagne,180,IconicAlcohol,7025,Absinthe,ClassicAlcohol,7013,Champagne,FrenchRecipe,9027,French Recipe
 Shaker,MixedDrinks,1052,Earthquake Cocktail,320,IconicAlcohol,7026,Whisky,IconicAlcohol,7025,Absinthe,FruitJuice,1005,Lemon Juice
 Shaker,MixedDrinks,1053,	French Rose,270,IconicAlcohol,7025,Absinthe,IconicAlcohol,7023,Gin,IconicAlcohol,7022,Brandy
 Shaker,MixedDrinks,1054,	French Gimlet,100,IconicAlcohol,7023,Gin,FruitJuice,1005,Lemon Juice,FrenchRecipe,9029,French Recipe
-Shaker,MixedDrinks,1055,Boulevardier,880,IconicAlcohol,7026,Whisky,IconicAlcohol,7025,Absinthe,FrenchRecipe,9032,French Recipe
-Shaker,MixedDrinks,1056,Marie Antoinette,1040,ClassicAlcohol,7013,Champagne,IconicAlcohol,7028,Vodka,FruitJuice,1007,Pomegranate Juice
+Shaker,MixedDrinks,1055,Boulevardier,240,IconicAlcohol,7026,Whisky,IconicAlcohol,7025,Absinthe,FrenchRecipe,9032,French Recipe
+Shaker,MixedDrinks,1056,Marie Antoinette,720,ClassicAlcohol,7013,Champagne,IconicAlcohol,7028,Vodka,FruitJuice,1007,Pomegranate Juice
 Shaker,MixedDrinks,1057,Tokyo Mule,1300,ClassicAlcohol,7015,Sake,IconicAlcohol,7028,Vodka,SoftDrinks,2021,Sparkling Water
 GlassProduct,Salads,17068,Coleslaw,420,LeafVegetables,4023,Cabbage,Vegetables,4013,Carrot,BBQRecipe,9011,BBQ Recipe
 GlassProduct,Salads,17069,Waldorf Salad,1010,LeafVegetables,4022,Lettuce,Fruit,1012,Apple,Nut,1028,Walnut

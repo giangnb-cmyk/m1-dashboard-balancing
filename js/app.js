@@ -1,10 +1,14 @@
 /**
  * app.js — Main controller
- * Navigation, tab switching, init.
+ * Navigation, tab switching, ProcessedData store, module init.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Shared processed-data store — modules write here, others read
+    window.ProcessedData = { orders: {}, iap: {} };
+
     initNavigation();
+    TableUtils.initMainSubTabs();
     initModules();
 });
 
@@ -27,4 +31,6 @@ function initNavigation() {
 function initModules() {
     if (typeof ItemEncyclopedia !== 'undefined') ItemEncyclopedia.init();
     if (typeof EnergyCalc       !== 'undefined') EnergyCalc.init();
+    if (typeof OrdersTab        !== 'undefined') OrdersTab.init();
+    if (typeof IAPPackages      !== 'undefined') IAPPackages.init();
 }

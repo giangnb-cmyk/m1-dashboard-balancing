@@ -1,0 +1,13 @@
+round_id,required_tokens,bot_completion_time_seconds,total_bots,breakaway_threshold_percent,stop_threshold_percent,random_speed_multiplier_range_bot,random_delay_variation_range,speed_factor_player_leads_far,speed_factor_player_leads_near,speed_factor_player_behind,near_finish_slowdown_factor,reward_type,reward_id,reward_amount,bot_names,bot_avatar_ids,rank,res_type,res_id,res_number,custom_value,mod
+0,4,180,4,0.7,0.95,0.7,0.9,0.7,1,2,3,Money,1,10,Bot1,1,1,Money,8,1,,Hard
+,,,,,,1.3,1.1,,,,,,,,,,2,Money,1,50,,
+,,,,,,,,,,,,,,,,,3,Money,1,20,,
+1,5,240,4,0.7,0.95,0.7,0.9,0.7,1,2,3,Money,1,10,Bot2,2,1,Money,1,200,,Medium
+,,,,,,1.3,1.1,,,,,,,,,,2,Money,1,100,,
+,,,,,,,,,,,,,,,,,3,Money,1,50,,
+2,9,480,4,0.7,0.95,0.7,0.9,0.7,1,2,3,Money,1,10,Bot3,3,1,Money,1,300,,Easy
+,,,,,,1.3,1.1,,,,,,,,,,2,Money,1,150,,
+,,,,,,,,,,,,,,,,,3,Money,1,75,,
+3,14,720,4,0.7,0.95,0.7,0.9,0.7,1,2,3,Money,1,10,Bot4,4,1,Money,1,500,,Hard
+,,,,,,1.3,1.1,,,,,,,,,,2,Money,1,250,,
+,,,,,,,,,,,,,,,,,3,Money,1,125,,

@@ -1,0 +1,4 @@
+energy_trilogy_type,pack_name,res_type,res_id,res_number,bonus,stage_bonus,first_time_purchase_bonus,purchase_type,purchase_count,iap_cost,cost_type,cost_id,cost_number,sale,is_best_seller,google_product_id,google_product_id_premium,apple_product_id
+1,energy_trilogy_pack_1,Money,3,250,0,0,0,IAP,1,1.99,,,,2,,com.deviloper.m1.food.merge.cooking.puzzle.energy_trilogy_pack_1,,com.deviloper.m1.food.merge.cooking.puzzle.energy_trilogy_pack_1
+2,energy_trilogy_pack_2,Money,3,650,0,0,0,IAP,1,4.99,,,,3,,com.deviloper.m1.food.merge.cooking.puzzle.energy_trilogy_pack_2,,com.deviloper.m1.food.merge.cooking.puzzle.energy_trilogy_pack_2
+3,energy_trilogy_pack_3,Money,3,1350,0,0,0,IAP,1,9.99,,,,4,TRUE,com.deviloper.m1.food.merge.cooking.puzzle.energy_trilogy_pack_3,,com.deviloper.m1.food.merge.cooking.puzzle.energy_trilogy_pack_3

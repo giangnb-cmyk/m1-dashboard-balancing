@@ -118,6 +118,33 @@ MANIFEST = {
     'buyCurrency':             ('Features/BuyCurrency/BuyCurrency.csv',         None),
     'chefsBookData':           ('Features/ChefsBook/ChefsBookData.csv',         ['chefs_type']),
 
+    # IAP Packages
+    'iapGemPack':              ('Features/IAP/GemPack.csv',                     ['id', 'pack_name']),
+    'iapBundlePack':           ('Features/IAP/BundlePack.csv',                  ['id', 'pack_name']),
+    'iapCoinPack':             ('Features/IAP/CoinPack.csv',                    ['id', 'pack_name']),
+    'iapEnergyPack':           ('Features/IAP/EnergyPack.csv',                  ['id', 'pack_name']),
+    'iapEnergyTrilogyPack':    ('Features/IAP/EnergyTrilogyPack.csv',           ['id', 'pack_name']),
+    'iapStarterPack':          ('Features/IAP/StarterPack.csv',                 ['id', 'pack_name']),
+    'iapOpenningPack':         ('Features/IAP/OpenningPack.csv',                ['id', 'pack_name']),
+    'iapChainPack':            ('Features/IAP/ChainPack.csv',                   ['id', 'pack_name']),
+    'iapDailyDealsPack':       ('Features/IAP/DailyDealsPack.csv',              ['id', 'pack_name']),
+    'iapDailyDealsPack2':      ('Features/IAP/DailyDealsPack2.csv',             ['id', 'pack_name']),
+    'iapStandardDiamond':      ('Features/IAP/StandardDiamond.csv',             ['id', 'pack_name']),
+    'iapGoldWeeklyPass':       ('Features/IAP/GoldWeeklyPass.csv',              ['id', 'pack_name']),
+    'iapSilverWeeklyPass':     ('Features/IAP/SilverWeeklyPass.csv',            ['id', 'pack_name']),
+    'iapBattlePassPack':       ('Features/IAP/BattlePassPackage.csv',           ['id', 'pack_name']),
+    'iapLuckySpinPack':        ('Features/IAP/LuckySpinPack.csv',               ['id', 'pack_name']),
+    'iapSupplyChestPack':      ('Features/IAP/SupplyChestPack.csv',             ['id', 'pack_name']),
+    'iapNiceBoostPack':        ('Features/IAP/NiceBoostPack.csv',               ['id', 'pack_name']),
+    'iapStepPricePack':        ('Features/IAP/StepPricePack.csv',               ['id', 'pack_name']),
+    'iapHappinessExpress':     ('Features/IAP/HappinessExpress.csv',            ['id', 'pack_name']),
+    'iapLuxuriousOffer':       ('Features/IAP/LuxuriousOffer.csv',              ['id', 'pack_name']),
+    'iapFirstPurchase':        ('Features/IAP/FirstPurchase.csv',               ['id', 'pack_name']),
+    'iapPiggyBank':            ('Features/IAP/PiggyBank.csv',                   ['id', 'pack_name']),
+    'iapRemoveAdsPack':        ('Features/IAP/RemoveAdsPack.csv',               ['id', 'pack_name']),
+    'iapVideoBonuses':         ('Features/IAP/VideoBonuses.csv',                ['id', 'pack_name']),
+    'iapPackDuration':         ('Features/IAP/PackDuration.csv',                ['id', 'pack_name']),
+
     # Extends
     'convertTime':             ('Extends/ConvertTime/ConvertTimeTool.csv',       None),
 }
