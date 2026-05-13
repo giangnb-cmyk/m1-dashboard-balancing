@@ -69,6 +69,58 @@ const CsvLoader = (() => {
     return fillDown(rows, keyFields);
   }
 
+  // --- Cooking Recipes adapter ---
+  // CookingRecipes.csv schema: type_tool, id_result, time_to_cook, item_id  (fill-down)
+  // Output schema (compat với code cũ + consumers):
+  //   itemID, tool (name), toolId, cooking_time (seconds float), ingredients (CSV string of ids),
+  //   ResultId, TypeTool (name), TimeToCook_sec,
+  //   Ingredient{1..4}Id, Ingredient{1..4}Type
+  const TOOL_NAMES = { '2001': 'Juicer', '2002': 'Chef Counter', '2003': 'Grill', '2004': 'Pan', '2005': 'Oven' };
+
+  function normTime(raw) {
+    // "2,5" (VN decimal) or "2.5" → number string with dot
+    return (raw || '').replace(',', '.');
+  }
+
+  function parseCookingRecipes(rows) {
+    const filled = fillDown(rows, ['type_tool', 'id_result', 'time_to_cook']);
+    const grouped = new Map();
+    filled.forEach(r => {
+      const id = r.id_result;
+      if (!id) return;
+      if (!grouped.has(id)) {
+        const toolId   = r.type_tool || '';
+        const toolName = TOOL_NAMES[toolId] || toolId;
+        const time     = normTime(r.time_to_cook);
+        grouped.set(id, {
+          itemID:         id,
+          tool:           toolName,
+          toolId:         toolId,
+          cooking_time:   time,
+          ResultId:       id,
+          TypeTool:       toolName,
+          TimeToCook_sec: time,
+          _ings: [],
+        });
+      }
+      if (r.item_id) grouped.get(id)._ings.push(r.item_id);
+    });
+    return [...grouped.values()].map(rec => {
+      const out = { ...rec, ingredients: rec._ings.join(',') };
+      for (let i = 0; i < 4; i++) {
+        out[`Ingredient${i + 1}Id`]   = rec._ings[i] || '';
+        out[`Ingredient${i + 1}Type`] = '';
+      }
+      delete out._ings;
+      return out;
+    });
+  }
+
+  async function loadCookingRecipes(path) {
+    const rows = await load(path);
+    return parseCookingRecipes(rows);
+  }
+
   // --- Load all game CSVs ---
 
   async function loadAll() {
@@ -77,13 +129,7 @@ const CsvLoader = (() => {
       buildUpGoalData,
       buildUpGoalReward,
       buildUpGoalRewardBonus,
-      itemMerge,
-      itemGenerator,
-      itemRaw,
-      itemTool,
-      itemBooster,
-      itemChest,
-      itemFood,
+      itemData,
       itemCurrency,
       itemExpand,
       orderDetail,
@@ -107,26 +153,22 @@ const CsvLoader = (() => {
       buyCurrency,
       chefsBookData,
       convertTime,
+      itemGenerator,
+      itemMerge,
     ] = await Promise.all([
       loadFilled(`${base}Core/BuildUpGoal/BuildUpGoalData.csv`,        ['theme']),
       loadFilled(`${base}Core/BuildUpGoal/BuildUpGoalReward.csv`,      ['theme_type']),
       loadFilled(`${base}Core/BuildUpGoal/BuildUpGoalRewardBonus.csv`, ['type', 'index']),
-      loadFilled(`${base}Core/ItemIdentify/ItemMerge.csv`,             ['type']),
-      loadFilled(`${base}Core/ItemIdentify/ItemGenerator.csv`,         ['type']),
-      loadFilled(`${base}Core/ItemIdentify/ItemRaw.csv`,               ['type']),
-      loadFilled(`${base}Core/ItemIdentify/ItemTool.csv`,              ['type']),
-      loadFilled(`${base}Core/ItemIdentify/ItemBooster.csv`,           ['type']),
-      load(`${base}Core/ItemIdentify/ItemChest.csv`),
-      loadFilled(`${base}Core/ItemIdentify/ItemFood.csv`,              ['type']),
-      loadFilled(`${base}Core/ItemIdentify/ItemCurrency.csv`,          ['type']),
-      loadFilled(`${base}Core/ItemExpand.csv`,                         ['type', 'id']),
+      load(`${base}Core/ItemIdentify/ItemData.csv`),
+      load(`${base}Core/ItemIdentify/ItemCurrency.csv`),
+      load(`${base}Core/ItemExpand/ItemExpand.csv`),
       load(`${base}Core/Order/OrderDetail.csv`),
       load(`${base}Core/Order/OrderSystem.csv`),
       loadFilled(`${base}Core/Order/OrderDetailReward.csv`,            ['theme_type']),
       load(`${base}Core/Order/OrderGold.csv`),
       loadFilled(`${base}Core/Order/OrderSystemReward.csv`,            ['theme_type']),
       load(`${base}Core/Order/RewardMinDistributeOrderDetail.csv`),
-      load(`${base}Core/Recipes/FormulaRecipes.csv`),
+      loadCookingRecipes(`${base}Core/Recipes/CookingRecipes.csv`),
       loadFilled(`${base}Core/Box&Gift/ItemBoxGenerator.csv`,          ['item_save_type', 'id_item', 'many_generator', 'time_unlock']),
       loadFilled(`${base}Core/Box&Gift/ItemAssistantsChest.csv`,       ['item_save_type', 'id_item', 'many_generator', 'time_unlock']),
       loadFilled(`${base}Core/Box&Gift/ItemChefsChest.csv`,            ['item_save_type', 'id_item', 'many_generator', 'time_unlock']),
@@ -141,13 +183,13 @@ const CsvLoader = (() => {
       load(`${base}Features/BuyCurrency/BuyCurrency.csv`),
       loadFilled(`${base}Features/ChefsBook/ChefsBookData.csv`,        ['chefs_type']),
       load(`${base}Extends/ConvertTime/ConvertTimeTool.csv`),
+      loadFilled(`${base}Core/Generators/ItemGenerator.csv`, ['id']),
+      load(`${base}Core/ItemIdentify/ItemMerge.csv`),
     ]);
 
     return {
       buildUpGoalData, buildUpGoalReward, buildUpGoalRewardBonus,
-      itemMerge, itemGenerator, itemRaw, itemTool,
-      itemBooster, itemChest, itemFood, itemCurrency,
-      itemExpand,
+      itemData, itemCurrency, itemExpand,
       orderDetail, orderSystem, orderDetailReward,
       orderGold, orderSystemReward, rewardMinDistribute,
       formuaRecipes,
@@ -157,6 +199,7 @@ const CsvLoader = (() => {
         itemGift, itemLuckyBox, itemLuckyHandbag, itemTraineeBox,
       },
       buyCurrency, chefsBookData, convertTime,
+      itemGenerator, itemMerge,
     };
   }
 

@@ -4,9 +4,15 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Shared processed-data store — modules write here, others read
-    window.ProcessedData = { orders: {}, iap: {} };
+    window.ProcessedData = { orders: {}, iap: {}, global: {} };
 
+    // Override Chart.js global defaults for dark theme
+    if (typeof Chart !== 'undefined') {
+        Chart.defaults.color = '#f1f5f9';
+        Chart.defaults.borderColor = 'rgba(255,255,255,0.06)';
+    }
+
+    GlobalData.init();   // compute shared caches before any tab inits
     initNavigation();
     TableUtils.initMainSubTabs();
     initModules();
@@ -32,5 +38,6 @@ function initModules() {
     if (typeof ItemEncyclopedia !== 'undefined') ItemEncyclopedia.init();
     if (typeof EnergyCalc       !== 'undefined') EnergyCalc.init();
     if (typeof OrdersTab        !== 'undefined') OrdersTab.init();
+    if (typeof OrderAnalysis    !== 'undefined') OrderAnalysis.init();
     if (typeof IAPPackages      !== 'undefined') IAPPackages.init();
 }

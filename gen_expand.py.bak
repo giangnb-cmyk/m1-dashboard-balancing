@@ -1,0 +1,29 @@
+import sys, io, csv
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
+# ItemExpand.csv: type, id, item_save_type, id_item, time_cooldown, cost_energy
+# Expand chains theo xlsx:
+#   Drink Generator chain 7000 (Milk Bottle / Chai sua) tier 2 = 700002
+#     -> spawns GlassProduct chain 7003 lv1 = 700301
+#   Fruit & Nut Generator chain 7004 (Fruit) tier 6 = 700406 (Coconut/Qua dua)
+#     -> spawns CoconutProduct chain 7006 lv1 = 700601  (Coconut Water)
+#     -> spawns CoconutProduct chain 7007 lv1 = 700701  (Coconut Shell)
+
+expand_rows = [
+    # type,         id,      item_save_type,  id_item,  time_cooldown, cost_energy
+    ('Drink',    '700002', 'GlassProduct',   '700301', 3, 1),
+    ('Fruit',    '700406', 'CoconutProduct', '700601', 3, 1),
+    ('',         '',       'CoconutProduct', '700701', '',  ''),
+]
+
+out_path = 'd:/Project/m1-dashboard-balancing/Csv/Core/ItemExpand/ItemExpand.csv'
+fields = ['type', 'id', 'item_save_type', 'id_item', 'time_cooldown', 'cost_energy']
+with open(out_path, 'w', newline='', encoding='utf-8-sig') as f:
+    w = csv.writer(f)
+    w.writerow(fields)
+    for row in expand_rows:
+        w.writerow(row)
+
+print(f'ItemExpand.csv: {len(expand_rows)} rows written')
+for r in expand_rows:
+    print(f'  {r}')

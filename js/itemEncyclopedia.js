@@ -15,11 +15,10 @@ const ItemEncyclopedia = (() => {
 
     // ── Shared item sources cho tab Other ────────────────────────────────────
 
-    const OTHER_SOURCES = [
-        { key: 'itemFood',     label: 'Food',     color: '#4ade80' },
-        { key: 'itemBooster',  label: 'Booster',  color: '#f472b6' },
-        { key: 'itemChest',    label: 'Chest',    color: '#fbbf24' },
-        { key: 'itemCurrency', label: 'Currency', color: '#34d399' },
+    const OTHER_TYPES = [
+        { type: 'Food',     label: 'Food',     color: '#4ade80' },
+        { type: 'Booster',  label: 'Booster',  color: '#f472b6' },
+        { type: 'Currency', label: 'Currency', color: '#34d399' },
     ];
 
     // ═════════════════════════════════════════════════════════════════════════
@@ -46,53 +45,104 @@ const ItemEncyclopedia = (() => {
     // SUB-TAB 1: MERGE ITEMS
     // ═════════════════════════════════════════════════════════════════════════
 
-    /** Xây energy map: item_id → { energy, genId, genType } dùng generator cấp thấp nhất */
-    function buildEnergyMap(rateGeneratorRows) {
-        const map = {};
-        rateGeneratorRows.forEach(row => {
-            if (!row.item_id || !row.cost_energy) return;
-            const itemId = row.item_id.trim();
-            const genId  = parseInt(row.id) || 0;
-            const existing = map[itemId];
-            if (!existing || genId < existing.genId) {
-                map[itemId] = { energy: parseFloat(row.cost_energy), genId, genType: row.type };
+    /** Build map: item_id → genType từ generator spawns + prefix chain + expand chains */
+    function buildItemGenTypeMap(rateGenRows, itemExpand) {
+        // Step 1: tier-1 spawn trực tiếp từ generator
+        const spawnMap = {};
+        rateGenRows.forEach(r => {
+            if (r.item_id && r.type) spawnMap[r.item_id] = r.type;
+        });
+
+        // Step 2: prefix propagation — các item cùng chain (700301..700310) chia sẻ prefix 7003
+        const prefixMap = {};
+        Object.entries(spawnMap).forEach(([id, t]) => {
+            prefixMap[id.slice(0, 4)] = t;
+        });
+        rateGenRows.forEach(r => {
+            if (r.item_id && !spawnMap[r.item_id]) {
+                spawnMap[r.item_id] = prefixMap[r.item_id.slice(0, 4)] || '';
             }
         });
-        return map;
+
+        // Step 3: propagate qua expand chains (lặp đến khi không còn thêm được)
+        let changed = true;
+        while (changed) {
+            changed = false;
+            (itemExpand || []).forEach(r => {
+                const pid = r.itemID || r.id;
+                const sid = r.spawn_itemID || r.id_item;
+                if (!pid || !sid) return;
+                const parentType = spawnMap[pid] || prefixMap[pid.slice(0, 4)];
+                if (parentType && !spawnMap[sid]) {
+                    spawnMap[sid] = parentType;
+                    prefixMap[sid.slice(0, 4)] = parentType;
+                    changed = true;
+                }
+            });
+        }
+        return spawnMap;
     }
 
-    function buildMergeRows(itemRaw, energyMap) {
+    function buildMergeRows(itemData, spawnMap, itemExpand) {
+        const rawItems = itemData.filter(r => r.type === 'Raw');
+
+        // Group by itemID prefix (first 4 chars) để propagate genType trong cùng chain
+        const prefixGenType = {};
+        rawItems.forEach(r => {
+            const gt = spawnMap[r.itemID];
+            if (gt) prefixGenType[r.itemID.slice(0, 4)] = gt;
+        });
+
+        // Expand chains: spawn_itemID prefix → genType của parent chain
+        const expandPrefixGenType = {};
+        (itemExpand || []).forEach(row => {
+            const parentId = row.itemID;
+            const spawnId  = row.spawn_itemID;
+            if (!parentId || !spawnId) return;
+            const parentGenType = spawnMap[parentId] || prefixGenType[parentId.slice(0, 4)];
+            if (parentGenType) expandPrefixGenType[spawnId.slice(0, 4)] = parentGenType;
+        });
+
         const counter = createChainCounter();
-        return itemRaw.map(item => {
-            const chain = counter.count(item.type);
-            const ei    = energyMap[item.id] || null;
+        return rawItems.map(item => {
+            const genType = spawnMap[item.itemID]
+                || prefixGenType[item.itemID.slice(0, 4)]
+                || expandPrefixGenType[item.itemID.slice(0, 4)]
+                || '';
+            const chain  = counter.count(genType || item.type);
+            const energy = parseFloat(item.energy_cost) || null;
+            const eCell  = energy != null
+                ? `<span class="mono" style="color:var(--energy);font-weight:600">${energy % 1 === 0 ? energy : energy.toFixed(2)} ⚡</span>`
+                : `<span style="color:var(--text-muted)">—</span>`;
+            const genBadge = genType
+                ? `<span style="color:var(--accent);font-size:0.8rem">${genType}</span>`
+                : `<span style="color:var(--text-muted);font-size:0.8rem">—</span>`;
             return {
-                chain, type: item.type || '', id: item.id || '',
-                name: item.name_item || '', merge_to: item.merge_to || '',
-                sell_price: item.sell_price || '', sum_merge: item.sum_merge || '',
-                energy: ei ? ei.energy : '',
+                chain, genType, id: item.itemID || '',
+                name: item.name_item || '', tier: parseInt(item.tier) || 0,
+                sell_price: parseFloat(item.sell_price) || 0,
+                energy: energy ?? '',
                 html: `<tr>
                     <td class="mono" style="color:var(--text-muted);text-align:center">${chain}</td>
-                    <td style="color:var(--accent)">${item.type || ''}</td>
-                    <td class="mono" style="color:var(--energy)">${item.id || ''}</td>
+                    <td>${genBadge}</td>
+                    <td class="mono" style="color:var(--energy)">${item.itemID || ''}</td>
                     <td>${item.name_item || ''}</td>
-                    <td class="mono" style="color:var(--text-muted)">${item.merge_to || ''}</td>
-                    <td class="mono">${item.sell_price || ''}</td>
-                    <td class="mono">${item.sum_merge || ''}</td>
-                    <td>${buildEnergyCell(ei)}</td>
-                    <td style="text-align:center">${sellBadge(item.can_sell)}</td>
+                    <td class="mono" style="color:var(--text-muted);text-align:center">${item.tier || ''}</td>
+                    <td class="mono" style="text-align:right">${item.sell_price || '0'}</td>
+                    <td style="text-align:right">${eCell}</td>
+                    <td class="mono" style="text-align:center;color:${item.cannot_merge === 'true' ? 'var(--text-muted)' : '#4ade80'}">${item.cannot_merge === 'true' ? '✗' : '✓'}</td>
                 </tr>`,
             };
         });
     }
 
     function initMergeItems() {
-        const data    = window.GameData;
-        const energyMap = buildEnergyMap(data.rateGenerator || []);
-        const allRows   = buildMergeRows(data.itemRaw || [], energyMap);
+        const data     = window.GameData;
+        const spawnMap = buildItemGenTypeMap(data.rateGenerator || [], data.itemExpand || []);
+        const allRows  = buildMergeRows(data.itemData || [], spawnMap, data.itemExpand || []);
 
         setText('merge-total-count', allRows.length.toLocaleString());
-        fillSelect('merge-filter-type', [...new Set(allRows.map(r => r.type).filter(Boolean))].sort());
+        fillSelect('merge-filter-type', [...new Set(allRows.map(r => r.genType).filter(Boolean))].sort());
 
         let sortKey = 'chain', sortAsc = true;
 
@@ -101,13 +151,13 @@ const ItemEncyclopedia = (() => {
             const typeF  = $('merge-filter-type')?.value || '';
             const filtered = allRows
                 .filter(r => {
-                    if (typeF   && r.type !== typeF) return false;
-                    if (search  && !r.name.toLowerCase().includes(search) && !r.id.includes(search)) return false;
+                    if (typeF  && r.genType !== typeF) return false;
+                    if (search && !r.name.toLowerCase().includes(search) && !r.id.includes(search)) return false;
                     return true;
                 })
                 .sort((a, b) => sortByKey(a, b, sortKey, sortAsc));
             setText('merge-result-count', filtered.length.toLocaleString() + ' items');
-            renderRows('merge-body', filtered, 9);
+            renderRows('merge-body', filtered, 8);
         }
 
         bindSort('merge-table', () => ({ key: sortKey, asc: sortAsc }), (k, a) => { sortKey = k; sortAsc = a; }, render);
@@ -164,7 +214,9 @@ const ItemEncyclopedia = (() => {
         const data   = window.GameData;
         const genMap = buildGenMap(data.rateGenerator || []);
         const nameMap = {};
-        (data.itemGenerator || []).forEach(r => { if (r.id) nameMap[r.id] = r.name_item || ''; });
+        (data.itemData || []).filter(r => r.type === 'Generator').forEach(r => {
+            if (r.itemID) nameMap[r.itemID] = r.name_item || '';
+        });
 
         const allRows = buildGeneratorRows(genMap, nameMap);
 
@@ -196,28 +248,26 @@ const ItemEncyclopedia = (() => {
     // SUB-TAB 3: RECIPES
     // ═════════════════════════════════════════════════════════════════════════
 
-    /** Build formula lookup map: "ResultType_ResultId" → formula object */
+    /** Build formula lookup map: itemID → formula object (new format) */
     function buildFormulaMap(formuaRecipes) {
         const map = {};
         formuaRecipes.forEach(r => {
-            const key = (r['ResultType'] || '') + '_' + (r['ResultId'] || '');
-            map[key] = {
-                tool:     r['TypeTool'] || '',
-                time:     r['TimeToCook(sec)'] || '',
-                ing1Type: r['Ingredient1Type'] || '', ing1Id: r['Ingredient1Id'] || '',
-                ing2Type: r['Ingredient2Type'] || '', ing2Id: r['Ingredient2Id'] || '',
-                ing3Type: r['Ingredient3Type'] || '', ing3Id: r['Ingredient3Id'] || '',
+            if (!r.itemID) return;
+            map[r.itemID] = {
+                tool:        r.tool || '',
+                time:        r.cooking_time || '',
+                ingredients: r.ingredients || '',
             };
         });
         return map;
     }
 
-    function buildRecipeRows(itemFood, formulaMap) {
-        const counter = createChainCounter();
-        return itemFood.map(item => {
+    function buildRecipeRows(itemData, formulaMap) {
+        const foodItems = itemData.filter(r => r.type === 'Food');
+        const counter   = createChainCounter();
+        return foodItems.map(item => {
             const chain = counter.count(item.type);
-            const key   = (item.type || '') + '_' + (item.id || '');
-            const f     = formulaMap[key] || null;
+            const f     = formulaMap[item.itemID] || null;
 
             const statusBadge = f
                 ? badge('✓ Active',  'rgba(34,197,94,0.12)',  '#22c55e88', '#4ade80')
@@ -227,14 +277,12 @@ const ItemEncyclopedia = (() => {
                 ? badge(f.tool, 'rgba(99,102,241,0.15)', '#6366f188', '#818cf8')
                 : '—';
 
-            const ings = f
-                ? [buildIngCell(f.ing1Type, f.ing1Id),
-                   buildIngCell(f.ing2Type, f.ing2Id),
-                   buildIngCell(f.ing3Type, f.ing3Id)].filter(Boolean).join('') || '—'
+            const ings = f?.ingredients
+                ? f.ingredients.split(',').map(id => buildIngCell('', id.trim())).join('') || '—'
                 : '—';
 
             return {
-                chain, type: item.type || '', id: item.id || '',
+                chain, type: item.type || '', id: item.itemID || '',
                 name: item.name_item || '', sell_price: item.sell_price || '',
                 tool: f?.tool || '', time: f?.time || '',
                 hasRecipe: !!f,
@@ -242,7 +290,7 @@ const ItemEncyclopedia = (() => {
                     <td>${statusBadge}</td>
                     <td class="mono" style="color:var(--text-muted);text-align:center">${chain}</td>
                     <td style="color:var(--accent)">${item.type || ''}</td>
-                    <td class="mono" style="color:var(--energy)">${item.id || ''}</td>
+                    <td class="mono" style="color:var(--energy)">${item.itemID || ''}</td>
                     <td>${item.name_item || ''}</td>
                     <td class="mono">${item.sell_price || ''}</td>
                     <td>${toolBadge}</td>
@@ -256,7 +304,7 @@ const ItemEncyclopedia = (() => {
     function initRecipes() {
         const data       = window.GameData;
         const formulaMap = buildFormulaMap(data.formuaRecipes || []);
-        const allRows    = buildRecipeRows(data.itemFood || [], formulaMap);
+        const allRows    = buildRecipeRows(data.itemData || [], formulaMap);
 
         const activeCount  = allRows.filter(r => r.hasRecipe).length;
         const missingCount = allRows.length - activeCount;
@@ -308,30 +356,31 @@ const ItemEncyclopedia = (() => {
     // SUB-TAB 4: TOOL
     // ═════════════════════════════════════════════════════════════════════════
 
-    function buildMergeItemRows(items) {
+    function buildItemTypeRows(itemData, filterType) {
+        const items   = itemData.filter(r => r.type === filterType);
         const counter = createChainCounter();
         return items.map(item => {
             const chain = counter.count(item.type);
             return {
-                chain, type: item.type || '', id: item.id || '',
-                name: item.name_item || '', merge_to: item.merge_to || '',
-                sell_price: item.sell_price || '', sum_merge: item.sum_merge || '',
+                chain, type: item.type || '', id: item.itemID || '',
+                name: item.name_item || '', tier: item.tier || '',
+                sell_price: item.sell_price || '', energy_cost: item.energy_cost || '',
                 html: `<tr>
                     <td class="mono" style="color:var(--text-muted);text-align:center">${chain}</td>
                     <td style="color:var(--accent)">${item.type || ''}</td>
-                    <td class="mono" style="color:var(--energy)">${item.id || ''}</td>
+                    <td class="mono" style="color:var(--energy)">${item.itemID || ''}</td>
                     <td>${item.name_item || ''}</td>
-                    <td class="mono" style="color:var(--text-muted)">${item.merge_to || ''}</td>
+                    <td class="mono" style="color:var(--text-muted)">${item.tier || ''}</td>
                     <td class="mono">${item.sell_price || ''}</td>
-                    <td class="mono">${item.sum_merge || ''}</td>
-                    <td style="text-align:center">${sellBadge(item.can_sell)}</td>
+                    <td class="mono">${item.energy_cost || ''}</td>
+                    <td style="text-align:center">${item.cannot_merge === 'true' ? '✗' : '✓'}</td>
                 </tr>`,
             };
         });
     }
 
-    function initSubTabMergeList({ dataKey, totalId, filterTypeId, searchId, resultCountId, tableId, tbodyId, colSpan }) {
-        const allRows = buildMergeItemRows(window.GameData[dataKey] || []);
+    function initSubTabMergeList({ filterType, totalId, filterTypeId, searchId, resultCountId, tableId, tbodyId, colSpan }) {
+        const allRows = buildItemTypeRows(window.GameData.itemData || [], filterType);
         setText(totalId, allRows.length.toLocaleString());
         fillSelect(filterTypeId, [...new Set(allRows.map(r => r.type).filter(Boolean))].sort());
 
@@ -358,7 +407,7 @@ const ItemEncyclopedia = (() => {
 
     function initTool() {
         initSubTabMergeList({
-            dataKey: 'itemTool', totalId: 'tool-total-count',
+            filterType: 'Tool', totalId: 'tool-total-count',
             filterTypeId: 'tool-filter-type', searchId: 'tool-search',
             resultCountId: 'tool-result-count', tableId: 'tool-table',
             tbodyId: 'tool-body', colSpan: 8,
@@ -369,28 +418,28 @@ const ItemEncyclopedia = (() => {
     // SUB-TAB 5: OTHER ITEMS
     // ═════════════════════════════════════════════════════════════════════════
 
-    function buildOtherRows(data) {
+    function buildOtherRows(itemData) {
         const allRows = [];
-        OTHER_SOURCES.forEach(({ key, label, color }) => {
+        OTHER_TYPES.forEach(({ type, label, color }) => {
             const srcBadge = badge(label, color + '22', color + '88', color);
             const counter  = createChainCounter();
-            (data[key] || []).forEach(item => {
+            itemData.filter(r => r.type === type).forEach(item => {
                 const chain = counter.count(item.type);
                 allRows.push({
                     sourceLabel: label, color, chain,
-                    type: item.type || '', id: item.id || '',
-                    name: item.name_item || '', merge_to: item.merge_to || '',
-                    sell_price: item.sell_price || '', sum_merge: item.sum_merge || '',
+                    type: item.type || '', id: item.itemID || '',
+                    name: item.name_item || '', tier: item.tier || '',
+                    sell_price: item.sell_price || '', energy_cost: item.energy_cost || '',
                     html: `<tr>
                         <td>${srcBadge}</td>
                         <td class="mono" style="color:var(--text-muted);text-align:center">${chain}</td>
                         <td style="color:var(--accent)">${item.type || ''}</td>
-                        <td class="mono" style="color:var(--energy)">${item.id || ''}</td>
+                        <td class="mono" style="color:var(--energy)">${item.itemID || ''}</td>
                         <td>${item.name_item || ''}</td>
-                        <td class="mono" style="color:var(--text-muted)">${item.merge_to || ''}</td>
+                        <td class="mono" style="color:var(--text-muted)">${item.tier || ''}</td>
                         <td class="mono">${item.sell_price || ''}</td>
-                        <td class="mono">${item.sum_merge || ''}</td>
-                        <td style="text-align:center">${sellBadge(item.can_sell)}</td>
+                        <td class="mono">${item.energy_cost || ''}</td>
+                        <td style="text-align:center">${item.cannot_merge === 'true' ? '✗' : '✓'}</td>
                     </tr>`,
                 });
             });
@@ -399,7 +448,7 @@ const ItemEncyclopedia = (() => {
     }
 
     function initOther() {
-        const allRows = buildOtherRows(window.GameData);
+        const allRows = buildOtherRows(window.GameData.itemData || []);
         setText('other-total-count', allRows.length.toLocaleString());
         fillSelect('other-filter-type', [...new Set(allRows.map(r => r.type).filter(Boolean))].sort());
 
@@ -437,16 +486,19 @@ const ItemEncyclopedia = (() => {
     }
 
     function updateGlobalStats() {
-        const d = window.GameData;
-        setText('stat-merge',     (d.itemRaw?.length || 0).toLocaleString());
+        const d    = window.GameData;
+        const items = d.itemData || [];
+        const byType = type => items.filter(r => r.type === type).length;
+
+        setText('stat-merge',     byType('Raw').toLocaleString());
         setText('stat-generator', countUniqueGenerators(d.rateGenerator || []).toLocaleString());
-        setText('stat-recipe',    (d.itemFood?.length || 0).toLocaleString());
-        setText('stat-tool',      (d.itemTool?.length || 0).toLocaleString());
-        setText('stat-other',     OTHER_SOURCES.reduce((s, { key }) => s + (d[key]?.length || 0), 0).toLocaleString());
+        setText('stat-recipe',    byType('Food').toLocaleString());
+        setText('stat-tool',      byType('Tool').toLocaleString());
+        setText('stat-other',     OTHER_TYPES.reduce((s, { type }) => s + byType(type), 0).toLocaleString());
 
         const statusEl = $('data-status');
         if (!statusEl) return;
-        const ok = (d.itemRaw?.length || 0) > 0;
+        const ok = items.length > 0;
         statusEl.textContent = ok ? '✓ Data loaded' : '⚠ Chạy generate_data.py';
         statusEl.style.color = ok ? 'var(--success)' : 'var(--warning)';
     }

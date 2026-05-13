@@ -1,0 +1,335 @@
+﻿itemID,name_item,tier,cannot_merge,sell_price,energy_cost,time_point
+100101,Drink Generator,1,false,0,0.0,0
+100102,Drink Generator,2,false,0,0.0,0
+100103,Drink Generator,3,false,0,0.0,0
+100104,Drink Generator,4,false,0,0.0,0
+100105,Drink Generator,5,false,0,0.0,0
+100106,Drink Generator,6,false,0,0.0,0
+100107,Drink Generator,7,false,0,0.0,0
+100108,Drink Generator,8,false,0,0.0,0
+100109,Drink Generator,9,true,0,0.0,0
+100201,Fruit and Sugar Generator,1,false,0,0.0,0
+100202,Fruit and Sugar Generator,2,false,0,0.0,0
+100203,Fruit and Sugar Generator,3,false,0,0.0,0
+100204,Fruit and Sugar Generator,4,false,0,0.0,0
+100205,Fruit and Sugar Generator,5,false,0,0.0,0
+100206,Fruit and Sugar Generator,6,false,0,0.0,0
+100207,Fruit and Sugar Generator,7,false,0,0.0,0
+100208,Fruit and Sugar Generator,8,false,0,0.0,0
+100209,Fruit and Sugar Generator,9,true,0,0.0,0
+100301,Protein Generator,1,false,0,0.0,0
+100302,Protein Generator,2,false,0,0.0,0
+100303,Protein Generator,3,false,0,0.0,0
+100304,Protein Generator,4,false,0,0.0,0
+100305,Protein Generator,5,false,0,0.0,0
+100306,Protein Generator,6,false,0,0.0,0
+100307,Protein Generator,7,false,0,0.0,0
+100308,Protein Generator,8,false,0,0.0,0
+100309,Protein Generator,9,true,0,0.0,0
+100401,Vegetable Generator,1,false,0,0.0,0
+100402,Vegetable Generator,2,false,0,0.0,0
+100403,Vegetable Generator,3,false,0,0.0,0
+100404,Vegetable Generator,4,false,0,0.0,0
+100405,Vegetable Generator,5,false,0,0.0,0
+100406,Vegetable Generator,6,false,0,0.0,0
+100407,Vegetable Generator,7,false,0,0.0,0
+100408,Vegetable Generator,8,false,0,0.0,0
+100409,Vegetable Generator,9,true,0,0.0,0
+100501,Seafood Generator,1,false,0,0.0,0
+100502,Seafood Generator,2,false,0,0.0,0
+100503,Seafood Generator,3,false,0,0.0,0
+100504,Seafood Generator,4,false,0,0.0,0
+100505,Seafood Generator,5,false,0,0.0,0
+100506,Seafood Generator,6,false,0,0.0,0
+100507,Seafood Generator,7,false,0,0.0,0
+100508,Seafood Generator,8,false,0,0.0,0
+100509,Seafood Generator,9,true,0,0.0,0
+200101,Juicer,1,false,0,0.0,0
+200102,Juicer,2,false,0,0.0,0
+200103,Juicer,3,false,0,0.0,0
+200104,Juicer,4,false,0,0.0,0
+200105,Juicer,5,false,0,0.0,0
+200106,Juicer,6,false,0,0.0,0
+200107,Juicer,7,false,0,0.0,0
+200108,Juicer,8,false,0,0.0,0
+200109,Juicer,9,true,0,0.0,0
+200201,Chef Counter,1,false,0,0.0,0
+200202,Chef Counter,2,false,0,0.0,0
+200203,Chef Counter,3,false,0,0.0,0
+200204,Chef Counter,4,false,0,0.0,0
+200205,Chef Counter,5,false,0,0.0,0
+200206,Chef Counter,6,false,0,0.0,0
+200207,Chef Counter,7,false,0,0.0,0
+200208,Chef Counter,8,false,0,0.0,0
+200209,Chef Counter,9,true,0,0.0,0
+200301,Grill,1,false,0,0.0,0
+200302,Grill,2,false,0,0.0,0
+200303,Grill,3,false,0,0.0,0
+200304,Grill,4,false,0,0.0,0
+200305,Grill,5,false,0,0.0,0
+200306,Grill,6,false,0,0.0,0
+200307,Grill,7,false,0,0.0,0
+200308,Grill,8,false,0,0.0,0
+200309,Grill,9,true,0,0.0,0
+200401,Pan,1,false,0,0.0,0
+200402,Pan,2,false,0,0.0,0
+200403,Pan,3,false,0,0.0,0
+200404,Pan,4,false,0,0.0,0
+200405,Pan,5,false,0,0.0,0
+200406,Pan,6,false,0,0.0,0
+200407,Pan,7,false,0,0.0,0
+200408,Pan,8,false,0,0.0,0
+200409,Pan,9,true,0,0.0,0
+200501,Oven,1,false,0,0.0,0
+200502,Oven,2,false,0,0.0,0
+200503,Oven,3,false,0,0.0,0
+200504,Oven,4,false,0,0.0,0
+200505,Oven,5,false,0,0.0,0
+200506,Oven,6,false,0,0.0,0
+200507,Oven,7,false,0,0.0,0
+200508,Oven,8,false,0,0.0,0
+200509,Oven,9,true,0,0.0,0
+300101,Gold,1,false,0,0.0,0
+300102,Gold,2,false,0,0.0,0
+300103,Gold,3,false,0,0.0,0
+300104,Gold,4,false,0,0.0,0
+300105,Gold,5,true,0,0.0,0
+300201,Energy,1,false,0,0.0,0
+300202,Energy,2,false,0,0.0,0
+300203,Energy,3,false,0,0.0,0
+300204,Energy,4,false,0,0.0,0
+300205,Energy,5,true,0,0.0,0
+300301,Diamond,1,false,0,0.0,0
+300302,Diamond,2,false,0,0.0,0
+300303,Diamond,3,false,0,0.0,0
+300304,Diamond,4,false,0,0.0,0
+300305,Diamond,5,true,0,0.0,0
+400101,Blueberry Jam,1,true,0,1.25,165
+400102,Strawberry jam,2,true,0,2.5,330
+400103,Orange  Marmalade,3,true,0,5,645
+400104,Apple Jam,4,true,0,10,1305
+400105,Yogurt Strawberry Blueberry,5,true,1,43.75,5685
+400106,Yogurt Banana Strawberry,6,true,1,62.5,8130
+400107,Sunrise Mango Lassi,7,true,10,421,54735
+400108,Yogurt Juice mix,8,true,26,1000,130005
+400109,Lemon Jam,9,true,4,160,20805
+400201,Blueberry Juice,1,true,0,1.25,165
+400202,Strawberry Juice,2,true,0,2.5,330
+400203,Orange Juice,3,true,0,5,645
+400204,Apple Juice,4,true,0,10,1305
+400205,Pineapple Juice,5,true,33,1280,166395
+400206,Watermelon Juice,6,true,66,2560,332805
+400207,Blueberry Lemon Juice,7,true,2,81.25,10560
+400208,Orange Apple Juice,8,true,0,15,1950
+400209,Purple Power,9,true,0,21.25,2760
+400210,Spinach Apple Pineapple Juice,10,true,50,1930,250905
+400211,Detox & Clear Skin,11,true,0,31.25,4065
+400212,Boost Immunity & glow,12,true,2,95,12345
+400213,Carrot Apple Juice,13,true,0,20,2595
+400214,"Apple, Orange & Lemon Juice",14,true,4,162.5,21120
+400215,Tropical Sunrise,15,true,2,95,12345
+400216,Pink Lemonade,16,true,2,102.5,13320
+400301,Latte,1,true,0,25,3255
+400302,Caramel Macchiato,2,true,1,65,8445
+400303,Frappe,3,true,1,45,5850
+400304,Iced Coffee Cream,4,true,2,105,13650
+400305,Caramel Frappe,5,true,3,135,17550
+400401,Grilled Sausage,1,true,0,2.5,330
+400402,Grilled Ham,2,true,0,5,645
+400403,Grilled Pork Belly,3,true,0,10,1305
+400404,Grilled Pork Knuckle,4,true,0,20,2595
+400405,"
+Grilled Pork Ribs",5,true,1,40,5205
+400406,Grilled Beef Ribs,6,true,4,160,20805
+400407,Beef Steak & Potato,7,true,11,440,57195
+400408,Grilled Chicken Wing,8,true,0,20,2595
+400409,Grilled Chicken,9,true,2,80,10395
+400410,Grilled Chicken Breast,10,true,0,10,1305
+400411,Grilled Chicken Drumstick,11,true,1,40,5205
+400412,Grilled Red Onion and Bell Pepper,12,true,8,345,44850
+400413,Grilled Potato Cheese,13,true,17,680,88395
+400414,Grilled Cauliflower,14,true,8,320,41595
+400415,Grilled Eggplant,15,true,2,80,10395
+400416,Grilled Squid,16,true,1,40,5205
+400417,Grilled Shrimp,17,true,2,80,10395
+400418,Grilled Octopus,18,true,8,320,41595
+400419,Grilled Sea Bream,19,true,0,10,1305
+400420,Grilled Chicken Breast & Bell Pepper,20,true,0,30,3900
+400421,Grilled Mackerel,21,true,2,82.5,10725
+400422,BBQ Duck,22,true,10,400,52005
+400423,Grilled Corn,23,true,24,960,124800
+400424,Surf & Turf,24,true,36,1400,181995
+400425,Grilled Lemon Butter Scallops And Asparagus,25,true,31,1200,156000
+400426,Grilled Turkey Leg,26,true,135,5200,676005
+400501,Stir-fried Egg,1,true,0,5,645
+400502,Stir-fried Clam,2,true,0,5,645
+400503,Scallops with Cauliflower,3,true,25,970,126105
+400504,Creamy Chicken Breast,4,true,6,250,32505
+400505,Fried Brocoli,5,true,4,160,20805
+400506,Fried Asparagus,6,true,4,160,20805
+400507,Pan-seared Cod with Kale,7,true,9,360,46800
+400508,Shrimp with Asparagus,8,true,6,240,31200
+400509,Beef Asparagus Stir Fry,9,true,14,560,72795
+400510,Fried Salmon,10,true,4,160,20805
+400511,Citrus Sea Bream,11,true,0,25,3255
+400601,Tomato Slices,1,true,0,2.5,330
+400602,Onion Slices,2,true,0,5,645
+400603,Cucumber Slices,3,true,0,1.25,165
+400604,Shredded Lettuce,4,true,0,10,1305
+400605,Caprese Salad,5,true,16,642.5,83520
+400606,Apple Blue Cheese Salad,6,true,67,2580,335400
+400607,Shrimp Cocktail,7,true,2,90,11700
+400608,American Potato Salad,8,true,34,1325,172245
+400609,Cabbage Slaw,9,true,1,65,8445
+400701,Deconstructed Cheesecake,1,true,37,1450,188505
+400702,Apple Compote,2,true,9,350,45495
+400703,Berry & Coconut Trifle,3,true,3,121.25,15765
+400704,Passion Fruit Panna Cotta,4,true,7,290,37695
+400705,Banana Split,5,true,18,700,91005
+400706,Burnt Cream,6,true,35,1380,179400
+400801,Corn with Cheese,1,true,158,6080,790395
+700101,Coffee Bean,1,false,0,1.25,150
+700102,Ground Coffee,2,false,0,2.5,300
+700103,Cup of Coffee,3,false,0,5,600
+700104,Iced Coffee,4,false,0,10,1200
+700105,Coffee - to - Go,5,false,0,20,2400
+700106,Iced Coffee - to - Go,6,false,0,40,4800
+700107,Cold Brew,7,false,1,80,9600
+700108,Pour ove coffee,8,false,3,160,19200
+700109,French press,9,false,7,320,38400
+700110,Aero press,10,false,15,640,76800
+700111,Moka Pot,11,false,30,1280,153600
+700112,Syphon coffee,12,true,61,2560,307200
+700201,Glass of Water,1,false,0,10.0,1200
+700202,Citrus Soda,2,false,0,20,2400
+700203,Bottled Lemon Tea,3,false,0,40,4800
+700204,Soda Water,4,false,1,80,9600
+700205,Lemon-Lime Soda,5,false,3,160,19200
+700206,Sweet Cola,6,false,7,320,38400
+700207,Orange Soda,7,false,15,640,76800
+700208,Classic Cola,8,false,30,1280,153600
+700209,Lon Redbull (xanh trắng),9,false,61,2560,307200
+700210,Lon Monster Energy,10,true,122,5120,614400
+700301,Ice Cube,1,false,0,10.0,1200
+700302,Milk Bottle,2,false,0,20,2400
+700303,Yogurt,3,false,0,40,4800
+700304,Fresh Cream,4,false,1,80,9600
+700305,Cheddar Cheese,5,false,3,160,19200
+700306,Butter,6,false,7,320,38400
+700307,Mozzarella,7,false,15,640,76800
+700308,Brie Cheese,8,false,30,1280,153600
+700309,Blue Cheese,9,false,61,2560,307200
+700310,Truffle Cheese,10,true,122,5120,614400
+700401,Glass Bottle,1,false,0,21,2520
+700402,Glass Bowl,2,false,1,42,5040
+700403,Glass Cup,3,false,2,84,10080
+700404,Crystal Plate,4,false,4,168,20160
+700405,Crystal Vase,5,false,8,336,40320
+700406,Crystal Cake Stand,6,true,16,672,80640
+700501,Blueberry,1,false,0,1.25,150
+700502,Strawberry,2,false,0,2.5,300
+700503,Orange,3,false,0,5,600
+700504,Apple,4,false,0,10,1200
+700505,Banana,5,false,0,20,2400
+700506,Coconut,6,false,0,40,4800
+700507,Lemon,7,false,1,80,9600
+700508,Passion Fruit,8,false,3,160,19200
+700509,Mango,9,false,7,320,38400
+700510,Pomegranate,10,false,15,640,76800
+700511,Pineapple,11,false,30,1280,153600
+700512,Watermelon,12,true,61,2560,307200
+700601,Sugarcane,1,false,0,5,600
+700602,Sugar,2,false,0,10,1200
+700603,Brown Sugar,3,false,0,20,2400
+700604,Caramel,4,false,0,40,4800
+700605,Honey,5,false,1,80,9600
+700606,Candy,6,false,3,160,19200
+700607,Marshmallow,7,false,7,320,38400
+700608,Scoop of Ice Cream,8,true,15,640,76800
+700701,Coconut Water,1,false,0,41,4920
+700702,Coconut Milk,2,false,1,82,9840
+700703,Coconut Jelly,3,false,3,164,19680
+700704,Coconut Ice Cream,4,false,7,328,39360
+700705,Coconut Soda,5,false,15,656,78720
+700706,Coconut Candy,6,false,31,1312,157440
+700707,Coconut Pudding,7,true,62,2624,314880
+700801,Coconut Shell,1,false,0,41,4920
+700802,Coconut Shell Plate,2,false,1,82,9840
+700803,Coconut Shell Spoon,3,false,3,164,19680
+700804,Coconut Shell Cup,4,false,7,328,39360
+700805,Coconut Shell Dish,5,false,15,656,78720
+700806,Coconut Shell Bowl,6,false,31,1312,157440
+700807,Coconut Shell Pot,7,true,62,2624,314880
+700901,Ground Meat,1,false,0,1.25,150
+700902,Fresh Sausage,2,false,0,2.5,300
+700903,Ham,3,false,0,5,600
+700904,Pork Belly,4,false,0,10,1200
+700905,Pork Knuckle,5,false,0,20,2400
+700906,Pork Ribs,6,false,0,40,4800
+700907,Beef Tenderloin,7,false,1,80,9600
+700908,Beef Ribs,8,false,3,160,19200
+700909,Diced Goat Meat,9,false,7,320,38400
+700910,Lamb Rack,10,false,15,640,76800
+700911,Whole Goat Leg,11,false,30,1280,153600
+700912,Whole Lamb,12,true,61,2560,307200
+701001,Chicken Egg,1,false,0,5,600
+701002,Chicken Breast,2,false,0,10,1200
+701003,Chicken Wing,3,false,0,20,2400
+701004,Chicken Drumstick,4,false,0,40,4800
+701005,Whole Chicken,5,false,1,80,9600
+701006,Duck Breast,6,false,3,160,19200
+701007,Whole Duck,7,false,7,320,38400
+701008,Whole Goose,8,false,15,640,76800
+701009,Quail,9,false,30,1280,153600
+701010,Whole Pheasant,10,false,61,2560,307200
+701011,Turkey,11,true,122,5120,614400
+701101,Cucumber,1,false,0,1.25,150
+701102,Tomato,2,false,0,2.5,300
+701103,Red Onion,3,false,0,5,600
+701104,Carrot,4,false,0,10,1200
+701105,Bell Pepper,5,false,0,20,2400
+701106,Potato,6,false,0,40,4800
+701107,Eggplant,7,false,1,80,9600
+701108,Asparagus,8,false,3,160,19200
+701109,Beetroot,9,false,7,320,38400
+701110,Corn,10,false,15,640,76800
+701111,Okra,11,false,30,1280,153600
+701112,Peas,12,true,61,2560,307200
+701201,Sprouts,1,false,0,5.0,600
+701202,Lettuce,2,false,0,10,1200
+701203,Kale,3,false,0,20,2400
+701204,Cabbage,4,false,0,40,4800
+701205,Red Cabbage,5,false,1,80,9600
+701206,Broccoli,6,false,3,160,19200
+701207,Cauliflower,7,false,7,320,38400
+701208,Spinach,8,false,15,640,76800
+701209,Celery,9,false,30,1280,153600
+701210,Arugula,10,false,61,2560,307200
+701211,Artichoke,11,false,122,5120,614400
+701212,Truffle Mushroom,12,true,245,10240,1228800
+701301,Anchovy,1,false,0,1.25,150
+701302,Mackerel,2,false,0,2.5,300
+701303,Tilapia,3,false,0,5.0,600
+701304,Sea Bream,4,false,0,10.0,1200
+701305,Cod,5,false,0,20.0,2400
+701306,Halibut,6,false,0,40.0,4800
+701307,Salmon,7,false,1,80.0,9600
+701308,Sae Bass,8,false,3,160.0,19200
+701309,Sturgeon,9,false,7,320.0,38400
+701310,Red Snapper,10,false,15,640.0,76800
+701311,Black Cod,11,false,30,1280.0,153600
+701312,Bluefin Tuna,12,true,61,2560.0,307200
+701401,Clam,1,false,0,5.0,600
+701402,Mussel,2,false,0,10.0,1200
+701403,Oyster,3,false,0,20.0,2400
+701404,Squid,4,false,0,40.0,4800
+701405,Shrimp,5,false,1,80.0,9600
+701406,Crab,6,false,3,160.0,19200
+701407,Octopus,7,false,7,320.0,38400
+701408,Scallop,8,false,15,640.0,76800
+701409,Lobster,9,false,30,1280.0,153600
+701410,King Crab,10,false,61,2560.0,307200
+701411,Abalone,11,true,122,5120.0,614400
+500101,CardPlus 8,1,false,0,0,0
+500102,CardPlus 16,2,false,0,0,0
+500103,CardPlus 32,3,true,0,0,0

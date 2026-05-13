@@ -32,6 +32,10 @@
                 <span class="nav-icon">🗃️</span>
                 <span class="nav-text">Game Data</span>
             </button>
+            <button class="nav-item" data-tab="order-analysis">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Order Analysis</span>
+            </button>
         </nav>
     </aside>
 
@@ -135,15 +139,14 @@
                         <div class="table-container" style="max-height:600px;">
                             <table class="data-table" id="merge-table">
                                 <thead><tr>
-                                    <th data-sort="chain">CHUỖI</th>
-                                    <th data-sort="type">TYPE</th>
-                                    <th data-sort="id">ID</th>
+                                    <th data-sort="chain" style="width:4rem;text-align:center">CHUỖI</th>
+                                    <th data-sort="genType">GENERATOR</th>
+                                    <th data-sort="id" style="width:6rem">ID</th>
                                     <th data-sort="name">TÊN ITEM</th>
-                                    <th data-sort="merge_to">MERGE TO</th>
-                                    <th data-sort="sell_price">GIÁ BÁN</th>
-                                    <th data-sort="sum_merge">SUM MERGE</th>
-                                    <th data-sort="energy">ENERGY COST ⚡</th>
-                                    <th>BÁN ĐƯỢC</th>
+                                    <th data-sort="tier" style="width:4rem;text-align:center">TIER</th>
+                                    <th data-sort="sell_price" style="width:6rem;text-align:right">GIÁ BÁN</th>
+                                    <th data-sort="energy" style="width:8rem;text-align:right">ENERGY COST ⚡</th>
+                                    <th style="width:5rem;text-align:center">BÁN ĐƯỢC</th>
                                 </tr></thead>
                                 <tbody id="merge-body"></tbody>
                             </table>
@@ -395,12 +398,12 @@
                         <div class="table-container" style="max-height:600px;">
                             <table class="data-table" id="eraw-table">
                                 <thead><tr>
-                                    <th data-sort="type">TYPE</th>
+                                    <th data-sort="genType">GENERATOR</th>
                                     <th data-sort="itemId">ID</th>
                                     <th data-sort="itemName">TÊN ITEM</th>
-                                    <th data-sort="sumMerge">SUM MERGE</th>
+                                    <th data-sort="tier" style="text-align:center">TIER</th>
                                     <th data-sort="source">NGUỒN</th>
-                                    <th data-sort="energy">⚡ ENERGY</th>
+                                    <th data-sort="energy" style="text-align:right">⚡ ENERGY</th>
                                 </tr></thead>
                                 <tbody id="eraw-body"></tbody>
                             </table>
@@ -450,14 +453,13 @@
                         <div class="table-container" style="max-height:600px;">
                             <table class="data-table" id="erecipe-table">
                                 <thead><tr>
-                                    <th data-sort="tool">TOOL</th>
-                                    <th data-sort="resultType">TYPE</th>
-                                    <th data-sort="resultId">ID</th>
+                                    <th data-sort="tool" style="width:6rem">TOOL</th>
+                                    <th data-sort="resultId" style="width:5rem">ID</th>
                                     <th data-sort="resultName">TÊN MÓN</th>
-                                    <th data-sort="ing1">NGUYÊN LIỆU 1</th>
-                                    <th data-sort="ing2">NGUYÊN LIỆU 2</th>
-                                    <th data-sort="ing3">NGUYÊN LIỆU 3</th>
-                                    <th data-sort="totalEnergy">⚡ TỔNG ENERGY</th>
+                                    <th>NGUYÊN LIỆU 1</th>
+                                    <th>NGUYÊN LIỆU 2</th>
+                                    <th>NGUYÊN LIỆU 3</th>
+                                    <th data-sort="totalEnergy" style="width:8rem;text-align:right">⚡ TỔNG ENERGY</th>
                                 </tr></thead>
                                 <tbody id="erecipe-body"></tbody>
                             </table>
@@ -501,7 +503,6 @@
                 <div class="encyc-sub-tabs">
                     <button class="encyc-sub-tab active" data-subtab="order-subtab-detail">📋 Order Details</button>
                     <button class="encyc-sub-tab" data-subtab="order-subtab-batch">📦 Batches</button>
-                    <button class="encyc-sub-tab" data-subtab="order-subtab-demand">📊 Top Demand</button>
                 </div>
 
                 <!-- ── SUB-TAB 1: ORDER DETAILS ────────────────────────────── -->
@@ -513,12 +514,6 @@
                         <div class="filter-group">
                             <label>NPC:</label>
                             <select id="order-filter-npc" class="filter-select">
-                                <option value="">Tất cả</option>
-                            </select>
-                        </div>
-                        <div class="filter-group">
-                            <label>Item Type:</label>
-                            <select id="order-filter-type" class="filter-select">
                                 <option value="">Tất cả</option>
                             </select>
                         </div>
@@ -541,7 +536,7 @@
                                     <th data-sort="npc">NPC</th>
                                     <th data-sort="item1Name">ITEM 1</th>
                                     <th>ITEM 2</th>
-                                    <th>REWARDS</th>
+                                    <th data-sort="gold">GOLD</th>
                                 </tr></thead>
                                 <tbody id="order-detail-body"></tbody>
                             </table>
@@ -572,36 +567,6 @@
                                     <th>COMPLETION REWARDS</th>
                                 </tr></thead>
                                 <tbody id="batch-body"></tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ── SUB-TAB 3: TOP DEMAND ──────────────────────────────── -->
-                <div id="order-subtab-demand" class="encyc-subtab-content">
-                    <div class="glass filter-bar">
-                        <div class="filter-group">
-                            <input type="text" id="demand-search" placeholder="🔍 Tên hoặc Type..." class="search-input" style="min-width:200px;">
-                        </div>
-                        <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">Unique items demanded: <strong id="demand-total-items">0</strong></span>
-                    </div>
-
-                    <!-- Chart -->
-                    <div class="data-table-card glass" style="margin-bottom:1.25rem;padding:1.25rem;">
-                        <canvas id="demand-chart" style="max-height:280px;"></canvas>
-                    </div>
-
-                    <div class="data-table-card glass">
-                        <div class="table-container" style="max-height:500px;">
-                            <table class="data-table" id="demand-table">
-                                <thead><tr>
-                                    <th data-sort="rank">#</th>
-                                    <th data-sort="type">TYPE</th>
-                                    <th data-sort="name">TÊN ITEM</th>
-                                    <th data-sort="count">ORDER COUNT</th>
-                                    <th data-sort="totalAmt">TOTAL QTY</th>
-                                </tr></thead>
-                                <tbody id="demand-body"></tbody>
                             </table>
                         </div>
                     </div>
@@ -711,17 +676,135 @@
 
         </section><!-- /game-data -->
 
+        <!-- ===================== TAB: ORDER ANALYSIS ===================== -->
+        <section id="order-analysis" class="tab-view">
+            <div class="view-header">
+                <h1>📊 Order Analysis</h1>
+                <p>Visualize orders theo scene, energy cost và độ khó.</p>
+            </div>
+
+            <!-- Stats row -->
+            <div class="stats-row" style="grid-template-columns:repeat(4,1fr);margin-bottom:1.5rem;">
+                <div class="stat-card glass">
+                    <span class="stat-icon">🗺️</span>
+                    <div class="stat-info">
+                        <span class="stat-value mono" id="oa-stat-scenes">0</span>
+                        <span class="stat-label">Scenes</span>
+                    </div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">📦</span>
+                    <div class="stat-info">
+                        <span class="stat-value mono" id="oa-stat-batches">0</span>
+                        <span class="stat-label">Batches</span>
+                    </div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">📋</span>
+                    <div class="stat-info">
+                        <span class="stat-value mono" id="oa-stat-orders">0</span>
+                        <span class="stat-label">Orders</span>
+                    </div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">⚡</span>
+                    <div class="stat-info">
+                        <span class="stat-value mono" id="oa-stat-avg-gold">0</span>
+                        <span class="stat-label">Avg Energy / Order</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter bar -->
+            <div class="glass filter-bar" style="margin-bottom:1.25rem;">
+                <div class="filter-group">
+                    <label>Scene:</label>
+                    <select id="oa-filter-scene" class="filter-select">
+                        <option value="">Tất cả</option>
+                    </select>
+                </div>
+                <div class="filter-group" id="oa-filter-batch-group" style="display:none">
+                    <label>Batch:</label>
+                    <select id="oa-filter-batch" class="filter-select">
+                        <option value="">Tất cả</option>
+                    </select>
+                </div>
+                <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">
+                    <strong id="oa-filter-stat-batches">0</strong> batches &nbsp;·&nbsp;
+                    <strong id="oa-filter-stat-orders">0</strong> orders
+                </span>
+            </div>
+
+            <!-- Inner sub-tabs -->
+            <div class="encyc-sub-tabs">
+                <button class="encyc-sub-tab active" data-subtab="oa-subtab-scene">🗺️ Scene View</button>
+                <button class="encyc-sub-tab" data-subtab="oa-subtab-demand">📊 Top Demand</button>
+            </div>
+
+            <!-- ── Scene View ── -->
+            <div id="oa-subtab-scene" class="encyc-subtab-content active">
+                <!-- Difficulty chart -->
+                <div class="data-table-card glass" style="margin-bottom:1.5rem;padding:1.5rem;">
+                    <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
+                        <span style="font-size:0.8rem;color:var(--text-muted);font-weight:600;letter-spacing:0.05em;text-transform:uppercase">Difficulty Curve — Energy Cost per Order</span>
+                    </div>
+                    <div id="oa-chart-legend"></div>
+                    <canvas id="oa-difficulty-chart" style="max-height:280px;"></canvas>
+                </div>
+                <!-- Batch cards -->
+                <div id="oa-batches-container"></div>
+            </div>
+
+            <!-- ── Top Demand ── -->
+            <div id="oa-subtab-demand" class="encyc-subtab-content">
+                <div class="glass filter-bar">
+                    <div class="filter-group">
+                        <input type="text" id="oa-demand-search" placeholder="🔍 Tên item hoặc Type..." class="search-input" style="min-width:220px;">
+                    </div>
+                    <span style="margin-left:auto;font-size:0.78rem;color:var(--text-muted);">
+                        Unique items: <strong id="oa-demand-total">0</strong>
+                    </span>
+                </div>
+                <div class="data-table-card glass" style="margin-bottom:1.25rem;padding:1.5rem;">
+                    <canvas id="oa-demand-chart" style="max-height:300px;"></canvas>
+                </div>
+                <div class="data-table-card glass">
+                    <div class="table-container" style="max-height:520px;">
+                        <table class="data-table" id="oa-demand-table">
+                            <thead><tr>
+                                <th data-sort="rank">#</th>
+                                <th data-sort="name">TÊN ITEM</th>
+                                <th data-sort="id">ID</th>
+                                <th data-sort="count">ORDER COUNT</th>
+                                <th data-sort="totalAmt">TOTAL QTY</th>
+                            </tr></thead>
+                            <tbody id="oa-demand-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- /order-analysis -->
+
         </div>
     </main>
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script src="js/data.js"></script>
+    <script src="js/data/data-init.js"></script>
+    <script src="js/data/data-items.js"></script>
+    <script src="js/data/data-generators.js"></script>
+    <script src="js/data/data-orders.js"></script>
+    <script src="js/data/data-buildup.js"></script>
+    <script src="js/data/data-boxes.js"></script>
+    <script src="js/data/data-iap.js"></script>
+    <script src="js/globalData.js"></script>
     <script src="js/tableUtils.js"></script>
     <script src="js/itemEncyclopedia.js"></script>
     <script src="js/energyCalc.js"></script>
     <script src="js/orders.js"></script>
+    <script src="js/orderAnalysis.js"></script>
     <script src="js/iapPackages.js"></script>
     <script src="js/app.js"></script>
 </body>

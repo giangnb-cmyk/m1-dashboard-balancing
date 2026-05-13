@@ -124,25 +124,25 @@ const EconomyEngine = (() => {
     const container = document.getElementById('pinch-points');
     if (!container) return;
 
-    // Tính item có sum_merge cao nhất (bottleneck merge chain)
-    const deepItems = db.itemMerge
-      .filter(r => parseInt(r.sum_merge) > 100)
-      .sort((a, b) => parseInt(b.sum_merge) - parseInt(a.sum_merge))
+    // Items có energy_cost cao nhất = bottleneck trong chain merge
+    const deepItems = (db.itemData || [])
+      .filter(r => parseFloat(r.energy_cost) > 0)
+      .sort((a, b) => parseFloat(b.energy_cost) - parseFloat(a.energy_cost))
       .slice(0, 8);
 
     const rows = deepItems.map(r => `
       <tr>
         <td class="primary">${r.name_item || '—'}</td>
         <td class="mono accent-blue">${r.type}</td>
-        <td class="mono accent-gold">${parseInt(r.sum_merge).toLocaleString()}</td>
-        <td><span class="tag tag-red">Merge bottleneck</span></td>
+        <td class="mono accent-gold">${parseFloat(r.energy_cost).toLocaleString()}</td>
+        <td><span class="tag tag-red">High energy cost</span></td>
       </tr>
     `).join('');
 
     container.innerHTML = `
       <div class="table-container">
         <table class="data-table">
-          <thead><tr><th>Item</th><th>Type</th><th>Sum Merges</th><th>Pinch Type</th></tr></thead>
+          <thead><tr><th>Item</th><th>Type</th><th>Energy Cost</th><th>Pinch Type</th></tr></thead>
           <tbody>${rows}</tbody>
         </table>
       </div>

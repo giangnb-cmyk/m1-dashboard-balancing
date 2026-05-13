@@ -4,15 +4,14 @@
  */
 const Encyclopedia = (() => {
 
-  const ITEM_SOURCES = [
-    { key: 'itemMerge',     label: 'Merge Items',  tag: 'tag-blue'  },
-    { key: 'itemGenerator', label: 'Generator',    tag: 'tag-green' },
-    { key: 'itemTool',      label: 'Tool',         tag: 'tag-gold'  },
-    { key: 'itemBooster',   label: 'Booster',      tag: 'tag-gem'   },
-    { key: 'itemFood',      label: 'Food / Drink', tag: 'tag-green' },
-    { key: 'itemCurrency',  label: 'Currency',     tag: 'tag-gold'  },
-    { key: 'itemChest',     label: 'Chest',        tag: 'tag-gray'  },
-  ];
+  const TYPE_TAG = {
+    'Generator': 'tag-green',
+    'Tool':      'tag-gold',
+    'Currency':  'tag-gold',
+    'Food':      'tag-green',
+    'Booster':   'tag-gem',
+    'Raw':       'tag-blue',
+  };
 
   let allItems = [];
   let filteredItems = [];
@@ -22,40 +21,33 @@ const Encyclopedia = (() => {
   // --- Build unified item list ---
 
   function buildItemList(db) {
-    const items = [];
-    ITEM_SOURCES.forEach(src => {
-      const rows = db[src.key] || [];
-      rows.forEach(row => {
-        if (!row.id) return;
-        items.push({
-          id:        row.id,
-          name:      row.name_item || '—',
-          type:      row.type || '—',
-          source:    src.label,
-          sourceTag: src.tag,
-          mergeTo:   row.merge_to || '',
-          initTime:  row.init_time || '',
-          sellPrice: row.sell_price || '',
-          sumMerge:  row.sum_merge || '',
-          canSell:   row.can_sell || '',
-        });
-      });
-    });
-    return items.sort((a, b) => parseInt(a.id) - parseInt(b.id));
+    return (db.itemData || [])
+      .filter(row => row.itemID)
+      .map(row => ({
+        id:          row.itemID,
+        name:        row.name_item || '—',
+        type:        row.type || '—',
+        tier:        row.tier || '',
+        sourceTag:   TYPE_TAG[row.type] || 'tag-gray',
+        cannotMerge: row.cannot_merge === 'true',
+        sellPrice:   row.sell_price || '',
+        energyCost:  row.energy_cost || '',
+        timePoint:   row.time_point || '',
+      }))
+      .sort((a, b) => parseInt(a.id) - parseInt(b.id));
   }
 
   // --- Filter logic ---
 
-  function applyFilter(query, typeFilter, sourceFilter) {
+  function applyFilter(query, typeFilter) {
     const q = query.toLowerCase().trim();
     filteredItems = allItems.filter(item => {
       const matchQuery = !q
         || item.name.toLowerCase().includes(q)
         || item.id.includes(q)
         || item.type.toLowerCase().includes(q);
-      const matchType   = !typeFilter   || item.type === typeFilter;
-      const matchSource = !sourceFilter || item.source === sourceFilter;
-      return matchQuery && matchType && matchSource;
+      const matchType = !typeFilter || item.type === typeFilter;
+      return matchQuery && matchType;
     });
     currentPage = 0;
     renderTable();
@@ -80,11 +72,11 @@ const Encyclopedia = (() => {
       <tr>
         <td class="mono" style="color:#475569">${item.id}</td>
         <td class="primary">${item.name}</td>
-        <td class="text-secondary text-sm">${item.type}</td>
-        <td><span class="tag ${item.sourceTag}">${item.source}</span></td>
-        <td class="mono text-xs">${item.mergeTo || '—'}</td>
-        <td class="mono text-xs">${item.sumMerge || '—'}</td>
-        <td class="mono text-xs">${item.initTime ? item.initTime + 's' : '—'}</td>
+        <td><span class="tag ${item.sourceTag}">${item.type}</span></td>
+        <td class="mono text-xs">${item.tier || '—'}</td>
+        <td class="mono text-xs">${item.cannotMerge ? 'No' : 'Yes'}</td>
+        <td class="mono text-xs">${item.energyCost || '—'}</td>
+        <td class="mono text-xs">${item.timePoint || '—'}</td>
         <td class="mono accent-gold text-xs">${item.sellPrice || '—'}</td>
       </tr>
     `).join('');
@@ -120,7 +112,7 @@ const Encyclopedia = (() => {
     wrap.append(prevBtn, pageInfo, nextBtn);
   }
 
-  function populateTypeFilter(db) {
+  function populateTypeFilter() {
     const sel = document.getElementById('filter-type');
     if (!sel) return;
     const types = [...new Set(allItems.map(i => i.type))].sort();
@@ -131,30 +123,14 @@ const Encyclopedia = (() => {
     });
   }
 
-  function populateSourceFilter() {
-    const sel = document.getElementById('filter-source');
-    if (!sel) return;
-    ITEM_SOURCES.forEach(s => {
-      const opt = document.createElement('option');
-      opt.value = s.label; opt.textContent = s.label;
-      sel.appendChild(opt);
-    });
-  }
-
   function bindEvents() {
-    const search  = document.getElementById('encyclopedia-search');
-    const fType   = document.getElementById('filter-type');
-    const fSource = document.getElementById('filter-source');
+    const search = document.getElementById('encyclopedia-search');
+    const fType  = document.getElementById('filter-type');
 
-    const refresh = () => applyFilter(
-      search?.value || '',
-      fType?.value || '',
-      fSource?.value || '',
-    );
+    const refresh = () => applyFilter(search?.value || '', fType?.value || '');
 
     search?.addEventListener('input', refresh);
     fType?.addEventListener('change', refresh);
-    fSource?.addEventListener('change', refresh);
   }
 
   function renderSummaryStats() {
@@ -165,11 +141,10 @@ const Encyclopedia = (() => {
   }
 
   function init(db) {
-    allItems     = buildItemList(db);
+    allItems      = buildItemList(db);
     filteredItems = [...allItems];
 
-    populateTypeFilter(db);
-    populateSourceFilter();
+    populateTypeFilter();
     bindEvents();
     renderSummaryStats();
     renderTable();

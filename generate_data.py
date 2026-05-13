@@ -1,25 +1,36 @@
 """
 generate_data.py
-Đọc tất cả CSV trong thư mục Csv/ và generate ra js/data.js
-chứa window.GameData — để dashboard chạy trực tiếp file:// không cần server.
+Đọc tất cả CSV trong thư mục Csv/ và generate ra js/data/ (nhiều file nhỏ).
+Mỗi file tương ứng một domain, cùng merge vào window.GameData.
 
 Cách dùng:
   python generate_data.py
 
-Output: js/data.js (tự động overwrite mỗi lần chạy)
+Output: js/data/*.js (tự động overwrite mỗi lần chạy)
 """
 
 import csv
 import json
 import os
-import re
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CSV_DIR  = os.path.join(BASE_DIR, 'Csv')
-OUT_FILE = os.path.join(BASE_DIR, 'js', 'data.js')
+OUT_DIR  = os.path.join(BASE_DIR, 'js', 'data')
+
+ITEM_TYPE_MAP = {
+    '1': 'Generator',
+    '2': 'Tool',
+    '3': 'Currency',
+    '4': 'Food',
+    '5': 'Booster',
+    '7': 'Raw',
+}
 
 
-# ── Fill-down helper ──────────────────────────────────────────────────────────
+# ── Helpers ───────────────────────────────────────────────────────────────────
 
 def fill_down(rows, key_fields):
     last = {}
@@ -35,16 +46,11 @@ def fill_down(rows, key_fields):
     return result
 
 
-# ── CSV loader ────────────────────────────────────────────────────────────────
-
 def load_csv(rel_path, key_fields=None):
-    """Load one CSV relative to CSV_DIR. Returns list of dicts."""
     full = os.path.join(CSV_DIR, rel_path)
     if not os.path.exists(full):
         print(f'  [SKIP] {rel_path} — not found')
         return []
-
-    # Thử lần lượt các encoding phổ biến
     for enc in ('utf-8-sig', 'utf-16', 'cp1252', 'latin-1'):
         try:
             with open(full, encoding=enc) as f:
@@ -54,142 +60,372 @@ def load_csv(rel_path, key_fields=None):
                     for row in reader
                     if any(v.strip() for v in row.values())
                 ]
-            break  # thành công
+            break
         except (UnicodeDecodeError, UnicodeError):
             continue
     else:
         print(f'  [ERROR] Cannot decode {rel_path} — skipped')
         return []
-
     if key_fields:
         rows = fill_down(rows, key_fields)
     return rows
 
 
-# ── CSV manifest ──────────────────────────────────────────────────────────────
+TOOL_NAMES = {'2001': 'Juicer', '2002': 'Chef Counter', '2003': 'Grill', '2004': 'Pan', '2005': 'Oven'}
 
-MANIFEST = {
-    # BuildUpGoal
-    'buildUpGoalData':         ('Core/BuildUpGoal/BuildUpGoalData.csv',        ['theme']),
-    'buildUpGoalReward':       ('Core/BuildUpGoal/BuildUpGoalReward.csv',       ['theme_type']),
-    'buildUpGoalRewardBonus':  ('Core/BuildUpGoal/BuildUpGoalRewardBonus.csv',  ['type', 'index']),
 
-    # ItemIdentify
-    'itemGenerator':           ('Core/ItemIdentify/ItemGenerator.csv',          ['type']),
-    'itemRaw':                 ('Core/ItemIdentify/ItemRaw.csv',                ['type']),
-    'itemTool':                ('Core/ItemIdentify/ItemTool.csv',               ['type']),
-    'itemBooster':             ('Core/ItemIdentify/ItemBooster.csv',            ['type']),
-    'itemChest':               ('Core/ItemIdentify/ItemChest.csv',              None),
-    'itemFood':                ('Core/ItemIdentify/ItemFood.csv',               ['type']),
-    'itemCurrency':            ('Core/ItemIdentify/ItemCurrency.csv',           ['type']),
+def norm_time(raw):
+    """Normalize VN decimal separator: '2,5' → '2.5'."""
+    return (raw or '').replace(',', '.')
 
-    # Generators
-    'rateGenerator':           ('Core/Generators/RateGenerator.csv',            ['type', 'id']),
-    'dynamicGeneratorSpawning':('Core/Generators/DynamicGeneratorSpawning.csv', ['item_save_type']),
 
-    # ItemExpand
-    'itemExpand':              ('Core/ItemExpand.csv',                          ['type', 'id']),
+def parse_cooking_recipes(rel_path):
+    """Parse CookingRecipes.csv (fill-down, multi-row per recipe) into recipe objects
+    with compat keys: itemID/tool(name)/cooking_time(normalized)/ingredients + Ingredient{1..4}Id."""
+    raw = load_csv(rel_path, ['type_tool', 'id_result', 'time_to_cook'])
+    grouped = {}
+    order = []
+    for r in raw:
+        rid = r.get('id_result', '')
+        if not rid:
+            continue
+        if rid not in grouped:
+            tool_id   = r.get('type_tool', '')
+            tool_name = TOOL_NAMES.get(tool_id, tool_id)
+            time      = norm_time(r.get('time_to_cook', ''))
+            grouped[rid] = {
+                'itemID':         rid,
+                'tool':           tool_name,
+                'toolId':         tool_id,
+                'cooking_time':   time,
+                'ResultId':       rid,
+                'TypeTool':       tool_name,
+                'TimeToCook_sec': time,
+                '_ings': [],
+            }
+            order.append(rid)
+        item_id = r.get('item_id', '')
+        if item_id:
+            grouped[rid]['_ings'].append(item_id)
+    out = []
+    for rid in order:
+        rec = grouped[rid]
+        ings = rec.pop('_ings')
+        rec['ingredients'] = ','.join(ings)
+        for i in range(4):
+            rec[f'Ingredient{i + 1}Id']   = ings[i] if i < len(ings) else ''
+            rec[f'Ingredient{i + 1}Type'] = ''
+        out.append(rec)
+    return out
 
-    # Orders
-    'orderDetail':             ('Core/Order/OrderDetail.csv',                   None),
-    'orderSystem':             ('Core/Order/OrderSystem.csv',                   None),
-    'orderDetailReward':       ('Core/Order/OrderDetailReward.csv',             ['theme_type']),
-    'orderGold':               ('Core/Order/OrderGold.csv',                     None),
-    'orderSystemReward':       ('Core/Order/OrderSystemReward.csv',             ['theme_type']),
-    'rewardMinDistribute':     ('Core/Order/RewardMinDistributeOrderDetail.csv',None),
 
-    # Recipes
-    'formuaRecipes':           ('Core/Recipes/FormulaRecipes.csv',              None),
+def inject_item_type(rows):
+    for row in rows:
+        item_id = row.get('itemID', '')
+        row['type'] = ITEM_TYPE_MAP.get(item_id[:1], 'Unknown') if item_id else 'Unknown'
+    return rows
 
-    # Box & Gift
-    'itemBoxGenerator':        ('Core/Box&Gift/ItemBoxGenerator.csv',           ['item_save_type','id_item','many_generator','time_unlock']),
-    'itemAssistantsChest':     ('Core/Box&Gift/ItemAssistantsChest.csv',        ['item_save_type','id_item','many_generator','time_unlock']),
-    'itemChefsChest':          ('Core/Box&Gift/ItemChefsChest.csv',             ['item_save_type','id_item','many_generator','time_unlock']),
-    'itemCoinBox':             ('Core/Box&Gift/ItemCoinBox.csv',                ['item_save_type','id_item','many_generator','time_unlock']),
-    'itemDailyGift':           ('Core/Box&Gift/ItemDailyGift.csv',              ['item_save_type','id_item','many_generator','time_unlock']),
-    'itemEquipmentBox':        ('Core/Box&Gift/ItemEquipmentBox.csv',           ['item_save_type','id_item','many_generator','time_unlock']),
-    'itemFlushGift':           ('Core/Box&Gift/ItemFlushGift.csv',              ['item_save_type','id_item','many_generator','time_unlock']),
-    'itemGift':                ('Core/Box&Gift/ItemGift.csv',                   ['item_save_type','id_item','many_generator','time_unlock']),
-    'itemLuckyBox':            ('Core/Box&Gift/ItemLuckyBox.csv',               ['item_save_type','id_item','many_generator','time_unlock']),
-    'itemLuckyHandbag':        ('Core/Box&Gift/ItemLuckyHandbag.csv',           ['item_save_type','id_item','many_generator','time_unlock']),
-    'itemTraineeBox':          ('Core/Box&Gift/ItemTraineeBox.csv',             ['item_save_type','id_item','many_generator','time_unlock']),
 
-    # Features
-    'buyCurrency':             ('Features/BuyCurrency/BuyCurrency.csv',         None),
-    'chefsBookData':           ('Features/ChefsBook/ChefsBookData.csv',         ['chefs_type']),
+def write_data_file(filename, keys_data, label):
+    """Write one js/data/<filename>.js file merging keys into window.GameData."""
+    json_str = json.dumps(keys_data, ensure_ascii=False, separators=(',', ':'), indent=2)
+    content = f"""// {label} — Auto-generated by generate_data.py. DO NOT EDIT manually.
+Object.assign(window.GameData, {json_str});
+"""
+    path = os.path.join(OUT_DIR, filename)
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(content)
+    size_kb = os.path.getsize(path) / 1024
+    total = sum(len(v) if isinstance(v, list) else sum(len(x) for x in v.values()) for v in keys_data.values())
+    print(f'  → {filename}: {size_kb:.0f} KB  ({total} rows across {len(keys_data)} keys)')
 
-    # IAP Packages
-    'iapGemPack':              ('Features/IAP/GemPack.csv',                     ['id', 'pack_name']),
-    'iapBundlePack':           ('Features/IAP/BundlePack.csv',                  ['id', 'pack_name']),
-    'iapCoinPack':             ('Features/IAP/CoinPack.csv',                    ['id', 'pack_name']),
-    'iapEnergyPack':           ('Features/IAP/EnergyPack.csv',                  ['id', 'pack_name']),
-    'iapEnergyTrilogyPack':    ('Features/IAP/EnergyTrilogyPack.csv',           ['id', 'pack_name']),
-    'iapStarterPack':          ('Features/IAP/StarterPack.csv',                 ['id', 'pack_name']),
-    'iapOpenningPack':         ('Features/IAP/OpenningPack.csv',                ['id', 'pack_name']),
-    'iapChainPack':            ('Features/IAP/ChainPack.csv',                   ['id', 'pack_name']),
-    'iapDailyDealsPack':       ('Features/IAP/DailyDealsPack.csv',              ['id', 'pack_name']),
-    'iapDailyDealsPack2':      ('Features/IAP/DailyDealsPack2.csv',             ['id', 'pack_name']),
-    'iapStandardDiamond':      ('Features/IAP/StandardDiamond.csv',             ['id', 'pack_name']),
-    'iapGoldWeeklyPass':       ('Features/IAP/GoldWeeklyPass.csv',              ['id', 'pack_name']),
-    'iapSilverWeeklyPass':     ('Features/IAP/SilverWeeklyPass.csv',            ['id', 'pack_name']),
-    'iapBattlePassPack':       ('Features/IAP/BattlePassPackage.csv',           ['id', 'pack_name']),
-    'iapLuckySpinPack':        ('Features/IAP/LuckySpinPack.csv',               ['id', 'pack_name']),
-    'iapSupplyChestPack':      ('Features/IAP/SupplyChestPack.csv',             ['id', 'pack_name']),
-    'iapNiceBoostPack':        ('Features/IAP/NiceBoostPack.csv',               ['id', 'pack_name']),
-    'iapStepPricePack':        ('Features/IAP/StepPricePack.csv',               ['id', 'pack_name']),
-    'iapHappinessExpress':     ('Features/IAP/HappinessExpress.csv',            ['id', 'pack_name']),
-    'iapLuxuriousOffer':       ('Features/IAP/LuxuriousOffer.csv',              ['id', 'pack_name']),
-    'iapFirstPurchase':        ('Features/IAP/FirstPurchase.csv',               ['id', 'pack_name']),
-    'iapPiggyBank':            ('Features/IAP/PiggyBank.csv',                   ['id', 'pack_name']),
-    'iapRemoveAdsPack':        ('Features/IAP/RemoveAdsPack.csv',               ['id', 'pack_name']),
-    'iapVideoBonuses':         ('Features/IAP/VideoBonuses.csv',                ['id', 'pack_name']),
-    'iapPackDuration':         ('Features/IAP/PackDuration.csv',                ['id', 'pack_name']),
 
-    # Extends
-    'convertTime':             ('Extends/ConvertTime/ConvertTimeTool.csv',       None),
+# ── Domain manifests ──────────────────────────────────────────────────────────
+
+def parse_item_expand(rel_path):
+    """Parse ItemExpand.csv — tự detect schema cũ vs mới.
+    Schema mới: itemID, spawn_itemID, spawn_number, time_cooldown, cost_energy
+    Schema cũ:  type, id, item_save_type, id_item, time_cooldown, cost_energy
+    Output luôn dùng schema mới để JS code đọc nhất quán.
+    """
+    rows = load_csv(rel_path)
+    if not rows:
+        return []
+    first = rows[0]
+    # Detect schema mới
+    if 'itemID' in first and 'spawn_itemID' in first:
+        return rows  # đã đúng schema mới
+    # Convert schema cũ → mới, fill-down id
+    result = []
+    last_id = ''
+    for r in rows:
+        item_id    = r.get('id', '').strip() or last_id
+        last_id    = item_id or last_id
+        spawn_id   = r.get('id_item_expand', '').strip()
+        if not spawn_id:
+            continue
+        result.append({
+            'itemID':       item_id,
+            'spawn_itemID': spawn_id,
+            'spawn_number': '1',
+            'time_cooldown': r.get('time_cooldown', '').strip(),
+            'cost_energy':   r.get('cost_energy', '').strip(),
+        })
+    return result
+
+
+def load_items():
+    return {
+        'itemData':      inject_item_type(load_csv('Core/ItemIdentify/ItemData.csv')),
+        'itemCurrency':  load_csv('Core/ItemIdentify/ItemCurrency.csv'),
+        'itemMerge':     load_csv('Core/ItemIdentify/ItemMerge.csv'),
+        'itemExpand':    parse_item_expand('Core/ItemExpand/ItemExpand.csv'),
+        'formuaRecipes': parse_cooking_recipes('Core/Recipes/CookingRecipes.csv'),
+    }
+
+
+# Maps first 4 digits of generator id → generator type name (derived from MergeItemTypes enum)
+# id scheme: 100104 → prefix "1001" → DrinkGenerator (enum DrinkGenerator=1001)
+GEN_ID_4PREFIX_TO_TYPE = {
+    '1001': 'DrinkGenerator',
+    '1002': 'FruitAndSugarGenerator',
+    '1003': 'ProteinGenerator',
+    '1004': 'VegetableGenerator',
+    '1005': 'SeafoodGenerator',
+    '1006': 'GrainGenerator',
+    '1007': 'AlcoholGenerator',
+    '1740': 'VegetableGenerator',
+    '2050': 'SeafoodGenerator',
+    '2560': 'GrainGenerator',
+    '2870': 'AlcoholGenerator',
+    '3590': 'FrenchRecipeBook',
+    '3830': 'JapaneseAttraction',
+    '3840': 'JapaneseAttraction',
+    '4090': 'JapaneseRecipeBook',
+    '5290': 'ChineseRecipeBook',
+    '5990': 'SpanishRecipeBook',
+    '6150': 'CraftToolStorage',
 }
 
-BOX_KEYS = {
-    'itemBoxGenerator', 'itemAssistantsChest', 'itemChefsChest',
-    'itemCoinBox', 'itemDailyGift', 'itemEquipmentBox', 'itemFlushGift',
-    'itemGift', 'itemLuckyBox', 'itemLuckyHandbag', 'itemTraineeBox',
-}
+
+def infer_gen_type(rid):
+    """Infer generator type from first 4 digits of id using MergeItemTypes enum mapping."""
+    prefix = rid[:4]
+    return GEN_ID_4PREFIX_TO_TYPE.get(prefix, '')
+
+
+def parse_item_generator(rel_path):
+    """Parse ItemGenerator.csv (fill-down id), infer generator type from id prefix."""
+    raw = load_csv(rel_path, ['id'])
+    result = []
+    for row in raw:
+        r = dict(row)
+        r['type'] = infer_gen_type(r.get('id', ''))
+        result.append(r)
+    return result
+
+
+def load_generators():
+    return {
+        'rateGenerator':            parse_item_generator('Core/Generators/ItemGenerator.csv'),
+        'dynamicGeneratorSpawning': load_csv('Core/Generators/DynamicGeneratorSpawning.csv', ['item_save_type']),
+        'itemGenerator':            load_csv('Core/Generators/ItemGenerator.csv',            ['id']),
+    }
+
+
+def parse_order_detail(rel_path, item_names):
+    """Parse OrderDetail.csv (multi-row per order) into flat rows with item1/item2 fields.
+    item_names: dict id -> name from ItemMerge.csv"""
+    raw = load_csv(rel_path, ['order_id', 'id_npc'])
+    grouped = {}
+    order_list = []
+    for row in raw:
+        oid = row.get('order_id', '')
+        if not oid:
+            continue
+        if oid not in grouped:
+            grouped[oid] = {'orderId': oid, 'idNPC': row.get('id_npc', ''),
+                            'items': [], 'gold': row.get('res_number', '')}
+            order_list.append(oid)
+        item_id = row.get('item_id', '')
+        if item_id:
+            grouped[oid]['items'].append({
+                'id': item_id,
+                'amount': row.get('amount', '1'),
+                'name': item_names.get(item_id, ''),
+            })
+    out = []
+    for oid in order_list:
+        o = grouped[oid]
+        items = o['items']
+        i1 = items[0] if len(items) > 0 else {}
+        i2 = items[1] if len(items) > 1 else {}
+        out.append({
+            'orderId':        oid,
+            'idNPC':          o['idNPC'],
+            'item1_id':       i1.get('id', ''),
+            'item1_name':     i1.get('name', ''),
+            'item1_amount':   i1.get('amount', ''),
+            'item2_id':       i2.get('id', ''),
+            'item2_name':     i2.get('name', ''),
+            'item2_amount':   i2.get('amount', ''),
+            'gold':           o['gold'],
+        })
+    return out
+
+
+def parse_order_system(rel_path):
+    """Parse OrderSystem.csv (multi-row per batch) into flat batch rows with order1..N and reward1..N."""
+    raw = load_csv(rel_path, ['id', 'theme_type', 'can_receive_reward'])
+    grouped = {}
+    batch_list = []
+    for row in raw:
+        bid = row.get('id', '')
+        if not bid:
+            continue
+        if bid not in grouped:
+            grouped[bid] = {
+                'id': bid,
+                'themeType': row.get('theme_type', ''),
+                'canReceiveReward': '1' if row.get('can_receive_reward', '').upper() == 'TRUE' else '0',
+                'orders': [],
+                'rewards': [],
+            }
+            batch_list.append(bid)
+        id_order = row.get('id_order', '')
+        if id_order:
+            grouped[bid]['orders'].append(id_order)
+        res_type = row.get('res_type', '')
+        res_id   = row.get('res_id', '')
+        res_num  = row.get('res_number', '')
+        custom   = row.get('custom_value', '')
+        if res_type:
+            grouped[bid]['rewards'].append({
+                'resType': res_type, 'resId': res_id,
+                'resNumber': res_num, 'customValue': custom,
+            })
+    out = []
+    for bid in batch_list:
+        b = grouped[bid]
+        flat = {'id': b['id'], 'themeType': b['themeType'],
+                'canReceiveReward': b['canReceiveReward']}
+        for i, oid in enumerate(b['orders'], 1):
+            flat[f'order{i}_idOrder'] = oid
+        for i, r in enumerate(b['rewards'], 1):
+            flat[f'reward{i}_resType']    = r['resType']
+            flat[f'reward{i}_resId']      = r['resId']
+            flat[f'reward{i}_resNumber']  = r['resNumber']
+            flat[f'reward{i}_customValue'] = r['customValue']
+        out.append(flat)
+    return out
+
+
+def load_orders():
+    item_names = {r['id']: r['name_item']
+                  for r in load_csv('Core/ItemIdentify/ItemMerge.csv')
+                  if r.get('id') and r.get('name_item')}
+    return {
+        'orderDetail':         parse_order_detail('Core/Order/OrderDetail.csv', item_names),
+        'orderSystem':         parse_order_system('Core/Order/OrderSystem.csv'),
+        'orderDetailReward':   load_csv('Core/Order/OrderDetailReward.csv',  ['theme_type']),
+        'orderGold':           load_csv('Core/Order/OrderGold.csv'),
+        'orderSystemReward':   load_csv('Core/Order/OrderSystemReward.csv',  ['theme_type']),
+        'rewardMinDistribute': load_csv('Core/Order/RewardMinDistributeOrderDetail.csv'),
+    }
+
+
+def load_buildup():
+    return {
+        'buildUpGoalData':        load_csv('Core/BuildUpGoal/BuildUpGoalData.csv',        ['theme']),
+        'buildUpGoalReward':      load_csv('Core/BuildUpGoal/BuildUpGoalReward.csv',       ['theme_type']),
+        'buildUpGoalRewardBonus': load_csv('Core/BuildUpGoal/BuildUpGoalRewardBonus.csv',  ['type', 'index']),
+        'buyCurrency':            load_csv('Features/BuyCurrency/BuyCurrency.csv'),
+        'chefsBookData':          load_csv('Features/ChefsBook/ChefsBookData.csv',         ['chefs_type']),
+        'convertTime':            load_csv('Extends/ConvertTime/ConvertTimeTool.csv'),
+    }
+
+
+def load_boxes():
+    fill_keys = ['item_save_type', 'id_item', 'many_generator', 'time_unlock']
+    return {
+        'boxes': {
+            'itemBoxGenerator':    load_csv('Core/Box&Gift/ItemBoxGenerator.csv',    fill_keys),
+            'itemAssistantsChest': load_csv('Core/Box&Gift/ItemAssistantsChest.csv', fill_keys),
+            'itemChefsChest':      load_csv('Core/Box&Gift/ItemChefsChest.csv',      fill_keys),
+            'itemCoinBox':         load_csv('Core/Box&Gift/ItemCoinBox.csv',          fill_keys),
+            'itemDailyGift':       load_csv('Core/Box&Gift/ItemDailyGift.csv',        fill_keys),
+            'itemEquipmentBox':    load_csv('Core/Box&Gift/ItemEquipmentBox.csv',     fill_keys),
+            'itemFlushGift':       load_csv('Core/Box&Gift/ItemFlushGift.csv',        fill_keys),
+            'itemGift':            load_csv('Core/Box&Gift/ItemGift.csv',             fill_keys),
+            'itemLuckyBox':        load_csv('Core/Box&Gift/ItemLuckyBox.csv',         fill_keys),
+            'itemLuckyHandbag':    load_csv('Core/Box&Gift/ItemLuckyHandbag.csv',     fill_keys),
+            'itemTraineeBox':      load_csv('Core/Box&Gift/ItemTraineeBox.csv',       fill_keys),
+        }
+    }
+
+
+def load_iap():
+    pk = ['id', 'pack_name']
+    return {
+        'iapGemPack':           load_csv('Features/IAP/GemPack.csv',            pk),
+        'iapBundlePack':        load_csv('Features/IAP/BundlePack.csv',          pk),
+        'iapCoinPack':          load_csv('Features/IAP/CoinPack.csv',            pk),
+        'iapEnergyPack':        load_csv('Features/IAP/EnergyPack.csv',          pk),
+        'iapEnergyTrilogyPack': load_csv('Features/IAP/EnergyTrilogyPack.csv',   pk),
+        'iapStarterPack':       load_csv('Features/IAP/StarterPack.csv',         pk),
+        'iapOpenningPack':      load_csv('Features/IAP/OpenningPack.csv',        pk),
+        'iapChainPack':         load_csv('Features/IAP/ChainPack.csv',           pk),
+        'iapDailyDealsPack':    load_csv('Features/IAP/DailyDealsPack.csv',      pk),
+        'iapDailyDealsPack2':   load_csv('Features/IAP/DailyDealsPack2.csv',     pk),
+        'iapStandardDiamond':   load_csv('Features/IAP/StandardDiamond.csv',     pk),
+        'iapGoldWeeklyPass':    load_csv('Features/IAP/GoldWeeklyPass.csv',      pk),
+        'iapSilverWeeklyPass':  load_csv('Features/IAP/SilverWeeklyPass.csv',    pk),
+        'iapBattlePassPack':    load_csv('Features/IAP/BattlePassPackage.csv',   pk),
+        'iapLuckySpinPack':     load_csv('Features/IAP/LuckySpinPack.csv',       pk),
+        'iapSupplyChestPack':   load_csv('Features/IAP/SupplyChestPack.csv',     pk),
+        'iapNiceBoostPack':     load_csv('Features/IAP/NiceBoostPack.csv',       pk),
+        'iapStepPricePack':     load_csv('Features/IAP/StepPricePack.csv',       pk),
+        'iapHappinessExpress':  load_csv('Features/IAP/HappinessExpress.csv',    pk),
+        'iapLuxuriousOffer':    load_csv('Features/IAP/LuxuriousOffer.csv',      pk),
+        'iapFirstPurchase':     load_csv('Features/IAP/FirstPurchase.csv',       pk),
+        'iapPiggyBank':         load_csv('Features/IAP/PiggyBank.csv',           pk),
+        'iapRemoveAdsPack':     load_csv('Features/IAP/RemoveAdsPack.csv',       pk),
+        'iapVideoBonuses':      load_csv('Features/IAP/VideoBonuses.csv',        pk),
+        'iapPackDuration':      load_csv('Features/IAP/PackDuration.csv',        pk),
+    }
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+DOMAINS = [
+    ('data-items.js',      load_items,      'Items — ItemData, ItemCurrency, ItemMerge, ItemExpand, CookingRecipes'),
+    ('data-generators.js', load_generators, 'Generators — RateGenerator, DynamicGeneratorSpawning, ItemGenerator'),
+    ('data-orders.js',     load_orders,     'Orders — OrderDetail, OrderSystem, OrderGold, Rewards'),
+    ('data-buildup.js',    load_buildup,    'BuildUp — BuildUpGoal, BuyCurrency, ChefsBook, ConvertTime'),
+    ('data-boxes.js',      load_boxes,      'Boxes — All Box & Gift types'),
+    ('data-iap.js',        load_iap,        'IAP — All in-app purchase packages'),
+]
+
+
 def main():
-    print('Generating js/data.js ...')
-    data = {}
-    for key, (rel_path, key_fields) in MANIFEST.items():
-        rows = load_csv(rel_path, key_fields)
-        data[key] = rows
-        print(f'  {key}: {len(rows)} rows')
+    os.makedirs(OUT_DIR, exist_ok=True)
 
-    # Build boxes sub-object (mirrors CsvLoader structure)
-    boxes = {k: data.pop(k) for k in BOX_KEYS}
-    data['boxes'] = boxes
+    # Init file: declare window.GameData = {}
+    init_path = os.path.join(OUT_DIR, 'data-init.js')
+    with open(init_path, 'w', encoding='utf-8') as f:
+        f.write('// Auto-generated by generate_data.py. DO NOT EDIT manually.\n')
+        f.write('window.GameData = {};\n')
+    print('Generated js/data/:\n  → data-init.js')
 
-    # Serialize
-    json_str = json.dumps(data, ensure_ascii=False, indent=None, separators=(',', ':'))
+    total_kb = 0
+    for filename, loader, label in DOMAINS:
+        print(f'\nLoading {label}...')
+        data = loader()
+        write_data_file(filename, data, label)
+        total_kb += os.path.getsize(os.path.join(OUT_DIR, filename)) / 1024
 
-    js_content = f"""/**
- * data.js — Auto-generated by generate_data.py
- * DO NOT EDIT manually. Re-run: python generate_data.py
- *
- * Contains window.GameData with all CSV data pre-parsed.
- * Allows dashboard to run via file:// without a server.
- */
-window.GameData = {json_str};
-"""
-
-    os.makedirs(os.path.join(BASE_DIR, 'js'), exist_ok=True)
-    with open(OUT_FILE, 'w', encoding='utf-8') as f:
-        f.write(js_content)
-
-    size_kb = os.path.getsize(OUT_FILE) / 1024
-    print(f'\nDone! js/data.js — {size_kb:.1f} KB')
-    print('Mở index.html trực tiếp trong trình duyệt là dùng được.')
+    print(f'\nDone! js/data/ total — {total_kb:.0f} KB across {len(DOMAINS) + 1} files.')
+    print('index.html phai load js/data/data-init.js truoc, roi den cac data-*.js.')
 
 
 if __name__ == '__main__':
