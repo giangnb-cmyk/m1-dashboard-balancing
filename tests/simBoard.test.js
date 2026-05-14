@@ -192,6 +192,15 @@ suite('SimBoard', () => {
       SimBoard.mergeGenerators(b, new Set(['100202']), genCat);
       assertEqual(b.generators.length, 2); // still 2, not merged to lv3
     });
+    test('merges freely when requiredGenIds is empty Set', () => {
+      const b = SimBoard.create();
+      SimBoard.addGenerator(b, '100201', genCat);
+      SimBoard.addGenerator(b, '100201', genCat);
+      SimBoard.mergeGenerators(b, new Set(), genCat);
+      // With no constraint, 2×lv1 should merge to 1×lv2
+      assertEqual(b.generators.length, 1);
+      assertEqual(b.generators[0].genId, '100202');
+    });
   });
 
   suite('sellCheapestItem', () => {

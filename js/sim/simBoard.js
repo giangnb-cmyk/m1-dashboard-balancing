@@ -128,11 +128,12 @@ const SimBoard = (() => {
         if (!nextId) continue;
         // Never merge past the highest required level
         const nextDef = catalog[nextId];
-        if (nextDef && requiredGenIds && requiredGenIds.size > 0) {
+        if (requiredGenIds && requiredGenIds.size > 0) {
           const maxRequired = Math.max(...[...requiredGenIds]
             .map(id => (catalog[id] || {}).level || 0));
-          if (nextDef.level > maxRequired) continue;
+          if (nextDef && nextDef.level > maxRequired) continue;
         }
+        // When no required set: allow merging, nextId already checked by findNextLevelGen
         let removed = 0;
         board.generators = board.generators.filter(g => {
           if (g.genId === genId && removed < 2) { removed++; return false; }
