@@ -22,12 +22,23 @@ index.html          Entry point + UI markup (tabs, tables, charts)
 styles.css          All visual styling (glassmorphism dark theme)
 app.js              Main controller: state, navigation, tab routing
 js/
+├── sim/            Player Simulation tab — see js/sim/CLAUDE.md for full context
+│   ├── simDataLoader.js   Parse GameData → catalogs
+│   ├── simEnergy.js       Energy system
+│   ├── simBoard.js        Board + inventory + merge
+│   ├── simCooking.js      Tool cooking pipeline
+│   ├── simEngine.js       tickDay simulation loop
+│   ├── simRunner.js       Profile runner + step iterator
+│   ├── simConfig.js       Config panel UI
+│   └── simChart.js        Chart + playback + PlayerSim entry point
 ├── csv-loader.js   CSV fetch + parse utilities
 ├── pacing.js       Tab 2: Progression Pacing engine
 ├── economy.js      Tab 5: Economy Flow / Source-Sink
 ├── encyclopedia.js Tab 8: Item Encyclopedia search/filter
 └── [tab].js        One file per tab
 Csv/                Game data (CSV files, never modified by dashboard)
+tests/              Node.js unit tests for sim/* modules (no deps, run: node tests/*.test.js)
+docs/superpowers/   Design specs and implementation plans
 ```
 
 ### Design System
