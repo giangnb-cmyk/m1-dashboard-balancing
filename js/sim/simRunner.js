@@ -8,15 +8,52 @@ const SimRunner = (() => {
     if (!catalogs.sceneCatalog.length) return { initialGens, initialTools };
 
     const firstScene = catalogs.sceneCatalog[0];
+
+    // Collect generators from first build step rewards
     catalogs.rewardSchedule
-      .filter(r => r.trigger === 'buildStep' && r.scene === firstScene.name && r.stepId === '0')
+      .filter(r => r.trigger === 'buildStep' && r.scene === firstScene.name)
       .forEach(r => {
-        if (catalogs.generatorCatalog[r.itemId]) {
+        if (r.itemId && catalogs.generatorCatalog[r.itemId]) {
           const existing = initialGens.find(g => g.genId === r.itemId);
           if (existing) existing.qty += (r.qty || 1);
           else initialGens.push({ genId: r.itemId, qty: r.qty || 1 });
         }
       });
+
+    // Also collect from first batch's order rewards
+    const firstBatchId = firstScene.batchIds[0];
+    if (firstBatchId) {
+      catalogs.rewardSchedule
+        .filter(r => r.trigger === 'order' && r.batchId === firstBatchId && r.itemId)
+        .forEach(r => {
+          if (catalogs.generatorCatalog[r.itemId]) {
+            const existing = initialGens.find(g => g.genId === r.itemId);
+            if (existing) existing.qty += (r.qty || 1);
+            else initialGens.push({ genId: r.itemId, qty: r.qty || 1 });
+          }
+        });
+    }
+
+    // Fallback: if no functional generators found, pick the first level-4+ per type
+    const hasFunc = initialGens.some(g => (catalogs.generatorCatalog[g.genId] || {}).canGenerate);
+    if (!hasFunc) {
+      const seenTypes = new Set();
+      Object.values(catalogs.generatorCatalog)
+        .filter(g => g.canGenerate)
+        .sort((a, b) => a.level - b.level)
+        .forEach(g => {
+          if (!seenTypes.has(g.type)) {
+            seenTypes.add(g.type);
+            initialGens.push({ genId: g.id, qty: 1 });
+          }
+        });
+    }
+
+    // Add one tool per tool type (needed for cooking)
+    Object.keys(catalogs.toolCatalog).forEach(toolType => {
+      initialTools.push({ toolType });
+    });
+
     return { initialGens, initialTools };
   }
 

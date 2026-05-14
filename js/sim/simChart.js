@@ -54,7 +54,7 @@ const SimChart = (() => {
           y: {
             title: { display: true, text: 'Scene', color: '#94a3b8' },
             ticks: { color: '#94a3b8', callback: v => sceneLabels[v] || `S${v}` },
-            min: 0,
+            min: -0.3,
             max: Math.max(2, sceneCnt),
             grid: { color: 'rgba(255,255,255,0.05)' }
           }
@@ -194,17 +194,28 @@ const SimChart = (() => {
 
     _tick = function() {
       let allDone = true;
-      iterators.forEach((iter, i) => {
-        if (!iter) return;
-        const result = iter.next();
-        if (result.done) { iterators[i] = null; return; }
-        allDone = false;
-        const { dayLog, state } = result.value;
-        allLogs[i].push(dayLog);
-        finalStates[i] = state;
-        _pushDataPoint(i, dayLog.day, dayLog.sceneIndex);
-        _updateDayLabel(dayLog.day);
-      });
+      try {
+        iterators.forEach((iter, i) => {
+          if (!iter) return;
+          const result = iter.next();
+          if (result.done) { iterators[i] = null; return; }
+          allDone = false;
+          const { dayLog, state } = result.value;
+          allLogs[i].push(dayLog);
+          finalStates[i] = state;
+          _pushDataPoint(i, dayLog.day, dayLog.sceneIndex);
+          _updateDayLabel(dayLog.day);
+        });
+      } catch (err) {
+        clearInterval(_playInterval);
+        _playInterval = null;
+        const el = document.getElementById('psim-day-label');
+        if (el) el.textContent = '⚠ Error: ' + err.message;
+        console.error('[PlayerSim] tick error:', err);
+        if (playBtn) playBtn.disabled = false;
+        if (pauseBtn) pauseBtn.disabled = true;
+        return;
+      }
 
       if (allDone) {
         clearInterval(_playInterval);
