@@ -356,13 +356,11 @@ const SimEngine = (() => {
       state.timeMins = sessionStartMins;
 
       // a. Regen energy for time elapsed since last session
+      // Capture energy before regen to correctly track actual regen received (capped)
+      const ownedBefore = state.energy.owned;
       SimEnergy.tick(state.energy, minsPerSession);
-      // b. Track regen received (approximate — capped at cap)
-      const regenAmount = Math.min(
-        state.energy.regenPerMin * minsPerSession,
-        state.energy.cap - (state.energy.owned - state.energy.regenPerMin * minsPerSession)
-      );
-      state.economy.energy.received += Math.max(0, regenAmount);
+      const actualRegen = state.energy.owned - ownedBefore;
+      if (actualRegen > 0) state.economy.energy.received += actualRegen;
 
       // c. Refill generators whose cooldown elapsed
       SimBoard.refillGenerators(state.board, catalogs.generatorCatalog, sessionStartMins);
