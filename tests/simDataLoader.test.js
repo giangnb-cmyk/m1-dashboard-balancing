@@ -62,6 +62,16 @@ const mockGameData = {
 
 const SimDataLoader = require('../js/sim/simDataLoader');
 
+suite('normalizeTheme', () => {
+  const { normalizeTheme } = SimDataLoader;
+  test("'Scene_01' passthrough", () => assertEqual(normalizeTheme('Scene_01'), 'Scene_01'));
+  test("'1' → 'Scene_01'", () => assertEqual(normalizeTheme('1'), 'Scene_01'));
+  test("'10' → 'Scene_10'", () => assertEqual(normalizeTheme('10'), 'Scene_10'));
+  test("'0' → 'Tutorial'", () => assertEqual(normalizeTheme('0'), 'Tutorial'));
+  test("null → null", () => assert(normalizeTheme(null) === null));
+  test("'' → null", () => assert(normalizeTheme('') === null));
+});
+
 suite('SimDataLoader.build', () => {
   const cats = SimDataLoader.build(mockGameData);
 

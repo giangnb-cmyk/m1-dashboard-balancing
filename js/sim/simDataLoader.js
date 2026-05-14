@@ -56,10 +56,12 @@ const SimDataLoader = (() => {
     rows.forEach(r => {
       const toolId = r.toolId; if (!toolId) return;
       if (!tools[toolId]) tools[toolId] = { type: toolId, recipes: [] };
+      const resultId = r.itemID || r.ResultId;
+      if (!resultId) return; // skip malformed rows
       const ings = [r.Ingredient1Id, r.Ingredient2Id, r.Ingredient3Id, r.Ingredient4Id]
         .filter(i => i && i.trim());
       tools[toolId].recipes.push({
-        resultId: r.itemID || r.ResultId,
+        resultId,
         timeSecs: parseFloat(r.TimeToCook_sec) || 1,
         ingredients: ings
       });
@@ -89,7 +91,7 @@ const SimDataLoader = (() => {
     let currentTheme = null;
 
     buildUpRows.forEach(r => {
-      if (r.theme) currentTheme = r.theme;
+      if (r.theme) currentTheme = normalizeTheme(r.theme) || r.theme;
       if (!currentTheme || r.id === undefined || r.id === '') return;
       if (!sceneMap[currentTheme]) {
         sceneMap[currentTheme] = { name: currentTheme, buildSteps: [], batchIds: [] };
@@ -118,19 +120,20 @@ const SimDataLoader = (() => {
       .map((s, i) => ({ ...s, index: i }));
   }
 
-  function buildRewardSchedule(buildUpRows, buildUpRewardRows, orderSystemRows) {
+  function buildRewardSchedule(sceneCatalog, buildUpRewardRows, orderSystemRows) {
     const schedule = [];
-    let currentTheme = null;
 
-    buildUpRows.forEach(r => {
-      if (r.theme) currentTheme = r.theme;
-      if (!r.id || !currentTheme) return;
-      if (r.rw_build_up_type === 'Item' && r.custom_rw_build_up_value) {
-        schedule.push({ trigger: 'buildStep', scene: currentTheme, stepId: r.id,
-          itemId: r.custom_rw_build_up_value, qty: parseInt(r.rw_build_up_number) || 1 });
-      }
+    // Build-step rewards from already-parsed sceneCatalog
+    sceneCatalog.forEach(scene => {
+      scene.buildSteps.forEach(step => {
+        if (step.reward) {
+          schedule.push({ trigger: 'buildStep', scene: scene.name, stepId: step.stepId,
+            itemId: step.reward.itemId, qty: step.reward.qty });
+        }
+      });
     });
 
+    // BuildUpGoalReward bonus rows (separate CSV, still needs raw parsing)
     (buildUpRewardRows || []).forEach(r => {
       if (r.res_type === 'Item' && r.custom_value) {
         schedule.push({ trigger: 'buildStep', scene: r.theme, stepId: r.id,
@@ -192,6 +195,7 @@ const SimDataLoader = (() => {
         items: [
           r.item1_id ? { itemId: r.item1_id, qty: parseInt(r.item1_amount) || 1 } : null,
           r.item2_id ? { itemId: r.item2_id, qty: parseInt(r.item2_amount) || 1 } : null,
+        // Game constraint: orders have at most 2 required items (item1_id, item2_id)
         ].filter(Boolean)
       };
     });
@@ -216,15 +220,22 @@ const SimDataLoader = (() => {
 
   function build(gameData) {
     const gd = gameData || window.GameData;
+    const generatorCatalog = buildGeneratorCatalog(gd.rateGenerator || [], gd.itemMerge || []);
+    const toolCatalog = buildToolCatalog(gd.formuaRecipes || []);
+    const itemExpandCatalog = buildItemExpandCatalog(gd.itemExpand || []);
+    const sceneCatalog = buildSceneCatalog(gd.buildUpGoalData || [], gd.orderSystem || []);
+    const { batchMap, orderDetailMap } = buildOrderCatalog(gd.orderSystem || [], gd.orderDetail || []);
+
     return {
-      generatorCatalog: buildGeneratorCatalog(gd.rateGenerator || [], gd.itemMerge || []),
-      toolCatalog: buildToolCatalog(gd.formuaRecipes || []),
-      itemExpandCatalog: buildItemExpandCatalog(gd.itemExpand || []),
-      sceneCatalog: buildSceneCatalog(gd.buildUpGoalData || [], gd.orderSystem || []),
-      rewardSchedule: buildRewardSchedule(gd.buildUpGoalData || [], gd.buildUpGoalReward || [], gd.orderSystem || []),
+      generatorCatalog,
+      toolCatalog,
+      itemExpandCatalog,
+      sceneCatalog,
+      rewardSchedule: buildRewardSchedule(sceneCatalog, gd.buildUpGoalReward || [], gd.orderSystem || []),
       iapCatalog: buildIAPCatalog(gd),
       itemSellPrices: buildItemSellPrices(gd.itemMerge || []),
-      ...buildOrderCatalog(gd.orderSystem || [], gd.orderDetail || [])
+      batchMap,
+      orderDetailMap
     };
   }
 
