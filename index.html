@@ -36,6 +36,10 @@
                 <span class="nav-icon">📊</span>
                 <span class="nav-text">Order Analysis</span>
             </button>
+            <button class="nav-item" data-tab="player-sim">
+                <span class="nav-icon">🎮</span>
+                <span class="nav-text">Player Sim</span>
+            </button>
         </nav>
     </aside>
 
@@ -786,6 +790,50 @@
 
         </section><!-- /order-analysis -->
 
+        <!-- ===================== TAB: PLAYER SIMULATION ===================== -->
+        <section id="player-sim" class="tab-view">
+            <div class="view-header">
+                <h1>🎮 Player Simulation</h1>
+                <p>Giả lập hành trình user — cấu hình profile, session, IAP và xem timeline tiến trình theo từng ngày.</p>
+            </div>
+
+            <!-- Config Panel -->
+            <div id="psim-config" class="glass" style="padding:1.5rem;margin-bottom:1.5rem;"></div>
+
+            <!-- Playback Controls -->
+            <div class="glass" style="padding:1rem 1.5rem;margin-bottom:1rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <label style="font-size:0.85rem;color:var(--text-muted)">Days:</label>
+                    <input type="number" id="psim-target-days" value="100" min="1" max="365"
+                        style="width:70px;padding:0.3rem 0.5rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:var(--text-main);font-size:0.85rem;">
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <label style="font-size:0.85rem;color:var(--text-muted)">Speed:</label>
+                    <div id="psim-speed-btns" style="display:flex;gap:0.25rem;">
+                        <button class="psim-speed active" data-ms="200">1x</button>
+                        <button class="psim-speed" data-ms="40">5x</button>
+                        <button class="psim-speed" data-ms="10">10x</button>
+                    </div>
+                </div>
+                <button id="psim-play-btn" style="padding:0.4rem 1.2rem;background:rgba(56,189,248,0.15);border:1px solid #38bdf8;border-radius:8px;color:#38bdf8;cursor:pointer;font-size:0.9rem;">▶ Play</button>
+                <button id="psim-pause-btn" style="padding:0.4rem 1.2rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--text-muted);cursor:pointer;font-size:0.9rem;" disabled>⏸ Pause</button>
+                <button id="psim-reset-btn" style="padding:0.4rem 1.2rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--text-muted);cursor:pointer;font-size:0.9rem;">↺ Reset</button>
+                <span id="psim-day-label" style="font-size:0.85rem;color:var(--text-muted);margin-left:auto;">Day 0</span>
+            </div>
+
+            <!-- Timeline Chart -->
+            <div class="glass" style="padding:1.5rem;margin-bottom:1.5rem;">
+                <canvas id="psim-chart" height="280"></canvas>
+                <div id="psim-legend" style="display:flex;gap:1.5rem;margin-top:0.75rem;flex-wrap:wrap;"></div>
+            </div>
+
+            <!-- Stats Table -->
+            <div id="psim-stats" class="glass" style="padding:1.5rem;margin-bottom:1rem;"></div>
+
+            <!-- Economy Table -->
+            <div id="psim-economy" class="glass" style="padding:1.5rem;"></div>
+        </section><!-- /player-sim -->
+
         </div>
     </main>
 
@@ -806,6 +854,14 @@
     <script src="js/orders.js"></script>
     <script src="js/orderAnalysis.js"></script>
     <script src="js/iapPackages.js"></script>
+    <script src="js/sim/simDataLoader.js"></script>
+    <script src="js/sim/simEnergy.js"></script>
+    <script src="js/sim/simBoard.js"></script>
+    <script src="js/sim/simCooking.js"></script>
+    <script src="js/sim/simEngine.js"></script>
+    <script src="js/sim/simRunner.js"></script>
+    <script src="js/sim/simConfig.js"></script>
+    <script src="js/sim/simChart.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

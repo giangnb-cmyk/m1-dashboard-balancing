@@ -4105,3 +4105,99 @@ tr.imbalanced {
     align-items: center;
     gap: 0.5rem;
 }
+
+/* ── Player Simulation Tab ─────────────────────────────────────────── */
+.psim-profile-card {
+  background: rgba(30,41,59,0.6);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.psim-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.psim-profile-header label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.psim-profile-header input,
+.psim-profile-header select {
+  padding: 0.25rem 0.5rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  color: var(--text-main);
+  font-size: 0.82rem;
+}
+
+.psim-purchase-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.psim-purchase-row input,
+.psim-purchase-row select {
+  padding: 0.2rem 0.4rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 5px;
+  color: var(--text-main);
+  font-size: 0.8rem;
+}
+
+.psim-speed {
+  padding: 0.2rem 0.5rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 5px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.psim-speed.active {
+  background: rgba(56,189,248,0.15);
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.psim-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+}
+.psim-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+#psim-stats table, #psim-economy table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+#psim-stats th, #psim-economy th {
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-align: left;
+}
+#psim-stats td, #psim-economy td {
+  padding: 0.35rem 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-family: 'JetBrains Mono', monospace;
+}
