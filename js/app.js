@@ -40,4 +40,5 @@ function initModules() {
     if (typeof OrdersTab        !== 'undefined') OrdersTab.init();
     if (typeof OrderAnalysis    !== 'undefined') OrderAnalysis.init();
     if (typeof IAPPackages      !== 'undefined') IAPPackages.init();
+    if (typeof PlayerSim        !== 'undefined') PlayerSim.init();
 }
