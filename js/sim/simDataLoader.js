@@ -8,7 +8,7 @@ const SimDataLoader = (() => {
     if (raw === 'Tutorial' || raw === '0') return 'Tutorial';
     const n = parseInt(raw);
     if (isNaN(n)) return raw;
-    return `Scene_0${n}`;
+    return n < 10 ? `Scene_0${n}` : `Scene_${n}`;
   }
 
   function buildGeneratorCatalog(rows, itemMergeRows) {
