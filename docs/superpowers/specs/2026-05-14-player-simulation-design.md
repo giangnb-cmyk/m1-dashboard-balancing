@@ -118,7 +118,7 @@ Item IDs mapped to generator/tool type via `ItemGenerator` / item catalog.
 
 | Type | Behavior |
 |---|---|
-| **F2P** | Scan board → sell lowest-value raw items (lowest level, not needed for active orders) → free 1+ slots. Selling gives **0 gold** (just frees space). |
+| **F2P** | Scan board → sell lowest-value items (sorted by `ItemMerge.sell_price` ascending, not needed for active orders) → free 1+ slots. Gold earned from sell tracked in economy tracker. Generators always have `sell_price=0` so are never sold. |
 | **Spender** | Spend gems to unlock +1 inventory slot (gem cost from `DiscountGemRaw.csv`). When gems = 0 → fallback to F2P behavior |
 
 ### 3.7 Scene Progression
