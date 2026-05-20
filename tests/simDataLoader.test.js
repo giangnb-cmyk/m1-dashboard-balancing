@@ -88,9 +88,9 @@ suite('SimDataLoader.build', () => {
     test('100204 canGenerate is true', () => {
       assert(cats.generatorCatalog['100204'].canGenerate === true);
     });
-    test('100201 level is 1, canGenerate false', () => {
+    test('100201 level is 1, canGenerate true (all catalog generators are functional)', () => {
       assertEqual(cats.generatorCatalog['100201'].level, 1);
-      assert(cats.generatorCatalog['100201'].canGenerate === false);
+      assert(cats.generatorCatalog['100201'].canGenerate === true);
     });
     test('100204 sellPrice is 0 from itemMerge', () => {
       assertEqual(cats.generatorCatalog['100204'].sellPrice, 0);

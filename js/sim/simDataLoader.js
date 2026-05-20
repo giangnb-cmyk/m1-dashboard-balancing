@@ -11,9 +11,13 @@ const SimDataLoader = (() => {
     return n < 10 ? `Scene_0${n}` : `Scene_${n}`;
   }
 
-  function buildGeneratorCatalog(rows, itemMergeRows) {
+  function buildGeneratorCatalog(rows, itemMergeRows, itemDataRows) {
     const sellPrice = {};
     itemMergeRows.forEach(r => { if (r.id) sellPrice[r.id] = parseInt(r.sell_price) || 0; });
+
+    // Game tier from itemData (tier 4 = first tappable level the player sees as "Lv4")
+    const gameTierMap = {};
+    (itemDataRows || []).forEach(r => { if (r.itemID && r.tier) gameTierMap[r.itemID] = parseInt(r.tier) || 0; });
 
     const byId = {};
     rows.forEach(r => {
@@ -30,6 +34,7 @@ const SimDataLoader = (() => {
           spawns: [],
           sellPrice: sellPrice[id] || 0,
           level: 0,
+          gameTier: gameTierMap[id] || 0,
           canGenerate: false
         };
       }
@@ -45,7 +50,13 @@ const SimDataLoader = (() => {
     });
     Object.values(byType).forEach(gens => {
       gens.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
-      gens.forEach((g, i) => { g.level = i + 1; g.canGenerate = g.level >= 4; });
+      // All catalog entries are functional (game tier ≥ 4). Non-functional tiers (1–3)
+      // only exist in itemData and never appear here.
+      gens.forEach((g, i) => {
+        g.level = i + 1;
+        g.canGenerate = true;
+        if (!g.gameTier) g.gameTier = g.level; // fallback for generators not in itemData
+      });
     });
 
     return byId;
@@ -55,7 +66,7 @@ const SimDataLoader = (() => {
     const tools = {};
     rows.forEach(r => {
       const toolId = r.toolId; if (!toolId) return;
-      if (!tools[toolId]) tools[toolId] = { type: toolId, recipes: [] };
+      if (!tools[toolId]) tools[toolId] = { type: toolId, name: r.tool || toolId, recipes: [] };
       const resultId = r.itemID || r.ResultId;
       if (!resultId) return; // skip malformed rows
       const ings = [r.Ingredient1Id, r.Ingredient2Id, r.Ingredient3Id, r.Ingredient4Id]
@@ -120,7 +131,7 @@ const SimDataLoader = (() => {
       .map((s, i) => ({ ...s, index: i }));
   }
 
-  function buildRewardSchedule(sceneCatalog, buildUpRewardRows, orderSystemRows) {
+  function buildRewardSchedule(sceneCatalog, buildUpRewardRows, orderSystemRows, orderDetailRows) {
     const schedule = [];
 
     // Build-step rewards from already-parsed sceneCatalog
@@ -141,18 +152,32 @@ const SimDataLoader = (() => {
       }
     });
 
-    let currentBatch = null;
+    // Individual order completion rewards (custom_value field in OrderDetail.csv).
+    // Parsed by generate_data.py as rw_item_id / rw_item_number on each orderDetail row.
+    (orderDetailRows || []).forEach(r => {
+      if (!r.orderId || !r.rw_item_id) return;
+      schedule.push({ trigger: 'order', orderId: r.orderId,
+        itemId: r.rw_item_id, qty: parseInt(r.rw_item_number) || 1 });
+    });
+
+    // Wide-format batch rewards: rewardN_resType/_resId/_resNumber/_customValue (1..4)
     orderSystemRows.forEach(r => {
-      if (r.id) currentBatch = r.id;
-      if (!currentBatch || !r.id_order) return;
-      if (r.res_type === 'Item' && r.custom_value) {
-        schedule.push({ trigger: 'order', orderId: r.id_order, batchId: currentBatch,
-          itemId: r.custom_value, qty: parseInt(r.res_number) || 1 });
-      } else if (r.res_type === 'Money' && r.res_id && r.res_number) {
-        const currency = CURRENCY_TYPE[r.res_id];
-        if (currency) {
-          schedule.push({ trigger: 'order', orderId: r.id_order, batchId: currentBatch,
-            currency, amount: parseInt(r.res_number) || 0 });
+      if (!r.id) return;
+      for (let i = 1; i <= 4; i++) {
+        const resType = r[`reward${i}_resType`];
+        if (!resType) continue;
+        const customValue = r[`reward${i}_customValue`];
+        const resId = r[`reward${i}_resId`];
+        const resNumber = parseInt(r[`reward${i}_resNumber`]) || 0;
+        if (resType === 'Item' && customValue) {
+          schedule.push({ trigger: 'batch', batchId: r.id,
+            itemId: customValue, qty: resNumber || 1 });
+        } else if (resType === 'Money' && resId) {
+          const currency = CURRENCY_TYPE[resId];
+          if (currency) {
+            schedule.push({ trigger: 'batch', batchId: r.id,
+              currency, amount: resNumber });
+          }
         }
       }
     });
@@ -185,6 +210,12 @@ const SimDataLoader = (() => {
     return map;
   }
 
+  function buildItemEnergyCosts(itemDataRows) {
+    const map = {};
+    itemDataRows.forEach(r => { if (r.itemID) map[r.itemID] = parseFloat(r.energy_cost) || 0; });
+    return map;
+  }
+
   function buildOrderCatalog(orderSystemRows, orderDetailRows) {
     const orderDetailMap = {};
     orderDetailRows.forEach(r => {
@@ -201,44 +232,100 @@ const SimDataLoader = (() => {
     });
 
     const batchMap = {};
-    let currentBatch = null;
     orderSystemRows.forEach(r => {
-      if (r.id) {
-        const scene = normalizeTheme(r.theme_type || r.themeType);
-        currentBatch = {
-          id: r.id, scene,
-          canReceiveReward: r.can_receive_reward === 'TRUE',
-          orderIds: []
-        };
-        batchMap[r.id] = currentBatch;
+      if (!r.id) return;
+      const scene = normalizeTheme(r.theme_type || r.themeType);
+      const orderIds = [];
+      // Wide-format: orderN_idOrder columns (1..7 in current CSV)
+      for (let i = 1; i <= 7; i++) {
+        const v = r[`order${i}_idOrder`];
+        if (v) orderIds.push(v);
       }
-      if (currentBatch && r.id_order) currentBatch.orderIds.push(r.id_order);
+      batchMap[r.id] = {
+        id: r.id, scene,
+        canReceiveReward: r.canReceiveReward === '1' || r.can_receive_reward === 'TRUE',
+        orderIds
+      };
     });
 
     return { batchMap, orderDetailMap };
   }
 
+  function buildItemFamilies(itemDataRows) {
+    // Family = first 4 digits of itemID (e.g. "7001" = Coffee). Same-family items
+    // form a merge chain by tier: 2× tier N → 1× tier N+1.
+    const itemTierMap = {};   // itemId → { family, tier }
+    const familyChain = {};   // family → [itemId by tier index, 0-based]
+    (itemDataRows || []).forEach(r => {
+      const id = r.itemID;
+      const tier = parseInt(r.tier);
+      if (!id || !tier) return;
+      const family = id.substring(0, 4);
+      itemTierMap[id] = { family, tier };
+      if (!familyChain[family]) familyChain[family] = [];
+      familyChain[family][tier - 1] = id;
+    });
+    return { itemTierMap, familyChain };
+  }
+
   function build(gameData) {
     const gd = gameData || window.GameData;
-    const generatorCatalog = buildGeneratorCatalog(gd.rateGenerator || [], gd.itemMerge || []);
+    const generatorCatalog = buildGeneratorCatalog(gd.rateGenerator || [], gd.itemMerge || [], gd.itemData || []);
     const toolCatalog = buildToolCatalog(gd.formuaRecipes || []);
     const itemExpandCatalog = buildItemExpandCatalog(gd.itemExpand || []);
     const sceneCatalog = buildSceneCatalog(gd.buildUpGoalData || [], gd.orderSystem || []);
     const { batchMap, orderDetailMap } = buildOrderCatalog(gd.orderSystem || [], gd.orderDetail || []);
+    const { itemTierMap, familyChain } = buildItemFamilies(gd.itemData || []);
+
+    // All item IDs whose type is 'Generator' (includes level 1-3 which aren't in generatorCatalog)
+    const generatorItemIds = new Set(
+      (gd.itemData || []).filter(r => r.type === 'Generator').map(r => r.itemID).filter(Boolean)
+    );
+
+    const itemNames = {};
+    (gd.itemMerge || []).forEach(r => { if (r.id && r.name_item) itemNames[r.id] = r.name_item; });
+
+    // toolItemMap: toolType (4-digit) → representative itemId for level display.
+    // boardDefault items take priority (actual starting level); first functional tier (4+)
+    // is the fallback so display shows a usable level rather than an unbuilt Lv1 shell.
+    const toolItemMap = {};
+    Object.keys(toolCatalog).forEach(toolType => {
+      const functional = Object.entries(itemTierMap)
+        .filter(([, info]) => info.family === toolType && info.tier >= 4)
+        .sort((a, b) => a[1].tier - b[1].tier);
+      if (functional.length) { toolItemMap[toolType] = functional[0][0]; return; }
+      const all = Object.entries(itemTierMap)
+        .filter(([, info]) => info.family === toolType)
+        .sort((a, b) => a[1].tier - b[1].tier);
+      if (all.length) toolItemMap[toolType] = all[0][0];
+    });
+    (gd.boardDefault || []).forEach(({ idItem }) => {
+      const family = idItem.substring(0, 4);
+      if (toolCatalog[family]) toolItemMap[family] = idItem;
+    });
 
     return {
       generatorCatalog,
       toolCatalog,
       itemExpandCatalog,
       sceneCatalog,
-      rewardSchedule: buildRewardSchedule(sceneCatalog, gd.buildUpGoalReward || [], gd.orderSystem || []),
+      rewardSchedule: buildRewardSchedule(sceneCatalog, gd.buildUpGoalReward || [], gd.orderSystem || [], gd.orderDetail || []),
       iapCatalog: buildIAPCatalog(gd),
-      itemSellPrices: buildItemSellPrices(gd.itemMerge || []),
+      itemSellPrices:    buildItemSellPrices(gd.itemMerge || []),
+      itemEnergyCosts:   buildItemEnergyCosts(gd.itemData || []),
       batchMap,
-      orderDetailMap
+      orderDetailMap,
+      itemTierMap,
+      familyChain,
+      generatorItemIds,
+      itemNames,
+      toolItemMap,
+      boardDefault: gd.boardDefault || []   // [{idItem, x, y}] from BoardDefault.asset
     };
   }
 
-  if (typeof module !== 'undefined') module.exports = { build, normalizeTheme };
-  return { build };
+  const exports = { build, normalizeTheme };
+  if (typeof module !== 'undefined') module.exports = exports;
+  if (typeof window !== 'undefined') window.SimDataLoader = exports;
+  return exports;
 })();

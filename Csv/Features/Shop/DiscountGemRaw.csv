@@ -1,2 +1,2 @@
-from_random,to_random,time_duration,time_next_discount
-200,200,86400,43200
+from_random,to_random,time_duration,time_next_discount,limit_buy_per_pack
+200,200,86400,43200,1

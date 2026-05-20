@@ -1,4 +1,4 @@
-type,id,many_plus,plus_type
-CardPlus,18054,8,None
-CardPlus,18055,16,None
-CardPlus,18056,32,None
+id,many_plus,plus_type
+500101,8,None
+500102,16,None
+500103,32,None

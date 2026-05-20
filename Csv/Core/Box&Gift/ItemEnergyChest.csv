@@ -1,5 +1,9 @@
-﻿item_save_type,id_item,many_generator,time_unlock,item_child_type,item_child_id,rate
-EnergyChest,18066,5,0,Energy,18005,56
-,,,,Energy,18006,31
-,,,,Energy,18007,13
-None,0,5,0,None,0,1
+id,many_generator,time_unlock,item_child_type,item_child_id,rate
+600101,5,0,Energy,300201,50
+,,,Energy,300202,30
+,,,Energy,300203,10
+,,,Energy,300204,10
+600101,5,0,Energy,300201,50
+,,,Energy,300202,30
+,,,Energy,300203,10
+,,,Energy,300204,10

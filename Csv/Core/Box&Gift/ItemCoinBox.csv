@@ -1,5 +1,5 @@
-item_save_type,id_item,many_generator,time_unlock,item_child_type,item_child_id,rate
-CoinBox,18075,5,0,Gold,18000,50
-,,,,Gold,18001,30
-,,,,Gold,18002,20
-CoinBox,18076,5,0,Gold,18000,50
+id,many_generator,time_unlock,item_child_type,item_child_id,rate
+601101,5,0,Gold,300101,50
+,,,Gold,300102,30
+,,,Gold,300103,20
+60145101,5,0,Gold,300101,50

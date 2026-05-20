@@ -1,5 +1,5 @@
-type,id,can_cut
-Scissors,18031,FALSE
-Scissors,18032,FALSE
-Scissors,18033,FALSE
-Scissors,18034,TRUE
+id,can_cut
+500301,FALSE
+500302,FALSE
+500303,FALSE
+500304,TRUE

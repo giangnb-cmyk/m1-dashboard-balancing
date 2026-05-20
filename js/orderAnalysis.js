@@ -283,6 +283,69 @@ const OrderAnalysis = (() => {
         sel.value = prev && batches.some(b => b.id === prev) ? prev : '';
     }
 
+    function renderSceneEnergySummary(orderSystem, orderMap, energyMap, activeScene) {
+        const el = document.getElementById('oa-scene-energy-summary');
+        if (!el) return;
+
+        const sceneMap = {};
+        let maxTotal = 0;
+        orderSystem.forEach(batch => {
+            const scene = batch.themeType;
+            if (!scene) return;
+            if (!sceneMap[scene]) sceneMap[scene] = { total: 0, count: 0 };
+            getBatchOrderIds(batch).forEach(oid => {
+                const order = orderMap[oid];
+                if (!order) return;
+                sceneMap[scene].total += getOrderEnergy(order, energyMap);
+                sceneMap[scene].count++;
+            });
+        });
+        Object.values(sceneMap).forEach(d => { if (d.total > maxTotal) maxTotal = d.total; });
+
+        const rows = Object.entries(sceneMap)
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([scene, data]) => {
+                const isActive = activeScene === scene;
+                const total    = Math.round(data.total);
+                const avg      = data.count > 0 ? (data.total / data.count).toFixed(1) : '0';
+                const barPct   = maxTotal > 0 ? (data.total / maxTotal * 100).toFixed(1) : 0;
+                const rowBg    = isActive ? 'rgba(56,189,248,0.1)' : 'transparent';
+                return `<tr class="oa-scene-row${isActive ? ' oa-scene-row-active' : ''}"
+                    style="cursor:pointer;background:${rowBg};transition:background .12s"
+                    onclick="document.getElementById('oa-filter-scene').value='${scene}';document.getElementById('oa-filter-scene').dispatchEvent(new Event('change'))"
+                    onmouseenter="this.style.background='rgba(56,189,248,0.07)'"
+                    onmouseleave="this.style.background='${rowBg}'">
+                  <td style="padding:.45rem .75rem;white-space:nowrap;font-size:.8rem;font-weight:${isActive?700:500};color:${isActive?'var(--accent)':'var(--text-primary)'}">
+                    ${isActive ? '▶ ' : ''}${scene}
+                  </td>
+                  <td style="padding:.45rem .75rem;text-align:right;font-family:'JetBrains Mono',monospace;font-size:.82rem;font-weight:700;color:var(--accent);white-space:nowrap">
+                    ${total.toLocaleString()} ⚡
+                  </td>
+                  <td style="padding:.45rem .75rem;width:40%;min-width:120px">
+                    <div style="background:rgba(148,163,184,.12);border-radius:3px;height:6px;overflow:hidden">
+                      <div style="background:var(--accent);width:${barPct}%;height:100%;border-radius:3px;transition:width .3s"></div>
+                    </div>
+                  </td>
+                  <td style="padding:.45rem .75rem;text-align:right;font-size:.75rem;color:var(--text-muted);white-space:nowrap">${data.count} orders</td>
+                  <td style="padding:.45rem .75rem;text-align:right;font-size:.75rem;color:var(--text-muted);white-space:nowrap">${avg} ⚡/order</td>
+                </tr>`;
+            }).join('');
+
+        el.innerHTML = `
+          <table style="width:100%;border-collapse:collapse">
+            <thead>
+              <tr style="border-bottom:1px solid rgba(148,163,184,.15)">
+                <th style="padding:.35rem .75rem;text-align:left;font-size:.7rem;color:var(--text-muted);font-weight:600;letter-spacing:.05em;text-transform:uppercase">Scene</th>
+                <th style="padding:.35rem .75rem;text-align:right;font-size:.7rem;color:var(--text-muted);font-weight:600;letter-spacing:.05em;text-transform:uppercase">Total Energy</th>
+                <th></th>
+                <th style="padding:.35rem .75rem;text-align:right;font-size:.7rem;color:var(--text-muted);font-weight:600;letter-spacing:.05em;text-transform:uppercase">Orders</th>
+                <th style="padding:.35rem .75rem;text-align:right;font-size:.7rem;color:var(--text-muted);font-weight:600;letter-spacing:.05em;text-transform:uppercase">Avg / Order</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>`;
+    }
+
     function render(orderSystem, orderMap, energyMap) {
         const sceneF = $('oa-filter-scene')?.value || '';
         const batchF = $('oa-filter-batch')?.value  || '';
@@ -303,6 +366,7 @@ const OrderAnalysis = (() => {
         setText('oa-filter-stat-orders',  orderIds.size.toLocaleString());
         setText('oa-stat-avg-gold', avgEnergy.toLocaleString());
 
+        renderSceneEnergySummary(orderSystem, orderMap, energyMap, sceneF);
         renderDifficultyChart(batches, orderMap, energyMap);
         renderBatchCards(batches, orderMap, energyMap);
     }

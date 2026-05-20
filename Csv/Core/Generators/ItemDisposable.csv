@@ -1,3 +1,3 @@
-type,id,cost_energy,time_tool
-GlassProduct,2052,1,0
-GlassProduct,2,1,0
+id,cost_energy,time_tool
+00122052,1,0
+001202,1,0

@@ -719,6 +719,12 @@
                 </div>
             </div>
 
+            <!-- Per-scene energy totals -->
+            <div class="glass" style="margin-bottom:1.25rem;border-radius:12px;overflow:hidden">
+              <div style="padding:.6rem 1rem .4rem;font-size:.72rem;font-weight:600;color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid rgba(148,163,184,.1)">⚡ Energy Cost per Scene</div>
+              <div id="oa-scene-energy-summary" style="max-height:280px;overflow-y:auto;padding:.25rem 0"></div>
+            </div>
+
             <!-- Filter bar -->
             <div class="glass filter-bar" style="margin-bottom:1.25rem;">
                 <div class="filter-group">
@@ -797,41 +803,107 @@
                 <p>Giả lập hành trình user — cấu hình profile, session, IAP và xem timeline tiến trình theo từng ngày.</p>
             </div>
 
-            <!-- Config Panel -->
-            <div id="psim-config" class="glass" style="padding:1.5rem;margin-bottom:1.5rem;"></div>
-
-            <!-- Playback Controls -->
-            <div class="glass" style="padding:1rem 1.5rem;margin-bottom:1rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-                <div style="display:flex;align-items:center;gap:0.5rem;">
-                    <label style="font-size:0.85rem;color:var(--text-muted)">Days:</label>
-                    <input type="number" id="psim-target-days" value="100" min="1" max="365"
-                        style="width:70px;padding:0.3rem 0.5rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:var(--text-main);font-size:0.85rem;">
+            <!-- ── Playback Toolbar (always visible above tabs) ── -->
+            <div class="glass psim-toolbar">
+                <div class="psim-field">
+                    <label for="psim-target-days">Days</label>
+                    <input type="number" id="psim-target-days" value="100" min="1" max="365" class="psim-input">
                 </div>
-                <div style="display:flex;align-items:center;gap:0.5rem;">
-                    <label style="font-size:0.85rem;color:var(--text-muted)">Speed:</label>
-                    <div id="psim-speed-btns" style="display:flex;gap:0.25rem;">
-                        <button class="psim-speed active" data-ms="200">1x</button>
-                        <button class="psim-speed" data-ms="40">5x</button>
-                        <button class="psim-speed" data-ms="10">10x</button>
+                <div class="psim-field">
+                    <label>Speed</label>
+                    <div class="psim-segmented">
+                        <button class="psim-speed active" data-ms="200">1×</button>
+                        <button class="psim-speed" data-ms="40">5×</button>
+                        <button class="psim-speed" data-ms="10">10×</button>
                     </div>
                 </div>
-                <button id="psim-play-btn" style="padding:0.4rem 1.2rem;background:rgba(56,189,248,0.15);border:1px solid #38bdf8;border-radius:8px;color:#38bdf8;cursor:pointer;font-size:0.9rem;">▶ Play</button>
-                <button id="psim-pause-btn" style="padding:0.4rem 1.2rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--text-muted);cursor:pointer;font-size:0.9rem;" disabled>⏸ Pause</button>
-                <button id="psim-reset-btn" style="padding:0.4rem 1.2rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--text-muted);cursor:pointer;font-size:0.9rem;">↺ Reset</button>
-                <span id="psim-day-label" style="font-size:0.85rem;color:var(--text-muted);margin-left:auto;">Day 0</span>
+                <div class="psim-toolbar-actions">
+                    <button id="psim-play-btn" class="psim-btn psim-btn-primary">▶ Play</button>
+                    <button id="psim-pause-btn" class="psim-btn" disabled>⏸ Pause</button>
+                    <button id="psim-reset-btn" class="psim-btn">↺ Reset</button>
+                </div>
+                <span id="psim-day-label" class="psim-day-label">Day 0</span>
             </div>
 
-            <!-- Timeline Chart -->
-            <div class="glass" style="padding:1.5rem;margin-bottom:1.5rem;">
-                <canvas id="psim-chart" height="280"></canvas>
-                <div id="psim-legend" style="display:flex;gap:1.5rem;margin-top:0.75rem;flex-wrap:wrap;"></div>
+            <!-- ── Main Tab Navigation ── -->
+            <div class="psim-main-tabs-nav glass">
+                <button class="psim-main-tab active" data-panel="psim-panel-config">⚙ Config</button>
+                <button class="psim-main-tab" data-panel="psim-panel-profiles">👤 Profiles</button>
+                <button class="psim-main-tab" data-panel="psim-panel-charts">📊 Charts</button>
             </div>
 
-            <!-- Stats Table -->
-            <div id="psim-stats" class="glass" style="padding:1.5rem;margin-bottom:1rem;"></div>
+            <!-- ── Panel 1: Config ── -->
+            <div id="psim-panel-config" class="psim-main-panel glass psim-card active">
+                <div id="psim-config"></div>
+            </div>
 
-            <!-- Economy Table -->
-            <div id="psim-economy" class="glass" style="padding:1.5rem;"></div>
+            <!-- ── Panel 2: Profiles (per-profile board + scrubber) ── -->
+            <div id="psim-panel-profiles" class="psim-main-panel glass psim-profile-card">
+                <div id="psim-profile-tabs" class="psim-tabs"></div>
+                <div id="psim-kpis" class="psim-kpis">
+                    <div class="psim-kpi-empty">Run simulation to populate.</div>
+                </div>
+                <div id="psim-board" class="psim-board"></div>
+                <div class="psim-scrubber-wrap">
+                    <span id="psim-scrub-now" class="psim-scrub-label">Day 0</span>
+                    <input type="range" id="psim-scrubber" class="psim-scrubber" min="0" max="0" value="0" disabled>
+                    <span id="psim-scrub-max" class="psim-scrub-label psim-scrub-label-end">—</span>
+                </div>
+                <div class="psim-gemlog-wrap">
+                    <div class="psim-gemlog-header">
+                        <span class="psim-gemlog-title">📋 Activity Log</span>
+                        <button id="psim-log-expand-btn" class="psim-btn psim-btn-sm">⛶ Expand</button>
+                    </div>
+                    <div id="psim-log-filter-bar" class="psim-log-filters"></div>
+                    <div id="psim-gem-log" class="psim-gem-log">
+                        <div class="psim-gemlog-empty">No events up to this day.</div>
+                    </div>
+                </div>
+                <div class="psim-gemlog-wrap">
+                    <div class="psim-gemlog-header" style="display:flex;align-items:center;">
+                        <span class="psim-gemlog-title">📦 Order Summary</span>
+                        <button class="psim-expand-btn" data-expand="order-summary" data-profile="0" title="View all orders">⤢</button>
+                    </div>
+                    <div id="psim-order-summary" class="psim-gem-log">
+                        <div class="psim-gemlog-empty">No completed orders.</div>
+                    </div>
+                </div>
+                <div class="psim-gemlog-wrap">
+                    <div class="psim-gemlog-header">
+                        <span class="psim-gemlog-title">📊 Item Statistics</span>
+                    </div>
+                    <div id="psim-item-stats" class="psim-item-stats">
+                        <div class="psim-gemlog-empty">Run simulation to populate.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Panel 3: Charts ── -->
+            <div id="psim-panel-charts" class="psim-main-panel glass psim-card">
+                <div id="psim-chart-toggles" class="psim-chart-toggles"></div>
+                <canvas id="psim-chart" height="140"></canvas>
+                <div id="psim-legend" class="psim-legend"></div>
+                <div class="psim-chart-range-wrap">
+                    <span class="psim-scrub-label">Day 0</span>
+                    <input type="range" id="psim-chart-slider" class="psim-scrubber" min="0" max="100" value="100" disabled>
+                    <span id="psim-chart-slider-label" class="psim-scrub-label psim-scrub-label-end">Day 100</span>
+                </div>
+                <div id="psim-stats" class="psim-inner-section"></div>
+                <div id="psim-economy" class="psim-inner-section"></div>
+            </div>
+
+            <!-- ── Activity Log Modal ── -->
+            <div id="psim-log-modal" class="psim-modal" style="display:none;">
+                <div class="psim-modal-backdrop"></div>
+                <div class="psim-modal-box">
+                    <div class="psim-modal-header">
+                        <span class="psim-modal-title">📋 Activity Log</span>
+                        <button id="psim-log-modal-close" class="psim-modal-close">✕</button>
+                    </div>
+                    <div id="psim-log-modal-filter-bar" class="psim-log-filters" style="padding:0.75rem 1.25rem 0;"></div>
+                    <div id="psim-gem-log-modal" class="psim-gem-log psim-gem-log-modal"></div>
+                </div>
+            </div>
         </section><!-- /player-sim -->
 
         </div>

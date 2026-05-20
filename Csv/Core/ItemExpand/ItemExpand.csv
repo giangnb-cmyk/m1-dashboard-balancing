@@ -1,4 +1,4 @@
-id,id_item_expand,time_cooldown,cost_energy
-700302,700401,3,1
-700506,700701,3,1
-,700801,,
+type,id,item_save_type,id_item,time_cooldown,cost_energy
+Drink,700301,GlassProduct,700401,3,1
+Fruit,700506,CoconutProduct,700701,3,1
+,,CoconutProduct,700801,,

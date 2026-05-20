@@ -1,4 +1,5 @@
 // js/sim/simCooking.js
+// js/sim/simCooking.js
 const SimCooking = (() => {
   const _board = () => typeof module !== 'undefined' ? require('./simBoard') : window.SimBoard;
 
@@ -34,13 +35,14 @@ const SimCooking = (() => {
   }
 
   function processCooking(board, currentTimeMins) {
+    const SimBoard = _board();
     const completed = [];
     board.tools.forEach(slot => {
       if (!slot.cooking || slot.cooking.doneAt > currentTimeMins) return;
       const resultId = slot.cooking.resultId;
       slot.cooking = null;
-      board.boardItems[resultId] = (board.boardItems[resultId] || 0) + 1;
-      board.boardItemCount++;
+      // Use addItem so capacity (board → inventory fallback) is respected
+      SimBoard.addItem(board, resultId, 1);
       completed.push(resultId);
     });
     return completed;
@@ -56,5 +58,6 @@ const SimCooking = (() => {
 
   const exports = { findRecipe, startCooking, processCooking, tryStartAllCooking };
   if (typeof module !== 'undefined') module.exports = exports;
+  if (typeof window !== 'undefined') window.SimCooking = exports;
   return exports;
 })();

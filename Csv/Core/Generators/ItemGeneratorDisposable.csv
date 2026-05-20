@@ -1,3 +1,3 @@
-type,id,item_type,rate_type,item_id,rate,cost_energy,min_count,max_count,deduct_rate
-FastFood,17094,Dough,75,6024,75,1,4,4,0
-None,1,None,75,1010,50,1,10,30,0
+id,item_type,rate_type,item_id,rate,cost_energy,min_count,max_count,deduct_rate
+010717094,Dough,75,6024,75,1,4,4,0
+010717094,Dough,75,1010,50,1,10,30,0

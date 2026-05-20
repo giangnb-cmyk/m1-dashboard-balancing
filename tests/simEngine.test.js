@@ -31,7 +31,7 @@ const mockGameData = {
   buildUpGoalReward: [],
   orderSystem: [
     { id: '1', theme_type: 'Scene_01', can_receive_reward: 'FALSE',
-      id_order: '1', res_type: '', res_id: '', res_number: '', custom_value: '' },
+      order1_idOrder: '1', res_type: '', res_id: '', res_number: '', custom_value: '' },
   ],
   orderDetail: [
     { orderId: '1', item1_id: '400201', item1_amount: '1',
@@ -51,7 +51,7 @@ suite('SimEngine', () => {
       const cfg = { sessionMode: 'sessionsPerDay', sessionsPerDay: 4,
         regenPerMin: 0.2, cap: 100, playerType: 'f2p', purchases: [] };
       const state = SimEngine.createState(cats, cfg, [], []);
-      assertEqual(state.energy.owned, 20);
+      assertEqual(state.energy.owned, 50); // default startingEnergy = 50
       assertEqual(state.energy.cap, 100);
     });
     test('initial generators placed on board', () => {

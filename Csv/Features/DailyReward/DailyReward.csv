@@ -5,5 +5,5 @@ order,res_type,res_id,res_number,custom_value
 4,Money,1,15,
 5,Money,6,50,
 6,Money,3,50,
-7,Item,136,1,18065
-,Item,134,1,18054
+7,Item,6005,1,600501
+,Item,5001,1,500101

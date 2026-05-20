@@ -142,6 +142,47 @@ Object.assign(window.GameData, {json_str});
 
 # ── Domain manifests ──────────────────────────────────────────────────────────
 
+def parse_board_default(rel_path):
+    """Parse Unity BoardDefault.asset (YAML ScriptableObject) into a list of
+    {idItem, x, y} dicts representing the initial board state.
+
+    Each entry in the asset looks like:
+        - ItemSave:
+            itemSaveType: 0
+            idItem: 701301
+          Position:
+            x: 0
+            y: 0
+    """
+    import re
+    full = os.path.join(CSV_DIR, rel_path)
+    if not os.path.exists(full):
+        print(f'  [SKIP] {rel_path} — not found')
+        return []
+
+    with open(full, encoding='utf-8') as f:
+        content = f.read()
+
+    # idItem immediately followed by Position block (no other fields between them)
+    pattern = re.compile(
+        r'idItem:\s*(\d+)\s*\n'
+        r'\s*Position:\s*\n'
+        r'\s*x:\s*(\d+)\s*\n'
+        r'\s*y:\s*(\d+)'
+    )
+    items = []
+    for m in pattern.finditer(content):
+        items.append({
+            'idItem': m.group(1),
+            'x':      int(m.group(2)),
+            'y':      int(m.group(3)),
+        })
+    # Keep only generators (1xxxxx) and tools (2xxxxx); drop loose merge items (7xxxxx)
+    items = [i for i in items if i['idItem'].startswith(('1', '2'))]
+    print(f'    BoardDefault: {len(items)} generator/tool slots parsed from {rel_path}')
+    return items
+
+
 def parse_item_expand(rel_path):
     """Parse ItemExpand.csv — tự detect schema cũ vs mới.
     Schema mới: itemID, spawn_itemID, spawn_number, time_cooldown, cost_energy
@@ -161,7 +202,7 @@ def parse_item_expand(rel_path):
     for r in rows:
         item_id    = r.get('id', '').strip() or last_id
         last_id    = item_id or last_id
-        spawn_id   = r.get('id_item_expand', '').strip()
+        spawn_id   = r.get('id_item', '').strip()
         if not spawn_id:
             continue
         result.append({
@@ -174,13 +215,49 @@ def parse_item_expand(rel_path):
     return result
 
 
+def parse_item_data_from_merge(rel_path):
+    """Generate itemData from ItemMerge.csv + ItemData.csv.
+    ItemMerge.csv: name, can_merge, sell_price, sum_merge.
+    ItemData.csv:  energy_cost, time_point (joined by itemID)."""
+    # Load energy/time lookup from ItemData.csv
+    energy_map = {}
+    for r in load_csv('Core/ItemIdentify/ItemData.csv'):
+        iid = r.get('itemID', '')
+        if iid:
+            energy_map[iid] = {
+                'energy_cost': r.get('energy_cost', '0'),
+                'time_point':  r.get('time_point', '0'),
+            }
+
+    rows = load_csv(rel_path)
+    result = []
+    for r in rows:
+        item_id = r.get('id', '')
+        if not item_id:
+            continue
+        tier = int(item_id[-2:]) if len(item_id) >= 2 and item_id[-2:].isdigit() else 0
+        extra = energy_map.get(item_id, {'energy_cost': '0', 'time_point': '0'})
+        result.append({
+            'itemID':      item_id,
+            'name_item':   r.get('name_item', ''),
+            'can_merge':   r.get('can_merge', ''),
+            'sell_price':  r.get('sell_price', ''),
+            'sum_merge':   r.get('sum_merge', ''),
+            'tier':        str(tier),
+            'energy_cost': extra['energy_cost'],
+            'time_point':  extra['time_point'],
+        })
+    return inject_item_type(result)
+
+
 def load_items():
     return {
-        'itemData':      inject_item_type(load_csv('Core/ItemIdentify/ItemData.csv')),
+        'itemData':      parse_item_data_from_merge('Core/ItemIdentify/ItemMerge.csv'),
         'itemCurrency':  load_csv('Core/ItemIdentify/ItemCurrency.csv'),
         'itemMerge':     load_csv('Core/ItemIdentify/ItemMerge.csv'),
         'itemExpand':    parse_item_expand('Core/ItemExpand/ItemExpand.csv'),
         'formuaRecipes': parse_cooking_recipes('Core/Recipes/CookingRecipes.csv'),
+        'boardDefault':  parse_board_default('SO/BoardDefault.asset'),
     }
 
 
@@ -214,9 +291,13 @@ def infer_gen_type(rid):
     return GEN_ID_4PREFIX_TO_TYPE.get(prefix, '')
 
 
+_GEN_FILL_FIELDS = ['id', 'time_cooldown', 'cost_energy', 'min_count', 'max_count', 'deduct_rate', 'gem_to_min']
+
+
 def parse_item_generator(rel_path):
-    """Parse ItemGenerator.csv (fill-down id), infer generator type from id prefix."""
-    raw = load_csv(rel_path, ['id'])
+    """Parse ItemGenerator.csv (sparse rows: config fields only on first row per generator).
+    Fill-down all config fields so every spawn row carries full generator context."""
+    raw = load_csv(rel_path, _GEN_FILL_FIELDS)
     result = []
     for row in raw:
         r = dict(row)
@@ -229,13 +310,15 @@ def load_generators():
     return {
         'rateGenerator':            parse_item_generator('Core/Generators/ItemGenerator.csv'),
         'dynamicGeneratorSpawning': load_csv('Core/Generators/DynamicGeneratorSpawning.csv', ['item_save_type']),
-        'itemGenerator':            load_csv('Core/Generators/ItemGenerator.csv',            ['id']),
+        'itemGenerator':            load_csv('Core/Generators/ItemGenerator.csv', _GEN_FILL_FIELDS),
     }
 
 
 def parse_order_detail(rel_path, item_names):
     """Parse OrderDetail.csv (multi-row per order) into flat rows with item1/item2 fields.
-    item_names: dict id -> name from ItemMerge.csv"""
+    item_names: dict id -> name from ItemMerge.csv.
+    Each order's first row may carry a custom_value reward item (tool/generator/item given
+    upon completing the order); this is captured as rw_item_id / rw_item_number."""
     raw = load_csv(rel_path, ['order_id', 'id_npc'])
     grouped = {}
     order_list = []
@@ -245,7 +328,8 @@ def parse_order_detail(rel_path, item_names):
             continue
         if oid not in grouped:
             grouped[oid] = {'orderId': oid, 'idNPC': row.get('id_npc', ''),
-                            'items': [], 'gold': row.get('res_number', '')}
+                            'items': [], 'gold': row.get('res_number', ''),
+                            'rwItemId': '', 'rwItemQty': '1'}
             order_list.append(oid)
         item_id = row.get('item_id', '')
         if item_id:
@@ -254,6 +338,17 @@ def parse_order_detail(rel_path, item_names):
                 'amount': row.get('amount', '1'),
                 'name': item_names.get(item_id, ''),
             })
+        # Capture reward item: custom_value carries the item ID when res_type=Item
+        cv = row.get('custom_value', '')
+        rt = row.get('res_type', '')
+        rn = row.get('res_number', '')
+        if cv and rt == 'Item':
+            grouped[oid]['rwItemId']  = cv
+            grouped[oid]['rwItemQty'] = rn or '1'
+        elif cv and not grouped[oid]['rwItemId']:
+            # Fallback: plain custom_value without explicit res_type=Item
+            grouped[oid]['rwItemId']  = cv
+            grouped[oid]['rwItemQty'] = rn or '1'
     out = []
     for oid in order_list:
         o = grouped[oid]
@@ -270,6 +365,8 @@ def parse_order_detail(rel_path, item_names):
             'item2_name':     i2.get('name', ''),
             'item2_amount':   i2.get('amount', ''),
             'gold':           o['gold'],
+            'rw_item_id':     o['rwItemId'],
+            'rw_item_number': o['rwItemQty'],
         })
     return out
 
@@ -398,8 +495,8 @@ def load_iap():
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 DOMAINS = [
-    ('data-items.js',      load_items,      'Items — ItemData, ItemCurrency, ItemMerge, ItemExpand, CookingRecipes'),
-    ('data-generators.js', load_generators, 'Generators — RateGenerator, DynamicGeneratorSpawning, ItemGenerator'),
+    ('data-items.js',      load_items,      'Items — ItemMerge (as itemData+itemMerge), ItemCurrency, ItemExpand, CookingRecipes'),
+    ('data-generators.js', load_generators, 'Generators — ItemGenerator, DynamicGeneratorSpawning'),
     ('data-orders.js',     load_orders,     'Orders — OrderDetail, OrderSystem, OrderGold, Rewards'),
     ('data-buildup.js',    load_buildup,    'BuildUp — BuildUpGoal, BuyCurrency, ChefsBook, ConvertTime'),
     ('data-boxes.js',      load_boxes,      'Boxes — All Box & Gift types'),

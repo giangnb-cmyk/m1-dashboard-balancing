@@ -3,1145 +3,1318 @@ Object.assign(window.GameData, {
   "boxes":{
     "itemBoxGenerator":[
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"2002",
+        "id":"1442002",
         "many_generator":"3",
         "time_unlock":"20",
-        "item_child_type":"Fruit",
-        "item_child_id":"1010",
-        "rate":"75"
+        "item_child_type":"Coffee",
+        "item_child_id":"700101",
+        "rate":"75",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"2002",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"20",
-        "item_child_type":"Nut",
-        "item_child_id":"1022",
-        "rate":"25"
+        "item_child_type":"SoftDrinks",
+        "item_child_id":"700201",
+        "rate":"25",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"2003",
+        "id":"1442003",
         "many_generator":"3",
         "time_unlock":"10",
-        "item_child_type":"Fruit",
-        "item_child_id":"1010",
-        "rate":"50"
+        "item_child_type":"Coffee",
+        "item_child_id":"700101",
+        "rate":"50",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"2003",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"10",
         "item_child_type":"",
-        "item_child_id":"1011",
-        "rate":"30"
+        "item_child_id":"700102",
+        "rate":"30",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"2003",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"10",
-        "item_child_type":"Nut",
-        "item_child_id":"1022",
-        "rate":"20"
+        "item_child_type":"SoftDrinks",
+        "item_child_id":"700201",
+        "rate":"20",
+        "item_save_type":"",
+        "id_item":""
       }
     ],
     "itemAssistantsChest":[
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"600401",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"DrinkGenerator",
-        "item_child_id":"2000",
-        "rate":"4"
+        "item_child_id":"100101",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
-        "item_child_type":"FruitNutGenerator",
-        "item_child_id":"1000",
-        "rate":"4"
+        "item_child_type":"FruitAndSugarGenerator",
+        "item_child_id":"100201",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"ProteinGenerator",
-        "item_child_id":"3000",
-        "rate":"4"
+        "item_child_id":"100301",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"VegetablesGenerator",
-        "item_child_id":"4000",
-        "rate":"4"
+        "item_child_id":"100401",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
-        "item_child_type":"Ship",
-        "item_child_id":"5000",
-        "rate":"4"
+        "item_child_type":"SeafoodGenerator",
+        "item_child_id":"100501",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"GrainGenerator",
-        "item_child_id":"6000",
-        "rate":"4"
+        "item_child_id":"100601",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"AlcoholGenerator",
-        "item_child_id":"7000",
-        "rate":"4"
+        "item_child_id":"100701",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"Juicer",
-        "item_child_id":"10030",
-        "rate":"5"
+        "item_child_id":"200101",
+        "rate":"5",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"ChefCounter",
-        "item_child_id":"10020",
-        "rate":"4"
+        "item_child_id":"200201",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"Pan",
-        "item_child_id":"10000",
-        "rate":"4"
+        "item_child_id":"200301",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
-        "many_generator":"8",
-        "time_unlock":"300",
-        "item_child_type":"Oven",
-        "item_child_id":"10040",
-        "rate":"4"
-      },
-      {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
-        "many_generator":"8",
-        "time_unlock":"300",
-        "item_child_type":"Shaker",
-        "item_child_id":"10050",
-        "rate":"4"
-      },
-      {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"Gold",
-        "item_child_id":"18000",
-        "rate":"13"
+        "item_child_id":"300101",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"Gold",
-        "item_child_id":"18001",
-        "rate":"13"
+        "item_child_id":"300102",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"18067",
+        "id":"",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"Diamonds",
-        "item_child_id":"18010",
-        "rate":"25"
+        "item_child_id":"300301",
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"AssistantsChest",
-        "id_item":"0",
+        "id":"13800",
         "many_generator":"8",
         "time_unlock":"300",
         "item_child_type":"as",
         "item_child_id":"2000",
-        "rate":"4"
+        "rate":"4",
+        "item_save_type":"",
+        "id_item":""
       }
     ],
     "itemChefsChest":[
       {
-        "item_save_type":"ChefsChest",
-        "id_item":"18068",
+        "id":"600201",
         "many_generator":"10",
         "time_unlock":"480",
         "item_child_type":"DrinkGenerator",
-        "item_child_id":"2000",
-        "rate":"14"
+        "item_child_id":"100101",
+        "rate":"14",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"ChefsChest",
-        "id_item":"18068",
+        "id":"",
         "many_generator":"10",
         "time_unlock":"480",
-        "item_child_type":"FruitNutGenerator",
-        "item_child_id":"1000",
-        "rate":"14"
+        "item_child_type":"FruitAndSugarGenerator",
+        "item_child_id":"100201",
+        "rate":"14",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"ChefsChest",
-        "id_item":"18068",
+        "id":"",
         "many_generator":"10",
         "time_unlock":"480",
         "item_child_type":"ProteinGenerator",
-        "item_child_id":"3000",
-        "rate":"14"
+        "item_child_id":"100301",
+        "rate":"14",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"ChefsChest",
-        "id_item":"18068",
+        "id":"",
         "many_generator":"10",
         "time_unlock":"480",
-        "item_child_type":"Vegetables Generator",
-        "item_child_id":"4000",
-        "rate":"14"
+        "item_child_type":"VegetableGenerator",
+        "item_child_id":"100401",
+        "rate":"14",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"ChefsChest",
-        "id_item":"18068",
+        "id":"",
         "many_generator":"10",
         "time_unlock":"480",
-        "item_child_type":"Ship",
-        "item_child_id":"5000",
-        "rate":"14"
+        "item_child_type":"SeafoodGenerator",
+        "item_child_id":"100501",
+        "rate":"14",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"ChefsChest",
-        "id_item":"18068",
+        "id":"600201",
         "many_generator":"10",
         "time_unlock":"480",
-        "item_child_type":"GrainGenerator",
-        "item_child_id":"6000",
-        "rate":"14"
+        "item_child_type":"DrinkGenerator",
+        "item_child_id":"100101",
+        "rate":"14",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"ChefsChest",
-        "id_item":"18068",
+        "id":"",
         "many_generator":"10",
         "time_unlock":"480",
-        "item_child_type":"AlcoholGenerator",
-        "item_child_id":"7000",
-        "rate":"14"
+        "item_child_type":"FruitAndSugarGenerator",
+        "item_child_id":"100201",
+        "rate":"14",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"ChefsChest",
-        "id_item":"0",
+        "id":"",
         "many_generator":"10",
         "time_unlock":"480",
-        "item_child_type":"as",
-        "item_child_id":"2000",
-        "rate":"14"
+        "item_child_type":"ProteinGenerator",
+        "item_child_id":"100301",
+        "rate":"14",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"10",
+        "time_unlock":"480",
+        "item_child_type":"VegetableGenerator",
+        "item_child_id":"100401",
+        "rate":"14",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"10",
+        "time_unlock":"480",
+        "item_child_type":"SeafoodGenerator",
+        "item_child_id":"100501",
+        "rate":"14",
+        "item_save_type":"",
+        "id_item":""
       }
     ],
     "itemCoinBox":[
       {
-        "item_save_type":"CoinBox",
-        "id_item":"18075",
+        "id":"601101",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Gold",
-        "item_child_id":"18000",
-        "rate":"50"
+        "item_child_id":"300101",
+        "rate":"50",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"CoinBox",
-        "id_item":"18075",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Gold",
-        "item_child_id":"18001",
-        "rate":"30"
+        "item_child_id":"300102",
+        "rate":"30",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"CoinBox",
-        "id_item":"18075",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Gold",
-        "item_child_id":"18002",
-        "rate":"20"
+        "item_child_id":"300103",
+        "rate":"20",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"CoinBox",
-        "id_item":"18076",
+        "id":"60145101",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Gold",
-        "item_child_id":"18000",
-        "rate":"50"
+        "item_child_id":"300101",
+        "rate":"50",
+        "item_save_type":"",
+        "id_item":""
       }
     ],
     "itemDailyGift":[
       {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"Fruit",
-        "item_child_id":"1012",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"Nut",
-        "item_child_id":"1023",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"SoftDrinks",
-        "item_child_id":"2022",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
+        "id":"600501",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Coffee",
-        "item_child_id":"2033",
-        "rate":"1"
+        "item_child_id":"700103",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"AdditivesAndGarnishes",
-        "item_child_id":"2011",
-        "rate":"1"
+        "item_child_type":"SoftDrinks",
+        "item_child_id":"700202",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"PorkLamb",
-        "item_child_id":"3022",
-        "rate":"1"
+        "item_child_type":"DairyProducts",
+        "item_child_id":"700302",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"PoultryEgg",
-        "item_child_id":"3011",
-        "rate":"1"
+        "item_child_type":"Fruit",
+        "item_child_id":"700503",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"Vegetables",
-        "item_child_id":"4012",
-        "rate":"1"
+        "item_child_type":"SugarAndCandy",
+        "item_child_id":"700602",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"LeafVegetables",
-        "item_child_id":"4023",
-        "rate":"1"
+        "item_child_type":"RedMeat",
+        "item_child_id":"700903",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"Fish",
-        "item_child_id":"5012",
-        "rate":"1"
+        "item_child_type":"EggAndPoultry",
+        "item_child_id":"701002",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Vegetable",
+        "item_child_id":"701103",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"LeafyVegetables",
+        "item_child_id":"701202",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Seafood",
+        "item_child_id":"701303",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Shellfish",
-        "item_child_id":"5023",
-        "rate":"1"
+        "item_child_id":"701402",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"ClassicAlcohol",
-        "item_child_id":"7012",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"IconicAlcohol",
-        "item_child_id":"7023",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"DailyGift",
-        "id_item":"18065",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"Grain",
-        "item_child_id":"6012",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"DailyGift",
-        "id_item":"18066",
+        "id":"13618066",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Fruit",
         "item_child_id":"1012",
-        "rate":"1"
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       }
     ],
     "itemEquipmentBox":[
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"18073",
+        "id":"600901",
         "many_generator":"3",
         "time_unlock":"300",
         "item_child_type":"Juicer",
-        "item_child_id":"10030",
-        "rate":"1"
+        "item_child_id":"200101",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"18073",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"300",
         "item_child_type":"ChefCounter",
-        "item_child_id":"10020",
-        "rate":"1"
+        "item_child_id":"200201",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"18073",
+        "id":"",
+        "many_generator":"3",
+        "time_unlock":"300",
+        "item_child_type":"Grill",
+        "item_child_id":"200301",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
         "many_generator":"3",
         "time_unlock":"300",
         "item_child_type":"Pan",
-        "item_child_id":"10000",
-        "rate":"1"
+        "item_child_id":"200401",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"18073",
-        "many_generator":"3",
-        "time_unlock":"300",
-        "item_child_type":"Oven",
-        "item_child_id":"10040",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"EquipmentBox",
-        "id_item":"18073",
-        "many_generator":"3",
-        "time_unlock":"300",
-        "item_child_type":"Shaker",
-        "item_child_id":"10050",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"EquipmentBox",
-        "id_item":"18073",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"300",
         "item_child_type":"Gold",
-        "item_child_id":"18000",
-        "rate":"1"
+        "item_child_id":"300101",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"18073",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"300",
         "item_child_type":"Gold",
-        "item_child_id":"18001",
-        "rate":"1"
+        "item_child_id":"300102",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"18073",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"300",
-        "item_child_type":"Diamonds",
-        "item_child_id":"18010",
-        "rate":"1"
+        "item_child_type":"Diamond",
+        "item_child_id":"300301",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"EquipmentBox",
-        "id_item":"0",
+        "id":"60090111",
         "many_generator":"3",
         "time_unlock":"300",
         "item_child_type":"Juicer",
         "item_child_id":"10000",
-        "rate":"1"
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       }
     ],
     "itemFlushGift":[
       {
-        "item_save_type":"FlushGift",
-        "id_item":"18072",
+        "id":"014318072",
         "res_type":"Item",
         "res_id":"1",
         "res_number":"1",
         "custom_value":"1015",
         "many_choices":"4",
+        "item_save_type":"",
+        "id_item":"",
         "many_generator":"",
         "time_unlock":""
       },
       {
-        "item_save_type":"FlushGift",
-        "id_item":"18072",
+        "id":"",
         "res_type":"Item",
         "res_id":"8",
         "res_number":"1",
         "custom_value":"2025",
         "many_choices":"",
+        "item_save_type":"",
+        "id_item":"",
         "many_generator":"",
         "time_unlock":""
       },
       {
-        "item_save_type":"FlushGift",
-        "id_item":"18072",
+        "id":"",
         "res_type":"Item",
         "res_id":"16",
         "res_number":"1",
         "custom_value":"3025",
         "many_choices":"",
+        "item_save_type":"",
+        "id_item":"",
         "many_generator":"",
         "time_unlock":""
       },
       {
-        "item_save_type":"FlushGift",
-        "id_item":"18072",
+        "id":"",
         "res_type":"Item",
         "res_id":"18",
         "res_number":"1",
         "custom_value":"4015",
         "many_choices":"",
+        "item_save_type":"",
+        "id_item":"",
         "many_generator":"",
         "time_unlock":""
       },
       {
-        "item_save_type":"FlushGift",
-        "id_item":"18072",
+        "id":"",
         "res_type":"Item",
         "res_id":"21",
         "res_number":"1",
         "custom_value":"5015",
         "many_choices":"",
+        "item_save_type":"",
+        "id_item":"",
         "many_generator":"",
         "time_unlock":""
       },
       {
-        "item_save_type":"FlushGift",
-        "id_item":"18072",
+        "id":"",
         "res_type":"Item",
         "res_id":"26",
         "res_number":"1",
         "custom_value":"6015",
         "many_choices":"",
+        "item_save_type":"",
+        "id_item":"",
         "many_generator":"",
         "time_unlock":""
       },
       {
-        "item_save_type":"FlushGift",
-        "id_item":"0",
+        "id":"014300",
         "res_type":"Item",
         "res_id":"1",
         "res_number":"1",
         "custom_value":"1015",
         "many_choices":"4",
+        "item_save_type":"",
+        "id_item":"",
         "many_generator":"",
         "time_unlock":""
       }
     ],
     "itemGift":[
       {
-        "item_save_type":"Gift",
-        "id_item":"18070",
-        "many_generator":"4",
-        "time_unlock":"0",
-        "item_child_type":"Fruit",
-        "item_child_id":"1012",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"Gift",
-        "id_item":"18070",
-        "many_generator":"4",
-        "time_unlock":"0",
-        "item_child_type":"Nut",
-        "item_child_id":"1023",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"Gift",
-        "id_item":"18070",
-        "many_generator":"4",
-        "time_unlock":"0",
-        "item_child_type":"SoftDrinks",
-        "item_child_id":"2022",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"Gift",
-        "id_item":"18070",
+        "id":"600801",
         "many_generator":"4",
         "time_unlock":"0",
         "item_child_type":"Coffee",
-        "item_child_id":"2033",
-        "rate":"1"
+        "item_child_id":"700103",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"Gift",
-        "id_item":"18070",
+        "id":"",
         "many_generator":"4",
         "time_unlock":"0",
-        "item_child_type":"AdditivesAndGarnishes",
-        "item_child_id":"2011",
-        "rate":"1"
+        "item_child_type":"SoftDrinks",
+        "item_child_id":"700202",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"Gift",
-        "id_item":"18070",
+        "id":"",
         "many_generator":"4",
         "time_unlock":"0",
-        "item_child_type":"PorkLamb",
-        "item_child_id":"3022",
-        "rate":"1"
+        "item_child_type":"DairyProducts",
+        "item_child_id":"700302",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"Gift",
-        "id_item":"18070",
+        "id":"",
         "many_generator":"4",
         "time_unlock":"0",
-        "item_child_type":"PoultryEgg",
-        "item_child_id":"3011",
-        "rate":"1"
+        "item_child_type":"Fruit",
+        "item_child_id":"700503",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"Gift",
-        "id_item":"18070",
+        "id":"",
         "many_generator":"4",
         "time_unlock":"0",
-        "item_child_type":"Vegetables",
-        "item_child_id":"4012",
-        "rate":"1"
+        "item_child_type":"SugarAndCandy",
+        "item_child_id":"700602",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"Gift",
-        "id_item":"18070",
+        "id":"",
         "many_generator":"4",
         "time_unlock":"0",
-        "item_child_type":"LeafVegetables",
-        "item_child_id":"4023",
-        "rate":"1"
+        "item_child_type":"RedMeat",
+        "item_child_id":"700903",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"Gift",
-        "id_item":"18070",
+        "id":"",
         "many_generator":"4",
         "time_unlock":"0",
-        "item_child_type":"Fish",
-        "item_child_id":"5012",
-        "rate":"1"
+        "item_child_type":"EggAndPoultry",
+        "item_child_id":"701002",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"Gift",
-        "id_item":"18070",
+        "id":"",
+        "many_generator":"4",
+        "time_unlock":"0",
+        "item_child_type":"VegetableIngredient",
+        "item_child_id":"701103",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"4",
+        "time_unlock":"0",
+        "item_child_type":"LeafyVegetables",
+        "item_child_id":"701202",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"4",
+        "time_unlock":"0",
+        "item_child_type":"Seafood",
+        "item_child_id":"701303",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
         "many_generator":"4",
         "time_unlock":"0",
         "item_child_type":"Shellfish",
-        "item_child_id":"5023",
-        "rate":"1"
+        "item_child_id":"701402",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"Gift",
-        "id_item":"18070",
-        "many_generator":"4",
-        "time_unlock":"0",
-        "item_child_type":"ClassicAlcohol",
-        "item_child_id":"7012",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"Gift",
-        "id_item":"18070",
-        "many_generator":"4",
-        "time_unlock":"0",
-        "item_child_type":"IconicAlcohol",
-        "item_child_id":"7023",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"Gift",
-        "id_item":"18070",
-        "many_generator":"4",
-        "time_unlock":"0",
-        "item_child_type":"Grain",
-        "item_child_id":"6012",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"Gift",
-        "id_item":"18071",
+        "id":"14118071",
         "many_generator":"4",
         "time_unlock":"0",
         "item_child_type":"Fruit",
         "item_child_id":"1012",
-        "rate":"1"
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       }
     ],
     "itemLuckyBox":[
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"600701",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Fruit",
-        "item_child_id":"1015",
-        "rate":"2"
+        "item_child_id":"700505",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Fruit",
-        "item_child_id":"1014",
-        "rate":"3"
+        "item_child_id":"700506",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"Nut",
-        "item_child_id":"1026",
-        "rate":"2"
+        "item_child_type":"SugarAndCandy",
+        "item_child_id":"700604",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"Nut",
-        "item_child_id":"1025",
-        "rate":"2"
+        "item_child_type":"SugarAndCandy",
+        "item_child_id":"700605",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"AdditivesAndGarnishes",
-        "item_child_id":"2011",
-        "rate":"2"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"SoftDrinks",
-        "item_child_id":"2025",
-        "rate":"2"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"SoftDrinks",
-        "item_child_id":"2024",
-        "rate":"3"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"Coffee",
-        "item_child_id":"2034",
-        "rate":"2"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"Coffee",
-        "item_child_id":"2033",
-        "rate":"3"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"DairyProducts",
-        "item_child_id":"2043",
-        "rate":"1"
+        "item_child_id":"700302",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"GlassProduct",
-        "item_child_id":"2051",
-        "rate":"1"
+        "item_child_type":"Coffee",
+        "item_child_id":"700205",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"PoultryEgg",
-        "item_child_id":"3014",
-        "rate":"1"
+        "item_child_type":"Coffee",
+        "item_child_id":"700206",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"PoultryEgg",
-        "item_child_id":"3013",
-        "rate":"1"
+        "item_child_type":"SoftDrinks",
+        "item_child_id":"700304",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"PorkLamb",
-        "item_child_id":"3025",
-        "rate":"2"
+        "item_child_type":"SoftDrinks",
+        "item_child_id":"700305",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"PorkLamb",
-        "item_child_id":"3024",
-        "rate":"3"
+        "item_child_type":"RedMeat",
+        "item_child_id":"700905",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"Fish",
-        "item_child_id":"5015",
-        "rate":"2"
+        "item_child_type":"RedMeat",
+        "item_child_id":"700906",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"Fish",
-        "item_child_id":"5014",
-        "rate":"3"
+        "item_child_type":"EggAndPoultry",
+        "item_child_id":"701004",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"EggAndPoultry",
+        "item_child_id":"701005",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Vegetables",
+        "item_child_id":"701105",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Vegetables",
+        "item_child_id":"701106",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"LeafyVegetables",
+        "item_child_id":"701204",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"LeafyVegetables",
+        "item_child_id":"701205",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Seafood",
+        "item_child_id":"701305",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Seafood",
+        "item_child_id":"701306",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Shellfish",
-        "item_child_id":"5026",
-        "rate":"1"
+        "item_child_id":"701404",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Shellfish",
-        "item_child_id":"5025",
-        "rate":"1"
+        "item_child_id":"701405",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"Dough",
-        "item_child_id":"6025",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"FastFood",
-        "item_child_id":"17094",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"ClassicAlcohol",
-        "item_child_id":"7015",
-        "rate":"2"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"ClassicAlcohol",
-        "item_child_id":"7014",
-        "rate":"2"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"IconicAlcohol",
-        "item_child_id":"7026",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"IconicAlcohol",
-        "item_child_id":"7025",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"Diamonds",
-        "item_child_id":"18010",
-        "rate":"2"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18076",
-        "many_generator":"5",
-        "time_unlock":"0",
-        "item_child_type":"Diamonds",
-        "item_child_id":"18011",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"LuckyBox",
-        "id_item":"18077",
+        "id":"600701",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Fruit",
-        "item_child_id":"1015",
-        "rate":"1"
+        "item_child_id":"700505",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Fruit",
+        "item_child_id":"700506",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"SugarAndCandy",
+        "item_child_id":"700604",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"SugarAndCandy",
+        "item_child_id":"700605",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"DairyProducts",
+        "item_child_id":"700302",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Coffee",
+        "item_child_id":"700205",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Coffee",
+        "item_child_id":"700206",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"SoftDrinks",
+        "item_child_id":"700304",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"SoftDrinks",
+        "item_child_id":"700305",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"RedMeat",
+        "item_child_id":"700905",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"RedMeat",
+        "item_child_id":"700906",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"EggAndPoultry",
+        "item_child_id":"701004",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"EggAndPoultry",
+        "item_child_id":"701005",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Vegetables",
+        "item_child_id":"701105",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Vegetables",
+        "item_child_id":"701106",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"LeafyVegetables",
+        "item_child_id":"701204",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"LeafyVegetables",
+        "item_child_id":"701205",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Seafood",
+        "item_child_id":"701305",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Seafood",
+        "item_child_id":"701306",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Shellfish",
+        "item_child_id":"701404",
+        "rate":"2",
+        "item_save_type":"",
+        "id_item":""
+      },
+      {
+        "id":"",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Shellfish",
+        "item_child_id":"701405",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       }
     ],
     "itemLuckyHandbag":[
       {
-        "item_save_type":"LuckyHandbag",
-        "id_item":"18080",
+        "id":"600601",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"Diamonds",
-        "item_child_id":"18010",
-        "rate":"15"
+        "item_child_type":"Diamond",
+        "item_child_id":"300301",
+        "rate":"15",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyHandbag",
-        "id_item":"18080",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"Diamonds",
-        "item_child_id":"18011",
-        "rate":"10"
+        "item_child_type":"Diamond",
+        "item_child_id":"300302",
+        "rate":"10",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyHandbag",
-        "id_item":"18080",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Energy",
-        "item_child_id":"18006",
-        "rate":"35"
+        "item_child_id":"300202",
+        "rate":"35",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyHandbag",
-        "id_item":"18080",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Energy",
-        "item_child_id":"18007",
-        "rate":"25"
+        "item_child_id":"300203",
+        "rate":"25",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyHandbag",
-        "id_item":"18080",
+        "id":"",
         "many_generator":"5",
         "time_unlock":"0",
         "item_child_type":"Energy",
-        "item_child_id":"18008",
-        "rate":"15"
+        "item_child_id":"300204",
+        "rate":"15",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"LuckyHandbag",
-        "id_item":"18081",
+        "id":"45600601",
         "many_generator":"5",
         "time_unlock":"0",
-        "item_child_type":"Diamonds",
-        "item_child_id":"18010",
-        "rate":"1"
+        "item_child_type":"Diamond",
+        "item_child_id":"300301",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       }
     ],
     "itemTraineeBox":[
       {
-        "item_save_type":"TraineeBox",
-        "id_item":"18074",
+        "id":"601301",
         "many_generator":"3",
         "time_unlock":"300",
         "item_child_type":"DrinkGenerator",
-        "item_child_id":"2000",
-        "rate":"1"
+        "item_child_id":"100101",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"TraineeBox",
-        "id_item":"18074",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"300",
-        "item_child_type":"FruitNutGenerator",
-        "item_child_id":"1000",
-        "rate":"1"
+        "item_child_type":"FruitAndSugarGenerator",
+        "item_child_id":"100201",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"TraineeBox",
-        "id_item":"18074",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"300",
         "item_child_type":"ProteinGenerator",
-        "item_child_id":"3000",
-        "rate":"1"
+        "item_child_id":"100301",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"TraineeBox",
-        "id_item":"18074",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"300",
-        "item_child_type":"VegetablesGenerator",
-        "item_child_id":"4000",
-        "rate":"1"
+        "item_child_type":"VegetableGenerator",
+        "item_child_id":"100401",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"TraineeBox",
-        "id_item":"18074",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"300",
-        "item_child_type":"Ship",
-        "item_child_id":"5000",
-        "rate":"1"
+        "item_child_type":"SeafoodGenerator",
+        "item_child_id":"100501",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"TraineeBox",
-        "id_item":"18074",
-        "many_generator":"3",
-        "time_unlock":"300",
-        "item_child_type":"GrainGenerator",
-        "item_child_id":"6000",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"TraineeBox",
-        "id_item":"18074",
-        "many_generator":"3",
-        "time_unlock":"300",
-        "item_child_type":"AlcoholGenerator",
-        "item_child_id":"7000",
-        "rate":"1"
-      },
-      {
-        "item_save_type":"TraineeBox",
-        "id_item":"18074",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"300",
         "item_child_type":"Gold",
-        "item_child_id":"18000",
-        "rate":"1"
+        "item_child_id":"300101",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"TraineeBox",
-        "id_item":"18074",
+        "id":"",
         "many_generator":"3",
         "time_unlock":"300",
         "item_child_type":"Gold",
-        "item_child_id":"18001",
-        "rate":"1"
+        "item_child_id":"300102",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       },
       {
-        "item_save_type":"TraineeBox",
-        "id_item":"18075",
+        "id":"54601301",
         "many_generator":"3",
         "time_unlock":"300",
         "item_child_type":"DrinkGenerator",
-        "item_child_id":"2000",
-        "rate":"1"
+        "item_child_id":"100101",
+        "rate":"1",
+        "item_save_type":"",
+        "id_item":""
       }
     ]
   }

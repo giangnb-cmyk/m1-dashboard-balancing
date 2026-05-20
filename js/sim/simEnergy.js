@@ -19,6 +19,8 @@ const SimEnergy = (() => {
     if (economy) economy.energy.received += amount;
   }
 
-  if (typeof module !== 'undefined') module.exports = { create, tick, spend, inject };
-  return { create, tick, spend, inject };
+  const exports = { create, tick, spend, inject };
+  if (typeof module !== 'undefined') module.exports = exports;
+  if (typeof window !== 'undefined') window.SimEnergy = exports;
+  return exports;
 })();

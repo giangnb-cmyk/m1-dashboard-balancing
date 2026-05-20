@@ -165,12 +165,13 @@ suite('SimBoard', () => {
       assertEqual(b.generators.length, 1);
       assertEqual(b.generators[0].genId, '100202');
     });
-    test('does NOT merge when genId IS in required set', () => {
+    test('always merges duplicates even when genId is in required set', () => {
       const b = SimBoard.create();
       SimBoard.addGenerator(b, '100201', genCat);
       SimBoard.addGenerator(b, '100201', genCat);
       SimBoard.mergeGenerators(b, new Set(['100201']), genCat);
-      assertEqual(b.generators.length, 2);
+      assertEqual(b.generators.length, 1);
+      assertEqual(b.generators[0].genId, '100202');
     });
     test('merges upward until required level reached: 4 × lv1 → 1 × lv3', () => {
       const b = SimBoard.create();
@@ -179,18 +180,18 @@ suite('SimBoard', () => {
       assertEqual(b.generators.length, 1);
       assertEqual(b.generators[0].genId, '100203');
     });
-    test('does not merge past highest level in required set', () => {
+    test('merges all duplicates regardless of required set — higher level always better', () => {
       const b = SimBoard.create();
       SimBoard.addGenerator(b, '100201', genCat);
       SimBoard.addGenerator(b, '100201', genCat);
-      // required: 100202 (lv2). Should merge to 100202 but not past it.
       SimBoard.mergeGenerators(b, new Set(['100202']), genCat);
       assertEqual(b.generators.length, 1);
       assertEqual(b.generators[0].genId, '100202');
-      // a second merge with same required set should not merge further
+      // adding another 100202 → merges to lv3 (no level cap)
       SimBoard.addGenerator(b, '100202', genCat);
       SimBoard.mergeGenerators(b, new Set(['100202']), genCat);
-      assertEqual(b.generators.length, 2); // still 2, not merged to lv3
+      assertEqual(b.generators.length, 1);
+      assertEqual(b.generators[0].genId, '100203');
     });
     test('merges freely when requiredGenIds is empty Set', () => {
       const b = SimBoard.create();

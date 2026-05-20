@@ -16,9 +16,9 @@ Object.assign(window.GameData, {
       "default_zoom":"13",
       "custom_cam_zoom":"0",
       "rw_build_up_type":"Item",
-      "rw_build_up_id":"0",
+      "rw_build_up_id":"",
       "rw_build_up_number":"1",
-      "custom_rw_build_up_value":"100103"
+      "custom_rw_build_up_value":"100304"
     },
     {
       "theme":"Scene_01",
@@ -756,10 +756,10 @@ Object.assign(window.GameData, {
       "max_zoom":"50",
       "default_zoom":"15",
       "custom_cam_zoom":"20",
-      "rw_build_up_type":"Item",
-      "rw_build_up_id":"25",
-      "rw_build_up_number":"1",
-      "custom_rw_build_up_value":"6003"
+      "rw_build_up_type":"",
+      "rw_build_up_id":"",
+      "rw_build_up_number":"",
+      "custom_rw_build_up_value":""
     },
     {
       "theme":"Scene_03",
@@ -3756,7 +3756,7 @@ Object.assign(window.GameData, {
       "index_step":"0",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"15",
+      "res_number":"10",
       "custom_value":""
     },
     {
@@ -3767,15 +3767,6 @@ Object.assign(window.GameData, {
       "res_id":"7",
       "res_number":"1",
       "custom_value":""
-    },
-    {
-      "type":"Scene_01",
-      "index":"5",
-      "index_step":"",
-      "res_type":"Item",
-      "res_id":"",
-      "res_number":"1",
-      "custom_value":"200203"
     },
     {
       "type":"Scene_01",
@@ -3792,7 +3783,7 @@ Object.assign(window.GameData, {
       "index_step":"0",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"15",
+      "res_number":"10",
       "custom_value":""
     },
     {
@@ -3810,7 +3801,7 @@ Object.assign(window.GameData, {
       "index_step":"0",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"15",
+      "res_number":"10",
       "custom_value":""
     },
     {
@@ -3828,7 +3819,7 @@ Object.assign(window.GameData, {
       "index_step":"0",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"15",
+      "res_number":"10",
       "custom_value":""
     },
     {
@@ -3841,18 +3832,18 @@ Object.assign(window.GameData, {
       "custom_value":""
     },
     {
-      "type":"Scene_02",
-      "index":"0",
-      "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"14",
-      "custom_value":""
+      "type":"Scene_01",
+      "index":"9",
+      "index_step":"",
+      "res_type":"Item",
+      "res_id":"",
+      "res_number":"1",
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"0",
-      "index_step":"",
+      "index_step":"0",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -3872,23 +3863,14 @@ Object.assign(window.GameData, {
       "index":"0",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"1",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"19",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"1",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -3900,31 +3882,13 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"13",
+      "res_number":"15",
       "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"1",
-      "index_step":"",
-      "res_type":"Item",
-      "res_id":"134",
-      "res_number":"1",
-      "custom_value":"18054"
     },
     {
       "type":"Scene_02",
       "index":"2",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"19",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"2",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -3936,7 +3900,7 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"13",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -3944,9 +3908,9 @@ Object.assign(window.GameData, {
       "index":"2",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
@@ -3954,7 +3918,7 @@ Object.assign(window.GameData, {
       "index_step":"0",
       "res_type":"Money",
       "res_id":"5",
-      "res_number":"19",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -3968,35 +3932,8 @@ Object.assign(window.GameData, {
     },
     {
       "type":"Scene_02",
-      "index":"3",
-      "index_step":"",
-      "res_type":"Money",
-      "res_id":"3",
-      "res_number":"13",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"3",
-      "index_step":"",
-      "res_type":"Item",
-      "res_id":"134",
-      "res_number":"1",
-      "custom_value":"18054"
-    },
-    {
-      "type":"Scene_02",
       "index":"4",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"19",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"4",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4008,7 +3945,7 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"13",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -4016,23 +3953,14 @@ Object.assign(window.GameData, {
       "index":"4",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"5",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"19",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"5",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4044,31 +3972,13 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"13",
+      "res_number":"15",
       "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"5",
-      "index_step":"",
-      "res_type":"Item",
-      "res_id":"134",
-      "res_number":"1",
-      "custom_value":"18054"
     },
     {
       "type":"Scene_02",
       "index":"6",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"19",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"6",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4080,7 +3990,7 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"13",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -4088,23 +3998,14 @@ Object.assign(window.GameData, {
       "index":"6",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"7",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"7",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4116,7 +4017,7 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -4124,23 +4025,14 @@ Object.assign(window.GameData, {
       "index":"7",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"8",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"8",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4152,7 +4044,7 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -4160,23 +4052,14 @@ Object.assign(window.GameData, {
       "index":"8",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"9",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"9",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4188,7 +4071,7 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -4196,23 +4079,14 @@ Object.assign(window.GameData, {
       "index":"9",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"10",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"10",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4224,7 +4098,7 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -4232,23 +4106,14 @@ Object.assign(window.GameData, {
       "index":"10",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"11",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"11",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4260,31 +4125,13 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"11",
-      "index_step":"",
-      "res_type":"Item",
-      "res_id":"134",
-      "res_number":"1",
-      "custom_value":"18054"
     },
     {
       "type":"Scene_02",
       "index":"12",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"12",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4296,31 +4143,13 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"12",
-      "index_step":"",
-      "res_type":"Item",
-      "res_id":"134",
-      "res_number":"1",
-      "custom_value":"18054"
     },
     {
       "type":"Scene_02",
       "index":"13",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"13",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4332,7 +4161,7 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -4340,23 +4169,14 @@ Object.assign(window.GameData, {
       "index":"13",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"14",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"14",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4368,31 +4188,13 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"14",
-      "index_step":"",
-      "res_type":"Item",
-      "res_id":"134",
-      "res_number":"1",
-      "custom_value":"18054"
     },
     {
       "type":"Scene_02",
       "index":"15",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"15",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4404,7 +4206,7 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -4412,23 +4214,14 @@ Object.assign(window.GameData, {
       "index":"15",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"16",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"16",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4440,31 +4233,13 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"16",
-      "index_step":"",
-      "res_type":"Item",
-      "res_id":"134",
-      "res_number":"1",
-      "custom_value":"18054"
     },
     {
       "type":"Scene_02",
       "index":"17",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"17",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4476,7 +4251,7 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -4484,23 +4259,14 @@ Object.assign(window.GameData, {
       "index":"17",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"18",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"18",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4512,31 +4278,13 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"18",
-      "index_step":"",
-      "res_type":"Item",
-      "res_id":"134",
-      "res_number":"1",
-      "custom_value":"18054"
     },
     {
       "type":"Scene_02",
       "index":"19",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"19",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4548,7 +4296,7 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
     },
     {
@@ -4556,23 +4304,14 @@ Object.assign(window.GameData, {
       "index":"19",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"20",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"20",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"20",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4584,22 +4323,13 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"14",
+      "res_number":"15",
       "custom_value":""
     },
     {
       "type":"Scene_02",
       "index":"21",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"30",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"21",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4611,22 +4341,13 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"21",
+      "res_number":"15",
       "custom_value":""
     },
     {
       "type":"Scene_02",
       "index":"22",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"30",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"22",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4638,22 +4359,22 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"21",
+      "res_number":"15",
       "custom_value":""
+    },
+    {
+      "type":"Scene_02",
+      "index":"22",
+      "index_step":"",
+      "res_type":"Item",
+      "res_id":"",
+      "res_number":"1",
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"23",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"30",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"23",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4665,22 +4386,13 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"21",
+      "res_number":"15",
       "custom_value":""
     },
     {
       "type":"Scene_02",
       "index":"24",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"30",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"24",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4692,22 +4404,22 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"21",
+      "res_number":"15",
       "custom_value":""
+    },
+    {
+      "type":"Scene_02",
+      "index":"24",
+      "index_step":"",
+      "res_type":"Item",
+      "res_id":"",
+      "res_number":"1",
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"25",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"30",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"25",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4719,22 +4431,13 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"21",
+      "res_number":"15",
       "custom_value":""
     },
     {
       "type":"Scene_02",
       "index":"26",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"30",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"26",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4746,22 +4449,22 @@ Object.assign(window.GameData, {
       "index_step":"",
       "res_type":"Money",
       "res_id":"3",
-      "res_number":"21",
+      "res_number":"15",
       "custom_value":""
+    },
+    {
+      "type":"Scene_02",
+      "index":"26",
+      "index_step":"",
+      "res_type":"Item",
+      "res_id":"",
+      "res_number":"1",
+      "custom_value":"500101"
     },
     {
       "type":"Scene_02",
       "index":"27",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"30",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"27",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4781,15 +4484,6 @@ Object.assign(window.GameData, {
       "index":"28",
       "index_step":"0",
       "res_type":"Money",
-      "res_id":"5",
-      "res_number":"30",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_02",
-      "index":"28",
-      "index_step":"",
-      "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
       "custom_value":""
@@ -4805,11 +4499,20 @@ Object.assign(window.GameData, {
     },
     {
       "type":"Scene_02",
+      "index":"28",
+      "index_step":"",
+      "res_type":"Item",
+      "res_id":"",
+      "res_number":"1",
+      "custom_value":"500101"
+    },
+    {
+      "type":"Scene_02",
       "index":"29",
       "index_step":"0",
       "res_type":"Money",
-      "res_id":"5",
-      "res_number":"48",
+      "res_id":"7",
+      "res_number":"1",
       "custom_value":""
     },
     {
@@ -4817,32 +4520,23 @@ Object.assign(window.GameData, {
       "index":"29",
       "index_step":"",
       "res_type":"Money",
-      "res_id":"7",
-      "res_number":"1",
+      "res_id":"3",
+      "res_number":"15",
       "custom_value":""
     },
     {
       "type":"Scene_02",
       "index":"29",
       "index_step":"",
-      "res_type":"Money",
-      "res_id":"3",
-      "res_number":"29",
-      "custom_value":""
+      "res_type":"Item",
+      "res_id":"",
+      "res_number":"1",
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"0",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"76",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"0",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4862,23 +4556,14 @@ Object.assign(window.GameData, {
       "index":"0",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"1",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"76",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"1",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4898,23 +4583,14 @@ Object.assign(window.GameData, {
       "index":"1",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"2",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"76",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"2",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4931,26 +4607,8 @@ Object.assign(window.GameData, {
     },
     {
       "type":"Scene_03",
-      "index":"2",
-      "index_step":"",
-      "res_type":"Item",
-      "res_id":"134",
-      "res_number":"1",
-      "custom_value":"18054"
-    },
-    {
-      "type":"Scene_03",
       "index":"3",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"76",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"3",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -4970,23 +4628,14 @@ Object.assign(window.GameData, {
       "index":"3",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"4",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"76",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"4",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5006,23 +4655,14 @@ Object.assign(window.GameData, {
       "index":"4",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"5",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"76",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"5",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5042,23 +4682,14 @@ Object.assign(window.GameData, {
       "index":"5",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"6",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"18",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"6",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5078,23 +4709,14 @@ Object.assign(window.GameData, {
       "index":"6",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"7",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"91",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"7",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5114,23 +4736,14 @@ Object.assign(window.GameData, {
       "index":"7",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"8",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"91",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"8",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5150,23 +4763,14 @@ Object.assign(window.GameData, {
       "index":"8",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"9",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"91",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"9",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5186,23 +4790,14 @@ Object.assign(window.GameData, {
       "index":"9",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"10",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"91",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"10",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5222,23 +4817,14 @@ Object.assign(window.GameData, {
       "index":"10",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"11",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"91",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"11",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5258,23 +4844,14 @@ Object.assign(window.GameData, {
       "index":"11",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"12",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"91",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"12",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5294,23 +4871,14 @@ Object.assign(window.GameData, {
       "index":"12",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"13",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"91",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"13",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5330,23 +4898,14 @@ Object.assign(window.GameData, {
       "index":"13",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"14",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"91",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"14",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5366,23 +4925,14 @@ Object.assign(window.GameData, {
       "index":"14",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"15",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"15",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5402,23 +4952,14 @@ Object.assign(window.GameData, {
       "index":"15",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"16",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"16",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5438,23 +4979,14 @@ Object.assign(window.GameData, {
       "index":"16",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"17",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"17",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5474,23 +5006,14 @@ Object.assign(window.GameData, {
       "index":"17",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"18",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"18",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5510,23 +5033,14 @@ Object.assign(window.GameData, {
       "index":"18",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"19",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"19",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5546,23 +5060,14 @@ Object.assign(window.GameData, {
       "index":"19",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"20",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"20",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5582,23 +5087,14 @@ Object.assign(window.GameData, {
       "index":"20",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"21",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"21",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5618,23 +5114,14 @@ Object.assign(window.GameData, {
       "index":"21",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"22",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"22",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5654,23 +5141,14 @@ Object.assign(window.GameData, {
       "index":"22",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"23",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"23",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5690,23 +5168,14 @@ Object.assign(window.GameData, {
       "index":"23",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"24",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"24",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5726,23 +5195,14 @@ Object.assign(window.GameData, {
       "index":"24",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"25",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"25",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5762,23 +5222,14 @@ Object.assign(window.GameData, {
       "index":"25",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"26",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"26",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5798,23 +5249,14 @@ Object.assign(window.GameData, {
       "index":"26",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"27",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"27",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5834,23 +5276,14 @@ Object.assign(window.GameData, {
       "index":"27",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"28",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"28",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5870,23 +5303,14 @@ Object.assign(window.GameData, {
       "index":"28",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"29",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"29",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5906,23 +5330,14 @@ Object.assign(window.GameData, {
       "index":"29",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"30",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"30",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5942,23 +5357,14 @@ Object.assign(window.GameData, {
       "index":"30",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"31",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"31",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -5978,23 +5384,14 @@ Object.assign(window.GameData, {
       "index":"31",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"32",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"32",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6014,23 +5411,14 @@ Object.assign(window.GameData, {
       "index":"32",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"33",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"33",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6050,23 +5438,14 @@ Object.assign(window.GameData, {
       "index":"33",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"34",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"34",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6086,23 +5465,14 @@ Object.assign(window.GameData, {
       "index":"34",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"35",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"100",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"35",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6122,23 +5492,14 @@ Object.assign(window.GameData, {
       "index":"35",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"36",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"36",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6158,23 +5519,14 @@ Object.assign(window.GameData, {
       "index":"36",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"37",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"37",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6194,23 +5546,14 @@ Object.assign(window.GameData, {
       "index":"37",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"38",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"38",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6230,23 +5573,14 @@ Object.assign(window.GameData, {
       "index":"38",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"39",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"39",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6266,23 +5600,14 @@ Object.assign(window.GameData, {
       "index":"39",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_03",
       "index":"40",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"40",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6301,15 +5626,6 @@ Object.assign(window.GameData, {
       "type":"Scene_03",
       "index":"41",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"41",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6328,15 +5644,6 @@ Object.assign(window.GameData, {
       "type":"Scene_03",
       "index":"42",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"106",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"42",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6355,15 +5662,6 @@ Object.assign(window.GameData, {
       "type":"Scene_03",
       "index":"43",
       "index_step":"0",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"134",
-      "custom_value":""
-    },
-    {
-      "type":"Scene_03",
-      "index":"43",
-      "index_step":"",
       "res_type":"Money",
       "res_id":"7",
       "res_number":"1",
@@ -6410,9 +5708,9 @@ Object.assign(window.GameData, {
       "index":"0",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6446,9 +5744,9 @@ Object.assign(window.GameData, {
       "index":"1",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6482,9 +5780,9 @@ Object.assign(window.GameData, {
       "index":"2",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6518,9 +5816,9 @@ Object.assign(window.GameData, {
       "index":"3",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6554,9 +5852,9 @@ Object.assign(window.GameData, {
       "index":"4",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6590,9 +5888,9 @@ Object.assign(window.GameData, {
       "index":"5",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6626,9 +5924,9 @@ Object.assign(window.GameData, {
       "index":"6",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6662,9 +5960,9 @@ Object.assign(window.GameData, {
       "index":"7",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6698,9 +5996,9 @@ Object.assign(window.GameData, {
       "index":"8",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6734,9 +6032,9 @@ Object.assign(window.GameData, {
       "index":"9",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6770,9 +6068,9 @@ Object.assign(window.GameData, {
       "index":"10",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6806,9 +6104,9 @@ Object.assign(window.GameData, {
       "index":"11",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6842,9 +6140,9 @@ Object.assign(window.GameData, {
       "index":"12",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6878,9 +6176,9 @@ Object.assign(window.GameData, {
       "index":"13",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6914,9 +6212,9 @@ Object.assign(window.GameData, {
       "index":"14",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6950,9 +6248,9 @@ Object.assign(window.GameData, {
       "index":"15",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -6986,9 +6284,9 @@ Object.assign(window.GameData, {
       "index":"16",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7022,9 +6320,9 @@ Object.assign(window.GameData, {
       "index":"17",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7058,9 +6356,9 @@ Object.assign(window.GameData, {
       "index":"18",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7094,9 +6392,9 @@ Object.assign(window.GameData, {
       "index":"19",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7130,9 +6428,9 @@ Object.assign(window.GameData, {
       "index":"20",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7166,9 +6464,9 @@ Object.assign(window.GameData, {
       "index":"21",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7202,9 +6500,9 @@ Object.assign(window.GameData, {
       "index":"22",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7238,9 +6536,9 @@ Object.assign(window.GameData, {
       "index":"23",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7274,9 +6572,9 @@ Object.assign(window.GameData, {
       "index":"24",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7310,9 +6608,9 @@ Object.assign(window.GameData, {
       "index":"25",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7346,9 +6644,9 @@ Object.assign(window.GameData, {
       "index":"26",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7382,9 +6680,9 @@ Object.assign(window.GameData, {
       "index":"27",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7418,9 +6716,9 @@ Object.assign(window.GameData, {
       "index":"28",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7454,9 +6752,9 @@ Object.assign(window.GameData, {
       "index":"29",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7490,9 +6788,9 @@ Object.assign(window.GameData, {
       "index":"30",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7526,9 +6824,9 @@ Object.assign(window.GameData, {
       "index":"31",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7562,9 +6860,9 @@ Object.assign(window.GameData, {
       "index":"32",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7598,9 +6896,9 @@ Object.assign(window.GameData, {
       "index":"33",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7634,9 +6932,9 @@ Object.assign(window.GameData, {
       "index":"34",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7670,9 +6968,9 @@ Object.assign(window.GameData, {
       "index":"35",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7706,9 +7004,9 @@ Object.assign(window.GameData, {
       "index":"36",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7742,9 +7040,9 @@ Object.assign(window.GameData, {
       "index":"37",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7778,9 +7076,9 @@ Object.assign(window.GameData, {
       "index":"38",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7814,9 +7112,9 @@ Object.assign(window.GameData, {
       "index":"39",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7850,9 +7148,9 @@ Object.assign(window.GameData, {
       "index":"40",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7886,9 +7184,9 @@ Object.assign(window.GameData, {
       "index":"41",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7922,9 +7220,9 @@ Object.assign(window.GameData, {
       "index":"42",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7958,9 +7256,9 @@ Object.assign(window.GameData, {
       "index":"43",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -7994,9 +7292,9 @@ Object.assign(window.GameData, {
       "index":"44",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -8030,9 +7328,9 @@ Object.assign(window.GameData, {
       "index":"45",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -8066,9 +7364,9 @@ Object.assign(window.GameData, {
       "index":"46",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -8102,9 +7400,9 @@ Object.assign(window.GameData, {
       "index":"47",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -8138,9 +7436,9 @@ Object.assign(window.GameData, {
       "index":"48",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_04",
@@ -8192,9 +7490,9 @@ Object.assign(window.GameData, {
       "index":"0",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8228,9 +7526,9 @@ Object.assign(window.GameData, {
       "index":"1",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8264,9 +7562,9 @@ Object.assign(window.GameData, {
       "index":"2",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8300,9 +7598,9 @@ Object.assign(window.GameData, {
       "index":"3",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8336,9 +7634,9 @@ Object.assign(window.GameData, {
       "index":"4",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8372,9 +7670,9 @@ Object.assign(window.GameData, {
       "index":"5",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8408,9 +7706,9 @@ Object.assign(window.GameData, {
       "index":"6",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8444,9 +7742,9 @@ Object.assign(window.GameData, {
       "index":"7",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8480,9 +7778,9 @@ Object.assign(window.GameData, {
       "index":"8",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8516,9 +7814,9 @@ Object.assign(window.GameData, {
       "index":"9",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8552,9 +7850,9 @@ Object.assign(window.GameData, {
       "index":"10",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8588,9 +7886,9 @@ Object.assign(window.GameData, {
       "index":"11",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8624,9 +7922,9 @@ Object.assign(window.GameData, {
       "index":"12",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8660,9 +7958,9 @@ Object.assign(window.GameData, {
       "index":"13",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8696,9 +7994,9 @@ Object.assign(window.GameData, {
       "index":"14",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8732,9 +8030,9 @@ Object.assign(window.GameData, {
       "index":"15",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8768,9 +8066,9 @@ Object.assign(window.GameData, {
       "index":"16",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8804,9 +8102,9 @@ Object.assign(window.GameData, {
       "index":"17",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8840,9 +8138,9 @@ Object.assign(window.GameData, {
       "index":"18",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8876,9 +8174,9 @@ Object.assign(window.GameData, {
       "index":"19",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8912,9 +8210,9 @@ Object.assign(window.GameData, {
       "index":"20",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8948,9 +8246,9 @@ Object.assign(window.GameData, {
       "index":"21",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -8984,9 +8282,9 @@ Object.assign(window.GameData, {
       "index":"22",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9020,9 +8318,9 @@ Object.assign(window.GameData, {
       "index":"23",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9056,9 +8354,9 @@ Object.assign(window.GameData, {
       "index":"24",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9092,9 +8390,9 @@ Object.assign(window.GameData, {
       "index":"25",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9128,9 +8426,9 @@ Object.assign(window.GameData, {
       "index":"26",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9164,9 +8462,9 @@ Object.assign(window.GameData, {
       "index":"27",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9200,9 +8498,9 @@ Object.assign(window.GameData, {
       "index":"28",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9236,9 +8534,9 @@ Object.assign(window.GameData, {
       "index":"29",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9272,9 +8570,9 @@ Object.assign(window.GameData, {
       "index":"30",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9308,9 +8606,9 @@ Object.assign(window.GameData, {
       "index":"31",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9344,9 +8642,9 @@ Object.assign(window.GameData, {
       "index":"32",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9380,9 +8678,9 @@ Object.assign(window.GameData, {
       "index":"33",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9416,9 +8714,9 @@ Object.assign(window.GameData, {
       "index":"34",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9452,9 +8750,9 @@ Object.assign(window.GameData, {
       "index":"35",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9488,9 +8786,9 @@ Object.assign(window.GameData, {
       "index":"36",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9524,9 +8822,9 @@ Object.assign(window.GameData, {
       "index":"37",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9560,9 +8858,9 @@ Object.assign(window.GameData, {
       "index":"38",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9596,9 +8894,9 @@ Object.assign(window.GameData, {
       "index":"39",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9632,9 +8930,9 @@ Object.assign(window.GameData, {
       "index":"40",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9668,9 +8966,9 @@ Object.assign(window.GameData, {
       "index":"41",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9704,9 +9002,9 @@ Object.assign(window.GameData, {
       "index":"42",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9740,9 +9038,9 @@ Object.assign(window.GameData, {
       "index":"43",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9776,9 +9074,9 @@ Object.assign(window.GameData, {
       "index":"44",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9812,9 +9110,9 @@ Object.assign(window.GameData, {
       "index":"45",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9848,9 +9146,9 @@ Object.assign(window.GameData, {
       "index":"46",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9884,9 +9182,9 @@ Object.assign(window.GameData, {
       "index":"47",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9920,9 +9218,9 @@ Object.assign(window.GameData, {
       "index":"48",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9956,9 +9254,9 @@ Object.assign(window.GameData, {
       "index":"49",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -9992,9 +9290,9 @@ Object.assign(window.GameData, {
       "index":"50",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -10028,9 +9326,9 @@ Object.assign(window.GameData, {
       "index":"51",
       "index_step":"",
       "res_type":"Item",
-      "res_id":"134",
+      "res_id":"",
       "res_number":"1",
-      "custom_value":"18054"
+      "custom_value":"500101"
     },
     {
       "type":"Scene_05",
@@ -10116,7 +9414,27 @@ Object.assign(window.GameData, {
   "chefsBookData":[
     {
       "chefs_type":"Merge",
-      "item_type":"FruitNutGenerator"
+      "item_type":"DrinkGenerator"
+    },
+    {
+      "chefs_type":"Merge",
+      "item_type":"Coffee"
+    },
+    {
+      "chefs_type":"Merge",
+      "item_type":"SoftDrinks"
+    },
+    {
+      "chefs_type":"Merge",
+      "item_type":"DairyProducts"
+    },
+    {
+      "chefs_type":"Merge",
+      "item_type":"Glassware"
+    },
+    {
+      "chefs_type":"Merge",
+      "item_type":"FruitAndSugarGenerator"
     },
     {
       "chefs_type":"Merge",
@@ -10124,11 +9442,7 @@ Object.assign(window.GameData, {
     },
     {
       "chefs_type":"Merge",
-      "item_type":"Nut"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"CocoaBeanDerivatives"
+      "item_type":"SugarAndCandy"
     },
     {
       "chefs_type":"Merge",
@@ -10140,31 +9454,7 @@ Object.assign(window.GameData, {
     },
     {
       "chefs_type":"Merge",
-      "item_type":"DrinkGenerator"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"SoftDrinks"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"Coffee"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"AdditivesAndGarnishes"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"DairyProducts"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"GlassProduct"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"VegetablesGenerator"
+      "item_type":"VegetableGenerator"
     },
     {
       "chefs_type":"Merge",
@@ -10172,239 +9462,7 @@ Object.assign(window.GameData, {
     },
     {
       "chefs_type":"Merge",
-      "item_type":"LeafVegetables"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"Ship"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"Fish"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"Shellfish"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"ProteinGenerator"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"BeefDerivatives"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"PoultryEgg"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"PorkLamb"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"GrainGenerator"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"Grain"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"Dough"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"AlcoholGenerator"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"ClassicAlcohol"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"IconicAlcohol"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"BBQRecipeBook"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"BBQRecipe"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"TouristBaggage"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"BaggageItems"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"MuseumGuide"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"MuseumCollection"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"FrenchRecipeBook"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"FrenchRecipe"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"GooseDerivatives"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"JapaneseAttraction"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"FoxInspiredGift"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"JapaneseRecipeBook"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"JapaneseRecipe"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"SoybeanDerivatives"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"SushiMaker"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"BambooDerivatives"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"FoxPancake"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"MulletDerivatives"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"MusselDerivatives"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"CupofMatcha"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"MatchaPowder"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"AntiqueTreasureBox"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"ChineseCollectible"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"ChineseRecipeBook"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"ChineseRecipe"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"BronzeArtifact"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"ChineseTea"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"RedChiliPepper"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"SpecialtyFruit"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"HotPot"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"SpanishRecipeBook"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"SpanishRecipe"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"CraftToolStorage"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"SpanishCeramics"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"SpanishWoodwork"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"SpanishSpices"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"FlamencoAccessories"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"MexicanRecipeBook"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"MexicanRecipe"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"MexicanBuildings"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"MexicanFolkArt"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"PricklyPearSeries"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"HibiscusFlower"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"LatinFruits"
-    },
-    {
-      "chefs_type":"Merge",
-      "item_type":"MexicanSauces"
+      "item_type":"LeafyVegetables"
     },
     {
       "chefs_type":"Tool",
@@ -10423,38 +9481,6 @@ Object.assign(window.GameData, {
       "item_type":"Juicer"
     },
     {
-      "chefs_type":"Tool",
-      "item_type":"Oven"
-    },
-    {
-      "chefs_type":"Tool",
-      "item_type":"Shaker"
-    },
-    {
-      "chefs_type":"Tool",
-      "item_type":"Pot"
-    },
-    {
-      "chefs_type":"Tool",
-      "item_type":"NoodleMaker"
-    },
-    {
-      "chefs_type":"Tool",
-      "item_type":"Steamer"
-    },
-    {
-      "chefs_type":"Tool",
-      "item_type":"PaellaPan"
-    },
-    {
-      "chefs_type":"Tool",
-      "item_type":"PizzaOven"
-    },
-    {
-      "chefs_type":"Tool",
-      "item_type":"IceCreamMaker"
-    },
-    {
       "chefs_type":"GameBoost",
       "item_type":"Gold"
     },
@@ -10464,11 +9490,15 @@ Object.assign(window.GameData, {
     },
     {
       "chefs_type":"GameBoost",
-      "item_type":"Diamonds"
+      "item_type":"Diamond"
     },
     {
       "chefs_type":"Recipes",
-      "item_type":"FruitJuice"
+      "item_type":"JamAndYogurtMix"
+    },
+    {
+      "chefs_type":"Recipes",
+      "item_type":"SmoothieAndJuice"
     },
     {
       "chefs_type":"Recipes",
@@ -10476,135 +9506,19 @@ Object.assign(window.GameData, {
     },
     {
       "chefs_type":"Recipes",
-      "item_type":"GrilledVegetables"
+      "item_type":"MixedGrill"
     },
     {
       "chefs_type":"Recipes",
-      "item_type":"GrilledMeat"
+      "item_type":"StirFriedDish"
     },
     {
       "chefs_type":"Recipes",
-      "item_type":"GrilledSeafood"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"PanfriedFoods"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"Salads"
+      "item_type":"Salad"
     },
     {
       "chefs_type":"Recipes",
       "item_type":"Desserts"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"FastFood"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"DeepfriedFoods"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"MixedDrinks"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"FrenchDelicacies"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"FrenchDesserts"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"FrenchSeafood"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"SideDishes"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"RiceTrianglesandSushi"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"GrainProducts"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"Wagashi"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"SakuraDerivatives"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"Noodles"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"ServeOverRice"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"Sashimi"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"MatchaFlavouredSnack"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"FancyJapaneseDishes"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"JingCuisine"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"HuaiyangCuisine"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"SichuanCuisine"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"CantoneseCuisine"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"SpanishCuisine"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"SpanishSeafood"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"SpanishSnacks"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"MexicanCuisine"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"NopalesCuisine"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"MexicanTacos"
-    },
-    {
-      "chefs_type":"Recipes",
-      "item_type":"MayanCuisine"
     }
   ],
   "convertTime":[
