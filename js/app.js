@@ -16,7 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     TableUtils.initMainSubTabs();
     initModules();
+    if (typeof CsvImport !== 'undefined') CsvImport.init();
 });
+
+// Called by CsvImport after applying updated CSVs to window.GameData.
+window.reloadGameData = function() {
+    // Destroy all active Chart.js instances so canvases can be reused
+    if (typeof Chart !== 'undefined') {
+        Object.values(Chart.instances || {}).forEach(c => c.destroy());
+    }
+    window.ProcessedData = { orders: {}, iap: {}, global: {} };
+    GlobalData.init();
+    initModules();
+    const status = document.getElementById('data-status');
+    if (status) status.textContent = 'Data đã được cập nhật ✓';
+};
 
 function initNavigation() {
     const navItems = document.querySelectorAll('.nav-item');

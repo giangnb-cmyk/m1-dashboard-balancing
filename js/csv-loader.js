@@ -203,5 +203,5 @@ const CsvLoader = (() => {
     };
   }
 
-  return { load, loadFilled, loadAll, fillDown };
+  return { load, loadFilled, loadAll, fillDown, parseRaw, parseCookingRecipes };
 })();

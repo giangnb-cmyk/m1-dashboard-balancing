@@ -112,8 +112,6 @@ const SimConfig = (() => {
     const color = profile.color || PROFILE_COLORS[idx % PROFILE_COLORS.length];
     const rows = profile.purchases.map((p, pi) => _renderPurchaseRow(p, idx, pi)).join('');
     const canRemove = _profiles.length > 1;
-    const tip = (label, desc) =>
-      `<span class="psim-cfg-field-label psim-has-tip" data-tip="${desc}">${label} <span class="psim-tip-icon">ⓘ</span></span>`;
     const typeLabel = profile.playerType === 'spender' ? '💎 Spender' : '🆓 F2P';
     return `
       <details class="psim-cfg-card" data-profile="${idx}" style="border-left:3px solid ${color}" open>
@@ -122,70 +120,56 @@ const SimConfig = (() => {
           <span class="psim-cfg-card-name">${profile.name || 'Profile'}</span>
           <span class="psim-cfg-card-badge">${typeLabel}</span>
         </summary>
-        <div class="psim-cfg-grid">
 
-          <div class="psim-cfg-field psim-cfg-field-name">
-            <span class="psim-cfg-field-label">👤 Name</span>
-            <div class="psim-cfg-field-control">
-              <input type="color" class="psim-profile-color psim-color-picker" value="${color}" title="Profile color">
-              <input type="text" class="psim-cfg-input psim-cfg-name psim-profile-name" value="${profile.name}" placeholder="Profile name">
-            </div>
+        <div class="psim-cfg-card-body">
+          <div class="psim-cfg-compact-row">
+            <input type="color" class="psim-profile-color psim-color-picker" value="${color}" title="Profile color">
+            <input type="text" class="psim-cfg-input psim-cfg-name psim-profile-name" value="${profile.name}" placeholder="Name">
+            <select class="psim-cfg-select psim-profile-type">
+              <option value="f2p"     ${profile.playerType === 'f2p'     ? 'selected' : ''}>🆓 F2P</option>
+              <option value="spender" ${profile.playerType === 'spender' ? 'selected' : ''}>💎 Spender</option>
+            </select>
+            <span class="psim-cfg-row-divider"></span>
+            <label class="psim-cfg-check psim-has-tip"
+                   data-tip="Include this profile when running the simulation.\nUncheck to temporarily disable without deleting.">
+              <input type="checkbox" class="psim-profile-enabled" ${profile.enabled ? 'checked' : ''}>
+              <span>Enabled</span>
+            </label>
+            <label class="psim-cfg-check psim-has-tip"
+                   data-tip="Ignore board &amp; inventory capacity limits.\nItems are always placed regardless of how full the board is.">
+              <input type="checkbox" class="psim-profile-ignore-capacity" ${profile.ignoreCapacity ? 'checked' : ''}>
+              <span>Ignore Full</span>
+            </label>
+            ${canRemove ? `<button type="button" class="psim-remove-profile psim-btn-danger psim-btn-sm" data-profile="${idx}" style="margin-left:auto">✕</button>` : ''}
           </div>
 
-          <div class="psim-cfg-field">
-            ${tip('🎮 Type', 'F2P — energy regen only, never spends gems\nSpender — uses gems to reset generator cooldowns mid-session and instantly finish cooking recipes')}
-            <div class="psim-cfg-field-control">
-              <select class="psim-cfg-select psim-profile-type">
-                <option value="f2p"     ${profile.playerType === 'f2p'     ? 'selected' : ''}>F2P</option>
-                <option value="spender" ${profile.playerType === 'spender' ? 'selected' : ''}>Spender</option>
-              </select>
-            </div>
+          <div class="psim-cfg-compact-row psim-cfg-session-row">
+            <span class="psim-cfg-sublabel psim-has-tip"
+                  data-tip="How session timing is defined:\n• Interval (h) — opens game every N hours\n• Sessions/day — opens game N times per day at equal intervals">
+              🕐 Session
+            </span>
+            <select class="psim-cfg-select psim-session-mode">
+              <option value="interval"       ${profile.sessionMode === 'interval'       ? 'selected' : ''}>Interval (h)</option>
+              <option value="sessionsPerDay" ${profile.sessionMode === 'sessionsPerDay' ? 'selected' : ''}>Sessions/day</option>
+            </select>
+            <label class="psim-session-param psim-has-tip ${profile.sessionMode !== 'interval' ? 'psim-dim' : ''}"
+                   data-tip="Hours between each play session.\nExample: 6h → 4 sessions/day">
+              <span class="psim-cfg-unit">Every</span>
+              <input type="number" class="psim-cfg-input psim-cfg-num psim-session-interval" value="${profile.intervalHours}" min="0.5" max="24" step="0.5">
+              <span class="psim-cfg-unit">h</span>
+            </label>
+            <label class="psim-session-param psim-has-tip ${profile.sessionMode !== 'sessionsPerDay' ? 'psim-dim' : ''}"
+                   data-tip="Total play sessions per day, spread evenly across 24h.\nExample: 8 sessions → plays every 3 hours">
+              <input type="number" class="psim-cfg-input psim-cfg-num psim-session-count" value="${profile.sessionsPerDay}" min="1" max="24">
+              <span class="psim-cfg-unit">sess/day</span>
+            </label>
           </div>
-
-          <div class="psim-cfg-field psim-cfg-field-session">
-            ${tip('🕐 Session', 'How session timing is defined:\n• Interval (h) — opens game every N hours\n• Sessions/day — opens game N times per day at equal intervals')}
-            <div class="psim-cfg-field-control">
-              <select class="psim-cfg-select psim-session-mode">
-                <option value="interval"       ${profile.sessionMode === 'interval'       ? 'selected' : ''}>Interval (h)</option>
-                <option value="sessionsPerDay" ${profile.sessionMode === 'sessionsPerDay' ? 'selected' : ''}>Sessions/day</option>
-              </select>
-              <label class="psim-session-param psim-has-tip ${profile.sessionMode !== 'interval' ? 'psim-dim' : ''}"
-                     data-tip="Hours between each play session.\nExample: 6h → 4 sessions/day\nEnergy regenerates between sessions">
-                <span class="psim-cfg-unit">Every</span>
-                <input type="number" class="psim-cfg-input psim-cfg-num psim-session-interval" value="${profile.intervalHours}" min="0.5" max="24" step="0.5">
-                <span class="psim-cfg-unit">h</span>
-              </label>
-              <label class="psim-session-param psim-has-tip ${profile.sessionMode !== 'sessionsPerDay' ? 'psim-dim' : ''}"
-                     data-tip="Total play sessions per day, spread evenly across 24h.\nExample: 8 sessions → plays every 3 hours">
-                <input type="number" class="psim-cfg-input psim-cfg-num psim-session-count" value="${profile.sessionsPerDay}" min="1" max="24">
-                <span class="psim-cfg-unit">sessions/day</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="psim-cfg-field psim-cfg-field-options">
-            <span class="psim-cfg-field-label">⚙️ Options</span>
-            <div class="psim-cfg-field-control psim-cfg-options-row">
-              <label class="psim-cfg-check psim-has-tip"
-                     data-tip="Include this profile when running the simulation.\nUncheck to temporarily disable without deleting.">
-                <input type="checkbox" class="psim-profile-enabled" ${profile.enabled ? 'checked' : ''}>
-                <span>Enabled</span>
-              </label>
-              <label class="psim-cfg-check psim-has-tip"
-                     data-tip="Ignore board &amp; inventory capacity limits.\nItems are always placed regardless of how full the board is.\nUseful for testing pure progression speed without board management.">
-                <input type="checkbox" class="psim-profile-ignore-capacity" ${profile.ignoreCapacity ? 'checked' : ''}>
-                <span>Ignore Full</span>
-              </label>
-              ${canRemove ? `<button type="button" class="psim-remove-profile psim-btn-danger psim-btn-sm" data-profile="${idx}">✕</button>` : ''}
-            </div>
-          </div>
-
         </div>
 
         <details class="psim-cfg-props-group">
           <summary class="psim-cfg-props-summary">🔧 Properties</summary>
           <div class="psim-cfg-gem-limits">
-            <span class="psim-cfg-field-label psim-cfg-gem-title">💎 Gem limits / day</span>
+            <span class="psim-cfg-gem-title">💎 Gem limits / day</span>
             <div class="psim-cfg-gem-row">
               <label class="psim-cfg-gem-item psim-has-tip"
                      data-tip="Max times to buy energy per day with gems.\nCost: 10→20→40→80→160 💎 per 100 energy.\n0 = never buy energy.">
@@ -222,37 +206,41 @@ const SimConfig = (() => {
     container.innerHTML = `
       <div class="psim-cfg-global-wrap">
         <div class="psim-cfg-global-title">⚙️ Simulation Settings</div>
-      <div class="psim-cfg-global">
-        <div class="psim-cfg-field">
-          <span class="psim-cfg-label">⚡ Regen</span>
-          <input id="psim-regen" type="number" class="psim-cfg-input" value="${_globalRegen}" step="1" min="1">
-          <span class="psim-cfg-unit">min/⚡</span>
+        <div class="psim-cfg-global">
+          <div class="psim-cfg-global-params">
+            <div class="psim-cfg-field">
+              <span class="psim-cfg-label">⚡ Regen</span>
+              <input id="psim-regen" type="number" class="psim-cfg-input" value="${_globalRegen}" step="1" min="1">
+              <span class="psim-cfg-unit">min/⚡</span>
+            </div>
+            <div class="psim-cfg-field">
+              <span class="psim-cfg-label">🔋 Cap</span>
+              <input id="psim-cap" type="number" class="psim-cfg-input" value="${_globalCap}" min="20" max="500">
+            </div>
+            <div class="psim-cfg-field">
+              <span class="psim-cfg-label">⚡ Start</span>
+              <input id="psim-start-energy" type="number" class="psim-cfg-input" value="${_globalStartEnergy}" min="0" max="9999">
+            </div>
+            <div class="psim-cfg-field">
+              <span class="psim-cfg-label">💎 Start</span>
+              <input id="psim-start-gems" type="number" class="psim-cfg-input" value="${_globalStartGems}" min="0" max="99999">
+            </div>
+          </div>
+          <div class="psim-cfg-global-flags">
+            <label class="psim-cfg-check psim-has-tip" data-tip="Generators refill instantly after pool empties — skip cooldown timer">
+              <input id="psim-no-cooldown" type="checkbox" ${_globalNoCooldown ? 'checked' : ''}>
+              <span>🔄 No Cooldown</span>
+            </label>
+            <label class="psim-cfg-check psim-has-tip" data-tip="Cooking completes instantly within the same session">
+              <input id="psim-instant-cook" type="checkbox" ${_globalInstantCook ? 'checked' : ''}>
+              <span>⚡ Instant Cook</span>
+            </label>
+            <label class="psim-cfg-check psim-has-tip" data-tip="Skip generator simulation — deduct energy cost per order directly from Game Data">
+              <input id="psim-direct-energy" type="checkbox" ${_globalDirectEnergy ? 'checked' : ''}>
+              <span>⚡ Direct Energy</span>
+            </label>
+          </div>
         </div>
-        <div class="psim-cfg-field">
-          <span class="psim-cfg-label">🔋 Cap</span>
-          <input id="psim-cap" type="number" class="psim-cfg-input" value="${_globalCap}" min="20" max="500">
-        </div>
-        <div class="psim-cfg-field">
-          <span class="psim-cfg-label">⚡ Start</span>
-          <input id="psim-start-energy" type="number" class="psim-cfg-input" value="${_globalStartEnergy}" min="0" max="9999">
-        </div>
-        <div class="psim-cfg-field">
-          <span class="psim-cfg-label">💎 Start</span>
-          <input id="psim-start-gems" type="number" class="psim-cfg-input" value="${_globalStartGems}" min="0" max="99999">
-        </div>
-        <div class="psim-cfg-field">
-          <span class="psim-cfg-label">🔄 No Cooldown</span>
-          <input id="psim-no-cooldown" type="checkbox" ${_globalNoCooldown ? 'checked' : ''}>
-        </div>
-        <div class="psim-cfg-field">
-          <span class="psim-cfg-label">⚡ Instant Cook</span>
-          <input id="psim-instant-cook" type="checkbox" ${_globalInstantCook ? 'checked' : ''}>
-        </div>
-        <div class="psim-cfg-field">
-          <span class="psim-cfg-label">⚡ Direct Energy</span>
-          <input id="psim-direct-energy" type="checkbox" ${_globalDirectEnergy ? 'checked' : ''}>
-        </div>
-      </div>
       </div>
       <div id="psim-profiles">
         ${_profiles.map((p, i) => _renderProfileCard(p, i)).join('')}

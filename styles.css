@@ -4762,11 +4762,25 @@ tr.imbalanced {
 }
 .psim-cfg-global {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 2rem;
-  padding: 0.85rem 0;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.75rem 0;
   margin-bottom: 1rem;
   border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.psim-cfg-global-params {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.5rem;
+  align-items: center;
+}
+.psim-cfg-global-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  align-items: center;
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 .psim-cfg-field { display: flex; align-items: center; gap: 0.5rem; }
 .psim-cfg-unit { font-size: 0.8rem; color: var(--text-muted); }
@@ -4784,7 +4798,7 @@ tr.imbalanced {
 .psim-session-param { display: inline-flex; align-items: center; gap: 0.3rem; }
 .psim-dim { display: none !important; }
 
-/* ── Config card grid layout ─────────────────────────────────────────────── */
+/* ── Config card grid layout (legacy — keep for compatibility) ───────────── */
 .psim-cfg-grid {
   display: grid;
   grid-template-columns: 175px 115px 1fr 195px;
@@ -4792,22 +4806,40 @@ tr.imbalanced {
   padding: 10px 1rem 6px;
   align-items: start;
 }
-.psim-cfg-grid .psim-cfg-field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
+.psim-cfg-grid .psim-cfg-field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .psim-cfg-field-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #64748b;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em;
+  text-transform: uppercase; color: #64748b;
 }
 .psim-cfg-field-control { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .psim-cfg-options-row   { gap: 10px; }
 .psim-hidden            { display: none !important; }
+
+/* ── Compact card body (new layout) ─────────────────────────────────────── */
+.psim-cfg-card-body {
+  padding: 0.6rem 1rem 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.psim-cfg-compact-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.6rem;
+}
+.psim-cfg-sublabel {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.psim-cfg-row-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255,255,255,0.12);
+  flex-shrink: 0;
+  margin: 0 0.15rem;
+}
 
 /* ── Profile card collapsible ───────────────────────────────────────────── */
 .psim-cfg-card { padding: 0; }
@@ -4886,7 +4918,7 @@ tr.imbalanced {
   flex-wrap: wrap;
 }
 .psim-cfg-gem-title { color: #a78bfa; white-space: nowrap; margin-bottom: 4px; }
-.psim-cfg-gem-row   { display: flex; flex-direction: column; gap: 6px; width: 100%; }
+.psim-cfg-gem-row   { display: flex; flex-wrap: wrap; gap: 6px 1.25rem; width: 100%; align-items: center; }
 .psim-cfg-gem-item  {
   display: flex;
   align-items: center;
@@ -5043,9 +5075,11 @@ tr.imbalanced {
     grid-template-columns: 1fr;
   }
   .psim-cfg-grid { padding: 8px 0.75rem 6px; }
+  .psim-cfg-card-body { padding: 0.4rem 0.75rem 0.2rem; }
   .psim-cfg-card > .psim-cfg-props-group { padding: 0 0.75rem; }
   .psim-cfg-card > .psim-purchases       { padding: 0.25rem 0.75rem 0.65rem; }
-  .psim-cfg-global { gap: 0.75rem 1.5rem; }
+  .psim-cfg-global { gap: 0.5rem; }
+  .psim-cfg-row-divider { display: none; }
   .psim-purchase-row { flex-wrap: wrap; }
   .psim-pkg-dd { width: 100%; }
   .psim-pkg-btn { width: 100%; }
@@ -5277,3 +5311,169 @@ tr.imbalanced {
 /* ── Generator/energy log row colors ───────────────────────────────────── */
 .psim-log-gen_receive    td:first-child { border-left: 2px solid #34d399; }
 .psim-log-energy_reward  td:first-child { border-left: 2px solid #38bdf8; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CSV IMPORT — button, modal, dropzone
+══════════════════════════════════════════════════════════════════════════ */
+.csv-import-trigger-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    margin-left: 0.75rem;
+    font-size: 0.8rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--accent-blue);
+    background: rgba(56,189,248,0.08);
+    border: 1px solid rgba(56,189,248,0.25);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    white-space: nowrap;
+}
+.csv-import-trigger-btn:hover {
+    background: rgba(56,189,248,0.16);
+    border-color: rgba(56,189,248,0.45);
+}
+
+/* Modal overlay */
+.csv-import-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.csv-import-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+}
+
+/* Modal card */
+.csv-import-box {
+    position: relative;
+    z-index: 1;
+    width: min(520px, 92vw);
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+.csv-import-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.csv-import-title {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+.csv-import-close-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+}
+.csv-import-close-btn:hover { background: rgba(255,255,255,0.06); color: var(--text-main); }
+.csv-import-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+.csv-import-desc strong { color: var(--text-main); }
+
+/* Drop zone */
+.csv-import-dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 2rem 1.5rem;
+    border: 2px dashed rgba(56,189,248,0.25);
+    border-radius: 12px;
+    background: rgba(56,189,248,0.04);
+    text-align: center;
+    transition: border-color 0.15s, background 0.15s;
+    cursor: default;
+}
+.csv-import-dropzone.drag-over {
+    border-color: rgba(56,189,248,0.7);
+    background: rgba(56,189,248,0.10);
+}
+.csv-import-drop-icon { font-size: 2.2rem; line-height: 1; }
+.csv-import-drop-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+    margin: 0;
+}
+.csv-import-drop-hint {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Status bar */
+.csv-import-status {
+    font-size: 0.83rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    border-left: 3px solid currentColor;
+}
+.csv-import-status--info  { color: var(--accent-blue);  background: rgba(56,189,248,0.08); }
+.csv-import-status--ok    { color: #34d399;             background: rgba(52,211,153,0.08); }
+.csv-import-status--warn  { color: var(--gold);         background: rgba(251,191,36,0.08); }
+.csv-import-status--error { color: #f87171;             background: rgba(248,113,113,0.08); }
+
+/* Results list */
+.csv-import-results { display: flex; flex-direction: column; gap: 0.5rem; }
+.csv-import-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.csv-import-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.03);
+}
+.csv-import-item--ok .csv-import-dot { color: #34d399; }
+.csv-import-name { flex: 1; font-family: var(--font-mono); color: var(--text-main); }
+.csv-import-count { color: var(--text-muted); font-size: 0.75rem; white-space: nowrap; }
+.csv-import-skip-note {
+    font-size: 0.78rem;
+    color: var(--gold);
+    margin: 0;
+    padding: 0.3rem 0.5rem;
+}
+
+/* Actions */
+.csv-import-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.25rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}

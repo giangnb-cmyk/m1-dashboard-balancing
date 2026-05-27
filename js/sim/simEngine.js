@@ -865,7 +865,12 @@ const SimEngine = (() => {
       // a. Regen energy for time elapsed since last session
       // Capture energy before regen to correctly track actual regen received (capped)
       const ownedBefore = state.energy.owned;
-      SimEnergy.tick(state.energy, minsPerSession);
+      if (profileCfg.directEnergyMode) {
+        // Direct mode: accumulate without cap so orders costing more than cap can be paid
+        state.energy.owned += state.energy.regenPerMin * minsPerSession;
+      } else {
+        SimEnergy.tick(state.energy, minsPerSession);
+      }
       const actualRegen = state.energy.owned - ownedBefore;
       if (actualRegen > 0) {
         state.economy.energy.received += actualRegen;

@@ -51,6 +51,9 @@
             </div>
             <div class="balance-indicator">
                 <span id="data-status" style="font-size:0.8rem;color:var(--text-muted);">Đang tải...</span>
+                <button id="csv-import-trigger-btn" class="csv-import-trigger-btn" title="Import CSV / ZIP">
+                    📂 Import CSV
+                </button>
             </div>
         </div>
 
@@ -909,8 +912,34 @@
         </div>
     </main>
 
+    <!-- CSV Import Modal -->
+    <div id="csv-import-modal" class="csv-import-modal" style="display:none;">
+        <div class="csv-import-backdrop"></div>
+        <div class="csv-import-box glass">
+            <div class="csv-import-header">
+                <span class="csv-import-title">📂 Import CSV Data</span>
+                <button id="csv-import-close" class="csv-import-close-btn">✕</button>
+            </div>
+            <p class="csv-import-desc">Kéo thả file <strong>.csv</strong> hoặc <strong>.zip</strong> (bao gồm nhiều CSV) vào đây để cập nhật data.</p>
+            <div id="csv-import-dropzone" class="csv-import-dropzone">
+                <div class="csv-import-drop-icon">📁</div>
+                <p class="csv-import-drop-label">Kéo file vào đây</p>
+                <p class="csv-import-drop-hint">Hỗ trợ: .csv đơn lẻ, nhiều .csv cùng lúc, hoặc .zip chứa các CSV</p>
+                <input type="file" id="csv-import-file-input" accept=".csv,.zip" multiple style="display:none;">
+                <button id="csv-import-browse" class="btn-secondary">Chọn file từ máy</button>
+            </div>
+            <div id="csv-import-status" class="csv-import-status" style="display:none;"></div>
+            <div id="csv-import-results" class="csv-import-results" style="display:none;"></div>
+            <div id="csv-import-actions" class="csv-import-actions" style="display:none;">
+                <button id="csv-import-apply" class="btn-primary">✅ Áp dụng & Reload Data</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- JSZip (for CSV import from .zip) -->
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 
     <script src="js/data/data-init.js"></script>
     <script src="js/data/data-items.js"></script>
@@ -919,6 +948,8 @@
     <script src="js/data/data-buildup.js"></script>
     <script src="js/data/data-boxes.js"></script>
     <script src="js/data/data-iap.js"></script>
+    <script src="js/csv-loader.js"></script>
+    <script src="js/csvImport.js"></script>
     <script src="js/globalData.js"></script>
     <script src="js/tableUtils.js"></script>
     <script src="js/itemEncyclopedia.js"></script>
