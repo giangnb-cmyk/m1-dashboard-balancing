@@ -55,4 +55,5 @@ function initModules() {
     if (typeof OrderAnalysis    !== 'undefined') OrderAnalysis.init();
     if (typeof IAPPackages      !== 'undefined') IAPPackages.init();
     if (typeof PlayerSim        !== 'undefined') PlayerSim.init();
+    if (typeof NguonLuc         !== 'undefined') NguonLuc.init();
 }

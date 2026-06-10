@@ -14,6 +14,9 @@ const OrderAnalysis = (() => {
         '#e879f9','#2dd4bf',
     ];
 
+    let _chartView = 'order';
+    let _lastRenderArgs = null;
+
     // ── Helpers ───────────────────────────────────────────────────────────────
 
     function buildOrderMap(orderDetail) {
@@ -66,6 +69,18 @@ const OrderAnalysis = (() => {
     }
 
     // ── Chart ─────────────────────────────────────────────────────────────────
+
+    function _setToggleStyle(activeView) {
+        const btnOrder = document.getElementById('oa-view-order');
+        const btnBatch = document.getElementById('oa-view-batch');
+        if (!btnOrder || !btnBatch) return;
+        btnOrder.style.borderColor = activeView === 'order' ? 'rgba(56,189,248,0.5)' : 'rgba(148,163,184,0.2)';
+        btnOrder.style.background  = activeView === 'order' ? 'rgba(56,189,248,0.15)' : 'transparent';
+        btnOrder.style.color       = activeView === 'order' ? '#38bdf8' : '#94a3b8';
+        btnBatch.style.borderColor = activeView === 'batch' ? 'rgba(56,189,248,0.5)' : 'rgba(148,163,184,0.2)';
+        btnBatch.style.background  = activeView === 'batch' ? 'rgba(56,189,248,0.15)' : 'transparent';
+        btnBatch.style.color       = activeView === 'batch' ? '#38bdf8' : '#94a3b8';
+    }
 
     function renderChartLegend() {
         const el = document.getElementById('oa-chart-legend');
@@ -162,6 +177,118 @@ const OrderAnalysis = (() => {
                         ticks: { color: '#cbd5e1' },
                         grid: { color: 'rgba(255,255,255,0.05)' },
                         title: { display: true, text: 'Energy Cost (difficulty proxy)', color: '#94a3b8', font: { size: 11 } },
+                    },
+                },
+            },
+        });
+    }
+
+    function renderBatchChartLegend() {
+        const el = document.getElementById('oa-chart-legend');
+        if (!el) return;
+        el.innerHTML = `
+            <div style="display:flex;align-items:center;gap:1.5rem;justify-content:center;
+                        padding:0.5rem 0 0.75rem;flex-wrap:wrap">
+                <div style="display:flex;align-items:center;gap:0.5rem">
+                    <div style="width:18px;height:12px;border-radius:3px;background:#38bdf8;flex-shrink:0"></div>
+                    <span style="color:#f8fafc;font-size:0.85rem;font-weight:600;font-family:Inter,sans-serif">Avg Energy / Order</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem">
+                    <div style="width:24px;height:3px;background:rgba(251,191,36,0.9);border-radius:2px;flex-shrink:0"></div>
+                    <span style="color:#f8fafc;font-size:0.85rem;font-weight:600;font-family:Inter,sans-serif">Total Batch Energy <span style="color:#94a3b8;font-weight:400">(trục phải)</span></span>
+                </div>
+            </div>`;
+    }
+
+    function renderBatchChart(batches, orderMap, energyMap) {
+        const ctx = $('oa-difficulty-chart');
+        if (!ctx) return;
+        if (window._oaChart) window._oaChart.destroy();
+        renderBatchChartLegend();
+
+        const labels = [], dataAvg = [], dataTotal = [], colors = [], tooltipData = [];
+
+        batches.forEach((batch, bi) => {
+            const color = BATCH_PALETTE[bi % BATCH_PALETTE.length];
+            const oids  = getBatchOrderIds(batch);
+            const energies = oids.map(oid => orderMap[oid] ? getOrderEnergy(orderMap[oid], energyMap) : 0);
+            const total    = Math.round(energies.reduce((a, b) => a + b, 0) * 10) / 10;
+            const avg      = energies.length ? +(total / energies.length).toFixed(1) : 0;
+
+            labels.push(`B${batch.id}`);
+            dataAvg.push(avg);
+            dataTotal.push(total);
+            colors.push(color);
+            tooltipData.push({ id: batch.id, theme: batch.themeType, count: oids.length, avg, total });
+        });
+
+        window._oaChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [
+                    {
+                        label: 'Avg Energy/Order',
+                        data: dataAvg,
+                        backgroundColor: colors.map(c => c + 'bb'),
+                        borderColor: colors,
+                        borderWidth: 1,
+                        borderRadius: 4,
+                        order: 2,
+                        yAxisID: 'y',
+                    },
+                    {
+                        label: 'Total Energy',
+                        data: dataTotal,
+                        type: 'line',
+                        borderColor: 'rgba(251,191,36,0.85)',
+                        backgroundColor: 'rgba(251,191,36,0.08)',
+                        borderWidth: 2,
+                        pointRadius: 3,
+                        pointBackgroundColor: 'rgba(251,191,36,0.9)',
+                        tension: 0.3,
+                        fill: false,
+                        order: 1,
+                        yAxisID: 'y2',
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                interaction: { mode: 'index', intersect: false },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            title: items => {
+                                const d = tooltipData[items[0].dataIndex];
+                                return `Batch ${d.id} · ${d.theme}`;
+                            },
+                            label: c => {
+                                const d = tooltipData[c.dataIndex];
+                                if (c.dataset.label === 'Total Energy')
+                                    return ` Total: ${d.total} ⚡`;
+                                return ` Avg/Order: ${d.avg} ⚡  ·  ${d.count} orders`;
+                            },
+                        },
+                    },
+                },
+                scales: {
+                    x: {
+                        ticks: { color: '#cbd5e1', font: { size: 10 }, maxRotation: 0 },
+                        grid: { color: 'rgba(255,255,255,0.05)' },
+                    },
+                    y: {
+                        position: 'left',
+                        ticks: { color: '#cbd5e1' },
+                        grid: { color: 'rgba(255,255,255,0.05)' },
+                        title: { display: true, text: 'Avg Energy / Order', color: '#94a3b8', font: { size: 11 } },
+                    },
+                    y2: {
+                        position: 'right',
+                        ticks: { color: 'rgba(251,191,36,0.65)' },
+                        grid: { display: false },
+                        title: { display: true, text: 'Total Batch Energy', color: 'rgba(251,191,36,0.65)', font: { size: 11 } },
                     },
                 },
             },
@@ -347,6 +474,8 @@ const OrderAnalysis = (() => {
     }
 
     function render(orderSystem, orderMap, energyMap) {
+        _lastRenderArgs = [orderSystem, orderMap, energyMap];
+
         const sceneF = $('oa-filter-scene')?.value || '';
         const batchF = $('oa-filter-batch')?.value  || '';
         const batches = orderSystem.filter(b =>
@@ -367,8 +496,22 @@ const OrderAnalysis = (() => {
         setText('oa-stat-avg-gold', avgEnergy.toLocaleString());
 
         renderSceneEnergySummary(orderSystem, orderMap, energyMap, sceneF);
-        renderDifficultyChart(batches, orderMap, energyMap);
+        if (_chartView === 'batch') {
+            renderBatchChart(batches, orderMap, energyMap);
+        } else {
+            renderDifficultyChart(batches, orderMap, energyMap);
+        }
         renderBatchCards(batches, orderMap, energyMap);
+    }
+
+    function setChartView(view) {
+        _chartView = view;
+        _setToggleStyle(view);
+        const title = document.getElementById('oa-chart-title');
+        if (title) title.textContent = view === 'batch'
+            ? 'Energy per Batch — Avg & Total'
+            : 'Difficulty Curve — Energy Cost per Order';
+        if (_lastRenderArgs) render(..._lastRenderArgs);
     }
 
     // ── Top Demand ────────────────────────────────────────────────────────────
@@ -500,6 +643,6 @@ const OrderAnalysis = (() => {
         TableUtils.initSubTabs(document.getElementById('order-analysis'));
     }
 
-    return { init };
+    return { init, setChartView };
 
 })();

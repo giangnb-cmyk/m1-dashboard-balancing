@@ -40,6 +40,10 @@
                 <span class="nav-icon">🎮</span>
                 <span class="nav-text">Player Sim</span>
             </button>
+            <button class="nav-item" data-tab="nguon-luc">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-text">Nguồn Lực</span>
+            </button>
         </nav>
     </aside>
 
@@ -758,8 +762,18 @@
             <div id="oa-subtab-scene" class="encyc-subtab-content active">
                 <!-- Difficulty chart -->
                 <div class="data-table-card glass" style="margin-bottom:1.5rem;padding:1.5rem;">
-                    <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
-                        <span style="font-size:0.8rem;color:var(--text-muted);font-weight:600;letter-spacing:0.05em;text-transform:uppercase">Difficulty Curve — Energy Cost per Order</span>
+                    <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap">
+                        <span id="oa-chart-title" style="font-size:0.8rem;color:var(--text-muted);font-weight:600;letter-spacing:0.05em;text-transform:uppercase">Difficulty Curve — Energy Cost per Order</span>
+                        <div style="margin-left:auto;display:flex;gap:0.4rem">
+                            <button id="oa-view-order" onclick="OrderAnalysis.setChartView('order')"
+                                style="padding:0.3rem 0.75rem;font-size:0.75rem;font-weight:600;border-radius:6px;
+                                       border:1px solid rgba(56,189,248,0.5);background:rgba(56,189,248,0.15);
+                                       color:#38bdf8;cursor:pointer">By Order</button>
+                            <button id="oa-view-batch" onclick="OrderAnalysis.setChartView('batch')"
+                                style="padding:0.3rem 0.75rem;font-size:0.75rem;font-weight:600;border-radius:6px;
+                                       border:1px solid rgba(148,163,184,0.2);background:transparent;
+                                       color:#94a3b8;cursor:pointer">By Batch</button>
+                        </div>
                     </div>
                     <div id="oa-chart-legend"></div>
                     <canvas id="oa-difficulty-chart" style="max-height:280px;"></canvas>
@@ -909,6 +923,64 @@
             </div>
         </section><!-- /player-sim -->
 
+        <!-- ===================== TAB: NGUỒN LỰC ===================== -->
+        <section id="nguon-luc" class="tab-view">
+            <div class="view-header">
+                <h2>⚡ Nguồn Lực — Generator &amp; Tool Analysis</h2>
+                <p class="view-subtitle">Traceback từ Order → Recipe → Nguyên liệu cần drop per Batch</p>
+            </div>
+
+            <!-- Search + legend -->
+            <div class="glass filter-bar" style="margin-bottom:1.25rem">
+                <div class="filter-group">
+                    <label class="filter-label">Tìm kiếm</label>
+                    <input id="nl-search" type="text" placeholder="🔍 Tên Generator hoặc Tool..."
+                        class="search-input" style="min-width:240px">
+                </div>
+                <div style="margin-left:auto;display:flex;align-items:center;gap:1.5rem;font-size:.78rem;color:var(--text-muted)">
+                    <span style="display:flex;align-items:center;gap:.4rem">
+                        <span style="display:inline-block;width:14px;height:10px;border-radius:2px;background:rgba(96,165,250,.65)"></span>Thấp
+                    </span>
+                    <span style="display:flex;align-items:center;gap:.4rem">
+                        <span style="display:inline-block;width:14px;height:10px;border-radius:2px;background:rgba(251,191,36,.75)"></span>Trung bình
+                    </span>
+                    <span style="display:flex;align-items:center;gap:.4rem">
+                        <span style="display:inline-block;width:14px;height:10px;border-radius:2px;background:rgba(249,115,22,.85)"></span>Cao
+                    </span>
+                    <span style="display:flex;align-items:center;gap:.4rem">
+                        <span style="display:inline-block;width:14px;height:10px;border-radius:2px;background:rgba(239,68,68,.9)"></span>Rất cao
+                    </span>
+                </div>
+            </div>
+
+            <!-- Generator × Batch matrix -->
+            <div class="data-table-card glass" style="margin-bottom:1.5rem;padding:1.25rem">
+                <div style="margin-bottom:.9rem">
+                    <h3 style="font-size:.95rem;font-weight:700;color:#f8fafc;margin:0 0 .2rem">
+                        ⚡ Ma trận Generator (100xxx) × Batch
+                    </h3>
+                    <p style="font-size:.75rem;color:#64748b;margin:0">
+                        Được phân tích ngược (Traceback) từ Order → Recipe → Nguyên liệu cần drop.
+                    </p>
+                </div>
+                <div id="nl-gen-matrix"></div>
+            </div>
+
+            <!-- Tool × Batch matrix -->
+            <div class="data-table-card glass" style="padding:1.25rem">
+                <div style="margin-bottom:.9rem">
+                    <h3 style="font-size:.95rem;font-weight:700;color:#f8fafc;margin:0 0 .2rem">
+                        🔧 Ma trận Tool (200xxx) × Batch
+                    </h3>
+                    <p style="font-size:.75rem;color:#64748b;margin:0">
+                        Thống kê máy chế biến nào đang bị "vắt kiệt" qua từng Batch.
+                    </p>
+                </div>
+                <div id="nl-tool-matrix"></div>
+            </div>
+
+        </section><!-- /nguon-luc -->
+
         </div>
     </main>
 
@@ -956,6 +1028,7 @@
     <script src="js/energyCalc.js"></script>
     <script src="js/orders.js"></script>
     <script src="js/orderAnalysis.js"></script>
+    <script src="js/nguonLuc.js"></script>
     <script src="js/iapPackages.js"></script>
     <script src="js/sim/simDataLoader.js"></script>
     <script src="js/sim/simEnergy.js"></script>
