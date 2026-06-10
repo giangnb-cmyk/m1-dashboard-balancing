@@ -42,7 +42,7 @@ const SimChart = (() => {
   let _viewIdx = 0;
   let _scrubbing = false;
   // Active log filter types (all on by default)
-  const ALL_LOG_TYPES = ['gold_earn','gold_spend','board_full','gem_receive','gem_spend','gen_receive','tool','energy_reward','energy_spend','level_up','cook'];
+  const ALL_LOG_TYPES = ['gold_earn','gold_spend','board_full','gem_receive','gem_spend','gen_receive','tool','item_receive','energy_reward','energy_spend','level_up','cook'];
   let _logFilter = new Set(ALL_LOG_TYPES);
 
   function init(catalogs) {
@@ -285,6 +285,7 @@ const SimChart = (() => {
     gem_spend:     { icon: '💸', label: 'Gem Spend',  cls: 'psim-log-gem_spend' },
     gen_receive:   { icon: '⚙️', label: 'Generator',  cls: 'psim-log-gen_receive' },
     tool:          { icon: '🔧', label: 'Tool',       cls: 'psim-log-tool' },
+    item_receive:  { icon: '🎁', label: 'Item Earn',  cls: 'psim-log-item_receive' },
     energy_reward: { icon: '⚡', label: 'Energy +',    cls: 'psim-log-energy_reward' },
     energy_spend:  { icon: '⚡', label: 'Energy −',    cls: 'psim-log-energy_spend' },
     level_up:      { icon: '⭐', label: 'Level Up',   cls: 'psim-log-level_up' },

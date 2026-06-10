@@ -3,7 +3,10 @@ const SimConfig = (() => {
   const PROFILE_COLORS = ['#38bdf8', '#f87171', '#a78bfa', '#34d399'];
   const STORAGE_KEY = 'psim_config_v1';
 
-  const GEM_DEFAULTS = { gemEnergyBuysPerDay: 5, gemGenResetsPerDay: 5, gemInstantCooksPerDay: 3 };
+  // Effectively-unlimited defaults: in-game gem spending has no daily cap —
+  // the gem bank itself is the real constraint. Lower these to model restraint.
+  const GEM_DEFAULTS = { gemEnergyBuysPerDay: 100, gemGenResetsPerDay: 100, gemInstantCooksPerDay: 100 };
+  const CONFIG_VERSION = 2;
 
   const DEFAULT_PROFILES = [
     { name: 'Hardcore',  sessionMode: 'sessionsPerDay', sessionsPerDay: 8,  intervalHours: 3,  playerType: 'f2p', ignoreCapacity: false, enabled: true, ...GEM_DEFAULTS },
@@ -26,6 +29,7 @@ const SimConfig = (() => {
   function _save() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        v: CONFIG_VERSION,
         profiles: _profiles,
         regen: _globalRegen,
         cap: _globalCap,
@@ -44,12 +48,22 @@ const SimConfig = (() => {
       if (!raw) return;
       const data = JSON.parse(raw);
       if (data.profiles && Array.isArray(data.profiles)) {
-        _profiles = data.profiles.map((p, i) => ({
-          ...GEM_DEFAULTS, ...p,
-          purchases: p.purchases || [],
-          color: p.color || PROFILE_COLORS[i % PROFILE_COLORS.length],
-          ignoreCapacity: p.ignoreCapacity || false
-        }));
+        // Pre-v2 configs saved the old restrictive gem caps (5/5/3) which
+        // throttled spender simulation — drop them so new defaults apply.
+        const legacy = !data.v;
+        _profiles = data.profiles.map((p, i) => {
+          if (legacy) {
+            delete p.gemEnergyBuysPerDay;
+            delete p.gemGenResetsPerDay;
+            delete p.gemInstantCooksPerDay;
+          }
+          return {
+            ...GEM_DEFAULTS, ...p,
+            purchases: p.purchases || [],
+            color: p.color || PROFILE_COLORS[i % PROFILE_COLORS.length],
+            ignoreCapacity: p.ignoreCapacity || false
+          };
+        });
       }
       if (data.regen        != null) _globalRegen       = data.regen;
       if (data.cap          != null) _globalCap         = data.cap;
@@ -172,19 +186,19 @@ const SimConfig = (() => {
             <span class="psim-cfg-gem-title">💎 Gem limits / day</span>
             <div class="psim-cfg-gem-row">
               <label class="psim-cfg-gem-item psim-has-tip"
-                     data-tip="Max times to buy energy per day with gems.\nCost: 10→20→40→80→160 💎 per 100 energy.\n0 = never buy energy.">
+                     data-tip="Max times to buy energy per day with gems.\nCost: 10→20→40→80→160 💎 per 100 energy,\nstays 160 from the 5th buy on.\n0 = never buy energy.">
                 <span class="psim-cfg-unit">⚡ Energy buys</span>
-                <input type="number" class="psim-cfg-input psim-cfg-num psim-gem-energy-limit" value="${profile.gemEnergyBuysPerDay ?? 5}" min="0" max="5">
+                <input type="number" class="psim-cfg-input psim-cfg-num psim-gem-energy-limit" value="${profile.gemEnergyBuysPerDay ?? 100}" min="0" max="999">
               </label>
               <label class="psim-cfg-gem-item psim-has-tip"
                      data-tip="Max generator cooldown resets per day.\nCost varies per generator type.\n0 = never reset generators.">
                 <span class="psim-cfg-unit">🔄 Gen resets</span>
-                <input type="number" class="psim-cfg-input psim-cfg-num psim-gem-reset-limit" value="${profile.gemGenResetsPerDay ?? 5}" min="0" max="50">
+                <input type="number" class="psim-cfg-input psim-cfg-num psim-gem-reset-limit" value="${profile.gemGenResetsPerDay ?? 100}" min="0" max="999">
               </label>
               <label class="psim-cfg-gem-item psim-has-tip"
                      data-tip="Max instant cooking completions per day.\nCost: 1💎 per 60s of cook time.\n0 = never skip cooking.">
                 <span class="psim-cfg-unit">🍳 Instant cooks</span>
-                <input type="number" class="psim-cfg-input psim-cfg-num psim-gem-cook-limit" value="${profile.gemInstantCooksPerDay ?? 3}" min="0" max="50">
+                <input type="number" class="psim-cfg-input psim-cfg-num psim-gem-cook-limit" value="${profile.gemInstantCooksPerDay ?? 100}" min="0" max="999">
               </label>
             </div>
           </div>
@@ -436,7 +450,7 @@ const SimConfig = (() => {
 
       // Add profile
       if (e.target.id === 'psim-add-profile-btn') {
-        _profiles.push({ name: `Profile ${_profiles.length + 1}`, sessionMode: 'interval', sessionsPerDay: 4, intervalHours: 6, playerType: 'f2p', ignoreCapacity: false, enabled: true, purchases: [] });
+        _profiles.push({ name: `Profile ${_profiles.length + 1}`, sessionMode: 'interval', sessionsPerDay: 4, intervalHours: 6, playerType: 'f2p', ignoreCapacity: false, enabled: true, purchases: [], ...GEM_DEFAULTS });
         _save();
         render(_iapCatalog);
         return;

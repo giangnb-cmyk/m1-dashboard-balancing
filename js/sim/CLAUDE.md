@@ -51,7 +51,27 @@ Generator tap (−1 energy)
 ### Energy System
 - Free regen: X energy/phút, cap = 100
 - Nếu `owned >= cap`: dừng regen
-- `owned` có thể vượt cap qua IAP inject
+- `owned` có thể vượt cap qua IAP inject / gem buy
+
+### Gem Spending (availability-driven)
+Bất kỳ profile nào còn gems sẽ tiêu gems (không phụ thuộc playerType — playerType giờ chỉ là label UI):
+- **Buy energy**: 10→20→40→80→160💎 / 100⚡ (BuyCurrency.csv), từ lần 5 trở đi giữ giá 160💎.
+  Mua **theo nhu cầu giữa session** khi đang tap generator cần thiết mà hết energy (không top-up mù ở đầu session — tránh đốt energy mua vào generator rác).
+- **Gen cooldown reset**: `gem_to_min` per generator → pool = minPool. Chỉ reset generator nằm trong required set.
+- **Instant cook**: 1💎/60s cook time, chỉ cho recipe ≥60s đang cần.
+- **Inventory expand**: 10💎/slot, cap tổng 30 slots (`MAX_INVENTORY_CAPACITY`).
+- Daily limits per profile: `gemEnergyBuysPerDay`, `gemGenResetsPerDay`, `gemInstantCooksPerDay` (default 100 ≈ unlimited; gem bank là ràng buộc thật).
+
+### Session Model
+- Mỗi session là 1 "sitting" kéo dài `sessionActiveMins` (default 30 phút): cooking ngắn và generator cooldown ngắn HOÀN THÀNH trong cùng session (`sessionEndMins = start + active`).
+- **Intra-session loop**: `_sessionPass` lặp (guard 30) chừng nào progress key còn thay đổi (orders/batches/build/scene/generated/cooked/merged) — người chơi hành động ngay trên rewards mới nhận trong cùng một lần ngồi chơi.
+
+### Boxes / Gifts
+- Reward dạng box (vd 600801 Gift, batch reward) được **mở ngay** qua `boxCatalog`: spawn `many_generator` items theo rate table — box không bao giờ chiếm slot board.
+
+### Board-full policy (quantity-aware)
+- Bán item rẻ nhất có count > reserve (`sellSurplusItem`). Reserve = direct needs của **mọi order chưa xong trong batch hiện tại** + recipe ingredients + 2^k merge bases (chỉ cho item KHÔNG có recipe — đồ nấu không reserve merge-predecessor).
+- Hết đồ bán được → expand inventory bằng gems (≤30 slots) nếu item đang cần.
 
 ### Board
 - 63 slots total = generators + tools + board items
@@ -177,11 +197,12 @@ Generator tap (−1 energy)
 ## Tests
 
 ```
-tests/simDataLoader.test.js   34 tests
+tests/simDataLoader.test.js   34 tests (3 fail pre-existing: order/batch reward parsing)
 tests/simEnergy.test.js       12 tests
 tests/simBoard.test.js        27 tests
 tests/simCooking.test.js      15 tests
 tests/simEngine.test.js        9 tests
+tests/simEngine.gem.test.js    8 tests (gem spending, in-session cooking, box opening, merge cap)
 ```
 
 Run: `node tests/<file>.test.js` (Node.js, no dependencies)
@@ -191,8 +212,8 @@ Run: `node tests/<file>.test.js` (Node.js, no dependencies)
 ## Known Limitations / Out of Scope
 
 - Event merge (PizzaTowerRace, FortuneMeetsCookie) không được model
-- Battle Pass, Daily Rewards, Lucky Spin không ảnh hưởng simulation
+- Battle Pass, Daily Rewards, Lucky Spin, Ads energy (25⚡/ad) không ảnh hưởng simulation
 - NPC-specific order routing không model
-- Item expand: chỉ lấy `resultIds[0]` (first result), không model all results
-- Spender inventory expand cost hard-coded là 10 gems/slot (không đọc từ CSV)
-- Simulation là deterministic-ish: generator spawn dùng `Math.random()`
+- Inventory expand cost hard-coded 10 gems/slot, cap 30 slots (không đọc từ CSV)
+- Simulation là stochastic: generator spawn + box opening dùng `Math.random()` (timeline lệch ±2 ngày giữa các run)
+- Session là điểm thời gian + cửa sổ active 30': người chơi "cày liên tục cả ngày" cần config sessionsPerDay cao (16–24) để mô phỏng đúng

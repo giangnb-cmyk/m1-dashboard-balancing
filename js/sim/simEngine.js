@@ -143,9 +143,12 @@ const SimEngine = (() => {
       Object.values(catalogs.itemExpandCatalog || {}).forEach(exp => {
         if (exp.resultIds && exp.resultIds.includes(itemId)) walkBackSources(exp.sourceId);
       });
-      // Merge-chain predecessor: 2× tier N → 1× tier N+1.
+      // Merge-chain predecessor: 2× tier N → 1× tier N+1. Only for non-cookable
+      // items — cooked dishes come from recipes; walking their merge predecessors
+      // would mark the whole dish family as "needed" and clog the board with
+      // protected residues no player would ever merge.
       const meta = (catalogs.itemTierMap || {})[itemId];
-      if (meta && meta.tier > 1) {
+      if (!recipe && meta && meta.tier > 1) {
         const chain = (catalogs.familyChain || {})[meta.family] || [];
         const prevId = chain[meta.tier - 2];
         if (prevId) walkBackSources(prevId);
@@ -206,19 +209,24 @@ const SimEngine = (() => {
   // Tap all available generators in one session tick
   // ---------------------------------------------------------------------------
 
-  // Priority 1: buy energy with gems at session start (spender only).
-  // Cost escalates per BuyCurrency.csv: 10→20→40→80→160 gems per 100 energy, max 5 times/day.
-  function _tryBuyEnergy(state, profileCfg) {
-    const maxBuys = Math.min(
-      profileCfg.gemEnergyBuysPerDay ?? ENERGY_BUY_COSTS.length,
-      ENERGY_BUY_COSTS.length
-    );
+  // BuyCurrency.csv defines 5 escalating tiers; past the table the game keeps
+  // offering refills at the last tier's price (160💎 per 100⚡).
+  function _energyBuyCost(buyCount) {
+    return ENERGY_BUY_COSTS[Math.min(buyCount, ENERGY_BUY_COSTS.length - 1)];
+  }
+
+  // Buy 100-energy refills with gems until `target` energy is reached
+  // (default: energy cap — used to top up at session start). Any player holding
+  // gems buys energy; daily purchase count is capped by gemEnergyBuysPerDay.
+  function _tryBuyEnergy(state, profileCfg, target) {
+    const goal = target !== undefined ? target : state.energy.cap;
+    const maxBuys = profileCfg.gemEnergyBuysPerDay ?? Infinity;
     while (
       state.energyBuyCount < maxBuys &&
-      state.energy.owned < state.energy.cap &&
-      state.gems >= ENERGY_BUY_COSTS[state.energyBuyCount]
+      state.energy.owned < goal &&
+      state.gems >= _energyBuyCost(state.energyBuyCount)
     ) {
-      const cost = ENERGY_BUY_COSTS[state.energyBuyCount];
+      const cost = _energyBuyCost(state.energyBuyCount);
       state.gems -= cost;
       state.economy.gems.spent += cost;
       _energy().inject(state.energy, ENERGY_BUY_AMOUNT, state.economy);
@@ -297,13 +305,21 @@ const SimEngine = (() => {
   function _tapGeneratorSlot(slot, def, state, catalogs, currentTimeMins, requiredItems, profileCfg, maxTaps) {
     const SimEnergy = _energy(), SimBoard = _board();
     const { board, energy, economy } = state;
-    let taps = 0;
-    while (energy.owned >= (def.costEnergy || 1) && slot.pool > 0 && slot.cooldownUntil <= currentTimeMins) {
+    let taps = 0, spent = 0;
+    // Only rebuy for generators the current orders actually need — leftover
+    // energy may flow to rest generators but gems must not be burned on them.
+    const canRebuy = requiredItems.genIds && requiredItems.genIds.has(slot.genId);
+    while (slot.pool > 0 && slot.cooldownUntil <= currentTimeMins) {
       if (maxTaps !== undefined && taps >= maxTaps) break;
-      taps++;
       const cost = def.costEnergy || 1;
+      if (energy.owned < cost) {
+        if (canRebuy) _tryBuyEnergy(state, profileCfg, cost);
+        if (energy.owned < cost) break;
+      }
+      taps++;
       if (!SimEnergy.spend(energy, cost)) break;
       economy.energy.spent += cost;
+      spent += cost;
 
       const spawnedId = SimBoard.tapGenerator(board, slot.genId, catalogs.generatorCatalog, currentTimeMins);
       if (!spawnedId) break;
@@ -320,9 +336,14 @@ const SimEngine = (() => {
               mergeChainNeed += needQty * (1 << (m.tier - srcMeta.tier));
           }
         }
-        if (SimBoard.itemCount(board, spawnedId) >= mergeChainNeed) {
+        // Reserve BOTH the merge-up quantity and the direct recipe/order need —
+        // expanding while either is unmet starves the chain (e.g. every fresh
+        // Ice Cube expanded away while a recipe still needs one directly).
+        const directNeed = (requiredItems.neededQty || {})[spawnedId] || 0;
+        if (SimBoard.itemCount(board, spawnedId) >= mergeChainNeed + directNeed) {
           SimEnergy.spend(energy, expandDef.costEnergy);
           economy.energy.spent += expandDef.costEnergy;
+          spent += expandDef.costEnergy;
           finalId = expandDef.resultIds[0] || spawnedId;
         }
       }
@@ -336,11 +357,11 @@ const SimEngine = (() => {
         slot.pool = def.maxPool;
         slot.cooldownUntil = 0;
       }
-      if (slot.pool === 0 && slot.cooldownUntil > currentTimeMins && profileCfg.playerType === 'spender') {
+      if (slot.pool === 0 && slot.cooldownUntil > currentTimeMins && state.gems > 0) {
         if (!_tryGemReset(slot, def, state, requiredItems, profileCfg)) break;
       }
     }
-    return taps;
+    return { taps, spent };
   }
 
   function tapGenerators(state, catalogs, currentTimeMins, requiredItems, profileCfg) {
@@ -365,21 +386,22 @@ const SimEngine = (() => {
       if (!def || !def.canGenerate) continue;
       if (slot.pool <= 0 || slot.cooldownUntil > currentTimeMins) {
         if (profileCfg.noCooldown) { slot.pool = def.maxPool; slot.cooldownUntil = 0; }
-        else if (slot.pool <= 0 && slot.cooldownUntil > currentTimeMins && profileCfg.playerType === 'spender') {
+        else if (slot.pool <= 0 && slot.cooldownUntil > currentTimeMins && state.gems > 0) {
           if (!_tryGemReset(slot, def, state, requiredItems, profileCfg)) continue;
         } else { continue; }
       }
       const maxTaps = neededGenIds.has(slot.genId) ? fairTapCap : undefined;
-      const eb1 = energy.owned;
-      const t1  = _tapGeneratorSlot(slot, def, state, catalogs, currentTimeMins, requiredItems, profileCfg, maxTaps);
-      if (t1 > 0) {
+      const r1 = _tapGeneratorSlot(slot, def, state, catalogs, currentTimeMins, requiredItems, profileCfg, maxTaps);
+      if (r1.taps > 0) {
         const g = tapsPerGen[slot.genId] = tapsPerGen[slot.genId] || { taps: 0, spent: 0 };
-        g.taps += t1; g.spent += eb1 - energy.owned;
+        g.taps += r1.taps; g.spent += r1.spent;
       }
     }
 
     // Pass 2: redistribute leftover energy to any generator still active.
-    for (const slot of [...requiredSlots, ...restSlots]) {
+    // Players still holding gems bank leftover (purchased) energy for the next
+    // needed chain instead of dumping it into junk generators.
+    for (const slot of (state.gems > 0 ? requiredSlots : [...requiredSlots, ...restSlots])) {
       if (energy.owned < 1) break;
       const def = catalogs.generatorCatalog[slot.genId];
       if (!def || !def.canGenerate) continue;
@@ -387,11 +409,10 @@ const SimEngine = (() => {
         if (profileCfg.noCooldown) { slot.pool = def.maxPool; slot.cooldownUntil = 0; }
         else continue;
       }
-      const eb2 = energy.owned;
-      const t2  = _tapGeneratorSlot(slot, def, state, catalogs, currentTimeMins, requiredItems, profileCfg, undefined);
-      if (t2 > 0) {
+      const r2 = _tapGeneratorSlot(slot, def, state, catalogs, currentTimeMins, requiredItems, profileCfg, undefined);
+      if (r2.taps > 0) {
         const g = tapsPerGen[slot.genId] = tapsPerGen[slot.genId] || { taps: 0, spent: 0 };
-        g.taps += t2; g.spent += eb2 - energy.owned;
+        g.taps += r2.taps; g.spent += r2.spent;
       }
     }
 
@@ -409,7 +430,7 @@ const SimEngine = (() => {
 
   // After merging, items that match an itemExpand entry can be expanded into needed results.
   // Costs energy per expand. Player chooses to expand only when the result is a needed item.
-  function expandItems(state, catalogs, requiredItems) {
+  function expandItems(state, catalogs, requiredItems, profileCfg) {
     const SimEnergy = _energy();
     const SimBoard  = _board();
     const expandCatalog = catalogs.itemExpandCatalog || {};
@@ -444,6 +465,7 @@ const SimEngine = (() => {
         }
         if (have <= directNeed + mergeChainNeed) continue;
         const cost = def.costEnergy || 0;
+        if (state.energy.owned < cost && state.gems > 0) _tryBuyEnergy(state, profileCfg || {}, cost);
         if (state.energy.owned < cost) break;
         SimBoard.consumeItem(state.board, sourceId, 1);
         if (cost > 0) {
@@ -471,32 +493,80 @@ const SimEngine = (() => {
   }
 
   const GEM_COST_INVENTORY_EXPAND  = 10;
+  const MAX_INVENTORY_CAPACITY     = 30;  // base 15 + max 15 gem-bought slots
+  const SESSION_ACTIVE_MINS        = 30;  // real minutes a player stays in-game per session
   const GEM_COST_INSTANT_COOK_RATE = 60;  // 1 gem per 60 seconds of cook time
   // BuyCurrency.csv — Diamonds cost per 100 energy, escalates per purchase within the day
   const ENERGY_BUY_COSTS  = [10, 20, 40, 80, 160];
   const ENERGY_BUY_AMOUNT = 100;
 
+  // Direct item needs of every incomplete order in the current batch — items
+  // already farmed for later orders in the batch must not be sold as surplus.
+  function _batchDirectNeeds(state, catalogs) {
+    const needs = {};
+    const scene = catalogs.sceneCatalog[state.progress.sceneIndex];
+    if (!scene) return needs;
+    const batchId = scene.batchIds.find(id => !state.progress.completedBatchIds.has(id));
+    const batch = batchId && catalogs.batchMap[batchId];
+    if (!batch) return needs;
+    batch.orderIds.forEach(oid => {
+      if (state.progress.completedOrderIds.has(oid)) return;
+      const det = catalogs.orderDetailMap[oid];
+      if (det) det.items.forEach(({ itemId, qty }) => {
+        needs[itemId] = (needs[itemId] || 0) + (qty || 1);
+      });
+    });
+    return needs;
+  }
+
+  // Quantity each item must keep on board for the current chain: direct order /
+  // recipe needs (whole batch), plus 2^k merge bases for needs produced by
+  // MERGING (items with a recipe are cooked, not merged — their merge
+  // predecessors stay unreserved).
+  function _buildReserves(state, requiredItems, catalogs) {
+    const reserves = { ...(requiredItems.neededQty || {}) };
+    Object.entries(_batchDirectNeeds(state, catalogs)).forEach(([id, qty]) => {
+      reserves[id] = Math.max(reserves[id] || 0, qty);
+    });
+    const tierMap = catalogs.itemTierMap || {};
+    Object.entries(requiredItems.neededQty || {}).forEach(([needId, qty]) => {
+      if (_cooking().findRecipe(catalogs.toolCatalog, needId)) return;
+      const meta = tierMap[needId];
+      if (!meta || meta.tier <= 1) return;
+      const chain = (catalogs.familyChain || {})[meta.family] || [];
+      for (let t = meta.tier - 1; t >= 1; t--) {
+        const baseId = chain[t - 1];
+        if (baseId) reserves[baseId] = (reserves[baseId] || 0) + (qty << (meta.tier - t));
+      }
+    });
+    return reserves;
+  }
+
   function handleFullBoard(state, catalogs, itemId, requiredItems, profileCfg) {
     const SimBoard = _board();
-    const { board, progress } = state;
+    const { board } = state;
     // Unlimited capacity: just add without selling anything
     if (board.unlimitedCapacity) { SimBoard.addItem(board, itemId, 1); return; }
-    const isNeeded = requiredItems.itemIds && requiredItems.itemIds.has(itemId);
 
-    if (profileCfg.playerType === 'spender' && isNeeded) {
-      // Only expand inventory when the item is actually needed by pending orders
-      if (state.gems >= GEM_COST_INVENTORY_EXPAND) {
-        state.gems -= GEM_COST_INVENTORY_EXPAND;
-        state.economy.gems.spent += GEM_COST_INVENTORY_EXPAND;
-        state.eventLog.push({ day: state.day, scene: state.progress.scene, type: 'gem_spend', amount: -GEM_COST_INVENTORY_EXPAND, detail: 'Inventory +1 slot' });
-      }
-      SimBoard.expandInventory(board);
-      SimBoard.addItem(board, itemId, 1);
-    } else {
-      // f2p or spender with non-needed item: sell cheapest surplus item, then add
-      const gold = SimBoard.sellCheapestItem(board, catalogs.itemSellPrices, requiredItems.itemIds || new Set());
-      progress.goldBank += gold;
+    // 1. Sell the cheapest item held beyond its reserved quantity — junk first
+    // (reserve 0), then surplus copies of needed items (have 24, reserve 1).
+    const reserves = _buildReserves(state, requiredItems, catalogs);
+    const { sold, gold } = SimBoard.sellSurplusItem(board, catalogs.itemSellPrices, reserves);
+    if (sold) {
+      state.progress.goldBank += gold;
       state.eventLog.push({ day: state.day, scene: state.progress.scene, type: 'board_full', amount: gold, detail: `Board full — sold item for ${gold}g` });
+      SimBoard.addItem(board, itemId, 1);
+      return;
+    }
+    // 2. Everything on board is reserved: buy a few extra inventory slots with
+    // gems — real players buy a handful, not hundreds.
+    if ((requiredItems.itemIds || new Set()).has(itemId)
+        && state.gems >= GEM_COST_INVENTORY_EXPAND
+        && board.inventoryCapacity < MAX_INVENTORY_CAPACITY) {
+      state.gems -= GEM_COST_INVENTORY_EXPAND;
+      state.economy.gems.spent += GEM_COST_INVENTORY_EXPAND;
+      state.eventLog.push({ day: state.day, scene: state.progress.scene, type: 'gem_spend', amount: -GEM_COST_INVENTORY_EXPAND, detail: 'Inventory +1 slot' });
+      SimBoard.expandInventory(board);
       SimBoard.addItem(board, itemId, 1);
     }
   }
@@ -569,11 +639,37 @@ const SimEngine = (() => {
   // Generator reset: each generator has its own gem_to_min cost from catalog (def.gemToMin).
   // Restores pool to def.minPool (not maxPool — natural cooldown restores maxPool for free).
 
+  // Boxes/gifts (ItemGift, ItemLuckyBox…) open immediately into component items
+  // drawn from their rate table — the box itself never occupies a board slot.
+  function _openBoxReward(boxDef, qty, state, catalogs, context) {
+    const SimBoard = _board();
+    const received = {};
+    const totalRate = boxDef.spawns.reduce((s, sp) => s + sp.rate, 0) || 1;
+    for (let b = 0; b < qty * boxDef.count; b++) {
+      let roll = Math.random() * totalRate;
+      let pick = boxDef.spawns[boxDef.spawns.length - 1];
+      for (const sp of boxDef.spawns) { roll -= sp.rate; if (roll <= 0) { pick = sp; break; } }
+      SimBoard.addItem(state.board, pick.itemId, 1);
+      received[pick.itemId] = (received[pick.itemId] || 0) + 1;
+    }
+    Object.entries(received).forEach(([itemId, n]) => {
+      const name = (catalogs.itemNames || {})[itemId] || itemId;
+      state.eventLog.push({ day: state.day, scene: state.progress.scene,
+        type: 'item_receive', amount: n,
+        detail: `Box: ${name} ×${n}${context ? ' [' + context + ']' : ''}`, itemId });
+    });
+  }
+
   function _claimReward(r, state, catalogs, context) {
     const SimBoard  = _board();
     const SimEnergy = _energy();
     const qty = r.qty || 1;
     if (r.itemId) {
+      const boxDef = (catalogs.boxCatalog || {})[r.itemId];
+      if (boxDef && boxDef.spawns.length) {
+        _openBoxReward(boxDef, qty, state, catalogs, context);
+        return;
+      }
       const genDef = catalogs.generatorCatalog[r.itemId];
       if (genDef) {
         // Functional generator (Lv4+): place into board.generators so it can be tapped
@@ -797,6 +893,9 @@ const SimEngine = (() => {
         const cost = detail.items.reduce((s, { itemId, qty }) =>
           s + (energyCosts[itemId] || 0) * qty, 0);
 
+        // Short on energy → convert gems to energy on the spot (player buys
+        // refills mid-play); only skip the order once gems can't cover it either.
+        if (energy.owned < cost && state.gems > 0) _tryBuyEnergy(state, profileCfg, cost);
         if (energy.owned < cost) { batchComplete = false; continue; }
 
         SimEnergy.spend(energy, cost);
@@ -879,17 +978,75 @@ const SimEngine = (() => {
           detail: `Regen +${Math.round(actualRegen)}⚡ (session ${s + 1})` });
       }
 
-      // b. Spender priority 1: buy energy with gems before doing anything else this session
-      if (profileCfg.playerType === 'spender') _tryBuyEnergy(state, profileCfg);
+      // b. Direct-energy mode: top up with gems, then skip the generator pipeline.
+      // Normal mode buys energy on demand mid-tap instead (see _tapGeneratorSlot)
+      // so gems are never converted to energy that ends up tapping junk generators.
+      if (profileCfg.directEnergyMode) {
+        if (state.gems > 0) _tryBuyEnergy(state, profileCfg);
+        _directEnergySession(state, catalogs, profileCfg);
+        continue;
+      }
 
-      // Direct-energy mode: skip generator pipeline entirely
-      if (profileCfg.directEnergyMode) { _directEnergySession(state, catalogs, profileCfg); continue; }
+      // c–m. Repeat the play pass while it keeps making progress — models a
+      // player who acts on new rewards (energy, generators, gold) within the
+      // same sitting instead of waiting for the next session.
+      let guard = 0;
+      let beforeKey = _progressKey(state);
+      while (guard++ < 30) {
+        _sessionPass(state, catalogs, profileCfg, sessionStartMins);
+        const afterKey = _progressKey(state);
+        if (afterKey === beforeKey) break;
+        beforeKey = afterKey;
+      }
+    }
+
+    // 5. Process any remaining cooking at end of day
+    _trackCookEvents(SimCooking.processCooking(state.board, state.day * 1440), state, catalogs);
+
+    // 6. Build and append dayLog
+    const dayLog = {
+      day: state.day,
+      scene: state.progress.scene,
+      sceneIndex: state.progress.sceneIndex,
+      buildStepsDone: state.progress.buildStepsDone,
+      goldEarned: state.progress.goldEarned,
+      economy: {
+        energy: { ...state.economy.energy },
+        gems:   { ...state.economy.gems },
+        gold:   { ...state.economy.gold }
+      }
+    };
+    state.log.push(dayLog);
+
+    return { dayLog };
+  }
+
+  // Fingerprint of progress AND activity counters — used to detect whether a
+  // session pass achieved anything. Activity (taps/cooks/merges) counts too:
+  // items produced this pass may finish cooking or complete orders next pass.
+  function _progressKey(state) {
+    const p = state.progress;
+    const sum = obj => Object.values(obj).reduce((s, n) => s + n, 0);
+    return [p.completedOrderIds.size, p.batchesDone, p.buildStepsDone, p.sceneIndex,
+      sum(state.stats.generated), sum(state.stats.cooked), sum(state.stats.merged)].join('|');
+  }
+
+  // One full play pass within a session: refill → cook → merge → tap → cook →
+  // complete orders → build → merge. Extracted from tickDay so it can loop.
+  function _sessionPass(state, catalogs, profileCfg, sessionStartMins) {
+    const SimBoard   = _board();
+    const SimCooking = _cooking();
+    {
+      // A sitting lasts ~SESSION_ACTIVE_MINS of real time: short cook timers and
+      // generator cooldowns elapse while the player is still in-game, so they
+      // complete within the same session instead of waiting for the next one.
+      const sessionEndMins = sessionStartMins + (profileCfg.sessionActiveMins ?? SESSION_ACTIVE_MINS);
 
       // c. Refill generators whose cooldown elapsed
-      SimBoard.refillGenerators(state.board, catalogs.generatorCatalog, sessionStartMins);
+      SimBoard.refillGenerators(state.board, catalogs.generatorCatalog, sessionEndMins);
 
       // d. Process completed cooking
-      _trackCookEvents(SimCooking.processCooking(state.board, sessionStartMins), state, catalogs);
+      _trackCookEvents(SimCooking.processCooking(state.board, sessionEndMins), state, catalogs);
 
       // e+f. Determine required items and demand-driven merge
       const required = getRequiredItems(state, catalogs);
@@ -904,7 +1061,7 @@ const SimEngine = (() => {
       // first clears the board before farming new items.
       _trackMergeStats(SimBoard.mergeItems(state.board, required.neededQty, catalogs.familyChain, required.maxTierByFamily), state);
       _logPromotedGenerators(SimBoard.promoteGeneratorItems(state.board, catalogs.generatorCatalog), state, catalogs);
-      expandItems(state, catalogs, required);
+      expandItems(state, catalogs, required, profileCfg);
 
       // g. Tap generators until energy runs out
       tapGenerators(state, catalogs, sessionStartMins, required, profileCfg);
@@ -914,7 +1071,7 @@ const SimEngine = (() => {
       _logPromotedGenerators(SimBoard.promoteGeneratorItems(state.board, catalogs.generatorCatalog), state, catalogs);
 
       // g3. Best-effort expand on what's left (only fires if energy remains)
-      expandItems(state, catalogs, required);
+      expandItems(state, catalogs, required, profileCfg);
 
       // h. Start cooking only when have + in-progress < needed.
       // Items with a tracked neededQty use the count check to avoid starting duplicate
@@ -936,9 +1093,9 @@ const SimEngine = (() => {
         _trackCookEvents(SimCooking.processCooking(state.board, state.timeMins + 999999), state, catalogs);
       }
 
-      // h2. Spender: use gems to instantly finish cooking for needed results.
+      // h2. Use gems to instantly finish cooking for needed results.
       // Gem cost = ceil(timeSecs / GEM_COST_INSTANT_COOK_RATE), min 1.
-      if (profileCfg.playerType === 'spender') {
+      if (state.gems > 0) {
         let anyCook = false;
         const maxCooks = profileCfg.gemInstantCooksPerDay ?? Infinity;
         state.board.tools.forEach(slot => {
@@ -981,32 +1138,13 @@ const SimEngine = (() => {
       // m. Check if current scene is complete
       checkSceneComplete(state, catalogs);
     }
-
-    // 5. Process any remaining cooking at end of day
-    _trackCookEvents(SimCooking.processCooking(state.board, state.day * 1440), state, catalogs);
-
-    // 6. Build and append dayLog
-    const dayLog = {
-      day: state.day,
-      scene: state.progress.scene,
-      sceneIndex: state.progress.sceneIndex,
-      buildStepsDone: state.progress.buildStepsDone,
-      goldEarned: state.progress.goldEarned,
-      economy: {
-        energy: { ...state.economy.energy },
-        gems:   { ...state.economy.gems },
-        gold:   { ...state.economy.gold }
-      }
-    };
-    state.log.push(dayLog);
-
-    return { dayLog };
   }
 
   // ---------------------------------------------------------------------------
   // Public API
   // ---------------------------------------------------------------------------
-  const exports = { createState, tickDay, applyPurchase };
+  const exports = { createState, tickDay, applyPurchase,
+    _test: { tryBuyEnergy: _tryBuyEnergy, energyBuyCost: _energyBuyCost } };
   if (typeof module !== 'undefined') module.exports = exports;
   if (typeof window !== 'undefined') window.SimEngine = exports;
   return exports;

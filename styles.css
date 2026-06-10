@@ -4971,7 +4971,11 @@ tr.imbalanced {
   width: 80px;
 }
 .psim-cfg-input:focus { border-color: #38bdf8; }
-.psim-cfg-num  { width: 52px; text-align: center; }
+.psim-cfg-num  { width: 64px; text-align: center; }
+/* Gem limit inputs hold 3-digit values (0–999) plus number spinners */
+.psim-gem-energy-limit,
+.psim-gem-reset-limit,
+.psim-gem-cook-limit { width: 84px; flex-shrink: 0; }
 .psim-cfg-name { width: 110px; }
 .psim-cfg-select {
   padding: 0.35rem 0.6rem;

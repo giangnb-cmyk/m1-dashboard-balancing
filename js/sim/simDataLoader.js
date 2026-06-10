@@ -320,8 +320,25 @@ const SimDataLoader = (() => {
       generatorItemIds,
       itemNames,
       toolItemMap,
+      boxCatalog: buildBoxCatalog(gd.boxes),
       boardDefault: gd.boardDefault || []   // [{idItem, x, y}] from BoardDefault.asset
     };
+  }
+
+  // gd.boxes = { itemGift: [rows…], itemLuckyBox: […], … }. Rows with an `id`
+  // start a new box definition; id-less rows extend its spawn rate table.
+  // many_generator = number of items the box yields when opened.
+  function buildBoxCatalog(boxes) {
+    const boxCatalog = {};
+    Object.values(boxes || {}).forEach(rows => {
+      let cur = null;
+      (rows || []).forEach(r => {
+        if (r.id) cur = boxCatalog[r.id] = { id: r.id, count: parseInt(r.many_generator) || 1, spawns: [] };
+        if (!cur || !r.item_child_id) return;
+        cur.spawns.push({ itemId: r.item_child_id, rate: parseFloat(r.rate) || 1 });
+      });
+    });
+    return boxCatalog;
   }
 
   const exports = { build, normalizeTheme };

@@ -235,10 +235,13 @@ const SimBoard = (() => {
         const chain = familyChain[family];
         if (!chain || chain.length < 2) continue;
         // Surplus (have - reserved-for-orders) is always safe to merge: needed
-        // items remain reserved by neededQty. Merging dead-weight surplus all the
-        // way to family top tier frees board slots that would otherwise pile up
-        // when a low-tier item is needed but its higher tiers aren't.
+        // items remain reserved by neededQty. Families WITHOUT a current tier cap
+        // compact junk to top tier to free board slots. Families WITH a cap stop
+        // there — merging past the cap destroys items the chain still needs
+        // (e.g. 2× needed Lv7 → 1× useless Lv8).
+        const famCap = maxTierByFamily[family];
         for (let i = 0; i < chain.length - 1; i++) {
+          if (famCap && (i + 2) > famCap) break; // chain[i+1] is tier i+2
           const curr = chain[i];
           const next = chain[i + 1];
           if (!curr || !next) continue;
@@ -280,6 +283,22 @@ const SimBoard = (() => {
     return sellPrices[id] || 0;
   }
 
+  // Quantity-aware sale: sell the cheapest board item whose count exceeds its
+  // reserved quantity. Unlike sellCheapestItem's all-or-nothing set, this lets
+  // a hoard of a needed item (have 24, need 1) shed its surplus copies.
+  // Returns { sold, gold }.
+  function sellSurplusItem(board, sellPrices, reserves) {
+    const candidates = Object.keys(board.boardItems)
+      .filter(id => (board.boardItems[id] || 0) > (reserves[id] || 0))
+      .sort((a, b) => (sellPrices[a] || 0) - (sellPrices[b] || 0));
+    if (!candidates.length) return { sold: false, gold: 0 };
+    const id = candidates[0];
+    board.boardItems[id]--;
+    board.boardItemCount--;
+    if (board.boardItems[id] === 0) delete board.boardItems[id];
+    return { sold: true, gold: sellPrices[id] || 0 };
+  }
+
   function expandInventory(board) { board.inventoryCapacity++; }
 
   // After mergeItems, any functional generator that ended up in boardItems/inventoryItems
@@ -313,7 +332,7 @@ const SimBoard = (() => {
     addGenerator, addTool, addItem, consumeItem, itemCount,
     tapGenerator, refillGenerators, mergeGenerators, mergeItems,
     mergeAndUpgradeTools,
-    promoteGeneratorItems, sellCheapestItem, expandInventory, findNextLevelGen
+    promoteGeneratorItems, sellCheapestItem, sellSurplusItem, expandInventory, findNextLevelGen
   };
   if (typeof module !== 'undefined') module.exports = exports;
   if (typeof window !== 'undefined') window.SimBoard = exports;
