@@ -117,7 +117,7 @@ const GlobalData = (() => {
         const expandByParent = {};
         (itemExpand || []).forEach(r => {
             const pid = r.itemID || r.id;
-            const sid = r.spawn_itemID || r.id_item;
+            const sid = r.spawn_itemID || r.id_item || r.id_item_expand;
             if (!pid || !sid) return;
             if (!expandByParent[pid]) expandByParent[pid] = [];
             expandByParent[pid].push({ spawnId: sid, costEnergy: parseFloat(r.cost_energy) || 1 });

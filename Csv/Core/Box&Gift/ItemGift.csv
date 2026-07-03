@@ -1,4 +1,4 @@
-id,many_generator,time_unlock,item_child_type,item_child_id,rate
+﻿id,many_generator,time_unlock,item_child_type,item_child_id,rate
 600801,4,0,Coffee,700103,1
 ,,,SoftDrinks,700202,1
 ,,,DairyProducts,700302,1
@@ -10,4 +10,18 @@ id,many_generator,time_unlock,item_child_type,item_child_id,rate
 ,,,LeafyVegetables,701202,1
 ,,,Seafood,701303,1
 ,,,Shellfish,701402,1
-14118071,4,0,Fruit,1012,1
+,,,Grain,701503,1
+,,,Nut,701602,1
+600801,4,0,Coffee,700103,1
+,,,SoftDrinks,700202,1
+,,,DairyProducts,700302,1
+,,,Fruit,700503,1
+,,,SugarAndCandy,700602,1
+,,,RedMeat,700903,1
+,,,EggAndPoultry,701002,1
+,,,VegetableIngredient,701103,1
+,,,LeafyVegetables,701202,1
+,,,Seafood,701303,1
+,,,Shellfish,701402,1
+,,,Grain,701503,1
+,,,Nut,701602,1

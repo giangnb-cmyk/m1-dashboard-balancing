@@ -1,0 +1,663 @@
+key~value
+700301_name~Ice Cube
+700302_name~Milk Bottle
+700303_name~Yogurt
+700304_name~Fresh Cream
+700305_name~Cheddar Cheese
+700306_name~Butter
+700307_name~Mozzarella
+700308_name~Brie Cheese
+700309_name~Blue Cheese
+700310_name~Truffle Cheese
+700201_name~Glass of Water
+700202_name~Citrus Soda
+700203_name~Bottled Lemon Tea
+700204_name~Soda Water
+700205_name~Lemon-Lime Soda
+700206_name~Sweet Cola
+700207_name~Orange Soda
+700208_name~Classic Cola
+700209_name~Sugar-free Energy
+700210_name~Original Energy
+700101_name~Coffee Bean
+700102_name~Ground Coffee
+700103_name~Cup of Coffee
+700104_name~Iced Coffee
+700105_name~Coffee - to - Go
+700106_name~Iced Coffee - to - Go
+700107_name~Cold Brew
+700108_name~Pour ove coffee
+700109_name~French press
+700110_name~Aero press
+700111_name~Moka Pot
+700112_name~Syphon coffee
+700401_name~Glass Bottle
+700402_name~Glass Bowl
+700403_name~Glass Cup
+700404_name~Crystal Plate
+700405_name~Crystal Vase
+700406_name~Crystal Cake Stand
+700501_name~Blueberry
+700502_name~Strawberry
+700503_name~Orange
+700504_name~Apple
+700505_name~Banana
+700506_name~Coconut
+700507_name~Lemon
+700508_name~Passion Fruit
+700509_name~Mango
+700510_name~Pomegranate
+700511_name~Pineapple
+700512_name~Watermelon
+700601_name~Sugarcane
+700602_name~Sugar
+700603_name~Brown Sugar
+700604_name~Caramel
+700605_name~Honey
+700606_name~Candy
+700607_name~Marshmallow
+700608_name~Scoop of Ice Cream
+700701_name~Coconut Water
+700702_name~Coconut Milk
+700703_name~Coconut Jelly
+700704_name~Coconut Ice Cream
+700705_name~Coconut Soda
+700706_name~Coconut Candy
+700707_name~Coconut Pudding
+700801_name~Coconut Shell
+700802_name~Coconut Shell Plate
+700803_name~Coconut Shell Spoon
+700804_name~Coconut Shell Cup
+700805_name~Coconut Shell Dish
+700806_name~Coconut Shell Bowl
+700807_name~Coconut Shell Pot
+700901_name~Ground Meat
+700902_name~Fresh Sausage
+700903_name~Ham
+700904_name~Pork Belly
+700905_name~Pork Knuckle
+700906_name~Pork Ribs
+700907_name~Beef Tenderloin
+700908_name~Beef Ribs
+700909_name~Diced Goat Meat
+700910_name~Lamb Rack
+700911_name~Whole Goat Leg
+700912_name~Whole Lamb
+701001_name~Chicken Egg
+701002_name~Chicken Breast
+701003_name~Chicken Wing
+701004_name~Chicken Drumstick
+701005_name~Whole Chicken
+701006_name~Duck Breast
+701007_name~Whole Duck
+701008_name~Whole Goose
+701009_name~Quail
+701010_name~Whole Pheasant
+701011_name~Turkey
+701101_name~Cucumber
+701102_name~Tomato
+701103_name~Red Onion
+701104_name~Carrot
+701105_name~Bell Pepper
+701106_name~Potato
+701107_name~Eggplant
+701108_name~Asparagus
+701109_name~Beetroot
+701110_name~Corn
+701111_name~Okra
+701112_name~Peas
+701201_name~Sprouts
+701202_name~Lettuce
+701203_name~Kale
+701204_name~Cabbage
+701205_name~Red Cabbage
+701206_name~Broccoli
+701207_name~Cauliflower
+701208_name~Spinach
+701209_name~Celery
+701210_name~Arugula
+701211_name~Artichoke
+701212_name~Truffle Mushroom
+701301_name~Anchovy
+701302_name~Mackerel
+701303_name~Tilapia
+701304_name~Sea Bream
+701305_name~Cod
+701306_name~Halibut
+701307_name~Salmon
+701308_name~Sae Bass
+701309_name~Sturgeon
+701310_name~Red Snapper
+701311_name~Black Cod
+701312_name~Bluefin Tuna
+701401_name~Clam
+701402_name~Mussel
+701403_name~Oyster
+701404_name~Squid
+701405_name~Shrimp
+701406_name~Crab
+701407_name~Octopus
+701408_name~Scallop
+701409_name~Lobster
+701410_name~King Crab
+701411_name~Abalone
+100101_name~Drink Generator
+100102_name~Drink Generator
+100103_name~Drink Generator
+100104_name~Drink Generator
+100105_name~Drink Generator
+100106_name~Drink Generator
+100107_name~Drink Generator
+100108_name~Drink Generator
+100109_name~Drink Generator
+100110_name~Drink Generator
+100201_name~Fruit and Sugar Generator
+100202_name~Fruit and Sugar Generator
+100203_name~Fruit and Sugar Generator
+100204_name~Fruit and Sugar Generator
+100205_name~Fruit and Sugar Generator
+100206_name~Fruit and Sugar Generator
+100207_name~Fruit and Sugar Generator
+100208_name~Fruit and Sugar Generator
+100209_name~Fruit and Sugar Generator
+100210_name~Fruit and Sugar Generator
+100301_name~Protein Generator
+100302_name~Protein Generator
+100303_name~Protein Generator
+100304_name~Protein Generator
+100305_name~Protein Generator
+100306_name~Protein Generator
+100307_name~Protein Generator
+100308_name~Protein Generator
+100309_name~Protein Generator
+100310_name~Protein Generator
+100401_name~Vegetable Generator
+100402_name~Vegetable Generator
+100403_name~Vegetable Generator
+100404_name~Vegetable Generator
+100405_name~Vegetable Generator
+100406_name~Vegetable Generator
+100407_name~Vegetable Generator
+100408_name~Vegetable Generator
+100409_name~Vegetable Generator
+100410_name~Vegetable Generator
+100501_name~Seafood Generator
+100502_name~Seafood Generator
+100503_name~Seafood Generator
+100504_name~Seafood Generator
+100505_name~Seafood Generator
+100506_name~Seafood Generator
+100507_name~Seafood Generator
+100508_name~Seafood Generator
+100509_name~Seafood Generator
+100510_name~Seafood Generator
+100601_name~Grain Generator
+100602_name~Grain Generator
+100603_name~Grain Generator
+100604_name~Grain Generator
+100605_name~Grain Generator
+100606_name~Grain Generator
+100607_name~Grain Generator
+100608_name~Grain Generator
+100609_name~Grain Generator
+100610_name~Grain Generator
+200101_name~Juicer
+200102_name~Juicer
+200103_name~Juicer
+200104_name~Juicer
+200105_name~Juicer
+200106_name~Juicer
+200107_name~Juicer
+200108_name~Juicer
+200109_name~Juicer
+200110_name~Juicer
+200201_name~Chef Counter
+200202_name~Chef Counter
+200203_name~Chef Counter
+200204_name~Chef Counter
+200205_name~Chef Counter
+200206_name~Chef Counter
+200207_name~Chef Counter
+200208_name~Chef Counter
+200209_name~Chef Counter
+200210_name~Chef Counter
+200301_name~Grill
+200302_name~Grill
+200303_name~Grill
+200304_name~Grill
+200305_name~Grill
+200306_name~Grill
+200307_name~Grill
+200308_name~Grill
+200309_name~Grill
+200310_name~Grill
+200401_name~Pan
+200402_name~Pan
+200403_name~Pan
+200404_name~Pan
+200405_name~Pan
+200406_name~Pan
+200407_name~Pan
+200408_name~Pan
+200409_name~Pan
+200410_name~Pan
+200501_name~Oven
+200502_name~Oven
+200503_name~Oven
+200504_name~Oven
+200505_name~Oven
+200506_name~Oven
+200507_name~Oven
+200508_name~Oven
+200509_name~Oven
+200510_name~Oven
+300101_name~Gold
+300102_name~Gold
+300103_name~Gold
+300104_name~Gold
+300105_name~Gold
+300201_name~Energy
+300202_name~Energy
+300203_name~Energy
+300204_name~Energy
+300205_name~Energy
+300301_name~Diamond
+300302_name~Diamond
+300303_name~Diamond
+300304_name~Diamond
+300305_name~Diamond
+400101_name~Blueberry Jam
+400102_name~Strawberry Jam
+400103_name~Orange  Marmalade
+400104_name~Apple Jam
+400105_name~Yogurt Strawberry Blueberry
+400106_name~Yogurt Banana Strawberry
+400107_name~Sunrise Mango Lassi
+400108_name~Yogurt Juice mix
+400109_name~Lemon Jam
+400201_name~Blueberry Juice
+400202_name~Strawberry Juice
+400203_name~Orange Juice
+400204_name~Apple Juice
+400205_name~Pineapple Juice
+400206_name~Watermelon Juice
+400207_name~Blueberry Lemon Juice
+400208_name~Orange Apple Juice
+400209_name~Purple Power
+400210_name~Spinach Apple Pineapple Juice
+400211_name~Detox & Clear Skin
+400212_name~Boost Immunity & glow
+400213_name~Carrot Apple Juice
+400214_name~Apple, Orange & Lemon Juice
+400215_name~Tropical Sunrise
+400216_name~Pink Lemonade
+400301_name~Latte
+400302_name~Caramel Macchiato
+400303_name~Frappe
+400304_name~Iced Coffee Cream
+400305_name~Caramel Frappe
+400401_name~Grilled Sausage
+400402_name~Grilled Ham
+400403_name~Grilled Pork Belly
+400404_name~Grilled Pork Knuckle
+400405_name~Grilled Pork Ribs
+400406_name~Grilled Beef Ribs
+400407_name~Beef Steak & Potato
+400408_name~Grilled Chicken Wing
+400409_name~Grilled Chicken
+400410_name~Grilled Chicken Breast
+400411_name~Grilled Chicken Drumstick
+400412_name~Grilled Red Onion and Bell Pepper
+400413_name~Grilled Potato Cheese
+400414_name~Grilled Cauliflower
+400415_name~Grilled Eggplant
+400416_name~Grilled Squid
+400417_name~Grilled Shrimp
+400418_name~Grilled Octopus
+400419_name~Grilled Sea Bream
+400420_name~Grilled Chicken Breast & Bell Pepper
+400421_name~Grilled Mackerel
+400422_name~BBQ Duck
+400423_name~Grilled Corn
+400424_name~Surf & Turf
+400425_name~Grilled Lemon Butter Scallops And Asparagus
+400426_name~Grilled Turkey Leg
+400501_name~Stir-fried Egg
+400502_name~Stir-fried Clam
+400503_name~Scallops with Cauliflower
+400504_name~Creamy Chicken Breast
+400505_name~Fried Brocoli
+400506_name~Fried Asparagus
+400507_name~Pan-seared Cod with Kale
+400508_name~Shrimp with Asparagus
+400509_name~Beef Asparagus Stir Fry
+400510_name~Fried Salmon
+400511_name~Citrus Sea Bream
+400601_name~Tomato Slices
+400602_name~Onion Slices
+400603_name~Cucumber Slices
+400604_name~Shredded Lettuce
+400605_name~Caprese Salad
+400606_name~Apple Blue Cheese Salad
+400607_name~Shrimp Cocktail
+400608_name~American Potato Salad
+400609_name~Cabbage Slaw
+400701_name~Deconstructed Cheesecake
+400702_name~Apple Compote
+400703_name~Berry & Coconut Trifle
+400704_name~Passion Fruit Panna Cotta
+400705_name~Banana Split
+400706_name~Burnt Cream
+400801_name~Corn with Cheese
+500101_name~Card Plus
+500102_name~Card Plus
+500103_name~Card Plus
+500201_name~Sandglass
+500202_name~Sandglass
+500203_name~Sandglass
+500204_name~Sandglass
+500205_name~Sandglass
+500206_name~Sandglass
+500207_name~Sandglass
+500208_name~Sandglass
+500301_name~Scissors
+500302_name~Scissors
+500303_name~Scissors
+500304_name~Scissors
+500401_name~Standard Unlimited Energy
+500501_name~Upgraded Unlimited Energy
+500601_name~Blue Duplicate Camera
+500602_name~Purple Duplicate Camera
+500603_name~Orange Duplicate Camera
+500701_name~Magic Wand
+500702_name~Magic Wand
+500703_name~Magic Wand
+500801_name~Blue Rocket Cracker
+500802_name~Purple Rocket Cracker
+500803_name~Orange Rocket Craker
+500901_name~Raccoon Timer
+500902_name~Squirrel Timer
+500903_name~Monkey Timer
+500904_name~Rabbit Timer
+500905_name~Fox Timer
+501001_name~Wild Card
+501101_name~Speed Boost
+501102_name~Speed Boost
+501103_name~Speed Boost
+501104_name~Speed Boost
+501105_name~Speed Boost
+501106_name~Speed Boost
+501107_name~Speed Boost
+501108_name~Speed Boost
+600101_name~Energy Chest
+600201_name~Chef Chest
+600301_name~Equipment Chest
+600401_name~Assistans Chest
+600501_name~Daily Gift
+600601_name~Lucky Hand Bag
+600701_name~Lucky Box
+600801_name~Gift
+600901_name~Equipment Box
+601001_name~Coin Box
+601101_name~Choice Chest
+601201_name~Flush Gift
+601301_name~Trainee Box
+400512_name~Pan Fried Patty
+400901_name~Fried Okra
+400902_name~Hot Dog
+400903_name~Cheese Dog
+400904_name~Pork Burger
+400905_name~Cheese Burger
+400906_name~Corn Dog
+400907_name~Fried Chicken Wings
+400908_name~Fried Chicken Breast
+400909_name~Fried Chicken Drumstick
+400910_name~Fried Whole Chicken
+400911_name~Onion Rings
+400912_name~Tator Tots
+400913_name~Loaded Tots
+400610_name~Potato Strips
+400914_name~Fries
+400915_name~Texas Cheese Fries
+400427_name~Delmonico Steak
+400916_name~Steak & Blue Cheese Sandwich
+400917_name~Hush Puppies
+400802_name~Baked Hotdog Bun
+400803_name~Baked Burger Bun
+400804_name~Toast
+400707_name~Donut
+400708_name~Donut Chocolate
+400709_name~Jelly Donut
+400806_name~Croissant
+400807_name~Apple Pie
+400808_name~Blueberry Pie
+400809_name~Banana Bread
+400810_name~Fudge Brownies
+400811_name~Chocolate Chip Cookies
+400306_name~Mocha
+400307_name~Mocha Frappe
+701501_name~Mung beans
+701502_name~Soybeans
+701503_name~Red lentils
+701504_name~Corn flour
+701505_name~Wheat flour
+701506_name~Breadcrumbs
+701507_name~Potato flour
+701508_name~Rice
+701509_name~Oats
+701510_name~Quinoa seeds
+701511_name~Buckwheat seeds
+701512_name~Sweet potato
+701601_name~Sesame seeds
+701602_name~Pumpkin seeds
+701603_name~Pistachios
+701604_name~Peanuts
+701605_name~Almonds
+701606_name~Cashews
+701607_name~Walnuts
+701608_name~Macadamia nuts
+701609_name~Hazelnuts
+701610_name~Pine nuts
+701701_name~Peanuts
+701702_name~Peanut butter
+701703_name~Cocoa sauce
+701704_name~Dark chocolate
+701705_name~White chocolate
+401001_name~Hot Dog Bun
+401002_name~Burger Bun
+401003_name~Toast Dough
+401004_name~Donut Dough
+401005_name~Pie Crust
+401006_name~Croissant Dough
+tools_des~Drag items to begin dishes.
+generator_des~Tap to spawn items: <color=#09bc00>{0}</color>.
+recipes_des~{0}
+item_des~Merge to produce: <color=#09bc00>{0}</color>.
+item_max_des~This item is MAX level.
+expand_des~Tap to transform to:  <color=#09bc00>{0}</color>.
+merge_des~Merge to reach next level.
+currency_des~Tap to collect {0}.
+tool_tap_to_collect_des~Tap the equipment to get the dish!
+generator_auto_spawn_des~Spawns  <color=#09bc00>{0}</color> automatically.
+generator_cooldown_des~Let's speed it up.
+tool_done_des~Tap on the equipment to collect.
+item_flush_gift_des~Tap to use it.
+item_choice_chest_des~
+bowl_des~This equipment can only be used once.
+sealed~(sealed)
+item_resource_6~A Cooking Boost can speed up the cooking by 5 seconds.
+resource_name_6~Cooking Boost
+bubble_des~Spend diamonds to get the item inside.
+5011_501101_des~Reach level 5 to boost the charging speed of all the generators on the board. Merge to reach next level.
+5011_501102_des~Reach level 5 to boost the charging speed of all the generators on the board. Merge to reach next level.
+5011_501103_des~Reach level 5 to boost the charging speed of all the generators on the board. Merge to reach next level.
+5011_501104_des~Reach level 5 to boost the charging speed of all the generators on the board. Merge to reach next level.
+5011_501105_des~Tap to skip 1h for all the generators on the board. Merge to reach next level.
+5011_501106_des~Tap to skip 2h for all the generators on the board. Merge to reach next level.
+5011_501107_des~Tap to skip 4h for all the generators on the board. Merge to reach next level.
+5011_501108_des~Tap to skip 8h for all the generators on the board. This item is MAX level.
+5002_500201_des~Reach level 5 to boost the processing speed of all the equipment on the board. Merge to reach next level.
+5002_500202_des~Reach level 5 to boost the processing speed of all the equipment on the board. Merge to reach next level.
+5002_500203_des~Reach level 5 to boost the processing speed of all the equipment on the board. Merge to reach next level.
+5002_500204_des~Reach level 5 to boost the processing speed of all the equipment on the board. Merge to reach next level.
+5002_500205_des~Tap to skip 15m for all equipment on the board. Merge to reach next level.
+5002_500206_des~Tap to skip 30m for all equipment on the board. Merge to reach next level.
+5002_500207_des~Tap to skip 45m for all equipment on the board. Merge to reach next level.
+5002_500208_des~Tap to skip 60m for all equipment on the board. This item is MAX level.
+5003_500301_des~Reach level 4 to convert an item into two lower-level items. Merge to reach next level.
+5003_500302_des~Reach level 4 to convert an item into two lower-level items. Merge to reach next level.
+5003_500303_des~Reach level 4 to convert an item into two lower-level items. Merge to reach next level.
+5003_500304_des~Drag it to an item to get two lower-level items. This item is MAX level.
+5004_500401_des~Tap to use it. For 5m, you can get items from generators with no energy cost, but only under Basic mode or Advancer Mode.
+5005_500501_des~Tap to use it. For 10m, you can get items from generators with no energy cost, but only under Basic Mode or Advancer Mode.
+5006_500601_des~Drag it to an item of level 1-2 to use it. Can duplicate items from generators. Merge to reach next level.
+5006_500602_des~Drag it to an item of level 1-3 to use it. Can duplicate items from generators. Merge to reach next level.
+5006_500603_des~Drag it to an item of level 1-4 to use it. Can duplicate items from generators. Merge to reach next level.
+5007_500701_des~Tap on it to add 3 taps to a random generator on the board. Merge to reach the next level.
+5007_500702_des~Tap on it to add 6 taps to a random generator on the board. Merge to reach the next level.
+5007_500703_des~Tap on it to add 12 taps to a random generator on the board. This item is MAX level.
+5008_500801_des~Tap to use it on a random level 1–2 item on the board. It can upgrade items from generators by one level. Merge to reach the next level.
+5008_500802_des~Tap to use it on a random level 2-3 item on the board. It can upgrade items from generators by one level. Merge to reach the next level.
+5008_500803_des~Tap to use it on a random level 3-4 item on the board. It can upgrade items from generators by one level. This item is MAX level.
+5009_500901_des~Drag it to a generator to speed up the generator by 5 minutes. Merge to reach next level.
+5009_500902_des~Drag it to a generator to speed up the generator by 10 minutes. Merge to reach next level.
+5009_500903_des~Drag it to a generator to speed up the generator by 20 minutes. Merge to reach next level.
+5009_500904_des~Drag it to a generator to speed up the generator by 40 minutes. Merge to reach next level.
+5009_500905_des~Drag it to a generator to speed up the generator by 80 minutes. Merge to reach next level.
+5010_501001_des~Drag it to an item to level it up. Can't use it on any generator, equipment or max-level item.
+5001_500101_des~Add 8 taps to any generator.
+5001_500102_des~Add 16 taps to any generator.
+5001_500103_des~Add 32 taps to any generator.
+3001_300101_des_screen_info~Tap to collect 1 coin. Merge to reach next level.
+3001_300102_des_screen_info~Tap to collect 3 coins. Merge to reach next level.
+3001_300103_des_screen_info~Tap to collect 7 coins. Merge to reach next level.
+3001_300104_des_screen_info~Tap to collect 15 coins. Merge to reach next level.
+3001_300105_des_screen_info~Tap to collect 31 coins. This item is at max level.
+3002_300201_des_screen_info~Tap to collect 1 energy. Merge to reach next level.
+3002_300202_des_screen_info~Tap to collect 5 energy. Merge to reach next level.
+3002_300203_des_screen_info~Tap to collect 15 energy. Merge to reach next level.
+3002_300204_des_screen_info~Tap to collect 40 energy. Merge to reach next level.
+3002_300205_des_screen_info~Tap to collect 100 energy. This item is at max level\n
+3003_300301_des_screen_info~Tap to collect 1 diamond. Merge to reach next level.
+3003_300302_des_screen_info~Tap to collect 3 diamonds. Merge to reach next level.
+3003_300303_des_screen_info~Tap to collect 7 diamonds. Merge to reach next level.
+3003_300304_des_screen_info~Tap to collect 15 diamonds. Merge to reach next level.
+3003_300305_des_screen_info~Tap to collect 31 diamonds. This item is at max level.
+5011_501101_des_screen_info~Reach level 5 to boost the charging speed of all the generators on the board. Merge to reach next level.
+5011_501102_des_screen_info~Reach level 5 to boost the charging speed of all the generators on the board. Merge to reach next level.
+5011_501103_des_screen_info~Reach level 5 to boost the charging speed of all the generators on the board. Merge to reach next level.
+5011_501104_des_screen_info~Reach level 5 to boost the charging speed of all the generators on the board. Merge to reach next level.
+5011_501105_des_screen_info~Tap to skip 1h for all the generators on the board. Merge to reach next level.
+5011_501106_des_screen_info~Tap to skip 2h for all the generators on the board. Merge to reach next level.
+5011_501107_des_screen_info~Tap to skip 4h for all the generators on the board. Merge to reach next level.
+5011_501108_des_screen_info~Tap to skip 8h for all the generators on the board. This item is MAX level.
+5002_500201_des_screen_info~Reach level 5 to boost the processing speed of all the equipment on the board. Merge to reach next level.
+5002_500202_des_screen_info~Reach level 5 to boost the processing speed of all the equipment on the board. Merge to reach next level.
+5002_500203_des_screen_info~Reach level 5 to boost the processing speed of all the equipment on the board. Merge to reach next level.
+5002_500204_des_screen_info~Reach level 5 to boost the processing speed of all the equipment on the board. Merge to reach next level.
+5002_500205_des_screen_info~Tap to skip 15m for all equipment on the board. Merge to reach next level.
+5002_500206_des_screen_info~Tap to skip 30m for all equipment on the board. Merge to reach next level.
+5002_500207_des_screen_info~Tap to skip 45m for all equipment on the board. Merge to reach next level.
+5002_500208_des_screen_info~Tap to skip 60m for all equipment on the board. This item is MAX level.
+5003_500301_des_screen_info~Reach level 4 to convert an item into two lower-level items. Merge to reach next level.
+5003_500302_des_screen_info~Reach level 4 to convert an item into two lower-level items. Merge to reach next level.
+5003_500303_des_screen_info~Reach level 4 to convert an item into two lower-level items. Merge to reach next level.
+5003_500304_des_screen_info~Drag it to an item to get two lower-level items. This item is MAX level.
+5004_500401_des_screen_info~Tap to use it. For 5m, you can get items from generators with no energy cost, but only under Basic mode or Advancer Mode.
+5005_500501_des_screen_info~Tap to use it. For 10m, you can get items from generators with no energy cost, but only under Basic Mode or Advancer Mode.
+5006_500601_des_screen_info~Drag it to an item of level 1-2 to use it. Can duplicate items from generators. Merge to reach next level.
+5006_500602_des_screen_info~Drag it to an item of level 1-3 to use it. Can duplicate items from generators. Merge to reach next level.
+5006_500603_des_screen_info~Drag it to an item of level 1-4 to use it. Can duplicate items from generators. Merge to reach next level.
+5007_500701_des_screen_info~Tap on it to add 3 taps to a random generator on the board. Merge to reach the next level.
+5007_500702_des_screen_info~Tap on it to add 6 taps to a random generator on the board. Merge to reach the next level.
+5007_500703_des_screen_info~Tap on it to add 12 taps to a random generator on the board. This item is MAX level.
+5008_500801_des_screen_info~Tap to use it on a random level 1–2 item on the board. It can upgrade items from generators by one level. Merge to reach the next level.
+5008_500802_des_screen_info~Tap to use it on a random level 2-3 item on the board. It can upgrade items from generators by one level. Merge to reach the next level.
+5008_500803_des_screen_info~Tap to use it on a random level 3-4 item on the board. It can upgrade items from generators by one level. This item is MAX level.
+5009_500901_des_screen_info~Drag it to a generator to speed up the generator by 5 minutes. Merge to reach next level.
+5009_500902_des_screen_info~Drag it to a generator to speed up the generator by 10 minutes. Merge to reach next level.
+5009_500903_des_screen_info~Drag it to a generator to speed up the generator by 20 minutes. Merge to reach next level.
+5009_500904_des_screen_info~Drag it to a generator to speed up the generator by 40 minutes. Merge to reach next level.
+5009_500905_des_screen_info~Drag it to a generator to speed up the generator by 80 minutes. Merge to reach next level.
+5010_501001_des_screen_info~Drag it to an item to level it up. Can't use it on any generator, equipment or max-level item.
+5001_500101_des_screen_info~Add 8 taps to any generator.
+5001_500102_des_screen_info~Add 16 taps to any generator.
+5001_500103_des_screen_info~Add 32 taps to any generator.
+merge_item_types_1001~Drink Generator
+merge_item_types_1002~Fruit And Sugar Generator
+merge_item_types_1003~Protein Generator
+merge_item_types_1004~Vegetable Generator
+merge_item_types_1005~Seafood Generator
+merge_item_types_1006~Grain Generator
+merge_item_types_1007~Alcohol Generator
+merge_item_types_2001~Juicer
+merge_item_types_2002~Chef Counter
+merge_item_types_2003~Grill
+merge_item_types_2004~Pan
+merge_item_types_2005~Oven
+merge_item_types_3001~Gold
+merge_item_types_3002~Energy
+merge_item_types_3003~Diamond
+merge_item_types_4001~Jam And Yogurt Mix
+merge_item_types_4002~Smoothie And Juice
+merge_item_types_4003~Coffee Drinks
+merge_item_types_4004~Mixed Grill
+merge_item_types_4005~Stir Fried Dish
+merge_item_types_4006~Salad
+merge_item_types_4007~Desserts
+merge_item_types_4008~Oven Baked Dishes
+merge_item_types_5001~Card Plus
+merge_item_types_5002~Sandglass
+merge_item_types_5003~Scissors
+merge_item_types_5004~Standard Unlimited Energy
+merge_item_types_5005~Upgraded Unlimited Energy
+merge_item_types_5006~Duplicate Camera
+merge_item_types_5007~Magic Wand
+merge_item_types_5008~Rocket Cracker
+merge_item_types_5009~Animal Timer
+merge_item_types_5010~Wild Card
+merge_item_types_5011~Speed Boost
+merge_item_types_6001~Energy Chest
+merge_item_types_6002~Chef Chest
+merge_item_types_6003~Equipment Chest
+merge_item_types_6004~Assistants Chest
+merge_item_types_6005~Daily Gift
+merge_item_types_6006~Lucky Handbag
+merge_item_types_6007~Lucky Box
+merge_item_types_6008~Gift
+merge_item_types_6009~Equipment Box
+merge_item_types_6011~Coin Box
+merge_item_types_6012~Choice Chest
+merge_item_types_6013~Flush Gift
+merge_item_types_6014~Trainee Box
+merge_item_types_7001~Coffee
+merge_item_types_7002~Soft Drinks
+merge_item_types_7003~Dairy Products
+merge_item_types_7004~Glassware
+merge_item_types_7005~Fruit
+merge_item_types_7006~Sugar And Candy
+merge_item_types_7007~Coconut Water Products
+merge_item_types_7008~Coconut Shell Products
+merge_item_types_7009~Red Meat
+merge_item_types_7010~Egg And Poultry
+merge_item_types_7011~Vegetables
+merge_item_types_7012~Leafy Vegetables
+merge_item_types_7013~Seafood
+merge_item_types_7014~Shellfish
+merge_item_types_7015~Grain
+merge_item_types_7016~Nut
+merge_item_types_7017~\nPeanut Products
+merge_item_types_4010~Dough
+merge_item_types_4009~Fast Food
+5011_boost~Tap to boost charging speed of all the generators on the board.
+5002_boost~Tap to boost the processing speed of all the equipment on the board.
+5003_boost~Drag it to an item to use it.
+5004_boost~Tap to get unlimited energy for a certain period of time.
+5005_boost~Tap to get unlimited energy for a certain period of time.
+5006_boost~Drag it to an item to use it.
+5007_boost~Tap on it to add taps to a random generator.
+5008_boost~Tap on it to increase the level of a random item.
+5009_boost~Drag it to a generator to speed up the generator.
+5010_boost~Drag it to an item to use it.
+5001_boost~Drag it to a generator to use it.
+des_recipes_done~A Completed dish ready to be served.

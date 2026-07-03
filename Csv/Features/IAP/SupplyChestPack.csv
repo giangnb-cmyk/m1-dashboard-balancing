@@ -1,4 +1,4 @@
 id,pack_name,res_type,res_id,res_number,custom_value,bonus,stage_bonus,first_time_purchase_bonus,purchase_type,purchase_count,iap_cost,cost_type,cost_id,cost_number,sale,google_product_id,google_product_id_premium,apple_product_id,many_purchase
-1,supply_chest_1,Item,138,1,18067,0,0,0,Currency,1,,Item,2,90,,supply_chest_1,,supply_chest_1,
-2,supply_chest_2,Item,139,1,18068,0,0,0,Currency,1,,Item,2,280,,supply_chest_2,,supply_chest_2,
-3,supply_chest_3,Item,140,1,18069,0,0,0,Currency,1,,Item,2,280,,supply_chest_3,,supply_chest_3,
+1,supply_chest_1,Item,18067,1,18067,0,0,0,Currency,1,,Item,2,90,,supply_chest_1,,supply_chest_1,
+2,supply_chest_2,Item,18068,1,18068,0,0,0,Currency,1,,Item,2,280,,supply_chest_2,,supply_chest_2,
+3,supply_chest_3,Item,18069,1,18069,0,0,0,Currency,1,,Item,2,280,,supply_chest_3,,supply_chest_3,

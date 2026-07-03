@@ -174,6 +174,7 @@ body {
 /* Main Content */
 .content-area {
     flex: 1;
+    min-width: 0; /* cho phép co lại để inner overflow:auto scroll thay vì tràn/bị cắt */
     margin-left: 280px;
     display: flex;
     flex-direction: column;
@@ -249,6 +250,7 @@ body {
 /* Tab Content */
 .tab-scroller {
     flex: 1;
+    min-width: 0; /* để bảng rộng scroll trong container thay vì đẩy layout */
     padding: 2rem;
     overflow-y: auto;
 }
@@ -5481,3 +5483,80 @@ tr.imbalanced {
     padding-top: 0.25rem;
     border-top: 1px solid rgba(255,255,255,0.06);
 }
+
+/* ── Order Preview (Unity-style batch/order cards) ─────────────────────────── */
+.op-batch { margin-bottom: 1.5rem; }
+.op-batch-head {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.6rem 0.9rem; border-radius: 12px 12px 0 0;
+    background: var(--glass); border: 1px solid var(--border); border-bottom: none;
+}
+.op-batch-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.op-batch-id { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-muted); }
+.op-batch-theme { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.85rem; }
+.op-batch-meta { margin-left: auto; font-size: 0.72rem; color: var(--text-muted); }
+.op-reward-ok { color: var(--success); font-size: 0.72rem; font-weight: 500; }
+.op-reward-no { color: var(--text-muted); font-size: 0.72rem; opacity: 0.7; }
+
+.op-orders {
+    display: flex; flex-direction: column; gap: 0.6rem;
+    padding: 0.7rem; background: rgba(15, 23, 42, 0.35);
+    border: 1px solid var(--border); border-radius: 0 0 12px 12px;
+}
+.op-order-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 0.7rem 0.85rem; backdrop-filter: blur(6px);
+}
+.op-order-head {
+    display: flex; align-items: center; gap: 0.6rem;
+    margin-bottom: 0.4rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+}
+.op-order-title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--text-main); }
+.op-npc { font-size: 0.72rem; color: var(--exp); font-weight: 500; }
+.op-order-meta { margin-left: auto; display: inline-flex; align-items: center; gap: 0.7rem; }
+.op-order-energy {
+    display: inline-flex; align-items: center; gap: 0.28rem;
+    font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.9rem; color: var(--energy);
+}
+.op-order-gold {
+    display: inline-flex; align-items: center; gap: 0.28rem;
+    font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.9rem; color: var(--gold);
+}
+.op-energy-em, .op-gold-em { font-size: 0.95em; line-height: 1; }
+
+/* icons */
+.op-ic { object-fit: contain; flex-shrink: 0; }
+.op-ic-lg { width: 44px; height: 44px; }
+.op-ic-sm { width: 32px; height: 32px; }
+.op-ic-gen { width: 26px; height: 26px; object-fit: contain; flex-shrink: 0; }
+.op-ph { display: inline-block; border-radius: 8px; background: var(--glass); flex-shrink: 0; }
+.op-energy-ic { width: 15px; height: 15px; object-fit: contain; flex-shrink: 0; }
+
+/* item / recipe row */
+.op-item-row { display: flex; align-items: center; gap: 0.55rem; padding: 0.3rem 0.15rem; flex-wrap: wrap; }
+.op-item-name { font-size: 0.82rem; color: var(--text-main); font-weight: 500; }
+.op-eq { display: inline-flex; align-items: center; gap: 0.28rem; flex-wrap: wrap; }
+.op-eq-op { font-weight: 700; color: var(--text-muted); font-size: 0.95rem; padding: 0 0.05rem; }
+.op-mult { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-muted); }
+.op-energy-sm {
+    margin-left: auto; display: inline-flex; align-items: center; gap: 0.22rem;
+    font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--energy); font-weight: 600;
+}
+
+/* tier chip */
+.op-tier { font-size: 0.68rem; font-weight: 700; padding: 0.1rem 0.42rem; border-radius: 4px; border: 1px solid; white-space: nowrap; }
+.op-tier-easy   { color: var(--success); border-color: rgba(34, 197, 94, 0.4);  background: rgba(34, 197, 94, 0.12); }
+.op-tier-medium { color: var(--gold);    border-color: rgba(251, 191, 36, 0.4); background: rgba(251, 191, 36, 0.12); }
+.op-tier-hard   { color: var(--danger);  border-color: rgba(239, 68, 68, 0.4);  background: rgba(239, 68, 68, 0.12); }
+
+/* generator row */
+.op-gen-row {
+    display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+    margin-top: 0.45rem; padding-top: 0.5rem; border-top: 1px solid var(--border);
+}
+.op-gen-label { font-size: 0.72rem; color: var(--text-muted); font-weight: 600; }
+.op-gen-chip { display: inline-flex; align-items: center; gap: 0.32rem; font-size: 0.75rem; color: var(--energy); font-weight: 600; }
+
+/* ── Nguồn Lực matrix row icon ─────────────────────────────────────────────── */
+.nl-row-ic { width: 30px; height: 30px; object-fit: contain; flex-shrink: 0; }
+.nl-row-ic-ph { display: inline-block; border-radius: 6px; background: var(--glass); }

@@ -1,3 +1,5 @@
-res_type,res_id,res_number,custom_value
-Money,1,10,
-Money,2,20,
+﻿res_type,res_id,res_number,custom_value
+Item,601301,1,
+Item,500101,1,
+Money,3,60,
+Money,2,1,

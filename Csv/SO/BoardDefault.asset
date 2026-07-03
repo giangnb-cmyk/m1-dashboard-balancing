@@ -144,7 +144,7 @@ MonoBehaviour:
         y: 2
     - ItemSave:
         itemSaveType: 0
-        idItem: 700505
+        idItem: 100203
       Position:
         x: 0
         y: 3
@@ -186,7 +186,7 @@ MonoBehaviour:
         y: 3
     - ItemSave:
         itemSaveType: 0
-        idItem: 100203
+        idItem: 700505
       Position:
         x: 0
         y: 4

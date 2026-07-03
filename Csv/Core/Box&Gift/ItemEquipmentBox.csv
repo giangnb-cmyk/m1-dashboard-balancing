@@ -1,8 +1,9 @@
-id,many_generator,time_unlock,item_child_type,item_child_id,rate
+﻿id,many_generator,time_unlock,item_child_type,item_child_id,rate
 600901,3,300,Juicer,200101,1
 ,,,ChefCounter,200201,1
 ,,,Grill,200301,1
 ,,,Pan,200401,1
+,,,Oven,200501,1
 ,,,Gold,300101,1
 ,,,Gold,300102,1
 ,,,Diamond,300301,1

@@ -1,0 +1,33 @@
+{
+  "skill_name": "dashboard-design-system",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Thêm một tab mới tên 'Progression' vào dashboard (D:\\Project\\m1-dashboard-balancing). Tab hiển thị: một hàng stat cards (Total Scenes, Total Batches, Total Orders) lấy số từ window.GameData.orderSystem + buildUpGoalData, và một bảng liệt kê các batch (id, scene, số orders). Làm đúng phong cách các tab hiện có.",
+      "expected_output": "Tab mới dùng .tab-view/.view-header/.stats-row/.stat-card glass/.data-table-card glass, số liệu có class mono, nav button có emoji, module JS đăng ký trong initModules, không hardcode hex màu.",
+      "files": [],
+      "assertions": [
+        "New section uses class 'tab-view' with id matching nav button's data-tab, and contains a '.view-header' with h1 (emoji prefix) + muted description p",
+        "Nav button follows the .nav-item pattern with .nav-icon (emoji) and .nav-text spans",
+        "Stat cards use the existing .stats-row / .stat-card glass / .stat-icon / .stat-value / .stat-label structure, and numeric values carry the 'mono' class",
+        "Batch table uses .data-table-card glass > .table-header h3 > .table-container > table.data-table (no custom table styling)",
+        "New JS module follows the project module pattern (const X = (() => ... return {init})()), script tag added to index.html, and init registered in initModules() in app.js",
+        "No hardcoded hex colors where a CSS variable token exists (uses var(--primary), var(--text-muted), etc.) and no px-based font sizes in any new CSS",
+        "No inline styles except grid-template-columns column-count overrides"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Trong tab Nguồn Lực của dashboard (D:\\Project\\m1-dashboard-balancing), thêm một panel mới ở đầu tab chứa bar chart (Chart.js) thể hiện tổng lượt drop của từng generator (tính từ data có sẵn của tab đó). Style phải đồng bộ với dashboard.",
+      "expected_output": "Panel bọc .glass, có header h3 với emoji, chart dùng palette dự án (#38bdf8...), không set màu grid sáng, destroy chart cũ khi re-init.",
+      "files": [],
+      "assertions": [
+        "Chart panel is wrapped in a .glass card with an h3 section title prefixed by an emoji",
+        "Chart dataset colors come from the project palette (#38bdf8, #f87171, #a78bfa, #34d399, #fbbf24, #60a5fa, #c084fc, #fb923c or var tokens) — not Chart.js defaults or arbitrary new colors",
+        "Does not override the dark-theme Chart.js defaults with light colors (no light/black grid or label colors)",
+        "Chart instance is destroyed or guarded before re-creating on the same canvas (survives reloadGameData / re-init)",
+        "Reuses existing CSS classes; any new CSS uses var() tokens and rem font sizes; no large inline style blocks"
+      ]
+    }
+  ]
+}

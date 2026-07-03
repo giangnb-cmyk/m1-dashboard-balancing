@@ -108,7 +108,7 @@ const EnergyCalc = (() => {
             changed = false;
             (itemExpand || []).forEach(r => {
                 const pid = r.itemID || r.id;
-                const sid = r.spawn_itemID || r.id_item;
+                const sid = r.spawn_itemID || r.id_item || r.id_item_expand;
                 if (!pid || !sid) return;
                 const parentType = spawnMap[pid] || prefixMap[pid.slice(0, 4)];
                 if (parentType && !spawnMap[sid]) {

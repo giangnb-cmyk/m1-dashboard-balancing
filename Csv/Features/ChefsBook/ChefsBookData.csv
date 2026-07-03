@@ -12,10 +12,14 @@ Merge,DrinkGenerator
 ,VegetableGenerator
 ,Vegetables
 ,LeafyVegetables
+,Grain
+,Nut
+,PeanutProducts
 Tool,Pan
 ,Grill
 ,ChefCounter
 ,Juicer
+,Oven
 GameBoost,Gold
 ,Energy
 ,Diamond
@@ -25,4 +29,7 @@ Recipes,JamAndYogurtMix
 ,MixedGrill
 ,StirFriedDish
 ,Salad
+,BakeryProducts
 ,Desserts
+,Dough
+,FastFood

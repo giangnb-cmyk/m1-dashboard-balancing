@@ -10,6 +10,7 @@ Output: js/data/*.js (tự động overwrite mỗi lần chạy)
 """
 
 import csv
+import io
 import json
 import os
 import sys
@@ -31,6 +32,35 @@ ITEM_TYPE_MAP = {
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
+
+_LOCALIZED_NAMES = None
+
+
+def localized_names():
+    """id → tên item sạch từ Csv/Localize/en/item.csv (định dạng key~value, khoá `{id}_name`).
+
+    Nguồn CSV ItemMerge có cột name_item bị corrupt ("Coffee"→"falseffee"); bản localize
+    này là nguồn tên chuẩn (giống runtime `Utils.GetNameItems`). Cache sau lần đọc đầu."""
+    global _LOCALIZED_NAMES
+    if _LOCALIZED_NAMES is not None:
+        return _LOCALIZED_NAMES
+    _LOCALIZED_NAMES = {}
+    full = os.path.join(CSV_DIR, 'Localize', 'en', 'item.csv')
+    if not os.path.exists(full):
+        print('  [WARN] Localize/en/item.csv not found — tên item có thể bị lỗi')
+        return _LOCALIZED_NAMES
+    with io.open(full, encoding='utf-8-sig') as f:
+        for line in f:
+            key, sep, value = line.rstrip('\r\n').partition('~')
+            if sep and key.endswith('_name'):
+                _LOCALIZED_NAMES[key[:-len('_name')]] = value
+    return _LOCALIZED_NAMES
+
+
+def clean_name(item_id, fallback=''):
+    """Tên sạch theo id, fallback về tên gốc nếu localize không có."""
+    return localized_names().get(item_id) or fallback
+
 
 def fill_down(rows, key_fields):
     last = {}
@@ -54,11 +84,16 @@ def load_csv(rel_path, key_fields=None):
     for enc in ('utf-8-sig', 'utf-16', 'cp1252', 'latin-1'):
         try:
             with open(full, encoding=enc) as f:
-                reader = csv.DictReader(f)
+                # Một số file export từ Unity có dòng trống trước header — bỏ đi
+                # để DictReader không lấy nhầm dòng trống làm header.
+                text = f.read().lstrip('﻿\r\n')
+                reader = csv.DictReader(io.StringIO(text))
+                # k=None: row thừa cột so với header (DictReader gom vào list) — bỏ qua.
+                # v=None: row thiếu cột — coi như ''.
                 rows = [
-                    {k.strip(): v.strip() for k, v in row.items()}
+                    {k.strip(): (v or '').strip() for k, v in row.items() if k is not None}
                     for row in reader
-                    if any(v.strip() for v in row.values())
+                    if any((v or '').strip() for v in row.values() if isinstance(v, str))
                 ]
             break
         except (UnicodeDecodeError, UnicodeError):
@@ -71,7 +106,7 @@ def load_csv(rel_path, key_fields=None):
     return rows
 
 
-TOOL_NAMES = {'2001': 'Juicer', '2002': 'Chef Counter', '2003': 'Grill', '2004': 'Pan', '2005': 'Oven'}
+TOOL_NAMES = {'2001': 'Juicer', '2002': 'Chef Counter', '2003': 'Grill', '2004': 'Pan', '2005': 'Oven', '700402': 'Glass Bowl'}
 
 
 def norm_time(raw):
@@ -184,25 +219,27 @@ def parse_board_default(rel_path):
 
 
 def parse_item_expand(rel_path):
-    """Parse ItemExpand.csv — tự detect schema cũ vs mới.
-    Schema mới: itemID, spawn_itemID, spawn_number, time_cooldown, cost_energy
-    Schema cũ:  type, id, item_save_type, id_item, time_cooldown, cost_energy
-    Output luôn dùng schema mới để JS code đọc nhất quán.
+    """Parse ItemExpand.csv — tự detect schema theo tên cột spawn.
+    Schema chuẩn:   itemID, spawn_itemID, spawn_number, time_cooldown, cost_energy
+    Schema Unity 2: id, id_item_expand, time_cooldown, cost_energy, skip_res_*
+    Schema Unity 1: type, id, item_save_type, id_item, time_cooldown, cost_energy
+    Output luôn dùng schema chuẩn để JS code đọc nhất quán.
     """
     rows = load_csv(rel_path)
     if not rows:
         return []
     first = rows[0]
-    # Detect schema mới
+    # Detect schema chuẩn
     if 'itemID' in first and 'spawn_itemID' in first:
-        return rows  # đã đúng schema mới
-    # Convert schema cũ → mới, fill-down id
+        return rows  # đã đúng schema chuẩn
+    spawn_key = 'id_item_expand' if 'id_item_expand' in first else 'id_item'
+    # Convert schema Unity → chuẩn, fill-down id
     result = []
     last_id = ''
     for r in rows:
         item_id    = r.get('id', '').strip() or last_id
         last_id    = item_id or last_id
-        spawn_id   = r.get('id_item', '').strip()
+        spawn_id   = r.get(spawn_key, '').strip()
         if not spawn_id:
             continue
         result.append({
@@ -239,7 +276,7 @@ def parse_item_data_from_merge(rel_path):
         extra = energy_map.get(item_id, {'energy_cost': '0', 'time_point': '0'})
         result.append({
             'itemID':      item_id,
-            'name_item':   r.get('name_item', ''),
+            'name_item':   clean_name(item_id, r.get('name_item', '')),
             'can_merge':   r.get('can_merge', ''),
             'sell_price':  r.get('sell_price', ''),
             'sum_merge':   r.get('sum_merge', ''),
@@ -250,11 +287,20 @@ def parse_item_data_from_merge(rel_path):
     return inject_item_type(result)
 
 
+def load_item_merge_clean():
+    """ItemMerge.csv raw, nhưng sửa cột name_item bằng tên localize sạch."""
+    rows = load_csv('Core/ItemIdentify/ItemMerge.csv')
+    for r in rows:
+        if r.get('id'):
+            r['name_item'] = clean_name(r['id'], r.get('name_item', ''))
+    return rows
+
+
 def load_items():
     return {
         'itemData':      parse_item_data_from_merge('Core/ItemIdentify/ItemMerge.csv'),
         'itemCurrency':  load_csv('Core/ItemIdentify/ItemCurrency.csv'),
-        'itemMerge':     load_csv('Core/ItemIdentify/ItemMerge.csv'),
+        'itemMerge':     load_item_merge_clean(),
         'itemExpand':    parse_item_expand('Core/ItemExpand/ItemExpand.csv'),
         'formuaRecipes': parse_cooking_recipes('Core/Recipes/CookingRecipes.csv'),
         'boardDefault':  parse_board_default('SO/BoardDefault.asset'),
@@ -418,7 +464,7 @@ def parse_order_system(rel_path):
 
 
 def load_orders():
-    item_names = {r['id']: r['name_item']
+    item_names = {r['id']: clean_name(r['id'], r['name_item'])
                   for r in load_csv('Core/ItemIdentify/ItemMerge.csv')
                   if r.get('id') and r.get('name_item')}
     return {

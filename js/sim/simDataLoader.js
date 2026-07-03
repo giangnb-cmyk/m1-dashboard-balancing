@@ -169,9 +169,12 @@ const SimDataLoader = (() => {
         const customValue = r[`reward${i}_customValue`];
         const resId = r[`reward${i}_resId`];
         const resNumber = parseInt(r[`reward${i}_resNumber`]) || 0;
-        if (resType === 'Item' && customValue) {
+        // Schema cũ: item id nằm ở custom_value (res_id trống);
+        // schema mới (2026-07): item id nằm thẳng ở res_id.
+        const rewardItemId = customValue || (resType === 'Item' ? resId : '');
+        if (resType === 'Item' && rewardItemId) {
           schedule.push({ trigger: 'batch', batchId: r.id,
-            itemId: customValue, qty: resNumber || 1 });
+            itemId: rewardItemId, qty: resNumber || 1 });
         } else if (resType === 'Money' && resId) {
           const currency = CURRENCY_TYPE[resId];
           if (currency) {

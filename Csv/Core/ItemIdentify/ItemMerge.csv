@@ -1,405 +1,485 @@
-﻿id,name_item,can_merge,sell_price,sum_merge
-100101,Drink Generator,TRUE,0,
-100102,Drink Generator,TRUE,0,
-100103,Drink Generator,TRUE,0,
-100104,Drink Generator,TRUE,0,
-100105,Drink Generator,TRUE,0,
-100106,Drink Generator,TRUE,0,
-100107,Drink Generator,TRUE,0,
-100108,Drink Generator,TRUE,0,
-100109,Drink Generator,TRUE,0,
-100110,Drink Generator,FALSE,0,
-100201,Fruit and Sugar Generator,TRUE,0,
-100202,Fruit and Sugar Generator,TRUE,0,
-100203,Fruit and Sugar Generator,TRUE,0,
-100204,Fruit and Sugar Generator,TRUE,0,
-100205,Fruit and Sugar Generator,TRUE,0,
-100206,Fruit and Sugar Generator,TRUE,0,
-100207,Fruit and Sugar Generator,TRUE,0,
-100208,Fruit and Sugar Generator,TRUE,0,
-100209,Fruit and Sugar Generator,TRUE,0,
-100210,Fruit and Nut Generator,FALSE,0,
-100301,Protein Generator,TRUE,0,
-100302,Protein Generator,TRUE,0,
-100303,Protein Generator,TRUE,0,
-100304,Protein Generator,TRUE,0,
-100305,Protein Generator,TRUE,0,
-100306,Protein Generator,TRUE,0,
-100307,Protein Generator,TRUE,0,
-100308,Protein Generator,TRUE,0,
-100309,Protein Generator,TRUE,0,
-100310,Protein Generator,FALSE,0,
-100401,Vegetable Generator,TRUE,0,
-100402,Vegetable Generator,TRUE,0,
-100403,Vegetable Generator,TRUE,0,
-100404,Vegetable Generator,TRUE,0,
-100405,Vegetable Generator,TRUE,0,
-100406,Vegetable Generator,TRUE,0,
-100407,Vegetable Generator,TRUE,0,
-100408,Vegetable Generator,TRUE,0,
-100409,Vegetable Generator,TRUE,0,
-100410,Vegetable Generator,FALSE,0,
-100501,Seafood Generator,TRUE,0,
-100502,Seafood Generator,TRUE,0,
-100503,Seafood Generator,TRUE,0,
-100504,Seafood Generator,TRUE,0,
-100505,Seafood Generator,TRUE,0,
-100506,Seafood Generator,TRUE,0,
-100507,Seafood Generator,TRUE,0,
-100508,Seafood Generator,TRUE,0,
-100509,Seafood Generator,TRUE,0,
-100510,Seafood Generator,FALSE,0,
-100601,Grain Generator,FALSE,,
-100602,Grain Generator,FALSE,,
-100603,Grain Generator,FALSE,,
-100604,Grain Generator,FALSE,,
-100605,Grain Generator,FALSE,,
-100606,Grain Generator,FALSE,,
-100607,Grain Generator,FALSE,,
-100608,Grain Generator,FALSE,,
-100609,Grain Generator,FALSE,,
-100610,Grain Generator,TRUE,,
-200101,Juicer,TRUE,0,
-200102,Juicer,TRUE,0,
-200103,Juicer,TRUE,0,
-200104,Juicer,TRUE,0,
-200105,Juicer,TRUE,0,
-200106,Juicer,TRUE,0,
-200107,Juicer,TRUE,0,
-200108,Juicer,TRUE,0,
-200109,Juicer,TRUE,0,
-200110,Juicer,FALSE,0,
-200201,Chef Counter,TRUE,0,
-200202,Chef Counter,TRUE,0,
-200203,Chef Counter,TRUE,0,
-200204,Chef Counter,TRUE,0,
-200205,Chef Counter,TRUE,0,
-200206,Chef Counter,TRUE,0,
-200207,Chef Counter,TRUE,0,
-200208,Chef Counter,TRUE,0,
-200209,Chef Counter,TRUE,0,
-200210,Chef Counter,FALSE,0,
-200301,Grill,TRUE,0,
-200302,Grill,TRUE,0,
-200303,Grill,TRUE,0,
-200304,Grill,TRUE,0,
-200305,Grill,TRUE,0,
-200306,Grill,TRUE,0,
-200307,Grill,TRUE,0,
-200308,Grill,TRUE,0,
-200309,Grill,TRUE,0,
-200310,Grill,FALSE,0,
-200401,Pan,TRUE,0,
-200402,Pan,TRUE,0,
-200403,Pan,TRUE,0,
-200404,Pan,TRUE,0,
-200405,Pan,TRUE,0,
-200406,Pan,TRUE,0,
-200407,Pan,TRUE,0,
-200408,Pan,TRUE,0,
-200409,Pan,TRUE,0,
-200410,Pan,FALSE,0,
-200501,Oven,TRUE,0,
-200502,Oven,TRUE,0,
-200503,Oven,TRUE,0,
-200504,Oven,TRUE,0,
-200505,Oven,TRUE,0,
-200506,Oven,TRUE,0,
-200507,Oven,TRUE,0,
-200508,Oven,TRUE,0,
-200509,Oven,TRUE,0,
-200510,Oven,FALSE,0,
-300101,Gold,TRUE,0,
-300102,Gold,TRUE,0,
-300103,Gold,TRUE,0,
-300104,Gold,TRUE,0,
-300105,Gold,FALSE,0,
-300201,Energy,TRUE,0,
-300202,Energy,TRUE,0,
-300203,Energy,TRUE,0,
-300204,Energy,TRUE,0,
-300205,Energy,FALSE,0,
-300301,Diamond,TRUE,0,
-300302,Diamond,TRUE,0,
-300303,Diamond,TRUE,0,
-300304,Diamond,TRUE,0,
-300305,Diamond,FALSE,0,
-400101,Blueberry Jam,FALSE,0,
-400102,Strawberry jam,FALSE,0,
-400103,Orange  Marmalade,FALSE,0,
-400104,Apple Jam,FALSE,0,
-400105,Yogurt Strawberry Blueberry,FALSE,1,
-400106,Yogurt Banana Strawberry,FALSE,1,
-400107,Sunrise Mango Lassi,FALSE,10,
-400108,Yogurt Juice mix,FALSE,26,
-400109,Lemon Jam,FALSE,4,
-400201,Blueberry Juice,FALSE,0,
-400202,Strawberry Juice,FALSE,0,
-400203,Orange Juice,FALSE,0,
-400204,Apple Juice,FALSE,0,
-400205,Pineapple Juice,FALSE,33,
-400206,Watermelon Juice,FALSE,66,
-400207,Blueberry Lemon Juice,FALSE,2,
-400208,Orange Apple Juice,FALSE,0,
-400209,Purple Power,FALSE,0,
-400210,Spinach Apple Pineapple Juice,FALSE,50,
-400211,Detox & Clear Skin,FALSE,0,
-400212,Boost Immunity & glow,FALSE,2,
-400213,Carrot Apple Juice,FALSE,0,
-400214,"Apple, Orange & Lemon Juice",FALSE,4,
-400215,Tropical Sunrise,FALSE,2,
-400216,Pink Lemonade,FALSE,2,
-400301,Latte,FALSE,0,
-400302,Caramel Macchiato,FALSE,1,
-400303,Frappe,FALSE,1,
-400304,Iced Coffee Cream,FALSE,2,
-400305,Caramel Frappe,FALSE,3,
-400401,Grilled Sausage,FALSE,0,
-400402,Grilled Ham,FALSE,0,
-400403,Grilled Pork Belly,FALSE,0,
-400404,Grilled Pork Knuckle,FALSE,0,
-400405,"
-Grilled Pork Ribs",FALSE,1,
-400406,Grilled Beef Ribs,FALSE,4,
-400407,Beef Steak & Potato,FALSE,11,
-400408,Grilled Chicken Wing,FALSE,0,
-400409,Grilled Chicken,FALSE,2,
-400410,Grilled Chicken Breast,FALSE,0,
-400411,Grilled Chicken Drumstick,FALSE,1,
-400412,Grilled Red Onion and Bell Pepper,FALSE,8,
-400413,Grilled Potato Cheese,FALSE,17,
-400414,Grilled Cauliflower,FALSE,8,
-400415,Grilled Eggplant,FALSE,2,
-400416,Grilled Squid,FALSE,1,
-400417,Grilled Shrimp,FALSE,2,
-400418,Grilled Octopus,FALSE,8,
-400419,Grilled Sea Bream,FALSE,0,
-400420,Grilled Chicken Breast & Bell Pepper,FALSE,0,
-400421,Grilled Mackerel,FALSE,2,
-400422,BBQ Duck,FALSE,10,
-400423,Grilled Corn,FALSE,24,
-400424,Surf & Turf,FALSE,36,
-400425,Grilled Lemon Butter Scallops And Asparagus,FALSE,31,
-400426,Grilled Turkey Leg,FALSE,135,
-400501,Stir-fried Egg,FALSE,0,
-400502,Stir-fried Clam,FALSE,0,
-400503,Scallops with Cauliflower,FALSE,25,
-400504,Creamy Chicken Breast,FALSE,6,
-400505,Fried Brocoli,FALSE,4,
-400506,Fried Asparagus,FALSE,4,
-400507,Pan-seared Cod with Kale,FALSE,9,
-400508,Shrimp with Asparagus,FALSE,6,
-400509,Beef Asparagus Stir Fry,FALSE,14,
-400510,Fried Salmon,FALSE,4,
-400511,Citrus Sea Bream,FALSE,0,
-400601,Tomato Slices,FALSE,0,
-400602,Onion Slices,FALSE,0,
-400603,Cucumber Slices,FALSE,0,
-400604,Shredded Lettuce,FALSE,0,
-400605,Caprese Salad,FALSE,16,
-400606,Apple Blue Cheese Salad,FALSE,67,
-400607,Shrimp Cocktail,FALSE,2,
-400608,American Potato Salad,FALSE,34,
-400609,Cabbage Slaw,FALSE,1,
-400701,Deconstructed Cheesecake,FALSE,37,
-400702,Apple Compote,FALSE,9,
-400703,Berry & Coconut Trifle,FALSE,3,
-400704,Passion Fruit Panna Cotta,FALSE,7,
-400705,Banana Split,FALSE,18,
-400706,Burnt Cream,FALSE,35,
-400801,Corn with Cheese,FALSE,158,
-500101,CardPlus 8,TRUE,,
-500102,CardPlus 16,TRUE,,
-500103,CardPlus 32,FALSE,,
-500201,Sandglass 1,TRUE,,
-500202,Sandglass 2,TRUE,,
-500203,Sandglass 3,TRUE,,
-500204,Sandglass 4,TRUE,,
-500205,Sandglass 5,TRUE,,
-500206,Sandglass 6,TRUE,,
-500207,Sandglass 7,TRUE,,
-500208,Sandglass 8,FALSE,,
-500301,Scissors 1,TRUE,,
-500302,Scissors 2,TRUE,,
-500303,Scissors 3,TRUE,,
-500304,Scissors 4,FALSE,,
-500401,StandardUnlimitedEnergy,FALSE,,
-500501,UpgradedUnlimitedEnergy,FALSE,,
-500601,Blue Duplicate Camera,TRUE,,
-500602,Purple Duplicate Camera,TRUE,,
-500603,Orange Duplicate Camera,FALSE,,
-500701,MagicWand 3,TRUE,,
-500702,MagicWand 6,TRUE,,
-500703,MagicWand 12,FALSE,,
-500801,Blue Rocket Cracker,TRUE,,
-500802,Purple Rocket Cracker,TRUE,,
-500803,Orange Rocket Craker,FALSE,,
-500901,Raccoon Timer,TRUE,,
-500902,Squirrel Timer,TRUE,,
-500903,Monkey Timer,TRUE,,
-500904,Rabbit Timer,TRUE,,
-500905,Fox Timer,FALSE,,
-501001,Wild Card,FALSE,,
-501101,SpeedBoost 1,TRUE,,
-501102,SpeedBoost 2,TRUE,,
-501103,SpeedBoost 3,TRUE,,
-501104,SpeedBoost 4,TRUE,,
-501105,SpeedBoost 5,TRUE,,
-501106,SpeedBoost 6,TRUE,,
-501107,SpeedBoost 7,TRUE,,
-501108,SpeedBoost 8,FALSE,,
-600101,Energy Chest,FALSE,,
-600201,Chef  Chest,FALSE,,
-600301,Equipment Chest,FALSE,,
-600401,Assistants Chest,FALSE,,
-600501,Daily Gift,FALSE,,
-600601,LuckyHandbag,FALSE,,
-600701,LuckyBox,FALSE,,
-600801,Gift,FALSE,,
-600901,Equipment Box,FALSE,,
-601001,Coin Box,FALSE,,
-601101,Choice Chest,FALSE,,
-601201,Flush Gift,FALSE,,
-601301,Trainee Box,FALSE,,
-700101,Coffee Bean,TRUE,0,
-700102,Ground Coffee,TRUE,0,
-700103,Cup of Coffee,TRUE,0,
-700104,Iced Coffee,TRUE,0,
-700105,Coffee - to - Go,TRUE,0,
-700106,Iced Coffee - to - Go,TRUE,0,
-700107,Cold Brew,TRUE,1,
-700108,Pour ove coffee,FALSE,3,
-700109,French press,TRUE,7,
-700110,Aero press,TRUE,15,
-700111,Moka Pot,TRUE,30,
-700112,Syphon coffee,FALSE,61,
-700201,Glass of Water,TRUE,0,
-700202,Citrus Soda,TRUE,0,
-700203,Bottled Lemon Tea,TRUE,0,
-700204,Soda Water,TRUE,1,
-700205,Lemon-Lime Soda,TRUE,3,
-700206,Sweet Cola,TRUE,7,
-700207,Orange Soda,TRUE,15,
-700208,Classic Cola,FALSE,30,
-700209,Lon Redbull (xanh trắng),TRUE,61,
-700210,Lon Monster Energy,FALSE,122,
-700301,Ice Cube,TRUE,0,
-700302,Milk Bottle,TRUE,0,
-700303,Yogurt,TRUE,0,
-700304,Fresh Cream,TRUE,1,
-700305,Cheddar Cheese,TRUE,3,
-700306,Butter,TRUE,7,
-700307,Mozzarella,TRUE,15,
-700308,Brie Cheese,FALSE,30,
-700309,Blue Cheese,TRUE,61,
-700310,Truffle Cheese,FALSE,122,
-700401,Glass Bottle,TRUE,0,
-700402,Glass Bowl,TRUE,1,
-700403,Glass Cup,TRUE,2,
-700404,Crystal Plate,TRUE,4,
-700405,Crystal Vase,TRUE,8,
-700406,Crystal Cake Stand,FALSE,16,
-700501,Blueberry,TRUE,0,
-700502,Strawberry,TRUE,0,
-700503,Orange,TRUE,0,
-700504,Apple,TRUE,0,
-700505,Banana,TRUE,0,
-700506,Coconut,TRUE,0,
-700507,Lemon,TRUE,1,
-700508,Passion Fruit,FALSE,3,
-700509,Mango,TRUE,7,
-700510,Pomegranate,TRUE,15,
-700511,Pineapple,TRUE,30,
-700512,Watermelon,FALSE,61,
-700601,Sugarcane,TRUE,0,
-700602,Sugar,TRUE,0,
-700603,Brown Sugar,TRUE,0,
-700604,Caramel,TRUE,0,
-700605,Honey,TRUE,1,
-700606,Candy,TRUE,3,
-700607,Marshmallow,TRUE,7,
-700608,Scoop of Ice Cream,FALSE,15,
-700701,Coconut Water,TRUE,0,
-700702,Coconut Milk,TRUE,1,
-700703,Coconut Jelly,TRUE,3,
-700704,Coconut Ice Cream,TRUE,7,
-700705,Coconut Soda,TRUE,15,
-700706,Coconut Candy,TRUE,31,
-700707,Coconut Pudding,FALSE,62,
-700801,Coconut Shell,TRUE,0,
-700802,Coconut Shell Plate,TRUE,1,
-700803,Coconut Shell Spoon,TRUE,3,
-700804,Coconut Shell Cup,TRUE,7,
-700805,Coconut Shell Dish,TRUE,15,
-700806,Coconut Shell Bowl,TRUE,31,
-700807,Coconut Shell Pot,FALSE,62,
-700901,Ground Meat,TRUE,0,
-700902,Fresh Sausage,TRUE,0,
-700903,Ham,TRUE,0,
-700904,Pork Belly,TRUE,0,
-700905,Pork Knuckle,TRUE,0,
-700906,Pork Ribs,TRUE,0,
-700907,Beef Tenderloin,FALSE,1,
-700908,Beef Ribs,TRUE,3,
-700909,Diced Goat Meat,TRUE,7,
-700910,Lamb Rack,TRUE,15,
-700911,Whole Goat Leg,TRUE,30,
-700912,Whole Lamb,FALSE,61,
-701001,Chicken Egg,TRUE,0,
-701002,Chicken Breast,TRUE,0,
-701003,Chicken Wing,TRUE,0,
-701004,Chicken Drumstick,TRUE,0,
-701005,Whole Chicken,TRUE,1,
-701006,Duck Breast,TRUE,3,
-701007,Whole Duck,FALSE,7,
-701008,Whole Goose,TRUE,15,
-701009,Quail,TRUE,30,
-701010,Whole Pheasant,TRUE,61,
-701011,Turkey,FALSE,122,
-701101,Cucumber,TRUE,0,
-701102,Tomato,TRUE,0,
-701103,Red Onion,TRUE,0,
-701104,Carrot,TRUE,0,
-701105,Bell Pepper,TRUE,0,
-701106,Potato,TRUE,0,
-701107,Eggplant,TRUE,1,
-701108,Asparagus,FALSE,3,
-701109,Beetroot,TRUE,7,
-701110,Corn,TRUE,15,
-701111,Okra,TRUE,30,
-701112,Peas,FALSE,61,
-701201,Sprouts,TRUE,0,
-701202,Lettuce,TRUE,0,
-701203,Kale,TRUE,0,
-701204,Cabbage,TRUE,0,
-701205,Red Cabbage,TRUE,1,
-701206,Broccoli,TRUE,3,
-701207,Cauliflower,TRUE,7,
-701208,Spinach,FALSE,15,
-701209,Celery,TRUE,30,
-701210,Arugula,TRUE,61,
-701211,Artichoke,TRUE,122,
-701212,Truffle Mushroom,FALSE,245,
-701301,Anchovy,TRUE,0,
-701302,Mackerel,TRUE,0,
-701303,Tilapia,TRUE,0,
-701304,Sea Bream,TRUE,0,
-701305,Cod,TRUE,0,
-701306,Halibut,TRUE,0,
-701307,Salmon,TRUE,1,
-701308,Sae Bass,FALSE,3,
-701309,Sturgeon,TRUE,7,
-701310,Red Snapper,TRUE,15,
-701311,Black Cod,TRUE,30,
-701312,Bluefin Tuna,FALSE,61,
-701401,Clam,TRUE,0,
-701402,Mussel,TRUE,0,
-701403,Oyster,TRUE,0,
-701404,Squid,TRUE,0,
-701405,Shrimp,TRUE,1,
-701406,Crab,TRUE,3,
-701407,Octopus,TRUE,7,
-701408,Scallop,FALSE,15,
-701409,Lobster,TRUE,30,
-701410,King Crab,TRUE,61,
-701411,Abalone,FALSE,122,
+﻿id,name_item,can_merge,sell_price,sum_merge,tier,item_category
+100101,Drink Generator,TRUE,1,,1,Drink Generator
+100102,Drink Generator,TRUE,2,,2,Drink Generator
+100103,Drink Generator,TRUE,3,,3,Drink Generator
+100104,Drink Generator,TRUE,4,,4,Drink Generator
+100105,Drink Generator,TRUE,5,,5,Drink Generator
+100106,Drink Generator,TRUE,6,,6,Drink Generator
+100107,Drink Generator,TRUE,7,,7,Drink Generator
+100108,Drink Generator,TRUE,8,,8,Drink Generator
+100109,Drink Generator,TRUE,9,,9,Drink Generator
+100110,Drink Generator,FALSE,10,,10,Drink Generator
+100201,Fruit and Nut Generator,TRUE,1,,1,Fruit & Nut Generator
+100202,Fruit and Nut Generator,TRUE,2,,2,Fruit & Nut Generator
+100203,Fruit and Nut Generator,TRUE,3,,3,Fruit & Nut Generator
+100204,Fruit and Nut Generator,TRUE,4,,4,Fruit & Nut Generator
+100205,Fruit and Nut Generator,TRUE,5,,5,Fruit & Nut Generator
+100206,Fruit and Nut Generator,TRUE,6,,6,Fruit & Nut Generator
+100207,Fruit and Nut Generator,TRUE,7,,7,Fruit & Nut Generator
+100208,Fruit and Nut Generator,TRUE,8,,8,Fruit & Nut Generator
+100209,Fruit and Nut Generator,TRUE,9,,9,Fruit & Nut Generator
+100210,Fruit and Nut Generator,FALSE,10,,10,Fruit & Nut Generator
+100301,Protein Generator,TRUE,1,,1,Protein Generator
+100302,Protein Generator,TRUE,2,,2,Protein Generator
+100303,Protein Generator,TRUE,3,,3,Protein Generator
+100304,Protein Generator,TRUE,4,,4,Protein Generator
+100305,Protein Generator,TRUE,5,,5,Protein Generator
+100306,Protein Generator,TRUE,6,,6,Protein Generator
+100307,Protein Generator,TRUE,7,,7,Protein Generator
+100308,Protein Generator,TRUE,8,,8,Protein Generator
+100309,Protein Generator,TRUE,9,,9,Protein Generator
+100310,Protein Generator,FALSE,10,,10,Protein Generator
+100401,Vegetable Generator,TRUE,1,,1,Vegetable Generator
+100402,Vegetable Generator,TRUE,2,,2,Vegetable Generator
+100403,Vegetable Generator,TRUE,3,,3,Vegetable Generator
+100404,Vegetable Generator,TRUE,4,,4,Vegetable Generator
+100405,Vegetable Generator,TRUE,5,,5,Vegetable Generator
+100406,Vegetable Generator,TRUE,6,,6,Vegetable Generator
+100407,Vegetable Generator,TRUE,7,,7,Vegetable Generator
+100408,Vegetable Generator,TRUE,8,,8,Vegetable Generator
+100409,Vegetable Generator,TRUE,9,,9,Vegetable Generator
+100410,Vegetable Generator,FALSE,10,,10,Vegetable Generator
+100501,Seafood Generator,TRUE,1,,1,Seafood Generator
+100502,Seafood Generator,TRUE,2,,2,Seafood Generator
+100503,Seafood Generator,TRUE,3,,3,Seafood Generator
+100504,Seafood Generator,TRUE,4,,4,Seafood Generator
+100505,Seafood Generator,TRUE,5,,5,Seafood Generator
+100506,Seafood Generator,TRUE,6,,6,Seafood Generator
+100507,Seafood Generator,TRUE,7,,7,Seafood Generator
+100508,Seafood Generator,TRUE,8,,8,Seafood Generator
+100509,Seafood Generator,TRUE,9,,9,Seafood Generator
+100510,Seafood Generator,FALSE,10,,10,Seafood Generator
+100601,Grain Generator,TRUE,1,,1,Grain Generator
+100602,Grain Generator,TRUE,2,,2,Grain Generator
+100603,Grain Generator,TRUE,3,,3,Grain Generator
+100604,Grain Generator,TRUE,4,,4,Grain Generator
+100605,Grain Generator,TRUE,5,,5,Grain Generator
+100606,Grain Generator,TRUE,6,,6,Grain Generator
+100607,Grain Generator,TRUE,7,,7,Grain Generator
+100608,Grain Generator,TRUE,8,,8,Grain Generator
+100609,Grain Generator,TRUE,9,,9,Grain Generator
+100610,Grain Generator,FALSE,10,,10,Grain Generator
+200101,Juicer,TRUE,1,,1,Juicer
+200102,Juicer,TRUE,2,,2,Juicer
+200103,Juicer,TRUE,3,,3,Juicer
+200104,Juicer,TRUE,4,,4,Juicer
+200105,Juicer,TRUE,5,,5,Juicer
+200106,Juicer,TRUE,6,,6,Juicer
+200107,Juicer,TRUE,7,,7,Juicer
+200108,Juicer,TRUE,8,,8,Juicer
+200109,Juicer,TRUE,9,,9,Juicer
+200110,Juicer,FALSE,10,,10,Juicer
+200201,Chef Counter,TRUE,1,,1,Chef Counter
+200202,Chef Counter,TRUE,2,,2,Chef Counter
+200203,Chef Counter,TRUE,3,,3,Chef Counter
+200204,Chef Counter,TRUE,4,,4,Chef Counter
+200205,Chef Counter,TRUE,5,,5,Chef Counter
+200206,Chef Counter,TRUE,6,,6,Chef Counter
+200207,Chef Counter,TRUE,7,,7,Chef Counter
+200208,Chef Counter,TRUE,8,,8,Chef Counter
+200209,Chef Counter,TRUE,9,,9,Chef Counter
+200210,Chef Counter,FALSE,10,,10,Chef Counter
+200301,Grill,TRUE,1,,1,Grill
+200302,Grill,TRUE,2,,2,Grill
+200303,Grill,TRUE,3,,3,Grill
+200304,Grill,TRUE,4,,4,Grill
+200305,Grill,TRUE,5,,5,Grill
+200306,Grill,TRUE,6,,6,Grill
+200307,Grill,TRUE,7,,7,Grill
+200308,Grill,TRUE,8,,8,Grill
+200309,Grill,TRUE,9,,9,Grill
+200310,Grill,FALSE,10,,10,Grill
+200401,Pan,TRUE,1,,1,Pan
+200402,Pan,TRUE,2,,2,Pan
+200403,Pan,TRUE,3,,3,Pan
+200404,Pan,TRUE,4,,4,Pan
+200405,Pan,TRUE,5,,5,Pan
+200406,Pan,TRUE,6,,6,Pan
+200407,Pan,TRUE,7,,7,Pan
+200408,Pan,TRUE,8,,8,Pan
+200409,Pan,TRUE,9,,9,Pan
+200410,Pan,FALSE,10,,10,Pan
+200501,Oven,TRUE,1,,1,Oven
+200502,Oven,TRUE,2,,2,Oven
+200503,Oven,TRUE,3,,3,Oven
+200504,Oven,TRUE,4,,4,Oven
+200505,Oven,TRUE,5,,5,Oven
+200506,Oven,TRUE,6,,6,Oven
+200507,Oven,TRUE,7,,7,Oven
+200508,Oven,TRUE,8,,8,Oven
+200509,Oven,TRUE,9,,9,Oven
+200510,Oven,FALSE,10,,10,Oven
+300101,Gold,TRUE,0,,1,Gold
+300102,Gold,TRUE,0,,2,Gold
+300103,Gold,TRUE,0,,3,Gold
+300104,Gold,TRUE,0,,4,Gold
+300105,Gold,FALSE,0,,5,Gold
+300201,Energy,TRUE,0,,1,Energy
+300202,Energy,TRUE,0,,2,Energy
+300203,Energy,TRUE,0,,3,Energy
+300204,Energy,TRUE,0,,4,Energy
+300205,Energy,FALSE,0,,5,Energy
+300301,Diamond,TRUE,0,,1,Diamond
+300302,Diamond,TRUE,0,,2,Diamond
+300303,Diamond,TRUE,0,,3,Diamond
+300304,Diamond,TRUE,0,,4,Diamond
+300305,Diamond,FALSE,0,,5,Diamond
+400101,Blueberry Jam,FALSE,0,,1,Yogurt & Jam
+400102,Strawberry jam,FALSE,0,,2,Yogurt & Jam
+400103,Orange Marmalade,FALSE,0,,3,Yogurt & Jam
+400104,Apple Jam,FALSE,0,,4,Yogurt & Jam
+400105,Yogurt Strawberry Blueberry,FALSE,1,,5,Yogurt & Jam
+400106,Yogurt Banana Strawberry,FALSE,1,,6,Yogurt & Jam
+400107,Sunrise Mango Lassi,FALSE,10,,7,Yogurt & Jam
+400108,Yogurt Juice mix,FALSE,26,,8,Yogurt & Jam
+400109,Lemon Jam,FALSE,4,,9,Yogurt & Jam
+400201,Blueberry Juice,FALSE,0,,1,Juice
+400202,Strawberry Juice,FALSE,0,,2,Juice
+400203,Orange Juice,FALSE,0,,3,Juice
+400204,Apple Juice,FALSE,0,,4,Juice
+400205,Pineapple Juice,FALSE,33,,5,Juice
+400206,Watermelon Juice,FALSE,66,,6,Juice
+400207,Blueberry Lemon Juice,FALSE,2,,7,Juice
+400208,Orange Apple Juice,FALSE,0,,8,Juice
+400209,Purple Power,FALSE,0,,9,Juice
+400210,Spinach Apple Pineapple Juice,FALSE,50,,10,Juice
+400211,Detox & Clear Skin,FALSE,0,,11,Juice
+400212,Boost Immunity & glow,FALSE,2,,12,Juice
+400213,Carrot Apple Juice,FALSE,0,,13,Juice
+400214,"Apple, Orange & Lemon Juice",FALSE,4,,14,Juice
+400215,Tropical Sunrise,FALSE,2,,15,Juice
+400216,Pink Lemonade,FALSE,2,,16,Juice
+400301,Latte,FALSE,0,,1,Coffee Drink
+400302,Caramel Macchiato,FALSE,1,,2,Coffee Drink
+400303,Frappe,FALSE,1,,3,Coffee Drink
+400304,Iced falseffee Cream,FALSE,2,,4,Coffee Drink
+400305,Caramel Frappe,FALSE,3,,5,Coffee Drink
+400401,Grilled Sausage,FALSE,0,,1,Grilled Dish
+400402,Grilled Ham,FALSE,0,,2,Grilled Dish
+400403,Grilled Pork Belly,FALSE,0,,3,Grilled Dish
+400404,Grilled Pork Knuckle,FALSE,0,,4,Grilled Dish
+400405,Grilled Pork Ribs,FALSE,1,,5,Grilled Dish
+400406,Grilled Beef Ribs,FALSE,4,,6,Grilled Dish
+400407,Beef Steak & Potato,FALSE,11,,7,Grilled Dish
+400408,Grilled Chicken Wing,FALSE,0,,8,Grilled Dish
+400409,Grilled Chicken,FALSE,2,,9,Grilled Dish
+400410,Grilled Chicken Breast,FALSE,0,,10,Grilled Dish
+400411,Grilled Chicken Drumstick,FALSE,1,,11,Grilled Dish
+400412,Grilled Red Onion and Bell Pepper,FALSE,8,,12,Grilled Dish
+400413,Grilled Potato Cheese,FALSE,17,,13,Grilled Dish
+400414,Grilled Cauliflower,FALSE,8,,14,Grilled Dish
+400415,Grilled Eggplant,FALSE,2,,15,Grilled Dish
+400416,Grilled Squid,FALSE,1,,16,Grilled Dish
+400417,Grilled Shrimp,FALSE,2,,17,Grilled Dish
+400418,Grilled Octopus,FALSE,8,,18,Grilled Dish
+400419,Grilled Sea Bream,FALSE,0,,19,Grilled Dish
+400420,Grilled Chicken Breast & Bell Pepper,FALSE,0,,20,Grilled Dish
+400421,Grilled Mackerel,FALSE,2,,21,Grilled Dish
+400422,BBQ Duck,FALSE,10,,22,Grilled Dish
+400423,Grilled falsern,FALSE,24,,23,Grilled Dish
+400424,Surf & Turf,FALSE,36,,24,Grilled Dish
+400425,Grilled Lemon Butter Scallops And Asparagus,FALSE,31,,25,Grilled Dish
+400426,Grilled Turkey Leg,FALSE,135,,26,Grilled Dish
+400501,Stir-fried Egg,FALSE,0,,1,Pan Dish
+400502,Stir-fried Clam,FALSE,0,,2,Pan Dish
+400503,Scallops with Cauliflower,FALSE,25,,3,Pan Dish
+400504,Creamy Chicken Breast,FALSE,6,,4,Pan Dish
+400505,Fried Brofalseli,FALSE,4,,5,Pan Dish
+400506,Fried Asparagus,FALSE,4,,6,Pan Dish
+400507,Pan-seared falsed with Kale,FALSE,9,,7,Pan Dish
+400508,Shrimp with Asparagus,FALSE,6,,8,Pan Dish
+400509,Beef Asparagus Stir Fry,FALSE,14,,9,Pan Dish
+400510,Fried Salmon,FALSE,4,,10,Pan Dish
+400511,Citrus Sea Bream,FALSE,0,,11,Pan Dish
+400601,Tomato Slices,FALSE,0,,1,Salad & Raw
+400602,Onion Slices,FALSE,0,,2,Salad & Raw
+400603,Cucumber Slices,FALSE,0,,3,Salad & Raw
+400604,Shredded Lettuce,FALSE,0,,4,Salad & Raw
+400605,Caprese Salad,FALSE,16,,5,Salad & Raw
+400606,Apple Blue Cheese Salad,FALSE,67,,6,Salad & Raw
+400607,Shrimp falsecktail,FALSE,2,,7,Salad & Raw
+400608,American Potato Salad,FALSE,34,,8,Salad & Raw
+400609,Cabbage Slaw,FALSE,1,,9,Salad & Raw
+400701,Defalsenstructed Cheesecake,FALSE,37,,1,Dessert
+400702,Apple falsempote,FALSE,9,,2,Dessert
+400703,Berry & falsefalsenut Trifle,FALSE,3,,3,Dessert
+400704,Passion Fruit Panna falsetta,FALSE,7,,4,Dessert
+400705,Banana Split,FALSE,18,,5,Dessert
+400706,Burnt Cream,FALSE,35,,6,Dessert
+400801,falsern with Cheese,FALSE,158,,1,Baked Dish
+500101,CardPlus 8,TRUE,,,1,CardPlus
+500102,CardPlus 16,TRUE,,,2,CardPlus
+500103,CardPlus 32,FALSE,,,3,CardPlus
+500201,Sandglass 1,TRUE,1,,1,Sandglass
+500202,Sandglass 2,TRUE,2,,2,Sandglass
+500203,Sandglass 3,TRUE,3,,3,Sandglass
+500204,Sandglass 4,TRUE,4,,4,Sandglass
+500205,Sandglass 5,TRUE,5,,5,Sandglass
+500206,Sandglass 6,TRUE,6,,6,Sandglass
+500207,Sandglass 7,TRUE,7,,7,Sandglass
+500208,Sandglass 8,FALSE,8,,8,Sandglass
+500301,Scissors 1,TRUE,1,,1,Scissors
+500302,Scissors 2,TRUE,2,,2,Scissors
+500303,Scissors 3,TRUE,3,,3,Scissors
+500304,Scissors 4,FALSE,4,,4,Scissors
+500401,StandardUnlimitedEnergy,FALSE,,,1,UnlimitedEnergy
+500501,UpgradedUnlimitedEnergy,FALSE,,,1,UpgradedEnergy
+500601,Blue Duplicate Camera,TRUE,1,,1,DuplicateCamera
+500602,Purple Duplicate Camera,TRUE,2,,2,DuplicateCamera
+500603,Orange Duplicate Camera,FALSE,3,,3,DuplicateCamera
+500701,MagicWand 3,TRUE,1,,1,MagicWand
+500702,MagicWand 6,TRUE,2,,2,MagicWand
+500703,MagicWand 12,FALSE,3,,3,MagicWand
+500801,Blue Rocket Cracker,TRUE,1,,1,RocketCracker
+500802,Purple Rocket Cracker,TRUE,2,,2,RocketCracker
+500803,Orange Rocket Craker,FALSE,3,,3,RocketCracker
+500901,Raccoon Timer,TRUE,4,,1,Timer
+500902,Squirrel Timer,TRUE,5,,2,Timer
+500903,Monkey Timer,TRUE,6,,3,Timer
+500904,Rabbit Timer,TRUE,7,,4,Timer
+500905,Fox Timer,FALSE,8,,5,Timer
+501001,Wild Card,FALSE,,,1,WildCard
+501101,SpeedBoost 1,TRUE,1,,1,SpeedBoost
+501102,SpeedBoost 2,TRUE,2,,2,SpeedBoost
+501103,SpeedBoost 3,TRUE,3,,3,SpeedBoost
+501104,SpeedBoost 4,TRUE,4,,4,SpeedBoost
+501105,SpeedBoost 5,TRUE,5,,5,SpeedBoost
+501106,SpeedBoost 6,TRUE,6,,6,SpeedBoost
+501107,SpeedBoost 7,TRUE,7,,7,SpeedBoost
+501108,SpeedBoost 8,FALSE,8,,8,SpeedBoost
+600101,Energy Chest,FALSE,,,1,Energy Chest
+600201,Chef  Chest,FALSE,,,1,Chef Chest
+600301,Equipment Chest,FALSE,,,1,Equipment Chest
+600401,Assistants Chest,FALSE,,,1,Assistants Chest
+600501,Daily Gift,FALSE,,,1,Daily Gift
+600601,LuckyHandbag,FALSE,,,1,LuckyHandbag
+600701,LuckyBox,FALSE,,,1,LuckyBox
+600801,Gift,FALSE,,,1,Gift
+600901,Equipment Box,FALSE,,,1,Equipment Box
+601001,Coin Box,FALSE,,,1,Coin Box
+601101,Choice Chest,FALSE,,,1,Choice Chest
+601201,Flush Gift,FALSE,,,1,Flush Gift
+601301,Trainee Box,FALSE,,,1,Trainee Box
+700101,falseffee Bean,TRUE,0,,1,Coffee Ingredient
+700102,Ground falseffee,TRUE,0,,2,Coffee Ingredient
+700103,Cup of falseffee,TRUE,0,,3,Coffee Ingredient
+700104,Iced falseffee,TRUE,0,,4,Coffee Ingredient
+700105,falseffee - to - Go,TRUE,1,,5,Coffee Ingredient
+700106,Iced falseffee - to - Go,TRUE,3,,6,Coffee Ingredient
+700107,falseld Brew,TRUE,5,,7,Coffee Ingredient
+700108,Pour ove falseffee,TRUE,7,,8,Coffee Ingredient
+700109,French press,TRUE,9,,9,Coffee Ingredient
+700110,Aero press,TRUE,15,,10,Coffee Ingredient
+700111,Moka Pot,TRUE,30,,11,Coffee Ingredient
+700112,Syphon falseffee,FALSE,61,,12,Coffee Ingredient
+700201,Cốc nước lọc,TRUE,0,,1,Soft Drink
+700202,Chai mountain Dew (Nước ngọt có ga),TRUE,1,,2,Soft Drink
+700203,chai Lipton Ice Tea (Trà chanh đóng chai),TRUE,3,,3,Soft Drink
+700204,Lon Schweppes (Soda),TRUE,5,,4,Soft Drink
+700205,Lon 7-Up (Soda chanh),TRUE,7,,5,Soft Drink
+700206,Lon Pepsi (falseca),TRUE,9,,6,Soft Drink
+700207,Lon Fanta (Nước ngọt vị cam),TRUE,15,,7,Soft Drink
+700208,Lon falseca,TRUE,30,,8,Soft Drink
+700209,Lon Redbull (xanh trắng),TRUE,61,,9,Soft Drink
+700210,Lon Monster Energy,FALSE,122,,10,Soft Drink
+700301,Ice Cube,TRUE,0,,1,Dairy
+700302,Milk Bottle,TRUE,1,,2,Dairy
+700303,Yogurt,TRUE,3,,3,Dairy
+700304,Fresh Cream,TRUE,5,,4,Dairy
+700305,Cheddar Cheese,TRUE,7,,5,Dairy
+700306,Butter,TRUE,9,,6,Dairy
+700307,Mozzarella,TRUE,15,,7,Dairy
+700308,Brie Cheese,TRUE,30,,8,Dairy
+700309,Blue Cheese,TRUE,61,,9,Dairy
+700310,Truffle Cheese,FALSE,122,,10,Dairy
+700401,Glass Bottle,TRUE,0,,1,Glassware
+700402,Glass Bowl,TRUE,1,,2,Glassware
+700403,Glass Cup,TRUE,2,,3,Glassware
+700404,Crystal Plate,TRUE,4,,4,Glassware
+700405,Crystal Vase,TRUE,8,,5,Glassware
+700406,Crystal Cake Stand,TRUE,16,,6,Glassware
+700501,Blueberry,TRUE,0,,1,Fruit
+700502,Strawberry,TRUE,0,,2,Fruit
+700503,Orange,TRUE,0,,3,Fruit
+700504,Apple,TRUE,1,,4,Fruit
+700505,Banana,TRUE,3,,5,Fruit
+700506,Coconut,TRUE,5,,6,Fruit
+700507,Lemon,TRUE,7,,7,Fruit
+700508,Passion Fruit,TRUE,9,,8,Fruit
+700509,Mango,TRUE,11,,9,Fruit
+700510,Pomegranate,TRUE,15,,10,Fruit
+700511,Pineapple,TRUE,30,,11,Fruit
+700512,Watermelon,FALSE,61,,12,Fruit
+700601,Sugarcane,TRUE,0,,1,Sugar & Candy
+700602,Sugar,TRUE,1,,2,Sugar & Candy
+700603,Brown Sugar,TRUE,2,,3,Sugar & Candy
+700604,Caramel,TRUE,3,,4,Sugar & Candy
+700605,Honey,TRUE,5,,5,Sugar & Candy
+700606,Candy,TRUE,7,,6,Sugar & Candy
+700607,Marshmallow,TRUE,9,,7,Sugar & Candy
+700608,Sfalseop of Ice Cream,FALSE,15,,8,Sugar & Candy
+700701,falsefalsenut Water,TRUE,0,,1,Coconut Product
+700702,falsefalsenut Milk,TRUE,1,,2,Coconut Product
+700703,falsefalsenut Jelly,TRUE,3,,3,Coconut Product
+700704,falsefalsenut Ice Cream,TRUE,7,,4,Coconut Product
+700705,falsefalsenut Soda,TRUE,15,,5,Coconut Product
+700706,falsefalsenut Candy,TRUE,31,,6,Coconut Product
+700707,falsefalsenut Pudding,FALSE,62,,7,Coconut Product
+700801,falsefalsenut Shell,TRUE,0,,1,Coconut Decor
+700802,falsefalsenut Shell Plate,TRUE,1,,2,Coconut Decor
+700803,falsefalsenut Shell Spoon,TRUE,3,,3,Coconut Decor
+700804,falsefalsenut Shell Cup,TRUE,7,,4,Coconut Decor
+700805,falsefalsenut Shell Dish,TRUE,15,,5,Coconut Decor
+700806,falsefalsenut Shell Bowl,TRUE,31,,6,Coconut Decor
+700807,falsefalsenut Shell Pot,FALSE,62,,7,Coconut Decor
+700901,Ground Meat,TRUE,0,,1,Red Meat
+700902,Fresh Sausage,TRUE,0,,2,Red Meat
+700903,Ham,TRUE,0,,3,Red Meat
+700904,Pork Belly,TRUE,1,,4,Red Meat
+700905,Pork Knuckle,TRUE,3,,5,Red Meat
+700906,Pork Ribs,TRUE,5,,6,Red Meat
+700907,Beef Tenderloin,TRUE,7,,7,Red Meat
+700908,Beef Ribs,TRUE,9,,8,Red Meat
+700909,Diced Goat Meat,TRUE,11,,9,Red Meat
+700910,Lamb Rack,TRUE,15,,10,Red Meat
+700911,Whole Goat Leg,TRUE,30,,11,Red Meat
+700912,Whole Lamb,FALSE,61,,12,Red Meat
+701001,Chicken Egg,TRUE,0,,1,Poultry
+701002,Chicken Breast,TRUE,1,,2,Poultry
+701003,Chicken Wing,TRUE,3,,3,Poultry
+701004,Chicken Drumstick,TRUE,5,,4,Poultry
+701005,Whole Chicken,TRUE,7,,5,Poultry
+701006,Duck Breast,TRUE,9,,6,Poultry
+701007,Whole Duck,TRUE,11,,7,Poultry
+701008,Whole Goose,TRUE,15,,8,Poultry
+701009,Quail,TRUE,30,,9,Poultry
+701010,Whole Pheasant,TRUE,61,,10,Poultry
+701011,Turkey,FALSE,122,,11,Poultry
+701101,Cucumber,TRUE,0,,1,Vegetable
+701102,Tomato,TRUE,0,,2,Vegetable
+701103,Red Onion,TRUE,0,,3,Vegetable
+701104,Carrot,TRUE,1,,4,Vegetable
+701105,Bell Pepper,TRUE,3,,5,Vegetable
+701106,Potato,TRUE,5,,6,Vegetable
+701107,Eggplant,TRUE,7,,7,Vegetable
+701108,Asparagus,TRUE,9,,8,Vegetable
+701109,Beetroot,TRUE,11,,9,Vegetable
+701110,falsern,TRUE,15,,10,Vegetable
+701111,Okra,TRUE,30,,11,Vegetable
+701112,Peas,FALSE,61,,12,Vegetable
+701201,Sprouts,TRUE,0,,1,Leafy Vegetable
+701202,Lettuce,TRUE,1,,2,Leafy Vegetable
+701203,Kale,TRUE,3,,3,Leafy Vegetable
+701204,Cabbage,TRUE,5,,4,Leafy Vegetable
+701205,Red Cabbage,TRUE,7,,5,Leafy Vegetable
+701206,Brocfalseli,TRUE,9,,6,Leafy Vegetable
+701207,Cauliflower,TRUE,11,,7,Leafy Vegetable
+701208,Spinach,TRUE,15,,8,Leafy Vegetable
+701209,Celery,TRUE,30,,9,Leafy Vegetable
+701210,Arugula,TRUE,61,,10,Leafy Vegetable
+701211,Artichoke,TRUE,122,,11,Leafy Vegetable
+701212,Truffle Mushroom,FALSE,245,,12,Leafy Vegetable
+701301,Anchovy,TRUE,0,,1,Fish
+701302,Mackerel,TRUE,0,,2,Fish
+701303,Tilapia,TRUE,0,,3,Fish
+701304,Sea Bream,TRUE,1,,4,Fish
+701305,falsed,TRUE,3,,5,Fish
+701306,Halibut,TRUE,5,,6,Fish
+701307,Salmon,TRUE,7,,7,Fish
+701308,Sae Bass,TRUE,9,,8,Fish
+701309,Sturgeon,TRUE,11,,9,Fish
+701310,Red Snapper,TRUE,15,,10,Fish
+701311,Black falsed,TRUE,30,,11,Fish
+701312,Bluefin Tuna,FALSE,61,,12,Fish
+701401,Clam,TRUE,0,,1,Shellfish
+701402,Mussel,TRUE,1,,2,Shellfish
+701403,Oyster,TRUE,3,,3,Shellfish
+701404,Squid,TRUE,5,,4,Shellfish
+701405,Shrimp,TRUE,7,,5,Shellfish
+701406,Crab,TRUE,9,,6,Shellfish
+701407,Octopus,TRUE,11,,7,Shellfish
+701408,Scallop,TRUE,15,,8,Shellfish
+701409,Lobster,TRUE,30,,9,Shellfish
+701410,King Crab,TRUE,61,,10,Shellfish
+701411,Abalone,FALSE,122,,11,Shellfish
+400512,Pan Fried Patty,FALSE,0,,12,Pan Dish
+400901,Fried Okra,FALSE,30,,1,Fast Food
+400902,Hot Dog,FALSE,0,,2,Fast Food
+400903,Cheese Dog,FALSE,4,,3,Fast Food
+400904,Pork Burger,FALSE,0,,4,Fast Food
+400905,Cheese Burger,FALSE,4,,5,Fast Food
+400906,Corn Dog,FALSE,3,,6,Fast Food
+400907,Fried Chicken Wings,FALSE,0,,7,Fast Food
+400908,Fried Chicken Breast,FALSE,0,,8,Fast Food
+400909,Fried Chicken Drumstick,FALSE,0,,9,Fast Food
+400910,Fried Whole Chicken,FALSE,1,,10,Fast Food
+400911,Onion Rings,FALSE,0,,11,Fast Food
+400912,Tator Tots,FALSE,8,,12,Fast Food
+400913,Loaded Tots,FALSE,4,,13,Fast Food
+400610,Potato Strips,FALSE,0,,10,Salad & Raw
+400914,Fries,FALSE,0,,14,Fast Food
+400915,Texas Cheese Fries,FALSE,19,,15,Fast Food
+400427,Delmonico Steak,FALSE,1,,27,Grilled Dish
+400916,Steak & Blue Cheese Sandwich,FALSE,61,,16,Fast Food
+400917,Hush Puppies,FALSE,0,,17,Fast Food
+400802,Baked Hotdog Bun,FALSE,0,,2,Baked Dish
+400803,Baked Burger Bun,FALSE,0,,3,Baked Dish
+400804,Toast,FALSE,0,,4,Baked Dish
+400707,Donut,FALSE,0,,7,Dessert
+400708,Donut Chocolate,FALSE,0,,8,Dessert
+400709,Jelly Donut,FALSE,0,,9,Dessert
+400806,Croissant,FALSE,0,,6,Baked Dish
+400807,Apple Pie,FALSE,0,,7,Baked Dish
+400808,Blueberry Pie,FALSE,0,,8,Baked Dish
+400809,Banana Bread,FALSE,8,,9,Baked Dish
+400810,Fudge Brownies,FALSE,7,,10,Baked Dish
+400811,Chocolate Chip Cookies,FALSE,8,,11,Baked Dish
+400306,Mocha,FALSE,0,,6,Coffee Drink
+400307,Mocha Frappe,FALSE,0,,7,Coffee Drink
+701501,Mung beans,TRUE,1,,1,Grain & Legume
+701502,Soybeans,TRUE,3,,2,Grain & Legume
+701503,Red lentils,TRUE,5,,3,Grain & Legume
+701504,Corn flour,TRUE,7,,4,Grain & Legume
+701505,Wheat flour,TRUE,9,,5,Grain & Legume
+701506,Breadcrumbs,TRUE,11,,6,Grain & Legume
+701507,Potato flour,TRUE,15,,7,Grain & Legume
+701508,Rice,TRUE,30,,8,Grain & Legume
+701509,Oats,TRUE,61,,9,Grain & Legume
+701510,Quinoa seeds,TRUE,122,,10,Grain & Legume
+701511,Buckwheat seeds,TRUE,245,,11,Grain & Legume
+701512,Sweet potato,FALSE,49,,12,Grain & Legume
+701601,Sesame seeds,TRUE,1,,1,Nut & Seed
+701602,Pumpkin seeds,TRUE,3,,2,Nut & Seed
+701603,Pistachios,TRUE,5,,3,Nut & Seed
+701604,Peanuts,TRUE,7,,4,Nut & Seed
+701605,Almonds,TRUE,9,,5,Nut & Seed
+701606,Cashews,TRUE,11,,6,Nut & Seed
+701607,Walnuts,TRUE,15,,7,Nut & Seed
+701608,Macadamia nuts,TRUE,30,,8,Nut & Seed
+701609,Hazelnuts,TRUE,61,,9,Nut & Seed
+701610,Pine nuts,FALSE,122,,10,Nut & Seed
+701701,Peanuts,TRUE,2,,1,Nut & Chocolate
+701702,Peanut butter,TRUE,4,,2,Nut & Chocolate
+701703,Cocoa sauce,TRUE,6,,3,Nut & Chocolate
+701704,Dark chocolate,TRUE,8,,4,Nut & Chocolate
+701705,White chocolate,FALSE,10,,5,Nut & Chocolate
+401001,Hot Dog Bun,FALSE,0,,1,Dough
+401002,Burger Bun,FALSE,0,,2,Dough
+401003,Toast Dough,FALSE,1,,3,Dough
+401004,Donut Dough,FALSE,0,,4,Dough
+401005,Pie Crust,FALSE,1,,5,Dough
+401006,Croissant Dough,FALSE,1,,6,Dough
+800101,Cat,TRUE,1,,1,Cat
+800102,Cat,TRUE,2,,2,Cat
+800103,Cat,TRUE,3,,3,Cat
+800104,Cat,TRUE,4,,4,Cat
+800105,Cat,TRUE,5,,5,Cat
+800106,Cat,TRUE,6,,6,Cat
+800107,Cat,TRUE,7,,7,Cat
+800108,Cat,TRUE,8,,8,Cat
+800109,Cat,TRUE,9,,9,Cat
+800110,Cat,TRUE,10,,10,Cat
+800111,Cat,TRUE,11,,11,Cat
+800112,Cat,FALSE,12,,12,Cat
+800301,DorasCurrency,TRUE,1,,1,DorasCurrency
+800302,DorasCurrency,FALSE,2,,2,DorasCurrency

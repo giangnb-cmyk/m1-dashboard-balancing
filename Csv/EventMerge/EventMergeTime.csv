@@ -1,6 +1,6 @@
-event_type,merge_time_seconds
-None,60
-PetalPlateParty,345600
-SpeedFeastRace,259200
-PizzaTowerRace,259200
-FortuneMeetsCookie,259200
+event_type,merge_time_seconds,time_next_merge_seconds
+None,60,60
+PetalPlateParty,259200,432000
+SpeedFeastRace,259200,432000
+PizzaTowerRace,259200,432000
+FortuneMeetsCookie,259200,432000

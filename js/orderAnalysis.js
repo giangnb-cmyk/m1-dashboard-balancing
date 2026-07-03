@@ -16,6 +16,7 @@ const OrderAnalysis = (() => {
 
     let _chartView = 'order';
     let _lastRenderArgs = null;
+    let _previewCtx = null;   // OrderPreview context (recipe/gen/tier lookups), built once
 
     // ── Helpers ───────────────────────────────────────────────────────────────
 
@@ -297,90 +298,25 @@ const OrderAnalysis = (() => {
 
     // ── Batch cards ───────────────────────────────────────────────────────────
 
+    /** Batch/order preview cards (Unity-style) — delegated to OrderPreview module. */
     function renderBatchCards(batches, orderMap, energyMap) {
         const container = $('oa-batches-container');
-        if (!container) return;
+        if (!container || typeof OrderPreview === 'undefined') return;
 
-        // compute per-batch max energy for relative bar scaling
-        const batchMaxEnergy = batches.map(batch =>
-            getBatchOrderIds(batch).reduce((mx, oid) => {
-                const o = orderMap[oid];
-                return o ? Math.max(mx, getOrderEnergy(o, energyMap)) : mx;
-            }, 1)
-        );
+        if (!_previewCtx) _previewCtx = OrderPreview.buildContext(window.GameData, energyMap);
 
-        container.innerHTML = batches.map((batch, bi) => {
-            const color = BATCH_PALETTE[bi % BATCH_PALETTE.length];
-            const maxEnergy = batchMaxEnergy[bi];
-            const oids = getBatchOrderIds(batch);
+        const avgEnergy = oids => {
+            const es = oids.map(oid => orderMap[oid] ? getOrderEnergy(orderMap[oid], energyMap) : 0);
+            return es.length ? +(es.reduce((a, b) => a + b, 0) / es.length).toFixed(1) : 0;
+        };
 
-            const orderRows = oids.map((oid, idx) => {
-                const order = orderMap[oid];
-                if (!order) return '';
-                const energy = getOrderEnergy(order, energyMap);
-                const gold   = getOrderGold(order);
-                const pct    = maxEnergy > 0 ? Math.round((energy / maxEnergy) * 100) : 0;
-                const npc    = order.idNPC ? `NPC ${order.idNPC}` : '';
-
-                const itemParts = [];
-                for (let i = 1; i <= 2; i++) {
-                    const id   = order[`item${i}_id`];
-                    const name = order[`item${i}_name`] || id;
-                    const amt  = parseInt(order[`item${i}_amount`]) || 0;
-                    if (!id) continue;
-                    itemParts.push(
-                        `<span class="mono" style="color:var(--energy);font-size:0.75rem">${id}</span>`
-                        + ` <span style="color:#e2e8f0">${name}</span>`
-                        + (amt > 1 ? ` <span style="color:var(--gold)">×${amt}</span>` : '')
-                    );
-                }
-
-                return `
-                    <div style="display:grid;grid-template-columns:3rem 1fr auto;
-                                padding:0.55rem 1rem;gap:0.75rem;align-items:center;
-                                border-bottom:1px solid rgba(255,255,255,0.04);
-                                background:${idx % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.01)'}">
-                        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
-                            <span class="mono" style="color:var(--text-muted);font-size:0.78rem;font-weight:600">#${oid}</span>
-                            ${npc ? `<span style="font-size:0.68rem;color:#818cf8;white-space:nowrap">${npc}</span>` : ''}
-                        </div>
-                        <div style="display:flex;flex-direction:column;gap:2px;font-size:0.82rem;line-height:1.4">
-                            ${itemParts.join('<div style="height:2px"></div>')}
-                        </div>
-                        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px;min-width:5.5rem">
-                            <span class="mono" style="color:var(--energy);font-weight:700;font-size:0.88rem">${energy > 0 ? energy + ' ⚡' : '—'}</span>
-                            <span class="mono" style="color:var(--gold);font-size:0.75rem">${gold > 0 ? gold + ' 💰' : ''}</span>
-                            <div style="width:60px;height:3px;border-radius:2px;background:rgba(255,255,255,0.07)">
-                                <div style="height:3px;border-radius:2px;background:${color};width:${pct}%"></div>
-                            </div>
-                        </div>
-                    </div>`;
-            }).join('');
-
-            const canRew = batch.canReceiveReward === '1'
-                ? `<span style="color:#4ade80;font-size:0.72rem;font-weight:500">✓ Reward</span>`
-                : `<span style="color:#475569;font-size:0.72rem">✗ No reward</span>`;
-
-            const batchEnergies = oids.map(oid => orderMap[oid] ? getOrderEnergy(orderMap[oid], energyMap) : 0);
-            const avgEnergy = batchEnergies.length
-                ? +(batchEnergies.reduce((a, b) => a + b, 0) / batchEnergies.length).toFixed(1)
-                : 0;
-
-            return `
-                <div class="data-table-card glass" style="margin-bottom:1rem;padding:0;overflow:hidden">
-                    <div style="padding:0.75rem 1rem;display:flex;align-items:center;gap:0.75rem;
-                                border-bottom:3px solid ${color}22;background:rgba(255,255,255,0.02)">
-                        <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${color};flex-shrink:0"></span>
-                        <span class="mono" style="color:var(--text-muted);font-size:0.73rem">#${batch.id}</span>
-                        <span style="font-size:0.82rem;font-weight:600;color:${color}">${batch.themeType}</span>
-                        ${canRew}
-                        <span style="margin-left:auto;font-size:0.73rem;color:var(--text-muted)">
-                            ${oids.length} orders &nbsp;·&nbsp; avg <span class="mono" style="color:var(--energy)">${avgEnergy} ⚡</span>
-                        </span>
-                    </div>
-                    ${orderRows}
-                </div>`;
-        }).join('');
+        OrderPreview.render(container, batches, orderMap, _previewCtx, {
+            palette:     BATCH_PALETTE,
+            getOrderIds: getBatchOrderIds,
+            getItemIds:  order => [order.item1_id, order.item2_id].filter(Boolean),
+            orderEnergy: order => getOrderEnergy(order, energyMap),
+            avgEnergy,
+        });
     }
 
     // ── Main render ───────────────────────────────────────────────────────────

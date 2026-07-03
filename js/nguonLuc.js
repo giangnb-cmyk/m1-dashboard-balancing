@@ -149,9 +149,23 @@ const NguonLuc = (() => {
         return              { bg: 'rgba(239,68,68,0.9)',    text: '#fca5a5' };
     }
 
+    // ── Icon resolver ─────────────────────────────────────────────────────────
+    // Generator id (100xxx) có icon trực tiếp; tool id (2xxx) không → tra theo tên qua toolReps.
+    function rowIconHtml(row, kind) {
+        const M = window.IconManifest || { items: {}, toolReps: {} };
+        let iconId = null;
+        if (M.items[row.id]) iconId = row.id;
+        else if (kind === 'tool') iconId = M.toolReps[(row.name || '').replace(/\s+/g, '')] || null;
+        return iconId
+            ? `<img class="nl-row-ic" src="assets/items/${iconId}.png" loading="lazy" alt="">`
+            : `<span class="nl-row-ic nl-row-ic-ph"></span>`;
+    }
+
     // ── Matrix Renderer ───────────────────────────────────────────────────────
 
-    function renderMatrix({ containerId, rows, columns, maxVal, rowLabel, totalLabel, search }) {
+    const NAME_W = 176;
+
+    function renderMatrix({ containerId, rows, columns, maxVal, rowLabel, totalLabel, search, kind }) {
         const container = document.getElementById(containerId);
         if (!container) return;
 
@@ -216,16 +230,21 @@ const NguonLuc = (() => {
 
             return `<tr style="border-bottom:1px solid rgba(255,255,255,.03)">
                 <td style="padding:.4rem .75rem;white-space:nowrap;position:sticky;left:0;z-index:2;
-                           background:#0f172a;min-width:140px;max-width:140px;width:140px;
+                           background:#0f172a;min-width:${NAME_W}px;max-width:${NAME_W}px;width:${NAME_W}px;
                            border-right:1px solid rgba(148,163,184,.08)">
-                    <div style="font-size:.8rem;font-weight:600;color:#e2e8f0;
-                                overflow:hidden;text-overflow:ellipsis">${row.name}</div>
-                    <div style="font-size:.67rem;color:#475569;
-                                font-family:'JetBrains Mono',monospace">${row.id}</div>
+                    <div style="display:flex;align-items:center;gap:.5rem;min-width:0">
+                        ${rowIconHtml(row, kind)}
+                        <div style="min-width:0">
+                            <div style="font-size:.8rem;font-weight:600;color:#e2e8f0;
+                                        overflow:hidden;text-overflow:ellipsis">${row.name}</div>
+                            <div style="font-size:.67rem;color:#475569;
+                                        font-family:'JetBrains Mono',monospace">${row.id}</div>
+                        </div>
+                    </div>
                 </td>
                 <td style="text-align:center;padding:.3rem .5rem;
                            font-family:'JetBrains Mono',monospace;font-weight:700;
-                           font-size:.9rem;color:#fbbf24;position:sticky;left:140px;z-index:2;
+                           font-size:.9rem;color:#fbbf24;position:sticky;left:${NAME_W}px;z-index:2;
                            background:#0f172a;min-width:60px;width:60px;
                            border-right:1px solid rgba(148,163,184,.08)">${row.total.toLocaleString()}</td>
                 ${cells}
@@ -240,11 +259,11 @@ const NguonLuc = (() => {
                             <th rowspan="2"
                                 style="position:sticky;left:0;z-index:5;background:#1e293b;
                                        padding:.5rem .75rem;text-align:left;font-size:.72rem;
-                                       color:#94a3b8;white-space:nowrap;min-width:140px;max-width:140px;
+                                       color:#94a3b8;white-space:nowrap;min-width:${NAME_W}px;max-width:${NAME_W}px;
                                        border-right:1px solid rgba(148,163,184,.1);
                                        border-bottom:1px solid rgba(148,163,184,.1)">${rowLabel}</th>
                             <th rowspan="2"
-                                style="position:sticky;left:140px;z-index:5;background:#1e293b;
+                                style="position:sticky;left:${NAME_W}px;z-index:5;background:#1e293b;
                                        padding:.4rem .5rem;font-size:.68rem;color:#fbbf24;
                                        white-space:nowrap;min-width:60px;width:60px;text-align:center;
                                        border-right:1px solid rgba(148,163,184,.1);
@@ -271,12 +290,12 @@ const NguonLuc = (() => {
         renderMatrix({
             containerId: 'nl-gen-matrix',
             rows: genRows, columns, maxVal: genMax,
-            rowLabel: 'Generator Cần Dùng', totalLabel: 'Tổng Lượt Drop', search,
+            rowLabel: 'Generator Cần Dùng', totalLabel: 'Tổng Lượt Drop', search, kind: 'gen',
         });
         renderMatrix({
             containerId: 'nl-tool-matrix',
             rows: toolRows, columns, maxVal: toolMax,
-            rowLabel: 'Tool Cần Dùng', totalLabel: 'Tổng Lượt Craft', search,
+            rowLabel: 'Tool Cần Dùng', totalLabel: 'Tổng Lượt Craft', search, kind: 'tool',
         });
     }
 

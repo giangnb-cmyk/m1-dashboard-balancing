@@ -1,135 +1,158 @@
-id,item_type,rate_type,item_id,rate,time_cooldown,cost_energy,min_count,max_count,deduct_rate,gem_to_min,,,
-100204,Fruit,75,700501,75,7200,1,8,24,,17,,,
-,SugarAndCandy,25,700601,25,,,,,,,,,
-100205,Fruit,75,700501,50,5900,1,10,30,,26,,,
-,,,700502,30,,,,,,,,,
-,SugarAndCandy,25,700601,20,,,,,,,,,
-100206,Fruit,75,700501,45,4821,1,12,36,,30,,,
-,,,700502,20,,,,,,,,,
-,,,700503,10,,,,,,,,,
-,SugarAndCandy,25,700601,25,,,,,,,,,
-100207,Fruit,75,700501,40,3992,1,14,42,,39,,,
-,,,700502,22.5,,,,,,,,,
-,,,700503,12.5,,,,,,,,,
-,SugarAndCandy,25,700601,25,,,,,,,,,
-100208,Fruit,75,700501,35,3480,1,16,162,,50,,,
-,,,700502,25,,,,,,,,,
-,,,700503,15,,,,,,,,,
-,SugarAndCandy,25,700601,25,,,,,,,,,
-100209,Fruit,75,700501,48.14,2697,1,18,182,,73,,, 
-,,,700502,15.76,,,,,,,,,
-,,,700503,11.1,,,,,,,,,
-,SugarAndCandy,25,700601,25,,,,,,,,,
-100210,Fruit,75,700501,50,2571,1,20,205,,86,,,
-,,,700502,15,,,,,,,,,
-,,,700503,10,,,,,,,,,
-,SugarAndCandy,25,700601,25,,,,,,,,,
-100104,Coffee,70.7,700101,70.7,3619,1,8,24,,11,,,
-,SoftDrinks,12.5,700201,12.5,,,,,,,,,
-,DairyProducts,16.8,700301,16.8,,,,,,,,,
-100105,Coffee,66.7,700101,36.7,2965,1,10,30,,15,,,
-,,,700102,30,,,,,,,,,
-,SoftDrinks,16.7,700201,16.7,,,,,,,,,
-,DairyProducts,16.6,700301,16.6,,,,,,,,,
-100106,Coffee,72.2,700101,41.7,2438,1,12,36,,20,,,
-,,,700102,25,,,,,,,,,
-,,,700103,5.6,,,,,,,,,
-,SoftDrinks,13.9,700201,13.9,,,,,,,,,
-,DairyProducts,13.9,700301,13.9,,,,,,,,,
-100107,Coffee,69,700101,45.2,2006,1,14,42,,25,,,
-,,,700102,16.7,,,,,,,,,
-,,,700103,7.1,,,,,,,,,
-,SoftDrinks,16.7,700201,16.7,,,,,,,,,
-,DairyProducts,14.3,700301,14.3,,,,,,,,,
-100108,Coffee,68.5,700101,45.2,1749,1,16,161,,33,,,
-,,,700102,16.7,,,,,,,,,
-,,,700103,7.1,,,,,,,,,
-,SoftDrinks,16.7,700201,16.7,,,,,,,,,
-,DairyProducts,14.8,700301,14.3,,,,,,,,,
-100109,Coffee,67.8,700101,45.2,1355,1,18,182,,47,,,
-,,,700102,16.7,,,,,,,,,
-,,,700103,7.1,,,,,,,,,
-,SoftDrinks,17.1,700201,16.7,,,,,,,,,
-,DairyProducts,15.1,700301,14.3,,,,,,,,,
-100110,Coffee,67.8,700101,45.2,1292,1,20,205,,56,,,
-,,,700102,16.7,,,,,,,,,
-,,,700103,7.1,,,,,,,,,
-,SoftDrinks,17.1,700201,16.7,,,,,,,,,
-,DairyProducts,15.1,700301,14.3,,,,,,,,,
-100304,RedMeat,75,700901,75,3608,1,8,24,,10,,,
-,EggAndPoultry,25,701001,25,,,,,,,,,
-100305,RedMeat,76.7,700901,46.7,2956,1,10,30,,14,,,
-,,,700902,30,,,,,,,,,
-,EggAndPoultry,23.3,701001,23.3,,,,,,,,,
-100306,RedMeat,65.7,700901,52,2431,1,12,73,,18,,,
-,,,700902,20.5,,,,,,,,,
-,,,700903,4.1,,,,,,,,,
-,EggAndPoultry,34.3,701001,23.4,,,,,,,,,
-100307,RedMeat,66,700901,50,2000,1,14,145,,23,,,
-,,,700902,20.5,,,,,,,,,
-,,,700903,6.1,,,,,,,,,
-,EggAndPoultry,34,701001,23.4,,,,,,,,,
-100308,RedMeat,66.3,700901,50,1744,1,16,166,,30,,,
-,,,700902,20.5,,,,,,,,,
-,,,700903,6.1,,,,,,,,,
-,EggAndPoultry,33.7,701001,23.4,,,,,,,,,
-100309,RedMeat,65.1,700901,50,1351,1,18,188,,43,,,
-,,,700902,20.5,,,,,,,,,
-,,,700903,6.1,,,,,,,,,
-,EggAndPoultry,34.9,701001,23.4,,,,,,,,,
-100310,RedMeat,65.5,700901,50,1288,1,20,212,,51,,,
-,,,700902,20.5,,,,,,,,,
-,,,700903,6.1,,,,,,,,,
-,EggAndPoultry,34.5,701001,23.4,,,,,,,,,
-100404,Vegetables,73.4,701101,73.4,7200,1,8,20,,17,,,
-,LeafyVegetables,26.6,701201,26.6,,,,,,,,,
-100405,Vegetables,78.5,701101,42.9,5900,1,10,28,,23,,,
-,,,701102,35.7,,,,,,,,,
-,LeafyVegetables,21.5,701201,21.4,,,,,,,,,
-100406,Vegetables,75,701101,47.2,4851,1,12,36,,30,,,
-,,,701102,19.4,,,,,,,,,
-,,,701103,8.3,,,,,,,,,
-,LeafyVegetables,25,701201,25,,,,,,,,,
-100407,Vegetables,75.2,701101,50.3,3992,1,14,145,,39,,,
-,,,701102,16.6,,,,,,,,,
-,,,701103,8.3,,,,,,,,,
-,LeafyVegetables,24.8,701201,24.8,,,,,,,,,
-100408,Vegetables,75,701101,50.3,3480,1,16,166,,50,,,
-,,,701102,16.6,,,,,,,,,
-,,,701103,8.3,,,,,,,,,
-,LeafyVegetables,25,701201,24.8,,,,,,,,,
-100409,Vegetables,75.2,701101,50.3,2697,1,18,188,,73,,,
-,,,701102,16.6,,,,,,,,,
-,,,701103,8.3,,,,,,,,,
-,LeafyVegetables,24.8,701201,24.8,,,,,,,,,
-100410,Vegetables,75,701101,50.3,1949,1,20,212,,86,,,
-,,,701102,16.6,,,,,,,,,
-,,,701103,8.3,,,,,,,,,
-,LeafyVegetables,25,701201,24.8,,,,,,,,,
-100504,Seafood,55.6,701301,55.6,3628,1,6,18,,13,,,
-,Shellfish,44.4,701401,44.4,,,,,,,,,
-100505,Seafood,53.8,701301,42.3,2973,1,8,26,,18,,,
-,,,701302,11.5,,,,,,,,,
-,Shellfish,46.2,701401,46.2,,,,,,,,,
-100506,Seafood,55.9,701301,41.2,2445,1,10,33,,23,,,
-,,,701302,10.3,,,,,,,,,
-,,,701303,4.4,,,,,,,,,
-,Shellfish,44.1,701401,44.1,,,,,,,,,
-100507,Seafood,55.5,701301,35.4,2011,1,12,110,,30,,,
-,,,701302,15.5,,,,,,,,,
-,,,701303,4.5,,,,,,,,,
-,Shellfish,44.5,701401,44.6,,,,,,,,,
-100508,Seafood,55.6,701301,30.6,1754,1,14,144,,38,,,
-,,,701302,19.4,,,,,,,,,
-,,,701303,5.6,,,,,,,,,
-,Shellfish,44.4,701401,44.4,,,,,,,,,
-100509,Seafood,55.6,701301,30.6,1359,1,16,165,,56,,,
-,,,701302,19.4,,,,,,,,,
-,,,701303,5.6,,,,,,,,,
-,Shellfish,44.4,701401,44.4,,,,,,,,,
-100510,Seafood,55.7,701301,30.6,1296,1,18,186,,66,,,
-,,,701302,19.4,,,,,,,,,
-,,,701303,5.6,,,,,,,,,
-,Shellfish,44.3,701401,44.4,,,,,,,,,
-,,23.3,9067,23.3,,,,,,,,,
-,,6.7,9068,6.7,,,,,,,,,
+﻿id,item_type,rate_type,item_id,rate,time_cooldown,cost_energy,min_count,max_count,deduct_rate,gem_to_min,Unnamed: 11,Unnamed: 12,Unnamed: 13,generator_name,generator_level,produced_item_name,produced_item_tier,produced_item_cat
+100204,Fruit,70,700501,75,7200,1,8,24,,17,,,,Fruit and Nut Generator,4,Blueberry,1,Fruit
+,SugarAndCandy,30,700601,25,,,,,,,,,,,,Sugarcane,1,Sugar & Candy
+100205,Fruit,70,700501,50,5900,1,10,30,,26,,,,Fruit and Nut Generator,5,Blueberry,1,Fruit
+,,,700502,30,,,,,,,,,,,,Strawberry,2,Fruit
+,SugarAndCandy,30,700601,20,,,,,,,,,,,,Sugarcane,1,Sugar & Candy
+100206,Fruit,70,700501,45,4821,1,12,36,,30,,,,Fruit and Nut Generator,6,Blueberry,1,Fruit
+,,,700502,20,,,,,,,,,,,,Strawberry,2,Fruit
+,,,700503,10,,,,,,,,,,,,Orange,3,Fruit
+,SugarAndCandy,30,700601,25,,,,,,,,,,,,Sugarcane,1,Sugar & Candy
+100207,Fruit,70,700501,40,3992,1,14,42,,39,,,,Fruit and Nut Generator,7,Blueberry,1,Fruit
+,,,700502,22.5,,,,,,,,,,,,Strawberry,2,Fruit
+,,,700503,12.5,,,,,,,,,,,,Orange,3,Fruit
+,SugarAndCandy,30,700601,25,,,,,,,,,,,,Sugarcane,1,Sugar & Candy
+100208,Fruit,65,700501,35,3480,1,16,162,,50,,,,Fruit and Nut Generator,8,Blueberry,1,Fruit
+,,,700502,25,,,,,,,,,,,,Strawberry,2,Fruit
+,,,700503,15,,,,,,,,,,,,Orange,3,Fruit
+,SugarAndCandy,35,700601,25,,,,,,,,,,,,Sugarcane,1,Sugar & Candy
+100209,Fruit,65,700501,48.14,2697,1,18,182,,73,,,,Fruit and Nut Generator,9,Blueberry,1,Fruit
+,,,700502,15.76,,,,,,,,,,,,Strawberry,2,Fruit
+,,,700503,11.1,,,,,,,,,,,,Orange,3,Fruit
+,SugarAndCandy,35,700601,25,,,,,,,,,,,,Sugarcane,1,Sugar & Candy
+100210,Fruit,65,700501,50,2571,1,20,205,,86,,,,Fruit and Nut Generator,10,Blueberry,1,Fruit
+,,,700502,15,,,,,,,,,,,,Strawberry,2,Fruit
+,,,700503,10,,,,,,,,,,,,Orange,3,Fruit
+,SugarAndCandy,35,700601,25,,,,,,,,,,,,Sugarcane,1,Sugar & Candy
+100104,Coffee,50,700101,70.7,3619,1,8,24,,11,,,,Drink Generator,4,falseffee Bean,1,Coffee Ingredient
+,SoftDrinks,30,700201,12.5,,,,,,,,,,,,Cốc nước lọc,1,Soft Drink
+,DairyProducts,20,700301,16.8,,,,,,,,,,,,Ice Cube,1,Dairy
+100105,Coffee,50,700101,36.7,2965,1,10,30,,15,,,,Drink Generator,5,falseffee Bean,1,Coffee Ingredient
+,,,700102,30,,,,,,,,,,,,Ground falseffee,2,Coffee Ingredient
+,SoftDrinks,30,700201,16.7,,,,,,,,,,,,Cốc nước lọc,1,Soft Drink
+,DairyProducts,20,700301,16.6,,,,,,,,,,,,Ice Cube,1,Dairy
+100106,Coffee,50,700101,41.7,2438,1,12,36,,20,,,,Drink Generator,6,falseffee Bean,1,Coffee Ingredient
+,,,700102,25,,,,,,,,,,,,Ground falseffee,2,Coffee Ingredient
+,,,700103,5.6,,,,,,,,,,,,Cup of falseffee,3,Coffee Ingredient
+,SoftDrinks,30,700201,13.9,,,,,,,,,,,,Cốc nước lọc,1,Soft Drink
+,DairyProducts,20,700301,13.9,,,,,,,,,,,,Ice Cube,1,Dairy
+100107,Coffee,50,700101,45.2,2006,1,14,42,,25,,,,Drink Generator,7,falseffee Bean,1,Coffee Ingredient
+,,,700102,16.7,,,,,,,,,,,,Ground falseffee,2,Coffee Ingredient
+,,,700103,7.1,,,,,,,,,,,,Cup of falseffee,3,Coffee Ingredient
+,SoftDrinks,30,700201,16.7,,,,,,,,,,,,Cốc nước lọc,1,Soft Drink
+,DairyProducts,20,700301,14.3,,,,,,,,,,,,Ice Cube,1,Dairy
+100108,Coffee,50,700101,45.2,1749,1,16,161,,33,,,,Drink Generator,8,falseffee Bean,1,Coffee Ingredient
+,,,700102,16.7,,,,,,,,,,,,Ground falseffee,2,Coffee Ingredient
+,,,700103,7.1,,,,,,,,,,,,Cup of falseffee,3,Coffee Ingredient
+,SoftDrinks,30,700201,16.7,,,,,,,,,,,,Cốc nước lọc,1,Soft Drink
+,DairyProducts,20,700301,14.3,,,,,,,,,,,,Ice Cube,1,Dairy
+100109,Coffee,50,700101,45.2,1355,1,18,182,,47,,,,Drink Generator,9,falseffee Bean,1,Coffee Ingredient
+,,,700102,16.7,,,,,,,,,,,,Ground falseffee,2,Coffee Ingredient
+,,,700103,7.1,,,,,,,,,,,,Cup of falseffee,3,Coffee Ingredient
+,SoftDrinks,30,700201,16.7,,,,,,,,,,,,Cốc nước lọc,1,Soft Drink
+,DairyProducts,20,700301,14.3,,,,,,,,,,,,Ice Cube,1,Dairy
+100110,Coffee,50,700101,45.2,1292,1,20,205,,56,,,,Drink Generator,10,falseffee Bean,1,Coffee Ingredient
+,,,700102,16.7,,,,,,,,,,,,Ground falseffee,2,Coffee Ingredient
+,,,700103,7.1,,,,,,,,,,,,Cup of falseffee,3,Coffee Ingredient
+,SoftDrinks,30,700201,16.7,,,,,,,,,,,,Cốc nước lọc,1,Soft Drink
+,DairyProducts,20,700301,14.3,,,,,,,,,,,,Ice Cube,1,Dairy
+100304,RedMeat,60,700901,75,3608,1,8,24,,10,,,,Protein Generator,4,Ground Meat,1,Red Meat
+,EggAndPoultry,40,701001,25,,,,,,,,,,,,Chicken Egg,1,Poultry
+100305,RedMeat,60,700901,46.7,2956,1,10,30,,14,,,,Protein Generator,5,Ground Meat,1,Red Meat
+,,,700902,30,,,,,,,,,,,,Fresh Sausage,2,Red Meat
+,EggAndPoultry,40,701001,23.3,,,,,,,,,,,,Chicken Egg,1,Poultry
+100306,RedMeat,60,700901,52,2431,1,12,73,,18,,,,Protein Generator,6,Ground Meat,1,Red Meat
+,,,700902,20.5,,,,,,,,,,,,Fresh Sausage,2,Red Meat
+,,,700903,4.1,,,,,,,,,,,,Ham,3,Red Meat
+,EggAndPoultry,40,701001,23.4,,,,,,,,,,,,Chicken Egg,1,Poultry
+100307,RedMeat,60,700901,50,2000,1,14,145,,23,,,,Protein Generator,7,Ground Meat,1,Red Meat
+,,,700902,20.5,,,,,,,,,,,,Fresh Sausage,2,Red Meat
+,,,700903,6.1,,,,,,,,,,,,Ham,3,Red Meat
+,EggAndPoultry,40,701001,23.4,,,,,,,,,,,,Chicken Egg,1,Poultry
+100308,RedMeat,60,700901,50,1744,1,16,166,,30,,,,Protein Generator,8,Ground Meat,1,Red Meat
+,,,700902,20.5,,,,,,,,,,,,Fresh Sausage,2,Red Meat
+,,,700903,6.1,,,,,,,,,,,,Ham,3,Red Meat
+,EggAndPoultry,40,701001,23.4,,,,,,,,,,,,Chicken Egg,1,Poultry
+100309,RedMeat,55,700901,50,1351,1,18,188,,43,,,,Protein Generator,9,Ground Meat,1,Red Meat
+,,,700902,20.5,,,,,,,,,,,,Fresh Sausage,2,Red Meat
+,,,700903,6.1,,,,,,,,,,,,Ham,3,Red Meat
+,EggAndPoultry,45,701001,23.4,,,,,,,,,,,,Chicken Egg,1,Poultry
+100310,RedMeat,55,700901,50,1288,1,20,212,,51,,,,Protein Generator,10,Ground Meat,1,Red Meat
+,,,700902,20.5,,,,,,,,,,,,Fresh Sausage,2,Red Meat
+,,,700903,6.1,,,,,,,,,,,,Ham,3,Red Meat
+,EggAndPoultry,45,701001,23.4,,,,,,,,,,,,Chicken Egg,1,Poultry
+100404,Vegetables,55,701101,73.4,7200,1,8,20,,17,,,,Vegetable Generator,4,Cucumber,1,Vegetable
+,LeafyVegetables,45,701201,26.6,,,,,,,,,,,,Sprouts,1,Leafy Vegetable
+100405,Vegetables,55,701101,42.9,5900,1,10,28,,23,,,,Vegetable Generator,5,Cucumber,1,Vegetable
+,,,701102,35.7,,,,,,,,,,,,Tomato,2,Vegetable
+,LeafyVegetables,45,701201,21.4,,,,,,,,,,,,Sprouts,1,Leafy Vegetable
+100406,Vegetables,55,701101,47.2,4851,1,12,36,,30,,,,Vegetable Generator,6,Cucumber,1,Vegetable
+,,,701102,19.4,,,,,,,,,,,,Tomato,2,Vegetable
+,,,701103,8.3,,,,,,,,,,,,Red Onion,3,Vegetable
+,LeafyVegetables,45,701201,25,,,,,,,,,,,,Sprouts,1,Leafy Vegetable
+100407,Vegetables,55,701101,50.3,3992,1,14,145,,39,,,,Vegetable Generator,7,Cucumber,1,Vegetable
+,,,701102,16.6,,,,,,,,,,,,Tomato,2,Vegetable
+,,,701103,8.3,,,,,,,,,,,,Red Onion,3,Vegetable
+,LeafyVegetables,45,701201,24.8,,,,,,,,,,,,Sprouts,1,Leafy Vegetable
+100408,Vegetables,55,701101,50.3,3480,1,16,166,,50,,,,Vegetable Generator,8,Cucumber,1,Vegetable
+,,,701102,16.6,,,,,,,,,,,,Tomato,2,Vegetable
+,,,701103,8.3,,,,,,,,,,,,Red Onion,3,Vegetable
+,LeafyVegetables,45,701201,24.8,,,,,,,,,,,,Sprouts,1,Leafy Vegetable
+100409,Vegetables,55,701101,50.3,2697,1,18,188,,73,,,,Vegetable Generator,9,Cucumber,1,Vegetable
+,,,701102,16.6,,,,,,,,,,,,Tomato,2,Vegetable
+,,,701103,8.3,,,,,,,,,,,,Red Onion,3,Vegetable
+,LeafyVegetables,45,701201,24.8,,,,,,,,,,,,Sprouts,1,Leafy Vegetable
+100410,Vegetables,55,701101,50.3,1949,1,20,212,,86,,,,Vegetable Generator,10,Cucumber,1,Vegetable
+,,,701102,16.6,,,,,,,,,,,,Tomato,2,Vegetable
+,,,701103,8.3,,,,,,,,,,,,Red Onion,3,Vegetable
+,LeafyVegetables,45,701201,24.8,,,,,,,,,,,,Sprouts,1,Leafy Vegetable
+100504,Seafood,55.6,701301,55.6,3628,1,8,18,,13,,,,Seafood Generator,4,Anchovy,1,Fish
+,Shellfish,44.4,701401,44.4,,,,,,,,,,,,Clam,1,Shellfish
+100505,Seafood,53.8,701301,42.3,2973,1,10,26,,18,,,,Seafood Generator,5,Anchovy,1,Fish
+,,,701302,11.5,,,,,,,,,,,,Mackerel,2,Fish
+,Shellfish,46.2,701401,46.2,,,,,,,,,,,,Clam,1,Shellfish
+100506,Seafood,55.9,701301,41.2,2445,1,12,33,,23,,,,Seafood Generator,6,Anchovy,1,Fish
+,,,701302,10.3,,,,,,,,,,,,Mackerel,2,Fish
+,,,701303,4.4,,,,,,,,,,,,Tilapia,3,Fish
+,Shellfish,44.1,701401,44.1,,,,,,,,,,,,Clam,1,Shellfish
+100507,Seafood,55.5,701301,35.4,2011,1,14,110,,30,,,,Seafood Generator,7,Anchovy,1,Fish
+,,,701302,15.5,,,,,,,,,,,,Mackerel,2,Fish
+,,,701303,4.5,,,,,,,,,,,,Tilapia,3,Fish
+,Shellfish,44.5,701401,44.6,,,,,,,,,,,,Clam,1,Shellfish
+100508,Seafood,55.6,701301,30.6,1754,1,16,144,,38,,,,Seafood Generator,8,Anchovy,1,Fish
+,,,701302,19.4,,,,,,,,,,,,Mackerel,2,Fish
+,,,701303,5.6,,,,,,,,,,,,Tilapia,3,Fish
+,Shellfish,44.4,701401,44.4,,,,,,,,,,,,Clam,1,Shellfish
+100509,Seafood,55.6,701301,30.6,1359,1,18,165,,56,,,,Seafood Generator,9,Anchovy,1,Fish
+,,,701302,19.4,,,,,,,,,,,,Mackerel,2,Fish
+,,,701303,5.6,,,,,,,,,,,,Tilapia,3,Fish
+,Shellfish,44.4,701401,44.4,,,,,,,,,,,,Clam,1,Shellfish
+100510,Seafood,55.7,701301,30.6,1296,1,20,186,,66,,,,Seafood Generator,10,Anchovy,1,Fish
+,,,701302,19.4,,,,,,,,,,,,Mackerel,2,Fish
+,,,701303,5.6,,,,,,,,,,,,Tilapia,3,Fish
+,Shellfish,44.3,701401,44.4,,,,,,,,,,,,Clam,1,Shellfish
+100604,Grain,70,701501,75,7200,1,8,18,,13,,,,,,,,
+,Nut,30,701601,25,,,,,,,,,,,,,,
+100605,Grain,70,701501,50,2973,1,10,26,,18,,,,,,,,
+,,,701502,30,,,,,,,,,,,,,,
+,Nut,30,701601,20,,,,,,,,,,,,,,
+100606,Grain,70,701501,45,2445,1,12,33,,23,,,,,,,,
+,,,701502,20,,,,,,,,,,,,,,
+,,,701503,10,,,,,,,,,,,,,,
+,Nut,30,701601,25,,,,,,,,,,,,,,
+100607,Grain,70,701501,40,2011,1,14,110,,30,,,,,,,,
+,,,701502,22.5,,,,,,,,,,,,,,
+,,,701503,12.5,,,,,,,,,,,,,,
+,Nut,30,701601,25,,,,,,,,,,,,,,
+100608,Grain,65,701501,35,1754,1,16,144,,38,,,,,,,,
+,,,701502,25,,,,,,,,,,,,,,
+,,,701503,15,,,,,,,,,,,,,,
+,Nut,35,701601,25,,,,,,,,,,,,,,
+100609,Grain,65,701501,48.14,1359,1,18,165,,56,,,,,,,,
+,,,701502,15.76,,,,,,,,,,,,,,
+,,,701503,11.1,,,,,,,,,,,,,,
+,Nut,35,701601,25,,,,,,,,,,,,,,
+100610,Grain,65,701501,50,1296,1,20,186,,66,,,,,,,,
+,,,701502,15,,,,,,,,,,,,,,
+,,,701503,10,,,,,,,,,,,,,,
+,Nut,35,701601,25,,,,,,,,,,,,,,

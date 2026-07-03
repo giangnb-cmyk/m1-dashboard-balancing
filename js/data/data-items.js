@@ -5,7 +5,7 @@ Object.assign(window.GameData, {
       "itemID":"100101",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0.0",
@@ -16,7 +16,7 @@ Object.assign(window.GameData, {
       "itemID":"100102",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0.0",
@@ -27,7 +27,7 @@ Object.assign(window.GameData, {
       "itemID":"100103",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0.0",
@@ -38,7 +38,7 @@ Object.assign(window.GameData, {
       "itemID":"100104",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0.0",
@@ -49,7 +49,7 @@ Object.assign(window.GameData, {
       "itemID":"100105",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0.0",
@@ -60,7 +60,7 @@ Object.assign(window.GameData, {
       "itemID":"100106",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0.0",
@@ -71,7 +71,7 @@ Object.assign(window.GameData, {
       "itemID":"100107",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0.0",
@@ -82,7 +82,7 @@ Object.assign(window.GameData, {
       "itemID":"100108",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0.0",
@@ -93,7 +93,7 @@ Object.assign(window.GameData, {
       "itemID":"100109",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"0.0",
@@ -104,7 +104,7 @@ Object.assign(window.GameData, {
       "itemID":"100110",
       "name_item":"Drink Generator",
       "can_merge":"FALSE",
-      "sell_price":"0",
+      "sell_price":"10",
       "sum_merge":"",
       "tier":"10",
       "energy_cost":"0",
@@ -115,7 +115,7 @@ Object.assign(window.GameData, {
       "itemID":"100201",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0.0",
@@ -126,7 +126,7 @@ Object.assign(window.GameData, {
       "itemID":"100202",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0.0",
@@ -137,7 +137,7 @@ Object.assign(window.GameData, {
       "itemID":"100203",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0.0",
@@ -148,7 +148,7 @@ Object.assign(window.GameData, {
       "itemID":"100204",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0.0",
@@ -159,7 +159,7 @@ Object.assign(window.GameData, {
       "itemID":"100205",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0.0",
@@ -170,7 +170,7 @@ Object.assign(window.GameData, {
       "itemID":"100206",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0.0",
@@ -181,7 +181,7 @@ Object.assign(window.GameData, {
       "itemID":"100207",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0.0",
@@ -192,7 +192,7 @@ Object.assign(window.GameData, {
       "itemID":"100208",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0.0",
@@ -203,7 +203,7 @@ Object.assign(window.GameData, {
       "itemID":"100209",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"0.0",
@@ -212,9 +212,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"100210",
-      "name_item":"Fruit and Nut Generator",
+      "name_item":"Fruit and Sugar Generator",
       "can_merge":"FALSE",
-      "sell_price":"0",
+      "sell_price":"10",
       "sum_merge":"",
       "tier":"10",
       "energy_cost":"0",
@@ -225,7 +225,7 @@ Object.assign(window.GameData, {
       "itemID":"100301",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0.0",
@@ -236,7 +236,7 @@ Object.assign(window.GameData, {
       "itemID":"100302",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0.0",
@@ -247,7 +247,7 @@ Object.assign(window.GameData, {
       "itemID":"100303",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0.0",
@@ -258,7 +258,7 @@ Object.assign(window.GameData, {
       "itemID":"100304",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0.0",
@@ -269,7 +269,7 @@ Object.assign(window.GameData, {
       "itemID":"100305",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0.0",
@@ -280,7 +280,7 @@ Object.assign(window.GameData, {
       "itemID":"100306",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0.0",
@@ -291,7 +291,7 @@ Object.assign(window.GameData, {
       "itemID":"100307",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0.0",
@@ -302,7 +302,7 @@ Object.assign(window.GameData, {
       "itemID":"100308",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0.0",
@@ -313,7 +313,7 @@ Object.assign(window.GameData, {
       "itemID":"100309",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"0.0",
@@ -324,7 +324,7 @@ Object.assign(window.GameData, {
       "itemID":"100310",
       "name_item":"Protein Generator",
       "can_merge":"FALSE",
-      "sell_price":"0",
+      "sell_price":"10",
       "sum_merge":"",
       "tier":"10",
       "energy_cost":"0",
@@ -335,7 +335,7 @@ Object.assign(window.GameData, {
       "itemID":"100401",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0.0",
@@ -346,7 +346,7 @@ Object.assign(window.GameData, {
       "itemID":"100402",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0.0",
@@ -357,7 +357,7 @@ Object.assign(window.GameData, {
       "itemID":"100403",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0.0",
@@ -368,7 +368,7 @@ Object.assign(window.GameData, {
       "itemID":"100404",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0.0",
@@ -379,7 +379,7 @@ Object.assign(window.GameData, {
       "itemID":"100405",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0.0",
@@ -390,7 +390,7 @@ Object.assign(window.GameData, {
       "itemID":"100406",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0.0",
@@ -401,7 +401,7 @@ Object.assign(window.GameData, {
       "itemID":"100407",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0.0",
@@ -412,7 +412,7 @@ Object.assign(window.GameData, {
       "itemID":"100408",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0.0",
@@ -423,7 +423,7 @@ Object.assign(window.GameData, {
       "itemID":"100409",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"0.0",
@@ -434,7 +434,7 @@ Object.assign(window.GameData, {
       "itemID":"100410",
       "name_item":"Vegetable Generator",
       "can_merge":"FALSE",
-      "sell_price":"0",
+      "sell_price":"10",
       "sum_merge":"",
       "tier":"10",
       "energy_cost":"0",
@@ -445,7 +445,7 @@ Object.assign(window.GameData, {
       "itemID":"100501",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0.0",
@@ -456,7 +456,7 @@ Object.assign(window.GameData, {
       "itemID":"100502",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0.0",
@@ -467,7 +467,7 @@ Object.assign(window.GameData, {
       "itemID":"100503",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0.0",
@@ -478,7 +478,7 @@ Object.assign(window.GameData, {
       "itemID":"100504",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0.0",
@@ -489,7 +489,7 @@ Object.assign(window.GameData, {
       "itemID":"100505",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0.0",
@@ -500,7 +500,7 @@ Object.assign(window.GameData, {
       "itemID":"100506",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0.0",
@@ -511,7 +511,7 @@ Object.assign(window.GameData, {
       "itemID":"100507",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0.0",
@@ -522,7 +522,7 @@ Object.assign(window.GameData, {
       "itemID":"100508",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0.0",
@@ -533,7 +533,7 @@ Object.assign(window.GameData, {
       "itemID":"100509",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"0.0",
@@ -544,7 +544,7 @@ Object.assign(window.GameData, {
       "itemID":"100510",
       "name_item":"Seafood Generator",
       "can_merge":"FALSE",
-      "sell_price":"0",
+      "sell_price":"10",
       "sum_merge":"",
       "tier":"10",
       "energy_cost":"0",
@@ -554,8 +554,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"100601",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
+      "can_merge":"TRUE",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0",
@@ -565,8 +565,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"100602",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
+      "can_merge":"TRUE",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0",
@@ -576,8 +576,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"100603",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
+      "can_merge":"TRUE",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0",
@@ -587,8 +587,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"100604",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
+      "can_merge":"TRUE",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0",
@@ -598,8 +598,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"100605",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
+      "can_merge":"TRUE",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0",
@@ -609,8 +609,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"100606",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
+      "can_merge":"TRUE",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0",
@@ -620,8 +620,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"100607",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
+      "can_merge":"TRUE",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0",
@@ -631,8 +631,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"100608",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
+      "can_merge":"TRUE",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0",
@@ -642,8 +642,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"100609",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
+      "can_merge":"TRUE",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"0",
@@ -653,8 +653,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"100610",
       "name_item":"Grain Generator",
-      "can_merge":"TRUE",
-      "sell_price":"",
+      "can_merge":"FALSE",
+      "sell_price":"10",
       "sum_merge":"",
       "tier":"10",
       "energy_cost":"0",
@@ -665,7 +665,7 @@ Object.assign(window.GameData, {
       "itemID":"200101",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0.0",
@@ -676,7 +676,7 @@ Object.assign(window.GameData, {
       "itemID":"200102",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0.0",
@@ -687,7 +687,7 @@ Object.assign(window.GameData, {
       "itemID":"200103",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0.0",
@@ -698,7 +698,7 @@ Object.assign(window.GameData, {
       "itemID":"200104",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0.0",
@@ -709,7 +709,7 @@ Object.assign(window.GameData, {
       "itemID":"200105",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0.0",
@@ -720,7 +720,7 @@ Object.assign(window.GameData, {
       "itemID":"200106",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0.0",
@@ -731,7 +731,7 @@ Object.assign(window.GameData, {
       "itemID":"200107",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0.0",
@@ -742,7 +742,7 @@ Object.assign(window.GameData, {
       "itemID":"200108",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0.0",
@@ -753,7 +753,7 @@ Object.assign(window.GameData, {
       "itemID":"200109",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"0.0",
@@ -764,7 +764,7 @@ Object.assign(window.GameData, {
       "itemID":"200110",
       "name_item":"Juicer",
       "can_merge":"FALSE",
-      "sell_price":"0",
+      "sell_price":"10",
       "sum_merge":"",
       "tier":"10",
       "energy_cost":"0",
@@ -775,7 +775,7 @@ Object.assign(window.GameData, {
       "itemID":"200201",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0.0",
@@ -786,7 +786,7 @@ Object.assign(window.GameData, {
       "itemID":"200202",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0.0",
@@ -797,7 +797,7 @@ Object.assign(window.GameData, {
       "itemID":"200203",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0.0",
@@ -808,7 +808,7 @@ Object.assign(window.GameData, {
       "itemID":"200204",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0.0",
@@ -819,7 +819,7 @@ Object.assign(window.GameData, {
       "itemID":"200205",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0.0",
@@ -830,7 +830,7 @@ Object.assign(window.GameData, {
       "itemID":"200206",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0.0",
@@ -841,7 +841,7 @@ Object.assign(window.GameData, {
       "itemID":"200207",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0.0",
@@ -852,7 +852,7 @@ Object.assign(window.GameData, {
       "itemID":"200208",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0.0",
@@ -863,7 +863,7 @@ Object.assign(window.GameData, {
       "itemID":"200209",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"0.0",
@@ -874,7 +874,7 @@ Object.assign(window.GameData, {
       "itemID":"200210",
       "name_item":"Chef Counter",
       "can_merge":"FALSE",
-      "sell_price":"0",
+      "sell_price":"10",
       "sum_merge":"",
       "tier":"10",
       "energy_cost":"0",
@@ -885,7 +885,7 @@ Object.assign(window.GameData, {
       "itemID":"200301",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0.0",
@@ -896,7 +896,7 @@ Object.assign(window.GameData, {
       "itemID":"200302",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0.0",
@@ -907,7 +907,7 @@ Object.assign(window.GameData, {
       "itemID":"200303",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0.0",
@@ -918,7 +918,7 @@ Object.assign(window.GameData, {
       "itemID":"200304",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0.0",
@@ -929,7 +929,7 @@ Object.assign(window.GameData, {
       "itemID":"200305",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0.0",
@@ -940,7 +940,7 @@ Object.assign(window.GameData, {
       "itemID":"200306",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0.0",
@@ -951,7 +951,7 @@ Object.assign(window.GameData, {
       "itemID":"200307",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0.0",
@@ -962,7 +962,7 @@ Object.assign(window.GameData, {
       "itemID":"200308",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0.0",
@@ -973,7 +973,7 @@ Object.assign(window.GameData, {
       "itemID":"200309",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"0.0",
@@ -984,7 +984,7 @@ Object.assign(window.GameData, {
       "itemID":"200310",
       "name_item":"Grill",
       "can_merge":"FALSE",
-      "sell_price":"0",
+      "sell_price":"10",
       "sum_merge":"",
       "tier":"10",
       "energy_cost":"0",
@@ -995,7 +995,7 @@ Object.assign(window.GameData, {
       "itemID":"200401",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0.0",
@@ -1006,7 +1006,7 @@ Object.assign(window.GameData, {
       "itemID":"200402",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0.0",
@@ -1017,7 +1017,7 @@ Object.assign(window.GameData, {
       "itemID":"200403",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0.0",
@@ -1028,7 +1028,7 @@ Object.assign(window.GameData, {
       "itemID":"200404",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0.0",
@@ -1039,7 +1039,7 @@ Object.assign(window.GameData, {
       "itemID":"200405",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0.0",
@@ -1050,7 +1050,7 @@ Object.assign(window.GameData, {
       "itemID":"200406",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0.0",
@@ -1061,7 +1061,7 @@ Object.assign(window.GameData, {
       "itemID":"200407",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0.0",
@@ -1072,7 +1072,7 @@ Object.assign(window.GameData, {
       "itemID":"200408",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0.0",
@@ -1083,7 +1083,7 @@ Object.assign(window.GameData, {
       "itemID":"200409",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"0.0",
@@ -1094,7 +1094,7 @@ Object.assign(window.GameData, {
       "itemID":"200410",
       "name_item":"Pan",
       "can_merge":"FALSE",
-      "sell_price":"0",
+      "sell_price":"10",
       "sum_merge":"",
       "tier":"10",
       "energy_cost":"0",
@@ -1105,7 +1105,7 @@ Object.assign(window.GameData, {
       "itemID":"200501",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0.0",
@@ -1116,7 +1116,7 @@ Object.assign(window.GameData, {
       "itemID":"200502",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0.0",
@@ -1127,7 +1127,7 @@ Object.assign(window.GameData, {
       "itemID":"200503",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0.0",
@@ -1138,7 +1138,7 @@ Object.assign(window.GameData, {
       "itemID":"200504",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0.0",
@@ -1149,7 +1149,7 @@ Object.assign(window.GameData, {
       "itemID":"200505",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0.0",
@@ -1160,7 +1160,7 @@ Object.assign(window.GameData, {
       "itemID":"200506",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0.0",
@@ -1171,7 +1171,7 @@ Object.assign(window.GameData, {
       "itemID":"200507",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0.0",
@@ -1182,7 +1182,7 @@ Object.assign(window.GameData, {
       "itemID":"200508",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0.0",
@@ -1193,7 +1193,7 @@ Object.assign(window.GameData, {
       "itemID":"200509",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"0.0",
@@ -1204,7 +1204,7 @@ Object.assign(window.GameData, {
       "itemID":"200510",
       "name_item":"Oven",
       "can_merge":"FALSE",
-      "sell_price":"0",
+      "sell_price":"10",
       "sum_merge":"",
       "tier":"10",
       "energy_cost":"0",
@@ -1389,7 +1389,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"400102",
-      "name_item":"Strawberry jam",
+      "name_item":"Strawberry Jam",
       "can_merge":"FALSE",
       "sell_price":"0",
       "sum_merge":"",
@@ -2291,7 +2291,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500101",
-      "name_item":"CardPlus 8",
+      "name_item":"Card Plus",
       "can_merge":"TRUE",
       "sell_price":"",
       "sum_merge":"",
@@ -2302,7 +2302,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500102",
-      "name_item":"CardPlus 16",
+      "name_item":"Card Plus",
       "can_merge":"TRUE",
       "sell_price":"",
       "sum_merge":"",
@@ -2313,7 +2313,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500103",
-      "name_item":"CardPlus 32",
+      "name_item":"Card Plus",
       "can_merge":"FALSE",
       "sell_price":"",
       "sum_merge":"",
@@ -2324,9 +2324,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500201",
-      "name_item":"Sandglass 1",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0",
@@ -2335,9 +2335,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500202",
-      "name_item":"Sandglass 2",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0",
@@ -2346,9 +2346,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500203",
-      "name_item":"Sandglass 3",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0",
@@ -2357,9 +2357,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500204",
-      "name_item":"Sandglass 4",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0",
@@ -2368,9 +2368,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500205",
-      "name_item":"Sandglass 5",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0",
@@ -2379,9 +2379,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500206",
-      "name_item":"Sandglass 6",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0",
@@ -2390,9 +2390,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500207",
-      "name_item":"Sandglass 7",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0",
@@ -2401,9 +2401,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500208",
-      "name_item":"Sandglass 8",
+      "name_item":"Sandglass",
       "can_merge":"FALSE",
-      "sell_price":"",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0",
@@ -2412,9 +2412,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500301",
-      "name_item":"Scissors 1",
+      "name_item":"Scissors",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0",
@@ -2423,9 +2423,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500302",
-      "name_item":"Scissors 2",
+      "name_item":"Scissors",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0",
@@ -2434,9 +2434,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500303",
-      "name_item":"Scissors 3",
+      "name_item":"Scissors",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0",
@@ -2445,9 +2445,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500304",
-      "name_item":"Scissors 4",
+      "name_item":"Scissors",
       "can_merge":"FALSE",
-      "sell_price":"",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0",
@@ -2456,7 +2456,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500401",
-      "name_item":"StandardUnlimitedEnergy",
+      "name_item":"Standard Unlimited Energy",
       "can_merge":"FALSE",
       "sell_price":"",
       "sum_merge":"",
@@ -2467,7 +2467,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500501",
-      "name_item":"UpgradedUnlimitedEnergy",
+      "name_item":"Upgraded Unlimited Energy",
       "can_merge":"FALSE",
       "sell_price":"",
       "sum_merge":"",
@@ -2480,7 +2480,7 @@ Object.assign(window.GameData, {
       "itemID":"500601",
       "name_item":"Blue Duplicate Camera",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0",
@@ -2491,7 +2491,7 @@ Object.assign(window.GameData, {
       "itemID":"500602",
       "name_item":"Purple Duplicate Camera",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0",
@@ -2502,7 +2502,7 @@ Object.assign(window.GameData, {
       "itemID":"500603",
       "name_item":"Orange Duplicate Camera",
       "can_merge":"FALSE",
-      "sell_price":"",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0",
@@ -2511,9 +2511,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500701",
-      "name_item":"MagicWand 3",
+      "name_item":"Magic Wand",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0",
@@ -2522,9 +2522,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500702",
-      "name_item":"MagicWand 6",
+      "name_item":"Magic Wand",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0",
@@ -2533,9 +2533,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"500703",
-      "name_item":"MagicWand 12",
+      "name_item":"Magic Wand",
       "can_merge":"FALSE",
-      "sell_price":"",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0",
@@ -2546,7 +2546,7 @@ Object.assign(window.GameData, {
       "itemID":"500801",
       "name_item":"Blue Rocket Cracker",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0",
@@ -2557,7 +2557,7 @@ Object.assign(window.GameData, {
       "itemID":"500802",
       "name_item":"Purple Rocket Cracker",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0",
@@ -2568,7 +2568,7 @@ Object.assign(window.GameData, {
       "itemID":"500803",
       "name_item":"Orange Rocket Craker",
       "can_merge":"FALSE",
-      "sell_price":"",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0",
@@ -2579,7 +2579,7 @@ Object.assign(window.GameData, {
       "itemID":"500901",
       "name_item":"Raccoon Timer",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0",
@@ -2590,7 +2590,7 @@ Object.assign(window.GameData, {
       "itemID":"500902",
       "name_item":"Squirrel Timer",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0",
@@ -2601,7 +2601,7 @@ Object.assign(window.GameData, {
       "itemID":"500903",
       "name_item":"Monkey Timer",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0",
@@ -2612,7 +2612,7 @@ Object.assign(window.GameData, {
       "itemID":"500904",
       "name_item":"Rabbit Timer",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0",
@@ -2623,7 +2623,7 @@ Object.assign(window.GameData, {
       "itemID":"500905",
       "name_item":"Fox Timer",
       "can_merge":"FALSE",
-      "sell_price":"",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0",
@@ -2643,9 +2643,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"501101",
-      "name_item":"SpeedBoost 1",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"1",
       "energy_cost":"0",
@@ -2654,9 +2654,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"501102",
-      "name_item":"SpeedBoost 2",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"0",
@@ -2665,9 +2665,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"501103",
-      "name_item":"SpeedBoost 3",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"0",
@@ -2676,9 +2676,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"501104",
-      "name_item":"SpeedBoost 4",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"4",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"0",
@@ -2687,9 +2687,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"501105",
-      "name_item":"SpeedBoost 5",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"0",
@@ -2698,9 +2698,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"501106",
-      "name_item":"SpeedBoost 6",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"6",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"0",
@@ -2709,9 +2709,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"501107",
-      "name_item":"SpeedBoost 7",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"0",
@@ -2720,9 +2720,9 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"501108",
-      "name_item":"SpeedBoost 8",
+      "name_item":"Speed Boost",
       "can_merge":"FALSE",
-      "sell_price":"",
+      "sell_price":"8",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"0",
@@ -2742,7 +2742,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"600201",
-      "name_item":"Chef  Chest",
+      "name_item":"Chef Chest",
       "can_merge":"FALSE",
       "sell_price":"",
       "sum_merge":"",
@@ -2764,7 +2764,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"600401",
-      "name_item":"Assistants Chest",
+      "name_item":"Assistans Chest",
       "can_merge":"FALSE",
       "sell_price":"",
       "sum_merge":"",
@@ -2786,7 +2786,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"600601",
-      "name_item":"LuckyHandbag",
+      "name_item":"Lucky Hand Bag",
       "can_merge":"FALSE",
       "sell_price":"",
       "sum_merge":"",
@@ -2797,7 +2797,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"600701",
-      "name_item":"LuckyBox",
+      "name_item":"Lucky Box",
       "can_merge":"FALSE",
       "sell_price":"",
       "sum_merge":"",
@@ -2920,7 +2920,7 @@ Object.assign(window.GameData, {
       "itemID":"700105",
       "name_item":"Coffee - to - Go",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"20",
@@ -2931,7 +2931,7 @@ Object.assign(window.GameData, {
       "itemID":"700106",
       "name_item":"Iced Coffee - to - Go",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"40",
@@ -2942,7 +2942,7 @@ Object.assign(window.GameData, {
       "itemID":"700107",
       "name_item":"Cold Brew",
       "can_merge":"TRUE",
-      "sell_price":"1",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"80",
@@ -2952,8 +2952,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"700108",
       "name_item":"Pour ove coffee",
-      "can_merge":"FALSE",
-      "sell_price":"3",
+      "can_merge":"TRUE",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"160",
@@ -2964,7 +2964,7 @@ Object.assign(window.GameData, {
       "itemID":"700109",
       "name_item":"French press",
       "can_merge":"TRUE",
-      "sell_price":"7",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"320",
@@ -3019,7 +3019,7 @@ Object.assign(window.GameData, {
       "itemID":"700202",
       "name_item":"Citrus Soda",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"20",
@@ -3030,7 +3030,7 @@ Object.assign(window.GameData, {
       "itemID":"700203",
       "name_item":"Bottled Lemon Tea",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"40",
@@ -3041,7 +3041,7 @@ Object.assign(window.GameData, {
       "itemID":"700204",
       "name_item":"Soda Water",
       "can_merge":"TRUE",
-      "sell_price":"1",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"80",
@@ -3052,7 +3052,7 @@ Object.assign(window.GameData, {
       "itemID":"700205",
       "name_item":"Lemon-Lime Soda",
       "can_merge":"TRUE",
-      "sell_price":"3",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"160",
@@ -3063,7 +3063,7 @@ Object.assign(window.GameData, {
       "itemID":"700206",
       "name_item":"Sweet Cola",
       "can_merge":"TRUE",
-      "sell_price":"7",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"320",
@@ -3084,7 +3084,7 @@ Object.assign(window.GameData, {
     {
       "itemID":"700208",
       "name_item":"Classic Cola",
-      "can_merge":"FALSE",
+      "can_merge":"TRUE",
       "sell_price":"30",
       "sum_merge":"",
       "tier":"8",
@@ -3094,7 +3094,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"700209",
-      "name_item":"Lon Redbull (xanh trắng)",
+      "name_item":"Sugar-free Energy",
       "can_merge":"TRUE",
       "sell_price":"61",
       "sum_merge":"",
@@ -3105,7 +3105,7 @@ Object.assign(window.GameData, {
     },
     {
       "itemID":"700210",
-      "name_item":"Lon Monster Energy",
+      "name_item":"Original Energy",
       "can_merge":"FALSE",
       "sell_price":"122",
       "sum_merge":"",
@@ -3129,7 +3129,7 @@ Object.assign(window.GameData, {
       "itemID":"700302",
       "name_item":"Milk Bottle",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"20",
@@ -3140,7 +3140,7 @@ Object.assign(window.GameData, {
       "itemID":"700303",
       "name_item":"Yogurt",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"40",
@@ -3151,7 +3151,7 @@ Object.assign(window.GameData, {
       "itemID":"700304",
       "name_item":"Fresh Cream",
       "can_merge":"TRUE",
-      "sell_price":"1",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"80",
@@ -3162,7 +3162,7 @@ Object.assign(window.GameData, {
       "itemID":"700305",
       "name_item":"Cheddar Cheese",
       "can_merge":"TRUE",
-      "sell_price":"3",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"160",
@@ -3173,7 +3173,7 @@ Object.assign(window.GameData, {
       "itemID":"700306",
       "name_item":"Butter",
       "can_merge":"TRUE",
-      "sell_price":"7",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"320",
@@ -3194,7 +3194,7 @@ Object.assign(window.GameData, {
     {
       "itemID":"700308",
       "name_item":"Brie Cheese",
-      "can_merge":"FALSE",
+      "can_merge":"TRUE",
       "sell_price":"30",
       "sum_merge":"",
       "tier":"8",
@@ -3282,7 +3282,7 @@ Object.assign(window.GameData, {
     {
       "itemID":"700406",
       "name_item":"Crystal Cake Stand",
-      "can_merge":"FALSE",
+      "can_merge":"TRUE",
       "sell_price":"16",
       "sum_merge":"",
       "tier":"6",
@@ -3327,7 +3327,7 @@ Object.assign(window.GameData, {
       "itemID":"700504",
       "name_item":"Apple",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"10",
@@ -3338,7 +3338,7 @@ Object.assign(window.GameData, {
       "itemID":"700505",
       "name_item":"Banana",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"20",
@@ -3349,7 +3349,7 @@ Object.assign(window.GameData, {
       "itemID":"700506",
       "name_item":"Coconut",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"40",
@@ -3360,7 +3360,7 @@ Object.assign(window.GameData, {
       "itemID":"700507",
       "name_item":"Lemon",
       "can_merge":"TRUE",
-      "sell_price":"1",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"80",
@@ -3370,8 +3370,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"700508",
       "name_item":"Passion Fruit",
-      "can_merge":"FALSE",
-      "sell_price":"3",
+      "can_merge":"TRUE",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"160",
@@ -3382,7 +3382,7 @@ Object.assign(window.GameData, {
       "itemID":"700509",
       "name_item":"Mango",
       "can_merge":"TRUE",
-      "sell_price":"7",
+      "sell_price":"11",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"320",
@@ -3437,7 +3437,7 @@ Object.assign(window.GameData, {
       "itemID":"700602",
       "name_item":"Sugar",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"10",
@@ -3448,7 +3448,7 @@ Object.assign(window.GameData, {
       "itemID":"700603",
       "name_item":"Brown Sugar",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"2",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"20",
@@ -3459,7 +3459,7 @@ Object.assign(window.GameData, {
       "itemID":"700604",
       "name_item":"Caramel",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"40",
@@ -3470,7 +3470,7 @@ Object.assign(window.GameData, {
       "itemID":"700605",
       "name_item":"Honey",
       "can_merge":"TRUE",
-      "sell_price":"1",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"80",
@@ -3481,7 +3481,7 @@ Object.assign(window.GameData, {
       "itemID":"700606",
       "name_item":"Candy",
       "can_merge":"TRUE",
-      "sell_price":"3",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"160",
@@ -3492,7 +3492,7 @@ Object.assign(window.GameData, {
       "itemID":"700607",
       "name_item":"Marshmallow",
       "can_merge":"TRUE",
-      "sell_price":"7",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"320",
@@ -3701,7 +3701,7 @@ Object.assign(window.GameData, {
       "itemID":"700904",
       "name_item":"Pork Belly",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"10",
@@ -3712,7 +3712,7 @@ Object.assign(window.GameData, {
       "itemID":"700905",
       "name_item":"Pork Knuckle",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"20",
@@ -3723,7 +3723,7 @@ Object.assign(window.GameData, {
       "itemID":"700906",
       "name_item":"Pork Ribs",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"40",
@@ -3733,8 +3733,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"700907",
       "name_item":"Beef Tenderloin",
-      "can_merge":"FALSE",
-      "sell_price":"1",
+      "can_merge":"TRUE",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"80",
@@ -3745,7 +3745,7 @@ Object.assign(window.GameData, {
       "itemID":"700908",
       "name_item":"Beef Ribs",
       "can_merge":"TRUE",
-      "sell_price":"3",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"160",
@@ -3756,7 +3756,7 @@ Object.assign(window.GameData, {
       "itemID":"700909",
       "name_item":"Diced Goat Meat",
       "can_merge":"TRUE",
-      "sell_price":"7",
+      "sell_price":"11",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"320",
@@ -3811,7 +3811,7 @@ Object.assign(window.GameData, {
       "itemID":"701002",
       "name_item":"Chicken Breast",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"10",
@@ -3822,7 +3822,7 @@ Object.assign(window.GameData, {
       "itemID":"701003",
       "name_item":"Chicken Wing",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"20",
@@ -3833,7 +3833,7 @@ Object.assign(window.GameData, {
       "itemID":"701004",
       "name_item":"Chicken Drumstick",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"40",
@@ -3844,7 +3844,7 @@ Object.assign(window.GameData, {
       "itemID":"701005",
       "name_item":"Whole Chicken",
       "can_merge":"TRUE",
-      "sell_price":"1",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"80",
@@ -3855,7 +3855,7 @@ Object.assign(window.GameData, {
       "itemID":"701006",
       "name_item":"Duck Breast",
       "can_merge":"TRUE",
-      "sell_price":"3",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"160",
@@ -3865,8 +3865,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"701007",
       "name_item":"Whole Duck",
-      "can_merge":"FALSE",
-      "sell_price":"7",
+      "can_merge":"TRUE",
+      "sell_price":"11",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"320",
@@ -3954,7 +3954,7 @@ Object.assign(window.GameData, {
       "itemID":"701104",
       "name_item":"Carrot",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"10",
@@ -3965,7 +3965,7 @@ Object.assign(window.GameData, {
       "itemID":"701105",
       "name_item":"Bell Pepper",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"20",
@@ -3976,7 +3976,7 @@ Object.assign(window.GameData, {
       "itemID":"701106",
       "name_item":"Potato",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"40",
@@ -3987,7 +3987,7 @@ Object.assign(window.GameData, {
       "itemID":"701107",
       "name_item":"Eggplant",
       "can_merge":"TRUE",
-      "sell_price":"1",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"80",
@@ -3997,8 +3997,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"701108",
       "name_item":"Asparagus",
-      "can_merge":"FALSE",
-      "sell_price":"3",
+      "can_merge":"TRUE",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"160",
@@ -4009,7 +4009,7 @@ Object.assign(window.GameData, {
       "itemID":"701109",
       "name_item":"Beetroot",
       "can_merge":"TRUE",
-      "sell_price":"7",
+      "sell_price":"11",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"320",
@@ -4064,7 +4064,7 @@ Object.assign(window.GameData, {
       "itemID":"701202",
       "name_item":"Lettuce",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"10",
@@ -4075,7 +4075,7 @@ Object.assign(window.GameData, {
       "itemID":"701203",
       "name_item":"Kale",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"20",
@@ -4086,7 +4086,7 @@ Object.assign(window.GameData, {
       "itemID":"701204",
       "name_item":"Cabbage",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"40",
@@ -4097,7 +4097,7 @@ Object.assign(window.GameData, {
       "itemID":"701205",
       "name_item":"Red Cabbage",
       "can_merge":"TRUE",
-      "sell_price":"1",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"80",
@@ -4108,7 +4108,7 @@ Object.assign(window.GameData, {
       "itemID":"701206",
       "name_item":"Broccoli",
       "can_merge":"TRUE",
-      "sell_price":"3",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"160",
@@ -4119,7 +4119,7 @@ Object.assign(window.GameData, {
       "itemID":"701207",
       "name_item":"Cauliflower",
       "can_merge":"TRUE",
-      "sell_price":"7",
+      "sell_price":"11",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"320",
@@ -4129,7 +4129,7 @@ Object.assign(window.GameData, {
     {
       "itemID":"701208",
       "name_item":"Spinach",
-      "can_merge":"FALSE",
+      "can_merge":"TRUE",
       "sell_price":"15",
       "sum_merge":"",
       "tier":"8",
@@ -4218,7 +4218,7 @@ Object.assign(window.GameData, {
       "itemID":"701304",
       "name_item":"Sea Bream",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"10.0",
@@ -4229,7 +4229,7 @@ Object.assign(window.GameData, {
       "itemID":"701305",
       "name_item":"Cod",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"20.0",
@@ -4240,7 +4240,7 @@ Object.assign(window.GameData, {
       "itemID":"701306",
       "name_item":"Halibut",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"40.0",
@@ -4251,7 +4251,7 @@ Object.assign(window.GameData, {
       "itemID":"701307",
       "name_item":"Salmon",
       "can_merge":"TRUE",
-      "sell_price":"1",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"80.0",
@@ -4261,8 +4261,8 @@ Object.assign(window.GameData, {
     {
       "itemID":"701308",
       "name_item":"Sae Bass",
-      "can_merge":"FALSE",
-      "sell_price":"3",
+      "can_merge":"TRUE",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"8",
       "energy_cost":"160.0",
@@ -4273,7 +4273,7 @@ Object.assign(window.GameData, {
       "itemID":"701309",
       "name_item":"Sturgeon",
       "can_merge":"TRUE",
-      "sell_price":"7",
+      "sell_price":"11",
       "sum_merge":"",
       "tier":"9",
       "energy_cost":"320.0",
@@ -4328,7 +4328,7 @@ Object.assign(window.GameData, {
       "itemID":"701402",
       "name_item":"Mussel",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"1",
       "sum_merge":"",
       "tier":"2",
       "energy_cost":"10.0",
@@ -4339,7 +4339,7 @@ Object.assign(window.GameData, {
       "itemID":"701403",
       "name_item":"Oyster",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"3",
       "sum_merge":"",
       "tier":"3",
       "energy_cost":"20.0",
@@ -4350,7 +4350,7 @@ Object.assign(window.GameData, {
       "itemID":"701404",
       "name_item":"Squid",
       "can_merge":"TRUE",
-      "sell_price":"0",
+      "sell_price":"5",
       "sum_merge":"",
       "tier":"4",
       "energy_cost":"40.0",
@@ -4361,7 +4361,7 @@ Object.assign(window.GameData, {
       "itemID":"701405",
       "name_item":"Shrimp",
       "can_merge":"TRUE",
-      "sell_price":"1",
+      "sell_price":"7",
       "sum_merge":"",
       "tier":"5",
       "energy_cost":"80.0",
@@ -4372,7 +4372,7 @@ Object.assign(window.GameData, {
       "itemID":"701406",
       "name_item":"Crab",
       "can_merge":"TRUE",
-      "sell_price":"3",
+      "sell_price":"9",
       "sum_merge":"",
       "tier":"6",
       "energy_cost":"160.0",
@@ -4383,7 +4383,7 @@ Object.assign(window.GameData, {
       "itemID":"701407",
       "name_item":"Octopus",
       "can_merge":"TRUE",
-      "sell_price":"7",
+      "sell_price":"11",
       "sum_merge":"",
       "tier":"7",
       "energy_cost":"320.0",
@@ -4393,7 +4393,7 @@ Object.assign(window.GameData, {
     {
       "itemID":"701408",
       "name_item":"Scallop",
-      "can_merge":"FALSE",
+      "can_merge":"TRUE",
       "sell_price":"15",
       "sum_merge":"",
       "tier":"8",
@@ -4433,6 +4433,897 @@ Object.assign(window.GameData, {
       "energy_cost":"5120.0",
       "time_point":"614400",
       "type":"Raw"
+    },
+    {
+      "itemID":"400512",
+      "name_item":"Pan Fried Patty",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"12",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400901",
+      "name_item":"Fried Okra",
+      "can_merge":"FALSE",
+      "sell_price":"30",
+      "sum_merge":"",
+      "tier":"1",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400902",
+      "name_item":"Hot Dog",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"2",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400903",
+      "name_item":"Cheese Dog",
+      "can_merge":"FALSE",
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"3",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400904",
+      "name_item":"Pork Burger",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"4",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400905",
+      "name_item":"Cheese Burger",
+      "can_merge":"FALSE",
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"5",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400906",
+      "name_item":"Corn Dog",
+      "can_merge":"FALSE",
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"6",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400907",
+      "name_item":"Fried Chicken Wings",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"7",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400908",
+      "name_item":"Fried Chicken Breast",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"8",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400909",
+      "name_item":"Fried Chicken Drumstick",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"9",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400910",
+      "name_item":"Fried Whole Chicken",
+      "can_merge":"FALSE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"10",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400911",
+      "name_item":"Onion Rings",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"11",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400912",
+      "name_item":"Tator Tots",
+      "can_merge":"FALSE",
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"12",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400913",
+      "name_item":"Loaded Tots",
+      "can_merge":"FALSE",
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"13",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400610",
+      "name_item":"Potato Strips",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"10",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400914",
+      "name_item":"Fries",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"14",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400915",
+      "name_item":"Texas Cheese Fries",
+      "can_merge":"FALSE",
+      "sell_price":"19",
+      "sum_merge":"",
+      "tier":"15",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400427",
+      "name_item":"Delmonico Steak",
+      "can_merge":"FALSE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"27",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400916",
+      "name_item":"Steak & Blue Cheese Sandwich",
+      "can_merge":"FALSE",
+      "sell_price":"61",
+      "sum_merge":"",
+      "tier":"16",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400917",
+      "name_item":"Hush Puppies",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"17",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400802",
+      "name_item":"Baked Hotdog Bun",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"2",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400803",
+      "name_item":"Baked Burger Bun",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"3",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400804",
+      "name_item":"Toast",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"4",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400707",
+      "name_item":"Donut",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"7",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400708",
+      "name_item":"Donut Chocolate",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"8",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400709",
+      "name_item":"Jelly Donut",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"9",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400806",
+      "name_item":"Croissant",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"6",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400807",
+      "name_item":"Apple Pie",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"7",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400808",
+      "name_item":"Blueberry Pie",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"8",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400809",
+      "name_item":"Banana Bread",
+      "can_merge":"FALSE",
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"9",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400810",
+      "name_item":"Fudge Brownies",
+      "can_merge":"FALSE",
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"10",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400811",
+      "name_item":"Chocolate Chip Cookies",
+      "can_merge":"FALSE",
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"11",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400306",
+      "name_item":"Mocha",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"6",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"400307",
+      "name_item":"Mocha Frappe",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"7",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"701501",
+      "name_item":"Mung beans",
+      "can_merge":"TRUE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701502",
+      "name_item":"Soybeans",
+      "can_merge":"TRUE",
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"2",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701503",
+      "name_item":"Red lentils",
+      "can_merge":"TRUE",
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"3",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701504",
+      "name_item":"Corn flour",
+      "can_merge":"TRUE",
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"4",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701505",
+      "name_item":"Wheat flour",
+      "can_merge":"TRUE",
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"5",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701506",
+      "name_item":"Breadcrumbs",
+      "can_merge":"TRUE",
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"6",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701507",
+      "name_item":"Potato flour",
+      "can_merge":"TRUE",
+      "sell_price":"15",
+      "sum_merge":"",
+      "tier":"7",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701508",
+      "name_item":"Rice",
+      "can_merge":"TRUE",
+      "sell_price":"30",
+      "sum_merge":"",
+      "tier":"8",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701509",
+      "name_item":"Oats",
+      "can_merge":"TRUE",
+      "sell_price":"61",
+      "sum_merge":"",
+      "tier":"9",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701510",
+      "name_item":"Quinoa seeds",
+      "can_merge":"TRUE",
+      "sell_price":"122",
+      "sum_merge":"",
+      "tier":"10",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701511",
+      "name_item":"Buckwheat seeds",
+      "can_merge":"TRUE",
+      "sell_price":"245",
+      "sum_merge":"",
+      "tier":"11",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701512",
+      "name_item":"Sweet potato",
+      "can_merge":"FALSE",
+      "sell_price":"49",
+      "sum_merge":"",
+      "tier":"12",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701601",
+      "name_item":"Sesame seeds",
+      "can_merge":"TRUE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701602",
+      "name_item":"Pumpkin seeds",
+      "can_merge":"TRUE",
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"2",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701603",
+      "name_item":"Pistachios",
+      "can_merge":"TRUE",
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"3",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701604",
+      "name_item":"Peanuts",
+      "can_merge":"TRUE",
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"4",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701605",
+      "name_item":"Almonds",
+      "can_merge":"TRUE",
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"5",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701606",
+      "name_item":"Cashews",
+      "can_merge":"TRUE",
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"6",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701607",
+      "name_item":"Walnuts",
+      "can_merge":"TRUE",
+      "sell_price":"15",
+      "sum_merge":"",
+      "tier":"7",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701608",
+      "name_item":"Macadamia nuts",
+      "can_merge":"TRUE",
+      "sell_price":"30",
+      "sum_merge":"",
+      "tier":"8",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701609",
+      "name_item":"Hazelnuts",
+      "can_merge":"TRUE",
+      "sell_price":"61",
+      "sum_merge":"",
+      "tier":"9",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701610",
+      "name_item":"Pine nuts",
+      "can_merge":"FALSE",
+      "sell_price":"122",
+      "sum_merge":"",
+      "tier":"10",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701701",
+      "name_item":"Peanuts",
+      "can_merge":"TRUE",
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"1",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701702",
+      "name_item":"Peanut butter",
+      "can_merge":"TRUE",
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"2",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701703",
+      "name_item":"Cocoa sauce",
+      "can_merge":"TRUE",
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"3",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701704",
+      "name_item":"Dark chocolate",
+      "can_merge":"TRUE",
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"4",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"701705",
+      "name_item":"White chocolate",
+      "can_merge":"FALSE",
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"5",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Raw"
+    },
+    {
+      "itemID":"401001",
+      "name_item":"Hot Dog Bun",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"1",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"401002",
+      "name_item":"Burger Bun",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"2",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"401003",
+      "name_item":"Toast Dough",
+      "can_merge":"FALSE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"3",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"401004",
+      "name_item":"Donut Dough",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"4",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"401005",
+      "name_item":"Pie Crust",
+      "can_merge":"FALSE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"5",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"401006",
+      "name_item":"Croissant Dough",
+      "can_merge":"FALSE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"6",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Food"
+    },
+    {
+      "itemID":"800101",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800102",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800103",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800104",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800105",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800106",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800107",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800108",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800109",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800110",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800111",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"11",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800112",
+      "name_item":"Cat",
+      "can_merge":"FALSE",
+      "sell_price":"12",
+      "sum_merge":"",
+      "tier":"12",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800301",
+      "name_item":"DorasCurrency",
+      "can_merge":"TRUE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
+    },
+    {
+      "itemID":"800302",
+      "name_item":"DorasCurrency",
+      "can_merge":"FALSE",
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "energy_cost":"0",
+      "time_point":"0",
+      "type":"Unknown"
     }
   ],
   "itemCurrency":[
@@ -4532,2827 +5423,4362 @@ Object.assign(window.GameData, {
       "id":"100101",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Drink Generator"
     },
     {
       "id":"100102",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Drink Generator"
     },
     {
       "id":"100103",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Drink Generator"
     },
     {
       "id":"100104",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Drink Generator"
     },
     {
       "id":"100105",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Drink Generator"
     },
     {
       "id":"100106",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Drink Generator"
     },
     {
       "id":"100107",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Drink Generator"
     },
     {
       "id":"100108",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Drink Generator"
     },
     {
       "id":"100109",
       "name_item":"Drink Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Drink Generator"
     },
     {
       "id":"100110",
       "name_item":"Drink Generator",
       "can_merge":"FALSE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Drink Generator"
     },
     {
       "id":"100201",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Fruit & Nut Generator"
     },
     {
       "id":"100202",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Fruit & Nut Generator"
     },
     {
       "id":"100203",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Fruit & Nut Generator"
     },
     {
       "id":"100204",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Fruit & Nut Generator"
     },
     {
       "id":"100205",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Fruit & Nut Generator"
     },
     {
       "id":"100206",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Fruit & Nut Generator"
     },
     {
       "id":"100207",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Fruit & Nut Generator"
     },
     {
       "id":"100208",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Fruit & Nut Generator"
     },
     {
       "id":"100209",
       "name_item":"Fruit and Sugar Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Fruit & Nut Generator"
     },
     {
       "id":"100210",
-      "name_item":"Fruit and Nut Generator",
+      "name_item":"Fruit and Sugar Generator",
       "can_merge":"FALSE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Fruit & Nut Generator"
     },
     {
       "id":"100301",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Protein Generator"
     },
     {
       "id":"100302",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Protein Generator"
     },
     {
       "id":"100303",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Protein Generator"
     },
     {
       "id":"100304",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Protein Generator"
     },
     {
       "id":"100305",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Protein Generator"
     },
     {
       "id":"100306",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Protein Generator"
     },
     {
       "id":"100307",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Protein Generator"
     },
     {
       "id":"100308",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Protein Generator"
     },
     {
       "id":"100309",
       "name_item":"Protein Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Protein Generator"
     },
     {
       "id":"100310",
       "name_item":"Protein Generator",
       "can_merge":"FALSE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Protein Generator"
     },
     {
       "id":"100401",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Vegetable Generator"
     },
     {
       "id":"100402",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Vegetable Generator"
     },
     {
       "id":"100403",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Vegetable Generator"
     },
     {
       "id":"100404",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Vegetable Generator"
     },
     {
       "id":"100405",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Vegetable Generator"
     },
     {
       "id":"100406",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Vegetable Generator"
     },
     {
       "id":"100407",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Vegetable Generator"
     },
     {
       "id":"100408",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Vegetable Generator"
     },
     {
       "id":"100409",
       "name_item":"Vegetable Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Vegetable Generator"
     },
     {
       "id":"100410",
       "name_item":"Vegetable Generator",
       "can_merge":"FALSE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Vegetable Generator"
     },
     {
       "id":"100501",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Seafood Generator"
     },
     {
       "id":"100502",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Seafood Generator"
     },
     {
       "id":"100503",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Seafood Generator"
     },
     {
       "id":"100504",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Seafood Generator"
     },
     {
       "id":"100505",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Seafood Generator"
     },
     {
       "id":"100506",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Seafood Generator"
     },
     {
       "id":"100507",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Seafood Generator"
     },
     {
       "id":"100508",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Seafood Generator"
     },
     {
       "id":"100509",
       "name_item":"Seafood Generator",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Seafood Generator"
     },
     {
       "id":"100510",
       "name_item":"Seafood Generator",
       "can_merge":"FALSE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Seafood Generator"
     },
     {
       "id":"100601",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Grain Generator"
     },
     {
       "id":"100602",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Grain Generator"
     },
     {
       "id":"100603",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Grain Generator"
     },
     {
       "id":"100604",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Grain Generator"
     },
     {
       "id":"100605",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Grain Generator"
     },
     {
       "id":"100606",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Grain Generator"
     },
     {
       "id":"100607",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Grain Generator"
     },
     {
       "id":"100608",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Grain Generator"
     },
     {
       "id":"100609",
       "name_item":"Grain Generator",
-      "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Grain Generator"
     },
     {
       "id":"100610",
       "name_item":"Grain Generator",
-      "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "can_merge":"FALSE",
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Grain Generator"
     },
     {
       "id":"200101",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Juicer"
     },
     {
       "id":"200102",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Juicer"
     },
     {
       "id":"200103",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Juicer"
     },
     {
       "id":"200104",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Juicer"
     },
     {
       "id":"200105",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Juicer"
     },
     {
       "id":"200106",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Juicer"
     },
     {
       "id":"200107",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Juicer"
     },
     {
       "id":"200108",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Juicer"
     },
     {
       "id":"200109",
       "name_item":"Juicer",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Juicer"
     },
     {
       "id":"200110",
       "name_item":"Juicer",
       "can_merge":"FALSE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Juicer"
     },
     {
       "id":"200201",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Chef Counter"
     },
     {
       "id":"200202",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Chef Counter"
     },
     {
       "id":"200203",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Chef Counter"
     },
     {
       "id":"200204",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Chef Counter"
     },
     {
       "id":"200205",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Chef Counter"
     },
     {
       "id":"200206",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Chef Counter"
     },
     {
       "id":"200207",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Chef Counter"
     },
     {
       "id":"200208",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Chef Counter"
     },
     {
       "id":"200209",
       "name_item":"Chef Counter",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Chef Counter"
     },
     {
       "id":"200210",
       "name_item":"Chef Counter",
       "can_merge":"FALSE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Chef Counter"
     },
     {
       "id":"200301",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Grill"
     },
     {
       "id":"200302",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Grill"
     },
     {
       "id":"200303",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Grill"
     },
     {
       "id":"200304",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Grill"
     },
     {
       "id":"200305",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Grill"
     },
     {
       "id":"200306",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Grill"
     },
     {
       "id":"200307",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Grill"
     },
     {
       "id":"200308",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Grill"
     },
     {
       "id":"200309",
       "name_item":"Grill",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Grill"
     },
     {
       "id":"200310",
       "name_item":"Grill",
       "can_merge":"FALSE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Grill"
     },
     {
       "id":"200401",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Pan"
     },
     {
       "id":"200402",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Pan"
     },
     {
       "id":"200403",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Pan"
     },
     {
       "id":"200404",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Pan"
     },
     {
       "id":"200405",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Pan"
     },
     {
       "id":"200406",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Pan"
     },
     {
       "id":"200407",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Pan"
     },
     {
       "id":"200408",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Pan"
     },
     {
       "id":"200409",
       "name_item":"Pan",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Pan"
     },
     {
       "id":"200410",
       "name_item":"Pan",
       "can_merge":"FALSE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Pan"
     },
     {
       "id":"200501",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Oven"
     },
     {
       "id":"200502",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Oven"
     },
     {
       "id":"200503",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Oven"
     },
     {
       "id":"200504",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Oven"
     },
     {
       "id":"200505",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Oven"
     },
     {
       "id":"200506",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Oven"
     },
     {
       "id":"200507",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Oven"
     },
     {
       "id":"200508",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Oven"
     },
     {
       "id":"200509",
       "name_item":"Oven",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Oven"
     },
     {
       "id":"200510",
       "name_item":"Oven",
       "can_merge":"FALSE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Oven"
     },
     {
       "id":"300101",
       "name_item":"Gold",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Gold"
     },
     {
       "id":"300102",
       "name_item":"Gold",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Gold"
     },
     {
       "id":"300103",
       "name_item":"Gold",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Gold"
     },
     {
       "id":"300104",
       "name_item":"Gold",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Gold"
     },
     {
       "id":"300105",
       "name_item":"Gold",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Gold"
     },
     {
       "id":"300201",
       "name_item":"Energy",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Energy"
     },
     {
       "id":"300202",
       "name_item":"Energy",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Energy"
     },
     {
       "id":"300203",
       "name_item":"Energy",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Energy"
     },
     {
       "id":"300204",
       "name_item":"Energy",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Energy"
     },
     {
       "id":"300205",
       "name_item":"Energy",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Energy"
     },
     {
       "id":"300301",
       "name_item":"Diamond",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Diamond"
     },
     {
       "id":"300302",
       "name_item":"Diamond",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Diamond"
     },
     {
       "id":"300303",
       "name_item":"Diamond",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Diamond"
     },
     {
       "id":"300304",
       "name_item":"Diamond",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Diamond"
     },
     {
       "id":"300305",
       "name_item":"Diamond",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Diamond"
     },
     {
       "id":"400101",
       "name_item":"Blueberry Jam",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Yogurt & Jam"
     },
     {
       "id":"400102",
-      "name_item":"Strawberry jam",
+      "name_item":"Strawberry Jam",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Yogurt & Jam"
     },
     {
       "id":"400103",
       "name_item":"Orange  Marmalade",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Yogurt & Jam"
     },
     {
       "id":"400104",
       "name_item":"Apple Jam",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Yogurt & Jam"
     },
     {
       "id":"400105",
       "name_item":"Yogurt Strawberry Blueberry",
       "can_merge":"FALSE",
       "sell_price":"1",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Yogurt & Jam"
     },
     {
       "id":"400106",
       "name_item":"Yogurt Banana Strawberry",
       "can_merge":"FALSE",
       "sell_price":"1",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Yogurt & Jam"
     },
     {
       "id":"400107",
       "name_item":"Sunrise Mango Lassi",
       "can_merge":"FALSE",
       "sell_price":"10",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Yogurt & Jam"
     },
     {
       "id":"400108",
       "name_item":"Yogurt Juice mix",
       "can_merge":"FALSE",
       "sell_price":"26",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Yogurt & Jam"
     },
     {
       "id":"400109",
       "name_item":"Lemon Jam",
       "can_merge":"FALSE",
       "sell_price":"4",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Yogurt & Jam"
     },
     {
       "id":"400201",
       "name_item":"Blueberry Juice",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Juice"
     },
     {
       "id":"400202",
       "name_item":"Strawberry Juice",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Juice"
     },
     {
       "id":"400203",
       "name_item":"Orange Juice",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Juice"
     },
     {
       "id":"400204",
       "name_item":"Apple Juice",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Juice"
     },
     {
       "id":"400205",
       "name_item":"Pineapple Juice",
       "can_merge":"FALSE",
       "sell_price":"33",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Juice"
     },
     {
       "id":"400206",
       "name_item":"Watermelon Juice",
       "can_merge":"FALSE",
       "sell_price":"66",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Juice"
     },
     {
       "id":"400207",
       "name_item":"Blueberry Lemon Juice",
       "can_merge":"FALSE",
       "sell_price":"2",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Juice"
     },
     {
       "id":"400208",
       "name_item":"Orange Apple Juice",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Juice"
     },
     {
       "id":"400209",
       "name_item":"Purple Power",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Juice"
     },
     {
       "id":"400210",
       "name_item":"Spinach Apple Pineapple Juice",
       "can_merge":"FALSE",
       "sell_price":"50",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Juice"
     },
     {
       "id":"400211",
       "name_item":"Detox & Clear Skin",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Juice"
     },
     {
       "id":"400212",
       "name_item":"Boost Immunity & glow",
       "can_merge":"FALSE",
       "sell_price":"2",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Juice"
     },
     {
       "id":"400213",
       "name_item":"Carrot Apple Juice",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"13",
+      "item_category":"Juice"
     },
     {
       "id":"400214",
       "name_item":"Apple, Orange & Lemon Juice",
       "can_merge":"FALSE",
       "sell_price":"4",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"14",
+      "item_category":"Juice"
     },
     {
       "id":"400215",
       "name_item":"Tropical Sunrise",
       "can_merge":"FALSE",
       "sell_price":"2",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"15",
+      "item_category":"Juice"
     },
     {
       "id":"400216",
       "name_item":"Pink Lemonade",
       "can_merge":"FALSE",
       "sell_price":"2",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"16",
+      "item_category":"Juice"
     },
     {
       "id":"400301",
       "name_item":"Latte",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Coffee Drink"
     },
     {
       "id":"400302",
       "name_item":"Caramel Macchiato",
       "can_merge":"FALSE",
       "sell_price":"1",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Coffee Drink"
     },
     {
       "id":"400303",
       "name_item":"Frappe",
       "can_merge":"FALSE",
       "sell_price":"1",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Coffee Drink"
     },
     {
       "id":"400304",
       "name_item":"Iced Coffee Cream",
       "can_merge":"FALSE",
       "sell_price":"2",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Coffee Drink"
     },
     {
       "id":"400305",
       "name_item":"Caramel Frappe",
       "can_merge":"FALSE",
       "sell_price":"3",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Coffee Drink"
     },
     {
       "id":"400401",
       "name_item":"Grilled Sausage",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400402",
       "name_item":"Grilled Ham",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400403",
       "name_item":"Grilled Pork Belly",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400404",
       "name_item":"Grilled Pork Knuckle",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400405",
       "name_item":"Grilled Pork Ribs",
       "can_merge":"FALSE",
       "sell_price":"1",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400406",
       "name_item":"Grilled Beef Ribs",
       "can_merge":"FALSE",
       "sell_price":"4",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400407",
       "name_item":"Beef Steak & Potato",
       "can_merge":"FALSE",
       "sell_price":"11",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400408",
       "name_item":"Grilled Chicken Wing",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400409",
       "name_item":"Grilled Chicken",
       "can_merge":"FALSE",
       "sell_price":"2",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400410",
       "name_item":"Grilled Chicken Breast",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400411",
       "name_item":"Grilled Chicken Drumstick",
       "can_merge":"FALSE",
       "sell_price":"1",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400412",
       "name_item":"Grilled Red Onion and Bell Pepper",
       "can_merge":"FALSE",
       "sell_price":"8",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400413",
       "name_item":"Grilled Potato Cheese",
       "can_merge":"FALSE",
       "sell_price":"17",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"13",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400414",
       "name_item":"Grilled Cauliflower",
       "can_merge":"FALSE",
       "sell_price":"8",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"14",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400415",
       "name_item":"Grilled Eggplant",
       "can_merge":"FALSE",
       "sell_price":"2",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"15",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400416",
       "name_item":"Grilled Squid",
       "can_merge":"FALSE",
       "sell_price":"1",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"16",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400417",
       "name_item":"Grilled Shrimp",
       "can_merge":"FALSE",
       "sell_price":"2",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"17",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400418",
       "name_item":"Grilled Octopus",
       "can_merge":"FALSE",
       "sell_price":"8",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"18",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400419",
       "name_item":"Grilled Sea Bream",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"19",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400420",
       "name_item":"Grilled Chicken Breast & Bell Pepper",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"20",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400421",
       "name_item":"Grilled Mackerel",
       "can_merge":"FALSE",
       "sell_price":"2",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"21",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400422",
       "name_item":"BBQ Duck",
       "can_merge":"FALSE",
       "sell_price":"10",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"22",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400423",
       "name_item":"Grilled Corn",
       "can_merge":"FALSE",
       "sell_price":"24",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"23",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400424",
       "name_item":"Surf & Turf",
       "can_merge":"FALSE",
       "sell_price":"36",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"24",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400425",
       "name_item":"Grilled Lemon Butter Scallops And Asparagus",
       "can_merge":"FALSE",
       "sell_price":"31",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"25",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400426",
       "name_item":"Grilled Turkey Leg",
       "can_merge":"FALSE",
       "sell_price":"135",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"26",
+      "item_category":"Grilled Dish"
     },
     {
       "id":"400501",
       "name_item":"Stir-fried Egg",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Pan Dish"
     },
     {
       "id":"400502",
       "name_item":"Stir-fried Clam",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Pan Dish"
     },
     {
       "id":"400503",
       "name_item":"Scallops with Cauliflower",
       "can_merge":"FALSE",
       "sell_price":"25",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Pan Dish"
     },
     {
       "id":"400504",
       "name_item":"Creamy Chicken Breast",
       "can_merge":"FALSE",
       "sell_price":"6",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Pan Dish"
     },
     {
       "id":"400505",
       "name_item":"Fried Brocoli",
       "can_merge":"FALSE",
       "sell_price":"4",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Pan Dish"
     },
     {
       "id":"400506",
       "name_item":"Fried Asparagus",
       "can_merge":"FALSE",
       "sell_price":"4",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Pan Dish"
     },
     {
       "id":"400507",
       "name_item":"Pan-seared Cod with Kale",
       "can_merge":"FALSE",
       "sell_price":"9",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Pan Dish"
     },
     {
       "id":"400508",
       "name_item":"Shrimp with Asparagus",
       "can_merge":"FALSE",
       "sell_price":"6",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Pan Dish"
     },
     {
       "id":"400509",
       "name_item":"Beef Asparagus Stir Fry",
       "can_merge":"FALSE",
       "sell_price":"14",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Pan Dish"
     },
     {
       "id":"400510",
       "name_item":"Fried Salmon",
       "can_merge":"FALSE",
       "sell_price":"4",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Pan Dish"
     },
     {
       "id":"400511",
       "name_item":"Citrus Sea Bream",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Pan Dish"
     },
     {
       "id":"400601",
       "name_item":"Tomato Slices",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Salad & Raw"
     },
     {
       "id":"400602",
       "name_item":"Onion Slices",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Salad & Raw"
     },
     {
       "id":"400603",
       "name_item":"Cucumber Slices",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Salad & Raw"
     },
     {
       "id":"400604",
       "name_item":"Shredded Lettuce",
       "can_merge":"FALSE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Salad & Raw"
     },
     {
       "id":"400605",
       "name_item":"Caprese Salad",
       "can_merge":"FALSE",
       "sell_price":"16",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Salad & Raw"
     },
     {
       "id":"400606",
       "name_item":"Apple Blue Cheese Salad",
       "can_merge":"FALSE",
       "sell_price":"67",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Salad & Raw"
     },
     {
       "id":"400607",
       "name_item":"Shrimp Cocktail",
       "can_merge":"FALSE",
       "sell_price":"2",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Salad & Raw"
     },
     {
       "id":"400608",
       "name_item":"American Potato Salad",
       "can_merge":"FALSE",
       "sell_price":"34",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Salad & Raw"
     },
     {
       "id":"400609",
       "name_item":"Cabbage Slaw",
       "can_merge":"FALSE",
       "sell_price":"1",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Salad & Raw"
     },
     {
       "id":"400701",
       "name_item":"Deconstructed Cheesecake",
       "can_merge":"FALSE",
       "sell_price":"37",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Dessert"
     },
     {
       "id":"400702",
       "name_item":"Apple Compote",
       "can_merge":"FALSE",
       "sell_price":"9",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Dessert"
     },
     {
       "id":"400703",
       "name_item":"Berry & Coconut Trifle",
       "can_merge":"FALSE",
       "sell_price":"3",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Dessert"
     },
     {
       "id":"400704",
       "name_item":"Passion Fruit Panna Cotta",
       "can_merge":"FALSE",
       "sell_price":"7",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Dessert"
     },
     {
       "id":"400705",
       "name_item":"Banana Split",
       "can_merge":"FALSE",
       "sell_price":"18",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Dessert"
     },
     {
       "id":"400706",
       "name_item":"Burnt Cream",
       "can_merge":"FALSE",
       "sell_price":"35",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Dessert"
     },
     {
       "id":"400801",
       "name_item":"Corn with Cheese",
       "can_merge":"FALSE",
       "sell_price":"158",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Baked Dish"
     },
     {
       "id":"500101",
-      "name_item":"CardPlus 8",
+      "name_item":"Card Plus",
       "can_merge":"TRUE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"CardPlus"
     },
     {
       "id":"500102",
-      "name_item":"CardPlus 16",
+      "name_item":"Card Plus",
       "can_merge":"TRUE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"CardPlus"
     },
     {
       "id":"500103",
-      "name_item":"CardPlus 32",
+      "name_item":"Card Plus",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"CardPlus"
     },
     {
       "id":"500201",
-      "name_item":"Sandglass 1",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Sandglass"
     },
     {
       "id":"500202",
-      "name_item":"Sandglass 2",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Sandglass"
     },
     {
       "id":"500203",
-      "name_item":"Sandglass 3",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Sandglass"
     },
     {
       "id":"500204",
-      "name_item":"Sandglass 4",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Sandglass"
     },
     {
       "id":"500205",
-      "name_item":"Sandglass 5",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Sandglass"
     },
     {
       "id":"500206",
-      "name_item":"Sandglass 6",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Sandglass"
     },
     {
       "id":"500207",
-      "name_item":"Sandglass 7",
+      "name_item":"Sandglass",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Sandglass"
     },
     {
       "id":"500208",
-      "name_item":"Sandglass 8",
+      "name_item":"Sandglass",
       "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Sandglass"
     },
     {
       "id":"500301",
-      "name_item":"Scissors 1",
+      "name_item":"Scissors",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Scissors"
     },
     {
       "id":"500302",
-      "name_item":"Scissors 2",
+      "name_item":"Scissors",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Scissors"
     },
     {
       "id":"500303",
-      "name_item":"Scissors 3",
+      "name_item":"Scissors",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Scissors"
     },
     {
       "id":"500304",
-      "name_item":"Scissors 4",
+      "name_item":"Scissors",
       "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Scissors"
     },
     {
       "id":"500401",
-      "name_item":"StandardUnlimitedEnergy",
+      "name_item":"Standard Unlimited Energy",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"UnlimitedEnergy"
     },
     {
       "id":"500501",
-      "name_item":"UpgradedUnlimitedEnergy",
+      "name_item":"Upgraded Unlimited Energy",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"UpgradedEnergy"
     },
     {
       "id":"500601",
       "name_item":"Blue Duplicate Camera",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"DuplicateCamera"
     },
     {
       "id":"500602",
       "name_item":"Purple Duplicate Camera",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"DuplicateCamera"
     },
     {
       "id":"500603",
       "name_item":"Orange Duplicate Camera",
       "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"DuplicateCamera"
     },
     {
       "id":"500701",
-      "name_item":"MagicWand 3",
+      "name_item":"Magic Wand",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"MagicWand"
     },
     {
       "id":"500702",
-      "name_item":"MagicWand 6",
+      "name_item":"Magic Wand",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"MagicWand"
     },
     {
       "id":"500703",
-      "name_item":"MagicWand 12",
+      "name_item":"Magic Wand",
       "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"MagicWand"
     },
     {
       "id":"500801",
       "name_item":"Blue Rocket Cracker",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"RocketCracker"
     },
     {
       "id":"500802",
       "name_item":"Purple Rocket Cracker",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"RocketCracker"
     },
     {
       "id":"500803",
       "name_item":"Orange Rocket Craker",
       "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"RocketCracker"
     },
     {
       "id":"500901",
       "name_item":"Raccoon Timer",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Timer"
     },
     {
       "id":"500902",
       "name_item":"Squirrel Timer",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Timer"
     },
     {
       "id":"500903",
       "name_item":"Monkey Timer",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Timer"
     },
     {
       "id":"500904",
       "name_item":"Rabbit Timer",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Timer"
     },
     {
       "id":"500905",
       "name_item":"Fox Timer",
       "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Timer"
     },
     {
       "id":"501001",
       "name_item":"Wild Card",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"WildCard"
     },
     {
       "id":"501101",
-      "name_item":"SpeedBoost 1",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"SpeedBoost"
     },
     {
       "id":"501102",
-      "name_item":"SpeedBoost 2",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"SpeedBoost"
     },
     {
       "id":"501103",
-      "name_item":"SpeedBoost 3",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"SpeedBoost"
     },
     {
       "id":"501104",
-      "name_item":"SpeedBoost 4",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"SpeedBoost"
     },
     {
       "id":"501105",
-      "name_item":"SpeedBoost 5",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"SpeedBoost"
     },
     {
       "id":"501106",
-      "name_item":"SpeedBoost 6",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"SpeedBoost"
     },
     {
       "id":"501107",
-      "name_item":"SpeedBoost 7",
+      "name_item":"Speed Boost",
       "can_merge":"TRUE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"SpeedBoost"
     },
     {
       "id":"501108",
-      "name_item":"SpeedBoost 8",
+      "name_item":"Speed Boost",
       "can_merge":"FALSE",
-      "sell_price":"",
-      "sum_merge":""
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"SpeedBoost"
     },
     {
       "id":"600101",
       "name_item":"Energy Chest",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Energy Chest"
     },
     {
       "id":"600201",
-      "name_item":"Chef  Chest",
+      "name_item":"Chef Chest",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Chef Chest"
     },
     {
       "id":"600301",
       "name_item":"Equipment Chest",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Equipment Chest"
     },
     {
       "id":"600401",
-      "name_item":"Assistants Chest",
+      "name_item":"Assistans Chest",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Assistants Chest"
     },
     {
       "id":"600501",
       "name_item":"Daily Gift",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Daily Gift"
     },
     {
       "id":"600601",
-      "name_item":"LuckyHandbag",
+      "name_item":"Lucky Hand Bag",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"LuckyHandbag"
     },
     {
       "id":"600701",
-      "name_item":"LuckyBox",
+      "name_item":"Lucky Box",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"LuckyBox"
     },
     {
       "id":"600801",
       "name_item":"Gift",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Gift"
     },
     {
       "id":"600901",
       "name_item":"Equipment Box",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Equipment Box"
     },
     {
       "id":"601001",
       "name_item":"Coin Box",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Coin Box"
     },
     {
       "id":"601101",
       "name_item":"Choice Chest",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Choice Chest"
     },
     {
       "id":"601201",
       "name_item":"Flush Gift",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Flush Gift"
     },
     {
       "id":"601301",
       "name_item":"Trainee Box",
       "can_merge":"FALSE",
       "sell_price":"",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Trainee Box"
     },
     {
       "id":"700101",
       "name_item":"Coffee Bean",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700102",
       "name_item":"Ground Coffee",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700103",
       "name_item":"Cup of Coffee",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700104",
       "name_item":"Iced Coffee",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700105",
       "name_item":"Coffee - to - Go",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700106",
       "name_item":"Iced Coffee - to - Go",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700107",
       "name_item":"Cold Brew",
       "can_merge":"TRUE",
-      "sell_price":"1",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700108",
       "name_item":"Pour ove coffee",
-      "can_merge":"FALSE",
-      "sell_price":"3",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700109",
       "name_item":"French press",
       "can_merge":"TRUE",
-      "sell_price":"7",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700110",
       "name_item":"Aero press",
       "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700111",
       "name_item":"Moka Pot",
       "can_merge":"TRUE",
       "sell_price":"30",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700112",
       "name_item":"Syphon coffee",
       "can_merge":"FALSE",
       "sell_price":"61",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Coffee Ingredient"
     },
     {
       "id":"700201",
       "name_item":"Glass of Water",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Soft Drink"
     },
     {
       "id":"700202",
       "name_item":"Citrus Soda",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Soft Drink"
     },
     {
       "id":"700203",
       "name_item":"Bottled Lemon Tea",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Soft Drink"
     },
     {
       "id":"700204",
       "name_item":"Soda Water",
       "can_merge":"TRUE",
-      "sell_price":"1",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Soft Drink"
     },
     {
       "id":"700205",
       "name_item":"Lemon-Lime Soda",
       "can_merge":"TRUE",
-      "sell_price":"3",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Soft Drink"
     },
     {
       "id":"700206",
       "name_item":"Sweet Cola",
       "can_merge":"TRUE",
-      "sell_price":"7",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Soft Drink"
     },
     {
       "id":"700207",
       "name_item":"Orange Soda",
       "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Soft Drink"
     },
     {
       "id":"700208",
       "name_item":"Classic Cola",
-      "can_merge":"FALSE",
+      "can_merge":"TRUE",
       "sell_price":"30",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Soft Drink"
     },
     {
       "id":"700209",
-      "name_item":"Lon Redbull (xanh trắng)",
+      "name_item":"Sugar-free Energy",
       "can_merge":"TRUE",
       "sell_price":"61",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Soft Drink"
     },
     {
       "id":"700210",
-      "name_item":"Lon Monster Energy",
+      "name_item":"Original Energy",
       "can_merge":"FALSE",
       "sell_price":"122",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Soft Drink"
     },
     {
       "id":"700301",
       "name_item":"Ice Cube",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Dairy"
     },
     {
       "id":"700302",
       "name_item":"Milk Bottle",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Dairy"
     },
     {
       "id":"700303",
       "name_item":"Yogurt",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Dairy"
     },
     {
       "id":"700304",
       "name_item":"Fresh Cream",
       "can_merge":"TRUE",
-      "sell_price":"1",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Dairy"
     },
     {
       "id":"700305",
       "name_item":"Cheddar Cheese",
       "can_merge":"TRUE",
-      "sell_price":"3",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Dairy"
     },
     {
       "id":"700306",
       "name_item":"Butter",
       "can_merge":"TRUE",
-      "sell_price":"7",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Dairy"
     },
     {
       "id":"700307",
       "name_item":"Mozzarella",
       "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Dairy"
     },
     {
       "id":"700308",
       "name_item":"Brie Cheese",
-      "can_merge":"FALSE",
+      "can_merge":"TRUE",
       "sell_price":"30",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Dairy"
     },
     {
       "id":"700309",
       "name_item":"Blue Cheese",
       "can_merge":"TRUE",
       "sell_price":"61",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Dairy"
     },
     {
       "id":"700310",
       "name_item":"Truffle Cheese",
       "can_merge":"FALSE",
       "sell_price":"122",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Dairy"
     },
     {
       "id":"700401",
       "name_item":"Glass Bottle",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Glassware"
     },
     {
       "id":"700402",
       "name_item":"Glass Bowl",
       "can_merge":"TRUE",
       "sell_price":"1",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Glassware"
     },
     {
       "id":"700403",
       "name_item":"Glass Cup",
       "can_merge":"TRUE",
       "sell_price":"2",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Glassware"
     },
     {
       "id":"700404",
       "name_item":"Crystal Plate",
       "can_merge":"TRUE",
       "sell_price":"4",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Glassware"
     },
     {
       "id":"700405",
       "name_item":"Crystal Vase",
       "can_merge":"TRUE",
       "sell_price":"8",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Glassware"
     },
     {
       "id":"700406",
       "name_item":"Crystal Cake Stand",
-      "can_merge":"FALSE",
+      "can_merge":"TRUE",
       "sell_price":"16",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Glassware"
     },
     {
       "id":"700501",
       "name_item":"Blueberry",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Fruit"
     },
     {
       "id":"700502",
       "name_item":"Strawberry",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Fruit"
     },
     {
       "id":"700503",
       "name_item":"Orange",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Fruit"
     },
     {
       "id":"700504",
       "name_item":"Apple",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Fruit"
     },
     {
       "id":"700505",
       "name_item":"Banana",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Fruit"
     },
     {
       "id":"700506",
       "name_item":"Coconut",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Fruit"
     },
     {
       "id":"700507",
       "name_item":"Lemon",
       "can_merge":"TRUE",
-      "sell_price":"1",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Fruit"
     },
     {
       "id":"700508",
       "name_item":"Passion Fruit",
-      "can_merge":"FALSE",
-      "sell_price":"3",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Fruit"
     },
     {
       "id":"700509",
       "name_item":"Mango",
       "can_merge":"TRUE",
-      "sell_price":"7",
-      "sum_merge":""
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Fruit"
     },
     {
       "id":"700510",
       "name_item":"Pomegranate",
       "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Fruit"
     },
     {
       "id":"700511",
       "name_item":"Pineapple",
       "can_merge":"TRUE",
       "sell_price":"30",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Fruit"
     },
     {
       "id":"700512",
       "name_item":"Watermelon",
       "can_merge":"FALSE",
       "sell_price":"61",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Fruit"
     },
     {
       "id":"700601",
       "name_item":"Sugarcane",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Sugar & Candy"
     },
     {
       "id":"700602",
       "name_item":"Sugar",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Sugar & Candy"
     },
     {
       "id":"700603",
       "name_item":"Brown Sugar",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Sugar & Candy"
     },
     {
       "id":"700604",
       "name_item":"Caramel",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Sugar & Candy"
     },
     {
       "id":"700605",
       "name_item":"Honey",
       "can_merge":"TRUE",
-      "sell_price":"1",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Sugar & Candy"
     },
     {
       "id":"700606",
       "name_item":"Candy",
       "can_merge":"TRUE",
-      "sell_price":"3",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Sugar & Candy"
     },
     {
       "id":"700607",
       "name_item":"Marshmallow",
       "can_merge":"TRUE",
-      "sell_price":"7",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Sugar & Candy"
     },
     {
       "id":"700608",
       "name_item":"Scoop of Ice Cream",
       "can_merge":"FALSE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Sugar & Candy"
     },
     {
       "id":"700701",
       "name_item":"Coconut Water",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Coconut Product"
     },
     {
       "id":"700702",
       "name_item":"Coconut Milk",
       "can_merge":"TRUE",
       "sell_price":"1",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Coconut Product"
     },
     {
       "id":"700703",
       "name_item":"Coconut Jelly",
       "can_merge":"TRUE",
       "sell_price":"3",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Coconut Product"
     },
     {
       "id":"700704",
       "name_item":"Coconut Ice Cream",
       "can_merge":"TRUE",
       "sell_price":"7",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Coconut Product"
     },
     {
       "id":"700705",
       "name_item":"Coconut Soda",
       "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Coconut Product"
     },
     {
       "id":"700706",
       "name_item":"Coconut Candy",
       "can_merge":"TRUE",
       "sell_price":"31",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Coconut Product"
     },
     {
       "id":"700707",
       "name_item":"Coconut Pudding",
       "can_merge":"FALSE",
       "sell_price":"62",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Coconut Product"
     },
     {
       "id":"700801",
       "name_item":"Coconut Shell",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Coconut Decor"
     },
     {
       "id":"700802",
       "name_item":"Coconut Shell Plate",
       "can_merge":"TRUE",
       "sell_price":"1",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Coconut Decor"
     },
     {
       "id":"700803",
       "name_item":"Coconut Shell Spoon",
       "can_merge":"TRUE",
       "sell_price":"3",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Coconut Decor"
     },
     {
       "id":"700804",
       "name_item":"Coconut Shell Cup",
       "can_merge":"TRUE",
       "sell_price":"7",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Coconut Decor"
     },
     {
       "id":"700805",
       "name_item":"Coconut Shell Dish",
       "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Coconut Decor"
     },
     {
       "id":"700806",
       "name_item":"Coconut Shell Bowl",
       "can_merge":"TRUE",
       "sell_price":"31",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Coconut Decor"
     },
     {
       "id":"700807",
       "name_item":"Coconut Shell Pot",
       "can_merge":"FALSE",
       "sell_price":"62",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Coconut Decor"
     },
     {
       "id":"700901",
       "name_item":"Ground Meat",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Red Meat"
     },
     {
       "id":"700902",
       "name_item":"Fresh Sausage",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Red Meat"
     },
     {
       "id":"700903",
       "name_item":"Ham",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Red Meat"
     },
     {
       "id":"700904",
       "name_item":"Pork Belly",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Red Meat"
     },
     {
       "id":"700905",
       "name_item":"Pork Knuckle",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Red Meat"
     },
     {
       "id":"700906",
       "name_item":"Pork Ribs",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Red Meat"
     },
     {
       "id":"700907",
       "name_item":"Beef Tenderloin",
-      "can_merge":"FALSE",
-      "sell_price":"1",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Red Meat"
     },
     {
       "id":"700908",
       "name_item":"Beef Ribs",
       "can_merge":"TRUE",
-      "sell_price":"3",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Red Meat"
     },
     {
       "id":"700909",
       "name_item":"Diced Goat Meat",
       "can_merge":"TRUE",
-      "sell_price":"7",
-      "sum_merge":""
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Red Meat"
     },
     {
       "id":"700910",
       "name_item":"Lamb Rack",
       "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Red Meat"
     },
     {
       "id":"700911",
       "name_item":"Whole Goat Leg",
       "can_merge":"TRUE",
       "sell_price":"30",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Red Meat"
     },
     {
       "id":"700912",
       "name_item":"Whole Lamb",
       "can_merge":"FALSE",
       "sell_price":"61",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Red Meat"
     },
     {
       "id":"701001",
       "name_item":"Chicken Egg",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Poultry"
     },
     {
       "id":"701002",
       "name_item":"Chicken Breast",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Poultry"
     },
     {
       "id":"701003",
       "name_item":"Chicken Wing",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Poultry"
     },
     {
       "id":"701004",
       "name_item":"Chicken Drumstick",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Poultry"
     },
     {
       "id":"701005",
       "name_item":"Whole Chicken",
       "can_merge":"TRUE",
-      "sell_price":"1",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Poultry"
     },
     {
       "id":"701006",
       "name_item":"Duck Breast",
       "can_merge":"TRUE",
-      "sell_price":"3",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Poultry"
     },
     {
       "id":"701007",
       "name_item":"Whole Duck",
-      "can_merge":"FALSE",
-      "sell_price":"7",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Poultry"
     },
     {
       "id":"701008",
       "name_item":"Whole Goose",
       "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Poultry"
     },
     {
       "id":"701009",
       "name_item":"Quail",
       "can_merge":"TRUE",
       "sell_price":"30",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Poultry"
     },
     {
       "id":"701010",
       "name_item":"Whole Pheasant",
       "can_merge":"TRUE",
       "sell_price":"61",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Poultry"
     },
     {
       "id":"701011",
       "name_item":"Turkey",
       "can_merge":"FALSE",
       "sell_price":"122",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Poultry"
     },
     {
       "id":"701101",
       "name_item":"Cucumber",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Vegetable"
     },
     {
       "id":"701102",
       "name_item":"Tomato",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Vegetable"
     },
     {
       "id":"701103",
       "name_item":"Red Onion",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Vegetable"
     },
     {
       "id":"701104",
       "name_item":"Carrot",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Vegetable"
     },
     {
       "id":"701105",
       "name_item":"Bell Pepper",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Vegetable"
     },
     {
       "id":"701106",
       "name_item":"Potato",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Vegetable"
     },
     {
       "id":"701107",
       "name_item":"Eggplant",
       "can_merge":"TRUE",
-      "sell_price":"1",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Vegetable"
     },
     {
       "id":"701108",
       "name_item":"Asparagus",
-      "can_merge":"FALSE",
-      "sell_price":"3",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Vegetable"
     },
     {
       "id":"701109",
       "name_item":"Beetroot",
       "can_merge":"TRUE",
-      "sell_price":"7",
-      "sum_merge":""
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Vegetable"
     },
     {
       "id":"701110",
       "name_item":"Corn",
       "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Vegetable"
     },
     {
       "id":"701111",
       "name_item":"Okra",
       "can_merge":"TRUE",
       "sell_price":"30",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Vegetable"
     },
     {
       "id":"701112",
       "name_item":"Peas",
       "can_merge":"FALSE",
       "sell_price":"61",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Vegetable"
     },
     {
       "id":"701201",
       "name_item":"Sprouts",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701202",
       "name_item":"Lettuce",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701203",
       "name_item":"Kale",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701204",
       "name_item":"Cabbage",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701205",
       "name_item":"Red Cabbage",
       "can_merge":"TRUE",
-      "sell_price":"1",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701206",
       "name_item":"Broccoli",
       "can_merge":"TRUE",
-      "sell_price":"3",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701207",
       "name_item":"Cauliflower",
       "can_merge":"TRUE",
-      "sell_price":"7",
-      "sum_merge":""
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701208",
       "name_item":"Spinach",
-      "can_merge":"FALSE",
+      "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701209",
       "name_item":"Celery",
       "can_merge":"TRUE",
       "sell_price":"30",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701210",
       "name_item":"Arugula",
       "can_merge":"TRUE",
       "sell_price":"61",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701211",
       "name_item":"Artichoke",
       "can_merge":"TRUE",
       "sell_price":"122",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701212",
       "name_item":"Truffle Mushroom",
       "can_merge":"FALSE",
       "sell_price":"245",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Leafy Vegetable"
     },
     {
       "id":"701301",
       "name_item":"Anchovy",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Fish"
     },
     {
       "id":"701302",
       "name_item":"Mackerel",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Fish"
     },
     {
       "id":"701303",
       "name_item":"Tilapia",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Fish"
     },
     {
       "id":"701304",
       "name_item":"Sea Bream",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Fish"
     },
     {
       "id":"701305",
       "name_item":"Cod",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Fish"
     },
     {
       "id":"701306",
       "name_item":"Halibut",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Fish"
     },
     {
       "id":"701307",
       "name_item":"Salmon",
       "can_merge":"TRUE",
-      "sell_price":"1",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Fish"
     },
     {
       "id":"701308",
       "name_item":"Sae Bass",
-      "can_merge":"FALSE",
-      "sell_price":"3",
-      "sum_merge":""
+      "can_merge":"TRUE",
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Fish"
     },
     {
       "id":"701309",
       "name_item":"Sturgeon",
       "can_merge":"TRUE",
-      "sell_price":"7",
-      "sum_merge":""
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Fish"
     },
     {
       "id":"701310",
       "name_item":"Red Snapper",
       "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Fish"
     },
     {
       "id":"701311",
       "name_item":"Black Cod",
       "can_merge":"TRUE",
       "sell_price":"30",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Fish"
     },
     {
       "id":"701312",
       "name_item":"Bluefin Tuna",
       "can_merge":"FALSE",
       "sell_price":"61",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Fish"
     },
     {
       "id":"701401",
       "name_item":"Clam",
       "can_merge":"TRUE",
       "sell_price":"0",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Shellfish"
     },
     {
       "id":"701402",
       "name_item":"Mussel",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Shellfish"
     },
     {
       "id":"701403",
       "name_item":"Oyster",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Shellfish"
     },
     {
       "id":"701404",
       "name_item":"Squid",
       "can_merge":"TRUE",
-      "sell_price":"0",
-      "sum_merge":""
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Shellfish"
     },
     {
       "id":"701405",
       "name_item":"Shrimp",
       "can_merge":"TRUE",
-      "sell_price":"1",
-      "sum_merge":""
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Shellfish"
     },
     {
       "id":"701406",
       "name_item":"Crab",
       "can_merge":"TRUE",
-      "sell_price":"3",
-      "sum_merge":""
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Shellfish"
     },
     {
       "id":"701407",
       "name_item":"Octopus",
       "can_merge":"TRUE",
-      "sell_price":"7",
-      "sum_merge":""
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Shellfish"
     },
     {
       "id":"701408",
       "name_item":"Scallop",
-      "can_merge":"FALSE",
+      "can_merge":"TRUE",
       "sell_price":"15",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Shellfish"
     },
     {
       "id":"701409",
       "name_item":"Lobster",
       "can_merge":"TRUE",
       "sell_price":"30",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Shellfish"
     },
     {
       "id":"701410",
       "name_item":"King Crab",
       "can_merge":"TRUE",
       "sell_price":"61",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Shellfish"
     },
     {
       "id":"701411",
       "name_item":"Abalone",
       "can_merge":"FALSE",
       "sell_price":"122",
-      "sum_merge":""
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Shellfish"
+    },
+    {
+      "id":"400512",
+      "name_item":"Pan Fried Patty",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Pan Dish"
+    },
+    {
+      "id":"400901",
+      "name_item":"Fried Okra",
+      "can_merge":"FALSE",
+      "sell_price":"30",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400902",
+      "name_item":"Hot Dog",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400903",
+      "name_item":"Cheese Dog",
+      "can_merge":"FALSE",
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400904",
+      "name_item":"Pork Burger",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400905",
+      "name_item":"Cheese Burger",
+      "can_merge":"FALSE",
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400906",
+      "name_item":"Corn Dog",
+      "can_merge":"FALSE",
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400907",
+      "name_item":"Fried Chicken Wings",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400908",
+      "name_item":"Fried Chicken Breast",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400909",
+      "name_item":"Fried Chicken Drumstick",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400910",
+      "name_item":"Fried Whole Chicken",
+      "can_merge":"FALSE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400911",
+      "name_item":"Onion Rings",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400912",
+      "name_item":"Tator Tots",
+      "can_merge":"FALSE",
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400913",
+      "name_item":"Loaded Tots",
+      "can_merge":"FALSE",
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"13",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400610",
+      "name_item":"Potato Strips",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Salad & Raw"
+    },
+    {
+      "id":"400914",
+      "name_item":"Fries",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"14",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400915",
+      "name_item":"Texas Cheese Fries",
+      "can_merge":"FALSE",
+      "sell_price":"19",
+      "sum_merge":"",
+      "tier":"15",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400427",
+      "name_item":"Delmonico Steak",
+      "can_merge":"FALSE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"27",
+      "item_category":"Grilled Dish"
+    },
+    {
+      "id":"400916",
+      "name_item":"Steak & Blue Cheese Sandwich",
+      "can_merge":"FALSE",
+      "sell_price":"61",
+      "sum_merge":"",
+      "tier":"16",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400917",
+      "name_item":"Hush Puppies",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"17",
+      "item_category":"Fast Food"
+    },
+    {
+      "id":"400802",
+      "name_item":"Baked Hotdog Bun",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Baked Dish"
+    },
+    {
+      "id":"400803",
+      "name_item":"Baked Burger Bun",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Baked Dish"
+    },
+    {
+      "id":"400804",
+      "name_item":"Toast",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Baked Dish"
+    },
+    {
+      "id":"400707",
+      "name_item":"Donut",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Dessert"
+    },
+    {
+      "id":"400708",
+      "name_item":"Donut Chocolate",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Dessert"
+    },
+    {
+      "id":"400709",
+      "name_item":"Jelly Donut",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Dessert"
+    },
+    {
+      "id":"400806",
+      "name_item":"Croissant",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Baked Dish"
+    },
+    {
+      "id":"400807",
+      "name_item":"Apple Pie",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Baked Dish"
+    },
+    {
+      "id":"400808",
+      "name_item":"Blueberry Pie",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Baked Dish"
+    },
+    {
+      "id":"400809",
+      "name_item":"Banana Bread",
+      "can_merge":"FALSE",
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Baked Dish"
+    },
+    {
+      "id":"400810",
+      "name_item":"Fudge Brownies",
+      "can_merge":"FALSE",
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Baked Dish"
+    },
+    {
+      "id":"400811",
+      "name_item":"Chocolate Chip Cookies",
+      "can_merge":"FALSE",
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Baked Dish"
+    },
+    {
+      "id":"400306",
+      "name_item":"Mocha",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Coffee Drink"
+    },
+    {
+      "id":"400307",
+      "name_item":"Mocha Frappe",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Coffee Drink"
+    },
+    {
+      "id":"701501",
+      "name_item":"Mung beans",
+      "can_merge":"TRUE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701502",
+      "name_item":"Soybeans",
+      "can_merge":"TRUE",
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701503",
+      "name_item":"Red lentils",
+      "can_merge":"TRUE",
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701504",
+      "name_item":"Corn flour",
+      "can_merge":"TRUE",
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701505",
+      "name_item":"Wheat flour",
+      "can_merge":"TRUE",
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701506",
+      "name_item":"Breadcrumbs",
+      "can_merge":"TRUE",
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701507",
+      "name_item":"Potato flour",
+      "can_merge":"TRUE",
+      "sell_price":"15",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701508",
+      "name_item":"Rice",
+      "can_merge":"TRUE",
+      "sell_price":"30",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701509",
+      "name_item":"Oats",
+      "can_merge":"TRUE",
+      "sell_price":"61",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701510",
+      "name_item":"Quinoa seeds",
+      "can_merge":"TRUE",
+      "sell_price":"122",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701511",
+      "name_item":"Buckwheat seeds",
+      "can_merge":"TRUE",
+      "sell_price":"245",
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701512",
+      "name_item":"Sweet potato",
+      "can_merge":"FALSE",
+      "sell_price":"49",
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Grain & Legume"
+    },
+    {
+      "id":"701601",
+      "name_item":"Sesame seeds",
+      "can_merge":"TRUE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Nut & Seed"
+    },
+    {
+      "id":"701602",
+      "name_item":"Pumpkin seeds",
+      "can_merge":"TRUE",
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Nut & Seed"
+    },
+    {
+      "id":"701603",
+      "name_item":"Pistachios",
+      "can_merge":"TRUE",
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Nut & Seed"
+    },
+    {
+      "id":"701604",
+      "name_item":"Peanuts",
+      "can_merge":"TRUE",
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Nut & Seed"
+    },
+    {
+      "id":"701605",
+      "name_item":"Almonds",
+      "can_merge":"TRUE",
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Nut & Seed"
+    },
+    {
+      "id":"701606",
+      "name_item":"Cashews",
+      "can_merge":"TRUE",
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Nut & Seed"
+    },
+    {
+      "id":"701607",
+      "name_item":"Walnuts",
+      "can_merge":"TRUE",
+      "sell_price":"15",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Nut & Seed"
+    },
+    {
+      "id":"701608",
+      "name_item":"Macadamia nuts",
+      "can_merge":"TRUE",
+      "sell_price":"30",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Nut & Seed"
+    },
+    {
+      "id":"701609",
+      "name_item":"Hazelnuts",
+      "can_merge":"TRUE",
+      "sell_price":"61",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Nut & Seed"
+    },
+    {
+      "id":"701610",
+      "name_item":"Pine nuts",
+      "can_merge":"FALSE",
+      "sell_price":"122",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Nut & Seed"
+    },
+    {
+      "id":"701701",
+      "name_item":"Peanuts",
+      "can_merge":"TRUE",
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Nut & Chocolate"
+    },
+    {
+      "id":"701702",
+      "name_item":"Peanut butter",
+      "can_merge":"TRUE",
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Nut & Chocolate"
+    },
+    {
+      "id":"701703",
+      "name_item":"Cocoa sauce",
+      "can_merge":"TRUE",
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Nut & Chocolate"
+    },
+    {
+      "id":"701704",
+      "name_item":"Dark chocolate",
+      "can_merge":"TRUE",
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Nut & Chocolate"
+    },
+    {
+      "id":"701705",
+      "name_item":"White chocolate",
+      "can_merge":"FALSE",
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Nut & Chocolate"
+    },
+    {
+      "id":"401001",
+      "name_item":"Hot Dog Bun",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Dough"
+    },
+    {
+      "id":"401002",
+      "name_item":"Burger Bun",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Dough"
+    },
+    {
+      "id":"401003",
+      "name_item":"Toast Dough",
+      "can_merge":"FALSE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Dough"
+    },
+    {
+      "id":"401004",
+      "name_item":"Donut Dough",
+      "can_merge":"FALSE",
+      "sell_price":"0",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Dough"
+    },
+    {
+      "id":"401005",
+      "name_item":"Pie Crust",
+      "can_merge":"FALSE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Dough"
+    },
+    {
+      "id":"401006",
+      "name_item":"Croissant Dough",
+      "can_merge":"FALSE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Dough"
+    },
+    {
+      "id":"800101",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800102",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800103",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"3",
+      "sum_merge":"",
+      "tier":"3",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800104",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"4",
+      "sum_merge":"",
+      "tier":"4",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800105",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"5",
+      "sum_merge":"",
+      "tier":"5",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800106",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"6",
+      "sum_merge":"",
+      "tier":"6",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800107",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"7",
+      "sum_merge":"",
+      "tier":"7",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800108",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"8",
+      "sum_merge":"",
+      "tier":"8",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800109",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"9",
+      "sum_merge":"",
+      "tier":"9",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800110",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"10",
+      "sum_merge":"",
+      "tier":"10",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800111",
+      "name_item":"Cat",
+      "can_merge":"TRUE",
+      "sell_price":"11",
+      "sum_merge":"",
+      "tier":"11",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800112",
+      "name_item":"Cat",
+      "can_merge":"FALSE",
+      "sell_price":"12",
+      "sum_merge":"",
+      "tier":"12",
+      "item_category":"Cat"
+    },
+    {
+      "id":"800301",
+      "name_item":"DorasCurrency",
+      "can_merge":"TRUE",
+      "sell_price":"1",
+      "sum_merge":"",
+      "tier":"1",
+      "item_category":"DorasCurrency"
+    },
+    {
+      "id":"800302",
+      "name_item":"DorasCurrency",
+      "can_merge":"FALSE",
+      "sell_price":"2",
+      "sum_merge":"",
+      "tier":"2",
+      "item_category":"DorasCurrency"
     }
   ],
   "itemExpand":[
     {
-      "itemID":"700301",
+      "itemID":"700302",
       "spawn_itemID":"700401",
       "spawn_number":"1",
       "time_cooldown":"3",
@@ -7371,6 +9797,13 @@ Object.assign(window.GameData, {
       "spawn_number":"1",
       "time_cooldown":"",
       "cost_energy":""
+    },
+    {
+      "itemID":"701604",
+      "spawn_itemID":"701701",
+      "spawn_number":"1",
+      "time_cooldown":"3",
+      "cost_energy":"1"
     }
   ],
   "formuaRecipes":[
@@ -7447,6 +9880,42 @@ Object.assign(window.GameData, {
       "Ingredient4Type":""
     },
     {
+      "itemID":"400205",
+      "tool":"Juicer",
+      "toolId":"2001",
+      "cooking_time":"1024",
+      "ResultId":"400205",
+      "TypeTool":"Juicer",
+      "TimeToCook_sec":"1024",
+      "ingredients":"700511",
+      "Ingredient1Id":"700511",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400206",
+      "tool":"Juicer",
+      "toolId":"2001",
+      "cooking_time":"2048",
+      "ResultId":"400206",
+      "TypeTool":"Juicer",
+      "TimeToCook_sec":"2048",
+      "ingredients":"700512",
+      "Ingredient1Id":"700512",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
       "itemID":"400207",
       "tool":"Juicer",
       "toolId":"2001",
@@ -7504,10 +9973,10 @@ Object.assign(window.GameData, {
       "itemID":"400210",
       "tool":"Juicer",
       "toolId":"2001",
-      "cooking_time":"1672",
+      "cooking_time":"1160",
       "ResultId":"400210",
       "TypeTool":"Juicer",
-      "TimeToCook_sec":"1672",
+      "TimeToCook_sec":"1160",
       "ingredients":"700504,700511,701208",
       "Ingredient1Id":"700504",
       "Ingredient1Type":"",
@@ -7522,10 +9991,10 @@ Object.assign(window.GameData, {
       "itemID":"400211",
       "tool":"Juicer",
       "toolId":"2001",
-      "cooking_time":"29.25",
+      "cooking_time":"13",
       "ResultId":"400211",
       "TypeTool":"Juicer",
-      "TimeToCook_sec":"29.25",
+      "TimeToCook_sec":"13",
       "ingredients":"700504,701203,701101",
       "Ingredient1Id":"700504",
       "Ingredient1Type":"",
@@ -7540,10 +10009,10 @@ Object.assign(window.GameData, {
       "itemID":"400212",
       "tool":"Juicer",
       "toolId":"2001",
-      "cooking_time":"78",
+      "cooking_time":"76",
       "ResultId":"400212",
       "TypeTool":"Juicer",
-      "TimeToCook_sec":"78",
+      "TimeToCook_sec":"76",
       "ingredients":"700503,700507,701104",
       "Ingredient1Id":"700503",
       "Ingredient1Type":"",
@@ -7558,10 +10027,10 @@ Object.assign(window.GameData, {
       "itemID":"400213",
       "tool":"Juicer",
       "toolId":"2001",
-      "cooking_time":"18",
+      "cooking_time":"16",
       "ResultId":"400213",
       "TypeTool":"Juicer",
-      "TimeToCook_sec":"18",
+      "TimeToCook_sec":"16",
       "ingredients":"700504,701104",
       "Ingredient1Id":"700504",
       "Ingredient1Type":"",
@@ -7576,10 +10045,10 @@ Object.assign(window.GameData, {
       "itemID":"400214",
       "tool":"Juicer",
       "toolId":"2001",
-      "cooking_time":"765",
+      "cooking_time":"76",
       "ResultId":"400214",
       "TypeTool":"Juicer",
-      "TimeToCook_sec":"765",
+      "TimeToCook_sec":"76",
       "ingredients":"700504,700503,700507",
       "Ingredient1Id":"700504",
       "Ingredient1Type":"",
@@ -7594,10 +10063,10 @@ Object.assign(window.GameData, {
       "itemID":"400215",
       "tool":"Juicer",
       "toolId":"2001",
-      "cooking_time":"1305",
+      "cooking_time":"130",
       "ResultId":"400215",
       "TypeTool":"Juicer",
-      "TimeToCook_sec":"1305",
+      "TimeToCook_sec":"130",
       "ingredients":"700502,700508",
       "Ingredient1Id":"700502",
       "Ingredient1Type":"",
@@ -7612,10 +10081,10 @@ Object.assign(window.GameData, {
       "itemID":"400216",
       "tool":"Juicer",
       "toolId":"2001",
-      "cooking_time":"86",
+      "cooking_time":"69",
       "ResultId":"400216",
       "TypeTool":"Juicer",
-      "TimeToCook_sec":"86",
+      "TimeToCook_sec":"69",
       "ingredients":"700502,700507,700602,700301",
       "Ingredient1Id":"700502",
       "Ingredient1Type":"",
@@ -7702,10 +10171,10 @@ Object.assign(window.GameData, {
       "itemID":"400105",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"43",
+      "cooking_time":"7",
       "ResultId":"400105",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"43",
+      "TimeToCook_sec":"7",
       "ingredients":"700501,700502,700303",
       "Ingredient1Id":"700501",
       "Ingredient1Type":"",
@@ -7720,10 +10189,10 @@ Object.assign(window.GameData, {
       "itemID":"400106",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"58",
+      "cooking_time":"22",
       "ResultId":"400106",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"58",
+      "TimeToCook_sec":"22",
       "ingredients":"700505,700502,700303",
       "Ingredient1Id":"700505",
       "Ingredient1Type":"",
@@ -7735,13 +10204,49 @@ Object.assign(window.GameData, {
       "Ingredient4Type":""
     },
     {
+      "itemID":"400107",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"309",
+      "ResultId":"400107",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"309",
+      "ingredients":"700505,700509,700303,700701",
+      "Ingredient1Id":"700505",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700509",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700303",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"700701",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400108",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"772",
+      "ResultId":"400108",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"772",
+      "ingredients":"700510,700509,700303",
+      "Ingredient1Id":"700510",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700509",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700303",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
       "itemID":"400109",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"144",
+      "cooking_time":"80",
       "ResultId":"400109",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"144",
+      "TimeToCook_sec":"80",
       "ingredients":"700507,700605",
       "Ingredient1Id":"700507",
       "Ingredient1Type":"",
@@ -7756,47 +10261,47 @@ Object.assign(window.GameData, {
       "itemID":"400301",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"25",
+      "cooking_time":"6",
       "ResultId":"400301",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"25",
-      "ingredients":"700103,700302,700103,700302",
+      "TimeToCook_sec":"6",
+      "ingredients":"700103,700302",
       "Ingredient1Id":"700103",
       "Ingredient1Type":"",
       "Ingredient2Id":"700302",
       "Ingredient2Type":"",
-      "Ingredient3Id":"700103",
+      "Ingredient3Id":"",
       "Ingredient3Type":"",
-      "Ingredient4Id":"700302",
+      "Ingredient4Id":"",
       "Ingredient4Type":""
     },
     {
       "itemID":"400302",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"65",
+      "cooking_time":"14",
       "ResultId":"400302",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"65",
-      "ingredients":"700103,700302,700604,700103,700302,700604",
+      "TimeToCook_sec":"14",
+      "ingredients":"700103,700302,700604",
       "Ingredient1Id":"700103",
       "Ingredient1Type":"",
       "Ingredient2Id":"700302",
       "Ingredient2Type":"",
       "Ingredient3Id":"700604",
       "Ingredient3Type":"",
-      "Ingredient4Id":"700103",
+      "Ingredient4Id":"",
       "Ingredient4Type":""
     },
     {
       "itemID":"400303",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"45",
+      "cooking_time":"9",
       "ResultId":"400303",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"45",
-      "ingredients":"700103,700302,700602,700301,700103,700302,700602,700301",
+      "TimeToCook_sec":"9",
+      "ingredients":"700103,700302,700602,700301",
       "Ingredient1Id":"700103",
       "Ingredient1Type":"",
       "Ingredient2Id":"700302",
@@ -7810,11 +10315,11 @@ Object.assign(window.GameData, {
       "itemID":"400304",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"105",
+      "cooking_time":"15",
       "ResultId":"400304",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"105",
-      "ingredients":"700103,700304,700602,700301,700103,700304,700602,700301",
+      "TimeToCook_sec":"15",
+      "ingredients":"700103,700304,700602,700301",
       "Ingredient1Id":"700103",
       "Ingredient1Type":"",
       "Ingredient2Id":"700304",
@@ -7828,11 +10333,11 @@ Object.assign(window.GameData, {
       "itemID":"400305",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"135",
+      "cooking_time":"21",
       "ResultId":"400305",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"135",
-      "ingredients":"700103,700304,700604,700301,700103,700304,700604,700301",
+      "TimeToCook_sec":"21",
+      "ingredients":"700103,700304,700604,700301",
       "Ingredient1Id":"700103",
       "Ingredient1Type":"",
       "Ingredient2Id":"700304",
@@ -7843,13 +10348,49 @@ Object.assign(window.GameData, {
       "Ingredient4Type":""
     },
     {
+      "itemID":"400306",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"14",
+      "ResultId":"400306",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"14",
+      "ingredients":"700103,701703,700302",
+      "Ingredient1Id":"700103",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701703",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700302",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400307",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"13",
+      "ResultId":"400307",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"13",
+      "ingredients":"700103,701703,700301",
+      "Ingredient1Id":"700103",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701703",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700301",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
       "itemID":"400601",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"2.5",
+      "cooking_time":"2",
       "ResultId":"400601",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"2.5",
+      "TimeToCook_sec":"2",
       "ingredients":"701102",
       "Ingredient1Id":"701102",
       "Ingredient1Type":"",
@@ -7864,10 +10405,10 @@ Object.assign(window.GameData, {
       "itemID":"400602",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"5",
+      "cooking_time":"4",
       "ResultId":"400602",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"5",
+      "TimeToCook_sec":"4",
       "ingredients":"701103",
       "Ingredient1Id":"701103",
       "Ingredient1Type":"",
@@ -7882,10 +10423,10 @@ Object.assign(window.GameData, {
       "itemID":"400603",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"1.25",
+      "cooking_time":"1",
       "ResultId":"400603",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"1.25",
+      "TimeToCook_sec":"1",
       "ingredients":"701101",
       "Ingredient1Id":"701101",
       "Ingredient1Type":"",
@@ -7900,10 +10441,10 @@ Object.assign(window.GameData, {
       "itemID":"400604",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"10",
+      "cooking_time":"2",
       "ResultId":"400604",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"10",
+      "TimeToCook_sec":"2",
       "ingredients":"701202",
       "Ingredient1Id":"701202",
       "Ingredient1Type":"",
@@ -7918,10 +10459,10 @@ Object.assign(window.GameData, {
       "itemID":"400605",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"642.5",
+      "cooking_time":"66",
       "ResultId":"400605",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"642.5",
+      "TimeToCook_sec":"66",
       "ingredients":"701102,700307",
       "Ingredient1Id":"701102",
       "Ingredient1Type":"",
@@ -7933,13 +10474,31 @@ Object.assign(window.GameData, {
       "Ingredient4Type":""
     },
     {
+      "itemID":"400606",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"266",
+      "ResultId":"400606",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"266",
+      "ingredients":"700504,701202,700309",
+      "Ingredient1Id":"700504",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701202",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700309",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
       "itemID":"400607",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"90",
+      "cooking_time":"18",
       "ResultId":"400607",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"90",
+      "TimeToCook_sec":"18",
       "ingredients":"701405,701202",
       "Ingredient1Id":"701405",
       "Ingredient1Type":"",
@@ -7951,13 +10510,31 @@ Object.assign(window.GameData, {
       "Ingredient4Type":""
     },
     {
+      "itemID":"400608",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"289",
+      "ResultId":"400608",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"289",
+      "ingredients":"701106,701001,701209",
+      "Ingredient1Id":"701106",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701001",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"701209",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
       "itemID":"400609",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"65",
+      "cooking_time":"28",
       "ResultId":"400609",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"65",
+      "TimeToCook_sec":"28",
       "ingredients":"701204,701103,701105",
       "Ingredient1Id":"701204",
       "Ingredient1Type":"",
@@ -7969,13 +10546,49 @@ Object.assign(window.GameData, {
       "Ingredient4Type":""
     },
     {
+      "itemID":"400610",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"32",
+      "ResultId":"400610",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"32",
+      "ingredients":"701106",
+      "Ingredient1Id":"701106",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400701",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"202",
+      "ResultId":"400701",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"202",
+      "ingredients":"700507,700308,700304,700602",
+      "Ingredient1Id":"700507",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700308",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700304",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"700602",
+      "Ingredient4Type":""
+    },
+    {
       "itemID":"400702",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"358",
+      "cooking_time":"45",
       "ResultId":"400702",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"358",
+      "TimeToCook_sec":"45",
       "ingredients":"700504,700306,700201,700603",
       "Ingredient1Id":"700504",
       "Ingredient1Type":"",
@@ -7990,10 +10603,10 @@ Object.assign(window.GameData, {
       "itemID":"400703",
       "tool":"Chef Counter",
       "toolId":"2002",
-      "cooking_time":"121",
+      "cooking_time":"13",
       "ResultId":"400703",
       "TypeTool":"Chef Counter",
-      "TimeToCook_sec":"121",
+      "TimeToCook_sec":"13",
       "ingredients":"700303,700304,700501",
       "Ingredient1Id":"700303",
       "Ingredient1Type":"",
@@ -8005,13 +10618,229 @@ Object.assign(window.GameData, {
       "Ingredient4Type":""
     },
     {
+      "itemID":"400704",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"142",
+      "ResultId":"400704",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"142",
+      "ingredients":"700303,700304,700508,700602",
+      "Ingredient1Id":"700303",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700304",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700508",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"700602",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400705",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"152",
+      "ResultId":"400705",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"152",
+      "ingredients":"700505,700608,700604",
+      "Ingredient1Id":"700505",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700608",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700604",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400706",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"140",
+      "ResultId":"400706",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"140",
+      "ingredients":"700308,700304,700603",
+      "Ingredient1Id":"700308",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700304",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700603",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400708",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"35",
+      "ResultId":"400708",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"35",
+      "ingredients":"400707,701704",
+      "Ingredient1Id":"400707",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701704",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400709",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"21",
+      "ResultId":"400709",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"21",
+      "ingredients":"400707,400102",
+      "Ingredient1Id":"400707",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"400102",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400902",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"21",
+      "ResultId":"400902",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"21",
+      "ingredients":"400802,400401,701202",
+      "Ingredient1Id":"400802",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"400401",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"701202",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400903",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"35",
+      "ResultId":"400903",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"35",
+      "ingredients":"400802,700305,701202",
+      "Ingredient1Id":"400802",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700305",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"701202",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400904",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"24",
+      "ResultId":"400904",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"24",
+      "ingredients":"400803,400512,701202,400601",
+      "Ingredient1Id":"400803",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"400512",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"701202",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"400601",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400905",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"39",
+      "ResultId":"400905",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"39",
+      "ingredients":"400803,700305,701202,400601",
+      "Ingredient1Id":"400803",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700305",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"701202",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"400601",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400913",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"82",
+      "ResultId":"400913",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"82",
+      "ingredients":"400912,700305,700302",
+      "Ingredient1Id":"400912",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700305",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700302",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400915",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"112",
+      "ResultId":"400915",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"112",
+      "ingredients":"700305,700307,400914",
+      "Ingredient1Id":"700305",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700307",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"400914",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400916",
+      "tool":"Chef Counter",
+      "toolId":"2002",
+      "cooking_time":"369",
+      "ResultId":"400916",
+      "TypeTool":"Chef Counter",
+      "TimeToCook_sec":"369",
+      "ingredients":"400804,400427,700309",
+      "Ingredient1Id":"400804",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"400427",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700309",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
       "itemID":"400401",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"2.5",
+      "cooking_time":"2",
       "ResultId":"400401",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"2.5",
+      "TimeToCook_sec":"2",
       "ingredients":"700902",
       "Ingredient1Id":"700902",
       "Ingredient1Type":"",
@@ -8026,10 +10855,10 @@ Object.assign(window.GameData, {
       "itemID":"400402",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"5",
+      "cooking_time":"4",
       "ResultId":"400402",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"5",
+      "TimeToCook_sec":"4",
       "ingredients":"700903",
       "Ingredient1Id":"700903",
       "Ingredient1Type":"",
@@ -8044,10 +10873,10 @@ Object.assign(window.GameData, {
       "itemID":"400403",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"10",
+      "cooking_time":"8",
       "ResultId":"400403",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"10",
+      "TimeToCook_sec":"8",
       "ingredients":"700904",
       "Ingredient1Id":"700904",
       "Ingredient1Type":"",
@@ -8062,10 +10891,10 @@ Object.assign(window.GameData, {
       "itemID":"400404",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"20",
+      "cooking_time":"16",
       "ResultId":"400404",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"20",
+      "TimeToCook_sec":"16",
       "ingredients":"700905",
       "Ingredient1Id":"700905",
       "Ingredient1Type":"",
@@ -8080,10 +10909,10 @@ Object.assign(window.GameData, {
       "itemID":"400405",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"40",
+      "cooking_time":"32",
       "ResultId":"400405",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"40",
+      "TimeToCook_sec":"32",
       "ingredients":"700906",
       "Ingredient1Id":"700906",
       "Ingredient1Type":"",
@@ -8098,10 +10927,10 @@ Object.assign(window.GameData, {
       "itemID":"400407",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"440",
+      "cooking_time":"256",
       "ResultId":"400407",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"440",
+      "TimeToCook_sec":"256",
       "ingredients":"700907,701106,700306",
       "Ingredient1Id":"700907",
       "Ingredient1Type":"",
@@ -8116,10 +10945,10 @@ Object.assign(window.GameData, {
       "itemID":"400408",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"20",
+      "cooking_time":"4",
       "ResultId":"400408",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"20",
+      "TimeToCook_sec":"4",
       "ingredients":"701003",
       "Ingredient1Id":"701003",
       "Ingredient1Type":"",
@@ -8134,10 +10963,10 @@ Object.assign(window.GameData, {
       "itemID":"400409",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"80",
+      "cooking_time":"16",
       "ResultId":"400409",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"80",
+      "TimeToCook_sec":"16",
       "ingredients":"701005",
       "Ingredient1Id":"701005",
       "Ingredient1Type":"",
@@ -8152,10 +10981,10 @@ Object.assign(window.GameData, {
       "itemID":"400410",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"10",
+      "cooking_time":"2",
       "ResultId":"400410",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"10",
+      "TimeToCook_sec":"2",
       "ingredients":"701002",
       "Ingredient1Id":"701002",
       "Ingredient1Type":"",
@@ -8170,10 +10999,10 @@ Object.assign(window.GameData, {
       "itemID":"400411",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"40",
+      "cooking_time":"8",
       "ResultId":"400411",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"40",
+      "TimeToCook_sec":"8",
       "ingredients":"701004",
       "Ingredient1Id":"701004",
       "Ingredient1Type":"",
@@ -8188,16 +11017,16 @@ Object.assign(window.GameData, {
       "itemID":"400412",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"345",
+      "cooking_time":"20",
       "ResultId":"400412",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"345",
-      "ingredients":"701103,701105,700306",
+      "TimeToCook_sec":"20",
+      "ingredients":"701103,701105",
       "Ingredient1Id":"701103",
       "Ingredient1Type":"",
       "Ingredient2Id":"701105",
       "Ingredient2Type":"",
-      "Ingredient3Id":"700306",
+      "Ingredient3Id":"",
       "Ingredient3Type":"",
       "Ingredient4Id":"",
       "Ingredient4Type":""
@@ -8206,10 +11035,10 @@ Object.assign(window.GameData, {
       "itemID":"400413",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"200",
+      "cooking_time":"48",
       "ResultId":"400413",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"200",
+      "TimeToCook_sec":"48",
       "ingredients":"701106,700305",
       "Ingredient1Id":"701106",
       "Ingredient1Type":"",
@@ -8224,10 +11053,10 @@ Object.assign(window.GameData, {
       "itemID":"400414",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"320",
+      "cooking_time":"64",
       "ResultId":"400414",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"320",
+      "TimeToCook_sec":"64",
       "ingredients":"701207",
       "Ingredient1Id":"701207",
       "Ingredient1Type":"",
@@ -8242,10 +11071,10 @@ Object.assign(window.GameData, {
       "itemID":"400415",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"80",
+      "cooking_time":"64",
       "ResultId":"400415",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"80",
+      "TimeToCook_sec":"64",
       "ingredients":"701107",
       "Ingredient1Id":"701107",
       "Ingredient1Type":"",
@@ -8260,10 +11089,10 @@ Object.assign(window.GameData, {
       "itemID":"400416",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"40",
+      "cooking_time":"8",
       "ResultId":"400416",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"40",
+      "TimeToCook_sec":"8",
       "ingredients":"701404",
       "Ingredient1Id":"701404",
       "Ingredient1Type":"",
@@ -8278,10 +11107,10 @@ Object.assign(window.GameData, {
       "itemID":"400417",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"80",
+      "cooking_time":"16",
       "ResultId":"400417",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"80",
+      "TimeToCook_sec":"16",
       "ingredients":"701405",
       "Ingredient1Id":"701405",
       "Ingredient1Type":"",
@@ -8296,10 +11125,10 @@ Object.assign(window.GameData, {
       "itemID":"400418",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"320",
+      "cooking_time":"64",
       "ResultId":"400418",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"320",
+      "TimeToCook_sec":"64",
       "ingredients":"701407",
       "Ingredient1Id":"701407",
       "Ingredient1Type":"",
@@ -8314,10 +11143,10 @@ Object.assign(window.GameData, {
       "itemID":"400419",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"10",
+      "cooking_time":"8",
       "ResultId":"400419",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"10",
+      "TimeToCook_sec":"8",
       "ingredients":"701304",
       "Ingredient1Id":"701304",
       "Ingredient1Type":"",
@@ -8332,10 +11161,10 @@ Object.assign(window.GameData, {
       "itemID":"400420",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"30",
+      "cooking_time":"18",
       "ResultId":"400420",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"30",
+      "TimeToCook_sec":"18",
       "ingredients":"701002,701105",
       "Ingredient1Id":"701002",
       "Ingredient1Type":"",
@@ -8350,14 +11179,14 @@ Object.assign(window.GameData, {
       "itemID":"400421",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"66.5",
+      "cooking_time":"2",
       "ResultId":"400421",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"66.5",
-      "ingredients":"701302,700507",
+      "TimeToCook_sec":"2",
+      "ingredients":"701302",
       "Ingredient1Id":"701302",
       "Ingredient1Type":"",
-      "Ingredient2Id":"700507",
+      "Ingredient2Id":"",
       "Ingredient2Type":"",
       "Ingredient3Id":"",
       "Ingredient3Type":"",
@@ -8368,16 +11197,52 @@ Object.assign(window.GameData, {
       "itemID":"400422",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"400",
+      "cooking_time":"80",
       "ResultId":"400422",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"400",
-      "ingredients":"701007,700605,700306",
+      "TimeToCook_sec":"80",
+      "ingredients":"701007",
       "Ingredient1Id":"701007",
       "Ingredient1Type":"",
-      "Ingredient2Id":"700605",
+      "Ingredient2Id":"",
       "Ingredient2Type":"",
-      "Ingredient3Id":"700306",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400423",
+      "tool":"Grill",
+      "toolId":"2003",
+      "cooking_time":"544",
+      "ResultId":"400423",
+      "TypeTool":"Grill",
+      "TimeToCook_sec":"544",
+      "ingredients":"701110",
+      "Ingredient1Id":"701110",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400424",
+      "tool":"Grill",
+      "toolId":"2003",
+      "cooking_time":"324",
+      "ResultId":"400424",
+      "TypeTool":"Grill",
+      "TimeToCook_sec":"324",
+      "ingredients":"700907,701409,700303",
+      "Ingredient1Id":"700907",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701409",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700303",
       "Ingredient3Type":"",
       "Ingredient4Id":"",
       "Ingredient4Type":""
@@ -8386,28 +11251,82 @@ Object.assign(window.GameData, {
       "itemID":"400425",
       "tool":"Grill",
       "toolId":"2003",
-      "cooking_time":"1184",
+      "cooking_time":"352",
       "ResultId":"400425",
       "TypeTool":"Grill",
-      "TimeToCook_sec":"1184",
-      "ingredients":"701408,701108,700306,700507",
+      "TimeToCook_sec":"352",
+      "ingredients":"701408,701108,700306",
       "Ingredient1Id":"701408",
       "Ingredient1Type":"",
       "Ingredient2Id":"701108",
       "Ingredient2Type":"",
       "Ingredient3Id":"700306",
       "Ingredient3Type":"",
-      "Ingredient4Id":"700507",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400426",
+      "tool":"Grill",
+      "toolId":"2003",
+      "cooking_time":"1040",
+      "ResultId":"400426",
+      "TypeTool":"Grill",
+      "TimeToCook_sec":"1040",
+      "ingredients":"701011,700605",
+      "Ingredient1Id":"701011",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700605",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400427",
+      "tool":"Grill",
+      "toolId":"2003",
+      "cooking_time":"64",
+      "ResultId":"400427",
+      "TypeTool":"Grill",
+      "TimeToCook_sec":"64",
+      "ingredients":"700907",
+      "Ingredient1Id":"700907",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400406",
+      "tool":"Grill",
+      "toolId":"2003",
+      "cooking_time":"128",
+      "ResultId":"400406",
+      "TypeTool":"Grill",
+      "TimeToCook_sec":"128",
+      "ingredients":"700908",
+      "Ingredient1Id":"700908",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
       "Ingredient4Type":""
     },
     {
       "itemID":"400501",
       "tool":"Pan",
       "toolId":"2004",
-      "cooking_time":"5",
+      "cooking_time":"1",
       "ResultId":"400501",
       "TypeTool":"Pan",
-      "TimeToCook_sec":"5",
+      "TimeToCook_sec":"1",
       "ingredients":"701001",
       "Ingredient1Id":"701001",
       "Ingredient1Type":"",
@@ -8422,10 +11341,10 @@ Object.assign(window.GameData, {
       "itemID":"400502",
       "tool":"Pan",
       "toolId":"2004",
-      "cooking_time":"5",
+      "cooking_time":"1",
       "ResultId":"400502",
       "TypeTool":"Pan",
-      "TimeToCook_sec":"5",
+      "TimeToCook_sec":"1",
       "ingredients":"701401",
       "Ingredient1Id":"701401",
       "Ingredient1Type":"",
@@ -8440,10 +11359,10 @@ Object.assign(window.GameData, {
       "itemID":"400503",
       "tool":"Pan",
       "toolId":"2004",
-      "cooking_time":"970",
+      "cooking_time":"200",
       "ResultId":"400503",
       "TypeTool":"Pan",
-      "TimeToCook_sec":"970",
+      "TimeToCook_sec":"200",
       "ingredients":"701408,700904,701207",
       "Ingredient1Id":"701408",
       "Ingredient1Type":"",
@@ -8458,10 +11377,10 @@ Object.assign(window.GameData, {
       "itemID":"400504",
       "tool":"Pan",
       "toolId":"2004",
-      "cooking_time":"250",
+      "cooking_time":"42",
       "ResultId":"400504",
       "TypeTool":"Pan",
-      "TimeToCook_sec":"250",
+      "TimeToCook_sec":"42",
       "ingredients":"701002,701206,700304",
       "Ingredient1Id":"701002",
       "Ingredient1Type":"",
@@ -8476,10 +11395,10 @@ Object.assign(window.GameData, {
       "itemID":"400505",
       "tool":"Pan",
       "toolId":"2004",
-      "cooking_time":"160",
+      "cooking_time":"32",
       "ResultId":"400505",
       "TypeTool":"Pan",
-      "TimeToCook_sec":"160",
+      "TimeToCook_sec":"32",
       "ingredients":"701206",
       "Ingredient1Id":"701206",
       "Ingredient1Type":"",
@@ -8494,10 +11413,10 @@ Object.assign(window.GameData, {
       "itemID":"400506",
       "tool":"Pan",
       "toolId":"2004",
-      "cooking_time":"160",
+      "cooking_time":"128",
       "ResultId":"400506",
       "TypeTool":"Pan",
-      "TimeToCook_sec":"160",
+      "TimeToCook_sec":"128",
       "ingredients":"701108",
       "Ingredient1Id":"701108",
       "Ingredient1Type":"",
@@ -8512,16 +11431,16 @@ Object.assign(window.GameData, {
       "itemID":"400507",
       "tool":"Pan",
       "toolId":"2004",
-      "cooking_time":"360",
+      "cooking_time":"52",
       "ResultId":"400507",
       "TypeTool":"Pan",
-      "TimeToCook_sec":"360",
-      "ingredients":"701305,701203,700306",
+      "TimeToCook_sec":"52",
+      "ingredients":"701305,700306",
       "Ingredient1Id":"701305",
       "Ingredient1Type":"",
-      "Ingredient2Id":"701203",
+      "Ingredient2Id":"700306",
       "Ingredient2Type":"",
-      "Ingredient3Id":"700306",
+      "Ingredient3Id":"",
       "Ingredient3Type":"",
       "Ingredient4Id":"",
       "Ingredient4Type":""
@@ -8530,10 +11449,10 @@ Object.assign(window.GameData, {
       "itemID":"400508",
       "tool":"Pan",
       "toolId":"2004",
-      "cooking_time":"240",
+      "cooking_time":"144",
       "ResultId":"400508",
       "TypeTool":"Pan",
-      "TimeToCook_sec":"240",
+      "TimeToCook_sec":"144",
       "ingredients":"701405,701108",
       "Ingredient1Id":"701405",
       "Ingredient1Type":"",
@@ -8548,10 +11467,10 @@ Object.assign(window.GameData, {
       "itemID":"400509",
       "tool":"Pan",
       "toolId":"2004",
-      "cooking_time":"560",
+      "cooking_time":"224",
       "ResultId":"400509",
       "TypeTool":"Pan",
-      "TimeToCook_sec":"560",
+      "TimeToCook_sec":"224",
       "ingredients":"700907,701108,700306",
       "Ingredient1Id":"700907",
       "Ingredient1Type":"",
@@ -8566,10 +11485,10 @@ Object.assign(window.GameData, {
       "itemID":"400510",
       "tool":"Pan",
       "toolId":"2004",
-      "cooking_time":"144",
+      "cooking_time":"128",
       "ResultId":"400510",
       "TypeTool":"Pan",
-      "TimeToCook_sec":"144",
+      "TimeToCook_sec":"128",
       "ingredients":"701307,700507",
       "Ingredient1Id":"701307",
       "Ingredient1Type":"",
@@ -8584,10 +11503,10 @@ Object.assign(window.GameData, {
       "itemID":"400511",
       "tool":"Pan",
       "toolId":"2004",
-      "cooking_time":"24",
+      "cooking_time":"17",
       "ResultId":"400511",
       "TypeTool":"Pan",
-      "TimeToCook_sec":"24",
+      "TimeToCook_sec":"17",
       "ingredients":"701304,701103,700503,701201",
       "Ingredient1Id":"701304",
       "Ingredient1Type":"",
@@ -8596,6 +11515,510 @@ Object.assign(window.GameData, {
       "Ingredient3Id":"700503",
       "Ingredient3Type":"",
       "Ingredient4Id":"701201",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400512",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"1",
+      "ResultId":"400512",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"1",
+      "ingredients":"700901",
+      "Ingredient1Id":"700901",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400707",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"19",
+      "ResultId":"400707",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"19",
+      "ingredients":"401004",
+      "Ingredient1Id":"401004",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400901",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"1032",
+      "ResultId":"400901",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"1032",
+      "ingredients":"701111,701504",
+      "Ingredient1Id":"701111",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701504",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400906",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"26",
+      "ResultId":"400906",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"26",
+      "ingredients":"400401,701504,700305",
+      "Ingredient1Id":"400401",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701504",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700305",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400907",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"36",
+      "ResultId":"400907",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"36",
+      "ingredients":"701003,701506",
+      "Ingredient1Id":"701003",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701506",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400908",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"34",
+      "ResultId":"400908",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"34",
+      "ingredients":"701002,701506",
+      "Ingredient1Id":"701002",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701506",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400909",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"40",
+      "ResultId":"400909",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"40",
+      "ingredients":"701004,701506",
+      "Ingredient1Id":"701004",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701506",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400910",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"48",
+      "ResultId":"400910",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"48",
+      "ingredients":"701005,701506",
+      "Ingredient1Id":"701005",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701506",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400911",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"20",
+      "ResultId":"400911",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"20",
+      "ingredients":"701103,701505",
+      "Ingredient1Id":"701103",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701505",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400912",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"64",
+      "ResultId":"400912",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"64",
+      "ingredients":"701106,700306",
+      "Ingredient1Id":"701106",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700306",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400914",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"32",
+      "ResultId":"400914",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"32",
+      "ingredients":"400610",
+      "Ingredient1Id":"400610",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400917",
+      "tool":"Pan",
+      "toolId":"2004",
+      "cooking_time":"11",
+      "ResultId":"400917",
+      "TypeTool":"Pan",
+      "TimeToCook_sec":"11",
+      "ingredients":"701504,700302,701001",
+      "Ingredient1Id":"701504",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700302",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"701001",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400801",
+      "tool":"Oven",
+      "toolId":"2005",
+      "cooking_time":"1056",
+      "ResultId":"400801",
+      "TypeTool":"Oven",
+      "TimeToCook_sec":"1056",
+      "ingredients":"701110,700310,700306",
+      "Ingredient1Id":"701110",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700310",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700306",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400802",
+      "tool":"Oven",
+      "toolId":"2005",
+      "cooking_time":"17",
+      "ResultId":"400802",
+      "TypeTool":"Oven",
+      "TimeToCook_sec":"17",
+      "ingredients":"401001",
+      "Ingredient1Id":"401001",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400803",
+      "tool":"Oven",
+      "toolId":"2005",
+      "cooking_time":"19",
+      "ResultId":"400803",
+      "TypeTool":"Oven",
+      "TimeToCook_sec":"19",
+      "ingredients":"401002",
+      "Ingredient1Id":"401002",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400804",
+      "tool":"Oven",
+      "toolId":"2005",
+      "cooking_time":"49",
+      "ResultId":"400804",
+      "TypeTool":"Oven",
+      "TimeToCook_sec":"49",
+      "ingredients":"401003",
+      "Ingredient1Id":"401003",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400806",
+      "tool":"Oven",
+      "toolId":"2005",
+      "cooking_time":"50",
+      "ResultId":"400806",
+      "TypeTool":"Oven",
+      "TimeToCook_sec":"50",
+      "ingredients":"401006",
+      "Ingredient1Id":"401006",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400807",
+      "tool":"Oven",
+      "toolId":"2005",
+      "cooking_time":"57",
+      "ResultId":"400807",
+      "TypeTool":"Oven",
+      "TimeToCook_sec":"57",
+      "ingredients":"401005,700504",
+      "Ingredient1Id":"401005",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700504",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400808",
+      "tool":"Oven",
+      "toolId":"2005",
+      "cooking_time":"50",
+      "ResultId":"400808",
+      "TypeTool":"Oven",
+      "TimeToCook_sec":"50",
+      "ingredients":"401005,700501",
+      "Ingredient1Id":"401005",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700501",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400809",
+      "tool":"Oven",
+      "toolId":"2005",
+      "cooking_time":"68",
+      "ResultId":"400809",
+      "TypeTool":"Oven",
+      "TimeToCook_sec":"68",
+      "ingredients":"700505,701505,700306,700603",
+      "Ingredient1Id":"700505",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701505",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700306",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"700603",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400810",
+      "tool":"Oven",
+      "toolId":"2005",
+      "cooking_time":"64",
+      "ResultId":"400810",
+      "TypeTool":"Oven",
+      "TimeToCook_sec":"64",
+      "ingredients":"700306,701505,701704",
+      "Ingredient1Id":"700306",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"701505",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"701704",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"400811",
+      "tool":"Oven",
+      "toolId":"2005",
+      "cooking_time":"52",
+      "ResultId":"400811",
+      "TypeTool":"Oven",
+      "TimeToCook_sec":"52",
+      "ingredients":"700306,700603,701505",
+      "Ingredient1Id":"700306",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700603",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"701505",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"401001",
+      "tool":"Glass Bowl",
+      "toolId":"700402",
+      "cooking_time":"17",
+      "ResultId":"401001",
+      "TypeTool":"Glass Bowl",
+      "TimeToCook_sec":"17",
+      "ingredients":"701505,700201",
+      "Ingredient1Id":"701505",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700201",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"401002",
+      "tool":"Glass Bowl",
+      "toolId":"700402",
+      "cooking_time":"19",
+      "ResultId":"401002",
+      "TypeTool":"Glass Bowl",
+      "TimeToCook_sec":"19",
+      "ingredients":"701505,700302,701001",
+      "Ingredient1Id":"701505",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700302",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"701001",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"401003",
+      "tool":"Glass Bowl",
+      "toolId":"700402",
+      "cooking_time":"49",
+      "ResultId":"401003",
+      "TypeTool":"Glass Bowl",
+      "TimeToCook_sec":"49",
+      "ingredients":"701505,700201,700306",
+      "Ingredient1Id":"701505",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700201",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700306",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"401004",
+      "tool":"Glass Bowl",
+      "toolId":"700402",
+      "cooking_time":"19",
+      "ResultId":"401004",
+      "TypeTool":"Glass Bowl",
+      "TimeToCook_sec":"19",
+      "ingredients":"701505,700201,700602",
+      "Ingredient1Id":"701505",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700201",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700602",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"401005",
+      "tool":"Glass Bowl",
+      "toolId":"700402",
+      "cooking_time":"49",
+      "ResultId":"401005",
+      "TypeTool":"Glass Bowl",
+      "TimeToCook_sec":"49",
+      "ingredients":"701505,700301,700306",
+      "Ingredient1Id":"701505",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700301",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700306",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
+      "Ingredient4Type":""
+    },
+    {
+      "itemID":"401006",
+      "tool":"Glass Bowl",
+      "toolId":"700402",
+      "cooking_time":"50",
+      "ResultId":"401006",
+      "TypeTool":"Glass Bowl",
+      "TimeToCook_sec":"50",
+      "ingredients":"701505,700306,700302",
+      "Ingredient1Id":"701505",
+      "Ingredient1Type":"",
+      "Ingredient2Id":"700306",
+      "Ingredient2Type":"",
+      "Ingredient3Id":"700302",
+      "Ingredient3Type":"",
+      "Ingredient4Id":"",
       "Ingredient4Type":""
     }
   ],
@@ -8616,6 +12039,11 @@ Object.assign(window.GameData, {
       "y":1
     },
     {
+      "idItem":"100203",
+      "x":0,
+      "y":3
+    },
+    {
       "idItem":"100201",
       "x":1,
       "y":3
@@ -8634,11 +12062,6 @@ Object.assign(window.GameData, {
       "idItem":"100103",
       "x":4,
       "y":3
-    },
-    {
-      "idItem":"100203",
-      "x":0,
-      "y":4
     },
     {
       "idItem":"100202",

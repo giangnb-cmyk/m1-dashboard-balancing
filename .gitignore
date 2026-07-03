@@ -20,3 +20,6 @@ desktop.ini
 .env
 .env.local
 
+
+# CodeGraph local index
+.codegraph/
