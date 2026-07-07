@@ -44,6 +44,14 @@
                 <span class="nav-icon">⚡</span>
                 <span class="nav-text">Nguồn Lực</span>
             </button>
+            <button class="nav-item" data-tab="economy">
+                <span class="nav-icon">💰</span>
+                <span class="nav-text">Economy</span>
+            </button>
+            <button class="nav-item" data-tab="roadmap">
+                <span class="nav-icon">🗺️</span>
+                <span class="nav-text">Lộ Trình</span>
+            </button>
         </nav>
     </aside>
 
@@ -981,6 +989,109 @@
 
         </section><!-- /nguon-luc -->
 
+        <!-- ══════════════ ECONOMY ══════════════ -->
+        <section id="economy" class="tab-view">
+            <div class="view-header">
+                <h1>💰 Economy — Source / Sink Flow</h1>
+                <p>Sơ đồ dòng tiền Sources → Currency Pools → Sinks. Xem theo toàn game, từng scene hoặc từng batch.</p>
+            </div>
+
+            <!-- Filter bar -->
+            <div class="glass filter-bar" style="margin-bottom:1.25rem">
+                <div class="filter-group">
+                    <label>Scene:</label>
+                    <select id="eco-filter-scene" class="filter-select">
+                        <option value="">Toàn game</option>
+                    </select>
+                </div>
+                <div class="filter-group" id="eco-filter-batch-group" style="display:none">
+                    <label>Batch:</label>
+                    <select id="eco-filter-batch" class="filter-select">
+                        <option value="">Cả scene</option>
+                    </select>
+                </div>
+                <span style="margin-left:auto;font-size:.78rem;color:var(--text-muted)">
+                    Phạm vi: <strong id="eco-sum-scope" style="color:var(--text-main)">Toàn game</strong>
+                    &nbsp;·&nbsp; <strong id="eco-sum-orders">0</strong> orders
+                </span>
+            </div>
+
+            <!-- Summary stats -->
+            <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:1.25rem">
+                <div class="stat-card glass highlight-gold">
+                    <span class="stat-icon">🪙</span>
+                    <div class="stat-info"><span class="stat-value mono" id="eco-sum-gold">0</span><span class="stat-label">Gold vào (orders)</span></div>
+                </div>
+                <div class="stat-card glass highlight-energy">
+                    <span class="stat-icon">⚡</span>
+                    <div class="stat-info"><span class="stat-value mono" id="eco-sum-energy">0</span><span class="stat-label">Energy cần (fulfil)</span></div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">🏗️</span>
+                    <div class="stat-info"><span class="stat-value mono" id="eco-sum-build">0</span><span class="stat-label">Gold chi (Build-Up)</span></div>
+                </div>
+            </div>
+
+            <!-- Sankey -->
+            <div class="data-table-card glass" style="margin-bottom:1.5rem;padding:1.25rem">
+                <div class="eco-sankey-head">
+                    <span class="eco-col-tag" style="color:#34d399">▼ Sources</span>
+                    <span class="eco-col-tag" style="color:var(--primary)">◆ Currency Pools</span>
+                    <span class="eco-col-tag" style="color:#f87171">▲ Sinks</span>
+                </div>
+                <div class="eco-sankey-scroll">
+                    <div id="eco-sankey"></div>
+                </div>
+            </div>
+
+            <!-- Net balance per currency -->
+            <div style="font-size:.72rem;font-weight:600;color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase;margin:0 0 .6rem .2rem">Net balance mỗi currency (vào − ra)</div>
+            <div id="eco-balance" class="eco-balance-row"></div>
+        </section><!-- /economy -->
+
+        <!-- ══════════════ ROADMAP ══════════════ -->
+        <section id="roadmap" class="tab-view">
+            <div class="view-header">
+                <h1>🗺️ Lộ Trình — Content Release &amp; Onboarding</h1>
+                <p>Feature unlock theo account level và trình tự onboarding phiên đầu của người chơi.</p>
+            </div>
+
+            <div class="stats-row" style="grid-template-columns:repeat(4,1fr);margin-bottom:1.5rem">
+                <div class="stat-card glass">
+                    <span class="stat-icon">🔓</span>
+                    <div class="stat-info"><span class="stat-value mono" id="rm-stat-features">0</span><span class="stat-label">Feature unlock</span></div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">📶</span>
+                    <div class="stat-info"><span class="stat-value mono" id="rm-stat-range">0</span><span class="stat-label">Khoảng level</span></div>
+                </div>
+                <div class="stat-card glass highlight-energy">
+                    <span class="stat-icon">🌊</span>
+                    <div class="stat-info"><span class="stat-value mono" id="rm-stat-wave">—</span><span class="stat-label">Wave lớn nhất</span></div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">👣</span>
+                    <div class="stat-info"><span class="stat-value mono" id="rm-stat-onb">0</span><span class="stat-label">Bước onboarding</span></div>
+                </div>
+            </div>
+
+            <!-- Feature unlock timeline -->
+            <div class="data-table-card glass" style="margin-bottom:1.5rem;padding:1.25rem">
+                <div class="table-header" style="margin-bottom:.5rem">
+                    <h3>🔓 Feature Unlock theo Account Level</h3>
+                </div>
+                <div class="rm-scroll"><div id="rm-timeline"></div></div>
+            </div>
+
+            <!-- Onboarding sequence -->
+            <div class="data-table-card glass" style="padding:1.25rem">
+                <div class="table-header" style="margin-bottom:.75rem">
+                    <h3>👣 Onboarding Sequence — thứ tự lộ diện phiên đầu</h3>
+                </div>
+                <div class="rm-scroll"><div id="rm-onboarding"></div></div>
+            </div>
+        </section><!-- /roadmap -->
+
         </div>
     </main>
 
@@ -1020,6 +1131,7 @@
     <script src="js/data/data-buildup.js"></script>
     <script src="js/data/data-boxes.js"></script>
     <script src="js/data/data-iap.js"></script>
+    <script src="js/data/data-progression.js"></script>
     <script src="js/data-icons.js"></script>
     <script src="js/csv-loader.js"></script>
     <script src="js/csvImport.js"></script>
@@ -1031,6 +1143,9 @@
     <script src="js/orderPreview.js"></script>
     <script src="js/orderAnalysis.js"></script>
     <script src="js/nguonLuc.js"></script>
+    <script src="js/economyModel.js"></script>
+    <script src="js/economyFlow.js"></script>
+    <script src="js/roadmap.js"></script>
     <script src="js/iapPackages.js"></script>
     <script src="js/sim/simDataLoader.js"></script>
     <script src="js/sim/simEnergy.js"></script>

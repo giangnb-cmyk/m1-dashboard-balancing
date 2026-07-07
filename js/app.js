@@ -56,4 +56,6 @@ function initModules() {
     if (typeof IAPPackages      !== 'undefined') IAPPackages.init();
     if (typeof PlayerSim        !== 'undefined') PlayerSim.init();
     if (typeof NguonLuc         !== 'undefined') NguonLuc.init();
+    if (typeof EconomyFlow      !== 'undefined') EconomyFlow.init();
+    if (typeof Roadmap          !== 'undefined') Roadmap.init();
 }

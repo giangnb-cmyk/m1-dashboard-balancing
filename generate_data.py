@@ -538,6 +538,15 @@ def load_iap():
     }
 
 
+def load_progression():
+    """Lộ trình unlock feature + onboarding sequence + mốc mở kho."""
+    return {
+        'unlockFeature':        load_csv('Features/Unlock/UnlockFeature.csv'),
+        'featureSequence':      load_csv('Features/Unlock/FeatureSequence.csv'),
+        'levelUnlockInventory': load_csv('Features/Unlock/LevelUnlockInventory.csv'),
+    }
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 DOMAINS = [
@@ -547,6 +556,7 @@ DOMAINS = [
     ('data-buildup.js',    load_buildup,    'BuildUp — BuildUpGoal, BuyCurrency, ChefsBook, ConvertTime'),
     ('data-boxes.js',      load_boxes,      'Boxes — All Box & Gift types'),
     ('data-iap.js',        load_iap,        'IAP — All in-app purchase packages'),
+    ('data-progression.js', load_progression, 'Progression — UnlockFeature, FeatureSequence, LevelUnlockInventory'),
 ]
 
 
