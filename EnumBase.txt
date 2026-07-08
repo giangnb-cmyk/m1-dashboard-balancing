@@ -94,4 +94,5 @@ public enum MergeItemTypes
 	LeafyVegetables = 7012,
 	Seafood = 7013,
 	Shellfish = 7014
+	Test = 7015
 }
