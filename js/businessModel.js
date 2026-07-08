@@ -70,6 +70,7 @@ const BusinessModel = (() => {
         iapGoldWeeklyPass:   { g: 'pass', label: 'Weekly Pass — Gold', desc: 'Vé tuần tier Gold' },
         iapSilverWeeklyPass: { g: 'pass', label: 'Weekly Pass — Silver', desc: 'Vé tuần tier Silver' },
         iapPiggyBank:        { g: 'progress', label: 'Piggy Bank', desc: 'Tích điểm trong game, mở bằng 1 lần mua' },
+        iapInfinityPack:     { g: 'pass', label: 'Infinity Pack', desc: '"Unlimited" — sinh tài nguyên liên tục trong thời gian cố định' },
         iapStepPricePack:    { g: 'progress', label: 'Speed / Step Package', desc: 'Boost + tài nguyên, giá bậc thang' },
         iapDailyDealsPack:   { g: 'rotating', label: 'Daily Deals Pack 1', desc: 'Daily deals, refresh qua ads', ads: true },
         iapDailyDealsPack2:  { g: 'rotating', label: 'Daily Deals Pack 2', desc: 'Daily deals, refresh qua ads', ads: true },

@@ -265,7 +265,7 @@
 700103,Cup of falseffee,TRUE,0,,3,Coffee Ingredient
 700104,Iced falseffee,TRUE,0,,4,Coffee Ingredient
 700105,falseffee - to - Go,TRUE,1,,5,Coffee Ingredient
-700106,Iced falseffee - to - Go,TRUE,3,,6,Coffee Ingredient
+700106,Iced falseffee - to - Go,TRUE,3,10,6,Coffee Ingredient
 700107,falseld Brew,TRUE,5,,7,Coffee Ingredient
 700108,Pour ove falseffee,TRUE,7,,8,Coffee Ingredient
 700109,French press,TRUE,9,,9,Coffee Ingredient

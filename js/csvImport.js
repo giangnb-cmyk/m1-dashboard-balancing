@@ -20,6 +20,7 @@ const CsvImport = (() => {
     'OrderSystem.csv':                   { key: 'orderSystem' },
     'OrderGold.csv':                     { key: 'orderGold' },
     'DailyReward.csv':                   { key: 'dailyReward' },
+    'StarChestData.csv':                 { key: 'starChestData',              fill: ['star_required'] },
     'OrderSystemReward.csv':             { key: 'orderSystemReward',          fill: ['theme_type'] },
     'RewardMinDistributeOrderDetail.csv':{ key: 'rewardMinDistribute' },
     'CookingRecipes.csv':                { key: 'formuaRecipes',              special: 'cooking' },

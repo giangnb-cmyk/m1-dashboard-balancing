@@ -21,7 +21,7 @@ const EconomyModel = (() => {
         iapStepPricePack: 'Step Price Pack', iapDailyDealsPack: 'Daily Deals', iapDailyDealsPack2: 'Daily Deals 2',
         iapNiceBoostPack: 'Nice Boost Pack', iapHappinessExpress: 'Happiness Express', iapLuxuriousOffer: 'Luxurious Offer',
         iapStandardDiamond: 'Standard Diamond', iapGoldWeeklyPass: 'Gold Weekly Pass', iapSilverWeeklyPass: 'Silver Weekly Pass',
-        iapSupplyChestPack: 'Supply Chest Pack', iapPiggyBank: 'Piggy Bank',
+        iapSupplyChestPack: 'Supply Chest Pack', iapPiggyBank: 'Piggy Bank', iapInfinityPack: 'Infinity Pack',
     };
 
     /** {res_type,res_id,res_number} → {currency, amount, itemId}. currency=null nếu không hiểu. */
@@ -162,22 +162,9 @@ const EconomyModel = (() => {
                     if (rv > 0 && rt > 0) add('energy_regen', 'Energy', 'Energy', rv * 86400 / rt);
                 }
 
-                // 7a) Star Chest (mở bằng sao Build-Up) → Energy — KỲ VỌNG cho 1 lần mở,
-                //     tính từ ItemEnergyChest.csv (rate rơi item energy) × giá trị energy trong ItemCurrency.csv
-                const chest = (gd.boxes || {}).itemEnergyChest || [];
-                const curById = {};
-                (gd.itemCurrency || []).forEach(r => { curById[r.id] = r; });
-                const pulls = parseFloat((chest.find(r => r.many_generator) || {}).many_generator) || 0;
-                let rateSum = 0, evEnergy = 0;
-                chest.forEach(r => {
-                    const rate = parseFloat(r.rate) || 0;
-                    const it = curById[r.item_child_id];
-                    if (!rate || !it) return;
-                    rateSum += rate;
-                    const res = resolveRes(it.res_type, it.res_id, it.res_number);
-                    if (res.currency === 'Energy') evEnergy += rate * res.amount;
-                });
-                if (pulls && rateSum) add('star_chest', 'Energy', 'Energy', pulls * evEnergy / rateSum);
+                // 7a) Star Chest (StarChestData.csv): mỗi mốc sao mở 1 chest → Diamond/Energy/SkipTime.
+                //     Tổng = mở hết mọi chest trong bảng.
+                (gd.starChestData || []).forEach(r => addReward('star_chest', r.res_type, r.res_id, r.res_number));
 
                 // 7b) Order milestone (OrderGold.csv): mỗi N order xong → box/item
                 (gd.orderGold || []).forEach(r => addReward('order_milestone', r.res_type, r.res_id, r.res_number));
@@ -258,7 +245,7 @@ const EconomyModel = (() => {
         start_gift:   { label: 'Starting Gift',  icon: '🌱', desc: 'Tài nguyên tặng lúc bắt đầu (tutorial / default): generator & tool đặt sẵn trên board (BoardDefault) + gold khởi đầu.' },
         energy_regen: { label: 'Energy Regen',  icon: '🔋', desc: 'Energy tự hồi miễn phí: 1 mỗi 2 phút → ~720/ngày (max 100). Đây là RATE theo ngày, khác với các con số tổng — cho thấy energy free chỉ nhỏ giọt so với nhu cầu.' },
         ads_energy:   { label: 'Energy Refill (Ads)', icon: '📺', desc: 'Mua energy bằng xem ads (BuyCurrency.csv): 25 energy/lần, tối đa 5 lần/ngày → 125/ngày. Đây là RATE theo ngày.' },
-        star_chest:   { label: 'Star Chest', icon: '🎁', desc: 'Energy KỲ VỌNG cho 1 lần mở Star Chest (ruột chest: ItemEnergyChest.csv — 5 lượt rơi item energy theo rate, giá trị từ ItemCurrency.csv). Muốn quy ra tổng cần số lần mở chest.' },
+        star_chest:   { label: 'Star Chest', icon: '🎁', desc: 'Thưởng mở Star Chest theo mốc sao Build-Up (StarChestData.csv) — Diamond, Energy, Skip Time. Tổng nếu mở hết mọi chest trong bảng.' },
         buy_energy:   { label: 'Buy Energy (Diamond)', icon: '🔁', desc: 'Energy nhận được khi mua bằng Diamond (BuyCurrency.csv) — tính 1 lượt hết thang giá 10→160 Diamond, mỗi bậc +100 energy. Diamond tiêu tương ứng nằm ở sink cùng tên.' },
         iap:          { label: 'IAP Packs',     icon: '💳', desc: 'Currency bán qua các gói IAP (tổng nếu mua mỗi gói 1 lần). Bơm bằng tiền thật.' },
     };

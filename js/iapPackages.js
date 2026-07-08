@@ -30,6 +30,7 @@ const IAPPackages = (() => {
         { key: 'iapSilverWeeklyPass',  label: 'Silver Weekly Pass', icon: '🥈' },
         { key: 'iapSupplyChestPack',   label: 'Supply Chest Pack',  icon: '🎁' },
         { key: 'iapPiggyBank',         label: 'Piggy Bank',         icon: '🐷' },
+        { key: 'iapInfinityPack',      label: 'Infinity Pack',      icon: '♾️' },
         { key: 'iapVideoBonuses',      label: 'Video Bonuses',      icon: '🎬' },
         { key: 'iapPackDuration',      label: 'Pack Duration',      icon: '⏱️' },
     ];

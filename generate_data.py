@@ -540,6 +540,7 @@ def load_iap():
         'iapLuxuriousOffer':    load_csv('Features/IAP/LuxuriousOffer.csv',      pk),
         'iapFirstPurchase':     load_csv('Features/IAP/FirstPurchase.csv',       pk),
         'iapPiggyBank':         load_csv('Features/IAP/PiggyBank.csv',           pk),
+        'iapInfinityPack':      load_csv('Features/IAP/InfinityPack.csv',        pk),
         'iapVideoBonuses':      load_csv('Features/IAP/VideoBonuses.csv',        pk),
         'iapPackDuration':      load_csv('Features/IAP/PackDuration.csv',        pk),
     }
@@ -552,6 +553,7 @@ def load_progression():
         'featureSequence':      load_csv('Features/Unlock/FeatureSequence.csv'),
         'levelUnlockInventory': load_csv('Features/Unlock/LevelUnlockInventory.csv'),
         'dailyReward':          load_csv('Features/DailyReward/DailyReward.csv'),
+        'starChestData':        load_csv('Features/StarChest/StarChestData.csv', ['star_required']),
     }
 
 

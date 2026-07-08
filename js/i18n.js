@@ -139,6 +139,8 @@ const I18N = (() => {
         'Thưởng khi clear batch (OrderSystemReward) — hầu hết là vật phẩm (generator, tool, booster).': 'Reward for clearing a batch (OrderSystemReward) — mostly items (generator, tool, booster).',
         'Thưởng xem quảng cáo (VideoBonuses.csv) — Energy, Diamond, Skip Time. Chỉ tính ở phạm vi toàn game.': 'Rewarded-video bonuses (VideoBonuses.csv) — Energy, Diamond, Skip Time. Whole-game scope only.',
         'Thưởng đăng nhập hằng ngày (DailyReward.csv) — tổng của 1 chu kỳ 7 ngày: Diamond, Energy, Skip Time, Gold và item. Chỉ tính ở phạm vi toàn game.': 'Daily login rewards (DailyReward.csv) — total of one 7-day cycle: Diamond, Energy, Skip Time, Gold and items. Whole-game scope only.',
+        'Thưởng mở Star Chest theo mốc sao Build-Up (StarChestData.csv) — Diamond, Energy, Skip Time. Tổng nếu mở hết mọi chest trong bảng.': 'Star Chest rewards at Build-Up star milestones (StarChestData.csv) — Diamond, Energy, Skip Time. Total if every chest in the table is opened.',
+        '"Unlimited" — sinh tài nguyên liên tục trong thời gian cố định': '"Unlimited" — generates resources continuously for a set period',
         'Thống kê máy chế biến nào đang bị "vắt kiệt" qua từng Batch.': 'Which tools get "maxed out" across each Batch.',
         'Tool Cần Dùng': 'Tool Needed',
         'Toàn bộ data game: Items, Energy, Orders và IAP Packages — dùng làm nguồn cho các tính năng phân tích.': 'All game data: Items, Energy, Orders and IAP Packages — the source for every analysis feature.',
@@ -215,6 +217,8 @@ const I18N = (() => {
         [/^(.+?) — mở ở (Account|Board) Lv(\d+)(.*)$/, (_, a, b, c, d) => `${a} — unlocks at ${b} Lv${c}${d.replace(' · có popup', ' · has popup')}`],
         [/^Bước (\d+): (.+)$/, (_, n, rest) => `Step ${n}: ${rest.replace(' · cụm ', ' · cluster ')}`],
         [/^(\d[\d.,]*) orders$/, (_, n) => `${n} orders`],
+        [/^(\d+) ngày$/, (_, n) => `${n} ${n === '1' ? 'day' : 'days'}`],
+        [/^(.+): D(\d+)–D(\d+) \((\d+) ngày\)$/, (_, name, a, b, n) => `${name}: D${a}–D${b} (${n} days)`],
     ];
 
     let lang = localStorage.getItem('mc_lang') || 'vi';

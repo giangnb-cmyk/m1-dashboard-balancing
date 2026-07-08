@@ -1,0 +1,16 @@
+﻿duration,time_next_pack,respawn_time,id,pack_name,res_type,res_id,res_number,bonus,stage_bonus,first_time_purchase_bonus,purchase_type,purchase_count,iap_cost,cost_type,cost_id,cost_number,sale,google_product_id,google_product_id_premium,apple_product_id
+86400,259200,86400,1,chain_pack_package_1,Money,3,5,,,0,FREE,0,,,,,,,,
+,,,2,chain_pack_package_2,Money,3,5,,,0,FREE,0,,,,,,,,
+,,,3,chain_pack_package_3,Money,2,1,,,0,FREE,0,,,,,,,,
+,,,4,chain_pack_package_4,Money,2,50,,,0,IAP,0,"$1,99",,,,,com.deviloper.m1.food.merge.cooking.puzzle.infinite_pack_1,com.deviloper.m1.food.merge.cooking.puzzle.infinite_pack_1,com.deviloper.m1.food.merge.cooking.puzzle.infinite_pack_1
+,,,,,Money,3,100,,,,,,,,,,,,,
+,,,5,chain_pack_package_5,Item,601201,1,,,0,FREE,0,,,,,,,,
+,,,6,chain_pack_package_6,Money,2,65,,,0,IAP,0,"$3,99",,,,,com.deviloper.m1.food.merge.cooking.puzzle.infinite_pack_2,com.deviloper.m1.food.merge.cooking.puzzle.infinite_pack_2,com.deviloper.m1.food.merge.cooking.puzzle.infinite_pack_2
+,,,,,Money,3,150,,,,,,,,,,,,,
+,,,7,chain_pack_package_7,Money,3,10,,,0,FREE,0,,,,,,,,
+,,,8,chain_pack_package_8,Money,3,25,,,0,FREE,0,,,,,,,,
+,,,9,chain_pack_package_9,Money,2,75,,,0,IAP,0,"$6,99",,,,,com.deviloper.m1.food.merge.cooking.puzzle.infinite_pack_3,com.deviloper.m1.food.merge.cooking.puzzle.infinite_pack_3,com.deviloper.m1.food.merge.cooking.puzzle.infinite_pack_3
+,,,,,Money,3,180,,,,,,,,,,,,,
+,,,10,chain_pack_package_10,Money,3,25,,,0,FREE,0,,,,,,,,
+,,,11,chain_pack_package_11,Money,3,45,,,0,FREE,0,,,,,,,,
+,,,12,chain_pack_package_12,Item,601201,1,,,0,FREE,0,,,,,,,,

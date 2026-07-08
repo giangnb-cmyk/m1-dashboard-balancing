@@ -5619,11 +5619,30 @@ tr.imbalanced {
 
 /* ── Live Ops — Loop scheduler ─────────────────────────────────────────────── */
 .lo-rot-scroll { overflow-x:auto; }
-.lo-rot-row { display:grid; grid-template-columns:180px repeat(30, minmax(20px,1fr)); gap:2px; align-items:center; margin-bottom:2px; min-width:820px; }
-.lo-rot-head .lo-rot-day { font-family:'JetBrains Mono',monospace; font-size:.62rem; color:var(--text-muted); text-align:center; }
-.lo-rot-label { font-size:.78rem; color:var(--text-main); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; padding-right:.6rem; }
-.lo-rot-cell { height:20px; border-radius:4px; background:var(--glass); }
-.lo-rot-cell.on { background:var(--c); opacity:.85; }
+.lo-tl-row { display:flex; align-items:center; margin-bottom:6px; min-width:820px; }
+.lo-tl-label { width:180px; flex:none; font-size:.78rem; color:var(--text-main); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; padding-right:.75rem; }
+.lo-tl-track {
+    position:relative; flex:1; height:26px; border-radius:4px;
+    /* lưới ngày mờ: 1 vạch mỗi 1/30 chiều rộng */
+    background:repeating-linear-gradient(to right,
+        transparent 0, transparent calc(100%/30 - 1px),
+        rgba(255,255,255,.05) calc(100%/30 - 1px), rgba(255,255,255,.05) calc(100%/30));
+}
+.lo-tl-bar {
+    position:absolute; top:2px; bottom:2px; display:flex; align-items:center; justify-content:center;
+    background:var(--c); opacity:.9; border-radius:4px 0 0 4px;
+    clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 50%, calc(100% - 9px) 100%, 0 100%);
+    font-family:'JetBrains Mono',monospace; font-size:.68rem; font-weight:700; color:#0f172a;
+    white-space:nowrap; overflow:hidden;
+}
+.lo-tl-bar span { padding-right:8px; }
+.lo-tl-axis-row { margin-top:2px; }
+.lo-tl-axis { position:relative; flex:1; height:22px; background:var(--glass); border-radius:4px; }
+.lo-tl-tick {
+    position:absolute; top:50%; transform:translate(-50%,-50%);
+    font-family:'JetBrains Mono',monospace; font-size:.64rem; color:var(--text-muted);
+}
+.lo-tl-tick:first-child { transform:translate(0,-50%); }
 .lo-legend { display:flex; gap:1.1rem; margin-top:.8rem; font-size:.75rem; color:var(--text-muted); }
 .lo-legend-item { display:flex; align-items:center; gap:.35rem; }
 .lo-legend-dot { width:10px; height:10px; border-radius:3px; display:inline-block; }
