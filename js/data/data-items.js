@@ -1385,7 +1385,7 @@ Object.assign(window.GameData, {
       "tier":"1",
       "energy_cost":"1.25",
       "time_point":"165",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400102",
@@ -1396,7 +1396,7 @@ Object.assign(window.GameData, {
       "tier":"2",
       "energy_cost":"2.5",
       "time_point":"330",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400103",
@@ -1407,7 +1407,7 @@ Object.assign(window.GameData, {
       "tier":"3",
       "energy_cost":"5",
       "time_point":"645",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400104",
@@ -1418,7 +1418,7 @@ Object.assign(window.GameData, {
       "tier":"4",
       "energy_cost":"10",
       "time_point":"1305",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400105",
@@ -1429,7 +1429,7 @@ Object.assign(window.GameData, {
       "tier":"5",
       "energy_cost":"43.75",
       "time_point":"5685",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400106",
@@ -1440,7 +1440,7 @@ Object.assign(window.GameData, {
       "tier":"6",
       "energy_cost":"62.5",
       "time_point":"8130",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400107",
@@ -1451,7 +1451,7 @@ Object.assign(window.GameData, {
       "tier":"7",
       "energy_cost":"421",
       "time_point":"54735",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400108",
@@ -1462,7 +1462,7 @@ Object.assign(window.GameData, {
       "tier":"8",
       "energy_cost":"1000",
       "time_point":"130005",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400109",
@@ -1473,7 +1473,7 @@ Object.assign(window.GameData, {
       "tier":"9",
       "energy_cost":"160",
       "time_point":"20805",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400201",
@@ -1484,7 +1484,7 @@ Object.assign(window.GameData, {
       "tier":"1",
       "energy_cost":"1.25",
       "time_point":"165",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400202",
@@ -1495,7 +1495,7 @@ Object.assign(window.GameData, {
       "tier":"2",
       "energy_cost":"2.5",
       "time_point":"330",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400203",
@@ -1506,7 +1506,7 @@ Object.assign(window.GameData, {
       "tier":"3",
       "energy_cost":"5",
       "time_point":"645",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400204",
@@ -1517,7 +1517,7 @@ Object.assign(window.GameData, {
       "tier":"4",
       "energy_cost":"10",
       "time_point":"1305",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400205",
@@ -1528,7 +1528,7 @@ Object.assign(window.GameData, {
       "tier":"5",
       "energy_cost":"1280",
       "time_point":"166395",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400206",
@@ -1539,7 +1539,7 @@ Object.assign(window.GameData, {
       "tier":"6",
       "energy_cost":"2560",
       "time_point":"332805",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400207",
@@ -1550,7 +1550,7 @@ Object.assign(window.GameData, {
       "tier":"7",
       "energy_cost":"81.25",
       "time_point":"10560",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400208",
@@ -1561,7 +1561,7 @@ Object.assign(window.GameData, {
       "tier":"8",
       "energy_cost":"15",
       "time_point":"1950",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400209",
@@ -1572,7 +1572,7 @@ Object.assign(window.GameData, {
       "tier":"9",
       "energy_cost":"21.25",
       "time_point":"2760",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400210",
@@ -1583,7 +1583,7 @@ Object.assign(window.GameData, {
       "tier":"10",
       "energy_cost":"1930",
       "time_point":"250905",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400211",
@@ -1594,7 +1594,7 @@ Object.assign(window.GameData, {
       "tier":"11",
       "energy_cost":"31.25",
       "time_point":"4065",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400212",
@@ -1605,7 +1605,7 @@ Object.assign(window.GameData, {
       "tier":"12",
       "energy_cost":"95",
       "time_point":"12345",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400213",
@@ -1616,7 +1616,7 @@ Object.assign(window.GameData, {
       "tier":"13",
       "energy_cost":"20",
       "time_point":"2595",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400214",
@@ -1627,7 +1627,7 @@ Object.assign(window.GameData, {
       "tier":"14",
       "energy_cost":"162.5",
       "time_point":"21120",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400215",
@@ -1638,7 +1638,7 @@ Object.assign(window.GameData, {
       "tier":"15",
       "energy_cost":"95",
       "time_point":"12345",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400216",
@@ -1649,7 +1649,7 @@ Object.assign(window.GameData, {
       "tier":"16",
       "energy_cost":"102.5",
       "time_point":"13320",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400301",
@@ -1660,7 +1660,7 @@ Object.assign(window.GameData, {
       "tier":"1",
       "energy_cost":"25",
       "time_point":"3255",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400302",
@@ -1671,7 +1671,7 @@ Object.assign(window.GameData, {
       "tier":"2",
       "energy_cost":"65",
       "time_point":"8445",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400303",
@@ -1682,7 +1682,7 @@ Object.assign(window.GameData, {
       "tier":"3",
       "energy_cost":"45",
       "time_point":"5850",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400304",
@@ -1693,7 +1693,7 @@ Object.assign(window.GameData, {
       "tier":"4",
       "energy_cost":"105",
       "time_point":"13650",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400305",
@@ -1704,7 +1704,7 @@ Object.assign(window.GameData, {
       "tier":"5",
       "energy_cost":"135",
       "time_point":"17550",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400401",
@@ -1715,7 +1715,7 @@ Object.assign(window.GameData, {
       "tier":"1",
       "energy_cost":"2.5",
       "time_point":"330",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400402",
@@ -1726,7 +1726,7 @@ Object.assign(window.GameData, {
       "tier":"2",
       "energy_cost":"5",
       "time_point":"645",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400403",
@@ -1737,7 +1737,7 @@ Object.assign(window.GameData, {
       "tier":"3",
       "energy_cost":"10",
       "time_point":"1305",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400404",
@@ -1748,7 +1748,7 @@ Object.assign(window.GameData, {
       "tier":"4",
       "energy_cost":"20",
       "time_point":"2595",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400405",
@@ -1759,7 +1759,7 @@ Object.assign(window.GameData, {
       "tier":"5",
       "energy_cost":"40",
       "time_point":"5205",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400406",
@@ -1770,7 +1770,7 @@ Object.assign(window.GameData, {
       "tier":"6",
       "energy_cost":"160",
       "time_point":"20805",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400407",
@@ -1781,7 +1781,7 @@ Object.assign(window.GameData, {
       "tier":"7",
       "energy_cost":"440",
       "time_point":"57195",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400408",
@@ -1792,7 +1792,7 @@ Object.assign(window.GameData, {
       "tier":"8",
       "energy_cost":"20",
       "time_point":"2595",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400409",
@@ -1803,7 +1803,7 @@ Object.assign(window.GameData, {
       "tier":"9",
       "energy_cost":"80",
       "time_point":"10395",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400410",
@@ -1814,7 +1814,7 @@ Object.assign(window.GameData, {
       "tier":"10",
       "energy_cost":"10",
       "time_point":"1305",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400411",
@@ -1825,7 +1825,7 @@ Object.assign(window.GameData, {
       "tier":"11",
       "energy_cost":"40",
       "time_point":"5205",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400412",
@@ -1836,7 +1836,7 @@ Object.assign(window.GameData, {
       "tier":"12",
       "energy_cost":"345",
       "time_point":"44850",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400413",
@@ -1847,7 +1847,7 @@ Object.assign(window.GameData, {
       "tier":"13",
       "energy_cost":"680",
       "time_point":"88395",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400414",
@@ -1858,7 +1858,7 @@ Object.assign(window.GameData, {
       "tier":"14",
       "energy_cost":"320",
       "time_point":"41595",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400415",
@@ -1869,7 +1869,7 @@ Object.assign(window.GameData, {
       "tier":"15",
       "energy_cost":"80",
       "time_point":"10395",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400416",
@@ -1880,7 +1880,7 @@ Object.assign(window.GameData, {
       "tier":"16",
       "energy_cost":"40",
       "time_point":"5205",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400417",
@@ -1891,7 +1891,7 @@ Object.assign(window.GameData, {
       "tier":"17",
       "energy_cost":"80",
       "time_point":"10395",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400418",
@@ -1902,7 +1902,7 @@ Object.assign(window.GameData, {
       "tier":"18",
       "energy_cost":"320",
       "time_point":"41595",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400419",
@@ -1913,7 +1913,7 @@ Object.assign(window.GameData, {
       "tier":"19",
       "energy_cost":"10",
       "time_point":"1305",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400420",
@@ -1924,7 +1924,7 @@ Object.assign(window.GameData, {
       "tier":"20",
       "energy_cost":"30",
       "time_point":"3900",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400421",
@@ -1935,7 +1935,7 @@ Object.assign(window.GameData, {
       "tier":"21",
       "energy_cost":"82.5",
       "time_point":"10725",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400422",
@@ -1946,7 +1946,7 @@ Object.assign(window.GameData, {
       "tier":"22",
       "energy_cost":"400",
       "time_point":"52005",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400423",
@@ -1957,7 +1957,7 @@ Object.assign(window.GameData, {
       "tier":"23",
       "energy_cost":"960",
       "time_point":"124800",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400424",
@@ -1968,7 +1968,7 @@ Object.assign(window.GameData, {
       "tier":"24",
       "energy_cost":"1400",
       "time_point":"181995",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400425",
@@ -1979,7 +1979,7 @@ Object.assign(window.GameData, {
       "tier":"25",
       "energy_cost":"1200",
       "time_point":"156000",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400426",
@@ -1990,7 +1990,7 @@ Object.assign(window.GameData, {
       "tier":"26",
       "energy_cost":"5200",
       "time_point":"676005",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400501",
@@ -2001,7 +2001,7 @@ Object.assign(window.GameData, {
       "tier":"1",
       "energy_cost":"5",
       "time_point":"645",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400502",
@@ -2012,7 +2012,7 @@ Object.assign(window.GameData, {
       "tier":"2",
       "energy_cost":"5",
       "time_point":"645",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400503",
@@ -2023,7 +2023,7 @@ Object.assign(window.GameData, {
       "tier":"3",
       "energy_cost":"970",
       "time_point":"126105",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400504",
@@ -2034,7 +2034,7 @@ Object.assign(window.GameData, {
       "tier":"4",
       "energy_cost":"250",
       "time_point":"32505",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400505",
@@ -2045,7 +2045,7 @@ Object.assign(window.GameData, {
       "tier":"5",
       "energy_cost":"160",
       "time_point":"20805",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400506",
@@ -2056,7 +2056,7 @@ Object.assign(window.GameData, {
       "tier":"6",
       "energy_cost":"160",
       "time_point":"20805",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400507",
@@ -2067,7 +2067,7 @@ Object.assign(window.GameData, {
       "tier":"7",
       "energy_cost":"360",
       "time_point":"46800",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400508",
@@ -2078,7 +2078,7 @@ Object.assign(window.GameData, {
       "tier":"8",
       "energy_cost":"240",
       "time_point":"31200",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400509",
@@ -2089,7 +2089,7 @@ Object.assign(window.GameData, {
       "tier":"9",
       "energy_cost":"560",
       "time_point":"72795",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400510",
@@ -2100,7 +2100,7 @@ Object.assign(window.GameData, {
       "tier":"10",
       "energy_cost":"160",
       "time_point":"20805",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400511",
@@ -2111,7 +2111,7 @@ Object.assign(window.GameData, {
       "tier":"11",
       "energy_cost":"25",
       "time_point":"3255",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400601",
@@ -2122,7 +2122,7 @@ Object.assign(window.GameData, {
       "tier":"1",
       "energy_cost":"2.5",
       "time_point":"330",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400602",
@@ -2133,7 +2133,7 @@ Object.assign(window.GameData, {
       "tier":"2",
       "energy_cost":"5",
       "time_point":"645",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400603",
@@ -2144,7 +2144,7 @@ Object.assign(window.GameData, {
       "tier":"3",
       "energy_cost":"1.25",
       "time_point":"165",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400604",
@@ -2155,7 +2155,7 @@ Object.assign(window.GameData, {
       "tier":"4",
       "energy_cost":"10",
       "time_point":"1305",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400605",
@@ -2166,7 +2166,7 @@ Object.assign(window.GameData, {
       "tier":"5",
       "energy_cost":"642.5",
       "time_point":"83520",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400606",
@@ -2177,7 +2177,7 @@ Object.assign(window.GameData, {
       "tier":"6",
       "energy_cost":"2580",
       "time_point":"335400",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400607",
@@ -2188,7 +2188,7 @@ Object.assign(window.GameData, {
       "tier":"7",
       "energy_cost":"90",
       "time_point":"11700",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400608",
@@ -2199,7 +2199,7 @@ Object.assign(window.GameData, {
       "tier":"8",
       "energy_cost":"1325",
       "time_point":"172245",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400609",
@@ -2210,7 +2210,7 @@ Object.assign(window.GameData, {
       "tier":"9",
       "energy_cost":"65",
       "time_point":"8445",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400701",
@@ -2221,7 +2221,7 @@ Object.assign(window.GameData, {
       "tier":"1",
       "energy_cost":"1450",
       "time_point":"188505",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400702",
@@ -2232,7 +2232,7 @@ Object.assign(window.GameData, {
       "tier":"2",
       "energy_cost":"350",
       "time_point":"45495",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400703",
@@ -2243,7 +2243,7 @@ Object.assign(window.GameData, {
       "tier":"3",
       "energy_cost":"121.25",
       "time_point":"15765",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400704",
@@ -2254,7 +2254,7 @@ Object.assign(window.GameData, {
       "tier":"4",
       "energy_cost":"290",
       "time_point":"37695",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400705",
@@ -2265,7 +2265,7 @@ Object.assign(window.GameData, {
       "tier":"5",
       "energy_cost":"700",
       "time_point":"91005",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400706",
@@ -2276,7 +2276,7 @@ Object.assign(window.GameData, {
       "tier":"6",
       "energy_cost":"1380",
       "time_point":"179400",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400801",
@@ -2287,7 +2287,7 @@ Object.assign(window.GameData, {
       "tier":"1",
       "energy_cost":"6080",
       "time_point":"790395",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"500101",
@@ -4443,7 +4443,7 @@ Object.assign(window.GameData, {
       "tier":"12",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400901",
@@ -4454,7 +4454,7 @@ Object.assign(window.GameData, {
       "tier":"1",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400902",
@@ -4465,7 +4465,7 @@ Object.assign(window.GameData, {
       "tier":"2",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400903",
@@ -4476,7 +4476,7 @@ Object.assign(window.GameData, {
       "tier":"3",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400904",
@@ -4487,7 +4487,7 @@ Object.assign(window.GameData, {
       "tier":"4",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400905",
@@ -4498,7 +4498,7 @@ Object.assign(window.GameData, {
       "tier":"5",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400906",
@@ -4509,7 +4509,7 @@ Object.assign(window.GameData, {
       "tier":"6",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400907",
@@ -4520,7 +4520,7 @@ Object.assign(window.GameData, {
       "tier":"7",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400908",
@@ -4531,7 +4531,7 @@ Object.assign(window.GameData, {
       "tier":"8",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400909",
@@ -4542,7 +4542,7 @@ Object.assign(window.GameData, {
       "tier":"9",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400910",
@@ -4553,7 +4553,7 @@ Object.assign(window.GameData, {
       "tier":"10",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400911",
@@ -4564,7 +4564,7 @@ Object.assign(window.GameData, {
       "tier":"11",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400912",
@@ -4575,7 +4575,7 @@ Object.assign(window.GameData, {
       "tier":"12",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400913",
@@ -4586,7 +4586,7 @@ Object.assign(window.GameData, {
       "tier":"13",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400610",
@@ -4597,7 +4597,7 @@ Object.assign(window.GameData, {
       "tier":"10",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400914",
@@ -4608,7 +4608,7 @@ Object.assign(window.GameData, {
       "tier":"14",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400915",
@@ -4619,7 +4619,7 @@ Object.assign(window.GameData, {
       "tier":"15",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400427",
@@ -4630,7 +4630,7 @@ Object.assign(window.GameData, {
       "tier":"27",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400916",
@@ -4641,7 +4641,7 @@ Object.assign(window.GameData, {
       "tier":"16",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400917",
@@ -4652,7 +4652,7 @@ Object.assign(window.GameData, {
       "tier":"17",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400802",
@@ -4663,7 +4663,7 @@ Object.assign(window.GameData, {
       "tier":"2",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400803",
@@ -4674,7 +4674,7 @@ Object.assign(window.GameData, {
       "tier":"3",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400804",
@@ -4685,7 +4685,7 @@ Object.assign(window.GameData, {
       "tier":"4",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400707",
@@ -4696,7 +4696,7 @@ Object.assign(window.GameData, {
       "tier":"7",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400708",
@@ -4707,7 +4707,7 @@ Object.assign(window.GameData, {
       "tier":"8",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400709",
@@ -4718,7 +4718,7 @@ Object.assign(window.GameData, {
       "tier":"9",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400806",
@@ -4729,7 +4729,7 @@ Object.assign(window.GameData, {
       "tier":"6",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400807",
@@ -4740,7 +4740,7 @@ Object.assign(window.GameData, {
       "tier":"7",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400808",
@@ -4751,7 +4751,7 @@ Object.assign(window.GameData, {
       "tier":"8",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400809",
@@ -4762,7 +4762,7 @@ Object.assign(window.GameData, {
       "tier":"9",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400810",
@@ -4773,7 +4773,7 @@ Object.assign(window.GameData, {
       "tier":"10",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400811",
@@ -4784,7 +4784,7 @@ Object.assign(window.GameData, {
       "tier":"11",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400306",
@@ -4795,7 +4795,7 @@ Object.assign(window.GameData, {
       "tier":"6",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"400307",
@@ -4806,7 +4806,7 @@ Object.assign(window.GameData, {
       "tier":"7",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"701501",
@@ -5114,7 +5114,7 @@ Object.assign(window.GameData, {
       "tier":"1",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"401002",
@@ -5125,7 +5125,7 @@ Object.assign(window.GameData, {
       "tier":"2",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"401003",
@@ -5136,7 +5136,7 @@ Object.assign(window.GameData, {
       "tier":"3",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"401004",
@@ -5147,7 +5147,7 @@ Object.assign(window.GameData, {
       "tier":"4",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"401005",
@@ -5158,7 +5158,7 @@ Object.assign(window.GameData, {
       "tier":"5",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"401006",
@@ -5169,7 +5169,7 @@ Object.assign(window.GameData, {
       "tier":"6",
       "energy_cost":"0",
       "time_point":"0",
-      "type":"Food"
+      "type":"Recipe"
     },
     {
       "itemID":"800101",

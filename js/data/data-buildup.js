@@ -9940,5 +9940,19 @@ Object.assign(window.GameData, {
       "type":"Diamonds",
       "count_time":"60"
     }
+  ],
+  "generalConfig":[
+    {
+      "energy_per_stage":"1",
+      "max_energy":"100",
+      "restore_energy_value":"1",
+      "restore_energy_time":"120",
+      "revive_time_by_gold":"60",
+      "revive_time_by_ads":"30",
+      "time_recommend_booster":"15",
+      "res_type":"1",
+      "res_id":"1",
+      "res_number":"20"
+    }
   ]
 });

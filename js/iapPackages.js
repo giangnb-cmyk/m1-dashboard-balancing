@@ -14,14 +14,11 @@ const IAPPackages = (() => {
     // ── Danh mục các IAP key trong GameData và nhãn hiển thị ────────────────
     const IAP_CATALOG = [
         { key: 'iapGemPack',           label: 'Gem Pack',           icon: '💎' },
-        { key: 'iapBundlePack',        label: 'Bundle Pack',        icon: '📦' },
-        { key: 'iapCoinPack',          label: 'Coin Pack',          icon: '🪙' },
         { key: 'iapEnergyPack',        label: 'Energy Pack',        icon: '⚡' },
         { key: 'iapEnergyTrilogyPack', label: 'Energy Trilogy',     icon: '⚡' },
         { key: 'iapStarterPack',       label: 'Starter Pack',       icon: '🎁' },
         { key: 'iapOpenningPack',      label: 'Opening Pack',       icon: '🎁' },
         { key: 'iapFirstPurchase',     label: 'First Purchase',     icon: '🎁' },
-        { key: 'iapChainPack',         label: 'Chain Pack',         icon: '🔗' },
         { key: 'iapStepPricePack',     label: 'Step Price Pack',    icon: '📈' },
         { key: 'iapDailyDealsPack',    label: 'Daily Deals',        icon: '📅' },
         { key: 'iapDailyDealsPack2',   label: 'Daily Deals 2',      icon: '📅' },
@@ -31,11 +28,8 @@ const IAPPackages = (() => {
         { key: 'iapStandardDiamond',   label: 'Standard Diamond',   icon: '💠' },
         { key: 'iapGoldWeeklyPass',    label: 'Gold Weekly Pass',   icon: '🥇' },
         { key: 'iapSilverWeeklyPass',  label: 'Silver Weekly Pass', icon: '🥈' },
-        { key: 'iapBattlePassPack',    label: 'Battle Pass',        icon: '🏆' },
-        { key: 'iapLuckySpinPack',     label: 'Lucky Spin Pack',    icon: '🎰' },
         { key: 'iapSupplyChestPack',   label: 'Supply Chest Pack',  icon: '🎁' },
         { key: 'iapPiggyBank',         label: 'Piggy Bank',         icon: '🐷' },
-        { key: 'iapRemoveAdsPack',     label: 'Remove Ads',         icon: '🚫' },
         { key: 'iapVideoBonuses',      label: 'Video Bonuses',      icon: '🎬' },
         { key: 'iapPackDuration',      label: 'Pack Duration',      icon: '⏱️' },
     ];

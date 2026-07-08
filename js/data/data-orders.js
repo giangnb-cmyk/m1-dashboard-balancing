@@ -5274,64 +5274,6 @@ Object.assign(window.GameData, {
       "reward3_customValue":""
     }
   ],
-  "orderDetailReward":[
-    {
-      "theme_type":"Scene_02",
-      "res_type":"Money",
-      "res_id":"1",
-      "res_number":"1827",
-      "custom_value":""
-    },
-    {
-      "theme_type":"Scene_02",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"1391",
-      "custom_value":""
-    },
-    {
-      "theme_type":"Scene_03",
-      "res_type":"Money",
-      "res_id":"1",
-      "res_number":"6916",
-      "custom_value":""
-    },
-    {
-      "theme_type":"Scene_03",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"8440",
-      "custom_value":""
-    },
-    {
-      "theme_type":"Scene_04",
-      "res_type":"Money",
-      "res_id":"1",
-      "res_number":"13580",
-      "custom_value":""
-    },
-    {
-      "theme_type":"Scene_04",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"15019",
-      "custom_value":""
-    },
-    {
-      "theme_type":"Scene_05",
-      "res_type":"Money",
-      "res_id":"1",
-      "res_number":"16250",
-      "custom_value":""
-    },
-    {
-      "theme_type":"Scene_05",
-      "res_type":"Money",
-      "res_id":"5",
-      "res_number":"15361",
-      "custom_value":""
-    }
-  ],
   "orderGold":[
     {
       "many_done":"5",

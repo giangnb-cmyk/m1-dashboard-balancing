@@ -16,7 +16,7 @@ const ItemEncyclopedia = (() => {
     // ── Shared item sources cho tab Other ────────────────────────────────────
 
     const OTHER_TYPES = [
-        { type: 'Food',     label: 'Food',     color: '#4ade80' },
+        { type: 'Recipe',   label: 'Recipe',   color: '#4ade80' },
         { type: 'Booster',  label: 'Booster',  color: '#f472b6' },
         { type: 'Currency', label: 'Currency', color: '#34d399' },
     ];
@@ -263,7 +263,7 @@ const ItemEncyclopedia = (() => {
     }
 
     function buildRecipeRows(itemData, formulaMap) {
-        const foodItems = itemData.filter(r => r.type === 'Food');
+        const foodItems = itemData.filter(r => r.type === 'Recipe');
         const counter   = createChainCounter();
         return foodItems.map(item => {
             const chain = counter.count(item.type);
@@ -492,7 +492,7 @@ const ItemEncyclopedia = (() => {
 
         setText('stat-merge',     byType('Raw').toLocaleString());
         setText('stat-generator', countUniqueGenerators(d.rateGenerator || []).toLocaleString());
-        setText('stat-recipe',    byType('Food').toLocaleString());
+        setText('stat-recipe',    byType('Recipe').toLocaleString());
         setText('stat-tool',      byType('Tool').toLocaleString());
         setText('stat-other',     OTHER_TYPES.reduce((s, { type }) => s + byType(type), 0).toLocaleString());
 

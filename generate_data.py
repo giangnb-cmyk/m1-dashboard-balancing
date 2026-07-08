@@ -25,7 +25,7 @@ ITEM_TYPE_MAP = {
     '1': 'Generator',
     '2': 'Tool',
     '3': 'Currency',
-    '4': 'Food',
+    '4': 'Recipe',
     '5': 'Booster',
     '7': 'Raw',
 }
@@ -470,7 +470,6 @@ def load_orders():
     return {
         'orderDetail':         parse_order_detail('Core/Order/OrderDetail.csv', item_names),
         'orderSystem':         parse_order_system('Core/Order/OrderSystem.csv'),
-        'orderDetailReward':   load_csv('Core/Order/OrderDetailReward.csv',  ['theme_type']),
         'orderGold':           load_csv('Core/Order/OrderGold.csv'),
         'orderSystemReward':   load_csv('Core/Order/OrderSystemReward.csv',  ['theme_type']),
         'rewardMinDistribute': load_csv('Core/Order/RewardMinDistributeOrderDetail.csv'),
@@ -485,6 +484,7 @@ def load_buildup():
         'buyCurrency':            load_csv('Features/BuyCurrency/BuyCurrency.csv'),
         'chefsBookData':          load_csv('Features/ChefsBook/ChefsBookData.csv',         ['chefs_type']),
         'convertTime':            load_csv('Extends/ConvertTime/ConvertTimeTool.csv'),
+        'generalConfig':          load_csv('General/GeneralConfig.csv'),
     }
 
 
@@ -508,23 +508,30 @@ def load_boxes():
 
 
 def load_iap():
+    # Chỉ load các gói bán CÓ THẬT trong game — theo docs/BusinessModel_en.pdf (Section C.1).
+    # Các gói KHÔNG có trong PDF là rác còn sót từ CSV project khác và bị loại khỏi số liệu:
+    #   CoinPack        — không có trong PDF (product id namespace "coffeepack" — game khác); là gói bơm 334k gold ảo
+    #   BattlePassPack  — không có trong danh sách gói của PDF
+    #   LuckySpinPack   — không có trong PDF
+    #   RemoveAdsPack   — PDF ghi rõ "No remove-ads placements"
+    #   BundlePack      — user yêu cầu loại (dù có trong PDF): namespace "coffeepack", bơm gold combo ảo
+    #   ChainPack       — product id namespace "coffeepack" (không phải com.deviloper.m1.food.merge.cooking.puzzle)
+    # TIÊU CHÍ CHUẨN: chỉ giữ gói có product id thuộc package name com.deviloper.m1.food.merge.cooking.puzzle
+    # (hoặc gói không có product id nào — config/free). Gói mang product id của game khác → loại.
+    # Nếu ai copy các CSV này vào Csv/Features/IAP/ thì vẫn bị bỏ qua vì key không được khai báo ở đây.
+    # (economyModel.js còn 1 lớp chặn nữa qua IAP_IGNORE cho data-iap.js chưa regenerate.)
     pk = ['id', 'pack_name']
     return {
         'iapGemPack':           load_csv('Features/IAP/GemPack.csv',            pk),
-        'iapBundlePack':        load_csv('Features/IAP/BundlePack.csv',          pk),
-        'iapCoinPack':          load_csv('Features/IAP/CoinPack.csv',            pk),
         'iapEnergyPack':        load_csv('Features/IAP/EnergyPack.csv',          pk),
         'iapEnergyTrilogyPack': load_csv('Features/IAP/EnergyTrilogyPack.csv',   pk),
         'iapStarterPack':       load_csv('Features/IAP/StarterPack.csv',         pk),
         'iapOpenningPack':      load_csv('Features/IAP/OpenningPack.csv',        pk),
-        'iapChainPack':         load_csv('Features/IAP/ChainPack.csv',           pk),
         'iapDailyDealsPack':    load_csv('Features/IAP/DailyDealsPack.csv',      pk),
         'iapDailyDealsPack2':   load_csv('Features/IAP/DailyDealsPack2.csv',     pk),
         'iapStandardDiamond':   load_csv('Features/IAP/StandardDiamond.csv',     pk),
         'iapGoldWeeklyPass':    load_csv('Features/IAP/GoldWeeklyPass.csv',      pk),
         'iapSilverWeeklyPass':  load_csv('Features/IAP/SilverWeeklyPass.csv',    pk),
-        'iapBattlePassPack':    load_csv('Features/IAP/BattlePassPackage.csv',   pk),
-        'iapLuckySpinPack':     load_csv('Features/IAP/LuckySpinPack.csv',       pk),
         'iapSupplyChestPack':   load_csv('Features/IAP/SupplyChestPack.csv',     pk),
         'iapNiceBoostPack':     load_csv('Features/IAP/NiceBoostPack.csv',       pk),
         'iapStepPricePack':     load_csv('Features/IAP/StepPricePack.csv',       pk),
@@ -532,7 +539,6 @@ def load_iap():
         'iapLuxuriousOffer':    load_csv('Features/IAP/LuxuriousOffer.csv',      pk),
         'iapFirstPurchase':     load_csv('Features/IAP/FirstPurchase.csv',       pk),
         'iapPiggyBank':         load_csv('Features/IAP/PiggyBank.csv',           pk),
-        'iapRemoveAdsPack':     load_csv('Features/IAP/RemoveAdsPack.csv',       pk),
         'iapVideoBonuses':      load_csv('Features/IAP/VideoBonuses.csv',        pk),
         'iapPackDuration':      load_csv('Features/IAP/PackDuration.csv',        pk),
     }
@@ -544,6 +550,7 @@ def load_progression():
         'unlockFeature':        load_csv('Features/Unlock/UnlockFeature.csv'),
         'featureSequence':      load_csv('Features/Unlock/FeatureSequence.csv'),
         'levelUnlockInventory': load_csv('Features/Unlock/LevelUnlockInventory.csv'),
+        'dailyReward':          load_csv('Features/DailyReward/DailyReward.csv'),
     }
 
 

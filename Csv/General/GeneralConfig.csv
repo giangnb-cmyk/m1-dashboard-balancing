@@ -1,0 +1,2 @@
+energy_per_stage,max_energy,restore_energy_value,restore_energy_time,revive_time_by_gold,revive_time_by_ads,time_recommend_booster,res_type,res_id,res_number
+1,100,1,120,60,30,15,1,1,20

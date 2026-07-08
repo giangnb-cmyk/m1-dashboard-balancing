@@ -134,7 +134,6 @@ const CsvLoader = (() => {
       itemExpand,
       orderDetail,
       orderSystem,
-      orderDetailReward,
       orderGold,
       orderSystemReward,
       rewardMinDistribute,
@@ -164,7 +163,6 @@ const CsvLoader = (() => {
       load(`${base}Core/ItemExpand/ItemExpand.csv`),
       load(`${base}Core/Order/OrderDetail.csv`),
       load(`${base}Core/Order/OrderSystem.csv`),
-      loadFilled(`${base}Core/Order/OrderDetailReward.csv`,            ['theme_type']),
       load(`${base}Core/Order/OrderGold.csv`),
       loadFilled(`${base}Core/Order/OrderSystemReward.csv`,            ['theme_type']),
       load(`${base}Core/Order/RewardMinDistributeOrderDetail.csv`),
@@ -190,7 +188,7 @@ const CsvLoader = (() => {
     return {
       buildUpGoalData, buildUpGoalReward, buildUpGoalRewardBonus,
       itemData, itemCurrency, itemExpand,
-      orderDetail, orderSystem, orderDetailReward,
+      orderDetail, orderSystem,
       orderGold, orderSystemReward, rewardMinDistribute,
       formuaRecipes,
       boxes: {

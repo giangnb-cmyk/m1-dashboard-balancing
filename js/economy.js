@@ -29,7 +29,7 @@ const EconomyEngine = (() => {
     ],
     sinks: [
       { id: 'build',   label: 'Build Up',    icon: '🏗️', desc: 'Tốn Star để xây từng step scene', currency: ['star'] },
-      { id: 'cook',    label: 'Recipe Cook', icon: '🍳', desc: 'Tốn time + item raw → Food', currency: ['item','time'] },
+      { id: 'cook',    label: 'Recipe Cook', icon: '🍳', desc: 'Tốn time + item raw → Recipe', currency: ['item','time'] },
       { id: 'skip',    label: 'Skip Time',   icon: '⏩', desc: 'Dùng Diamond/SkipTime để skip thời gian nấu', currency: ['diamond'] },
       { id: 'energy_s',label: 'Energy Use',  icon: '⚡', desc: 'Tap generator, ItemExpand tốn Energy', currency: ['energy'] },
       { id: 'iap',     label: 'IAP / Shop',  icon: '💳', desc: 'Buy Energy, Diamond, BuyCurrency package', currency: ['real_money'] },

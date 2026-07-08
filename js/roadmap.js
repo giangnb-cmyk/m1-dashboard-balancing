@@ -54,6 +54,11 @@ const Roadmap = (() => {
             popup: String(r.show_when_open).toUpperCase() === 'TRUE',
             cat: catOf(r.feature),
         }));
+        // Opening Pack không nằm trong UnlockFeature (mở khi hoàn thành scene, không theo level) —
+        // thêm thủ công vào lane Monetization, đặt sớm (Scene 1).
+        if (!feats.some(f => f.name === 'OpenningPack')) {
+            feats.push({ name: 'OpenningPack', level: 1, byBoard: false, popup: true, cat: 'monet', cond: 'khi hoàn thành Scene' });
+        }
         const invLevels = (_gd.levelUnlockInventory || []).map(r => parseInt(r.level)).filter(Boolean);
         _maxLevel = Math.max(_maxLevel, ...feats.map(f => f.level), ...invLevels);
 
@@ -76,7 +81,7 @@ const Roadmap = (() => {
         const rowHtml = f => {
             const color = CATS[f.cat].color;
             const popup = f.popup ? `<span class="rm-badge" title="Có popup thông báo khi mở">🔔</span>` : '';
-            const cond = f.byBoard ? `Board Lv${f.level}` : `Account Lv${f.level}`;
+            const cond = f.cond || (f.byBoard ? `Board Lv${f.level}` : `Account Lv${f.level}`);
             return `<div class="rm-row" data-tip="${humanize(f.name)} — mở ở ${cond}${f.popup ? ' · có popup' : ''}">
                 <div class="rm-label"><span class="rm-ic">${iconOf(f.name)}</span><span>${humanize(f.name)}</span>${popup}</div>
                 <div class="rm-track">
@@ -100,46 +105,6 @@ const Roadmap = (() => {
         host.innerHTML = `<div class="rm-chart">${overlay}${axis}${groups}</div>`;
     }
 
-    // ── Onboarding sequence ─────────────────────────────────────────────────────
-
-    function renderOnboarding() {
-        const host = document.getElementById('rm-onboarding');
-        if (!host) return;
-        const rows = (_gd.featureSequence || []).filter(r => r.feature);
-
-        // Nhóm theo cluster; slot của cluster = priority preview (max), trong cluster: preview trước feature (pri 0).
-        const groups = {};
-        rows.forEach(r => {
-            const key = r.cluster || `_${r.feature}`;
-            (groups[key] = groups[key] || []).push({ name: r.feature, pri: parseInt(r.priority) || 0, cluster: r.cluster });
-        });
-        const ordered = Object.values(groups)
-            .map(items => {
-                const mx = Math.max(...items.map(i => i.pri));
-                // preview (priority cao) hiện trước feature (priority 0); single priority-0 (Rating) xuống cuối
-                return { items: items.sort((a, b) => b.pri - a.pri), key: mx === 0 ? Infinity : mx };
-            })
-            .sort((a, b) => a.key - b.key);
-
-        let step = 0;
-        const html = ordered.map(g => {
-            const clustered = g.items.length > 1;
-            const chips = g.items.map(it => {
-                step++;
-                return `<div class="rm-step" data-tip="Bước ${step}: ${humanize(it.name)}${it.cluster ? ' · cụm ' + it.cluster : ''}">
-                    <span class="rm-step-no mono">${step}</span>
-                    <span class="rm-step-ic">${iconOf(it.name)}</span>
-                    <span class="rm-step-lb">${humanize(it.name)}</span>
-                </div>`;
-            }).join('<span class="rm-arrow">→</span>');
-            return clustered
-                ? `<div class="rm-cluster" title="Cụm ${g.items[0].cluster}">${chips}</div>`
-                : chips;
-        }).join('<span class="rm-arrow">→</span>');
-
-        host.innerHTML = `<div class="rm-onb">${html}</div>`;
-    }
-
     // ── Summary ──────────────────────────────────────────────────────────────────
 
     function renderSummary() {
@@ -149,10 +114,9 @@ const Roadmap = (() => {
         levels.forEach(l => { byLevel[l] = (byLevel[l] || 0) + 1; });
         const waveLevel = Object.entries(byLevel).sort((a, b) => b[1] - a[1])[0] || [0, 0];
 
-        setText('rm-stat-features', feats.length);
+        setText('rm-stat-features', feats.length + 1);   // + Opening Pack (thêm thủ công)
         setText('rm-stat-range', `0–${Math.max(...levels)}`);
         setText('rm-stat-wave', `Lv${waveLevel[0]} (${waveLevel[1]})`);
-        setText('rm-stat-onb', (_gd.featureSequence || []).filter(r => r.feature).length);
     }
 
     // ── Tooltip (dùng chung, đơn giản) ──────────────────────────────────────────
@@ -178,7 +142,6 @@ const Roadmap = (() => {
         _gd = window.GameData;
         renderSummary();
         renderTimeline();
-        renderOnboarding();
         bindTips(document.getElementById('roadmap'));
     }
 

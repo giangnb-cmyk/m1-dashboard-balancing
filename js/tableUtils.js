@@ -177,8 +177,10 @@ const TableUtils = (() => {
     function initMainSubTabs() {
         document.querySelectorAll('.main-sub-tab').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.main-sub-tab').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.main-subtab-content').forEach(p => p.classList.remove('active'));
+                // Scope theo tab-view chứa nút → nhiều tab cùng dùng .main-sub-tab không đè state của nhau.
+                const scope = btn.closest('.tab-view') || document;
+                scope.querySelectorAll('.main-sub-tab').forEach(b => b.classList.remove('active'));
+                scope.querySelectorAll('.main-subtab-content').forEach(p => p.classList.remove('active'));
                 btn.classList.add('active');
                 const panel = document.getElementById(btn.getAttribute('data-panel'));
                 if (panel) panel.classList.add('active');

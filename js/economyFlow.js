@@ -9,7 +9,7 @@ const EconomyFlow = (() => {
     const { $, setText, fillSelect } = TableUtils;
     const { SOURCES, POOLS, SINKS } = EconomyModel;
 
-    const W = 980, NW = 196, NWP = 150, GAP = 14, PAD = 12, MINH = 26;
+    const W = 1000, NW = 200, NWP = 168;
     const xSrcR = NW, xPoolL = (W - NWP) / 2, xPoolR = (W - NWP) / 2 + NWP, xSinkL = W - NW;
 
     let _gd = null, _energyMap = null;
@@ -21,16 +21,7 @@ const EconomyFlow = (() => {
 
     // ── Layout ──────────────────────────────────────────────────────────────────
 
-    /** Gán {y,h} cho node mỗi cột, trả về scale + tổng chiều cao cần. */
-    function layoutColumn(nodes, scale) {
-        let y = PAD;
-        nodes.forEach(n => {
-            n.h = Math.max(n.value * scale, MINH);
-            n.y = y;
-            y += n.h + GAP;
-        });
-        return y - GAP + PAD;
-    }
+    const NH = 46, ROWGAP = 16, PADV = 16, SEG_GAP = 2, RIB_FILL = 0.58;
 
     function buildNodes(model) {
         const poolMax = {};
@@ -43,9 +34,23 @@ const EconomyFlow = (() => {
         });
 
         const mk = (id, reg, value, kind) => ({ id, kind, value, label: reg[id].label, icon: reg[id].icon, color: reg[id].color });
-        const srcNodes  = Object.keys(SOURCES).filter(id => srcVal[id] > 0).map(id => mk(id, SOURCES, srcVal[id], 'src'));
         const poolNodes = Object.keys(POOLS).filter(id => poolMax[id] > 0).map(id => mk(id, POOLS, poolMax[id], 'pool'));
-        const sinkNodes = Object.keys(SINKS).filter(id => sinkVal[id] > 0).map(id => mk(id, SINKS, sinkVal[id], 'sink'));
+        const poolIdx = {};
+        poolNodes.forEach((n, i) => { poolIdx[n.id] = i; });
+
+        // sắp xếp source/sink theo barycenter cột pool → giảm dây chéo
+        const bary = (id, sideOf) => {
+            let w = 0, s = 0;
+            model.links.forEach(l => {
+                const other = sideOf === 'src' ? (l.from === id ? l.to : null) : (l.to === id ? l.from : null);
+                if (other != null && poolIdx[other] != null) { w += l.value; s += l.value * poolIdx[other]; }
+            });
+            return w ? s / w : 0;
+        };
+        const srcNodes = Object.keys(SOURCES).filter(id => srcVal[id] > 0)
+            .map(id => mk(id, SOURCES, srcVal[id], 'src')).sort((a, b) => bary(a.id, 'src') - bary(b.id, 'src'));
+        const sinkNodes = Object.keys(SINKS).filter(id => sinkVal[id] > 0)
+            .map(id => mk(id, SINKS, sinkVal[id], 'sink')).sort((a, b) => bary(a.id, 'sink') - bary(b.id, 'sink'));
         return { srcNodes, poolNodes, sinkNodes };
     }
 
@@ -58,9 +63,9 @@ const EconomyFlow = (() => {
     }
 
     function nodeHtml(n, x, w) {
-        const cls = n.kind === 'pool' ? 'eco-node eco-node-pool' : `eco-node eco-node-${n.kind}`;
-        const bar = n.color ? `border-left:3px solid ${n.color}` : '';
-        return `<div class="${cls}" data-id="${n.id}" style="left:${x}px;top:${n.y}px;width:${w}px;height:${n.h}px;${bar}">
+        const accent = n.color || (n.kind === 'src' ? '#34d399' : '#f87171');
+        return `<div class="eco-node eco-node-${n.kind}" data-id="${n.id}"
+                style="left:${x}px;top:${n.y}px;width:${w}px;height:${n.h}px;--accent:${accent}">
             <span class="eco-node-ic">${n.icon}</span>
             <span class="eco-node-lb">${n.label}</span>
             <span class="eco-node-val mono">${fmt(n.value)}</span>
@@ -88,9 +93,9 @@ const EconomyFlow = (() => {
         const ins = model.links.filter(l => l.to === id);
         const outs = model.links.filter(l => l.from === id);
         const row = (lbl, val, cur, sign, cls) =>
-            `<div class="eco-tt-row"><span>${sign} ${lbl}</span>`
+            `<div class="eco-tt-row"><span>${sign} <span>${lbl}</span></span>`
             + `<span class="mono">${fmt(val)} <b style="color:${curColor(cur)}">${cur}</b></span></div>`;
-        let h = `<div class="eco-tt-head">${r.icon} ${r.label}</div>`;
+        let h = `<div class="eco-tt-head">${r.icon} <span>${r.label}</span></div>`;
         if (r.desc) h += `<div class="eco-tt-desc">${r.desc}</div>`;
         if (ins.length) h += `<div class="eco-tt-sec">Vào</div>` + ins.map(l => row(reg(l.from).label, l.value, l.currency, '▲', 'pos')).join('');
         if (outs.length) h += `<div class="eco-tt-sec">Ra</div>` + outs.map(l => row(reg(l.to).label, l.value, l.currency, '▼', 'neg')).join('');
@@ -107,6 +112,19 @@ const EconomyFlow = (() => {
         _tip.style.top = Math.max(8, y) + 'px';
     }
 
+    function highlight(host, id) {
+        host.querySelectorAll('.eco-rib').forEach(p => {
+            const on = p.dataset.a === id || p.dataset.b === id;
+            p.classList.toggle('eco-rib-hl', on);
+            p.classList.toggle('eco-rib-dim', !on);
+        });
+        host.querySelectorAll('.eco-node').forEach(n => n.classList.toggle('eco-node-dim', n.dataset.id !== id));
+    }
+    function clearHighlight(host) {
+        host.querySelectorAll('.eco-rib').forEach(p => p.classList.remove('eco-rib-hl', 'eco-rib-dim'));
+        host.querySelectorAll('.eco-node').forEach(n => n.classList.remove('eco-node-dim'));
+    }
+
     function bindTooltips(host, model) {
         host.querySelectorAll('.eco-node').forEach(el => {
             el.addEventListener('mouseenter', e => {
@@ -114,9 +132,10 @@ const EconomyFlow = (() => {
                 t.innerHTML = tipHtml(el.dataset.id, model);
                 t.style.display = 'block';
                 moveTip(e);
+                highlight(host, el.dataset.id);
             });
             el.addEventListener('mousemove', moveTip);
-            el.addEventListener('mouseleave', () => { if (_tip) _tip.style.display = 'none'; });
+            el.addEventListener('mouseleave', () => { if (_tip) _tip.style.display = 'none'; clearHighlight(host); });
         });
     }
 
@@ -132,33 +151,45 @@ const EconomyFlow = (() => {
             return;
         }
 
-        // scale: cột nào cũng vừa chiều cao khả dụng
-        const H_BASE = 480, avail = H_BASE - PAD * 2;
-        const colTotal = ns => ns.reduce((s, n) => s + n.value, 0) || 1;
+        // Node đều nhau: cùng chiều cao NH, mỗi cột canh giữa theo chiều dọc.
         const cols = [srcNodes, poolNodes, sinkNodes];
-        const scale = Math.min(...cols.map(ns => (avail - (ns.length - 1) * GAP) / colTotal(ns)));
+        const colH = ns => ns.length * NH + (ns.length - 1) * ROWGAP;
+        const H = Math.max(...cols.map(colH), 120) + PADV * 2;
+        cols.forEach(ns => {
+            let y = PADV + (H - PADV * 2 - colH(ns)) / 2;
+            ns.forEach(n => { n.h = NH; n.y = y; y += NH + ROWGAP; });
+        });
 
-        const h1 = layoutColumn(srcNodes, scale);
-        const h2 = layoutColumn(poolNodes, scale);
-        const h3 = layoutColumn(sinkNodes, scale);
-        const H = Math.max(h1, h2, h3, 160);
-
+        // Mỗi mép node được "đóng gói" đầy: segment ∝ tỉ trọng link → dây thon (taper) gọn.
         const byId = {};
-        [...srcNodes, ...poolNodes, ...sinkNodes].forEach(n => { byId[n.id] = n; n.outY = n.y; n.inY = n.y; });
+        [...srcNodes, ...poolNodes, ...sinkNodes].forEach(n => { byId[n.id] = n; n.outT = 0; n.inT = 0; n.outN = 0; n.inN = 0; });
+        model.links.forEach(l => {
+            if (byId[l.from]) { byId[l.from].outT += l.value; byId[l.from].outN++; }
+            if (byId[l.to])   { byId[l.to].inT   += l.value; byId[l.to].inN++; }
+        });
+        // Dây chỉ chiếm RIB_FILL chiều cao mép node (căn giữa) → mảnh, thanh hơn.
+        [...srcNodes, ...poolNodes, ...sinkNodes].forEach(n => {
+            const off = n.h * (1 - RIB_FILL) / 2;
+            n.outC = off; n.inC = off;
+        });
 
-        // ribbons: source→pool rồi pool→sink (cùng scale với node height)
         const paths = [];
         const draw = (l, x0, x1) => {
             const a = byId[l.from], b = byId[l.to];
             if (!a || !b) return;
-            const hh = l.value * scale;
-            const y0t = a.outY, y0b = a.outY + hh; a.outY += hh;
-            const y1t = b.inY,  y1b = b.inY + hh;  b.inY += hh;
+            const aU = a.h * RIB_FILL - Math.max(0, a.outN - 1) * SEG_GAP;
+            const bU = b.h * RIB_FILL - Math.max(0, b.inN - 1) * SEG_GAP;
+            const sh = a.outT ? l.value / a.outT * aU : aU;
+            const th = b.inT ? l.value / b.inT * bU : bU;
+            const y0t = a.y + a.outC, y0b = y0t + sh; a.outC += sh + SEG_GAP;
+            const y1t = b.y + b.inC, y1b = y1t + th; b.inC += th + SEG_GAP;
             const col = (POOLS[l.currency] && POOLS[l.currency].color) || '#94a3b8';
-            paths.push(`<path d="${ribbon(x0, y0t, y0b, x1, y1t, y1b)}" fill="${col}" fill-opacity="0.34"><title>${l.from} → ${l.to}: ${fmt(l.value)} ${l.currency}</title></path>`);
+            const lbl = `${(SOURCES[l.from] || POOLS[l.from] || {}).label || l.from} → ${(SINKS[l.to] || POOLS[l.to] || {}).label || l.to}: ${fmt(l.value)} ${l.currency}`;
+            paths.push(`<path class="eco-rib" data-a="${l.from}" data-b="${l.to}" d="${ribbon(x0, y0t, y0b, x1, y1t, y1b)}" fill="${col}"><title>${lbl}</title></path>`);
         };
-        model.links.filter(l => SOURCES[l.from]).forEach(l => draw(l, xSrcR, xPoolL));
-        model.links.filter(l => SINKS[l.to]).forEach(l => draw(l, xPoolR, xSinkL));
+        const byPos = (a, b) => (byId[a.from].y - byId[b.from].y) || (byId[a.to].y - byId[b.to].y);
+        model.links.filter(l => SOURCES[l.from]).sort(byPos).forEach(l => draw(l, xSrcR, xPoolL));
+        model.links.filter(l => SINKS[l.to]).sort(byPos).forEach(l => draw(l, xPoolR, xSinkL));
 
         host.style.height = H + 'px';
         host.innerHTML = `
@@ -189,6 +220,66 @@ const EconomyFlow = (() => {
         }).join('') || `<div class="eco-empty">—</div>`;
     }
 
+    // ── Sub-tab: liệt kê Source & Sink theo currency (tên feature/gói bán chính xác) ──
+
+    function ssRowHtml(it) {
+        const isSrc = it.role === 'source';
+        const dcol = isSrc ? 'var(--success)' : 'var(--danger)';
+        return `<tr>
+            <td style="width:1%;text-align:center;color:${dcol}">${isSrc ? '▲' : '▼'}</td>
+            <td><span class="eco-li-ic">${it.icon}</span> <span>${it.label}</span></td>
+            <td class="mono" style="text-align:right;color:${dcol};font-weight:700">${fmt(it.value)}</td>
+        </tr>`;
+    }
+
+    function currencyCardHtml(cur, list) {
+        const p = POOLS[cur] || {}, c = p.color || '#94a3b8';
+        const srcs = list.filter(i => i.role === 'source').sort((a, b) => b.value - a.value);
+        const sinks = list.filter(i => i.role === 'sink').sort((a, b) => b.value - a.value);
+        const net = srcs.reduce((s, i) => s + i.value, 0) - sinks.reduce((s, i) => s + i.value, 0);
+        const netCol = net >= 0 ? 'var(--success)' : 'var(--danger)';
+        return `<div class="data-table-card glass" style="margin-bottom:0;border-top:3px solid ${c}">
+            <div class="table-header">
+                <h3>${p.icon || ''} ${p.label || cur}</h3>
+                <span class="result-count mono" style="color:${netCol}">Net: ${net >= 0 ? '+' : ''}${fmt(net)}</span>
+            </div>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead><tr><th></th><th>Tên</th><th style="text-align:right">Giá trị</th></tr></thead>
+                    <tbody>${[...srcs, ...sinks].map(ssRowHtml).join('')}</tbody>
+                </table>
+            </div>
+        </div>`;
+    }
+
+    let _selCur = '';   // currency đang chọn ở tab liệt kê
+
+    function renderSourcesSinks(model) {
+        const tabs = $('eco-cur-tabs'), host = $('eco-breakdown');
+        if (!tabs || !host) return;
+        const items = EconomyModel.breakdown(model, _gd, currentScope());
+        const byCur = {};
+        items.forEach(it => { (byCur[it.currency] = byCur[it.currency] || []).push(it); });
+        const curs = Object.keys(POOLS).filter(cur => byCur[cur] && byCur[cur].length);
+
+        if (!curs.length) {
+            tabs.innerHTML = '';
+            host.innerHTML = `<div class="eco-empty">Không có dòng tiền nào trong phạm vi này.</div>`;
+            return;
+        }
+        if (!curs.includes(_selCur)) _selCur = curs[0];
+
+        tabs.innerHTML = curs.map(cur => {
+            const p = POOLS[cur];
+            return `<button class="encyc-sub-tab${cur === _selCur ? ' active' : ''}" data-cur="${cur}">${p.icon} ${p.label}</button>`;
+        }).join('');
+        tabs.querySelectorAll('[data-cur]').forEach(btn => btn.addEventListener('click', () => {
+            _selCur = btn.dataset.cur;
+            renderSourcesSinks(model);
+        }));
+        host.innerHTML = currencyCardHtml(_selCur, byCur[_selCur]);
+    }
+
     function renderSummary(model) {
         const m = model.meta;
         const scope = m.batch ? `Batch #${m.batch}` : (m.scene || 'Toàn game');
@@ -202,14 +293,49 @@ const EconomyFlow = (() => {
     // ── Filters ──────────────────────────────────────────────────────────────────
 
     function currentScope() {
-        return { scene: $('eco-filter-scene')?.value || '', batch: $('eco-filter-batch')?.value || '' };
+        return {
+            scene: $('eco-filter-scene')?.value || '',
+            batch: $('eco-filter-batch')?.value || '',
+        };
+    }
+
+    function renderIOChart(model) {
+        const ctx = document.getElementById('eco-io-chart');
+        if (!ctx || typeof Chart === 'undefined') return;
+        if (window._ecoIOChart) window._ecoIOChart.destroy();
+        const bal = model.balances;
+        const T = k => (typeof I18N !== 'undefined' ? I18N.t(k) : null);
+        window._ecoIOChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: bal.map(b => (POOLS[b.currency] || {}).label || b.currency),
+                datasets: [
+                    { label: T('eco.in') || 'Vào', data: bal.map(b => Math.round(b.in)), backgroundColor: '#22c55e', borderRadius: 4, borderSkipped: false },
+                    { label: T('eco.out') || 'Ra', data: bal.map(b => Math.round(b.out)), backgroundColor: '#f87171', borderRadius: 4, borderSkipped: false },
+                ],
+            },
+            options: {
+                responsive: true,
+                interaction: { mode: 'index', intersect: false },
+                plugins: {
+                    legend: { labels: { color: '#cbd5e1', usePointStyle: true, pointStyle: 'rectRounded', padding: 16 } },
+                    tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${c.parsed.y.toLocaleString()}` } },
+                },
+                scales: {
+                    x: { ticks: { color: '#cbd5e1', font: { size: 11 } }, grid: { display: false } },
+                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                },
+            },
+        });
     }
 
     function render() {
         const model = EconomyModel.compute(_gd, _energyMap, currentScope());
+        renderSourcesSinks(model);
         renderSummary(model);
         renderSankey(model);
         renderBalance(model);
+        renderIOChart(model);
     }
 
     function updateBatchDropdown() {

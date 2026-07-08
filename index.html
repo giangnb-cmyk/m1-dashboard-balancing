@@ -23,43 +23,51 @@
         <div class="sidebar-header">
             <span class="logo-emoji">🍳</span>
             <div>
-                <h2>Merge Cooking</h2>
-                <span class="version-tag">Balance Dashboard</span>
+                <h2 data-i18n="app.brand">Merge Cooking</h2>
+                <span class="version-tag" data-i18n="app.subtitle">Balance Dashboard</span>
             </div>
         </div>
         <nav class="side-nav">
             <button class="nav-item active" data-tab="game-data">
                 <span class="nav-icon">🗃️</span>
-                <span class="nav-text">Game Data</span>
+                <span class="nav-text" data-i18n="nav.gameData">Game Data</span>
+            </button>
+            <button class="nav-item" data-tab="business-model">
+                <span class="nav-icon">💵</span>
+                <span class="nav-text" data-i18n="nav.businessModel">Business Model</span>
             </button>
             <button class="nav-item" data-tab="order-analysis">
                 <span class="nav-icon">📊</span>
-                <span class="nav-text">Order Analysis</span>
+                <span class="nav-text" data-i18n="nav.orderAnalysis">Order Analysis</span>
             </button>
             <button class="nav-item" data-tab="player-sim">
                 <span class="nav-icon">🎮</span>
-                <span class="nav-text">Player Sim</span>
+                <span class="nav-text" data-i18n="nav.playerSim">Player Sim</span>
             </button>
             <button class="nav-item" data-tab="nguon-luc">
                 <span class="nav-icon">⚡</span>
-                <span class="nav-text">Nguồn Lực</span>
+                <span class="nav-text" data-i18n="nav.resources">Nguồn Lực</span>
             </button>
             <button class="nav-item" data-tab="economy">
                 <span class="nav-icon">💰</span>
-                <span class="nav-text">Economy</span>
+                <span class="nav-text" data-i18n="nav.economy">Economy</span>
             </button>
             <button class="nav-item" data-tab="roadmap">
                 <span class="nav-icon">🗺️</span>
-                <span class="nav-text">Lộ Trình</span>
+                <span class="nav-text" data-i18n="nav.roadmap">Lộ Trình</span>
             </button>
         </nav>
+        <div class="lang-switch">
+            <button class="lang-btn" data-lang="vi">VI</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
     </aside>
 
     <!-- Main Content -->
     <main class="content-area">
         <div class="top-bar">
             <div class="scene-selector">
-                <label>Merge Cooking — Balance Dashboard</label>
+                <label data-i18n="app.title">Merge Cooking — Balance Dashboard</label>
             </div>
             <div class="balance-indicator">
                 <span id="data-status" style="font-size:0.8rem;color:var(--text-muted);">Đang tải...</span>
@@ -74,8 +82,8 @@
         <!-- ===================== TAB: GAME DATA HUB ===================== -->
         <section id="game-data" class="tab-view active">
             <div class="view-header">
-                <h1>🗃️ Game Data Hub</h1>
-                <p>Toàn bộ data game: Items, Energy, Orders và IAP Packages — dùng làm nguồn cho các tính năng phân tích.</p>
+                <h1 data-i18n="hdr.gameData">🗃️ Game Data Hub</h1>
+                <p data-i18n="sub.gameData">Toàn bộ data game: Items, Energy, Orders và IAP Packages — dùng làm nguồn cho các tính năng phân tích.</p>
             </div>
 
             <!-- 4 Main sub-tabs -->
@@ -111,7 +119,7 @@
                         <span class="stat-icon">📖</span>
                         <div class="stat-info">
                             <span class="stat-value mono" id="stat-recipe">0</span>
-                            <span class="stat-label">Food Items</span>
+                            <span class="stat-label">Recipe Items</span>
                         </div>
                     </div>
                     <div class="stat-card glass">
@@ -324,7 +332,7 @@
                             <label>Nhóm:</label>
                             <select id="other-filter-src" class="filter-select">
                                 <option value="">Tất cả</option>
-                                <option value="Food">Food</option>
+                                <option value="Recipe">Recipe</option>
                                 <option value="Booster">Booster</option>
                                 <option value="Chest">Chest</option>
                                 <option value="Currency">Currency</option>
@@ -698,8 +706,8 @@
         <!-- ===================== TAB: ORDER ANALYSIS ===================== -->
         <section id="order-analysis" class="tab-view">
             <div class="view-header">
-                <h1>📊 Order Analysis</h1>
-                <p>Visualize orders theo scene, energy cost và độ khó.</p>
+                <h1 data-i18n="hdr.orderAnalysis">📊 Order Analysis</h1>
+                <p data-i18n="sub.orderAnalysis">Visualize orders theo scene, energy cost và độ khó.</p>
             </div>
 
             <!-- Stats row -->
@@ -824,8 +832,8 @@
         <!-- ===================== TAB: PLAYER SIMULATION ===================== -->
         <section id="player-sim" class="tab-view">
             <div class="view-header">
-                <h1>🎮 Player Simulation</h1>
-                <p>Giả lập hành trình user — cấu hình profile, session, IAP và xem timeline tiến trình theo từng ngày.</p>
+                <h1 data-i18n="hdr.playerSim">🎮 Player Simulation</h1>
+                <p data-i18n="sub.playerSim">Giả lập hành trình user — cấu hình profile, session, IAP và xem timeline tiến trình theo từng ngày.</p>
             </div>
 
             <!-- ── Playback Toolbar (always visible above tabs) ── -->
@@ -934,8 +942,8 @@
         <!-- ===================== TAB: NGUỒN LỰC ===================== -->
         <section id="nguon-luc" class="tab-view">
             <div class="view-header">
-                <h2>⚡ Nguồn Lực — Generator &amp; Tool Analysis</h2>
-                <p class="view-subtitle">Traceback từ Order → Recipe → Nguyên liệu cần drop per Batch</p>
+                <h2 data-i18n="hdr.resources">⚡ Nguồn Lực — Generator &amp; Tool Analysis</h2>
+                <p class="view-subtitle" data-i18n="sub.resources">Traceback từ Order → Recipe → Nguyên liệu cần drop per Batch</p>
             </div>
 
             <!-- Search + legend -->
@@ -992,11 +1000,17 @@
         <!-- ══════════════ ECONOMY ══════════════ -->
         <section id="economy" class="tab-view">
             <div class="view-header">
-                <h1>💰 Economy — Source / Sink Flow</h1>
-                <p>Sơ đồ dòng tiền Sources → Currency Pools → Sinks. Xem theo toàn game, từng scene hoặc từng batch.</p>
+                <h1 data-i18n="hdr.economy">💰 Economy — Source / Sink Flow</h1>
+                <p data-i18n="sub.economy">Sơ đồ dòng tiền Sources → Currency Pools → Sinks. Xem theo toàn game, từng scene hoặc từng batch.</p>
             </div>
 
-            <!-- Filter bar -->
+            <!-- Sub-tabs -->
+            <div class="main-sub-tabs">
+                <button class="main-sub-tab active" data-panel="eco-panel-list">📋 Nguồn &amp; Sink</button>
+                <button class="main-sub-tab" data-panel="eco-panel-flow">🔀 Sơ đồ dòng tiền</button>
+            </div>
+
+            <!-- Filter bar (dùng chung cho cả 2 sub-tab) -->
             <div class="glass filter-bar" style="margin-bottom:1.25rem">
                 <div class="filter-group">
                     <label>Scene:</label>
@@ -1016,47 +1030,62 @@
                 </span>
             </div>
 
-            <!-- Summary stats -->
-            <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:1.25rem">
-                <div class="stat-card glass highlight-gold">
-                    <span class="stat-icon">🪙</span>
-                    <div class="stat-info"><span class="stat-value mono" id="eco-sum-gold">0</span><span class="stat-label">Gold vào (orders)</span></div>
-                </div>
-                <div class="stat-card glass highlight-energy">
-                    <span class="stat-icon">⚡</span>
-                    <div class="stat-info"><span class="stat-value mono" id="eco-sum-energy">0</span><span class="stat-label">Energy cần (fulfil)</span></div>
-                </div>
-                <div class="stat-card glass">
-                    <span class="stat-icon">🏗️</span>
-                    <div class="stat-info"><span class="stat-value mono" id="eco-sum-build">0</span><span class="stat-label">Gold chi (Build-Up)</span></div>
-                </div>
+            <!-- Sub-tab 1: liệt kê Source & Sink — mỗi currency 1 tab nhỏ -->
+            <div id="eco-panel-list" class="main-subtab-content active">
+                <div class="encyc-sub-tabs" id="eco-cur-tabs"></div>
+                <div id="eco-breakdown"></div>
             </div>
 
-            <!-- Sankey -->
-            <div class="data-table-card glass" style="margin-bottom:1.5rem;padding:1.25rem">
-                <div class="eco-sankey-head">
-                    <span class="eco-col-tag" style="color:#34d399">▼ Sources</span>
-                    <span class="eco-col-tag" style="color:var(--primary)">◆ Currency Pools</span>
-                    <span class="eco-col-tag" style="color:#f87171">▲ Sinks</span>
+            <!-- Sub-tab 2: sơ đồ dòng tiền (nội dung cũ) -->
+            <div id="eco-panel-flow" class="main-subtab-content">
+                <!-- Summary stats -->
+                <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:1.25rem">
+                    <div class="stat-card glass highlight-gold">
+                        <span class="stat-icon">🪙</span>
+                        <div class="stat-info"><span class="stat-value mono" id="eco-sum-gold">0</span><span class="stat-label">Gold vào (orders)</span></div>
+                    </div>
+                    <div class="stat-card glass highlight-energy">
+                        <span class="stat-icon">⚡</span>
+                        <div class="stat-info"><span class="stat-value mono" id="eco-sum-energy">0</span><span class="stat-label">Energy cần (fulfil)</span></div>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-icon">🏗️</span>
+                        <div class="stat-info"><span class="stat-value mono" id="eco-sum-build">0</span><span class="stat-label">Gold chi (Build-Up)</span></div>
+                    </div>
                 </div>
-                <div class="eco-sankey-scroll">
-                    <div id="eco-sankey"></div>
+
+                <!-- Sankey -->
+                <div class="data-table-card glass" style="margin-bottom:1.5rem;padding:1.25rem">
+                    <div class="eco-sankey-head">
+                        <span class="eco-col-tag" style="color:#34d399">▼ Sources</span>
+                        <span class="eco-col-tag" style="color:var(--primary)">◆ Currency Pools</span>
+                        <span class="eco-col-tag" style="color:#f87171">▲ Sinks</span>
+                    </div>
+                    <div class="eco-sankey-scroll">
+                        <div id="eco-sankey"></div>
+                    </div>
+                </div>
+
+                <!-- Net balance per currency -->
+                <div style="font-size:.72rem;font-weight:600;color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase;margin:0 0 .6rem .2rem">Net balance mỗi currency (vào − ra)</div>
+                <div id="eco-balance" class="eco-balance-row"></div>
+
+                <!-- In / Out chart -->
+                <div class="data-table-card glass" style="margin-top:1.25rem;padding:1.25rem">
+                    <div class="table-header" style="margin-bottom:.6rem"><h3>📊 Vào / Ra mỗi currency</h3></div>
+                    <canvas id="eco-io-chart" style="max-height:300px"></canvas>
                 </div>
             </div>
-
-            <!-- Net balance per currency -->
-            <div style="font-size:.72rem;font-weight:600;color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase;margin:0 0 .6rem .2rem">Net balance mỗi currency (vào − ra)</div>
-            <div id="eco-balance" class="eco-balance-row"></div>
         </section><!-- /economy -->
 
         <!-- ══════════════ ROADMAP ══════════════ -->
         <section id="roadmap" class="tab-view">
             <div class="view-header">
-                <h1>🗺️ Lộ Trình — Content Release &amp; Onboarding</h1>
-                <p>Feature unlock theo account level và trình tự onboarding phiên đầu của người chơi.</p>
+                <h1 data-i18n="hdr.roadmap">🗺️ Lộ Trình — Content Release &amp; Onboarding</h1>
+                <p data-i18n="sub.roadmap">Feature unlock theo account level và trình tự onboarding phiên đầu của người chơi.</p>
             </div>
 
-            <div class="stats-row" style="grid-template-columns:repeat(4,1fr);margin-bottom:1.5rem">
+            <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:1.5rem">
                 <div class="stat-card glass">
                     <span class="stat-icon">🔓</span>
                     <div class="stat-info"><span class="stat-value mono" id="rm-stat-features">0</span><span class="stat-label">Feature unlock</span></div>
@@ -1069,28 +1098,78 @@
                     <span class="stat-icon">🌊</span>
                     <div class="stat-info"><span class="stat-value mono" id="rm-stat-wave">—</span><span class="stat-label">Wave lớn nhất</span></div>
                 </div>
-                <div class="stat-card glass">
-                    <span class="stat-icon">👣</span>
-                    <div class="stat-info"><span class="stat-value mono" id="rm-stat-onb">0</span><span class="stat-label">Bước onboarding</span></div>
-                </div>
             </div>
 
             <!-- Feature unlock timeline -->
-            <div class="data-table-card glass" style="margin-bottom:1.5rem;padding:1.25rem">
+            <div class="data-table-card glass" style="padding:1.25rem">
                 <div class="table-header" style="margin-bottom:.5rem">
                     <h3>🔓 Feature Unlock theo Account Level</h3>
                 </div>
                 <div class="rm-scroll"><div id="rm-timeline"></div></div>
             </div>
-
-            <!-- Onboarding sequence -->
-            <div class="data-table-card glass" style="padding:1.25rem">
-                <div class="table-header" style="margin-bottom:.75rem">
-                    <h3>👣 Onboarding Sequence — thứ tự lộ diện phiên đầu</h3>
-                </div>
-                <div class="rm-scroll"><div id="rm-onboarding"></div></div>
-            </div>
         </section><!-- /roadmap -->
+
+        <!-- ══════════════ BUSINESS MODEL ══════════════ -->
+        <section id="business-model" class="tab-view">
+            <div class="view-header">
+                <h1 data-i18n="hdr.businessModel">💵 Business Model — Tasty Merge</h1>
+                <p data-i18n="sub.businessModel">Mô hình kinh doanh &amp; điểm đặt ads, benchmark với Flambé. Gói IAP lấy trực tiếp từ game data.</p>
+            </div>
+
+            <!-- A. Overview -->
+            <div class="stats-row" style="grid-template-columns:repeat(4,1fr);margin-bottom:1.25rem">
+                <div class="stat-card glass highlight-gold"><span class="stat-icon">💳</span><div class="stat-info"><span class="stat-value mono">~70%</span><span class="stat-label">IAP (payer)</span></div></div>
+                <div class="stat-card glass highlight-energy"><span class="stat-icon">📹</span><div class="stat-info"><span class="stat-value mono">~30%</span><span class="stat-label">IAA (rewarded)</span></div></div>
+                <div class="stat-card glass"><span class="stat-icon">🚫</span><div class="stat-info"><span class="stat-value mono" style="font-size:1.05rem">Rewarded only</span><span class="stat-label">Ad type — no interstitial</span></div></div>
+                <div class="stat-card glass"><span class="stat-icon">⚡</span><div class="stat-info"><span class="stat-value mono" style="font-size:1.05rem">1/2min · 100</span><span class="stat-label">Energy · ~3h20m full</span></div></div>
+            </div>
+
+            <div class="bm-grid2">
+                <!-- Monetize loop triangle -->
+                <div class="data-table-card glass" style="padding:1.25rem">
+                    <div class="table-header" style="margin-bottom:.5rem"><h3>🔺 Monetize Loop — Demand Chain</h3></div>
+                    <div id="bm-triangle" class="bm-triangle"></div>
+                    <p class="bm-note">Tại mỗi thời điểm, một trong ba yếu tố bị đẩy lệch (energy cạn / board tắc / cooldown dồn) → tạo demand cho yếu tố kế → chuỗi demand liên tục.</p>
+                </div>
+                <!-- Revenue axis -->
+                <div class="data-table-card glass" style="padding:1.25rem">
+                    <div class="table-header" style="margin-bottom:.5rem"><h3>📊 Revenue Axis</h3></div>
+                    <div class="table-container"><table class="data-table bm-table">
+                        <thead><tr><th>Trục doanh thu</th><th>Trạng thái</th><th>Vai trò</th></tr></thead>
+                        <tbody id="bm-revenue-axis"></tbody>
+                    </table></div>
+                </div>
+            </div>
+
+            <!-- B. Ad placements -->
+            <div class="data-table-card glass" style="margin-top:1.5rem;padding:1.25rem">
+                <div class="table-header" style="margin-bottom:.6rem">
+                    <h3>📹 Ad Placements — 11 điểm rewarded video</h3>
+                    <span class="bm-note" style="margin:0">Tất cả là rewarded video — người chơi tự chọn xem để nhận thưởng. Không ép ads.</span>
+                </div>
+                <div class="table-container"><table class="data-table bm-table">
+                    <thead><tr><th>#</th><th>Feature / Screen</th><th>Người chơi nhận</th><th>Tần suất</th><th>Nhóm</th></tr></thead>
+                    <tbody id="bm-ad-body"></tbody>
+                </table></div>
+            </div>
+
+            <!-- C. Shop packages (from game data) -->
+            <div class="data-table-card glass" style="margin-top:1.5rem;padding:1.25rem">
+                <div class="table-header" style="margin-bottom:.6rem">
+                    <h3>🛒 Shop Packages <span class="bm-src-tag">từ game data (iap*)</span></h3>
+                </div>
+                <div id="bm-packages"></div>
+            </div>
+
+            <!-- Flambé comparison -->
+            <div class="data-table-card glass" style="margin-top:1.5rem;padding:1.25rem">
+                <div class="table-header" style="margin-bottom:.6rem"><h3>⚖️ So sánh với Flambé (reference)</h3></div>
+                <div class="table-container"><table class="data-table bm-table">
+                    <thead><tr><th>Axis</th><th>Tasty Merge</th><th>Flambé</th><th>Đánh giá</th></tr></thead>
+                    <tbody id="bm-compare-body"></tbody>
+                </table></div>
+            </div>
+        </section><!-- /business-model -->
 
         </div>
     </main>
@@ -1124,6 +1203,7 @@
     <!-- JSZip (for CSV import from .zip) -->
     <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 
+    <script src="js/i18n.js"></script>
     <script src="js/data/data-init.js"></script>
     <script src="js/data/data-items.js"></script>
     <script src="js/data/data-generators.js"></script>
@@ -1146,6 +1226,7 @@
     <script src="js/economyModel.js"></script>
     <script src="js/economyFlow.js"></script>
     <script src="js/roadmap.js"></script>
+    <script src="js/businessModel.js"></script>
     <script src="js/iapPackages.js"></script>
     <script src="js/sim/simDataLoader.js"></script>
     <script src="js/sim/simEnergy.js"></script>

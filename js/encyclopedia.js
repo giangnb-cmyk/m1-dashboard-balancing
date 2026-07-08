@@ -8,7 +8,7 @@ const Encyclopedia = (() => {
     'Generator': 'tag-green',
     'Tool':      'tag-gold',
     'Currency':  'tag-gold',
-    'Food':      'tag-green',
+    'Recipe':    'tag-green',
     'Booster':   'tag-gem',
     'Raw':       'tag-blue',
   };

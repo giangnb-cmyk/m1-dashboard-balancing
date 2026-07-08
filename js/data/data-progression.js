@@ -253,5 +253,63 @@ Object.assign(window.GameData, {
     {
       "level":"30"
     }
+  ],
+  "dailyReward":[
+    {
+      "order":"1",
+      "res_type":"Money",
+      "res_id":"2",
+      "res_number":"5",
+      "custom_value":""
+    },
+    {
+      "order":"2",
+      "res_type":"Money",
+      "res_id":"3",
+      "res_number":"20",
+      "custom_value":""
+    },
+    {
+      "order":"3",
+      "res_type":"Money",
+      "res_id":"6",
+      "res_number":"50",
+      "custom_value":""
+    },
+    {
+      "order":"4",
+      "res_type":"Money",
+      "res_id":"1",
+      "res_number":"15",
+      "custom_value":""
+    },
+    {
+      "order":"5",
+      "res_type":"Money",
+      "res_id":"6",
+      "res_number":"50",
+      "custom_value":""
+    },
+    {
+      "order":"6",
+      "res_type":"Money",
+      "res_id":"3",
+      "res_number":"50",
+      "custom_value":""
+    },
+    {
+      "order":"7",
+      "res_type":"Item",
+      "res_id":"600501",
+      "res_number":"1",
+      "custom_value":"600501"
+    },
+    {
+      "order":"",
+      "res_type":"Item",
+      "res_id":"500101",
+      "res_number":"1",
+      "custom_value":"500101"
+    }
   ]
 });
