@@ -503,6 +503,7 @@ def load_boxes():
             'itemLuckyBox':        load_csv('Core/Box&Gift/ItemLuckyBox.csv',         fill_keys),
             'itemLuckyHandbag':    load_csv('Core/Box&Gift/ItemLuckyHandbag.csv',     fill_keys),
             'itemTraineeBox':      load_csv('Core/Box&Gift/ItemTraineeBox.csv',       fill_keys),
+            'itemEnergyChest':     load_csv('Core/Box&Gift/ItemEnergyChest.csv',      ['id', 'many_generator', 'time_unlock']),
         }
     }
 

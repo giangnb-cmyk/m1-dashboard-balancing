@@ -32,10 +32,6 @@
                 <span class="nav-icon">🗃️</span>
                 <span class="nav-text" data-i18n="nav.gameData">Game Data</span>
             </button>
-            <button class="nav-item" data-tab="business-model">
-                <span class="nav-icon">💵</span>
-                <span class="nav-text" data-i18n="nav.businessModel">Business Model</span>
-            </button>
             <button class="nav-item" data-tab="order-analysis">
                 <span class="nav-icon">📊</span>
                 <span class="nav-text" data-i18n="nav.orderAnalysis">Order Analysis</span>
@@ -51,6 +47,14 @@
             <button class="nav-item" data-tab="economy">
                 <span class="nav-icon">💰</span>
                 <span class="nav-text" data-i18n="nav.economy">Economy</span>
+            </button>
+            <button class="nav-item" data-tab="business-model">
+                <span class="nav-icon">💵</span>
+                <span class="nav-text" data-i18n="nav.businessModel">Business Model</span>
+            </button>
+            <button class="nav-item" data-tab="live-ops">
+                <span class="nav-icon">🎡</span>
+                <span class="nav-text" data-i18n="nav.liveOps">Live Ops</span>
             </button>
             <button class="nav-item" data-tab="roadmap">
                 <span class="nav-icon">🗺️</span>
@@ -1024,6 +1028,9 @@
                         <option value="">Cả scene</option>
                     </select>
                 </div>
+                <label class="eco-iap-label" title="Tính nguồn currency từ các gói IAP (chỉ ở phạm vi toàn game)">
+                    <input type="checkbox" id="eco-iap-toggle" checked> Gồm IAP
+                </label>
                 <span style="margin-left:auto;font-size:.78rem;color:var(--text-muted)">
                     Phạm vi: <strong id="eco-sum-scope" style="color:var(--text-main)">Toàn game</strong>
                     &nbsp;·&nbsp; <strong id="eco-sum-orders">0</strong> orders
@@ -1077,6 +1084,56 @@
                 </div>
             </div>
         </section><!-- /economy -->
+
+        <!-- ══════════════ LIVE OPS ══════════════ -->
+        <section id="live-ops" class="tab-view">
+            <div class="view-header">
+                <h1 data-i18n="hdr.liveOps">🎡 Live Ops — Loop Scheduler</h1>
+                <p data-i18n="sub.liveOps">Event chạy loop theo chu kỳ (không gắn ngày cố định) — chu kỳ = thời lượng + cooldown. Nguồn: M1_LiveOps_Loop.xlsx.</p>
+            </div>
+
+            <div class="stats-row" style="margin-bottom:1.25rem">
+                <div class="stat-card glass">
+                    <span class="stat-icon">🎡</span>
+                    <div class="stat-info"><span class="stat-value mono" id="lo-stat-total">0</span><span class="stat-label">Tổng event</span></div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">✅</span>
+                    <div class="stat-info"><span class="stat-value mono" id="lo-stat-active">0</span><span class="stat-label">Đang chạy</span></div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">🧩</span>
+                    <div class="stat-info"><span class="stat-value mono" id="lo-stat-types">0</span><span class="stat-label">Loại event</span></div>
+                </div>
+                <div class="stat-card glass">
+                    <span class="stat-icon">🔁</span>
+                    <div class="stat-info"><span class="stat-value mono" id="lo-stat-rounds">0</span><span class="stat-label">Tổng vòng / tháng</span></div>
+                </div>
+            </div>
+
+            <div class="data-table-card glass">
+                <div class="table-header"><h3>⚙️ Loop Config</h3></div>
+                <div class="table-container" style="max-height:none">
+                    <table class="data-table">
+                        <thead><tr>
+                            <th>Event</th><th>Loại</th>
+                            <th style="text-align:right">Thời lượng (h)</th>
+                            <th style="text-align:right">Cooldown (h)</th>
+                            <th style="text-align:right">Chu kỳ (h)</th>
+                            <th style="text-align:right">Vòng / tháng</th>
+                            <th>Phần thưởng</th><th>Điểm kiếm tiền</th><th>Trạng thái</th><th>Ghi chú</th>
+                        </tr></thead>
+                        <tbody id="lo-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="data-table-card glass" style="padding:1.25rem">
+                <div class="table-header" style="margin-bottom:.75rem"><h3>📅 Rotation — 30 ngày</h3></div>
+                <div class="lo-rot-scroll"><div id="lo-rotation"></div></div>
+                <div class="tip-item info" style="margin-top:1rem">Bản chất là loop — đây là ảnh chụp 30 ngày để thấy nhịp, sau đó lặp lại từ đầu. Quy tắc: KHÔNG mở 2 event ĐUA (Race) cùng lúc; khác loại được chạy song song.</div>
+            </div>
+        </section><!-- /live-ops -->
 
         <!-- ══════════════ ROADMAP ══════════════ -->
         <section id="roadmap" class="tab-view">
@@ -1227,6 +1284,7 @@
     <script src="js/economyFlow.js"></script>
     <script src="js/roadmap.js"></script>
     <script src="js/businessModel.js"></script>
+    <script src="js/liveOps.js"></script>
     <script src="js/iapPackages.js"></script>
     <script src="js/sim/simDataLoader.js"></script>
     <script src="js/sim/simEnergy.js"></script>

@@ -296,6 +296,7 @@ const EconomyFlow = (() => {
         return {
             scene: $('eco-filter-scene')?.value || '',
             batch: $('eco-filter-batch')?.value || '',
+            includeIAP: document.getElementById('eco-iap-toggle')?.checked !== false, // mặc định bật
         };
     }
 
@@ -363,6 +364,7 @@ const EconomyFlow = (() => {
         fillSelect('eco-filter-scene', EconomyModel.scenes(_gd));
         $('eco-filter-scene')?.addEventListener('change', () => { updateBatchDropdown(); render(); });
         $('eco-filter-batch')?.addEventListener('change', render);
+        document.getElementById('eco-iap-toggle')?.addEventListener('change', render);
         render();
     }
 

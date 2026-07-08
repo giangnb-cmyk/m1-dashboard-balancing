@@ -1606,6 +1606,72 @@ Object.assign(window.GameData, {
         "item_save_type":"",
         "id_item":""
       }
+    ],
+    "itemEnergyChest":[
+      {
+        "id":"600101",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Energy",
+        "item_child_id":"300201",
+        "rate":"50"
+      },
+      {
+        "id":"600101",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Energy",
+        "item_child_id":"300202",
+        "rate":"30"
+      },
+      {
+        "id":"600101",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Energy",
+        "item_child_id":"300203",
+        "rate":"10"
+      },
+      {
+        "id":"600101",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Energy",
+        "item_child_id":"300204",
+        "rate":"10"
+      },
+      {
+        "id":"600101",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Energy",
+        "item_child_id":"300201",
+        "rate":"50"
+      },
+      {
+        "id":"600101",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Energy",
+        "item_child_id":"300202",
+        "rate":"30"
+      },
+      {
+        "id":"600101",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Energy",
+        "item_child_id":"300203",
+        "rate":"10"
+      },
+      {
+        "id":"600101",
+        "many_generator":"5",
+        "time_unlock":"0",
+        "item_child_type":"Energy",
+        "item_child_id":"300204",
+        "rate":"10"
+      }
     ]
   }
 });

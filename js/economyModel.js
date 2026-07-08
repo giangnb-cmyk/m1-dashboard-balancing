@@ -86,6 +86,7 @@ const EconomyModel = (() => {
         const sceneFilter = scope.scene || '';
         const links = [];   // {from, to, currency, value}
         const add = (from, to, currency, value) => {
+            if (!POOLS[currency]) return; // chỉ theo dõi 4 currency trong POOLS — Item/Star bị loại
             if (value > 0) links.push({ from, to, currency, value: Math.round(value * 10) / 10 });
         };
         const inScene = row => !sceneFilter || (row.theme_type || row.theme) === sceneFilter;
@@ -161,6 +162,23 @@ const EconomyModel = (() => {
                     if (rv > 0 && rt > 0) add('energy_regen', 'Energy', 'Energy', rv * 86400 / rt);
                 }
 
+                // 7a) Star Chest (mở bằng sao Build-Up) → Energy — KỲ VỌNG cho 1 lần mở,
+                //     tính từ ItemEnergyChest.csv (rate rơi item energy) × giá trị energy trong ItemCurrency.csv
+                const chest = (gd.boxes || {}).itemEnergyChest || [];
+                const curById = {};
+                (gd.itemCurrency || []).forEach(r => { curById[r.id] = r; });
+                const pulls = parseFloat((chest.find(r => r.many_generator) || {}).many_generator) || 0;
+                let rateSum = 0, evEnergy = 0;
+                chest.forEach(r => {
+                    const rate = parseFloat(r.rate) || 0;
+                    const it = curById[r.item_child_id];
+                    if (!rate || !it) return;
+                    rateSum += rate;
+                    const res = resolveRes(it.res_type, it.res_id, it.res_number);
+                    if (res.currency === 'Energy') evEnergy += rate * res.amount;
+                });
+                if (pulls && rateSum) add('star_chest', 'Energy', 'Energy', pulls * evEnergy / rateSum);
+
                 // 7b) Order milestone (OrderGold.csv): mỗi N order xong → box/item
                 (gd.orderGold || []).forEach(r => addReward('order_milestone', r.res_type, r.res_id, r.res_number));
 
@@ -177,12 +195,14 @@ const EconomyModel = (() => {
                 add('buy_energy', 'Energy', 'Energy', gemEnergy);      // energy nhận được
                 add('Diamond', 'gem_buy_energy', 'Diamond', gemCost);  // diamond tiêu
 
-                // 8) IAP packs (gói bán) → currency — tổng nếu mua mỗi gói 1 lần
-                Object.keys(gd).forEach(key => {
-                    if (!key.startsWith('iap') || !Array.isArray(gd[key])) return;
-                    if (IAP_IGNORE.has(key)) return; // gói không có thật — xem IAP_IGNORE
-                    gd[key].forEach(r => addReward('iap', r.res_type, r.res_id, r.res_number));
-                });
+                // 8) IAP packs (gói bán) → currency — tổng nếu mua mỗi gói 1 lần. Bật/tắt bằng toggle "Gồm IAP".
+                if (scope.includeIAP !== false) {
+                    Object.keys(gd).forEach(key => {
+                        if (!key.startsWith('iap') || !Array.isArray(gd[key])) return;
+                        if (IAP_IGNORE.has(key)) return; // gói không có thật — xem IAP_IGNORE
+                        gd[key].forEach(r => addReward('iap', r.res_type, r.res_id, r.res_number));
+                    });
+                }
 
                 // 9) Starting gift / default (tutorial): generator/tool đặt sẵn trên board + gold khởi đầu
                 const board = gd.boardDefault || [];
@@ -238,15 +258,16 @@ const EconomyModel = (() => {
         start_gift:   { label: 'Starting Gift',  icon: '🌱', desc: 'Tài nguyên tặng lúc bắt đầu (tutorial / default): generator & tool đặt sẵn trên board (BoardDefault) + gold khởi đầu.' },
         energy_regen: { label: 'Energy Regen',  icon: '🔋', desc: 'Energy tự hồi miễn phí: 1 mỗi 2 phút → ~720/ngày (max 100). Đây là RATE theo ngày, khác với các con số tổng — cho thấy energy free chỉ nhỏ giọt so với nhu cầu.' },
         ads_energy:   { label: 'Energy Refill (Ads)', icon: '📺', desc: 'Mua energy bằng xem ads (BuyCurrency.csv): 25 energy/lần, tối đa 5 lần/ngày → 125/ngày. Đây là RATE theo ngày.' },
+        star_chest:   { label: 'Star Chest', icon: '🎁', desc: 'Energy KỲ VỌNG cho 1 lần mở Star Chest (ruột chest: ItemEnergyChest.csv — 5 lượt rơi item energy theo rate, giá trị từ ItemCurrency.csv). Muốn quy ra tổng cần số lần mở chest.' },
         buy_energy:   { label: 'Buy Energy (Diamond)', icon: '🔁', desc: 'Energy nhận được khi mua bằng Diamond (BuyCurrency.csv) — tính 1 lượt hết thang giá 10→160 Diamond, mỗi bậc +100 energy. Diamond tiêu tương ứng nằm ở sink cùng tên.' },
         iap:          { label: 'IAP Packs',     icon: '💳', desc: 'Currency bán qua các gói IAP (tổng nếu mua mỗi gói 1 lần). Bơm bằng tiền thật.' },
     };
+    // Economy chỉ theo dõi 4 currency (quyết định 2026-07-08). Star/Item không phải currency pool —
+    // reward dạng item/star bị resolveRes+addReward tự loại vì không nằm trong POOLS.
     const POOLS = {
         Gold:     { label: 'Gold',    icon: '🪙', color: '#fbbf24', desc: 'Tiền mềm chính. Vào từ order + reward, chảy ra để trả chi phí Build-Up.' },
         Energy:   { label: 'Energy',  icon: '⚡', color: '#38bdf8', desc: 'Cổng session. Vào từ reward; ra để sản xuất ra các item mà order yêu cầu.' },
         Diamond:  { label: 'Diamond', icon: '💎', color: '#c084fc', desc: 'Tiền cứng — mua bằng tiền thật hoặc thưởng ads. Dùng để tua nhanh, mua energy.' },
-        Star:     { label: 'Star',    icon: '🌟', color: '#5eead4', desc: 'Điểm sao thưởng khi hoàn tất Build-Up của scene.' },
-        Item:     { label: 'Item',    icon: '🧩', color: '#34d399', desc: 'Vật phẩm thưởng (không phải currency): generator, tool, booster… đổ thẳng vào board. Gộp từ Batch Reward, Build Reward và Build Drops.' },
         SkipTime: { label: 'Skip Time', icon: '⏩', color: '#fb923c', desc: 'Token tua nhanh thời gian nấu/cooldown. Nhận từ Video/Daily và các gói IAP.' },
     };
     const SINKS = {
@@ -270,8 +291,8 @@ const EconomyModel = (() => {
             if (SINKS[l.to])
                 items.push({ currency: l.currency, role: 'sink', label: SINKS[l.to].label, icon: SINKS[l.to].icon, value: l.value });
         });
-        // IAP theo từng gói — chỉ ở phạm vi toàn game (khớp điều kiện của compute).
-        if (!scope.scene && !scope.batch) {
+        // IAP theo từng gói — chỉ ở phạm vi toàn game + toggle "Gồm IAP" bật (khớp điều kiện của compute).
+        if (!scope.scene && !scope.batch && scope.includeIAP !== false) {
             Object.keys(gd).forEach(key => {
                 if (!key.startsWith('iap') || !Array.isArray(gd[key])) return;
                 if (IAP_IGNORE.has(key) || key === 'iapVideoBonuses' || key === 'iapPackDuration') return;

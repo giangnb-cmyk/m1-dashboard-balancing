@@ -5617,6 +5617,17 @@ tr.imbalanced {
 .eco-li-ic { font-size:1rem; margin-right:.15rem; }
 #eco-cur-tabs { margin-bottom:1rem; }
 
+/* ── Live Ops — Loop scheduler ─────────────────────────────────────────────── */
+.lo-rot-scroll { overflow-x:auto; }
+.lo-rot-row { display:grid; grid-template-columns:180px repeat(30, minmax(20px,1fr)); gap:2px; align-items:center; margin-bottom:2px; min-width:820px; }
+.lo-rot-head .lo-rot-day { font-family:'JetBrains Mono',monospace; font-size:.62rem; color:var(--text-muted); text-align:center; }
+.lo-rot-label { font-size:.78rem; color:var(--text-main); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; padding-right:.6rem; }
+.lo-rot-cell { height:20px; border-radius:4px; background:var(--glass); }
+.lo-rot-cell.on { background:var(--c); opacity:.85; }
+.lo-legend { display:flex; gap:1.1rem; margin-top:.8rem; font-size:.75rem; color:var(--text-muted); }
+.lo-legend-item { display:flex; align-items:center; gap:.35rem; }
+.lo-legend-dot { width:10px; height:10px; border-radius:3px; display:inline-block; }
+
 /* ── Roadmap — Content release & onboarding ────────────────────────────────── */
 .rm-scroll { overflow-x:auto; }
 .rm-chart { position:relative; min-width:760px; padding-top:46px; }

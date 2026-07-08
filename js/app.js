@@ -59,4 +59,5 @@ function initModules() {
     if (typeof EconomyFlow      !== 'undefined') EconomyFlow.init();
     if (typeof Roadmap          !== 'undefined') Roadmap.init();
     if (typeof BusinessModel    !== 'undefined') BusinessModel.init();
+    if (typeof LiveOps          !== 'undefined') LiveOps.init();
 }
