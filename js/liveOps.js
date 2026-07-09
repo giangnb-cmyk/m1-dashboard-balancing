@@ -18,7 +18,9 @@ const LiveOps = (() => {
     };
 
     // ── Data: docs/M1_LiveOps_Loop.xlsx ─────────────────────────────────────────
-    // rotation: chuỗi 30 ký tự (1 = event mở ngày đó) — sheet "Rotation Preview"
+    // rotation: chuỗi 30 ký tự (1 = event mở ngày đó) — sheet "Rotation Preview".
+    // Lưu ý 2 event Race: trong xlsx mọi cell đều =1, ngày mở/đóng mã hoá bằng MÀU nền
+    // (xanh = mở, xám nhạt = đóng) — không phải bằng giá trị. 2 Race không bao giờ mở trùng ngày.
     const EVENTS = [
         { name: 'Event Collection',    type: 'Collection', dur: 720, cd: 0,   cycle: 720, perMonth: 1,
           reward: '108 thẻ → Grand Reward; thưởng mỗi bộ 9 thẻ', monetize: 'Gián tiếp — pack từ gameplay', status: 'Active',
@@ -27,27 +29,27 @@ const LiveOps = (() => {
         { name: 'Fortune Meets Cookie', type: 'Mini Game', dur: 72,  cd: 288, cycle: 360, perMonth: 2,
           reward: 'Quà theo 8 màn (item + money)', monetize: 'Gói bán thêm token để người chơi chơi event', status: 'Active',
           note: 'Hidden object: gắp bánh quy tìm Mũ đầu bếp. Đũa từ order; đũa dư đổi skip-time.',
-          rotation: '011100001111110111000011111111' },
+          rotation: '000000000001110000000000001110' },
         { name: 'Petal Plate Party',   type: 'Mini Game',  dur: 96,  cd: 264, cycle: 360, perMonth: 2,
           reward: 'Quà theo 10 stage (item + money)', monetize: 'Gói bán Smash All', status: 'Active',
           note: 'Grid hidden object: dùng Búa phá băng tìm nguyên liệu nấu 10 món, grid 3x3→6x6. Búa từ order. Smash All bán trong gói event.',
-          rotation: '000000011110001001111111110000' },
+          rotation: '000000011110000000000011110000' },
         { name: "Dora's Toy Party",    type: 'Mini Game',  dur: 168, cd: 192, cycle: 360, perMonth: 2,
           reward: 'Gold/booster/gem theo cấp merge; hộp collection', monetize: 'Gói bán Bonus Gift', status: 'Active',
           note: 'Merge board 6x8 riêng, 12 cấp vật phẩm chính. Rate rơi lv1 70%/lv2 20%/lv3 10%. Art: trang sức đá quý, búp bê.',
-          rotation: '111111011110001111111111111111' },
-        { name: 'Pizza Tower Race',    type: 'Race',       dur: 72,  cd: 96,  cycle: 168, perMonth: 4,
+          rotation: '111111100000000111111100000000' },
+        { name: 'Sandwich Tower Race', type: 'Race',       dur: 72,  cd: 96,  cycle: 168, perMonth: 4,
           reward: 'Booster + quà random (top 3)', monetize: '', status: 'Active',
           note: 'Đua 5 người, 5 round token tăng dần (4/5/9/14/16). Có bot.',
-          rotation: '111111111111111111111111111111' },
+          rotation: '111000011100001110000111000000' },
         { name: 'Speed Feast Race',    type: 'Race',       dur: 72,  cd: 96,  cycle: 168, perMonth: 4,
           reward: 'Booster + quà random (top 3 mỗi round)', monetize: '', status: 'Active',
           note: 'Đua 5 người, 5 round token tăng dần. Có bot.',
-          rotation: '111111111111111111111111111111' },
+          rotation: '000011100001110000111000011100' },
         { name: 'Clash of Cakes',      type: 'Event',      dur: 72,  cd: 120, cycle: 192, perMonth: 4,
           reward: 'Booster + quà top rank', monetize: '', status: 'Draft',
           note: '',
-          rotation: '111110111111011111001111100111' },
+          rotation: '000001100000110000011000001100' },
     ];
 
     const badge = (text, color) =>
@@ -106,7 +108,7 @@ const LiveOps = (() => {
             const bars = activeRuns(e.rotation).map(([a, b]) => {
                 const n = b - a + 1;
                 return `<div class="lo-tl-bar" style="left:${a / DAYS * 100}%;width:${n / DAYS * 100}%;--c:${c}"
-                    title="${e.name}: D${a + 1}–D${b + 1} (${n} ngày)">${n >= 4 ? `<span>${n} ngày</span>` : ''}</div>`;
+                    title="${e.name}: D${a + 1}–D${b + 1} (${n} ngày)"><span>${n} ngày</span></div>`;
             }).join('');
             return `<div class="lo-tl-row">
                 <div class="lo-tl-label" title="${e.name}">${e.name}</div>
