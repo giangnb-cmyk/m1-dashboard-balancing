@@ -21,22 +21,27 @@ const Roadmap = (() => {
         BattlePass: 'events', VideoBonuses: 'events', PetalPlateParty: 'events', SpeedFeastRace: 'events',
         PizzaTowerRace: 'events', FortuneMeetsCookie: 'events', DorasToyParty: 'events', HappinessExpress: 'events', DailyOffer1: 'events',
         EnergyPack: 'monet', EnergyTrilogy: 'monet', InfinityPack: 'monet', StarterPack: 'monet',
-        PiggyBank: 'monet', DiscountGemRaw: 'monet', SpeedPackage: 'monet', ChainPack: 'monet',
+        PiggyBank: 'monet', DiscountGemRaw: 'monet', SpeedPackage: 'monet',
     };
     const ICON = {
         Inventory: '🎒', DailyReward: '📅', Shop: '🛒', GiftCode: '🎟️', ChefsBook: '📖', ItemBubble: '💬',
         BattlePass: '🎖️', VideoBonuses: '📹', PetalPlateParty: '🌸', SpeedFeastRace: '🏁', PizzaTowerRace: '🍕',
         FortuneMeetsCookie: '🥠', DorasToyParty: '🧸', HappinessExpress: '🚂', DailyOffer1: '🏷️',
         EnergyPack: '⚡', EnergyTrilogy: '⚡', InfinityPack: '♾️', StarterPack: '🎁', PiggyBank: '🐷',
-        DiscountGemRaw: '💎', SpeedPackage: '⏩', ChainPack: '🔗',
+        DiscountGemRaw: '💎', SpeedPackage: '⏩',
         OpenningPack: '📦', SpeedFeastRacePreview: '🏁', PiggyBankConfirm: '🐷', Rating: '⭐',
     };
+    // Tên hiển thị đặc biệt (khác với humanize mặc định)
+    const NAME = { DailyOffer1: 'Daily Offer' };
+    // Feature đã gỡ khỏi lộ trình (vẫn còn trong CSV nhưng không hiển thị)
+    const EXCLUDE = new Set(['ChainPack']);
 
     const humanize = s => String(s || '')
         .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
         .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2');
     const catOf  = f => FEATURE_CAT[f] || 'core';
     const iconOf = f => ICON[f] || '✨';
+    const nameOf = f => NAME[f] || humanize(f);
 
     let _gd = null, _maxLevel = 30;
 
@@ -47,13 +52,15 @@ const Roadmap = (() => {
     function renderTimeline() {
         const host = document.getElementById('rm-timeline');
         if (!host) return;
-        const feats = (_gd.unlockFeature || []).map(r => ({
-            name: r.feature,
-            level: parseInt(r.unlock_value) || 0,
-            byBoard: r.unlock_type === 'Level',
-            popup: String(r.show_when_open).toUpperCase() === 'TRUE',
-            cat: catOf(r.feature),
-        }));
+        const feats = (_gd.unlockFeature || [])
+            .filter(r => !EXCLUDE.has(r.feature))
+            .map(r => ({
+                name: r.feature,
+                level: parseInt(r.unlock_value) || 0,
+                byBoard: r.unlock_type === 'Level',
+                popup: String(r.show_when_open).toUpperCase() === 'TRUE',
+                cat: catOf(r.feature),
+            }));
         // Opening Pack không nằm trong UnlockFeature (mở khi hoàn thành scene, không theo level) —
         // thêm thủ công vào lane Monetization, đặt sớm (Scene 1).
         if (!feats.some(f => f.name === 'OpenningPack')) {
@@ -82,8 +89,8 @@ const Roadmap = (() => {
             const color = CATS[f.cat].color;
             const popup = f.popup ? `<span class="rm-badge" title="Có popup thông báo khi mở">🔔</span>` : '';
             const cond = f.cond || (f.byBoard ? `Board Lv${f.level}` : `Account Lv${f.level}`);
-            return `<div class="rm-row" data-tip="${humanize(f.name)} — mở ở ${cond}${f.popup ? ' · có popup' : ''}">
-                <div class="rm-label"><span class="rm-ic">${iconOf(f.name)}</span><span>${humanize(f.name)}</span>${popup}</div>
+            return `<div class="rm-row" data-tip="${nameOf(f.name)} — mở ở ${cond}${f.popup ? ' · có popup' : ''}">
+                <div class="rm-label"><span class="rm-ic">${iconOf(f.name)}</span><span>${nameOf(f.name)}</span>${popup}</div>
                 <div class="rm-track">
                     <div class="rm-bar" style="left:${pct(f.level)}%;width:${100 - pct(f.level)}%;background:linear-gradient(90deg,${color}44,${color}14)"></div>
                     <div class="rm-dot" style="left:${pct(f.level)}%;background:${color};box-shadow:0 0 0 3px ${color}33">
@@ -108,7 +115,7 @@ const Roadmap = (() => {
     // ── Summary ──────────────────────────────────────────────────────────────────
 
     function renderSummary() {
-        const feats = (_gd.unlockFeature || []);
+        const feats = (_gd.unlockFeature || []).filter(r => !EXCLUDE.has(r.feature));
         const levels = feats.map(r => parseInt(r.unlock_value) || 0);
         const byLevel = {};
         levels.forEach(l => { byLevel[l] = (byLevel[l] || 0) + 1; });
