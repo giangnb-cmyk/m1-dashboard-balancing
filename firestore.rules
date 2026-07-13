@@ -1,0 +1,20 @@
+// Firestore Security Rules — Firebase project authen-84f17 (dùng chung nhiều app).
+// Đã publish trong Firebase Console 2026-07-13. File này chỉ để tham chiếu / khôi phục.
+// Khi thêm app mới: KHÔNG cần sửa rules — chỉ cần APP_ID mới (doc apps/{appId} tự được cover).
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Mỗi app 1 doc: apps/{appId} — chứa allowlist ALLOWED_DOMAINS / ALLOWED_EMAILS / ADMIN_EMAILS
+    match /apps/{appId} {
+      // ai đã đăng nhập Google cũng đọc được allowlist (để client check quyền vào app)
+      allow read: if request.auth != null;
+      // chỉ admin gốc hoặc email nằm trong ADMIN_EMAILS của doc hiện tại được ghi
+      allow write: if request.auth != null && (
+        request.auth.token.email == 'giangnb@easygoing.vn' ||
+        (resource != null && request.auth.token.email in resource.data.ADMIN_EMAILS)
+      );
+    }
+    // chặn mọi collection khác
+    match /{document=**} { allow read, write: if false; }
+  }
+}

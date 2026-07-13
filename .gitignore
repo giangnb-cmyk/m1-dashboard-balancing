@@ -20,6 +20,9 @@ desktop.ini
 .env
 .env.local
 
+# OAuth secrets — TUYỆT ĐỐI không commit/deploy (client secret chỉ dùng server-side)
+client_secret_*.json
+
 
 # CodeGraph local index
 .codegraph/
